@@ -9,9 +9,9 @@ ax = plt.subplot(111,polar=True)
 X = np.linspace(0, 3.14, 50)
 Y = np.linspace(0, 6, 50)
 
-s.values={s.Cz:5.5,s.Cx:1,s.CHx:1.,s.v_w:1.0}
+s.values={s.Cz:5.5,s.Cx:1,s.CHx:.3,s.v_w:1.0}
 s.force_simp=s.lambdify((s.gamma,s.v),(s.force1-s.force2).subs(s.values))
-s.force=s.lambdify((s.gamma,s.v),(s.force1- s.force2 - s.CHx*s.v**2-2).subs(s.values))
+s.force=s.lambdify((s.gamma,s.v),(s.force1- s.force2 - s.CHx*s.v**2-0).subs(s.values))
 
 
 

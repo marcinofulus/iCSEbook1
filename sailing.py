@@ -6,6 +6,7 @@ x, y, z = symbols('xyz')
 
 Cx=Symbol('Cx')
 CHx=Symbol('CHx')
+CHx2=Symbol('CHx2') # constant drag
 Cz=Symbol('Cz')
 v=Symbol('v')
 u=Symbol('u')
