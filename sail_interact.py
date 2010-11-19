@@ -9,6 +9,7 @@ fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(121, axisbg='#FFFFCC',polar=True)
 ax2 = fig.add_subplot(122, axisbg='#FFFFCC')
 
+
 import sailing as s
 
 ax.plot(s.xx,s.yy,'b',-s.xx,s.yy,'b',s.xx,np.abs(np.cos(s.xx))*s.yy,"g",-s.xx,s.abs(np.cos(s.xx))*s.yy,"g")
@@ -25,9 +26,9 @@ def draw_arrow(x,y):
         s.values[s.gamma]=x
         s.values[s.v]=v
         if lab_frame_toggle: 
-            angle=0.0
-        else:
             angle=-x
+        else:
+            angle=0.0
         vec1=(s.ROT(angle)*s.u.subs(s.values)).evalf()
         vec2=(v*s.ROT(angle)*s.ev).subs(s.values).evalf()
         vec3=vec1+vec2
