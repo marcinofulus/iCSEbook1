@@ -11,14 +11,26 @@ v=Symbol('v')
 u=Symbol('u')
 v_w=Symbol('v_w')
 gamma=Symbol('gamma')
+vx=Symbol('vx')
+vy=Symbol('vy')
 
 u=-Matrix([v*cos(gamma)+v_w,v*sin(gamma)])
 ev=Matrix([cos(gamma),sin(gamma)])
+# note that this is valid for gamma=0..pi
 up=Matrix([-v*sin(gamma),v*cos(gamma)+v_w])
 force1=trigsimp( (up.normalized().dot(ev))*u.norm()**2*Cz )
 force2=trigsimp(-u.normalized().dot(ev)*u.norm()**2*Cx)
 simpleeq =  factor (  ( (force1-force2)/u.norm() ) ) # without vehicle drag (CHx)
 fulleq = factor (  (force1-force2)/u.norm() ) - CHx*v**2/u.norm()
+
+
+## geting forces for Newton eq. 
+u1=-Matrix([vx+v_w,vy])
+up1=Matrix([-u1[1],u1[0]])
+F_D=Cx*u1*u1.norm()
+F_L=Cz*u1.norm()**2*up1
+F_tot = F_D + F_L
+
 
 print simpleeq
 print fulleq
@@ -76,7 +88,9 @@ def Funv_gamma(x):
 
 
 xx=np.linspace(0,np.pi-0.001,50)
-values={Cz:5.5,Cx:1,CHx:0.8,v_w:1.0}
+values={Cz:5.5,Cx:1,CHx:0.,v_w:1.0}
+force=lambdify((gamma,v),(force1-force2 - CHx*v**2).subs(values))
+force_simp=lambdify((gamma,v),(force1-force2).subs(values))
 yy=np.array(map(Funv_gamma,xx),dtype=np.double)
 
 
