@@ -20,7 +20,7 @@ ax2.set_aspect('equal')
 
 def draw_arrow(x,y):
     ax2.cla()
-    v=s.Funv_gamma(x)
+    v=s.Funv(x,s.values)
     if(float(v)>0):
         s.values[s.gamma]=x
         s.values[s.v]=v
@@ -37,6 +37,7 @@ def draw_arrow(x,y):
         FD=scale*s.Cx.subs(s.values)*v*v*(s.ROT(angle)*s.u.subs(s.values)).evalf().normalized()
         F2=scale*s.CHx.subs(s.values)*v*v*(s.ROT(angle)*s.ev.subs(s.values)).evalf()
         F=FL+FD
+        print FL,FD
         
         ax2.arrow(0,0,float(vec1[0]),float(vec1[1]),alpha=0.5,width=.2,head_width=.51,head_length=.7,facecolor='g')
         ax2.arrow(0,0,float(vec2[0]),float(vec2[1]),alpha=0.5,width=.2,head_width=.51,head_length=.7,facecolor='b')
@@ -46,6 +47,7 @@ def draw_arrow(x,y):
         ax2.arrow(0,0,float(FD[0]),float(FD[1]),alpha=0.5,width=.2,head_width=.51,head_length=.5,facecolor='k')
 
         ax2.arrow(0,0,float(F[0]),float(F[1]),alpha=0.5,width=.2,head_width=.51,head_length=.5,facecolor='r')
+
 
         s.values.pop(s.gamma)
         s.values.pop(s.v)
