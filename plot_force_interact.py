@@ -7,7 +7,7 @@ import sailing  as s
 
 fig = plt.figure(figsize=(3,3))
 ax = plt.subplot(111,polar=True)
-
+ax.set_position([0.1,0.3, 0.9,0.62])
 def update(val):
     s.values[s.CHx]=slider1.val
     s.values[s.CHx2]=slider2.val
@@ -23,7 +23,7 @@ def draw_force():
     s.force=s.lambdify((s.gamma,s.v),(s.force1- s.force2 - s.CHx*s.v**2-s.CHx2).subs(s.values))
     X = np.linspace(0, 3.14, 20)
     Y = np.linspace(0, 6, 20)
-
+    
     Z=np.array([[s.force(g,h) for g in X] for h in Y])
     X, Y = np.meshgrid(X, Y)
     maximum=Z.max()
@@ -31,14 +31,14 @@ def draw_force():
     surf = ax.contourf(X, Y, Z, np.linspace(0, maximum, 20), rstride=1, cstride=1, cmap=cm.jet,linewidth=0, antialiased=False)
 
     surf = ax.contourf(-X, Y, Z, np.linspace(0, maximum, 20), rstride=1, cstride=1, cmap=cm.jet,linewidth=0, antialiased=False)
-
+    ax.set_ylim(0,6);
 #    fig.colorbar(surf, shrink=0.5, aspect=5)
 
 
 axcolor = 'lightgoldenrodyellow'
-ax1 = plt.axes([0.1, 0.1, 0.65, 0.03], axisbg=axcolor)
-ax2 = plt.axes([0.1, 0.15, 0.65, 0.03], axisbg=axcolor)
-ax3 = plt.axes([0.1, 0.2, 0.65, 0.03], axisbg=axcolor)
+ax1 = plt.axes([0.1, 0.1, 0.8, 0.03], axisbg=axcolor)
+ax2 = plt.axes([0.1, 0.15, 0.8, 0.03], axisbg=axcolor)
+ax3 = plt.axes([0.1, 0.2, 0.8, 0.03], axisbg=axcolor)
 slider1 = Slider(ax1, 'CHx', 0.0, 1.50, valinit=0.3)
 slider2 = Slider(ax2, 'CHx2', 0.0, 10, valinit=0.0)
 slider3 = Slider(ax3, 'Cz', 0.0, 10, valinit=4.0)
