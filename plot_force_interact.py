@@ -36,9 +36,9 @@ def draw_force():
 
 
 axcolor = 'lightgoldenrodyellow'
-ax1 = plt.axes([0.1, 0.1, 0.8, 0.03], axisbg=axcolor)
-ax2 = plt.axes([0.1, 0.15, 0.8, 0.03], axisbg=axcolor)
-ax3 = plt.axes([0.1, 0.2, 0.8, 0.03], axisbg=axcolor)
+ax1 = plt.axes([0.15, 0.1, 0.7, 0.03], axisbg=axcolor)
+ax2 = plt.axes([0.15, 0.15, 0.7, 0.03], axisbg=axcolor)
+ax3 = plt.axes([0.15, 0.2, 0.7, 0.03], axisbg=axcolor)
 slider1 = Slider(ax1, 'CHx', 0.0, 1.50, valinit=0.3)
 slider2 = Slider(ax2, 'CHx2', 0.0, 10, valinit=0.0)
 slider3 = Slider(ax3, 'Cz', 0.0, 10, valinit=4.0)
