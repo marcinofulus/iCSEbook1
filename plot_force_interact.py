@@ -5,7 +5,7 @@ import numpy as np
 # get formulas from sailing.py
 import sailing  as s
 
-fig = plt.figure()
+fig = plt.figure(figsize=(3,3))
 ax = plt.subplot(111,polar=True)
 
 def update(val):

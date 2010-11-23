@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 # fromulas
 import sailing  as s
-
-fig = plt.figure()
+#fig = Figure(figsize=(4,4))
+fig = plt.figure(figsize=(3,3))
 ax = plt.subplot(111,polar=True)
 X = np.linspace(0, 3.14, 50)
 Y = np.linspace(0, 6, 50)
@@ -23,7 +23,7 @@ surf = ax.contourf(X, Y, Z, np.linspace(0, maximum, 20), rstride=1, cstride=1, c
 
 surf = ax.contourf(-X, Y, Z, np.linspace(0, maximum, 20), rstride=1, cstride=1, cmap=cm.jet,linewidth=0, antialiased=False)
 
-fig.colorbar(surf, shrink=0.5, aspect=5)
+#fig.colorbar(surf, shrink=0.5, aspect=5)
 
 plt.show()
 
