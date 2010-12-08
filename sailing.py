@@ -24,6 +24,12 @@ force2=trigsimp(-u.normalized().dot(ev)*u.norm()**2*Cx)
 simpleeq =  factor (  ( (force1-force2)/u.norm() ) ) # without vehicle drag (CHx)
 fulleq = factor (  (force1-force2)/u.norm() ) - CHx*v**2/u.norm()
 
+## rotor blades (not clear with 3 RF)
+beta=Symbol('beta')
+U=Symbol('U')
+UP=Symbol('UP')
+U=Matrix([v_w + v*cos(gamma)*cos(beta),v*cos(gamma)*sin(beta)])
+UP=-Matrix([-U[1],U[0]])
 
 ## geting forces for Newton eq. 
 u1=-Matrix([vx+v_w,vy])
@@ -89,7 +95,7 @@ def Funv_gamma(x):
 
 
 xx=np.linspace(0,np.pi-0.001,50)
-values={Cz:5.5,Cx:1,CHx:0.,v_w:1.0}
+values={Cz:5.5,Cx:1,CHx:0.5,v_w:1.0}
 force=lambdify((gamma,v),(force1-force2 - CHx*v**2).subs(values))
 force_simp=lambdify((gamma,v),(force1-force2).subs(values))
 yy=np.array(map(Funv_gamma,xx),dtype=np.double)
@@ -97,17 +103,23 @@ yy=np.array(map(Funv_gamma,xx),dtype=np.double)
 
 
 if __name__ == '__main__':
-    plt.ion()
-    plt.clf()
-    plt.polar(xx,yy,'b',-xx,yy,'b',xx,abs(cos(xx))*yy,"g",-xx,abs(cos(xx))*yy,"g",)
-    plt.polar(xx*2,np.ones_like(xx),'r')
+    # plt.ion()
+    # plt.clf()
+    plt.figure(figsize=(3,3))
 
-    plt.polar(xx[yy>0],AAW(xx,yy),'k')
-    plt.polar(-xx[yy>0],AAW(xx,yy),'k')
+    ax = plt.subplot(111,polar=True)
+    ax.plot(xx,yy,'b',-xx,yy,'b',xx,abs(cos(xx))*yy,"g",-xx,abs(cos(xx))*yy,"g",)
+    ax.plot(xx*2,np.ones_like(xx),'r')
+
+    ax.plot(xx[yy>0],AAW(xx,yy),'k')
+    ax.plot(-xx[yy>0],AAW(xx,yy),'k')
     
-    plt.title("Sailing speeds: "+"".join([ "%s=%0.2f " %  (k,vv) for k,vv in values.items()]))
-    
-    plt.show()
+#    plt.title("Sailing speeds: "+"".join([ "%s=%0.2f " %  (k,vv) for k,vv in values.items()]))
+
+    ax.set_yticks((1,2,3))    
+    plt.ylim(0,3.7)
+    plt.savefig("sailing_on_ice.png",transparent=True,dpi=150)
+#    plt.show()
 
 
 #plt.figure(2)
