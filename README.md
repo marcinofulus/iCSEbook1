@@ -1,5 +1,5 @@
-iCSEbook
-=========
+Repozytorium iCSEbook 
+=====================
 
 Materiały dydaktyczne z iCSE. 
 
@@ -7,16 +7,20 @@ Materiały dydaktyczne z iCSE.
 Wstęp
 =====
 
-Jest to próba połączenia wyników prac nad informatyzacją nauczania przedmiotów ścisłych. Treść jest zebrana z licznych notatników Sage. 
-
-Jak autoryzowac innych po kluczu?
-
-
-PINGWIN
-=======
+Jest to próba połączenia wyników prac nad informatyzacją nauczania
+przedmiotów ścisłych. Treść jest zebrana z licznych notatników Sage.
 
 
-1) default key - OK
+Jak uzyskać możliwośc dodawania zmian?
+=====================================
 
-2) host based key config in ssh
+Należy skontaktować się z szefem projektu http://icse.us.edu.pl
+
+
+Jak skompilować materiały?
+==========================
+
+Należy zainstalować pakiet python-sphinx oraz wtyczke: 
+
+       https://github.com/kriskda/sphinx-sagecell.git
 
