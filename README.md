@@ -15,4 +15,8 @@ Jak autoryzowac innych po kluczu?
 PINGWIN
 =======
 
-default key - OK
+
+1) default key - OK
+
+2) host based key config in ssh
+
