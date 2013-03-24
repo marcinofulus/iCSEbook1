@@ -61,7 +61,24 @@ Potrójnie  zwężony  iloczyn  epsilonów:
 
     \varepsilon _{ijk} \,\varepsilon _{ijk} \;\; = \;\;\;2\;\delta _{kk} \;\; = \;\;\;2\; \cdot \;3\;\; = \;\;6.
 
-W
+
+Dowód tożsamości wykorzystujący Sage
+------------------------------------
+
+Ponieważ liczba kombinacji wskaźników do sprawdzenia jest skończona
+można wykorzystać komputer do wykonania testów element po
+elemencie. Jedną metodą jest wykonanie odpowiednich zagnieżdżonych
+pętli. Warto jednak skorzystać w tym przypadku z wbudowanej w system
+Sage funkcji "CartesianProduct", która jest generatorem wszystkich
+kombinacji elementów z listy. Taki generator nie tworzy od razu całej
+listy jeśli to nie konieczne (np. w pętli for nie jest to konieczne),
+ale posiada metodę list(), która tworzy listę.  Przekonajmy się sami
+jak działa :
+
+.. sagecellserver::
+
+   sage: CartesianProduct([1,2,3],[1,2,3]).list()
+
 
 
 
@@ -138,6 +155,8 @@ Potrójnie zwężony iloczyn epsilonów, dowód przez sprawdzenie wszystkich kom
     6
 
 .. end of output
+
+
 
 
 

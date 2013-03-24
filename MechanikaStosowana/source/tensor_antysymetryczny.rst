@@ -9,8 +9,9 @@ Tensor zupełnie antysymetryczny
 
 
 Definicja
+=========
 
-1. :MATH:`\varepsilon _{{\kern 1pt} 123} : = 1`
+1. :MATH:`\varepsilon_{123} : = 1`
 
 2. Przestawienie dowolnych dwóch (sąsiednich bądź skrajnych)
    wskaźników i, j, k zmienia znak symbolu.  Warunek jest niesprzeczny
@@ -21,7 +22,7 @@ Definicja
 
 
 Wnioski:
-
+========
 
 1. Jeżeli jakiekolwiek dwa (albo wszystkie trzy) wskaźniki są równe,
    symbol epsilon znika.  Rzeczywiście, przestawienie jednakowych
@@ -95,6 +96,10 @@ Wnioski:
     wyznacznik znika.
 
 
+Tensor antysymetryczne w Sage
+=============================
+
+
 W systemie Sage nie ma symbolu :math:`\varepsilon_{ijk}`, ale można
 użyć zdefiniowanej funkcji symbolicznej w pakiecie sympy:
 
@@ -127,8 +132,19 @@ użyć zdefiniowanej funkcji symbolicznej w pakiecie sympy:
 
 .. end of output
 
-.. code-block:: python
+Graficzne przedstawienie tensora antysymetrycznego
+==================================================
 
+Tenssor :math:`\varepsilon_{ijk}` można potraktować jako uogólnienie
+macierzy na trzy wskaźniki i przedstawić ją jako trójwymiarową tabelkę. 
+
+
+
+
+
+.. sagecellserver::
+
+    sage: from  sympy import Eijk
     sage: p = Graphics()
     sage: for i,j,k in CartesianProduct([1,2,3],[1,2,3],[1,2,3]):
     ...       if Eijk(i,j,k)>0:
@@ -144,3 +160,12 @@ użyć zdefiniowanej funkcji symbolicznej w pakiecie sympy:
 .. end of output
 
 
+Wskazówka: 
+
+W poniższym kodzie zastąpić linię:
+
+    sage: p.show(viewer='tachyon')
+
+linią:
+
+    sage: p.show()
