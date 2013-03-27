@@ -24,3 +24,16 @@ Należy zainstalować pakiet python-sphinx oraz wtyczke:
 
        https://github.com/kriskda/sphinx-sagecell.git
 
+Jakie trzeba spełnić techniczne warunki by edytować te materiały?
+=================================================================
+
+Należy wysłać swój klucz publiczny wygenerowany lokalnie za pomocą:
+
+       ssh-keygen -t rsa -C "your_email@example.com"
+
+przesłać właścicielowi tego repozytorium.  
+
+Należy ponadto skonfigurować lokalnego git-a tak by commity były podpisane prawdziwymi danymi:
+
+       git config --global user.name "Your Name"
+       git config --global user.email you@example.com
