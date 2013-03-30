@@ -17,7 +17,7 @@ Preeliminaria matematyczne
    delta_kroneckera
    tensor_antysymetryczny
    iloczyn_epsilonow
-   lagodny_wstep_do_rownan_rozniczkowych
+   sws/MS_SS2013_lagodne_wprowadzenie_ode
 
 
 Kinematyka
@@ -26,7 +26,8 @@ Kinematyka
 .. toctree::
    :maxdepth: 1
 
-   MS_SS2013_tor_ruchu
+
+   tor_ruchu
    rzut_ukosny
 
    
