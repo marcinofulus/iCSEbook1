@@ -8,14 +8,18 @@ Przykłady przestrzeni wektorowych.
   zaczepienia, wartość i zwrot. W algebrze liniowej wszystkie wektory
   są "zaczepione" w początku układu współrzędnych.
 
-1.)	Prototypem  p.w.  jest  zbiór  wektorów  geometrycznych  (zaczepionych bądź swobodnych)
-na  płaszczyźnie  albo  w  przestrzeni.  Wektory  te  można  dodawać  i  mnożyć  przez  liczby  rzeczywiste,  przy  czym  spełnione  są  postulaty  PW1. –  PW5.  Jest  to  więc  p.w.  rzeczywista.
+1.) Prototypem przestrzeni wektorowych jest zbiór wektorów
+geometrycznych (zaczepionych bądź swobodnych) na płaszczyźnie albo w
+przestrzeni.  Wektory te można dodawać i mnożyć przez liczby
+rzeczywiste, przy czym spełnione są postulaty PW1. – PW5.  Jest to
+więc przestrzeń wektorowa rzeczywista.
 
 
 
-2.)	Ważnym  przykładem  p.w.  nad  ciałem  K,  występującym  w  wielu  zagadnieniach  algebry
-liniowej  i  jej  zastosowaniach,  jest  zbiór    (n-ta  potęga  kartezjańska  zbioru  K)  wszystkich
-n-wyrazowych  ciągów  elementów  ciała  K:
+2.) Ważnym przykładem przestrzeni wektorowej nad ciałem K,
+występującym w wielu zagadnieniach algebry liniowej i jej
+zastosowaniach, jest zbiór (n-ta potęga kartezjańska zbioru K)
+wszystkich n-wyrazowych ciągów elementów ciała K:
 
 .. math:: 
 
@@ -54,6 +58,12 @@ działań przyjmują wtedy postać:
 Kładąc stwierdzamy, że ciało :math:`K\equiv K^1` jest
 przestrzenią wektorową nad sobą samym.
 
+.. sidebar:: Iloczyn kartezjański
+
+   Iloczynem kartezjańskim zbiorów A i B nazywamy zbiór wszystkich takich par
+   uporządkowanych :math:`(a, b)` takich, że :math:`a\in A` i :math:`b\in B`.
+
+
 3.) Zbiór :math:`F_{ [0,1]} = \left\{ {f:[0,1] \to R}\right\}`
 wszystkich funkcji przekształcających przedział w zbiór liczb
 rzeczywistych z działaniami :math:`\left( {f_{ 1} \oplus f_{ 2} }
@@ -64,13 +74,13 @@ jest przestrzenią rzeczywistą.
 
 4.) Uogólniając poprzedni przykład można stwierdzić, że zbiór
 :math:`{\mathop{\rm Map}\nolimits} (X,V)` wszystkich odwzorowań
-(dowolnego ustalonego) zbioru X w p.w.  :math:`V(K)`, z działaniami
+(dowolnego ustalonego) zbioru X w przestrzeni wektorowej  :math:`V(K)`, z działaniami
 :math:`(\varphi \oplus \psi )(x): = \varphi (x) + \psi (x)`,
 
-:math:`(\lambda \varphi )(x): = \lambda  \cdot \varphi (x),{\rm{     gdzie     }}\varphi ,\psi  \in {\mathop{\rm Map}\nolimits} (X,V){\rm{   }}x \in X,{\rm{   }}\lambda  \in K`,
+:math:`(\lambda \varphi )(x): = \lambda \cdot \varphi (x),{\rm{ gdzie }}\varphi ,\psi \in {\mathop{\rm Map}\nolimits} (X,V){\rm{ }}x \in X,{\rm{ }}\lambda \in K`,
 
 (działania :math:`+` i :math:`\cdot` po prawej stronie odnoszą się do
-przestrzeni V) jest p.w.  nad ciałem K.
+przestrzeni V) jest przestrzenią wektorową  nad ciałem K.
 
 
 

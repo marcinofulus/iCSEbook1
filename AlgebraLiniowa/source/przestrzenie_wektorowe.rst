@@ -1,6 +1,15 @@
 Przestrzenie  wektorowe.
 ------------------------
 
+.. sidebar:: Ciało i pierścień, przypomnienie
+
+   Ciałem (ang. field) nazywa się pierścień przemienny (tzn. mnożenie jest
+   przemienne), w którym każdy niezerowy element jest odwracalny.
+   
+   Pierścień (ang. ring)  to intuicyjnie zbiór, którego elementy mogą być bez
+   przeszkód dodawane, odejmowane i mnożone, lecz niekoniecznie
+   dzielone.
+
 Def.: Przestrzeń wektorowa nad ciałem :math:`K` jest strukturą
 algebraiczną:
 
@@ -38,8 +47,8 @@ W powyższych wyrażeniach są :math:`\alpha` i :math:`\beta` dowolnymi
 elementami ciała K (1 jest jednością tego ciała), :math:`v` i
 :math:`w` są dowolnymi elementami zbioru V.
 
-Elementy zbioru V (oznaczane literami łacińskimi ) nazywamy wektorami,
-a elementy zbioru K (oznaczane literami greckimi ) – skalarami.  
+Elementy zbioru V (oznaczane literami łacińskimi) nazywamy *wektorami*,
+a elementy zbioru K (oznaczane literami greckimi) – *skalarami*.  
 
 W praktyce sam zbiór wektorów V nazywany jest przestrzenią wektorową.
 W tym sensie przestrzeń wektorowa jest zbiorem wektorów, które można

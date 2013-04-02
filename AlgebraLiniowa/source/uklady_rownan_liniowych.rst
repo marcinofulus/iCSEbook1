@@ -1,15 +1,6 @@
 .. -*- coding: utf-8 -*-
 
 
-
-
-
-
-
-
-
-
-
  
 
 Układy równań liniowych (podejście bez rachunku macierzowego).
@@ -35,8 +26,8 @@ Rozważmy układ dwóch równań:
 .. code-block:: python
 
     sage: var('x1 x2')
-    sage: eq1=x1-1*x2*1==0
-    sage: eq2=-3*x1+x2==-3
+    sage: eq1 = x1-1*x2*1==0
+    sage: eq2 = -3*x1+x2==-3
 
 
 .. end of output
@@ -733,16 +724,20 @@ Macierz :math:`n\neq m`
 .. end of output
 
 
-Zadania: automatycznie generowane.
-----------------------------------
+Zadania:
+--------
+
+W poniższych zadaniach naciśnięcie "Evaluate" spowoduje wygenerowanie
+losowego układu równań lub losowej macierzy.  
+
 
 Zadanie 1. Za pomocą operacji elementarnych, doprowadzić macierz do postaci schodkowej. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wolno używać tylko wbudowanych funkcji do operacji na rzędach.
+Wolno używać tylko wbudowanych funkcji Sage do operacji na rzędach.
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: rank=0
     sage: n=randint(2,7)
@@ -751,19 +746,9 @@ Wolno używać tylko wbudowanych funkcji do operacji na rzędach.
     ...       rank=A.rank()
     sage: show(A)
 
-.. MATH::
-
-    \left(\begin{array}{rrrrrrr}
-    0 & -1 & 0 & 0 & -2 & 0 & 0 \\
-    -2 & 0 & -1 & -1 & 2 & \frac{1}{2} & \frac{1}{2} \\
-    -1 & 1 & -2 & 0 & -2 & 2 & -\frac{1}{2} \\
-    -2 & -1 & -\frac{1}{2} & 0 & -2 & -1 & -2 \\
-    1 & -2 & 0 & -\frac{1}{2} & 2 & 0 & 0 \\
-    -1 & 2 & 2 & -2 & 0 & 1 & 1 \\
-    \frac{1}{2} & -2 & 0 & 1 & 0 & 0 & 0
-    \end{array}\right)
 
 .. end of output
+
 
 Zadanie 2. Rozwiązać układ równań metodą eliminacji Gaussa. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -776,7 +761,7 @@ Zadanie 2. Rozwiązać układ równań metodą eliminacji Gaussa.
  #. Ile jest rozwiązań, od ilu parametrów zależą rozwiązania?
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: n=randint(2,5)
     sage: m=randint(2,5)
@@ -784,8 +769,6 @@ Zadanie 2. Rozwiązać układ równań metodą eliminacji Gaussa.
     sage: b=random_vector(QQ,m)
     sage: x=vector([var('x%d' % (i+1)) for i in range(n)])
     sage: html.table( [[(A*x)[i],"=",b[i]] for i in range(m)])
-    <html>...</html>
-
 
 .. end of output
 
