@@ -22,8 +22,11 @@ interpretacja geometryczna,
 
 .. toctree::
    :maxdepth: 1
+   :glob:
+      
+   sws/iCSE_MAlg01_z12_geom_ukl_rownan_EDIT
+   sws/*
 
-   uklady_rownan_liniowych
 
 
 Wykład II:  Macierze
@@ -96,6 +99,17 @@ Wartości
    baza_wymiar
    wyznacznik
    test001
+
+
+sws
+===
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+sws/*
+
 
 
 Wykłady skonwertowne z materiałów Jana Aksamita
