@@ -122,7 +122,7 @@ Sprawdźmy czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 Dodatek:
 ~~~~~~~~
 
-solve dla układów nieoznaczonych
+Procedura solve dla układów równań nieoznaczonych (nie tylko liniowych).
 
 
 .. code-block:: python

@@ -25,8 +25,8 @@ interpretacja geometryczna,
    :maxdepth: 1
    :glob:
    
-	sws/iCSE_MAlg01_z12_geom_ukl_rownan_EDIT
-  sws/iCSE_MAlg01_z12_eliminacja_Gaussa_bez_macierzy
+   sws/iCSE_MAlg01_z12_geom_ukl_rownan_EDIT
+   sws/iCSE_MAlg01_z12_eliminacja_Gaussa_bez_macierzy
 
 
 
