@@ -18,11 +18,9 @@ Rozważmy dwa równania liniowe:
     sage: show(eq1)
     sage: show(eq2)
 
-
 .. MATH::
 
     2 \, x_{1} - x_{2} = 1
-
 
 
 .. MATH::
@@ -54,9 +52,12 @@ punktu przecięcia się dwóch prostych:
     ...    implicit_plot(eq2,(x1,0,5),(x2,0,5))+\
     ...    point((2,3),color='red',size=40,figsize=5)
 
-.. image:: iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_135_sage0.png
-    :align: center
+.. figure:: iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_135_sage0.png
+    :align: left
+    :figwidth: 60%
 
+    Interpretacja rozwiązania układu równań liniowych - typowy
+    przypadek.
 
 Możemy korzystając z intuicji od razu przypuszczać, że oprócz punktu,
 przecięciem się dwóch prostych na płaszczyźnie może być też prosta lub

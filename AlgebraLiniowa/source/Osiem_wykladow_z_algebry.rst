@@ -8,14 +8,13 @@ Osiem wykładów z Algebry liniowej
 =================================
 
 
+Wykład I:  Układy równań liniowych - eliminacja Gaussa
+======================================================
+
 .. sidebar:: Algebra liniowa
 
    Algebra liniowa - dział algebry zajmujący się badaniem przestrzeni
    liniowych i przekształceń liniowych.
-
-
-Wykład I:  Układy równań liniowych - eliminacja Gaussa
-======================================================
 
 Układy równań liniowych, metoda eliminacji, przyklady osobliwe,
 interpretacja geometryczna, 
@@ -25,7 +24,7 @@ interpretacja geometryczna,
    :maxdepth: 1
    :glob:
    
-   sws/iCSE_MAlg01_z12_geom_ukl_rownan_EDIT
+   geometria_ukladow_rownan
    sws/iCSE_MAlg01_z12_eliminacja_Gaussa_bez_macierzy
 
 

@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Geometria układu równań liniowych</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="geometria-ukladu-rownan-liniowych">
+<h1 class="title">Geometria układu równań liniowych</h1>
+
+<!-- -*- coding: utf-8 -*- -->
+<div class="section" id="interpretacja-wierszowa">
+<h1>Interpretacja &quot;wierszowa&quot;</h1>
+<p>Rozważmy dwa równania liniowe:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 13)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: var('x1 x2')
+    sage: eq1 = 2*x1-x2==1
+    sage: eq2 = x1+x2==5
+    sage: show(eq1)
+    sage: show(eq2)
+
+</pre>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mn>2</mn><mspace></mspace><msub><mi>x</mi>
+<mrow><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>x</mi>
+<mrow><mn>2</mn></mrow></msub><mo>=</mo><mn>1</mn></mtd></mtr></mtable></math>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>x</mi>
+<mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>x</mi>
+<mrow><mn>2</mn></mrow></msub><mo>=</mo><mn>5</mn></mtd></mtr></mtable></math>
+</div>
+<!-- end of output -->
+<p>Ich rozwiązaniem są liczby <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow></math> i <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn></mrow></math>, co łatwo
+sprawdzić ręcznie lub za pomocą Sage:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 37)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: solve([eq1,eq2],[x1,x2])
+    [[x1 == 2, x2 == 3]]
+
+</pre>
+</div>
+<!-- end of output -->
+<p>Każde z równań jest prostą na płaszczyźnie <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo><mo>.</mo></mrow></math>
+Rozwiązanie układu równań leży na obydwu prostych jednocześnie. Wynika
+z tego interpretacja graficzna układu dwóch równań liniowych jako
+punktu przecięcia się dwóch prostych:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 49)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: implicit_plot(eq1,(x1,0,5),(x2,0,5))+\
+    ...    implicit_plot(eq2,(x1,0,5),(x2,0,5))+\
+    ...    point((2,3),color='red',size=40,figsize=5)
+
+</pre>
+</div>
+<div class="figure align-center">
+<img alt="iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_135_sage0.png" src="iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_135_sage0.png" />
+</div>
+<p>asd fasfd afa</p>
+<p>Możemy korzystając z intuicji od razu przypuszczać, że oprócz punktu,
+przecięciem się dwóch prostych na płaszczyźnie może być też prosta lub
+zbiór pusty. Tak więc dla układów dwóch równań mamy co najwyżej trzy
+przypadki:</p>
+<ol class="arabic simple">
+<li>Dokładnie jedno rozwiązanie.</li>
+<li>Brak rozwiązań - mówimy, że  układ jest sprzeczny.</li>
+<li>Nieskończenie wiele rozwiązań.</li>
+</ol>
+</div>
+<div class="section" id="interpretacja-kolumnowa">
+<h1>Interpretacja kolumnowa</h1>
+<p>Rozważany układ równań</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 79)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\begin{cases}
+2 \, x_{1} - x_{2} &amp;=&amp; 1\\  x_{1} + x_{2} &amp;=&amp; 5
+\end{cases}
+</pre>
+</div>
+<p>można zapisać jako działania na wektorach kolumnowych:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 88)</p>
+<p>
+Unknown LaTeX command: array</p>
+<pre class="literal-block">
+\left [\array{2 x_1\\x_1}\right ] +  \left [\array{-x_2 \\x_2}\right ] = \left [\array{1 \\5}\right ],
+</pre>
+</div>
+<p>czyli:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 95)</p>
+<p>
+Unknown LaTeX command: array</p>
+<pre class="literal-block">
+x_1 \left [\array{2 \\1}\right ] + x_2 \left [\array{-1 \\1}\right ] = \left [\array{1 \\5}\right ]
+</pre>
+</div>
+<p>Interpretacja takiego zapisu jest następująca: dla jakich wartości
+liczb <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi>
+<mrow><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>x</mi>
+<mrow><mn>2</mn></mrow></msub></mrow></math>, suma wektorów <div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 98)</p>
+<p>
+Unknown LaTeX command: array</p>
+<pre class="literal-block">
+\left [\array{2
+\\1}\right ]
+</pre>
+</div>
+ i <div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 98)</p>
+<p>
+Unknown LaTeX command: array</p>
+<pre class="literal-block">
+\left [\array{-1 \\1}\right ]
+</pre>
+</div>
+ jest równa
+wektorowi <div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 98)</p>
+<p>
+Unknown LaTeX command: array</p>
+<pre class="literal-block">
+\left [\array{1 \\5}\right ].
+</pre>
+</div>
+</p>
+<p>Geometrycznie można to przedstawić w następujący sposób:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 107)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: v1 = vector([2,1])
+    sage: v2 = vector([-1,1])
+    sage: v3 = vector([1,5])
+
+
+</pre>
+</div>
+<!-- end of output -->
+<p>Narysujmy te wektory na płaszczyźnie, wykorzystując polecenie <em>arrow</em>:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 118)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: arrow( (0,0),v1)+\
+    ...    arrow( (0,0),v2)+\
+    ...    arrow( (0,0),v3,color='red', figsize=5)
+
+</pre>
+</div>
+<img alt="iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_248_sage0.png" class="align-center" src="iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_248_sage0.png" />
+<!-- end of output -->
+<p>Znamy odpowiedź - liczbami tymi są 2 i 3, ale zobaczmy jak to działa.</p>
+<p>Eksperyment komputerowy:</p>
+<p>W poniższym elemencie interaktywnym rysujemy grubą linią wektory
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>1</mn></msub></mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>2</mn></msub></mrow></math> kolorem niebieskim a pożądaną wartość ich sumy
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>3</mn></msub></mrow></math> zielonym. Manipulując suwakami chcemy tak dobrać liczny
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></math> i <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>2</mn></msub></mrow></math>, by suma ważona <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msub><mi>v</mi><mn>2</mn></msub></mrow></math>
+oznaczona kolorem czerwonym pokryła się z zadanym wektorem
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>3</mn></msub></mrow></math>. Szarym kolorem zostały oznaczone wektory <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><msub><mi>v</mi><mn>1</mn></msub></mrow></math>
+i <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>2</mn></msub><msub><mi>v</mi><mn>2</mn></msub><mo>.</mo></mrow></math></p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 143)</p>
+<p>Unknown directive type &quot;sagecellserver&quot;.</p>
+<pre class="literal-block">
+.. sagecellserver::
+
+    sage: v1 = vector([2,1])
+    sage: v2 = vector([-1,1])
+    sage: v3 = vector([1,5])
+    sage: &#64;interact
+    sage: def _(x1=slider(-3,3,1/2,default=1/2),x2=slider(-3,3,1/2,default=0)):
+    ...       plt  = arrow( (0,0),v1)+arrow( (0,0),v2)
+    ...       plt += arrow((0,0),v3,color='green')
+    ...       plt += arrow( (0,0),x1*v1, color='gray',width=1)
+    ...       plt += arrow( (0,0),x2*v2, color='gray',width=1)
+    ...       plt += arrow( (0,0),x1*v1+x2*v2, color='red',width=1)
+    ...       plt += line( [x2*v2,x2*v2+x1*v1],linestyle='dashed',thickness=0.5,color='black')
+    ...       plt += line( [x1*v1,x2*v2+x1*v1],linestyle='dashed',thickness=0.5,color='black')
+    ...       plt.set_axes_range(-6,6,-6,6)
+    ...       if v3 ==x1*v1+x2*v2:
+    ...           print &quot;SUKCES!!!&quot;
+    ...       plt.show(figsize=6)
+
+
+</pre>
+</div>
+<!-- end of output -->
+<p>Aby się upewnić, że jesteśmy w stanie przenieść wnioski na większą
+liczbę równań, rozważmy teraz układ trzech równań:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 171)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\begin{cases}
+   2 \, x_{1} + x_{2} + x_{3} = 1\\
+   x_{1} - x_{2} = -1\\
+    x_{1} + x_{2} + 2 \, x_{3} = 2
+\end{cases}
+</pre>
+</div>
+<!-- end of output -->
+<p>Ma on rozwiązanie w punkcie <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn><mo>/</mo><mn>4</mn><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn><mo>/</mo><mn>4</mn><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mn>3</mn><mo>/</mo><mn>4</mn></mrow></math>.</p>
+<p>W przestrzeni trójwymiarowej <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></math>, równanie liniowe
+opisuje płaszczyznę. Rozwiązaniem układu równań będzie więc miejsce
+przecięcia się trzech płaszczyzn:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 187)</p>
+<p>Unknown directive type &quot;sagecellserver&quot;.</p>
+<pre class="literal-block">
+.. sagecellserver::
+
+    sage: var('x1 x2 x3')
+    sage: eq1=2*x1+x2+x3==1
+    sage: eq2=1*x1-1*x2==-1
+    sage: eq3= x1+1*x2+2*x3==2
+    sage: p1=implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='blue',opacity=0.9)
+    sage: p2=implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='brown',opacity=0.9)
+    sage: p3=implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='green',opacity=0.9)
+    sage: p3d=p1+p2+p3+point3d([-1/4,3/4,3/4],size=12,color='red')
+    sage: p3d.show()
+
+
+</pre>
+</div>
+<!-- end of output -->
+<div class="admonition-automatyczna-konwersja-zapisu-wierszowego-do-kolumnowego admonition">
+<p class="first admonition-title">Automatyczna konwersja zapisu wierszowego do kolumnowego.</p>
+<p>Mając układ równań w postaci równań algebraicznych w Sage, warto
+nie przepisywać ręcznie współczynników a zamiast tego
+wyekstrahować je z wyrażeń. Poniższy kod wykonuje te operacje,
+które co prawda wyglądają odstraszająca to w rzeczywistości są do
+&quot;wyeksperymentowaia&quot; w kilka minut.</p>
+<div class="last system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 210)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: v1,v2,v3 = [vector([eq.lhs().coeff(x) for eq in [eq1,eq2,eq3]]) for x in [x1,x2,x3]]
+    sage: v4 = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+    sage: v1,v2,v3,v4
+    ((2, 1, 1), (1, -1, 1), (1, 0, 2), (1, -1, 2))
+
+</pre>
+</div>
+<!-- end of output -->
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 221)</p>
+<p>Unknown directive type &quot;sagecellserver&quot;.</p>
+<pre class="literal-block">
+.. sagecellserver::
+
+    sage: v1,v2,v3,v4 = (vector(QQ,(2, 1, 1)), vector(QQ,(1, -1, 1)), vector(QQ,(1, 0, 2)), vector(QQ,(1, -1, 2)))
+    sage: &#64;interact
+    sage: def _(x1=slider(-3,3,1/4,default=1/2),x2=slider(-3,3,1/4,default=0),x3=slider(-3,3,1/4,default=0),viewer=['tachyon','jmol']):
+    ...       plt  = cube(size=4, frame_thickness=1, opacity=0)
+    ...       plt += arrow( (0,0,0),v1)+arrow( (0,0,0),v2)+arrow( (0,0,0),v3)
+    ...       plt += arrow( (0,0,0),v4,color='green')
+    ...       plt += arrow( (0,0,0),x1*v1, color='gray',width=1)
+    ...       plt += arrow( (0,0,0),x2*v2, color='gray',width=1)
+    ...       plt += arrow( (0,0,0),x3*v3, color='gray',width=1)
+    ...       plt += arrow( (0,0,0),x1*v1+x2*v2+x3*v3, color='red',width=1)
+    ...
+    ...       if v4 ==x1*v1+x2*v2+x3*v3:
+    ...           print &quot;SUKCES!!!&quot;
+    ...       plt.show(viewer=viewer)
+
+
+</pre>
+</div>
+<!-- end of output -->
+</div>
+<div class="section" id="przypadek-osobliwy-uklad-rownan-liniowych-ma-nieskonczenie-wiele-rozwiazan">
+<h1>Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań</h1>
+<p>Weżmy układ równań:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 249)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\begin{cases}
+   2 \, x_{1} + x_{2} + x_{3} = 4\\
+   x_{1} + 1/2 x_{2} +1/2 x_3= 2\\
+    x_{1} + x_{2} + 2 \, x_{3} = 3
+\end{cases}
+</pre>
+</div>
+<!-- end of output -->
+<p>Procedura solve daje w wyniku następujące równanie:</p>
+<blockquote>
+[x1 == r4 + 1, x2 == -3*r4 + 2, x3 == r4],</blockquote>
+<p>które jest zależne od zmiennej r4. Zmienna ta może przyjmować dowolne
+wartości. Oznacza to, że układ równań jest spełniony przez
+nieskończenie wiele trójek liczb w powyższej postaci.</p>
+<p>Zobaczmy co to oznacza geometrycznie. W interpretacji &quot;wierszowej&quot;
+rozwiązaniem jest wspólna część trzech płaszczyzn. Narysujmy je w tym
+przypadku:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 271)</p>
+<p>Unknown directive type &quot;sagecellserver&quot;.</p>
+<pre class="literal-block">
+.. sagecellserver::
+
+    sage: var('x1 x2 x3')
+    sage: eq1=2*x1+x2+x3==4
+    sage: eq2=1*x1+1/2*x2+1/2*x3==2
+    sage: eq3= x1+1*x2+2*x3==3
+    sage: p1=implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='blue',opacity=0.9)
+    sage: p2=implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='brown',opacity=0.9)
+    sage: p3=implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='green',opacity=0.9)
+    sage: var('r4')
+    sage: p3d=p1+p2+p3+parametric_plot([r4 + 1,  -3*r4 + 2,  r4],(r4,-3,3),color='red',thickness=5)
+    sage: v1,v2,v3 = [vector([eq.lhs().coeff(x) for eq in [eq1,eq2,eq3]]) for x in [x1,x2,x3]]
+    sage: v4 = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+    sage: v1,v2,v3,v4
+    sage: p3d_a = arrow( (0,0,0),v1)+arrow( (0,0,0),v2)+arrow( (0,0,0),v3)+arrow( (0,0,0),v4,color='red')
+    sage: p3d_a.show()
+    sage: p3d.show()
+
+</pre>
+</div>
+<!-- end of output -->
+<p>Wektory kolumnowe <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi>
+<mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub></mrow></math> leża w jednej płaszczyźnie a wektor
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>4</mn></msub></mrow></math> będący prawą stroną układu równań należy do tej płaszczyzny.</p>
+</div>
+<div class="section" id="przypadek-osobliwy-uklad-sprzeczny">
+<h1>Przypadek osobliwy: układ sprzeczny</h1>
+<p>Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 303)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\begin{cases}
+   2 \, x_{1} + x_{2} + x_{3} = 1\\
+   x_{1} + 1/2 x_{2} +1/2 x_3= 1\\
+    x_{1} + x_{2} + 2 \, x_{3} = 1
+\end{cases}
+</pre>
+</div>
+<p>Układ ten nie ma rozwiązań. Zobaczmy co to oznacza w interpretacji wierszowej i kolumnowej.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 313)</p>
+<p>Unknown directive type &quot;sagecellserver&quot;.</p>
+<pre class="literal-block">
+.. sagecellserver::
+
+    sage: var('x1 x2 x3')
+    sage: eq1=2*x1+x2+x3==1
+    sage: eq2=1*x1+1/2*x2+1/2*x3==1
+    sage: eq3= x1+1*x2+2*x3==1
+    sage: p1=implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='blue',opacity=0.9)
+    sage: p2=implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='brown',opacity=0.9)
+    sage: p3=implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5),color='green',opacity=0.9)
+    sage: var('r4')
+    sage: p3d=p1+p2+p3
+    sage: v1,v2,v3 = [vector([eq.lhs().coeff(x) for eq in [eq1,eq2,eq3]]) for x in [x1,x2,x3]]
+    sage: v4 = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+    sage: v1,v2,v3,v4
+    sage: p3d_a = arrow( (0,0,0),v1)+arrow( (0,0,0),v2)+arrow( (0,0,0),v3)+arrow( (0,0,0),v4,color='red')
+    sage: p3d_a.show()
+    sage: p3d.show()
+
+
+</pre>
+</div>
+<!-- end of output -->
+<p>W interpretacji wierszowej mamy do czynienia z sytuacją w której dwie
+płaszczyzny są do siebie równoległe, lecz nie pokrywają się ze sobą.</p>
+<p>Obraz w interpretacji kolumnowej pokazuje, że jak w przypadku układu
+nieoznaczonego, wektory <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></math> i <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>3</mn></msub></mrow></math> leżą na jednej
+płaszczyźnie. W przeciwieństwie do poprzedniego przypadku jednak
+wektor <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>v</mi><mn>4</mn></msub></mrow></math> <strong>nie</strong> leży na tej płaszczyźnie co intuicyjnie powoduje,
+że może być ich sumą ważoną.</p>
+</div>
+<div class="section" id="zadania">
+<h1>Zadania:</h1>
+<p>Rozważmy układ równań:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 353)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\begin{cases}-8 \, x_{1} + 22 \, x_{2} - 8 \, x_{3} &amp;=&amp; 1 \\ x_{1} - 3 \, x_{2} + x_{3} &amp;=&amp; 0 \\ 3 \, x_{1} - 8 \, x_{2} + 3 \, x_{3} &amp;=&amp; -1/2 \\ \\ \end{cases}
+</pre>
+</div>
+<p>Wykorzystując system Sage lub ręczne rachunki:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Rozwiązać układ.</li>
+<li>Zmodyfikować prawą stronę tak by otrzymać układ sprzeczny. Narysować wektory kolumnowe i uzasadnić sprzeczność układu.</li>
+<li>Zmodyfikować macierz tak by dla dowolnej prawej strony układ nigdy nie był sprzeczny - zastosować rysunek wektorów kolumnowych do uzasadnienia.</li>
+</ol>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 367)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: var('x1 x2 x3')
+    sage: var('b1 b2 b3')
+    sage: A = random_matrix(QQ,3,algorithm='subspaces')
+    sage: b = random_vector(QQ,3)
+    sage: b1 = A.column_space().basis()[0]
+    sage: show(A)
+    sage: show(b)
+    sage: show(b1)
+
+
+</pre>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 381)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\left(\begin{array}{rrr}
+2 &amp; -2 &amp; 4 \\
+-2 &amp; 3 &amp; -5 \\
+1 &amp; -2 &amp; 3
+\end{array}\right)
+</pre>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mfenced open="(" close=")">
+<mrow><mo>-</mo><mn>5</mn><mo>,</mo><mspace></mspace><mn>1</mn><mn>2</mn><mn>9</mn><mo>,</mo><mspace></mspace><mn>1</mn></mrow></mfenced></mtd></mtr></mtable></math>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mfenced open="(" close=")">
+<mrow><mn>1</mn><mo>,</mo><mspace></mspace><mn>0</mn><mo>,</mo><mspace></mspace><mo>-</mo><mfrac>
+<mrow><mn>1</mn></mrow>
+<mrow><mn>2</mn></mrow></mfrac></mrow></mfenced></mtd></mtr></mtable></math>
+</div>
+<!-- end of output -->
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 401)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: for i,x in enumerate(A*vector([x1,x2,x3])):
+    ...       print latex(x),'&amp;=&amp; %s \\\\'%b1[i]
+    2 \, x_{1} - 2 \, x_{2} + 4 \, x_{3} &amp;=&amp; 1 \\
+    -2 \, x_{1} + 3 \, x_{2} - 5 \, x_{3} &amp;=&amp; 0 \\
+    x_{1} - 2 \, x_{2} + 3 \, x_{3} &amp;=&amp; -1/2 \\
+
+</pre>
+</div>
+<!-- end of output -->
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 411)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: print latex(b)
+    sage: print latex(b1)
+    \left(-5,\,129,\,1\right)
+    \left(1,\,0,\,-\frac{1}{2}\right)
+
+</pre>
+</div>
+<!-- end of output -->
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 420)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: A\b
+    Traceback (most recent call last):
+    ...
+    ValueError: matrix equation has no solutions
+
+</pre>
+</div>
+<!-- end of output -->
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">geometria_ukladow_rownan.rst</tt>, line 429)</p>
+<p>Unknown directive type &quot;code-block&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    sage: A\b1
+    (3/2, 1, 0)
+
+</pre>
+</div>
+<!-- end of output -->
+</div>
+</div>
+</body>
+</html>
