@@ -25,9 +25,16 @@ interpretacja geometryczna,
    :glob:
    
    geometria_ukladow_rownan
-   sws/iCSE_MAlg01_z12_eliminacja_Gaussa_bez_macierzy
+   eliminacja_gaussa_bez_macierzy
 
 
+Zadania:
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   zadanie_eliminacja_gaussa
 
 
 Wykład II:  Macierze
@@ -40,11 +47,22 @@ LU, mnożenie macierzy (ekspetymentalne badanie właściwości)
 .. toctree::
    :maxdepth: 1
 
-	 sws/iCSE_MAlg01_z12_elimin_Gaussa
-	 sws/iCSE_MAlg08_z47_LU
+   mnozenie_macierzy
+   transpozycja_macierzy
+   eliminacja_gaussa
 
 
-Wykład III:  Macierz odwrotna 
+Zadania:
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   zadanie_mnozenie_macierzy
+
+
+
+Wykład III:  Macierz odwrotna
 =============================
 
 Metoda Gaussa Jordana, stabilność procedury na przykładach, własności
@@ -75,6 +93,7 @@ Przekszałcenie liniowe, własności formalne i przykłady przekształceń na p�
 .. toctree::
    :maxdepth: 1
 
+   przeksztalcenia_liniowe
 
 
 Wykład VI: ortogonalnośc
@@ -84,9 +103,9 @@ Jądro, dopełnienie ortogonalne, nierównośc Schwarza, AtA - najmniejsze
 kwadraty
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   przeksztalcenia_liniowe
+
    
               
 
@@ -96,7 +115,7 @@ Wykład VII: wartości i wektory własne
 Zagadnieni własne i jego zastosowania.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
 
    baza_wymiar
