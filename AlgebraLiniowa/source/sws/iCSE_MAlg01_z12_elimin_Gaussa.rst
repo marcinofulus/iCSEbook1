@@ -69,41 +69,104 @@ Cele:
 
 .. end of output
 
-
-Uprzedzając procedurę możemy  podejrzeć wynik:
-
-
-
-.. code-block:: python
-
-    sage: show(B.rref())
-
-
-.. MATH::
-
-    \left(\begin{array}{rrrr}
-    1 & 0 & 0 & -4 \\
-    0 & 1 & 0 & 2 \\
-    0 & 0 & 1 & 5
-    \end{array}\right)
-
-.. end of output
-
 .. code-block:: python
 
     sage: B.swap_rows(0,2)
-    sage: B.rescale_row(0,-1)
-    sage: B.add_multiple_of_row(1,0,1/2) # -> do drugiego dodaj pierwszy razy 1/2
-    sage: B.add_multiple_of_row(2,1,4)
-    sage: B.add_multiple_of_row(0,1,-2)
-    sage: B.rescale_row(1,2)
+    sage: show(B)
 
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    -1 & -1 & 0 & 2 \\
+    -\frac{1}{2} & 0 & 0 & 2 \\
+    0 & -2 & 1 & 1
+    \end{array}\right)
 
 .. end of output
 
 .. code-block:: python
 
+    sage: B.rescale_row(0,-1)
     sage: show(B)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    1 & 1 & 0 & -2 \\
+    -\frac{1}{2} & 0 & 0 & 2 \\
+    0 & -2 & 1 & 1
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B.add_multiple_of_row(1,0,1/2) # -> do drugiego dodaj pierwszy razy 1/2
+    sage: show(B)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    1 & 1 & 0 & -2 \\
+    0 & \frac{1}{2} & 0 & 1 \\
+    0 & -2 & 1 & 1
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B.add_multiple_of_row(2,1,4)
+    sage: show(B)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    1 & 1 & 0 & -2 \\
+    0 & \frac{1}{2} & 0 & 1 \\
+    0 & 0 & 1 & 5
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B.add_multiple_of_row(0,1,-2)
+    sage: show(B)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    1 & 0 & 0 & -4 \\
+    0 & \frac{1}{2} & 0 & 1 \\
+    0 & 0 & 1 & 5
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B.rescale_row(1,2)
+    sage: show(B)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrr}
+    1 & 0 & 0 & -4 \\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & 5
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
     sage: show(B.rref())
 
 
@@ -115,16 +178,40 @@ Uprzedzając procedurę możemy  podejrzeć wynik:
     0 & 0 & 1 & 5
     \end{array}\right)
 
+.. end of output
 
-.. MATH::
+.. code-block:: python
 
-    \left(\begin{array}{rrrr}
-    1 & 0 & 0 & -4 \\
-    0 & 1 & 0 & 2 \\
-    0 & 0 & 1 & 5
-    \end{array}\right)
+    sage: A=matrix([[   0,-2, 1],\
+    ...             [-1/2, 0, 0],\
+    ...             [-1  ,-1, 0] ])
+    sage: b=matrix([[1],[2],[2]])
+    sage: B=A.augment(b)
+    sage: tab = []
+    sage: tab.append(latex(B))
+    sage: B.swap_rows(0,2)
+    sage: tab.append(latex(B))
+    sage: B.rescale_row(0,-1)
+    sage: tab.append(latex(B))
+    sage: B.add_multiple_of_row(1,0,1/2) # -> do drugiego dodaj pierwszy razy 1/2
+    sage: tab.append(latex(B))
+    sage: B.add_multiple_of_row(2,1,4)
+    sage: tab.append(latex(B))
+    sage: B.add_multiple_of_row(0,1,-2)
+    sage: tab.append(latex(B))
+    sage: B.rescale_row(1,2)
+    sage: tab.append(latex(B))
+
 
 .. end of output
+
+.. code-block:: python
+
+    sage: html( "$$%s$$" % join(tab,"\\to") )
+    ...
+
+.. end of output
+
 
 
 Eliminacja Gaussa\-Jordana układu sprzecznego
