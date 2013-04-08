@@ -4,11 +4,10 @@
 Zadanie: Mnożenie Macierzy
 --------------------------
 
-Wykonując na papierze trzy mnożenia macierzy 2x2 i jedno 3x3
-na kartce papieru. 
+Wykonująć na papierze trzy mnożenia macierzy 2x2 i jedno 3x3. 
 
 Aby wygenerować macierze i wynik ich mnożenia naciśnij "eveluate", aby zmienić liczbę
-równań należy zmienić zmienną n.
+równań należy zmienić zmienną ``n``.
 
 Sprawdzić ile będzie wynosił iloczyn
 :math:`\boldsymbol{B}\boldsymbol{A}`. Czy mnożenie macierzy jest
