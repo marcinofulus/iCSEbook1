@@ -19,9 +19,9 @@ równań należy zmienić zmienną n.
 .. sagecellserver::
 
    n = 3
-   A=random_matrix(QQ,n,algorithm='echelonizable',rank=n)
+   A=random_matrix(ZZ,n,algorithm='echelonizable',rank=n)
    x = vector([ var('x%d'%i) for i in range(1,n+1)])
-   b= random_vector(QQ,n)
+   b= random_vector(ZZ,n)
    t = [ latex(r)+"&=&"+latex(l) for r,l in zip(A*x,b)]
    html("<center>$\\begin{cases}%s\\end{cases}$</center>" % join(t," \\\ "))
    show(A\b)
