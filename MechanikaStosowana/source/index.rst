@@ -8,7 +8,7 @@ Mechanika Stosowana
 ===================
 
 
-Preeliminaria matematyczne
+Preliminaria matematyczne
 ==========================
 
 .. toctree::
