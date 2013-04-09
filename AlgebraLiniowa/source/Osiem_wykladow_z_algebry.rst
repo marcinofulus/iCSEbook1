@@ -48,7 +48,6 @@ LU, mnożenie macierzy (ekspetymentalne badanie właściwości)
    :maxdepth: 1
 
    mnozenie_macierzy
-   transpozycja_macierzy
    eliminacja_gaussa
 
 
@@ -67,6 +66,14 @@ Wykład III:  Macierz odwrotna
 
 Metoda Gaussa Jordana, stabilność procedury na przykładach, własności
 macierzy odwrotnej.
+
+.. toctree::
+   :maxdepth: 1
+
+   macierz_odwrotna
+   macierze_elementarne_LU
+   transpozycja_macierzy
+
 
 
 Wykład IV:  Przestrzenie wektorowe 
