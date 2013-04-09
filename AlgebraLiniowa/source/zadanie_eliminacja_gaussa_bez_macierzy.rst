@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
 
-Zadanie: Eliminacja Gaussa
---------------------------
+Zadanie: Eliminacja Gaussa - dla układów równań
+-----------------------------------------------
 
 Wykonując eliminację Gaussa rozwiązac co najmniej jeden układ 3x3
 równań na kartce papieru. Rozwiązać układ 4x4 z ew.  pomocą Sage i
