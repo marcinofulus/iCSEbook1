@@ -334,11 +334,12 @@ Zmieńmy tak wektor :math:`b` by układ miał rozwiązania:
 .. code-block:: python
 
     sage: A=matrix(QQ,[[0,1,0],[0,1,0],[1,2,3]])
-    sage: b= vector(QQ, [1, 1,1])
-    sage: A\b
+    sage: b= vector(QQ, [1, 1, 1])
+    sage: A.solve_right(b)
     (-1, 1, 0)
 
 .. end of output
+
 
 .. code-block:: python
 
@@ -455,13 +456,6 @@ Weźmy układ dwóch równań z czterema niewiadomymi:
     sage: #Jeszcze jeden przykład
     sage: A=matrix(QQ,[[0,1,0,1],[0,1,1,0]])
     sage: b= vector(QQ, [1, 1])
-    sage: A\b
-    (0, 1, 0, 0)
-
-.. end of output
-
-.. code-block:: python
-
     sage: show(A)
 
 
@@ -474,26 +468,12 @@ Weźmy układ dwóch równań z czterema niewiadomymi:
 
 .. end of output
 
-.. code-block:: python
+Spróbujmy odnaleźć rozwiązanie ogólne, wykorzystując eliminację Gaussa.  Zacznijmy od procedury dla macierzy :math:`2\times4:`
 
-    sage: A.right_kernel().basis()
-    [
-    (1, 0, 0, 0),
-    (0, 1, -1, -1)
-    ]
-
-.. end of output
 
 .. code-block:: python
 
-    sage: rank(A)
-    2
-
-.. end of output
-
-.. code-block:: python
-
-    sage: show( (A.augment(b)).rref() )
+    sage: show(A.augment(b).rref())
 
 
 .. MATH::
@@ -504,6 +484,107 @@ Weźmy układ dwóch równań z czterema niewiadomymi:
     \end{array}\right)
 
 .. end of output
+
+Co odpowieda następujacemu układowi równań:
+
+
+.. code-block:: python
+
+    sage: for wiersz in A.augment(b).rref():
+    ...       sum([var("x%d"%(i+1))*el for i,el in enumerate(wiersz[:-1])])==wiersz[-1]
+    ...    
+    x2 + x4 == 1
+    x3 - x4 == 0
+
+.. end of output
+
+Uzupełnijmy ten układ o "brakujące" równania:
+
+
+.. code-block:: python
+
+    sage: Ann=matrix(SR,4,5)
+    sage: Ann[1:3,:]  = A.augment(b).rref()
+    sage: show(Ann)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrrr}
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 1 \\
+    0 & 0 & 1 & -1 & 0 \\
+    0 & 0 & 0 & 0 & 0
+    \end{array}\right)
+
+.. end of output
+
+wpiszmy zamiast :math:`0=0` równoważne :math:`x_1=x_1` i :math:`x_4=x_4`:
+
+
+.. code-block:: python
+
+    sage: Ann[0,0] = 1
+    sage: Ann[0,4] = x1
+    sage: Ann[3,3] = 1
+    sage: Ann[3,4] = x4
+    sage: show(Ann)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrrr}
+    1 & 0 & 0 & 0 & x_{1} \\
+    0 & 1 & 0 & 1 & 1 \\
+    0 & 0 & 1 & -1 & 0 \\
+    0 & 0 & 0 & 1 & x_{4}
+    \end{array}\right)
+
+.. end of output
+
+Wykonajmy jeszcze raz eliminacje Gaussa na takim układzie:
+
+
+.. code-block:: python
+
+    sage: show( Ann.rref() ) 
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrrr}
+    1 & 0 & 0 & 0 & x_{1} \\
+    0 & 1 & 0 & 0 & -x_{4} + 1 \\
+    0 & 0 & 1 & 0 & x_{4} \\
+    0 & 0 & 0 & 1 & x_{4}
+    \end{array}\right)
+
+.. end of output
+
+Tym razem mamy rozwiązanie jak dla układu nieosobliwego, jednak prawa strona zawiera dwa dowolne parametry :math:`x_1` i :math:`x_2`.
+
+
+
+Rozwiązanie można też otrzymać, biorąc jedno rozwiązanie szczególne i kombinację liniową wszytkich wektorów bazy jądra operatora :math:`A`:
+
+
+.. code-block:: python
+
+    sage: show(A\b)
+    sage: A.right_kernel().basis()
+    [
+    (1, 0, 0, 0),
+    (0, 1, -1, -1)
+    ]
+
+
+.. MATH::
+
+    \left(0,\,1,\,0,\,0\right)
+
+
+.. end of output
+
 
 .. code-block:: python
 
@@ -536,6 +617,13 @@ Weźmy układ dwóch równań z czterema niewiadomymi:
     \end{array}\right)
 
 .. end of output
+
+
+
+
+
+
+
 
 
 Zadania: automatycznie generowane.

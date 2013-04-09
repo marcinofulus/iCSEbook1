@@ -34,7 +34,7 @@ Zadania:
 .. toctree::
    :maxdepth: 1
 
-   zadanie_eliminacja_gaussa
+   zadanie_eliminacja_gaussa_bez_macierzy
 
 
 Wykład II:  Macierze
@@ -59,7 +59,7 @@ Zadania:
    :maxdepth: 1
 
    zadanie_mnozenie_macierzy
-
+   zadanie_eliminacja_gaussa
 
 
 Wykład III:  Macierz odwrotna

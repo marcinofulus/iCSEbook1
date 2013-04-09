@@ -1,8 +1,10 @@
 .. -*- coding: utf-8 -*-
 
 
-Zadanie: Mnożenie Macierzy
+Zadanie: Mnożenie macierzy
 --------------------------
+
+
 
 Wykonująć na papierze trzy mnożenia macierzy 2x2 i jedno 3x3. 
 
@@ -20,3 +22,4 @@ przemienne?
    A=random_matrix(QQ,n,algorithm='echelonizable',rank=n)
    B=random_matrix(QQ,n,algorithm='echelonizable',rank=n)
    html.table([["A","B","AB"],[A,B,A*B]])
+

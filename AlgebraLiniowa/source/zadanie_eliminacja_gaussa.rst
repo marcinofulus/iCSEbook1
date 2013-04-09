@@ -4,24 +4,49 @@
 Zadanie: Eliminacja Gaussa
 --------------------------
 
-Wykonując eliminację Gaussa rozwiązac co najmniej jeden układ 3x3
-równań na kartce papieru. Rozwiązać układ 4x4 z ew.  pomocą Sage i
-rozwiązanie zapisać w postaci notatnika Sage. 
 
-
-Pod układem równań znajduje się poprawna odpowiedź, proszę ją
-wykorzystać do weryfikacji odpowiedzi.
-
-Aby wygenerować układ równań naciśnij "eveluate", aby zmienić liczbę
+Aby wygenerować układ równań naciśnij "evaluate", aby zmienić liczbę
 równań należy zmienić zmienną n.
+
+
+
+Zadanie 1. Za pomocą operacji elementarnych, doprowadzić macierz do postaci schodkowej. 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Wolno używać tylko wbudowanych funkcji do operacji na rzędach.
 
 
 .. sagecellserver::
 
-   n = 3
+   rank=0
+   n=randint(2,7)
    A=random_matrix(ZZ,n,algorithm='echelonizable',rank=n)
-   x = vector([ var('x%d'%i) for i in range(1,n+1)])
-   b= random_vector(ZZ,n)
-   t = [ latex(r)+"&=&"+latex(l) for r,l in zip(A*x,b)]
-   html("<center>$\\begin{cases}%s\\end{cases}$</center>" % join(t," \\\ "))
-   show(A\b)
+   rank=A.rank()
+   show(A)
+
+.. end of output
+
+Zadanie 2. Rozwiązać układ równań metodą eliminacji Gaussa. 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+ #. Czy układ jest sprzeczny?
+
+ #. Czy układ jest nieoznaczony?
+
+ #. Ile jest rozwiązań, od ilu parametrów zależą rozwiązania?
+
+
+.. sagecellserver::
+   
+   n=5
+   A=random_matrix(QQ,n,algorithm='echelonizable',rank=3)
+   b=A[:,2]+0.5*A[:,1]
+   print "RANK:",A.rank()
+   show(A)
+   print A.right_kernel()
+   show( b)
+   print A.solve_right(b)
+
+.. end of output
+

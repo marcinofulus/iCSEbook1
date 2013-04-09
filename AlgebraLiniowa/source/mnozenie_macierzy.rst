@@ -48,6 +48,28 @@ Tabela ta jest zwana macierzą kwadratową :math:`\boldsymbol{A} =
 pierwszy wskaźnik oznacza wiersz a drugi kolumnę. Jest to standardowe
 oznaczenie konsystencja poźniejszych rozważań wymaga jego stosowania. 
 
+.. sidebar:: Ciało  pierścień, przypomnienie
+
+   Ciałem (ang. field) nazywa się pierścień przemienny (tzn. mnożenie jest
+   przemienne), w którym każdy niezerowy element jest odwracalny.
+   
+   Pierścień (ang. ring)  to intuicyjnie zbiór, którego elementy mogą być bez
+   przeszkód dodawane, odejmowane i mnożone, lecz niekoniecznie
+   dzielone.
+
+
+Precyzyjne okreśnienie macierzy wymaga podania ciała do którego należą
+jej elementy. Będziemy używać zapisu :math:`M_{m \times n}
+(\boldsymbol{K})`, który oznacza zbiór macierzy o rozmiarach :math:`m`
+rzędach i :math:`n` kolumnach nad ciałem :math:`K`. W **Sage** definiując
+macierz, można wyspecyfikować ciało nad których jest ona określona, np:
+
+.. code-block:: python
+   
+   A = matrix(QQ,[[2,1],[3,2/3]])
+
+oznacza macierz nad ciałem liczb wymiernych.
+
 
 Mnożenie macierzy przez wektor
 ------------------------------
@@ -94,7 +116,7 @@ współczynnikach będącym kolejnymi elementami wektora: :math:`x_i`.
 .. math::
    :label: Ax1
 
-   \boldsymbol{Ax} = \left( \begin{array}{c}
+   \;\boldsymbol{Ax} = \left( \begin{array}{c}
    \alpha _{11} \\ 
    \alpha _{21} \\ 
    \ldots       \\ 
@@ -142,17 +164,17 @@ wyrazy pod sumą można przestawiać, z tym że należy uważać by nie
 
    \sum_{i=1}^{i=n} \beta_{ki} \sum_{j=1}^{j=n} \alpha_{ij} x_j = \sum_{j=1}^{j=n} \left( \sum_{i=1}^{i=n} \beta_{ki} \alpha_{ij} \right)   x_j   
 
-Wyrażenie w nawiasie można potraktować jako element pewnej macierzy :math:`C` 
+Wyrażenie w nawiasie można potraktować jako element pewnej macierzy :math:`\boldsymbol{C}` 
 
 .. math::
 
-   (C)_{kj} = \sum_{i=1}^{i=n} \beta_{ki} \alpha_{ij} 
+   (\boldsymbol{C})_{kj} = \sum_{i=1}^{i=n} \beta_{ki} \alpha_{ij} 
 
 Biorąc pod uwagę punkt wyjścia równości :eq:`BA1` powyższy wzór definiuje iloczyn dwóch macierzy:
 
 .. math::
 
-   C = BA
+    \boldsymbol{C} = \boldsymbol{BA}
 
 
 
@@ -212,7 +234,7 @@ Równości :eq:`01.1` można zapisać w postaci macierzowej:
 .. math::
    :label: 01.2
 
-   \left( \begin{array}{c}
+   \;\left( \begin{array}{c}
    \gamma _{1j} \\ 
    \gamma _{2j} \\ 
    \ldots       \\  
@@ -240,7 +262,7 @@ Z drugiej strony, te same równości :eq:`01.1` dają się przepisać jako
 .. math::
    :label: 01.3
 
-   \left( \begin{array}{c}
+   \;\;\;\left( \begin{array}{c}
    \gamma _{1j} \\ 
    \gamma _{2j} \\ 
    \ldots       \\ 
@@ -262,8 +284,15 @@ Z drugiej strony, te same równości :eq:`01.1` dają się przepisać jako
    \alpha _{2n} \\ 
    \ldots       \\ 
    \alpha _{nn} \\ 
-   \end{array} \right) \beta _{nj} , \quad \text{czyli} \quad
-   \boldsymbol{C}_j = \sum_{s=1}^n \beta _{sj} \boldsymbol{A}_s , \quad j = 1, 2, \ldots , n.
+   \end{array} \right) \beta _{nj} ,  
+
+
+czyli: 
+
+.. math::
+   :label: 01.3a
+
+   \;\boldsymbol{C}_j = \sum_{s=1}^n \beta _{sj} \boldsymbol{A}_s , \quad j = 1, 2, \ldots , n.
 
 
 **Reguła 2:**

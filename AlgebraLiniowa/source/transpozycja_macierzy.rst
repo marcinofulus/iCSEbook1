@@ -18,7 +18,7 @@ nazywamy macierz :math:`\boldsymbol{A_T}`:
 
 **Przykłady.**
 
-1.) Jeżeli :math:`\boldsymbol{A} = \left( \begin{array}{cc} 
+1) Jeżeli :math:`\boldsymbol{A} = \left( \begin{array}{cc} 
 2 & - 1 \\ 3 & 0 \\ 
 - 2 & 1 \\ 
 \end{array} \right)
@@ -27,7 +27,7 @@ nazywamy macierz :math:`\boldsymbol{A_T}`:
 -1 & 0 & 1 \\ 
 \end{array} \right) \in M_{2 \times 3} (\boldsymbol{R})`.
 
-2.) Transpozycja macierzy kwadratowej:  :math:`\left( \begin{array}{ccc} 
+2) Transpozycja macierzy kwadratowej:  :math:`\left( \begin{array}{ccc} 
 -2 & 1 & 0 \\ 
 5 & 2 & 3 \\ 
 7 & -3 & 8 \\ 
@@ -37,7 +37,7 @@ nazywamy macierz :math:`\boldsymbol{A_T}`:
 0 & 3 & 8 \\ 
 \end{array} \right)`.
 
-3.) Transpozycja macierzy 1-kolumnowej:  :math:`\left( \begin{array}{c} 
+3) Transpozycja macierzy 1-kolumnowej:  :math:`\left( \begin{array}{c} 
 \alpha _1 \\ 
 \alpha _2 \\ 
 \alpha _3 \\ 
@@ -127,7 +127,7 @@ W tym przypadku
 
 .. math::
 
-   \frac{1}{2} (\boldsymbol{A} + \boldsymbol{A} ^T ) = \frac{1}{2}
+   \quad \frac{1}{2} (\boldsymbol{A} + \boldsymbol{A} ^T ) = \frac{1}{2}
    \left[ \left( \begin{array}{ccc}
    4 & 3 & -1 \\ 
    2 & -5 & 8 \\
@@ -141,7 +141,7 @@ W tym przypadku
    \textstyle{5 \over 2} & -5 & 3 \\ 
    - \textstyle{1 \over 2} & 3 & 1 \\ 
    \end{array} \right), \\ 
-   \frac{1}{2} (\boldsymbol{A} - \boldsymbol{A} ^T ) = \frac{1}{2}
+   \quad \frac{1}{2} (\boldsymbol{A} - \boldsymbol{A} ^T ) = \frac{1}{2}
    \left[ \left( \begin{array}{ccc}
    4 & 3 & -1 \\ 
    2 & -5 & 8 \\ 
