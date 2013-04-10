@@ -51,6 +51,15 @@ LU, mnożenie macierzy (ekspetymentalne badanie właściwości)
    eliminacja_gaussa
 
 
+Sage:
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   algebra_liniowa_w_Sage
+
+
 Zadania:
 --------
 

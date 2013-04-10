@@ -4,7 +4,7 @@
 Zadanie: Eliminacja Gaussa - dla układów równań
 -----------------------------------------------
 
-Wykonując eliminację Gaussa rozwiązac co najmniej jeden układ 3x3
+Wykonując eliminację Gaussa rozwiązać co najmniej jeden układ 3x3
 równań na kartce papieru. Rozwiązać układ 4x4 z ew.  pomocą Sage i
 rozwiązanie zapisać w postaci notatnika Sage. 
 
@@ -12,7 +12,7 @@ rozwiązanie zapisać w postaci notatnika Sage.
 Pod układem równań znajduje się poprawna odpowiedź, proszę ją
 wykorzystać do weryfikacji odpowiedzi.
 
-Aby wygenerować układ równań naciśnij "eveluate", aby zmienić liczbę
+Aby wygenerować układ równań naciśnij "evaluate", aby zmienić liczbę
 równań należy zmienić zmienną n.
 
 

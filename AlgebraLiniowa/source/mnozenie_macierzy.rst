@@ -178,6 +178,20 @@ Biorąc pod uwagę punkt wyjścia równości :eq:`BA1` powyższy wzór definiuje
 
 
 
+Własności mnożenia macierzy
+---------------------------
+
+#) Mnożenie jest łączne: :math:`\boldsymbol{A} (\boldsymbol{B C}) = (\boldsymbol{A B}) \boldsymbol{C}`.
+#) Mnożenie jest rozdzielne względem dodawania:: :math:`\boldsymbol{A} (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{A B} +\boldsymbol{A C}` oraz :math:`(\boldsymbol{A} + \boldsymbol{B}) \boldsymbol{C} = \boldsymbol{A C} + \boldsymbol{B C}`
+#) Mnożenie nie jest przemienne :math:`\boldsymbol{AB} \neq\boldsymbol{ BA}`. 
+#) Mnożenie macierzy przez skalar, polegające na pomnożeniu przez
+   skalar wszysktich jej elementów jest przemienne
+   :math:`c\boldsymbol{A}=\boldsymbol{A}c`.
+
+
+
+
+
 
 
 Interpretacja mnożenia macierzy

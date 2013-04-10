@@ -1,7 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-Macierze Elementarne
-====================
+Macierze Elementarne i rozkład LU
+=================================
+
+Macierzowy zapis eliminacji Gaussa
+----------------------------------
 
 
 Rozważmy procedurę eliminacji Gaussa dla przykładowej macierzy
@@ -17,9 +20,11 @@ Rozważmy procedurę eliminacji Gaussa dla przykładowej macierzy
 
 Zastanówmy się czy można zapisać operacje na wierszach macierzy w
 postaci działania pewnych macierzy na macierz
-:math:`\boldsymbol{A}`. W tym celu możemy poeksperymentować. Sprawdźmy
-jak działa macierz zawierająca tylko jeden element z wartością ``a`` i
-zera we wszystkich innych miejscach np.:
+:math:`\boldsymbol{A}`?
+
+W tym celu możemy poeksperymentować. Sprawdźmy jak działa macierz
+zawierająca tylko jeden element z wartością ``a`` i zera we wszystkich
+innych miejscach np.:
 
 .. math::
 
@@ -51,7 +56,7 @@ pozmieniać w lini 4 wartości indeksów tak by zbadać inne możliwości:
 
 Możemy się przekonać, że macierz z jedynym niezerowym elementem
 ``E[2,1]=a`` w działaniu na dowolną macierz wpisuje po w 2-gim wierszu
-wiersz 1-szy pomnożony przez :code:`a`. Macierze takie zwane sa
+wiersz 1-szy pomnożony przez ``a``. Macierze takie zwane sa
 **macierzami elementarnymi**. W procedurze eliminacji Gaussa
 potrzebujemy do takie macierzy dodać macierz wyjściową, co nie jest
 problemem, gdyż możemy, korzystając z rozdzielności mnożenia macierzy
@@ -154,6 +159,10 @@ Eliminację Gaussa można zapisać jako:
 gdzie :math:`\boldsymbol{U}` jest macierzą o elementach niezerowych
 powyżej górnej diagonali.
 
+
+Rozkład LU
+----------
+
 Wzór :math:`\boldsymbol{U}=\boldsymbol{E_3 E_2 E_1 A}` możemy
 przekształcić mnożąc obustronnie przez odwrotność iloczynu
 :math:`\boldsymbol{E_3 E_2 E_1}`. Wykorzystując twierdzenie o odwrotności
@@ -187,15 +196,20 @@ E_2^{-1} E_3^{-1}}`:
 Widać, że macierz :math:`\boldsymbol{L}` ma niezerowe elementy
 jednynie poniżej głównej diagonali. Innymi słowy rozłożyliśmy macierz
 :math:`\boldsymbol{A}` na iloczyn macierzy, których elementy leżą
-odpowiednio, poliżej i powyżej głównej przekątnej:
+odpowiednio, poniżej i powyżej głównej przekątnej:
 
 .. math::
 
-   \boldsymbol{A} =\boldsymbol{ L U}`
+   \boldsymbol{A} =\boldsymbol{ L U}
 
 
+Rozkład LU jest na tyle standardową procedurą, że jest
+zaimplementowany w Sage jako metoda dla macierzy.
 
-**Uwaga** , wbudowane w Sage metody decompozycji działają na niektórych ciałach, np LU tylko na RDF.
+.. admonition:: Uwaga 
+   
+Wbudowane w Sage metody dekompozycji działają
+   na niektórych ciałach, np LU tylko na RDF.
 
 
 .. code-block:: python
@@ -238,10 +252,52 @@ zastosować następujące przypisanie:
 
 Macierz :math:`\boldsymbol{P}` jest macierzą permutacji, która jest
 identycznością jeśli nie potrzebne są permutacje w procesie
-eliminacji.b
+eliminacji.
 
 
-.. end of output
+Zastosowania rozkładu LU
+------------------------
+
+Mając rozkład LU macierzy :math:`\boldsymbol{A}=\boldsymbol{LU}`
+możemy zastąpić rozwiązywanie układu równań za pomocą dwóch rozwiązań
+układów trójkątnych:
+
+1) .. math::
+
+      \boldsymbol{Lc}=\boldsymbol{b}
 
 
+2) .. math::
 
+      \boldsymbol{Ux}=\boldsymbol{c}
+
+
+Macierze Permutacji
+-------------------
+
+Jak wiemy z przykładów z układami równań liniowych, procedura
+eliminacji Gaussa, czasem wymaga zamiany równań.
+
+Weżmy np. macierz 
+
+.. math::
+
+   \boldsymbol{A} = \left(\begin{array}{rr}
+   0 & 1 \\
+   2 & 3
+   \end{array}\right)
+
+Widzimy, że aby wykonać krok eliminacji Gaussa należy zamienić wiersze
+tej macierzy. Czy taką operację możemy zapisać jako mnożenie przez pewną macierz? 
+
+Poeksperymentujmy - spróbujmy znaleźć taką macierz
+:math:`\boldsymbol{P}` by zamieniała ona wiersze macierzy
+:math:`\boldsymbol{A}`:
+
+.. sagecellserver::
+
+   A = matrix([[0,1],[2,3]])
+   P = matrix([[0,0],[0,0]])
+
+   show(A)
+   show(P*A)

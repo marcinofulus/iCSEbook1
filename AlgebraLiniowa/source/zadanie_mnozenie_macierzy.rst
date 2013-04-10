@@ -6,7 +6,7 @@ Zadanie: Mnożenie macierzy
 
 
 
-Wykonująć na papierze trzy mnożenia macierzy 2x2 i jedno 3x3. 
+Wykonujać na papierze trzy mnożenia macierzy 2x2 i jedno 3x3. 
 
 Aby wygenerować macierze i wynik ich mnożenia naciśnij "eveluate", aby zmienić liczbę
 równań należy zmienić zmienną ``n``.
