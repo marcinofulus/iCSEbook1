@@ -38,7 +38,7 @@ Zadania:
 
 
 Wykład II:  Macierze
-======================================================
+====================
 
 Notacja macierzowa układy równań, mnożenie macierzy przez wektor,
 eliminacja Gaussa w zapisie macierzowym, macierze elementarne, rozkład
@@ -49,7 +49,7 @@ LU, mnożenie macierzy (ekspetymentalne badanie właściwości)
 
    mnozenie_macierzy
    eliminacja_gaussa
-
+   macierze_przyklady
 
 Sage:
 -----

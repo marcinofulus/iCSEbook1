@@ -395,6 +395,9 @@ Przyjrzyjmy się wynikowi:
    rozwiązań.
 
 
+Eliminacja Gaussa\-Jordana układu nieoznaczonego
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Zmieńmy tak wektor :math:`b`, by układ miał rozwiązania:
 
 

@@ -98,3 +98,16 @@ prawą stroną układu, rozszerzamy prawą stronę o macierz jednostkową.
 
    Ainv=B.rref()[:,3:]
    show( Ainv)
+
+
+
+Macierz odwrotna a macierz osobliwa
+-----------------------------------
+
+Jeżeli w wyniku eliminacji Gaussa z macierzy kwadratowej
+:math:`\boldsymbol{A}` możemy uzyskać macierz jednostkową to mówimy,
+że macierz jest nieosobliwa. W przeciwnym przypadku jest osobliwa.
+
+Tw.: Każda macierz nieosobliwa ma swoją macierz odwrotną. 
+
+Tw.: Jeżeli macierz jest osobliwa to macierz odwrotna nie istnieje.
