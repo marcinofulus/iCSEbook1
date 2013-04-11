@@ -29,6 +29,8 @@ Kinematyka
 
    tor_ruchu
    rzut_ukosny
+   zachowanie_energii
+
 
    
 Dodatek
