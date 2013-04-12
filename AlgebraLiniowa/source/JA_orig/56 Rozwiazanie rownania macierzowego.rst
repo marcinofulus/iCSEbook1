@@ -32,10 +32,6 @@ Przy oznaczeniach
     1 & - 1 &   3 \\ 
     4 &   3 &   2 \\ 
     1 & - 2 &   5 \\ 
-    \end{array} \right) \boldsymbol{B} = \left( \begin{array}{ccc}
-    1 & - 1 &   3 \\ 
-    4 &   3 &   2 \\ 
-    1 & - 2 &   5 \\ 
     \end{array} \right)
 
 
