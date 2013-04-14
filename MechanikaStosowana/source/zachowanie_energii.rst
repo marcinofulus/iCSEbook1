@@ -74,4 +74,12 @@ Wynika stąd prawo zachowania energii mechanicznej dla układu punktów
 materialnych w polu sił potencjalnych: Jeżeli potencjał sił nie zależy
 od czasu, to energia mechaniczna jest stałą ruchu.
 
-
+.. sagecellserver::
+   
+   var('x v')
+   def c(E):
+       if abs(E-1)<1e-5:
+           return "red"
+       else:
+           return "black"
+   sum([implicit_plot(sin(x)+v^2-E,(x,-5,5),(v,-2.2,2.2),color=c(E)) for E in srange(-2.3,4,0.3)])
