@@ -27,6 +27,10 @@ Należy zainstalować pakiet python-sphinx oraz wtyczke:
 Jakie trzeba spełnić techniczne warunki by edytować te materiały?
 =================================================================
 
+Pierwsza możliwośc to wykonać pull request-a
+
+Druga, dla bliskich współpracowników,  to uzyskać dostęp do repo:
+
 Należy wysłać swój klucz publiczny wygenerowany lokalnie za pomocą:
 
        ssh-keygen -t rsa -C "your_email@example.com"
