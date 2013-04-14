@@ -409,7 +409,7 @@ Zmieńmy tak wektor :math:`b`, by układ miał rozwiązania:
 .. end of output
 
 Mając juz dostateczną wprawę w procedurze eliminacji możemy
-wykorzystać wbudowaną metodę `rref()` i  otrzymujać natychmiast:
+wykorzystać wbudowaną metodę ``rref()`` i  otrzymując natychmiast:
 
 .. code-block:: python
 
@@ -460,7 +460,7 @@ z :math:`x_3` na prawą stronę:
     0   &=&  0 
     \end{cases}
 
-Zastąpmy jeszcze ostatnie równanie przez tożsamośc :math:`x_3 = x_3`
+Zastąpmy jeszcze ostatnie równanie przez tożsamość :math:`x_3 = x_3`
 
 .. MATH::
    :label: rref_nieozn2
@@ -512,11 +512,6 @@ Weźmy układ dwóch równań z czterema niewiadomymi:
 
     sage: A=matrix(QQ,[[0,1,0,1],[0,1,1,0]])
     sage: b= vector(QQ, [1, 1])
-
-.. end of output
-
-.. code-block:: python
-
     sage: show(A)
 
 
@@ -539,6 +534,7 @@ Postać schodkowa macierzy rozszerzonej:
 
 .. MATH::
    :label: rref01
+
     \left(\begin{array}{rrrrr}
     0 & 1 & 0 & 1 & 1 \\
     0 & 0 & 1 & -1 & 0
@@ -548,7 +544,7 @@ Postać schodkowa macierzy rozszerzonej:
 
 Czy z powyższego zapisu możemy "odczytać" postać rozwiązania układu :eq:`nm1`?
 
-Po pierwsze zauważmy, że mamy więcej zmiennych niż równań. Pozatym z
+Po pierwsze zauważmy, że mamy więcej zmiennych niż równań. Poza tym z
 postaci macierzy zredukowanej wynika wartość niewiadomych :math:`x_2 =
 1` i :math:`x_3 = 0`. Pozostałe niewiadome mogą przyjmować dowolne
 wartości, ale nie wiemy jak będzie to wpływać na postać rozwiązania. 
@@ -663,12 +659,180 @@ gdzie :math:`t` i :math:`s` są dowolnymi parametrami.
 
 **Ćwiczenie:**
 
-Sprawdź bezpośrednim rachunkiem, że dwa ostatnie wektory w równaniu :eq:`rref_nieozn2` spełniają :math:`Ax=0`: 
+Sprawdź bezpośrednim rachunkiem, że dwa ostatnie wektory w równaniu
+:eq:`rref_nieozn2` rzeczywiście spełniają :math:`Ax=0`:
 
 .. sagecellserver::
 
    A=matrix(QQ,[[0,1,0,1],[0,1,1,0]])
    show(A)
+
+
+Rozwiązanie układu równań - ogólna postać
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Rozważmy układ  :math:`Ax=0` z macierzą:
+
+
+.. code-block:: python
+
+    sage: A = matrix([ [1,3,0,2,-1],[0,0,1,4,-3],[1,3,1,6,-4]])
+    sage: show(A)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrrr}
+    1 & 3 & 0 & 2 & -1 \\
+    0 & 0 & 1 & 4 & -3 \\
+    1 & 3 & 1 & 6 & -4
+    \end{array}\right)
+
+.. end of output
+
+doprowadzając 
+
+.. code-block:: python
+
+    sage: R=A.rref()
+    sage: show(R)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrrrr}
+    1 & 3 & 0 & 2 & -1 \\
+    0 & 0 & 1 & 4 & -3 \\
+    0 & 0 & 0 & 0 & 0
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: F = R[:2,[1,3,4]]
+    sage: show(F)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrr}
+    3 & 2 & -1 \\
+    0 & 4 & -3
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B1 = block_matrix( [[ identity_matrix(2),F],[zero_matrix(1,2),zero_matrix(1,3)]],subdivide=False)
+
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B2 = block_matrix( [[-F],[identity_matrix(3)]],subdivide=False)
+
+
+.. end of output
+
+.. code-block:: python
+
+    sage: html.table([[B1,B2,B1*B2]])
+    ...
+
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B2.swap_rows(1,2)
+    sage: show(B2)
+
+
+.. MATH::
+
+    \left(\begin{array}{rrr}
+    -3 & -2 & 1 \\
+    1 & 0 & 0 \\
+    0 & -4 & 3 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+    \end{array}\right)
+
+.. end of output
+
+.. code-block:: python
+
+    sage: show(A.right_kernel().basis())
+
+
+.. MATH::
+
+    \left[\left(1,\,0,\,1,\,-1,\,-1\right), \left(0,\,1,\,1,\,-4,\,-5\right), \left(0,\,0,\,2,\,1,\,2\right)\right]
+
+
+.. end of output
+
+.. code-block:: python
+
+    sage: A.right_kernel().basis()
+    [
+    (1, 0, 1, -1, -1),
+    (0, 1, 1, -4, -5),
+    (0, 0, 2, 1, 2)
+    ]
+
+.. end of output
+
+.. code-block:: python
+
+    sage: B2.columns()
+    [(-3, 1, 0, 0, 0), (-2, 0, -4, 1, 0), (1, 0, 3, 0, 1)]
+
+.. end of output
+
+.. code-block:: python
+
+    sage: V1  = span(A.right_kernel().basis())
+    sage: V1
+    Free module of degree 5 and rank 3 over Integer Ring
+    Echelon basis matrix:
+    [ 1  0  1 -1 -1]
+    [ 0  1  1 -4 -5]
+    [ 0  0  2  1  2]
+
+.. end of output
+
+.. code-block:: python
+
+    sage: V2  = span(B2.columns())
+
+
+.. end of output
+
+.. code-block:: python
+
+    sage: V1.basis_matrix().rref()
+    [   1    0    0 -3/2   -2]
+    [   0    1    0 -9/2   -6]
+    [   0    0    1  1/2    1]
+
+.. end of output
+
+.. code-block:: python
+
+    sage: V2.basis_matrix().rref()
+    [   1    0    0 -3/2   -2]
+    [   0    1    0 -9/2   -6]
+    [   0    0    1  1/2    1]
+
+.. end of output
+
+
+
 
    
 Jak uzyskać w Sage automatycznie postać ogólną układu nieoznaczonego?

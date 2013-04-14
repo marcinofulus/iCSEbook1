@@ -1,4 +1,4 @@
-.. Mechanika Stosowana - Skrypt documentation master file, created by
+.. 8AL - Skrypt documentation master file, created by
    sphinx-quickstart on Fri Mar  8 15:41:59 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -6,6 +6,16 @@
 =================================
 Osiem wykładów z Algebry liniowej
 =================================
+
+Literatura
+==========
+
+
+.. toctree::
+   :maxdepth: 1
+
+   literatura 
+
 
 
 Wykład I:  Układy równań liniowych - eliminacja Gaussa
@@ -16,7 +26,7 @@ Wykład I:  Układy równań liniowych - eliminacja Gaussa
    Algebra liniowa - dział algebry zajmujący się badaniem przestrzeni
    liniowych i przekształceń liniowych.
 
-Układy równań liniowych, metoda eliminacji, przyklady osobliwe,
+Układy równań liniowych, metoda eliminacji, przykłady osobliwe,
 interpretacja geometryczna, 
 
 
@@ -42,7 +52,7 @@ Wykład II:  Macierze
 
 Notacja macierzowa układy równań, mnożenie macierzy przez wektor,
 eliminacja Gaussa w zapisie macierzowym, macierze elementarne, rozkład
-LU, mnożenie macierzy (ekspetymentalne badanie właściwości)
+LU, mnożenie macierzy (eksperymentalne badanie właściwości)
 
 .. toctree::
    :maxdepth: 1

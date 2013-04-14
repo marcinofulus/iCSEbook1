@@ -268,8 +268,13 @@ Równości :eq:`01.1` można zapisać w postaci macierzowej:
 
 **Reguła 1:**
 
-*j*-ta kolumna iloczynu macierzowego :math:`\boldsymbol{AB}` jest iloczynem macierzy :math:`\boldsymbol{A}` przez *j*-tą kolumnę macierzy :math:`\boldsymbol{B}`:
-:math:`\boldsymbol{A} (\boldsymbol{B}_1 , \boldsymbol{B}_2 , \ldots , \boldsymbol{B}_n ) = (\boldsymbol{AB}_1 , \boldsymbol{AB}_2 , \ldots , \boldsymbol{AB}_n )`, czyli :math:`(\boldsymbol{AB})_j = \boldsymbol{A} \boldsymbol{B}_j , \quad j = 1, 2, \ldots , n`.
+*j*-ta kolumna iloczynu macierzowego :math:`\boldsymbol{AB}` jest
+iloczynem macierzy :math:`\boldsymbol{A}` przez *j*-tą kolumnę
+macierzy :math:`\boldsymbol{B}`: :math:`\boldsymbol{A}
+(\boldsymbol{B}_1 , \boldsymbol{B}_2 , \ldots , \boldsymbol{B}_n ) =
+(\boldsymbol{AB}_1 , \boldsymbol{AB}_2 , \ldots , \boldsymbol{AB}_n
+)`, czyli :math:`(\boldsymbol{AB})_j = \boldsymbol{A} \boldsymbol{B}_j
+, \quad j = 1, 2, \ldots , n`.
 
 Z drugiej strony, te same równości :eq:`01.1` dają się przepisać jako
 
@@ -311,5 +316,80 @@ czyli:
 
 **Reguła 2:**
 
-*j*-ta kolumna iloczynu macierzowego :math:`\boldsymbol{AB}` jest kombinacją liniową kolumn macierzy :math:`\boldsymbol{A}` o współczynnikach z *j*-tej kolumny macierzy :math:`\boldsymbol{B}, \quad j = 1, 2,\ldots , n`.
+*j*-ta kolumna iloczynu macierzowego :math:`\boldsymbol{AB}` jest
+ kombinacją liniową kolumn macierzy :math:`\boldsymbol{A}` o
+ współczynnikach z *j*-tej kolumny macierzy :math:`\boldsymbol{B},
+ \quad j = 1, 2,\ldots , n`.
 
+Mnożenie macierzy blokowych
+---------------------------
+
+Każdą macierz można podzielic na cztery (lub więcej) prostokątnych
+bloków. Po takim podziale macierz nazywana jest macierzą
+blokową. Struktura blokowa służy do tworzenia macierzy jeśli mamy
+jakąś regularność. 
+
+Ponadto zachodzi ciekawa własność, że mnożenie macierzy blokowej można
+zapisać w taki sam sposów jak mnożenie macierzy
+
+.. math::
+   :label: blok1
+
+   \left(\begin{array}{r|r}
+    A & B \\
+    \hline
+    C & D
+    \end{array}\right)
+    \left(\begin{array}{r|r}
+     X \\
+    \hline
+     Y
+    \end{array}\right) =
+    \left(\begin{array}{r|r}
+     AX+BY \\
+    \hline
+     CX+DY
+    \end{array}\right)
+
+
+
+Elementy :math:`A,B,C,D,X,Y` są macierzami o dowolnych rozmiarach pod
+warunkiem, że liczby kolumn i wierszy umożliwiają mnożenie. Wykonanie
+mnożenia w powyższy sposób na macierzach gęstych nie pomaga w żaden
+sposób uprościć liczby operacji. Jeżeli jednak pewne podmacierze-bloki
+są zerowe lub macierzami identycznościowymi można wykorzystać równanie
+:eq:`blok1`. 
+
+Weźmy na przykład sytuacje gdy dwa bloki są zerowe
+(:math:`\mathrm{O}`):
+
+.. math::
+   :label: blok1
+
+   \left(\begin{array}{r|r}
+    A & \mathrm{O} \\
+    \hline
+    \mathrm{O} & D
+    \end{array}\right)
+    \left(\begin{array}{r|r}
+     X \\
+    \hline
+     Y
+    \end{array}\right) =
+    \left(\begin{array}{r|r}
+     AX \\
+    \hline
+     DY
+    \end{array}\right)
+
+
+
+W systemie Sage istnieje możliwość wykonywania operacji na  macierzach blokowych:
+
+.. sagecellserver::
+
+   A = random_matrix(QQ,2,2)
+   B1 = block_matrix( [[ identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
+   B2 = block_matrix( [[ A],[identity_matrix(2)]])
+
+   html.table([["$B1$","$B2$","","$B1 B2$"],[B1,B2,"=",B1*B2]])
