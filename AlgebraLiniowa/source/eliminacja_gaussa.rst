@@ -667,6 +667,15 @@ Sprawdź bezpośrednim rachunkiem, że dwa ostatnie wektory w równaniu
    A=matrix(QQ,[[0,1,0,1],[0,1,1,0]])
    show(A)
 
+   A = matrix([ [1,3,0,2,-1],[0,0,1,4,-3],[1,3,1,6,-4]])
+   R=A.rref()
+   F = R[:2,[1,3,4]]
+   B1 = block_matrix([ [ identity_matrix(2),F  ],  [ zero_matrix(1,2),  zero_matrix(1,3)]])
+   B2 = block_matrix( [[-F],[identity_matrix(3)]])
+   html.table([[B1,B2,B1*B2]])
+   print latex(B1)
+   print latex(B2)
+   print latex(B1*B2)
 
 Rozwiązanie układu równań - ogólna postać
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -691,7 +700,7 @@ Rozważmy układ  :math:`Ax=0` z macierzą:
 
 .. end of output
 
-doprowadzając 
+doprowadzając macierz a do postaci całkowicie zredukowanej otrzymujemy:
 
 .. code-block:: python
 
@@ -702,12 +711,73 @@ doprowadzając
 .. MATH::
 
     \left(\begin{array}{rrrrr}
-    1 & 3 & 0 & 2 & -1 \\
-    0 & 0 & 1 & 4 & -3 \\
+    \boxed{1} & 3 & 0 & 2 & -1 \\
+    0 & 0 & \boxed{1} & 4 & -3 \\
     0 & 0 & 0 & 0 & 0
     \end{array}\right)
 
 .. end of output
+
+W strukturze macierzy widać, że trzeci wiersz jest zerowy, ponadto
+dwie kolumny: pierwsza i trzecia, bez ostatniego wiersza tworzą
+macierz jednostkową :math:`2\times2`. Zamieńmy kolumny tak by macierz
+jednostkowa była w jednym bloku po lewej stronie. Zamiana ta w
+zasadzie nie jest konieczna, ale zdecydowanie polepsza zrozumienie
+struktury macierzy :math:`\boldsymbol{R}`. Musimy teraz jednak
+pamiętać, że w nowym układzie szukane :math:`x_2` i :math:`x_3` są
+zamienione. 
+
+Tak więc możemy przedstawić macierz :math:`\boldsymbol{R}` jako
+macierz blokową składającą się z czterech macierzy:
+
+.. math::
+
+   \left(\begin{array}{r|r}
+    I & F \\
+    \hline
+    O & O
+    \end{array}\right) = 
+   \left(\begin{array}{rr|rrr}
+   1 & 0 & 3 & 2 & -1 \\
+   0 & 1 & 0 & 4 & -3 \\
+   \hline
+   0 & 0 & 0 & 0 & 0
+   \end{array}\right)
+
+Korzystając z własności macierzy blokowych łatwo można się przekonać, że:
+
+.. math::
+   :label: IFbloki
+
+   \;\left(\begin{array}{r|r}
+    I & F \\
+    \hline
+    O & O
+    \end{array}\right)  
+   \left(\begin{array}{r|r}
+    -F \\
+    \hline
+    I
+    \end{array}\right) =   
+   \left(\begin{array}{r|r}
+    -IF+FI \\
+    \hline
+    O + O
+    \end{array}\right) =   
+    \left(\begin{array}{r|r}
+    O \\
+    \hline
+    O
+    \end{array}\right) 
+
+gdzie :math:`O` i :math:`I` oznaczają macierz zerową i identyczność o
+odpowiednim rozmiarze. 
+
+**Pytanie 1:** jakie rozmiary maja poszczególne macierze w tym równaniu :eq:`IFbloki`? (:ref:`Odpowiedź tutaj <odp1>`).
+
+Przeprowadźmy tą procedurę w Sage. Mając już obliczoną postać macierzy
+:math:`\boldsymbol{R}` możemy, stosując technikę wycinania, wybrać z
+:math:`\boldsymbol{R}` macierz :math:`\boldsymbol{F}`:
 
 .. code-block:: python
 
@@ -724,33 +794,58 @@ doprowadzając
 
 .. end of output
 
+
+Tworzymy macierze blokowe z lewej strony równania :eq:`IFbloki` za
+pomocą konstrukora ``block_matrix``:
+
 .. code-block:: python
 
-    sage: B1 = block_matrix( [[ identity_matrix(2),F],[zero_matrix(1,2),zero_matrix(1,3)]],subdivide=False)
+    sage: B1 = block_matrix([ [ identity_matrix(2),F               ],\
+                              [ zero_matrix(1,2),  zero_matrix(1,3)]])
+    sage: B2 = block_matrix( [[-F],[identity_matrix(3)]])
 
 
 .. end of output
 
-.. code-block:: python
-
-    sage: B2 = block_matrix( [[-F],[identity_matrix(3)]],subdivide=False)
-
-
-.. end of output
+i sprawdzamy wynik iloczynu macierzy :math:`\boldsymbol{B1\cdot B2}`: 
 
 .. code-block:: python
 
-    sage: html.table([[B1,B2,B1*B2]])
-    ...
+    sage: html.table([[B1,B2,"=",B1*B2]])
+    
+.. math::
 
+    \left(\begin{array}{rr|rrr}
+    1 & 0 & 3 & 2 & -1 \\
+    0 & 1 & 0 & 4 & -3 \\
+    \hline
+    0 & 0 & 0 & 0 & 0
+    \end{array}\right)
+    \left(\begin{array}{rrr}
+    -3 & -2 & 1 \\
+    0 & -4 & 3 \\
+    \hline
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+    \end{array}\right) =
+    \left(\begin{array}{rrr}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    \hline
+    0 & 0 & 0
+    \end{array}\right)
 
 .. end of output
+
+Pamiętając o zamianie wierszy, możemy teraz ponownie powrócic do
+starej numeracji szukanych i przedstawić macierz
+:math:`\boldsymbol{B2}` jako:
 
 .. code-block:: python
 
     sage: B2.swap_rows(1,2)
     sage: show(B2)
-
 
 .. MATH::
 
@@ -764,35 +859,138 @@ doprowadzając
 
 .. end of output
 
+Interpretacja tej macierzy jest następująca: każda z kolumn
+:math:`\boldsymbol{B2}` rozwiązuje równanie
+:math:`\boldsymbol{Ax}=0`. Ogólne rozwiązanie problemu jednorodnego
+jest w postaci:
+
+.. math::
+   :label: Ax0
+
+   t\left(\begin{array}{r}
+   -3 \\
+   1 \\
+   0 \\
+   0 \\
+   0
+   \end{array}\right)+
+   s\left(\begin{array}{r}
+   -2 \\
+   0 \\
+   -4 \\
+   1 \\
+   0
+   \end{array}\right)+
+   u\left(\begin{array}{r}
+   1 \\
+   0 \\
+   3 \\
+   0 \\
+   1
+   \end{array}\right),
+
+dla dowolnych wartości :math:`t,s,u`.
+
+Jeśli mamy do czynienia z układem niejednorodnym, wtedy wykonujemy
+sprowadzenie do postaci całkowicie zredukowanej dla macierzy
+rozszerzonej. Weżmy na przykład 
+
+.. code-block:: python
+
+   b = vector(QQ,(2,  2, 4))
+   show(A.augment(b).rref())
+
+.. MATH::
+    :label: aug_rref
+
+    \left(\begin{array}{rrrrr}
+    \boxed{1} & 3 & 0 & 2 & -1&2 \\
+    0 & 0 & \boxed{1} & 4 & -3&2 \\
+    0 & 0 & 0 & 0 & 0&0
+    \end{array}\right)
+
+.. end of output
+
+
+Ostatnia kolumna macierzy :eq:`aug_rref` ma interpretaję wartości
+zmiennych o tym indeksie dla którego kolumna tej macierzy ma element
+wiodący (qng. pivot column, variable). Pozostałe możemy przyjąć
+np. równe zeru, pamiętając o dodaniu ogólnej postaci rozwiązania
+równania jednorodnego. Mamy więć w tym przypadku:
+
+
+.. MATH::
+    :label: Axb
+
+    x=\underbrace{\left(\begin{array}{rrrrr}
+    2\\0\\2\\0\\0cc
+    \end{array}\right)}_{x_{szczeg}} + 
+    \underbrace{
+    t\left(\begin{array}{r}
+    -3 \\
+    1 \\
+    0 \\
+    0 \\
+    0
+    \end{array}\right)+
+    s\left(\begin{array}{r}
+    -2 \\
+    0 \\
+    -4 \\
+    1 \\
+    0
+    \end{array}\right)+
+    u\left(\begin{array}{r}
+    1 \\
+    0 \\
+    3 \\
+    0 \\
+    1
+    \end{array}\right)}_{x_{jednorodne}}
+
+
+Jak praktycznie obliczyć w Sage postać ogólną układu nieoznaczonego?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Rozwiązanie można też otrzymać automatycznie, biorąc jedno rozwiązanie
+szczególne i kombinację liniową wszystkich wektorów bazy jądra
+operatora :math:`A`:
+
+Wbudowana metoda ``solve_right`` daje od razu rozwiązanie szczególne. 
+
+
+.. code-block:: python
+
+    sage: show(A\b)
+
+.. MATH::
+
+   \left(2,\,0,\,2,\,0,\,0\right)
+
+
 .. code-block:: python
 
     sage: show(A.right_kernel().basis())
 
+.. math::
+    :label: ker1
 
-.. MATH::
-
-    \left[\left(1,\,0,\,1,\,-1,\,-1\right), \left(0,\,1,\,1,\,-4,\,-5\right), \left(0,\,0,\,2,\,1,\,2\right)\right]
-
-
-.. end of output
-
-.. code-block:: python
-
-    sage: A.right_kernel().basis()
-    [
-    (1, 0, 1, -1, -1),
-    (0, 1, 1, -4, -5),
-    (0, 0, 2, 1, 2)
-    ]
+    \left[\left(1,\,0,\,1,\,-1,\,-1\right),
+    \left(0,\,1,\,1,\,-4,\,-5\right), \left(0,\,0,\,2,\,1,\,2\right)\right]
 
 .. end of output
 
-.. code-block:: python
+Mając trzy wektory bazy jądra w przestrzeni 5-wymiarowej i rozwiązanie
+szczególne problemu niejednorodnego możemy napisać rozwiązanie.
 
-    sage: B2.columns()
-    [(-3, 1, 0, 0, 0), (-2, 0, -4, 1, 0), (1, 0, 3, 0, 1)]
+Można zauważyć, że wektory dane wzorem :eq:`ker1` nie pokrywają się z
+wektorami wyliczonymi w procedurze eliminacji. Czy oznacza to, że my
+lub Sage popełniliśmy błąd? Niekoniecznie. Zadajmy sobie pytanie czy
+podprzestrzeń rozpięta przez wektory :eq:`Ax0` jest tą samą
+podprzestrzenią co jądro obliczone przez Sage :eq:`ker1`. Zdefiniujmy
+w Sage te dwie przestrzenie liniowe, i porównajmy zredukowane postacie
+macierzy składającej się z wektorów bazy:
 
-.. end of output
 
 .. code-block:: python
 
@@ -834,42 +1032,31 @@ doprowadzając
 
 
 
-   
-Jak uzyskać w Sage automatycznie postać ogólną układu nieoznaczonego?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Odpowiedzi
+~~~~~~~~~~
 
-Rozwiązanie można też otrzymać automatycznie, biorąc jedno rozwiązanie
-szczególne i kombinację liniową wszystkich wektorów bazy jądra
-operatora :math:`A`:
+.. _odp1: 
 
+**Odpowiedź 1**
 
-.. code-block:: python
+Rozmiary poszczególnych macierzy w równaniu :eq:`IFbloki` w podanym
+przykładzie wynoszą:
 
-    sage: show(A\b)
+.. math::
 
-.. MATH::
-
-    \left(0,\,1,\,0,\,0\right)
-
-
-.. code-block:: python
-
-    sage: A.right_kernel().basis()
-
-
-.. MATH::
-
-    \left(\begin{array}{rrrr}
-    1\\0\\0\\0
-    \end{array}\right),
-    \left(\begin{array}{rrrr}
-    0\\1\\-1\\-1
-    \end{array}\right)
-
-
-
-
-.. end of output
-
-
+   \left(\begin{array}{r|r}
+    2\times 2 & 2\times 3 \\
+    \hline
+    1\times 2 & 1\times 3
+    \end{array}\right)  
+   \left(\begin{array}{r|r}
+    2\times 3 \\
+    \hline
+    3\times 3
+    \end{array}\right)  = 
+   \left(\begin{array}{r|r}
+    2\times 3 \\
+    \hline
+    1\times 3
+    \end{array}\right)  
