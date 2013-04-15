@@ -37,3 +37,10 @@ Należy ponadto skonfigurować lokalnego git-a tak by commity były podpisane pr
 
        git config --global user.name "Your Name"
        git config --global user.email you@example.com
+
+
+Zalecenia stylu
+===============
+
+ * w każdym pliku jeden główny header 
+ * używamy ``hint`` ``note`` i ``warning`` i ogólnego ``admonition`` (do Definicja, przyklad, streszczenie)
