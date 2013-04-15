@@ -38,8 +38,8 @@ interpretacja geometryczna,
    eliminacja_gaussa_bez_macierzy
 
 
-Zadania:
---------
+Zadania do wykladu I:
+---------------------
 
 .. toctree::
    :maxdepth: 1
@@ -50,9 +50,9 @@ Zadania:
 Wykład II:  Macierze
 ====================
 
-Notacja macierzowa układy równań, mnożenie macierzy przez wektor,
-eliminacja Gaussa w zapisie macierzowym, macierze elementarne, rozkład
-LU, mnożenie macierzy (eksperymentalne badanie właściwości)
+Notacja macierzowa układów równań, oraz wynikające z niej mnożenie
+macierzy przez wektor. Eliminacja Gaussa w zapisie macierzowym dla
+układów oznaczonych, nieoznaczonych i sprzecznych.
 
 .. toctree::
    :maxdepth: 1
@@ -61,8 +61,8 @@ LU, mnożenie macierzy (eksperymentalne badanie właściwości)
    eliminacja_gaussa
    macierze_przyklady
 
-Sage:
------
+Algebra liniowa w Sage:
+-----------------------
 
 .. toctree::
    :maxdepth: 1
@@ -70,8 +70,8 @@ Sage:
    algebra_liniowa_w_Sage
 
 
-Zadania:
---------
+Zadania do wykladu II:
+----------------------
 
 .. toctree::
    :maxdepth: 1
@@ -83,8 +83,10 @@ Zadania:
 Wykład III:  Macierz odwrotna
 =============================
 
-Metoda Gaussa Jordana, stabilność procedury na przykładach, własności
-macierzy odwrotnej.
+Macierz identycznościowa i macierz odwrotna. Własności macierzy
+odwrotnej. Obliczanie macierzy odwrotnej metodą Gaussa Jordana.
+Macierze elementarne, zapisa macierzowy procesu eliminacji: rozkład LU
+i LDU.
 
 .. toctree::
    :maxdepth: 1
@@ -94,6 +96,15 @@ macierzy odwrotnej.
    transpozycja_macierzy
 
 
+Zadania do wykladu III:
+-----------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   zadanie_macierz_odwrotna
+
+  
 
 Wykład IV:  Przestrzenie wektorowe 
 ===================================

@@ -8,8 +8,8 @@ Zadanie: Mnożenie macierzy
 
 Wykonujać na papierze trzy mnożenia macierzy 2x2 i jedno 3x3. 
 
-Aby wygenerować macierze i wynik ich mnożenia naciśnij "eveluate", aby zmienić liczbę
-równań należy zmienić zmienną ``n``.
+Aby wygenerować macierze i wynik ich mnożenia naciśnij "Evaluate", aby
+zmienić liczbę równań należy zmienić zmienną ``n``.
 
 Sprawdzić ile będzie wynosił iloczyn
 :math:`\boldsymbol{B}\boldsymbol{A}`. Czy mnożenie macierzy jest

@@ -92,7 +92,7 @@ html_theme_path = ["../.."]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = u'Osiem Wykładów z Algebry Liniowej'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -202,7 +202,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'algebraliniowa-skrypt', u'Algebra Liniowa - Skrypt Documentation',
+    ('index', 'algebraliniowa-skrypt', u'Algebra Liniowa',
      [u'Marcin Kostur'], 1)
 ]
 

@@ -306,3 +306,4 @@ tej macierzy. Czy taką operację możemy zapisać jako mnożenie przez pewną m
 
    show(A)
    show(P*A)
+

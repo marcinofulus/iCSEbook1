@@ -16,21 +16,22 @@ elementami są jedynki może być identycznością czyli spełniać
 
    \boldsymbol{I}\boldsymbol{A} = \boldsymbol{A},
 
-Poeksperymentujmy:
+.. admonition:: **Poeksperymentuj!**
+
+   * Odgadnij postać macierzy jednostkowej (indentyczności). W tym
+     celu zmieniaj macierz ``I`` aż jej iloczyn
+     :math:`\boldsymbol{I}\boldsymbol{A} = \boldsymbol{A}`.
+
+   * Jesli się już to udało to sprawdź eksperymentalnie czy
+     :math:`\boldsymbol{I}\boldsymbol{A}=\boldsymbol{A}\boldsymbol{I}`?
+
 
 .. sagecellserver::
 
    I = matrix(QQ,[[1,1,1],[1,1,1],[1,1,1]])
    A = random_matrix(QQ,3)
-   show(A),show(I*A)
-
-**Ćwiczenie:**
-
-* Odgadnąć jaka macierz :math:`\boldsymbol{I}` spełnia
-  równanie :eq:`I` dla dowolnej macierzy :math:`\boldsymbol{A}`.
-
-* Sprawdzić eksperymentalnie czy 
-  :math:`\boldsymbol{I}\boldsymbol{A}=\boldsymbol{A}\boldsymbol{I}`?
+   show(A)
+   show(I*A)
 
 
 
@@ -57,6 +58,28 @@ Z łączności mnożenia wynika własność
 
    \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{A}\boldsymbol{A}^{-1},
 
+
+Ponadto zachodzi własność:
+
+.. math::
+   :label: AB_1
+
+   (\boldsymbol{A}\boldsymbol{B})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1},
+
+
+.. note:: Zmieniona kolejność mnożenia!
+
+Aby się przekonać, że tak jest, pomnóżmy lewą strone równania
+:eq:`AB_1` lewostronnie kolejno przez :math:`\boldsymbol{B}` i
+:math:`\boldsymbol{A}`:
+
+.. math::
+
+    \boldsymbol{A}\boldsymbol{B}\boldsymbol{B}^{-1}\boldsymbol{A}^{-1} =     \boldsymbol{A}(\boldsymbol{B}\boldsymbol{B}^{-1})\boldsymbol{A}^{-1} =      \boldsymbol{A}(I)\boldsymbol{A}^{-1} =\boldsymbol{A}\boldsymbol{A}^{-1} =\boldsymbol{I}
+
+Ostatnią równość możemy zinterpretować tak, że macierz
+:math:`\boldsymbol{B}^{-1}\boldsymbol{A}^{-1}` jest macierzą odwrotną
+do macierzy :math:`\boldsymbol{AB}`.
 
 
 Obliczanie macierzy odwrotnej
@@ -108,6 +131,10 @@ Jeżeli w wyniku eliminacji Gaussa z macierzy kwadratowej
 :math:`\boldsymbol{A}` możemy uzyskać macierz jednostkową to mówimy,
 że macierz jest nieosobliwa. W przeciwnym przypadku jest osobliwa.
 
-Tw.: Każda macierz nieosobliwa ma swoją macierz odwrotną. 
+.. admonition:: **Twierdzenie** 
 
-Tw.: Jeżeli macierz jest osobliwa to macierz odwrotna nie istnieje.
+   Każda macierz nieosobliwa ma swoją macierz odwrotną. 
+
+.. admonition:: **Twierdzenie** 
+
+   Jeżeli macierz jest osobliwa to macierz odwrotna nie istnieje.

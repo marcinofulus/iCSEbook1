@@ -53,11 +53,11 @@ punktu przecięcia się dwóch prostych:
     ...    point((2,3),color='red',size=40,figsize=5)
 
 .. figure:: iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_135_sage0.png
-    :align: left
-    :figwidth: 60%
+    :align: center
 
-    Interpretacja rozwiązania układu równań liniowych - typowy
-    przypadek.
+    Interpretacja wierszowa rozwiązania układu dwóch równań liniowych,
+    każdy wiersz to jedno równanie. Czerwona kropka oznacza
+    rozwiązanie całego układu.
 
 Możemy korzystając z intuicji od razu przypuszczać, że oprócz punktu,
 przecięciem się dwóch prostych na płaszczyźnie może być też prosta lub
@@ -115,7 +115,8 @@ Geometrycznie można to przedstawić w następujący sposób:
 
 .. end of output
 
-Narysujmy te wektory na płaszczyźnie, wykorzystując polecenie *arrow*:
+Narysujmy te wektory na płaszczyźnie, wykorzystując w Sage polecenie
+``arrow``:
 
 .. code-block:: python
 
@@ -123,23 +124,26 @@ Narysujmy te wektory na płaszczyźnie, wykorzystując polecenie *arrow*:
     ...    arrow( (0,0),v2)+\
     ...    arrow( (0,0),v3,color='red', figsize=5)
 
-.. image:: iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_248_sage0.png
-    :align: center
+.. figure:: iCSE_MAlg01_z12_geom_ukl_rownan_media/cell_248_sage0.png
+   :align: center
 
+   Interpretacja kolumnowa układu dwóch równań (niesprzecznych).
 
 .. end of output
 
 Znamy odpowiedź \- liczbami tymi są 2 i 3, ale zobaczmy jak to działa.
 
-Eksperyment komputerowy:
 
-W poniższym elemencie interaktywnym rysujemy grubą linią wektory
-:math:`v_1` :math:`v_2` kolorem niebieskim a pożądaną wartość ich sumy
-:math:`v_3` zielonym. Manipulując suwakami chcemy tak dobrać liczny
-:math:`x_1` i :math:`x_2`, by suma ważona :math:`x_1 v_1 + x_2 v_2`
-oznaczona kolorem czerwonym pokryła się z zadanym wektorem
-:math:`v_3`. Szarym kolorem zostały oznaczone wektory :math:`x_1 v_1`
-i :math:`x_2 v_2.`
+
+.. admonition:: **Poeksperymentuj!**
+
+   W poniższym elemencie interaktywnym rysujemy grubą linią wektory
+   :math:`v_1` :math:`v_2` kolorem niebieskim a pożądaną wartość ich
+   sumy :math:`v_3` zielonym. Manipulując suwakami chcemy tak dobrać
+   liczny :math:`x_1` i :math:`x_2`, by suma ważona :math:`x_1 v_1 +
+   x_2 v_2` oznaczona kolorem czerwonym pokryła się z zadanym wektorem
+   :math:`v_3`. Szarym kolorem zostały oznaczone wektory :math:`x_1
+   v_1` i :math:`x_2 v_2.`
 
 
 .. sagecellserver::
@@ -186,6 +190,8 @@ opisuje płaszczyznę. Rozwiązaniem układu równań będzie więc miejsce
 przecięcia się trzech płaszczyzn:
 
 
+.. admonition::  Wykonaj poniższy kod by zobaczyć wykres.
+
 .. sagecellserver::
 
     sage: var('x1 x2 x3')
@@ -201,13 +207,13 @@ przecięcia się trzech płaszczyzn:
 
 .. end of output
 
-.. admonition::  Automatyczna konwersja zapisu wierszowego do kolumnowego. 
+.. hint::  Automatyczna konwersja zapisu wierszowego do kolumnowego. 
 
     Mając układ równań w postaci równań algebraicznych w Sage, warto
     nie przepisywać ręcznie współczynników a zamiast tego
     wyekstrahować je z wyrażeń. Poniższy kod wykonuje te operacje,
     które co prawda wyglądają odstraszająca to w rzeczywistości są do
-    "wyeksperymentowaia" w kilka minut.
+    "wyeksperymentowania" w kilka minut.
 
     .. code-block:: python
 
@@ -219,26 +225,6 @@ przecięcia się trzech płaszczyzn:
     .. end of output
 
 
-
-.. sagecellserver::
-
-    sage: v1,v2,v3,v4 = (vector(QQ,(2, 1, 1)), vector(QQ,(1, -1, 1)), vector(QQ,(1, 0, 2)), vector(QQ,(1, -1, 2)))
-    sage: @interact
-    sage: def _(x1=slider(-3,3,1/4,default=1/2),x2=slider(-3,3,1/4,default=0),x3=slider(-3,3,1/4,default=0),viewer=['tachyon','jmol']):
-    ...       plt  = cube(size=4, frame_thickness=1, opacity=0)
-    ...       plt += arrow( (0,0,0),v1)+arrow( (0,0,0),v2)+arrow( (0,0,0),v3)
-    ...       plt += arrow( (0,0,0),v4,color='green') 
-    ...       plt += arrow( (0,0,0),x1*v1, color='gray',width=1)
-    ...       plt += arrow( (0,0,0),x2*v2, color='gray',width=1)
-    ...       plt += arrow( (0,0,0),x3*v3, color='gray',width=1)
-    ...       plt += arrow( (0,0,0),x1*v1+x2*v2+x3*v3, color='red',width=1)
-    ...       
-    ...       if v4 ==x1*v1+x2*v2+x3*v3:
-    ...           print "SUKCES!!!"
-    ...       plt.show(viewer=viewer)
-
-
-.. end of output
 
 Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -261,14 +247,16 @@ Procedura solve daje w wyniku następujące równanie:
     [x1 == r4 + 1, x2 == -3*r4 + 2, x3 == r4],
 
 
-które jest zależne od zmiennej r4. Zmienna ta może przyjmować dowolne
-wartości. Oznacza to, że układ równań jest spełniony przez
-nieskończenie wiele trójek liczb w powyższej postaci.
+które jest zależne od zmiennej r4 (może pojawić się inny numer po
+"r"). Zmienna ta może przyjmować dowolne wartości. Oznacza to, że
+układ równań jest spełniony przez nieskończenie wiele trójek liczb w
+powyższej postaci.
 
 Zobaczmy co to oznacza geometrycznie. W interpretacji "wierszowej"
 rozwiązaniem jest wspólna część trzech płaszczyzn. Narysujmy je w tym
 przypadku:
 
+.. admonition::  Wykonaj poniższy kod by zobaczyć wykres.
 
 .. sagecellserver::
 
@@ -339,100 +327,9 @@ płaszczyzny są do siebie równoległe, lecz nie pokrywają się ze sobą.
 Obraz w interpretacji kolumnowej pokazuje, że jak w przypadku układu
 nieoznaczonego, wektory :math:`v_1,v_2` i :math:`v_3` leżą na jednej
 płaszczyźnie. W przeciwieństwie do poprzedniego przypadku jednak
-wektor :math:`v_4` **nie** leży na tej płaszczyźnie co intuicyjnie powoduje,
-że może być ich sumą ważoną.
+wektor :math:`v_4` **nie** leży na tej płaszczyźnie co intuicyjnie
+sugeruje, że może być ich sumą ważoną.
 
 
-Zadania:
-~~~~~~~~
-
-Rozważmy układ równań:
-
-
-
-.. MATH::
-
-     \begin{cases}-8 \, x_{1} + 22 \, x_{2} - 8 \, x_{3} &=& 1 \\ x_{1} - 3 \, x_{2} + x_{3} &=& 0 \\ 3 \, x_{1} - 8 \, x_{2} + 3 \, x_{3} &=& -1/2 \\ \\ \end{cases}
-
-
-Wykorzystując system Sage lub ręczne rachunki:
-
-
-
- #. Rozwiązać układ.
-
- #. Zmodyfikować prawą stronę tak by otrzymać układ sprzeczny. Narysować wektory kolumnowe i uzasadnić sprzeczność układu.
-
- #. Zmodyfikować macierz tak by dla dowolnej prawej strony układ nigdy nie był sprzeczny \- zastosować rysunek wektorów kolumnowych do uzasadnienia. 
-
-
-.. code-block:: python
-
-    sage: var('x1 x2 x3')
-    sage: var('b1 b2 b3')
-    sage: A = random_matrix(QQ,3,algorithm='subspaces')
-    sage: b = random_vector(QQ,3)
-    sage: b1 = A.column_space().basis()[0]
-    sage: show(A)
-    sage: show(b)
-    sage: show(b1)
-
-
-.. MATH::
-
-    \left(\begin{array}{rrr}
-    2 & -2 & 4 \\
-    -2 & 3 & -5 \\
-    1 & -2 & 3
-    \end{array}\right)
-
-
-.. MATH::
-
-    \left(-5,\,129,\,1\right)
-
-
-
-.. MATH::
-
-    \left(1,\,0,\,-\frac{1}{2}\right)
-
-
-.. end of output
-
-.. code-block:: python
-
-    sage: for i,x in enumerate(A*vector([x1,x2,x3])):
-    ...       print latex(x),'&=& %s \\\\'%b1[i]
-    2 \, x_{1} - 2 \, x_{2} + 4 \, x_{3} &=& 1 \\
-    -2 \, x_{1} + 3 \, x_{2} - 5 \, x_{3} &=& 0 \\
-    x_{1} - 2 \, x_{2} + 3 \, x_{3} &=& -1/2 \\
-
-.. end of output
-
-.. code-block:: python
-
-    sage: print latex(b)
-    sage: print latex(b1)
-    \left(-5,\,129,\,1\right)
-    \left(1,\,0,\,-\frac{1}{2}\right)
-
-.. end of output
-
-.. code-block:: python
-
-    sage: A\b
-    Traceback (most recent call last):
-    ...
-    ValueError: matrix equation has no solutions
-
-.. end of output
-
-.. code-block:: python
-
-    sage: A\b1
-    (3/2, 1, 0)
-
-.. end of output
 
 
