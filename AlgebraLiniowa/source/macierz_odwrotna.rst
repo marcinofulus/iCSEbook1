@@ -16,7 +16,9 @@ elementami są jedynki może być identycznością czyli spełniać
 
    \boldsymbol{I}\boldsymbol{A} = \boldsymbol{A},
 
-.. admonition:: **Poeksperymentuj!**
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykorzystując notatnik Sage lub element interaktywny zbadaj:
 
    * Odgadnij postać macierzy jednostkowej (indentyczności). W tym
      celu zmieniaj macierz ``I`` aż jej iloczyn
@@ -24,9 +26,10 @@ elementami są jedynki może być identycznością czyli spełniać
 
    * Jesli się już to udało to sprawdź eksperymentalnie czy
      :math:`\boldsymbol{I}\boldsymbol{A}=\boldsymbol{A}\boldsymbol{I}`?
+ 
+   Zacznij pracę z poniższym kodem:
 
-
-.. sagecellserver::
+.. sagecellserver:: 
 
    I = matrix(QQ,[[1,1,1],[1,1,1],[1,1,1]])
    A = random_matrix(QQ,3)

@@ -1,4 +1,4 @@
-Algebra liniowa w Sage
+ Algebra liniowa w Sage
 ======================
 
 
@@ -6,7 +6,7 @@ Operacje na macierzach
 ~~~~~~~~~~~~~~~~~~~~~~
 
 System Sage potrafi w dosyć ogólny sposób wykonywać wiele operacji
-spotykanych w algebrze liniowej. Najczęściej używanymi objektami są
+spotykanych w algebrze liniowej. Najczęściej używanymi obiektami są
 wektory i macierze ``vector`` i ``matrix``. Ponieważ Sage jest
 systemem algebry komputerowej, użytkownikowi jest pozostawiona decyzja
 wyboru ciała nad którym jest określona macierz lub wektor.
@@ -18,7 +18,7 @@ macierzach i wektorach:
     liczby o skończonej precyzji. Błędy zaokrągleń kumulują się co
     należy brać pod uwagę przy wykonywaniu różnych operacji.
 
-  * Dokładna algebra liniowa: elementami macierzy sa QQ, ZZ, SR,
+  * Dokładna algebra liniowa: elementami macierzy są QQ, ZZ, SR,
     operacje są dokładne, ale nie wszystkie mogą być wykonane i
     wydajność jest ograniczona.
 
@@ -33,7 +33,7 @@ Poniżej znajduje się przegląd pierścieni stosowanych w Sage:
 |         |                             |l. działań                   |
 |         |                             |                             |
 +---------+-----------------------------+-----------------------------+
-|QQ       |liczby wymierne              |dokładne, ZZ + ułamnki       |
+|QQ       |liczby wymierne              |dokładne, ZZ + ułamki       |
 |         |                             |                             |
 +---------+-----------------------------+-----------------------------+
 |RR       |liczby rzeczywiste o dowolnej|arytmetyka interwałowa       |
@@ -58,15 +58,15 @@ Poniżej znajduje się przegląd pierścieni stosowanych w Sage:
 Indeksowanie elementów:
 -----------------------
 
-Macierze w zapisie matematycznym mają wskaźniki, które zaczynają sie
-od jedynki. Pierwszy wskaźnik numeruje wiersze a drugi kulumny.
+Macierze w zapisie matematycznym mają wskaźniki, które zaczynają się
+od jedynki. Pierwszy wskaźnik numeruje wiersze a drugi kolumny.
 
 W wielu językach komputerowych, wskaźniki macierzy :math:`n\times n`
 zaczynają się od :math:`0` i kończą na :math:`n-1`
 
 Czyli możemy zapisać następującą równość, gdzie macierz po lewej
-stronie jest w konwencji matemetycznej a macierz po prawej jest
-sposobem odwoływania sie do elementów macierzy w Sage:
+stronie jest w konwencji matematycznej a macierz po prawej jest
+sposobem odwoływania się do elementów macierzy w Sage:
 
 .. math::
 
@@ -80,14 +80,14 @@ sposobem odwoływania sie do elementów macierzy w Sage:
    \end{array}\right)
  
 Ciekawą i użyteczną techniką indeksowania, używają z języku python (i
-nie tylko) jest wyninanie. Mamy do dyspozycji następujące konstrukcje:
+nie tylko) jest wycinanie. Mamy do dyspozycji następujące konstrukcje:
 
 * ``[1:3]`` - elementy  1 i 2
 * ``[1:]`` - elementy  od 1 do końca
 * ``[1:10:2]`` - elementy od 1 do 10 co 2
-* ``[-1]`` - ostatni elemnet
+* ``[-1]`` - ostatni element
 
-Szczegółowy opis znajduję się w podręcznikąch języka python
+Szczegółowy opis znajduję się w podręcznikach języka python
 np. `Zanurkuj w Pythonie
 <http://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Listy>`_. Zachęcamy
 do eksperymentalnego poznania tej techniki:
@@ -101,10 +101,10 @@ do eksperymentalnego poznania tej techniki:
 
 
 
-Rożne konstuktory macierzy
+Rożne konstruktory macierzy
 --------------------------
 
-.. sidebar:: Objekt
+.. sidebar:: Obiekt
 
    Jest typem w języku programowania będący strukturą zawierającą
    **dane** i **metody**. Metodami są funkcje służące do wykonywania
@@ -112,8 +112,8 @@ Rożne konstuktory macierzy
 
 
 
-W systemie Sage macierz jest objektem pythonowym. Aby utworzyć taki
-objekt należy wywołać jego konstruktor.  Najbardziej podstawowym
+W systemie Sage macierz jest obiektem pythonowym. Aby utworzyć taki
+obiekt należy wywołać jego konstruktor.  Najbardziej podstawowym
 użyciem typu ``matrix`` jest wywołanie konstruktora  ``matrix``:
 
 .. code-block:: python
@@ -123,7 +123,7 @@ użyciem typu ``matrix`` jest wywołanie konstruktora  ``matrix``:
 spowoduje to utworzenie macierzy :math:`3\times3` nad ciałem liczb
 całkowitych i wypełnienie jej zerami. Elementy tej macierzy można
 uzupełnić o dowolne wartości, jednak można zauważyć, że przypisanie do
-dowolego elementu wartości niecałkowitej np. ``A[1,1]=1/2`` spowoduje
+dowolnego elementu wartości niecałkowitej np. ``A[1,1]=1/2`` spowoduje
 pojawienie się błędu. Dlatego bardziej praktycznym sposobem
 definiowania macierzy jest jawne wyspecyfikowanie ciała (w Sage
 wystarczy by był to pierścień) nad którym określona będzie macierz, np.:
@@ -133,7 +133,7 @@ wystarczy by był to pierścień) nad którym określona będzie macierz, np.:
     sage: matrix(QQ,3)
 
 Liczba ``3`` jest rozmiarem macierzy kwadratowej, jeśli chcemy
-utworzyć macierz prostokątną to możemy podać liczbę wierszy i column:
+utworzyć macierz prostokątną to możemy podać liczbę wierszy i kolumn:
 
 .. code-block:: python
 
@@ -142,7 +142,7 @@ utworzyć macierz prostokątną to możemy podać liczbę wierszy i column:
 Jeśli znamy wartości wszystkich elementów macierzy, możemy z listy
 wierszy bezpośrednio utworzyć macierz. Jeśli nie podamy pierścienia
 (lub ciała) nad którym jest określona tworzona macierz to Sage
-zaastosuje taki pierścień aby wszystkie element mogły się w nim
+zastosuje taki pierścień aby wszystkie element mogły się w nim
 znaleźć. 
 
 Elementy macierzy mogą być pewną funkcją ich wskaźników, w takim
@@ -164,7 +164,7 @@ jest zastosowane zagnieżdżone produktowanie listy:
 
 * Sprawdź nad jakim pierścieniem będzie  określona macierz ``A`` (zastosuj ``A.parent()``).
 * Zmień macierz tak by nie zawierała symbolu ``a``
-* Wypróbuj inne metody inicjacji macierzy opisane powyżej i  sprawdź pierścien.
+* Wypróbuj inne metody inicjacji macierzy opisane powyżej i  sprawdź pierścień.
 
 .. sagecellserver::
    
@@ -174,7 +174,7 @@ jest zastosowane zagnieżdżone produktowanie listy:
 
 
 Oprócz konstruktora macierzy ``matrix`` w Sage znajduje się szereg
-uzytecznych funkcji, które potrafią skonstruować rozmaite macierze:
+użytecznych funkcji, które potrafią skonstruować rozmaite macierze:
 
 
 .. code-block:: python
@@ -253,10 +253,10 @@ Pułapki
 
         sage: A2 = A.subs({phi:pi/4})
         sage: show(A2)
-        sage: print "Pomino podstawienia liczbowego, A2 jest NADAL określone nad pierścieniem:\n"
+        sage: print "Pomimo podstawienia liczbowego, A2 jest NADAL określone nad pierścieniem:\n"
         sage: show(A2.parent())
 
-   Pomino podstawienia liczbowego, A2 jest NADAL określone nad pierścieniem:
+   Pomimo podstawienia liczbowego, A2 jest NADAL określone nad pierścieniem:
     
    .. MATH::
 
@@ -272,7 +272,7 @@ Pułapki
       \end{array}\right)
 
 
-   Dlatego aby skorzytać z metod dostępnych tylko dla macierzy liczbowych
+   Dlatego aby skorzystać z metod dostępnych tylko dla macierzy liczbowych
    należy jawnie zmienić pierścień:
 
 
