@@ -923,7 +923,7 @@ równania jednorodnego. Mamy więć w tym przypadku:
     :label: Axb
 
     x=\underbrace{\left(\begin{array}{rrrrr}
-    2\\0\\2\\0\\0cc
+    2\\0\\2\\0\0\
     \end{array}\right)}_{x_{szczeg}} + 
     \underbrace{
     t\left(\begin{array}{r}

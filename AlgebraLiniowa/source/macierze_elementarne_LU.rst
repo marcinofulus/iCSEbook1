@@ -261,48 +261,32 @@ eliminacji.
 Zastosowania rozkładu LU
 ------------------------
 
-Mając rozkład LU macierzy :math:`\boldsymbol{A}=\boldsymbol{LU}`
-możemy zastąpić rozwiązywanie układu równań za pomocą dwóch rozwiązań
-układów trójkątnych:
+#)  Rozwiązywanie równań liniowych
 
-1) .. math::
+    Mając rozkład LU macierzy :math:`\boldsymbol{A}=\boldsymbol{LU}`
+    możemy zastąpić rozwiązywanie układu równań za pomocą dwóch
+    rozwiązań układów trójkątnych:
 
-      \boldsymbol{Lc}=\boldsymbol{b}
+    .. math::
 
-
-2) .. math::
-
-      \boldsymbol{Ux}=\boldsymbol{c}
+         \boldsymbol{Lc}=\boldsymbol{b}\\
+         \boldsymbol{Ux}=\boldsymbol{c}
 
 
-Macierze Permutacji
--------------------
 
-Jak wiemy z przykładów z układami równań liniowych, procedura
-eliminacji Gaussa, czasem wymaga zamiany równań.
-
-Weżmy np. macierz 
-
-.. math::
-
-   \boldsymbol{A} = \left(\begin{array}{rr}
-   0 & 1 \\
-   2 & 3
-   \end{array}\right)
-
-Widzimy, że aby wykonać krok eliminacji Gaussa należy zamienić wiersze
-tej macierzy. Czy taką operację możemy zapisać jako mnożenie przez pewną macierz? 
+ 
 
 
-.. admonition:: **Poeksperymentuj!**
+#)  Szukanie macierzy odwrotnej, które jest związane z jednoczesnym rozwiązaniem n równań liniowych. 
 
-   Spróbujmy znaleźć taką macierz :math:`\boldsymbol{P}` by zamieniała
-   ona wiersze macierzy :math:`\boldsymbol{A}`:
+#)  Obliczanie wyznacznika
 
-.. sagecellserver::
+    Mając rozkład macierzy kwadratowej :math:`A = P^{-1} L U`, wyznacznik można obliczyć  korzystając ze wzoru:
+    
+    .. math::
+       
+       \det(A) = \det(P^{-1}) \det(L) \det(U) = (-1)^S \left( \prod_{i=1}^n l_{ii} \right)  \left( \prod_{i=1}^n u_{ii} \right),
 
-   A = matrix([[0,1],[2,3]])
-   P = matrix([[0,0],[0,0]])
+    gdzie :math:`S` jest liczbą zamian rzędów wykonanych w procesie rozkładu.
 
-   show(A)
-   show(P*A)
+    

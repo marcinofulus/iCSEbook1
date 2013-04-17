@@ -5,7 +5,7 @@ Zadanie: Eliminacja Gaussa
 --------------------------
 
 
-Aby wygenerować układ równań naciśnij "evaluate", aby zmienić liczbę
+Aby wygenerować układ równań naciśnij "Evaluate", aby zmienić liczbę
 równań należy zmienić zmienną n.
 
 
@@ -18,8 +18,7 @@ Wolno używać tylko wbudowanych funkcji do operacji na rzędach.
 
 .. sagecellserver::
 
-   rank=0
-   n=randint(2,7)
+   n=4
    A=random_matrix(ZZ,n,algorithm='echelonizable',rank=n)
    rank=A.rank()
    show(A)
@@ -44,9 +43,6 @@ Zadanie 2. Rozwiązać układ równań metodą eliminacji Gaussa.
    b=A[:,2]+0.5*A[:,1]
    print "RANK:",A.rank()
    show(A)
-   print A.right_kernel()
-   show( b)
-   print A.solve_right(b)
 
 .. end of output
 

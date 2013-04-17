@@ -1,13 +1,16 @@
 Kombinacja liniowa wektorów
 ---------------------------
 
+.. admonition:: **Kombinacja liniowa**
 
-Niech  będzie  dana  przestrzeń  wektorowa  :math:`V(K)`  oraz  wektor  :math:`x  \in  V`.
-Jeżeli   :math:`x = \alpha_1 x_1  + \alpha_2 x_2  +  \ldots  + \alpha_m x_m`,
-gdzie  :math:`\alpha_1 ,\alpha_2 , \ldots ,\alpha_m  \in K`,   :math:`x_1 ,x_2 , \ldots ,x_m \in V`,
-to  wektor  x  jest  kombinacją  liniową  wektorów  :math:`x_1 ,x_2 , \ldots ,x_m`.
+   Niech będzie dana przestrzeń wektorowa :math:`V(K)` oraz wektor
+   :math:`x \in V`.  Jeżeli :math:`x = \alpha_1 x_1 + \alpha_2 x_2 +
+   \ldots + \alpha_m x_m`, gdzie :math:`\alpha_1 ,\alpha_2 , \ldots
+   ,\alpha_m \in K`, :math:`x_1 ,x_2 , \ldots ,x_m \in V`, to wektor x
+   jest kombinacją liniową wektorów :math:`x_1 ,x_2 , \ldots ,x_m`.
 
-Skalary  :math:`\alpha_1 ,\alpha_2 , \ldots ,\alpha_m`  są  współczynnikami  tej  kombinacji  liniowej.
+   Skalary :math:`\alpha_1 ,\alpha_2 , \ldots ,\alpha_m` są
+   współczynnikami tej kombinacji liniowej.
 
 Mówimy  też,  że  wektor  x  wyraża  się  liniowo  przez  wektory  :math:`x_1 ,x_2 , \ldots ,x_m`.
 
@@ -37,7 +40,7 @@ Znikanie  trywialnej  kombinacji  liniowej  wektorów  można  więc zapisać  w
 
   \mathop  \wedge \limits_{(\alpha_i )_1^m } \mathop  \wedge \limits_{(x_i )_1^m } \left[ {\left( {\mathop  \wedge \limits_{1 \le i \le m} \alpha_{ i}  = 0} \right){\rm{     }} \Rightarrow {\rm{     }}\sum\limits_{i = 1}^m {\alpha_{ i} x_{ i}  = {\rm{\theta }}} } \right].
 
-Def.:  Niech  :math:`M = (x_1 ,x_2 , \ldots ,x_m )`  będzie  skończonym  układem  wektorów  p.w. :math:`V(K)`.
+**Def.:**  Niech  :math:`M = (x_1 ,x_2 , \ldots ,x_m )`  będzie  skończonym  układem  wektorów  p.w. :math:`V(K)`.
 
 Zbiór  wszystkich  kombinacji  liniowych  wektorów  tego  układu  nazywamy  powłoką  liniową
 (domknięciem liniowym)  układu  :MATH:`M`  i  oznaczamy  :MATH:`L(M)`:

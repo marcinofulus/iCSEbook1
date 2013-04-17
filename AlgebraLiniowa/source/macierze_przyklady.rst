@@ -52,11 +52,15 @@ siły. Siły możemy dowolnie kształtować.
    \end{array}\right)
 
 
+.. admonition:: **Poeksperymentuj z Sage**!
 
-Poeksperymentujmy, przyjmując za siłę stałą wartość -1 mamy sytuację
-swobodnie wiszącego łańcucha mass, który odkształca się pod wpływem
-grawitacji.
-
+   Wykorzystując notatnik Sage lub element interaktywny zbadaj jak
+   zachowa się układ połączonych liniowymi sprężynami mass pod wpływej
+   zadanej siły. Przyjmując za siłę stałą wartość -1 mamy sytuację
+   swobodnie wiszącego łańcucha mass, który odkształca się pod wpływem
+   grawitacji. Co będzie gdy na jedną masę podziałamy siłą dodatnia?
+   Zacznij od poniższego kodu:
+   
 .. sagecellserver::
 
    nx=50
@@ -69,3 +73,42 @@ grawitacji.
    f = vector(nx*[-1.0])
    f[0],f[nx-1] = 0,0
    list_plot(L\f,figsize=5)
+
+
+
+
+
+
+Macierze Permutacji
+-------------------
+
+Jak wiemy z przykładów z układami równań liniowych, procedura
+eliminacji Gaussa, czasem wymaga zamiany równań.
+
+Weżmy np. macierz 
+
+.. math::
+
+   \boldsymbol{A} = \left(\begin{array}{rr}
+   0 & 1 \\
+   2 & 3
+   \end{array}\right)
+
+Widzimy, że aby wykonać krok eliminacji Gaussa należy zamienić wiersze
+tej macierzy. Czy taką operację możemy zapisać jako mnożenie przez pewną macierz? 
+
+
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykorzystując notatnik Sage lub element interaktywny spróbuj
+   znaleźć taką macierz :math:`\boldsymbol{P}` by zamieniała ona
+   wiersze macierzy :math:`\boldsymbol{A}`. Mając wprawę na macierzy
+   :math:`2\times 2` poeksperymentuj z macierzami :math:`3\times 3`. 
+
+.. sagecellserver::
+
+   A = matrix([[0,1],[2,3]])
+   P = matrix([[0,0],[0,0]])
+
+   show(A)
+   show(P*A)
