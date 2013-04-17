@@ -59,6 +59,7 @@ układów oznaczonych, nieoznaczonych i sprzecznych.
 
    mnozenie_macierzy
    eliminacja_gaussa
+   eliminacja_gaussa_II
    macierze_przyklady
 
 Algebra liniowa w Sage:
@@ -153,7 +154,7 @@ rozwiązywanie układu równań liniowych oraz macierz odwrotą.
    :maxdepth: 1
 
    wyznacznik
-   test001
+
               
 
 Wykład VIII: wartości i wektory własne
@@ -171,7 +172,6 @@ Zagadnienie własne i jego zastosowania.
 
 
 
-
 dodatek
 =======
 
@@ -179,5 +179,5 @@ dodatek
    :maxdepth: 2
    :glob:
 
-
-   JA_orig/*
+   JA_orig/macierze/*
+   JA_orig/wyznaczniki/*
