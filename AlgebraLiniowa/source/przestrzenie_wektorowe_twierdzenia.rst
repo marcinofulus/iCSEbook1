@@ -32,7 +32,7 @@ Niech  będzie  dana  p.w.  :math:`V(K)`.  Wtedy
 2)  :math:`\alpha (- v) = ( - \alpha )v =  - (\alpha v),{}\alpha \in K, v \in V`.  
      (iloczyn skalara :math:`\alpha` przez wektor przeciwny do
      wektora :math:`v` równa się iloczynowi skalara przeciwnego do
-     :math:`\alpha ` przez wektor :math:`v` i równa się wektorowi
+     :math:`\alpha` przez wektor :math:`v` i równa się wektorowi
      przeciwnemu do iloczynu skalara :math:`\alpha` przez wektor
      :math:`v`).  
 
