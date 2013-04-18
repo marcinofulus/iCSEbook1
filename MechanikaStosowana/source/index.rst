@@ -9,7 +9,7 @@ Mechanika Stosowana
 
 
 Preliminaria matematyczne
-==========================
+=========================
 
 .. toctree::
    :maxdepth: 1
@@ -17,8 +17,7 @@ Preliminaria matematyczne
    delta_kroneckera
    tensor_antysymetryczny
    iloczyn_epsilonow
-   sws/MS_SS2013_lagodne_wprowadzenie_ode
-
+   lagodne_wprowadzenie_ode
 
 Kinematyka
 ==========
@@ -39,8 +38,9 @@ Dodatek
 
 .. toctree::
    :maxdepth: 2
+   :glob:
 
-   uzywane_komendy_w_sage
-
+      sws2/i*
+      uzywane_komendy_w_sage
 
 

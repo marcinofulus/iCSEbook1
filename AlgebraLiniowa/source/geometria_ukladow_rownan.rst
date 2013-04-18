@@ -87,20 +87,20 @@ można zapisać jako działania na wektorach kolumnowych:
 
 .. MATH::
 
-      \left [\array{2 x_1\\x_1}\right ] +  \left [\array{-x_2 \\x_2}\right ] = \left [\array{1 \\5}\right ],
+      \left [\begin{array}2 x_1\\x_1\end{array}\right ] +  \left [\begin{array}-x_2 \\x_2\end{array}\right ] = \left [\begin{array}1 \\5\end{array}\right ],
 
 
 czyli:
 
 .. MATH::
 
-     x_1 \left [\array{2 \\1}\right ] + x_2 \left [\array{-1 \\1}\right ] = \left [\array{1 \\5}\right ]
+     x_1 \left [\begin{array}2 \\1\end{array}\right ] + x_2 \left [\begin{array}-1 \\1\end{array}\right ] = \left [\begin{array}1 \\5\end{array}\right ]
 
 
 Interpretacja takiego zapisu jest następująca: dla jakich wartości
-liczb :math:`x_{1},x_{2}`, suma wektorów :math:`\left [\array{2
-\\1}\right ]` i :math:`\left [\array{-1 \\1}\right ]` jest równa
-wektorowi :math:`\left [\array{1 \\5}\right ].`
+liczb :math:`x_{1},x_{2}`, suma wektorów :math:`\left [\begin{array}2
+\\1\end{array}\right ]` i :math:`\left [\begin{array}-1 \\1\end{array}\right ]` jest równa
+wektorowi :math:`\left [\begin{array}1 \\5\end{array}\right ].`
 
 
 Geometrycznie można to przedstawić w następujący sposób:

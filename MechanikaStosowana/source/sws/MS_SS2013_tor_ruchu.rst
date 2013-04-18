@@ -5,9 +5,11 @@ Tor ruchu u układach krzywoliniowych
 ====================================
 
 Prędkość w ruchu krzywoliniowym na płaszczyźnie
------------------------------------------------
+----------------------------------------------- 
+
 
 Rozważmy ruch krzywoliniowy na płaszczyźnie. Tor ruchu niech będzie dany przez wektor wodzący zależny od czasu
+
 
 
 .. MATH::
@@ -18,12 +20,14 @@ Rozważmy ruch krzywoliniowy na płaszczyźnie. Tor ruchu niech będzie dany prz
 Prędkość jest pochodna wektora wodzącego po czasie:
 
 
+
 .. MATH::
 
     v_{x}=\frac{dx}{dt}\quad \quad v_{y}=\frac{dy}{dt}.
 
 
 Wartością prędkości jest długość wektora: :math:`\vec{v}=[v_{x},v_{y}]=v_{x}\cdot \vec{e}_{x}+v_{y}\cdot \vec{e}_{y}` i dana jest wzorem:
+
 
 
 .. MATH::
@@ -63,9 +67,11 @@ Uwaga: definiując :math:`x(t)` i  :math:`y(t)` jako funkcje symboliczne  Sage u
     sage: show(x)
     sage: show(r)
 
+
 .. MATH::
 
     t \ {\mapsto}\ R \cos\left(2 \, \pi t\right)
+
 
 
 .. MATH::
@@ -110,6 +116,7 @@ Wektor położenia:
 
     sage: show(r)
 
+
 .. MATH::
 
     t \ {\mapsto}\ \left(R \cos\left(2 \, \pi t\right),\,R \sin\left(2 \, \pi t\right)\right)
@@ -127,6 +134,7 @@ Wektor prędkości:
 
     sage: show(v)
 
+
 .. MATH::
 
     t \ {\mapsto}\ \left(-2 \, \pi R \sin\left(2 \, \pi t\right),\,2 \, \pi R \cos\left(2 \, \pi t\right)\right)
@@ -141,6 +149,7 @@ Jednostkowy wektor styczny do krzywej :math:`r(t)`:
 
     sage: show(T)
 
+
 .. MATH::
 
     t \ {\mapsto}\ \left(-\sin\left(2 \, \pi t\right),\,\cos\left(2 \, \pi t\right)\right)
@@ -149,6 +158,7 @@ Jednostkowy wektor styczny do krzywej :math:`r(t)`:
 .. end of output
 
 W ruchu po okręgu prędkość jest prostopadła do wektora wodzącego:
+
 
 
 .. MATH::
@@ -224,14 +234,17 @@ Czy każdy ruch po okręgu jest jednostajny?
     sage: show(v)
     sage: show(T)
 
+
 .. MATH::
 
     \left(R \cos\left(2 \, \pi t^{2}\right),\,R \sin\left(2 \, \pi t^{2}\right)\right)
 
 
+
 .. MATH::
 
     \left(-4 \, \pi R t \sin\left(2 \, \pi t^{2}\right),\,4 \, \pi R t \cos\left(2 \, \pi t^{2}\right)\right)
+
 
 
 .. MATH::
@@ -301,6 +314,7 @@ Prędkość w taki ruchu nie jest prostopadła do wektora wodzącego.
 
     sage: show(v.dot_product(r).trig_simplify())
 
+
 .. MATH::
 
     4 \, t
@@ -312,6 +326,7 @@ Prędkość w taki ruchu nie jest prostopadła do wektora wodzącego.
 
     sage: show(T.dot_product(r).trig_simplify())
 
+
 .. MATH::
 
     \frac{\sqrt{16 \, \pi^{2} t^{2} + 4} t}{4 \, \pi^{2} t^{2} + 1}
@@ -320,9 +335,11 @@ Prędkość w taki ruchu nie jest prostopadła do wektora wodzącego.
 .. end of output
 
 Przyśpieszenie w ruchu krzywoliniowym na płaszczyźnie
------------------------------------------------------
+----------------------------------------------------- 
+
 
 Przyśpieszenie jest pochodną prędkości po czasie. Zapiszmy prędkość jako iloczyn wersora jednostkowego i długość :math:`\vec v=v\hat t.` Obydwa czynniki tego iloczynu zależą od czasu więc można zastosować twierdzenie o pochodnej iloczynu:
+
 
 
 .. MATH::
@@ -333,12 +350,14 @@ Przyśpieszenie jest pochodną prędkości po czasie. Zapiszmy prędkość jako 
 Z geometrii różniczkowej wiemy, że:
 
 
+
 .. MATH::
 
     \frac{\mathrm d\hat t}{\mathrm dt}=\underbrace{\frac{\mathrm d\hat t}{\mathrm ds}}_{\hat n/\rho}\underbrace{\frac{\mathrm ds}{\mathrm dt}}_{v}=\frac{v}{\rho} \hat n
 
 
 więc:
+
 
 
 .. MATH::
@@ -350,6 +369,7 @@ Krzywizna:
 ~~~~~~~~~~
 
 Def. Wektorem krzywizny jest pochodna jednostkowego wektora stycznego po drodze:  
+
 .. MATH::
 
     \vec K=\frac{\mathrm d\hat t}{\mathrm ds}.
@@ -364,9 +384,11 @@ Tw. Długość wektora krzywizny jest odwrotnością promienia koła stycznego d
 Tw. Pochodna jednostkowego wektora stycznego po czasie jest do niego prostopadła.
 
 
+
 .. MATH::
 
     {\mathrm const} = |\hat t|^2
+
 
 
 .. MATH::
@@ -377,6 +399,7 @@ Tw. Pochodna jednostkowego wektora stycznego po czasie jest do niego prostopadł
 Mając dowolną parametryzacje wektora wodzącego możemy zawsze skorzystać z zależności:
 
 
+
 .. MATH::
 
     \vec K=\frac{\mathrm d\hat t}{\mathrm ds} =\frac{\mathrm d\hat t}{\mathrm dt}\frac{\mathrm dt}{\mathrm ds}=\frac{\mathrm d\hat t}{\mathrm dt}\frac{1}{v}.
@@ -385,12 +408,14 @@ Mając dowolną parametryzacje wektora wodzącego możemy zawsze skorzystać z z
 Z drugiej strony możemy napisać:
 
 
+
 .. MATH::
 
     \vec K=\frac{\mathrm d\hat t}{\mathrm ds}
 
 
 czyli
+
 
 
 .. MATH::
@@ -420,14 +445,17 @@ Przyśpieszenie w ruchu jednostajnym po okręgu.
     sage: show(v)
     sage: show(a)
 
+
 .. MATH::
 
     \left(R \cos\left(2 \, \pi t\right),\,R \sin\left(2 \, \pi t\right)\right)
 
 
+
 .. MATH::
 
     \left(-2 \, \pi R \sin\left(2 \, \pi t\right),\,2 \, \pi R \cos\left(2 \, \pi t\right)\right)
+
 
 
 .. MATH::
@@ -448,6 +476,7 @@ Sprawdźmy czy wektor przyśpieszenia jest prostopadły do prędkości:
 .. end of output
 
 skoro tak to sprawdźmy czy zachodzi wzór:
+
 
 
 .. MATH::
@@ -486,14 +515,17 @@ Przyśpieszenie w ruchu  **nie**  jednostajnym po okręgu.
     sage: show(v)
     sage: show(a)
 
+
 .. MATH::
 
     \left(R \cos\left(2 \, \pi t^{2}\right),\,R \sin\left(2 \, \pi t^{2}\right)\right)
 
 
+
 .. MATH::
 
     \left(-4 \, \pi R t \sin\left(2 \, \pi t^{2}\right),\,4 \, \pi R t \cos\left(2 \, \pi t^{2}\right)\right)
+
 
 
 .. MATH::
@@ -514,6 +546,7 @@ Sprawdźmy czy przyśpieszenie w takim ruchu jest prostopadłe do prędkości:
 .. end of output
 
 oczywiście w taki przypadku nie zachodzi:  
+
 .. MATH::
 
      a = \frac{v^2}{R}
@@ -629,6 +662,7 @@ W elemencie interaktywnym lokalny promień krzywizny :math:`\rho` jest zwizualiz
 
     sage: show(N(t=0))
 
+
 .. MATH::
 
     \left(0,\,2\right)
@@ -706,7 +740,8 @@ Czasem Sage nie chce uprościć pewnych zależności, w tym przypadku "pomaga" w
 .. end of output
 
 Dodatek
--------
+------- 
+
 
 .. code-block:: python
 
