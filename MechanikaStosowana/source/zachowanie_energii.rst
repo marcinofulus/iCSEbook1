@@ -64,10 +64,9 @@ wobec czego,  na  podstawie  równań  (1):
 
 .. math::
 
-   \begin{array}{l}
-   & \frac{{dE}}{{dt}}\;\; = \;\;\sum\limits_{j = 1}^{3N} {\;\,\left( {\,\frac{{\partial U}}{{\partial {\kern 1pt} x_j }}\;\dot x_j \;\; + \;\;m_j \,\dot x_j \,\ddot x_j } \right)} \;\; + \;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;\;\; =  \\ 
-   &  = \;\;\sum\limits_{j = 1}^{3N} {\;\,\left( {\,m_j \,\ddot x_j  + \;\,\frac{{\partial U}}{{\partial {\kern 1pt} x_j }}} \right)} \;\dot x_j \;\; + \;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;\;\; = \;\;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;. \\ 
-   \end{array}
+   \frac{{dE}}{{dt}}\;\; &= \;\;\sum\limits_{j = 1}^{3N} {\;\,\left( {\,\frac{{\partial U}}{{\partial {\kern 1pt} x_j }}\;\dot x_j \;\; + \;\;m_j \,\dot x_j \,\ddot x_j } \right)} \;\; + \;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;\;\; =  \\ 
+                                  &= \;\;\sum\limits_{j = 1}^{3N} {\;\,\left( {\,m_j \,\ddot x_j  + \;\,\frac{{\partial U}}{{\partial {\kern 1pt} x_j }}} \right)} \;\dot x_j \;\; + \;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;\;\; = \;\;\;\frac{{\partial U}}{{\partial {\kern 1pt} t}}\;. \\ 
+
 
 
 Wynika stąd prawo zachowania energii mechanicznej dla układu punktów
