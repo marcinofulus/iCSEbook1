@@ -13,10 +13,10 @@ Układ równań :math:`n\times n`:
    :label: ukl1
 
    \begin{cases}
-   \alpha_{11} x_1 & \alpha_{12} x_2 & \ldots & \alpha _{1n} x_n &=& b_1 \\
-   \alpha_{21} x_1 & \alpha_{22} x_2 & \ldots & \alpha _{2n} x_n &=& b_2 \\
+   \alpha_{11} x_1+ & \alpha_{12} x_2+ & \ldots & \alpha _{1n} x_n &=& b_1 \\
+   \alpha_{21} x_1+ & \alpha_{22} x_2+ & \ldots & \alpha _{2n} x_n &=& b_2 \\
    \ldots       & \ldots       & \ldots & \ldots       \\
-   \alpha_{n1} x_1 & \alpha_{n2} x_2 & \ldots & \alpha _{nn} x_n &=& b_n \\
+   \alpha_{n1} x_1+ & \alpha_{n2} x_2+ & \ldots & \alpha _{nn} x_n &=& b_n \\
    \end{cases}
 
 
@@ -147,6 +147,10 @@ układu równań :eq:`ukl1`.
 Mnożenie macierzy przez macierz
 -------------------------------
 
+Mnożenie macierzy kwadratowych
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 Wynikiem mnożenia macierzy jest wektor, więc nic nie stoi na
 przeszkodzie by pomnożyć go przez inną macierz. Weźmy na przykład
 wektor :math:`x` i pomnóźmy go przez macierz :math:`\boldsymbol{A}` a
@@ -162,7 +166,7 @@ wyrazy pod sumą można przestawiać, z tym że należy uważać by nie
 .. math::
    :label: BA1
 
-   \sum_{i=1}^{i=n} \beta_{ki} \sum_{j=1}^{j=n} \alpha_{ij} x_j = \sum_{j=1}^{j=n} \left( \sum_{i=1}^{i=n} \beta_{ki} \alpha_{ij} \right)   x_j   
+   \sum_{i=1}^{n} \beta_{ki} \sum_{j=1}^{n} \alpha_{ij} x_j = \sum_{j=1}^{n} \left( \sum_{i=1}^{n} \beta_{ki} \alpha_{ij} \right)   x_j   
 
 Wyrażenie w nawiasie można potraktować jako element pewnej macierzy :math:`\boldsymbol{C}` 
 
@@ -177,6 +181,13 @@ Biorąc pod uwagę punkt wyjścia równości :eq:`BA1` powyższy wzór definiuje
     \boldsymbol{C} = \boldsymbol{BA}
 
 
+Mnożenie macierzy prostojątnych
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
 
 Własności mnożenia macierzy
 ---------------------------
@@ -184,7 +195,7 @@ Własności mnożenia macierzy
 #) Mnożenie jest łączne: :math:`\boldsymbol{A} (\boldsymbol{B C}) = (\boldsymbol{A B}) \boldsymbol{C}`.
 #) Mnożenie jest rozdzielne względem dodawania:: :math:`\boldsymbol{A} (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{A B} +\boldsymbol{A C}` oraz :math:`(\boldsymbol{A} + \boldsymbol{B}) \boldsymbol{C} = \boldsymbol{A C} + \boldsymbol{B C}`
 #) Mnożenie nie jest przemienne :math:`\boldsymbol{AB} \neq\boldsymbol{ BA}`. 
-#) Mnożenie macierzy przez skalar, polegające na pomnożeniu przez
+#) Mnożenie macierzy przez liczbę, polegające na pomnożeniu przez
    skalar wszysktich jej elementów jest przemienne
    :math:`c\boldsymbol{A}=\boldsymbol{A}c`.
 

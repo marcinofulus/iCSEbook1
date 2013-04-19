@@ -87,7 +87,7 @@ można zapisać jako działania na wektorach kolumnowych:
 
 .. MATH::
 
-      \left [\begin{array}2 x_1\\x_1\end{array}\right ] +  \left [\begin{array}-x_2 \\x_2\end{array}\right ] = \left [\begin{array}1 \\5\end{array}\right ],
+      \;\left [ \begin{array}  2 x_1\\x_1\end{array}\right ] +  \left [\begin{array}-x_2 \\x_2\end{array}\right ] = \left [\begin{array} a1 \\5\end{array}\right ],
 
 
 czyli:
@@ -98,7 +98,7 @@ czyli:
 
 
 Interpretacja takiego zapisu jest następująca: dla jakich wartości
-liczb :math:`x_{1},x_{2}`, suma wektorów :math:`\left [\begin{array}2
+liczb :math:`x_{1},x_{2}`, suma ważona wektorów :math:`\left [\begin{array}2
 \\1\end{array}\right ]` i :math:`\left [\begin{array}-1 \\1\end{array}\right ]` jest równa
 wektorowi :math:`\left [\begin{array}1 \\5\end{array}\right ].`
 
@@ -328,7 +328,7 @@ Obraz w interpretacji kolumnowej pokazuje, że jak w przypadku układu
 nieoznaczonego, wektory :math:`v_1,v_2` i :math:`v_3` leżą na jednej
 płaszczyźnie. W przeciwieństwie do poprzedniego przypadku jednak
 wektor :math:`v_4` **nie** leży na tej płaszczyźnie co intuicyjnie
-sugeruje, że może być ich sumą ważoną.
+sugeruje, że **nie** może być ich sumą ważoną.
 
 
 
