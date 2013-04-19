@@ -50,8 +50,9 @@ Wnioski:
 
 .. MATH::
 
- \varepsilon_{123}  = \,\varepsilon _{231}  = \,\varepsilon _{312}  &=& \,1 \\
- \varepsilon_{213}  = \,\varepsilon _{321}  = \,\varepsilon _{132}  &=& \, - 1.
+ \varepsilon_{123}  = \varepsilon _{231}  = \varepsilon _{312}  &= 1 \\
+ \varepsilon_{213}  = \varepsilon _{321}  = \varepsilon _{132}  &=  - 1.
+ 
 
 
 \ 

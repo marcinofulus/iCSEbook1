@@ -34,14 +34,14 @@ pozostałe składowe (w liczbie 6) znikają.  Macierz złożona z elementów
 
 .. MATH::
 
- (\delta _{ij} )_{3 \times 3}  = \left( {\begin{array}{\*{20}c}    1  0  0  \\    0  1  0  \\    0  0  1  \\ \end{array}} \right). 
+ (\delta _{ij} )_{3 \times 3}  = \left( {\begin{array}{ccc}    1  0  0  \\    0  1  0  \\    0  0  1  \\ \end{array}} \right). 
 
 
 Sumy z deltą Kroneckera. 
 
 .. MATH::
 
- \sum\limits_{j\, = \,1}^3 {\,\delta _{\,ij} \,A_{\,j}  = A_{\,i} ,}  \] \[ i = 1,\,2,\,3.  
+ \sum_{j = 1}^{3} \delta _{ij} A_{j}  = A_{i},  i = 1, 2, 3.  
 
 
     
@@ -59,9 +59,8 @@ składnik równa się :math:`A_{\,i}`.
 
 .. MATH::
 
-   \[ \sum\limits_{i,j\, = \,1}^3
-   {\delta _{\,ij} \,a_i \,b_j = \sum\limits_{i\, = \,1}^3 {a_{\,i}
-   \,b_{\,i} } } \] 
+   \sum\limits_{i,j = 1}^3
+   {\delta _{ij} a_i b_j = \sum\limits_{i = 1}^3 {a_{i} b_{i} } } 
 
 
 Wyprowadzenie:

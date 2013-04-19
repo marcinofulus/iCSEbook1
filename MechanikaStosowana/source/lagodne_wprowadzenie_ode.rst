@@ -179,7 +179,7 @@ W Sage możemy narysować pole wektorowe za pomocą  ``plot_vector_field.``
     sage: plt_v = plot_vector_field((f(x,y),g(x,y)),(x,-1.2,1.2),(y,-1.2,1.2),figsize=6,aspect_ratio=1)
     sage: plt_v
 
-.. figure:: lagodne_wprowadzenie_ode_media/pole_wektorowe.svg
+.. figure:: lagodne_wprowadzenie_ode_media/pole_wektorowe.png
     :align: center
 
     Pole wektorowe dla liniowej funkcji wektorowej.

@@ -8,8 +8,8 @@ jest oporu(ów) ruchu jedyną siłą działającą na ciało jest siła ciężko
 
 .. math::
 
-     \ddot{x} &=& 0, \\
-     \ddot{y} &=& -g,
+     \ddot{x} &= 0, \\
+     \ddot{y} &= -g
 
 gdzie :math:`g` jest przyspieszeniem ziemskim. Równania (1) i (2)
 składają się na drugą zasadę dynamiki Newtona w postaci wektorowej:
@@ -24,10 +24,10 @@ otrzymujemy:
 
 .. math::
 
-       x(t) & = & x_0 + v_{x0}t, \\
-     v_x(t) & = & v_{x0}, \nonumber \\
-       y(t) & = & y_0+v_{y_0}t-\frac{1}{2}gt^2, \\
-     v_x(t) & = & v_{x0}-gt. \nonumber
+       x(t) & =  x_0 + v_{x0}t, \\
+     v_x(t) & =  v_{x0}, \nonumber \\
+       y(t) & =  y_0+v_{y_0}t-\frac{1}{2}gt^2, \\
+     v_x(t) & =  v_{x0}-gt. \nonumber
 
 Z kolei rugując czas :math:`t` z równań określających składowe
 przemieszczenia :math:`x(t)`\ , :math:`y(t)` równań mamy:
@@ -93,8 +93,8 @@ Uwzględniając we wzorach (1) i (2) postać siły (2.1) otrzymujemy
 .. math::
 
 
-    \dot{v}_x & = & -C'\sqrt{v_x^2+v_y^2}\, v_x, \\
-    \dot{v}_y & = & -C'\sqrt{v_x^2+v_y^2}\, v_y - g, \quad\text{gdzie}\quad C'=\frac{C}{m},
+    \dot{v}_x & =  -C'\sqrt{v_x^2+v_y^2}\, v_x, \\
+    \dot{v}_y & =  -C'\sqrt{v_x^2+v_y^2}\, v_y - g, \quad\text{gdzie}\quad C'=\frac{C}{m},
 
 przy czym skorzystaliśmy ze związków :math:`\ddot{x} = \dot{v}_x` oraz
 :math:`\ddot{y} = \dot{v}_y`\ . Uzyskane równania, w przeciwieństwie do
@@ -108,10 +108,10 @@ przez odpowiednie ilorazy różnicowe:
 
 .. math::
 
-    v_x(t+\Delta t) & = & v_x(t) - C'\sqrt{v_x(t)^2+v_y(t)^2}\, v_x(t)\,\Delta t, \\
-    v_y(t+\Delta t) & = & v_y(t) - \left(C'\sqrt{v_x(t)^2+v_y(t)^2}\, v_y(t) - g\right)\Delta t, \nonumber\\
-      x(t+\Delta t) & = & x(t) + v_x(t)\Delta t, \nonumber\\
-      y(t+\Delta t) & = & y(t) + v_y(t)\Delta t, \nonumber 
+    v_x(t+\Delta t) & =  v_x(t) - C'\sqrt{v_x(t)^2+v_y(t)^2}\, v_x(t)\,\Delta t, \\
+    v_y(t+\Delta t) & =  v_y(t) - \left(C'\sqrt{v_x(t)^2+v_y(t)^2}\, v_y(t) - g\right)\Delta t, \nonumber\\
+      x(t+\Delta t) & =  x(t) + v_x(t)\Delta t, \nonumber\\
+      y(t+\Delta t) & =  y(t) + v_y(t)\Delta t, \nonumber 
 
 gdzie :math:`\Delta t` jest stałym odcinkiem czasu (krok metody).
 Powyższe wzory pozwalają obliczyć wartość prędkość oraz położenie w
