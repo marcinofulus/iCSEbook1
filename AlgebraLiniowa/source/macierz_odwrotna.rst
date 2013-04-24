@@ -110,6 +110,15 @@ na kolejne kolumny macierzy odwrotnej. Trzy eliminacje Gaussa można
 zastąpić jedną w której zamiast macierzy rozszerzonej o wektor będący
 prawą stroną układu, rozszerzamy prawą stronę o macierz jednostkową.
 
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykorzystując notatnik Sage lub element interaktywny wypróbuj jak
+   działa powyższa metoda otrzymywania macierzy odwrotnej. 
+
+   W Sage macierz odwrotną można również otrzymać bezpośrednio metodą
+   ``A.inverse()``. Wypróbuj jej działanie.`
+
+
 .. sagecellserver::
 
    A=matrix([[   0,-2, 1],\
@@ -132,7 +141,9 @@ Macierz odwrotna a macierz osobliwa
 
 Jeżeli w wyniku eliminacji Gaussa z macierzy kwadratowej
 :math:`\boldsymbol{A}` możemy uzyskać macierz jednostkową to mówimy,
-że macierz jest nieosobliwa. W przeciwnym przypadku jest osobliwa.
+że macierz jest nieosobliwa. W przeciwnym przypadku jest
+osobliwa. Biorąc pod uwagę metodę otrzymywania macierzy odwrotnej
+jasne stają się twierdzenia:
 
 .. admonition:: **Twierdzenie** 
 

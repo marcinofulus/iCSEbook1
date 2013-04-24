@@ -165,10 +165,7 @@ Zagadnienie własne i jego zastosowania.
 .. toctree::
    :maxdepth: 1
 
-
-
-   wyznacznik
-   test001
+   zagadnienie_wlasne
 
 
 
@@ -178,6 +175,8 @@ dodatek
 .. toctree::
    :maxdepth: 2
    :glob:
-
-   JA_orig/macierze/*
+   
+   JA_orig/macierze/* 
    JA_orig/wyznaczniki/*
+   JA_orig/problemy_liniowe/* 
+   Rudnicki_orig/*

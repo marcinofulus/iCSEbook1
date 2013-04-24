@@ -183,6 +183,18 @@ starej numeracji szukanych i przedstawić macierz
 
 .. end of output
 
+.. note::
+ 
+   Można by zadać pytanie dlatego wykonujemy operacje zamiany rzędów a
+   nie kolumn? Pamiętajmy jednak, że powyższa macierz jest macierzą
+   która jest z lewej strony mnożona przez macierz
+   :math:`\boldsymbol{A}` - czyli ta w której dokonaliśmy zamiany
+   kolumn. W mnożeniu macierzy wiersz mnoży kolumnę i zamiana kolumn w
+   macierzy :math:`\boldsymbol{A}` spowoduje zamiane kolejności
+   elementów poszczególnych jej wierszach. Tak więc aby te same
+   elementy wiersza i kolumny zostały pomnożone, zamieniamy wiersze
+   drugiej macierzy w iloczynie.
+
 Interpretacja tej macierzy jest następująca: każda z kolumn
 :math:`\boldsymbol{B2}` rozwiązuje równanie
 :math:`\boldsymbol{Ax}=0`. Ogólne rozwiązanie problemu jednorodnego

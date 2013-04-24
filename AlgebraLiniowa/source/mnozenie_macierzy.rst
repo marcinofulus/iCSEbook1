@@ -195,8 +195,7 @@ Własności mnożenia macierzy
 #) Mnożenie jest łączne: :math:`\boldsymbol{A} (\boldsymbol{B C}) = (\boldsymbol{A B}) \boldsymbol{C}`.
 #) Mnożenie jest rozdzielne względem dodawania:: :math:`\boldsymbol{A} (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{A B} +\boldsymbol{A C}` oraz :math:`(\boldsymbol{A} + \boldsymbol{B}) \boldsymbol{C} = \boldsymbol{A C} + \boldsymbol{B C}`
 #) Mnożenie nie jest przemienne :math:`\boldsymbol{AB} \neq\boldsymbol{ BA}`. 
-#) Mnożenie macierzy przez liczbę, polegające na pomnożeniu przez
-   skalar wszysktich jej elementów jest przemienne
+#) Mnożenie macierzy przez liczbę :math:`c`, jest równoważne  pomnożeniu jej przez macierz diagonalną z elementami na diagonali równymi :math:`c`. Mnożenie przez taką macierz, jak i mnożenie przez liczbe jest przemienne
    :math:`c\boldsymbol{A}=\boldsymbol{A}c`.
 
 
@@ -369,13 +368,13 @@ warunkiem, że liczby kolumn i wierszy umożliwiają mnożenie. Wykonanie
 mnożenia w powyższy sposób na macierzach gęstych nie pomaga w żaden
 sposób uprościć liczby operacji. Jeżeli jednak pewne podmacierze-bloki
 są zerowe lub macierzami identycznościowymi można wykorzystać równanie
-:eq:`blok1`. 
+:eq:`blok2`. 
 
 Weźmy na przykład sytuacje gdy dwa bloki są zerowe
 (:math:`\mathrm{O}`):
 
 .. math::
-   :label: blok1
+   :label: blok2
 
    \left(\begin{array}{r|r}
     A & \mathrm{O} \\
@@ -395,7 +394,16 @@ Weźmy na przykład sytuacje gdy dwa bloki są zerowe
 
 
 
-W systemie Sage istnieje możliwość wykonywania operacji na  macierzach blokowych:
+.. admonition:: **Poeksperymentuj z Sage**!
+    
+   W systemie Sage istnieje możliwość wykonywania operacji na
+   macierzach blokowych - można poskładać macierz z bloków za pomocą
+   funkcji ``block_matrix``. 
+
+   W poniższym kodzie możemy eksperymentalnie sprawdzić czy
+   rzeczywiście mnożenie macierzy jest dane wzorem
+   :eq:`blok1`. Zachęcamy do eksperymentów z innymi postaciami i
+   wielkosciamy macierzy:
 
 .. sagecellserver::
 

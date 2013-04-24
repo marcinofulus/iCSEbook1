@@ -24,7 +24,7 @@ postaci działania pewnych macierzy na macierz
 
 .. admonition:: **Poeksperymentuj!**
 
-   Sprawdźmy eksperymantalnie jak działa macierz zawierająca tylko
+   Sprawdźmy eksperymentalnie jak działa macierz zawierająca tylko
    jeden element z wartością ``a`` i zera we wszystkich innych
    miejscach np.:
 
@@ -122,7 +122,7 @@ będzie:
 .. admonition:: **Poeksperymentuj!** 
 
    Przekonaj się bezpośrednim rachunkiem na przykładowych macierzach
-   że macierz eq:`el1` jest macierzą odwrotną do :eq:`el_1`:
+   że macierz :eq:`el1` jest macierzą odwrotną do :eq:`el_1`:
 
 
 .. sagecellserver::

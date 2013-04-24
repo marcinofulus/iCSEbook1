@@ -19,7 +19,7 @@ Wolno używać tylko wbudowanych funkcji do operacji na rzędach.
 .. sagecellserver::
 
    n=4
-   A=random_matrix(ZZ,n,algorithm='echelonizable',rank=n)
+   A=random_matrix(QQ,n,algorithm='echelonizable',rank=n)
    rank=A.rank()
    show(A)
 

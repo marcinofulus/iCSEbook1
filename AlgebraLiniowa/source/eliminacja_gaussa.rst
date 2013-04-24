@@ -234,17 +234,21 @@ Ten sam wynik  możemy otrzymać bezpośrednio:
 .. end of output
 
 
-Na uwagę zasługuje pierwsza z nich - zamiana wierszy pierwszego z
-trzecim. Jest ona niezbędna, gdyż w pierwszym wierszu musimy mieć
-niezerowy element by przeprowadzić proces eliminacji. Zamiana wierszy
-jest odpowiednikiem zamiany równań miejscami, co jak wiemy nie zmienia
-wyniku - rozwiązania układu równań, więc jest dopuszczalna.
+Na uwagę zasługuje pierwsza z wykonanych operacji - zamiana wierszy
+pierwszego z trzecim. Jest ona niezbędna, gdyż w pierwszym wierszu
+musimy mieć niezerowy element by przeprowadzić proces
+eliminacji. Zamiana wierszy jest odpowiednikiem zamiany równań
+miejscami, co jak wiemy nie zmienia wyniku - rozwiązania układu
+równań, więc jest dopuszczalna.
 
-Poniżej znajduje się element interaktywny, w którym można popróbować
-samodzielnie procedury eliminacji. Warto też sprawdzić czy ostatnia
-kolumna macierzy po eliminacji jest rzeczywiście rozwiązaniem układu
-równań - w tym celu wystarczy pomnożyć ją przez macierz wyjściową i
-zobaczyć czy wyjdzie lewa strona wyjściowego układu.
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Poniżej znajduje się element interaktywny, w którym można
+   popróbować samodzielnie procedury eliminacji. Warto też sprawdzić
+   czy ostatnia kolumna macierzy po eliminacji jest rzeczywiście
+   rozwiązaniem układu równań - w tym celu wystarczy pomnożyć ją przez
+   macierz wyjściową i zobaczyć czy wyjdzie lewa strona wyjściowego
+   układu.
 
 .. sagecellserver::
 
@@ -274,10 +278,9 @@ układu sprzecznego.
 
 .. code-block:: python
 
-    sage: A=matrix(QQ,[[0,1,0],[0,1,0],[1,2,3]])
-    sage: b= vector(QQ, [1, 0, 1])
-    sage: html.table([['rank(A)=',rank(A)],['rank(A|b)=',rank(A.augment(b))]])
-    sage: A=A.augment(b)
+    sage: A = matrix(QQ,[[0,1,0],[0,1,0],[1,2,3]])
+    sage: b = vector(QQ, [1, 0, 1])
+    sage: A = A.augment(b)
     sage: show(A)
 
 Oczywiście przed wykonaniem operacji eliminacji nie widać tego, że
@@ -657,23 +660,13 @@ Czyli możemy zapisać:
 gdzie :math:`t` i :math:`s` są dowolnymi parametrami.
 
 
-**Ćwiczenie:**
+.. admonition:: **Poeksperymentuj z Sage**! 
 
-Sprawdź bezpośrednim rachunkiem, że dwa ostatnie wektory w równaniu
-:eq:`rref_nieozn2` rzeczywiście spełniają :math:`Ax=0`:
+    Sprawdź bezpośrednim rachunkiem, że dwa ostatnie wektory w
+    równaniu :eq:`rref_nieozn2` rzeczywiście spełniają :math:`Ax=0`:
 
 .. sagecellserver::
 
    A=matrix(QQ,[[0,1,0,1],[0,1,1,0]])
    show(A)
-
-   A = matrix([ [1,3,0,2,-1],[0,0,1,4,-3],[1,3,1,6,-4]])
-   R=A.rref()
-   F = R[:2,[1,3,4]]
-   B1 = block_matrix([ [ identity_matrix(2),F  ],  [ zero_matrix(1,2),  zero_matrix(1,3)]])
-   B2 = block_matrix( [[-F],[identity_matrix(3)]])
-   html.table([[B1,B2,B1*B2]])
-   print latex(B1)
-   print latex(B2)
-   print latex(B1*B2)
 
