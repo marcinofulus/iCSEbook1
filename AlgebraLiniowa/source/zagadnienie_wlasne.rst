@@ -7,7 +7,8 @@ Wektory i wartości własne
 Wartości własne i wektory własne odgrywają zasadniczą rolę w
 rozwiązywaniu równań różniczkowych liniowych, w badaniu ich
 stabilności, w wyznaczaniu stanów stacjonarnych w zagadnieniach
-mechaniki kwantowej oraz w równaniach cząstkowych.
+mechaniki kwantowej.  w równaniach cząstkowych oraz analizie drgań
+własnych.
 
 Dobrym punktem wyjścia do wprowadzenia pojęcia wartości własnej i
 wektora własnego są układy równań różniczkowych liniowych

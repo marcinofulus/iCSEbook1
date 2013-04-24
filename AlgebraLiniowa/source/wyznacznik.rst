@@ -1,10 +1,14 @@
 ﻿Wyznacznik
 ==========
 
+Definicja
+---------
+
+
 Przyjmujemy aksjomatyczną definicję wyznacznika, sformułowaną w
 zapisie kolumnowym macierzy:
 
-.. admonition:: **Definicja  wyznacznika**
+.. admonition:: **Definicja aksjomatyczna wyznacznika**
 
    **Def.** Wyznacznik  stopnia  *n*  jest  funkcją  :math:`\det :M_n (K) \to K`  spełniającą  warunki:
 
@@ -59,8 +63,12 @@ Uwagi:
 	wobec  czego  :math:`\det (\lambda {\boldsymbol{A}}) = \lambda ^n  \cdot \det {\boldsymbol{A}}, \quad n \in \boldsymbol{N}`.
 
 
-**Własności  funkcji  det,  wynikające  z  definicji  (przy założeniu, że funkcja taka istnieje).**
 
+
+Własności  funkcji  det,  wynikające  z  definicji
+--------------------------------------------------
+
+*(przy założeniu, że funkcja taka istnieje)*
 
 I.) :math:`C_j  = \theta \Rightarrow \det (C_{ 1} , \ldots ,C_j , \ldots ,C_n ) = 0, \quad  j = 1,2, \ldots ,n`.
     (jeżeli jakaś kolumna macierzy składa się z samych zer, to wyznacznik znika).
@@ -76,39 +84,47 @@ II.) :math:`\det (C_{ 1} , \ldots ,C_j , \ldots ,C_k , \ldots ,C_n ) =  - \det (
      **Dowód.**  Niech  najpierw  :math:`k = j + 1`  (przestawienie dwóch sąsiednich kolumn).
 
 
-.. math::
+     .. math::
 
-   \begin{array}{*{20}c}
-   j & j + 1 &  &  &  &  \\ 
-   \downarrow & \downarrow &  &  &  &  \\ 
-   \end{array}
-
-
-
-.. math::
-
-   \begin{array}{l}
-   0 = \det (C_{ 1} , \ldots ,C + C',C + C', \ldots ,C_n ) =  \\ 
-   = \det (C_{ 1} , \ldots ,C,C, \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) +  \\ 
-   + \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C',C', \ldots ,C_n ) =  \\ 
-   = \det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n ). \\ 
-   \end{array}
+        \begin{array}{*{20}c}
+        j & j + 1 &  &  &  &  \\ 
+        \downarrow & \downarrow &  &  &  &  \\ 
+        \end{array}
 
 
-:math:`\det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) =  - \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n )`
 
-(przestawienie dwóch sąsiednich kolumn zmienia znak wyznacznika).
-Przestawienie  dowolnych  dwóch  kolumn  o  numerach  j  i  k  jest  złożeniem  nieparzystej  ilości  przestawień  kolumn  sąsiednich,  powoduje  więc  zmianę  znaku  wyznacznika.
+     .. math::
 
-**Wniosek:**  Dla  dowolnej  permutacji  :math:`\sigma  \in \Pi (n)`:
+        \begin{array}{l}
+         0 = \det (C_{ 1} , \ldots ,C + C',C + C', \ldots ,C_n ) =  \\ 
+         = \det (C_{ 1} , \ldots ,C,C, \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) +  \\ 
+         + \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C',C', \ldots ,C_n ) =  \\ 
+         = \det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) + \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n ). \\ 
+        \end{array}
 
-.. math::
 
-   \det (C_{\sigma (1)} ,C_{\sigma (2)} , \ldots ,C_{\sigma (n)} ) = {\mathop{\rm sgn}} \sigma  \cdot \det (C_{ 1} ,C_{ 2} , \ldots ,C_n ),
+     :math:`\det (C_{ 1} , \ldots ,C,C', \ldots ,C_n ) =  - \det (C_{ 1} , \ldots ,C',C, \ldots ,C_n )`
+
+     (przestawienie dwóch sąsiednich kolumn zmienia znak wyznacznika).
+
+     Przestawienie dowolnych dwóch kolumn o numerach j i k jest
+     złożeniem nieparzystej ilości przestawień kolumn sąsiednich,
+     powoduje więc zmianę znaku wyznacznika.
+
+     **Wniosek:**  Dla  dowolnej  permutacji  :math:`\sigma  \in \Pi (n)`:
+
+     .. math::
+
+        \det (C_{\sigma (1)} ,C_{\sigma (2)} , \ldots ,C_{\sigma (n)} ) = {\mathop{\rm sgn}} \sigma  \cdot \det (C_{ 1} ,C_{ 2} , \ldots ,C_n ),
 
 
-gdyż  przejście  od  naturalnego  układu  kolumn  do  układu  określonego  przez  permutację  :math:`\sigma`   wymaga  wykonania  parzystej  (gdy :math:`{\mathop{\rm sgn}} \sigma  =  + 1`)  bądź  nieparzystej  (gdy :math:`{\mathop{\rm sgn}} \sigma  =  - 1`)  ilości  transpozycji,  z  których  każda  zmienia  znak  wyznacznika.
-Jakiekolwiek  przestawienie  kolumn  macierzy  zmienia  co  najwyżej  znak  wyznacznika.
+     gdyż przejście od naturalnego układu kolumn do układu określonego
+     przez permutację :math:`\sigma` wymaga wykonania parzystej (gdy
+     :math:`{\mathop{\rm sgn}} \sigma = + 1`) bądź nieparzystej (gdy
+     :math:`{\mathop{\rm sgn}} \sigma = - 1`) ilości transpozycji, z
+     których każda zmienia znak wyznacznika.
+
+     Jakiekolwiek  przestawienie  kolumn  macierzy  zmienia  co  najwyżej  znak  wyznacznika.
 
 
 III.) :math:`C_j  = C_k \Rightarrow \det (C_{ 1} , \ldots ,C_j , \ldots ,C_k , \ldots ,C_n ) = 0, \quad j < k, \quad j, k = 1,2, \ldots ,n`.
@@ -122,6 +138,7 @@ III.) :math:`C_j  = C_k \Rightarrow \det (C_{ 1} , \ldots ,C_j , \ldots ,C_k , \
 
       **Wniosek 2.**
       :math:`\det (C_{ 1} , \ldots ,C_j , \ldots ,C_k  + \lambda C_j , \ldots ,C_n ) = \det (C_{ 1} , \ldots ,C_j , \ldots ,C_k , \ldots ,C_n ), \quad j < k, \quad j, k = 1,2, \ldots ,n`.
+
       (dodanie do pewnej kolumny innej kolumny pomnożonej przez dowolny skalar nie zmienia wyznacznika).
 
 IV.)  Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K), {\boldsymbol{A}} = (\alpha _{ij} )_{n \times n} , \quad {\boldsymbol{B}} = (\beta _{ij} )_{n \times n}` ,
@@ -129,25 +146,25 @@ IV.)  Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K), {\boldsymbo
 
       **Dowód.**   Niech  :math:`{\boldsymbol{A}} = (C_{ 1} ,C_{ 2} , \ldots ,C_n ),   {\boldsymbol{AB}} = (H_{ 1} ,H_{ 2} , \ldots ,H_n )`     (zapis kolumnowy).   Wtedy
 
-.. math::
+      .. math::
 
-   H_j  = \left( {\begin{array}{*{20}c}
-   {\sum\limits_{s = 1}^n {\alpha _{ 1s} \beta _{sj} } }  \\
-   {\sum\limits_{s = 1}^n {\alpha _{ 2s} \beta _{sj} } }  \\
-   \ldots   \\
-   {\sum\limits_{s = 1}^n {\alpha _{ ns} \beta _{sj} } }  \\
-   \end{array}} \right) = \sum\limits_{s = 1}^n {\left( {\begin{array}{*{20}c}
-   {\alpha _{ 1s} }  \\
-   {\alpha _{ 2s} }  \\
-   \ldots   \\
-   {\alpha _{ns} }  \\
-   \end{array}} \right)} \beta _{sj}  = \sum\limits_{s = 1}^n {\beta _{sj} C_s } ,     j = 1,2, \ldots ,n.
+         H_j  = \left( {\begin{array}{*{20}c}
+         {\sum\limits_{s = 1}^n {\alpha _{ 1s} \beta _{sj} } }  \\
+         {\sum\limits_{s = 1}^n {\alpha _{ 2s} \beta _{sj} } }  \\
+         \ldots   \\
+         {\sum\limits_{s = 1}^n {\alpha _{ ns} \beta _{sj} } }  \\
+         \end{array}} \right) = \sum\limits_{s = 1}^n {\left( {\begin{array}{*{20}c}
+         {\alpha _{ 1s} }  \\
+         {\alpha _{ 2s} }  \\
+         \ldots   \\
+         {\alpha _{ns} }  \\
+         \end{array}} \right)} \beta _{sj}  = \sum\limits_{s = 1}^n {\beta _{sj} C_s } ,     j = 1,2, \ldots ,n.
 
 
-\ 
-      **Ogólna  własność  mnożenia  macierzowego:** *j*-ta  kolumna  macierzy  :math:`AB`  jest  kombinacją  liniową  kolumn  macierzy  :math:`A`,  o  współczynnikach  z  *j*-tej  kolumny  macierzy  :math:`B \quad  (j = 1,2, \ldots ,n)`.
+ 
+**Ogólna  własność  mnożenia  macierzowego:** *j*-ta  kolumna  macierzy  :math:`AB`  jest  kombinacją  liniową  kolumn  macierzy  :math:`A`,  o  współczynnikach  z  *j*-tej  kolumny  macierzy  :math:`B \quad  (j = 1,2, \ldots ,n)`.
 
-      Wobec  tego
+Wobec  tego
 
 .. math::
 
@@ -157,8 +174,13 @@ IV.)  Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K), {\boldsymbo
    \end{array}
 
 
-\ 
-      Różne  od  zera  mogą  być  tylko  te  składniki,  w  których  kolumny  :math:`C_{s_1 } ,C_{s_2 } , \ldots ,C_{s_n }` mają  różne  wskaźniki,  czyli  te,  dla  których  układ  wartości  wskaźników  :math:`s_{ 1} ,s_{ 2} , \ldots ,s_{ n}`   jest  permutacją  zbioru  :math:`\{ 1,2, \ldots ,n\}` . Sumowanie  przebiega  więc  po  permutacjach  zbioru  :math:`\{ 1,2, \ldots ,n\}` :
+ 
+Różne od zera mogą być tylko te składniki, w których kolumny
+:math:`C_{s_1 } ,C_{s_2 } , \ldots ,C_{s_n }` mają różne wskaźniki,
+czyli te, dla których układ wartości wskaźników :math:`s_{ 1} ,s_{ 2}
+, \ldots ,s_{ n}` jest permutacją zbioru :math:`\{ 1,2, \ldots ,n\}`
+. Sumowanie przebiega więc po permutacjach zbioru :math:`\{ 1,2,
+\ldots ,n\}` :
 
 .. math::
 
@@ -168,10 +190,11 @@ IV.)  Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K), {\boldsymbo
    \end{array}
 
 
-\ 
-      Kładąc  :math:`{\boldsymbol{A}} = {\boldsymbol{I}}`  otrzymujemy
+ 
+Kładąc  :math:`\boldsymbol{A} = \boldsymbol{I}`  otrzymujemy
 
-      **Wniosek:**   Jeżeli  funkcja  det,  określona  przez  postulaty  1. –  4.   istnieje,  to
+
+**Wniosek:**   Jeżeli  funkcja  det,  określona  przez  postulaty  1. –  4.   istnieje,  to
 
 .. math::
 
@@ -180,11 +203,15 @@ IV.)  Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K), {\boldsymbo
 
 Można  sprawdzić  (patrz np.: B. Gleichgewicht, Algebra),  że  funkcja  określona  powyższym  wzorem  spełnia  wymienione  postulaty,  co  dowodzi  istnienia  funkcji  det.
 
+
+Jawna postać wyznacznika
+------------------------
+
 .. admonition:: **Twierdzenie** 
 
    Istnieje dokładnie jedna funkcja :math:`\det :M_n (K) \to K`,
-        spełniająca warunki 1. – 4.  Mianowicie, dla macierzy
-        :math:`{\boldsymbol{A}} = (\alpha _{ij} )_{n \times n}` :
+   spełniająca warunki 1. – 4.  Mianowicie, dla macierzy
+   :math:`{\boldsymbol{A}} = (\alpha _{ij} )_{n \times n}` :
 
    .. math::
 
@@ -192,7 +219,12 @@ Można  sprawdzić  (patrz np.: B. Gleichgewicht, Algebra),  że  funkcja  okre�
 
 
 Z  własności  IV  wynika  ponadto
-**Tw.**  (Cauchy):   Jeżeli  :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K)`,   to   :math:`\det ({\boldsymbol{AB}}) = \det {\boldsymbol{A}} \cdot \det {\boldsymbol{B}}`.
+
+**Tw.**  (Cauchy):   
+
+Jeżeli :math:`{\boldsymbol{A}},{\boldsymbol{B}} \in M_n (K)`, to
+:math:`\det ({\boldsymbol{AB}}) = \det {\boldsymbol{A}} \cdot \det
+{\boldsymbol{B}}`.
 
 
 **Transpozycja  macierzy.**
@@ -257,11 +289,17 @@ Uzasadnienie  przekształceń:
 (3): :math:`\{ \rho ^{ - 1} :\rho   \in \Pi (n)\}  = \Pi (n) = \{ \sigma :\sigma   \in \Pi (n)\}` .
 
 
-**Wniosek:**  Każde  twierdzenie  dotyczące  wyznaczników  pozostaje  słuszne,  jeżeli  słowa  "kolumna"  zamienić  na  "wiersz"  i  odwrotnie.  W  szczególności,  samą  definicję  wyznacznika  można  podać  
-w  terminach  wierszy,  dochodząc  do  wzoru
+.. admonition:: **Wniosek:**  
 
-.. math::
+   Każde twierdzenie dotyczące wyznaczników pozostaje słuszne, jeżeli
+   słowa "kolumna" zamienić na "wiersz" i odwrotnie.  W szczególności,
+   samą definicję wyznacznika można podać w terminach wierszy,
+   dochodząc do wzoru
 
-   \det {\boldsymbol{A}} = \sum\limits_{\sigma  \in \Pi (n)} {{\mathop{\rm sgn}} \sigma  \cdot \alpha _{ 1,\sigma (1)} \alpha _{ 2,\sigma (2)}  \ldots \alpha _{ n,\sigma (n)} } .
+   .. math::
+
+      \det {\boldsymbol{A}} = \sum\limits_{\sigma \in \Pi (n)}
+      {{\mathop{\rm sgn}} \sigma \cdot \alpha _{ 1,\sigma (1)} \alpha
+      _{ 2,\sigma (2)} \ldots \alpha _{ n,\sigma (n)} } .
 
 
