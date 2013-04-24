@@ -171,6 +171,7 @@ wyrazy pod sumą można przestawiać, z tym że należy uważać by nie
 Wyrażenie w nawiasie można potraktować jako element pewnej macierzy :math:`\boldsymbol{C}` 
 
 .. math::
+   :label: mnozenie_def
 
    (\boldsymbol{C})_{kj} = \sum_{i=1}^{i=n} \beta_{ki} \alpha_{ij} 
 
@@ -180,9 +181,20 @@ Biorąc pod uwagę punkt wyjścia równości :eq:`BA1` powyższy wzór definiuje
 
     \boldsymbol{C} = \boldsymbol{BA}
 
+Wzór ten przyjmujemy za definicje mnożenia macierzy (przynajmniej tych kwadratowych).
+
 
 Mnożenie macierzy prostokątnych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zauważmy, że mnożenie zdefiniowane wzorem :eq:`mnozenie_def` będzie
+można wykonać jeśli dopiszemy do pierwszej macierzy dodatkowy wiersz a
+do drugiej dodaktową kokumnę. Analizując definicję :eq:`mnozenie_def`
+można dojść do wniosku, że wzór będzie poprawny dla dowolnych macierzy
+prostokątnych, pod warunkiem, że liczba kolumn pierwszej będzie równa
+liczbie rzędów drugiej. 
+
+
 
 
 

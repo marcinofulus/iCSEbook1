@@ -79,7 +79,7 @@ Rozważany układ równań
 .. MATH::
 
     \begin{cases}
-    2 \, x_{1} - x_{2} &=& 1\\  x_{1} + x_{2} &=& 5 
+    2 \, x_{1} - x_{2} = 1\\  x_{1} + x_{2} = 5 
     \end{cases}
 
 
@@ -87,20 +87,24 @@ można zapisać jako działania na wektorach kolumnowych:
 
 .. MATH::
 
-      \;\left [ \begin{array}  2 x_1\\x_1\end{array}\right ] +  \left [\begin{array}-x_2 \\x_2\end{array}\right ] = \left [\begin{array} a1 \\5\end{array}\right ],
+      \;\left [ \begin{array}{r}  2 x_1\\x_1\end{array}\right ] +  \left [\begin{array}{r}-x_2 \\x_2\end{array}\right ] = \left [\begin{array}{r} 1 \\5\end{array}\right ],
 
 
 czyli:
 
 .. MATH::
 
-     x_1 \left [\begin{array}2 \\1\end{array}\right ] + x_2 \left [\begin{array}-1 \\1\end{array}\right ] = \left [\begin{array}1 \\5\end{array}\right ]
+     x_1 \left [
+     \begin{array}{r}
+      2 \\
+      1
+      \end{array}\right ] + x_2 \left [\begin{array}{r}-1 \\1\end{array}\right ] = \left [\begin{array}{r}1 \\5\end{array}\right ]
 
 
 Interpretacja takiego zapisu jest następująca: dla jakich wartości
-liczb :math:`x_{1},x_{2}`, suma ważona wektorów :math:`\left [\begin{array}2
-\\1\end{array}\right ]` i :math:`\left [\begin{array}-1 \\1\end{array}\right ]` jest równa
-wektorowi :math:`\left [\begin{array}1 \\5\end{array}\right ].`
+liczb :math:`x_{1},x_{2}`, suma ważona wektorów :math:`\left [\begin{array}{r}2
+\\1\end{array}\right ]` i :math:`\left [\begin{array}{r}-1 \\1\end{array}\right ]` jest równa
+wektorowi :math:`\left [\begin{array}{r}1 \\5\end{array}\right ].`
 
 
 Geometrycznie można to przedstawić w następujący sposób:
@@ -135,7 +139,8 @@ Znamy odpowiedź \- liczbami tymi są 2 i 3, ale zobaczmy jak to działa.
 
 
 
-.. admonition:: **Poeksperymentuj!**
+
+.. admonition:: **Poeksperymentuj z Sage**!
 
    W poniższym elemencie interaktywnym rysujemy grubą linią wektory
    :math:`v_1` :math:`v_2` kolorem niebieskim a pożądaną wartość ich
@@ -190,7 +195,10 @@ opisuje płaszczyznę. Rozwiązaniem układu równań będzie więc miejsce
 przecięcia się trzech płaszczyzn:
 
 
-.. admonition::  Wykonaj poniższy kod by zobaczyć wykres.
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykonaj poniższy kod by zobaczyć wykres.
+
 
 .. sagecellserver::
 
@@ -229,18 +237,17 @@ przecięcia się trzech płaszczyzn:
 Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Weżmy układ równań:
+Weźmy układ równań:
 
 
 .. MATH::
 
-   \begin{cases}
-      2 \, x_{1} + x_{2} + x_{3} = 4\\
-      x_{1} + 1/2 x_{2} +1/2 x_3= 2\\
-       x_{1} + x_{2} + 2 \, x_{3} = 3
-   \end{cases}
+   \begin{array}{rrrr}
+      2  x_{1} + &x_{2} +    &  x_{3}  =& 4\\
+         x_{1} + &\frac{1}{2}  x_{2} +& \frac{1}{2}  x_3    =& 2\\
+         x_{1} + &x_{2} +  &2   x_{3}  =& 3
+   \end{array}
 
-.. end of output
 
 Procedura solve daje w wyniku następujące równanie:
 
@@ -256,7 +263,12 @@ Zobaczmy co to oznacza geometrycznie. W interpretacji "wierszowej"
 rozwiązaniem jest wspólna część trzech płaszczyzn. Narysujmy je w tym
 przypadku:
 
-.. admonition::  Wykonaj poniższy kod by zobaczyć wykres.
+
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykonaj poniższy kod by zobaczyć wykres.
+
+   
 
 .. sagecellserver::
 
@@ -298,6 +310,11 @@ Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
 
 
 Układ ten nie ma rozwiązań. Zobaczmy co to oznacza w interpretacji wierszowej i kolumnowej.
+
+
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Wykonaj poniższy kod by zobaczyć wykres.
 
 
 .. sagecellserver::
