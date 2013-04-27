@@ -167,6 +167,15 @@ Zagadnienie własne i jego zastosowania.
 
    zagadnienie_wlasne
 
+Zadania
+=======
+
+.. toctree::
+   :maxdepth: 1
+
+   zadania_01
+
+
 
 
 dodatek
@@ -176,7 +185,8 @@ dodatek
    :maxdepth: 2
    :glob:
    
-   JA_orig/macierze/* 
-   JA_orig/wyznaczniki/*
-   JA_orig/problemy_liniowe/* 
-   Rudnicki_orig/*
+    JA_orig/macierze/* 
+    JA_orig/wyznaczniki/*
+    JA_orig/problemy_liniowe/* 
+    JA_orig/odwzorowania_liniowe/* 
+    Rudnicki_orig/*
