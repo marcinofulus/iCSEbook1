@@ -245,7 +245,7 @@ Weźmy układ równań:
    \begin{array}{rrrr}
       2  x_{1} + &x_{2} +    &  x_{3}  =& 4\\
          x_{1} + &\frac{1}{2}  x_{2} +& \frac{1}{2}  x_3    =& 2\\
-         x_{1} + &x_{2} +  &2   x_{3}  =& 3
+         x_{1} + & +  &2   x_{3}  =& 3
    \end{array}
 
 

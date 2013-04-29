@@ -17,6 +17,24 @@
 
 {% extends "basic/layout.html" %}
 
+{%- macro sidebar() %}
+      {%- if render_sidebar %}
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            {%- block sidebartoc %}
+            {%- include "localtoc.html" %}
+            {%- endblock %}
+            {%- if customsidebar %}
+            {%- include customsidebar %}
+            {%- endif %}
+            {%- block sidebarsearch %}
+            {%- include "searchbox.html" %}
+            {%- endblock %}
+        </div>
+      </div>
+      {%- endif %}
+{%- endmacro %}
+
 {% set reldelim2 = reldim2 is not defined and ' &nbsp; &nbsp;' or reldelim2 %}
 
 {# add script file to instrument collapsable sections  and other features #}
@@ -77,8 +95,23 @@ if(ga_enabled){
         {%- endif %}
 {%- endblock %}
 
-{% block footer -%}
-    {{ super() }}
+{%- block footer %}
+    <div class="footer">
+    <a class="logo" href="http://icse.us.edu.pl/" target="_blank"><img src="_static/logo-icse.png" alt="ICSE"/></a><br/>
+    {%- if show_copyright %}
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+      {%- endif %}
+    {%- endif %}
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+    {%- endif %}
+    {%- if show_sphinx %}
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+    {%- endif %}
+    </div>
     {%- if theme_googleanalytics_id -%}
 <script type="text/javascript">
     if(ga_enabled){
@@ -91,5 +124,4 @@ if(ga_enabled){
     };
 </script>
     {%- endif %}
-    <!-- cloud_sptheme 1.4 -->
 {%- endblock %}

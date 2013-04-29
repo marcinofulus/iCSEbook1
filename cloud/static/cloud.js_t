@@ -121,7 +121,7 @@ $(document).ready(function (){
 
   var show_btn = $('#sidebar-show', holder);
   var hide_btn = $('#sidebar-hide', holder);
-  var copts = { expires: 7, path: DOCUMENTATION_OPTIONS.url_root };
+  var copts = { expires: 7, path: DOCUMENTATION_OPTIONS.URL_ROOT };
 
   show_btn.click(function (){
     doc.removeClass("collapsed-sidebar");
@@ -175,21 +175,23 @@ $(document).ready(function (){
   // getBoundClientRect is always viewport-relative.
   function left_offset($node){ return $node[0].getBoundingClientRect().left; }
   function top_offset($node){ return $node[0].getBoundingClientRect().top; }
+	if($(window).width() > 960 ) {
+		  // function to set style for given state
+	  function set_style(target, value, adjust)
+	  {
+	    if(value <= adjust || sticky_disabled){
+	      target.css({marginLeft: "", position: "", top: "", left: "", bottom: ""});
+	    }
+	    else if (value <= holder.height() - target.height() + adjust){
+	      target.css({marginLeft: 0, position: "fixed", top: -adjust,
+	                 left: left_offset(holder), bottom: ""});
+	    }
+	    else{
+	      target.css({marginLeft: 0, position: "absolute", top: "", left: 0, bottom: 0});
+	    }
+	  }
+	}
 
-  // function to set style for given state
-  function set_style(target, value, adjust)
-  {
-    if(value <= adjust || sticky_disabled){
-      target.css({marginLeft: "", position: "", top: "", left: "", bottom: ""});
-    }
-    else if (value <= holder.height() - target.height() + adjust){
-      target.css({marginLeft: 0, position: "fixed", top: -adjust,
-                 left: left_offset(holder), bottom: ""});
-    }
-    else{
-      target.css({marginLeft: 0, position: "absolute", top: "", left: 0, bottom: 0});
-    }
-  }
 
   // func to update sidebar position based on scrollbar & container positions
   function update_sticky(){

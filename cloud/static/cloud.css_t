@@ -214,13 +214,20 @@ div.sphinxsidebar input
     font-size: 1em;
 }
 
-div#searchbox input[type="submit"]
+.document div#searchbox input[type="submit"]
 {
    border-radius: .7em;
    -webkit-border-radius: .7em ;
    -moz-border-radius: .7em;
    padding: 3px;
    cursor: pointer;
+   width: 70px;
+}
+
+@media only screen and (min-width: 960px) {
+	.document  div#searchbox input[type="submit"] {
+		display: block;
+	}
 }
 
 div.sphinxsidebar input[type="submit"]:hover
@@ -330,6 +337,11 @@ div.footer + div.footer,
 div.footer + script + div.footer
 {
     margin-top: -12px;
+}
+
+div.footer .logo {
+	display: block;
+	margin: 10px auto 0;
 }
 
 /*****************************************************
@@ -1004,6 +1016,7 @@ table.indextable td > dl > dd > dl
 
     /* hide extra info */
     div.admonition.floater { display: none; }
+    
 }
 
 /*------------------------------------
@@ -1058,6 +1071,54 @@ table.indextable td > dl > dd > dl
     div.body h3 { font-size: 120%; }
     div.body h4 { font-size: 110%; }
     div.body h5 { font-size: 100%; }
+}
+
+@media only screen and (max-width: 960px) {
+	.relbar-top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+	
+	div.document {
+		margin: 0 auto;
+	}
+	
+	 .document .sidebartoggle,
+	 .document #sidebar-hide,
+	 .document #sidebar-show{
+		position: fixed;
+		top: 3px;
+		left: 5px;
+		z-index: 999;
+	}
+	.document .sphinxsidebar {
+			background: #FFF;
+			position: fixed;
+			width: 100%;
+			z-index: 999;
+			top: 30px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			margin: 0;
+	}
+	
+	.section {
+		padding-top: 30px;
+	}
+	
+	.section h1 {
+		padding-top: 15px;
+	}
+	
+	div.document.collapsed-sidebar div.sphinxsidebar {
+		display: none;
+	}
+
 }
 
 /*------------------------------------

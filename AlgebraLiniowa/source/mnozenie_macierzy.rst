@@ -13,10 +13,10 @@ Układ równań :math:`n\times n`:
    :label: ukl1
 
    \begin{cases}
-   \alpha_{11} x_1+ & \alpha_{12} x_2+ & \ldots & \alpha _{1n} x_n &=& b_1 \\
-   \alpha_{21} x_1+ & \alpha_{22} x_2+ & \ldots & \alpha _{2n} x_n &=& b_2 \\
-   \ldots       & \ldots       & \ldots & \ldots       \\
-   \alpha_{n1} x_1+ & \alpha_{n2} x_2+ & \ldots & \alpha _{nn} x_n &=& b_n \\
+   \alpha_{11} x_1+  \alpha_{12} x_2+  \ldots  \alpha _{1n} x_n =& b_1 \\
+   \alpha_{21} x_1+  \alpha_{22} x_2+  \ldots  \alpha _{2n} x_n =& b_2 \\
+   \ldots         &\ldots       \\
+   \alpha_{n1} x_1+  \alpha_{n2} x_2+  \ldots  \alpha _{nn} x_n =& b_n \\
    \end{cases}
 
 
