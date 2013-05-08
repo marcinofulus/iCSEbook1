@@ -154,6 +154,7 @@ rozwiązywanie układu równań liniowych oraz macierz odwrotą.
    :maxdepth: 1
 
    wyznacznik
+   wyznacznik_zastosowania
 
               
 
@@ -167,8 +168,11 @@ Zagadnienie własne i jego zastosowania.
 
    zagadnienie_wlasne
 
+
 Zadania
 =======
+
+W tej sekcji znajdują się zadania obowiązujące na zaliczenie i egzamin.
 
 .. toctree::
    :maxdepth: 1
@@ -178,16 +182,4 @@ Zadania
 
 
 
-dodatek
-=======
-
-.. toctree::
-   :maxdepth: 2
-   :glob:
-   
-   JA_orig/macierze/* 
-   JA_orig/wyznaczniki/*
-   JA_orig/problemy_liniowe/* 
-   JA_orig/odwzorowania_liniowe/* 
-   JA_orig/zmiana_bazy/*
-    Rudnicki_orig/*
+.. .. include:: orginaly.rst

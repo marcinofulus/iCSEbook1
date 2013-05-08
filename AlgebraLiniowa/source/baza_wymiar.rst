@@ -10,3 +10,8 @@ Baza i wymiar
 
     Wymiar przestrzeni liniowej jest równy Liczbie wektorów jej dowolnej bazy.
 
+
+Zmiana bazy
+-----------
+
+Dany jest wektor :math:`v` i mamy jego współrzędne w pewnej  bazie. Roz
