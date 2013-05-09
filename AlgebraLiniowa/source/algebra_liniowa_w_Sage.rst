@@ -1,4 +1,4 @@
- Algebra liniowa w Sage
+Algebra liniowa w Sage
 ======================
 
 

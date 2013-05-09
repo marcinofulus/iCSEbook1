@@ -31,6 +31,17 @@ Kinematyka
    zachowanie_energii
 
 
+
+Dynamika z więzami
+==================
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   sws/MMK*
+
    
 Dodatek
 =======
