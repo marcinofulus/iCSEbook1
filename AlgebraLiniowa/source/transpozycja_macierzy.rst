@@ -61,7 +61,7 @@ nazywamy macierz :math:`\boldsymbol{A_T}`:
 I. Porównanie  wymiarów.
 
 .. math::
-   \begin{array}{l}
+   \begin{array}{cc}
    \boldsymbol{A} \boldsymbol{B} \in M_{m \times n} (\boldsymbol{K}), & \boldsymbol{B} ^T \in M_{n \times p} (\boldsymbol{K}), \quad \boldsymbol{A} ^T \in M_{p \times m} (\boldsymbol{K}), \\ 
    (\boldsymbol{A} \boldsymbol{B}) ^T \in M_{n \times m} (\boldsymbol{K}). & \boldsymbol{B} ^T \boldsymbol{A} ^T \in M_{n \times m} (\boldsymbol{K}). \\ 
    \end{array}

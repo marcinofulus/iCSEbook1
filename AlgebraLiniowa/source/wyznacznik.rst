@@ -168,7 +168,7 @@ Wobec  tego
 
 .. math::
 
-   \begin{array}{l}
+   \begin{array}{cc}
    \det ({\boldsymbol{AB}}) = \det (H_{ 1} ,H_{ 2} , \ldots ,H_n ) & = \det \left( {\sum\limits_{s_1  = 1}^n {\beta _{s_1 ,1} C_{s_1 } ,\sum\limits_{s_2  = 1}^n {\beta _{s_2 ,2} } } C_{s_2 } , \ldots ,\sum\limits_{s_n  = 1}^n {\beta _{s_n ,n} C_{s_n } } } \right) =  \\ 
      & = \sum\limits_{s_1  = 1}^n {\sum\limits_{s_2  = 1}^n { \ldots \sum\limits_{s_n  = 1}^n  } } \beta _{s_1 ,1} \beta _{s_2 ,2}  \ldots \beta _{s_n ,n} \det \left( {C_{s_1 } ,C_{s_2 } , \ldots ,C_{s_n } } \right) \\ 
    \end{array}
@@ -184,7 +184,7 @@ czyli te, dla których układ wartości wskaźników :math:`s_{ 1} ,s_{ 2}
 
 .. math::
 
-   \begin{array}{l}
+   \begin{array}{cc}
    \det ({\boldsymbol{AB}}) & = \sum\limits_{\sigma  \in \Pi (n)} {\beta _{\sigma (1),1} } \beta _{\sigma (2),2}  \ldots \beta _{\sigma (n),n} \det \left( {C_{\sigma (1)} ,C_{\sigma (2)} , \ldots ,C_{\sigma (n)} } \right) =  \\ 
      & = \det {\boldsymbol{A}} \cdot \sum\limits_{\sigma  \in \Pi (n)} {{\mathop{\rm sgn}} \sigma  \cdot \beta _{\sigma (1),1} } \beta _{\sigma (2),2}  \ldots \beta _{\sigma (n),n} . \\ 
    \end{array}
@@ -266,7 +266,7 @@ np.
 
 .. math::
 
-   \begin{array}{l}
+   \begin{array}{cc}
    \det {\boldsymbol{A}}^{\rm{T}} & = \sum\limits_{\rho  \in \Pi (n)} {{\mathop{\rm sgn}} \rho  \cdot \alpha _{\rho (1),1}^{\rm{T}} \alpha _{\rho (2),2}^{\rm{T}}  \ldots \alpha _{\rho (n),n}^{\rm{T}} }  =  \\ 
      &  = \sum\limits_{\rho  \in \Pi (n)} {{\mathop{\rm sgn}} \rho  \cdot \alpha _{1,\rho (1)} \alpha _{2,\rho (2)}  \ldots \alpha _{n,\rho (n)} }  =  \\ 
      &  = \sum\limits_{\rho  \in \Pi (n)} {{\mathop{\rm sgn}} \rho  \cdot \alpha _{\rho ^{ - 1} [\rho (1)],\rho  (1)} \alpha _{\rho ^{ - 1} [\rho (2)],\rho (2)}  \ldots \alpha _{\rho ^{ - 1} [\rho (n)],\rho (n)} }  =  \\ 
