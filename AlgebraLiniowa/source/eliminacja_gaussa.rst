@@ -445,9 +445,9 @@ Najlepiej powrócić do klasycznego zapisu układu równań:
    :label: rref_nieozn
 
     \begin{cases}
-    1 x_1 + 0 x_2 +3 x_3 &=& -1 \\
-    0 x_1 + 1 x_2 +0 x_3&=& 1 \\
-    0 x_1 + 0 x_2 +0 x_3&=& 0
+    1 x_1 + 0 x_2 +3 x_3 = -1 \\
+    0 x_1 + 1 x_2 +0 x_3 = 1 \\
+    0 x_1 + 0 x_2 +0 x_3 = 0
     \end{cases}
 
 Widzimy, że :math:`x_3` może przyjmować dowolne wartości. Traktując
@@ -458,9 +458,9 @@ z :math:`x_3` na prawą stronę:
    :label: rref_nieozn
 
     \begin{cases}
-    1 x_1 + 0 x_2   &=& -1 -3 x_3\\
-    0 x_1 + 1 x_2   &=&  1 - 0 x_3\\
-    0   &=&  0 
+    1 x_1 + 0 x_2   = -1 -3 x_3\\
+    0 x_1 + 1 x_2   =  1 - 0 x_3\\
+    0   =  0 
     \end{cases}
 
 Zastąpmy jeszcze ostatnie równanie przez tożsamość :math:`x_3 = x_3`
@@ -469,9 +469,9 @@ Zastąpmy jeszcze ostatnie równanie przez tożsamość :math:`x_3 = x_3`
    :label: rref_nieozn2
 
     \begin{cases}
-    1 x_1 + 0 x_2   &=& -1 -3 x_3\\
-    0 x_1 + 1 x_2   &=&  1 - 0 x_3\\
-    x_3   &=&  x_3
+    1 x_1 + 0 x_2   = -1 -3 x_3\\
+    0 x_1 + 1 x_2   =  1 - 0 x_3\\
+    x_3   =  x_3
     \end{cases}
 
 Czyli możemy zapisać:
