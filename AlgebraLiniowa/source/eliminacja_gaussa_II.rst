@@ -239,7 +239,7 @@ rozszerzonej. Weżmy na przykład
 .. MATH::
     :label: aug_rref
 
-    \left(\begin{array}{rrrrr}
+    \left(\begin{array}{cccccc}
     \boxed{1} & 3 & 0 & 2 & -1&2 \\
     0 & 0 & \boxed{1} & 4 & -3&2 \\
     0 & 0 & 0 & 0 & 0&0

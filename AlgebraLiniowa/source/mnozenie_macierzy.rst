@@ -225,7 +225,7 @@ Oznaczmy :math:`\boldsymbol{AB} = \boldsymbol{C} = (\boldsymbol{C}_1 , \boldsymb
 
 .. math::
 
-   \begin{array}{l}
+   \begin{array}{cc}
    & \gamma _{1j} = \sum_{s=1}^n {\alpha _{1s} \beta _{sj} = \alpha _{11} \beta _{1j} + \alpha _{12} \beta _{2j} + \ldots  + \alpha _{1n} \beta _{nj}} \\ 
    & \gamma _{2j} = \sum_{s=1}^n {\alpha _{2s} \beta _{sj} = \alpha _{21} \beta _{1j} + \alpha _{22} \beta _{2j} + \ldots + \alpha _{2n} \beta _{nj}} \\ 
    & \ldots  \\ 
