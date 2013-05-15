@@ -40,7 +40,10 @@ Dynamika z więzami
    :maxdepth: 1
    :glob:
 
-   sws/MMK*
+   zasada_dAlemberta
+   zasada_dAlembertaCAS
+   zasada_dAlembertaCAS_przyklady
+
 
    
 Dodatek
