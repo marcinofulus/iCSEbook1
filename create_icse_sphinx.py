@@ -61,12 +61,12 @@ class SphinxConf(object):
 
 if __name__ == "__main__":
     print ""
-    project_name = raw_input("Nazwa projektu? : ")
-    author = raw_input("Autor? : ")
-    year = raw_input("Rok? : ")
+    project_name = raw_input("Nazwa projektu : ")
+    author = raw_input("Autor : ")
+    year = raw_input("Rok : ")
 
     while (True):
-        directory_name = raw_input("Nazwa katalogu? : ")
+        directory_name = raw_input("Nazwa katalogu : ")
         if not os.path.isdir(directory_name):
             break
         else:
