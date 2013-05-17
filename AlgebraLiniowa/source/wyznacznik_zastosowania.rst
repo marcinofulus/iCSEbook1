@@ -4,7 +4,7 @@ Zastosowania wyznacznika
 Wzory Cramera
 -------------
 
-Wzory Cramera są jawną postacią rozwiązania nijednorodnego układu
+Wzory Cramera są jawną postacią rozwiązania niednorodnego układu
 równań liniowych w przypadku gdy macierz układu jest
 nieosobliwa. Wzory te maja praktyczne zastosowanie w przypadku małych
 układów równań. Zaletą tego podejścia jest jawna postać wzorów.
@@ -48,7 +48,7 @@ odwrotną macierzy :math:`A`:
 
 .. math::
 
-   (A^{-1})_{ij} = \frac{M_{ij}}{\det(A)}
+   (A^{-1})_{ij} = (-1)^{i+j}\frac{M_{ji}}{\det(A)}
 
 gdzie M jest :math:`ij` -tym minorem macierzy :math:`A`. 
 

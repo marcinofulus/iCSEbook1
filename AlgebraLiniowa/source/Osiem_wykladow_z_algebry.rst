@@ -26,6 +26,7 @@ Wykład I:  Układy równań liniowych - eliminacja Gaussa
    Algebra liniowa - dział algebry zajmujący się badaniem przestrzeni
    liniowych i przekształceń liniowych.
 
+
 Układy równań liniowych, metoda eliminacji, przykłady osobliwe,
 interpretacja geometryczna, 
 
