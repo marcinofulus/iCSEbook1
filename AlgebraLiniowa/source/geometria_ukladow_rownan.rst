@@ -191,8 +191,8 @@ Wektory :math:`\ v_1,\,v_2,\,v_3,\;` występujące po lewej stronie kolumnowej p
 są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim; wektor wolnych wyrazów :math:`\,w\;` jest szary.
 
 .. admonition:: **Poeksperymentuj z Sage**
-
-   Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+   
+   | Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
 
 .. sagecellserver::
 
@@ -255,8 +255,8 @@ Mamy więc faktycznie układ dwóch niezależnych równań o trzech niewiadomych
 Podany niżej kod wyświetla wierszową i kolumnową interpretację geometryczną tego układu.
 
 .. admonition:: **Poeksperymentuj z Sage**
-
-   Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+   
+   | Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
    
 .. sagecellserver::
 
