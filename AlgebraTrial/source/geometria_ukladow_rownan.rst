@@ -4,11 +4,13 @@ Geometria układów równań liniowych
 ----------------------------------
 
 Interpretacja "wierszowa"
-.........................
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy układ dwóch równań liniowych:
 
-:math:`\qquad\qquad\begin{cases} \ 2\,x_1 - x_2\ =\ 1 \\ \quad x_1 + x_2\ =\ 5 \end{cases}`
+:math:`\qquad\qquad \begin{cases} \begin{alignat*}{3}
+\ 2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
+\end{alignat*} \end{cases}`
    
 Rozwiązaniem są liczby :math:`\ x_1=2\ \; \text{i} \ \; x_2=3\,,\:` 
 co łatwo sprawdzić ręcznie lub komputerowo:
@@ -23,7 +25,7 @@ co łatwo sprawdzić ręcznie lub komputerowo:
    show(solve([eq1,eq2],[x1,x2]))
    
 | Każde z równań przedstawia prostą na płaszczyźnie :math:`(x_1,x_2).`
-|  
+  
 | Obrazem rozwiązania układu jest punkt leżący na obydwu prostych jednocześnie,
 | czyli punkt przecięcia się tych dwóch prostych (o ile proste się przecinają):
 
@@ -43,15 +45,16 @@ Wtedy odpowiednio układ dwóch równań:
 #. nie ma żadnych rozwiązań (układ jest sprzeczny).
 
 Interpretacja "kolumnowa"
-.........................
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważany układ równań
 
 .. math::
    
-   \begin{cases}
-   \ 2\,x_1 - x_2\ =\ 1 \\ \quad x_1 + x_2\ =\ 5 
-   \end{cases}
+   \begin{cases} \begin{alignat*}{3}
+   \  2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\
+         x_1 & {\,} + {\,} & x_2 & {\;} = {\;} & 5
+   \end{alignat*} \end{cases}
 
 można zapisać przy użyciu działań na wektorach kolumnowych:
 
@@ -71,12 +74,12 @@ czyli:
 
 .. sidebar:: Kombinacja liniowa:
 
-   Kombinacja liniowa wektorów :math:`\ v_1\ \text{i}\ \, v_2\ `
-   o współczynnikach liczbowych :math:`x_1\ \text{i} \ \, x_2\,` jest z definicji
-   ich "sumą ważoną" postaci :math:`\ x_1 v_1 + x_2 v_2\,.` 
+   | Kombinacja liniowa wektorów :math:`\ v_1\ \text{i}\ \, v_2\ `
+   | o współczynnikach liczbowych :math:`x_1\ \text{i} \ \, x_2\,` 
+   | jest z definicji ich "sumą ważoną" postaci :math:`\ x_1 v_1 + x_2 v_2\,.` 
 
 | Interpretacja takiego zapisu jest następująca:
-|  
+  
 | dla jakich współczynników :math:`\;x_{1},x_{2}\;` kombinacja liniowa wektorów
 |  
 | :math:`\;v_1=\left[ \begin{array}{r} 2 \\ 1 \end{array} \right]\;` i 
@@ -117,11 +120,11 @@ liczbę równań, rozważmy teraz układ trzech równań o trzech niewiadomych:
 
 .. math::
 
-   \begin{cases}
-   \ 2\,x_1 + x_2 \ +\ x_3\ \ =\ \ \, 1 \\
-   \quad x_1 - x_2 \qquad\quad\: = -1 \\
-   \quad x_1 + x_2 + 2\,x_3 \; =\ \ \; 2 
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   \  2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+         x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
+         x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 
+   \end{alignat*}\end{cases}
 
 Ma on rozwiązanie w punkcie :math:`\ x_1 = -\frac{1}{4},\ x_2 = \frac{3}{4},\ x_3 = \frac{3}{4}\,.`
 
@@ -136,7 +139,8 @@ Ma on rozwiązanie w punkcie :math:`\ x_1 = -\frac{1}{4},\ x_2 = \frac{3}{4},\ x
    :align: center
 
 | Przejście do postaci kolumnowej układu trzech równań (o współczynnikach całkowitych)
-| można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column()``:
+| można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column()``
+| (wykonanie kodu definiującego funkcję nie wyprowadzi na razie żadnego wyniku):
 
 .. sagecellserver::
 
@@ -185,7 +189,7 @@ Aby wywołać funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3]`
 
 .. admonition:: **Poeksperymentuj z Sage**
 
-   Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+   | Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
 
 .. sagecellserver::
 
@@ -201,28 +205,28 @@ Aby wywołać funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3]`
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plt = arrow((0,0,0),v1, color='red')   +\
+   plt = arrow((0,0,0),v1, color='red')       +\
          arrow((0,0,0),v2, color='limegreen') +\
-         arrow((0,0,0),v3, color='blue')  +\
+         arrow((0,0,0),v3, color='blue')      +\
          arrow((0,0,0), w, color='darkgrey')
       
    show(plt)
 
 | Widać, że wektory :math:`\ v_1,\,v_2,\,v_3\ ` nie są komplanarne (nie leżą w jednej płaszczyźnie). 
-| Ta okoliczność jest warunkiem koniecznym i wystarczającym do tego, aby układ równań miał dokładnie jedno rozwiązanie.
+| Można pokazać ogólnie, że wtedy i tylko wtedy układ równań ma dokładnie jedno rozwiązanie.
 
 Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań
-............................................................................
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Weźmy układ równań:
 
 .. math::
 
-   \begin{cases}
-   \ 2\,x_1 \ +\ \,x_2 \ +\ x_3 \ =\ 1 \\
-   \ 4\,x_1 + 2\,x_2 + 2\,x_3 \ =\ 2 \\
-   \quad x_1 \ +\ \,x_2 + 2\,x_3 \ =\ 3
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   \  2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
+      4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 2 \\
+         x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3
+   \end{alignat*}\end{cases}
 
 Stosując procedurę ``solve()`` otrzymujemy rozwiązanie zależne od zmiennej :math:`r_1`,  
 która może przyjmować dowolne wartości: 
@@ -240,14 +244,16 @@ która może przyjmować dowolne wartości:
 | Oznacza to, że układ równań jest spełniony przez nieskończenie wiele trójek liczb w powyższej postaci.
 
 | Taka sytuacja wystąpi zawsze wtedy, gdy jedno z równań jest kombinacją liniową pozostałych.
-| W tym wypadku drugie równanie jest po prostu podwojonym równaniem pierwszym - odrzucenie go nie zmienia zbioru rozwiązań.
+| Równanie takie wynika z równań pozostałych, odrzucenie go nie zmienia więc zbioru rozwiązań.
+
+| W tym wypadku drugie równanie jest po prostu podwojonym równaniem pierwszym.
 | Mamy więc faktycznie układ dwóch niezależnych równań o trzech niewiadomych.
 
 | Podany niżej kod wyświetla wierszową i kolumnową interpretację geometryczną tego układu.
 
 .. admonition:: **Poeksperymentuj z Sage**
 
-   Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+   | Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
    
 .. sagecellserver::
 
@@ -260,7 +266,7 @@ która może przyjmować dowolne wartości:
    p1 = implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='red')
    p2 = implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='green', opacity=0.87)
    p3 = implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='blue')
-   ln = parametric_plot([r-2, -3*r+5, r],(r,-3,3), color='white', thickness=5)
+   ln = parametric_plot([r-2, -3*r+5, r], (r, 0, 3.3), color='white', thickness=5)
 
    plot1 = p1+p2+p3+ln
 
@@ -270,9 +276,9 @@ która może przyjmować dowolne wartości:
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plot2 = arrow((0,0,0),v1, color='red')   +\
+   plot2 = arrow((0,0,0),v1, color='red')       +\
            arrow((0,0,0),v2, color='limegreen') +\
-           arrow((0,0,0),v3, color='blue')  +\
+           arrow((0,0,0),v3, color='blue')      +\
            arrow((0,0,0), w, color='darkgrey')
 
    show(plot1)
@@ -290,17 +296,17 @@ też należy do tej płaszczyzny. W tej sytuacji nieskończenie wiele kombinacji
 
 
 Przypadek osobliwy: układ sprzeczny
-...................................
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
 
 .. math::
 
-   \begin{cases}
-   \ 2\,x_1 \ +\ \,x_2 \ +\ x_3 \ =\ \,0 \\
-   \ 4\,x_1 + 2\,x_2 + 2\,x_3 \ =\ 5 \\
-   \quad x_1 \ +\ x_2 \,+ 2\,x_3 \ =\ 1
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   \  2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 0 \\
+      4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 5 \\
+         x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1
+   \end{alignat*}\end{cases}
 
 Układ ten nie ma rozwiązań:
 
@@ -339,9 +345,9 @@ Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plot2 = arrow((0,0,0),v1, color='red')   +\
+   plot2 = arrow((0,0,0),v1, color='red')       +\
            arrow((0,0,0),v2, color='limegreen') +\
-           arrow((0,0,0),v3, color='blue')  +\
+           arrow((0,0,0),v3, color='blue')      +\
            arrow((0,0,0), w, color='darkgrey')
 
    show(plot1)

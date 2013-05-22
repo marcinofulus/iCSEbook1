@@ -208,15 +208,15 @@ są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim; wektor wolny
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plt = arrow((0,0,0),v1, color='red')   +\
+   plt = arrow((0,0,0),v1, color='red')       +\
          arrow((0,0,0),v2, color='limegreen') +\
-         arrow((0,0,0),v3, color='blue')  +\
+         arrow((0,0,0),v3, color='blue')      +\
          arrow((0,0,0), w, color='darkgrey')
       
    show(plt)
 
 | Widać, że wektory :math:`\ v_1,\,v_2,\,v_3\ ` nie są komplanarne (nie leżą w jednej płaszczyźnie). 
-| Można pokazać, że wtedy i tylko wtedy układ równań ma dokładnie jedno rozwiązanie.
+| Można pokazać ogólnie, że wtedy i tylko wtedy układ równań ma dokładnie jedno rozwiązanie.
 
 Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -279,9 +279,9 @@ Podany niżej kod wyświetla wierszową i kolumnową interpretację geometryczn�
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plot2 = arrow((0,0,0),v1, color='red')   +\
+   plot2 = arrow((0,0,0),v1, color='red')       +\
            arrow((0,0,0),v2, color='limegreen') +\
-           arrow((0,0,0),v3, color='blue')  +\
+           arrow((0,0,0),v3, color='blue')      +\
            arrow((0,0,0), w, color='darkgrey')
 
    show(plot1)
@@ -351,9 +351,9 @@ Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plot2 = arrow((0,0,0),v1, color='red')   +\
+   plot2 = arrow((0,0,0),v1, color='red')       +\
            arrow((0,0,0),v2, color='limegreen') +\
-           arrow((0,0,0),v3, color='blue')  +\
+           arrow((0,0,0),v3, color='blue')      +\
            arrow((0,0,0), w, color='darkgrey')
 
    show(plot1)

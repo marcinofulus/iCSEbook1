@@ -5,10 +5,10 @@ Metoda eliminacji Gaussa dla układów równań
 
 .. sidebar:: Postać schodkowa układu równań:
 
-   | Układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych ma postać
-   | schodkową, gdy w każdym :math:`\,k`-tym równaniu nie występują
-   | niewiadome :math:`x_1,\dots,x_{k-1}` (czyli współczynniki przy tych
-   | niewiadomych znikają) :math:`,\ \ k=2,\dots,m;\ \ 2\le m\le n`. 
+   Układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych ma postać
+   schodkową, gdy w każdym :math:`\,k`-tym równaniu nie występują
+   niewiadome :math:`x_1,\dots,x_{k-1}` (czyli współczynniki przy tych
+   niewiadomych znikają) :math:`,\ \ k=2,\dots,m;\ \ 2\le m\le n.` 
 
 | Rozważmy układ trzech równań liniowych o trzech niewiadomych.
  
@@ -31,11 +31,11 @@ Metoda eliminacji Gaussa dla układów równań
 
 .. math::
 
-   \begin{cases}
-   \quad x_1 +\,2\,x_2 +\,2\,x_3 \ =\ 4 \\
-   \quad x_1 +\,3\,x_2 +\,3\,x_3 \ =\ 5 \\
-   \ \,2\,x_1 +\,6\,x_2 +\,5\,x_3 \ =\ 6
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   \  x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
+      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} & 3\,x_3 & {\;} = {\;} & 5 \\
+   2\,x_1 & {\,} + {\,} & 6\,x_2 & {\,} + {\,} & 5\,x_3 & {\;} = {\;} & 6
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
@@ -46,11 +46,11 @@ Metoda eliminacji Gaussa dla układów równań
     
 .. math::
 
-   \begin{cases}
-   \ \ x_1 +\,2\,x_2 +\,2\,x_3 \ =\ \ \:4 \\
-   \qquad\quad\ \ \,x_2 \ \,+\ \, x_3 \ =\ \ \ 1 \\
-   \qquad\quad 2\,x_2 \ \,+\ \,x_3 \ = -2
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+       &             & 2\,x_2 & {\,} + {\,} &    x_3 & {\;} = {} & -2
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
@@ -60,11 +60,11 @@ Metoda eliminacji Gaussa dla układów równań
     
 .. math::
 
-   \begin{cases}
-   \ \ x_1 +\,2\,x_2 +\,2\,x_3 \ =\ \ \ \,4 \\
-   \qquad\quad\ \ \,x_2 \ \,+\ \, x_3 \ =\ \ \ \,1 \\
-   \qquad\qquad\qquad -x_3 \ = -4
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+       &             &        & {\,} - {\,} &    x_3 & {\;} = {} & -4
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
@@ -74,11 +74,11 @@ Metoda eliminacji Gaussa dla układów równań
    
 .. math::
 
-   \begin{cases}
-   \ \ x_1 +\,2\,x_2 +\,2\,x_3 \ =\ 4 \\
-   \qquad\quad\ \ \,x_2 \ \,+\ \, x_3 \ =\ 1 \\
-   \qquad\qquad\qquad\ \ \; x_3 \ =\ 4
-   \end{cases}
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
+       &             &        &             &    x_3 & {\;} = {\;} & 4
+   \end{alignat*}\end{cases}
 
 Wykonując odpowiednie podstawienia wstecz otrzymujemy:
 
@@ -88,11 +88,11 @@ Wykonując odpowiednie podstawienia wstecz otrzymujemy:
   
 .. math::
    
-   \begin{cases}
-   \ \; x_1 = \ \ \ 2 \\
-   \ \; x_2 = -3 \\
-   \ \; x_3 = \ \ \ 4
-   \end{cases}
+   \begin{cases}\begin{alignat*}{2}
+   \  x_1 & {\,} = {} &  2 \\
+      x_2 & {\,} = {} & -3 \\
+      x_3 & {\,} = {} &  4
+   \end{alignat*}\end{cases}
 
 Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 
@@ -108,33 +108,30 @@ Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 
 .. admonition:: Uwaga
 
-   Procedura ``solve()`` dla układów równań nieoznaczonych.
+   | Procedura ``solve()`` dla układów równań nieoznaczonych.
 
-   Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
-   liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
-   wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
-   wykorzystać te parametry np. do narysowania rozwiązań to musimy po
-   pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
-   drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
-   procedurę, która automatycznie wyciągnie ze wzorów wszystkie
-   zmienne. W poniższym kodzie jest zapisany przykład takiej
-   procedury, zachęcam do wypróbowania go w Sage i zrozumienia:
+Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
+liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
+wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
+wykorzystać te parametry np. do narysowania rozwiązań to musimy po
+pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
+drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
+procedurę, która automatycznie wyciągnie ze wzorów wszystkie
+zmienne. W poniższym kodzie jest zapisany przykład takiej
+procedury, zachęcam do wypróbowania go w Sage i zrozumienia:
 
-   .. code-block:: python
+.. code-block:: python
 
-    sage: var('x1 x2')
-    sage: s=solve([x1+x2==1,x1+x2==1],[x1,x2])
-    sage: print s[0]
-    sage: # little hack - wyłuskanie wszytkich parametrów od których zalezy rozwiązanie
-    sage: lvar=uniq(flatten(map(lambda w: w.variables(), s[0])))
-    sage: for x in [x1,x2]:
-    ...       lvar.remove(x)
-    sage: for rvar in lvar:
-    ...       var(rvar)
-    sage: print lvar
-    sage: ss=[ map(lambda w: w.rhs().subs({rvar:x}), s[0]) for x in srange(-1,1,0.1) ]
-    sage: point(ss,color='green',figsize=5)
+   var('x1 x2')
 
+   s = solve([x1+x2==1,x1+x2==1],[x1,x2])
+   print s[0]
 
+   # a little hack - wyłuskanie wszystkich parametrów od których zależy rozwiązanie
+   lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
+   for x in [x1,x2]: lvar.remove(x)
+   for rvar in lvar: var(rvar)
+   print lvar
 
-
+   ss = [map(lambda w: w.rhs().subs({rvar:x}), s[0]) for x in srange(-1,1,0.1)]
+   points(ss,color='green',figsize=5)

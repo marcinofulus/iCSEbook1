@@ -110,7 +110,7 @@ Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 
 .. admonition:: Uwaga
 
-   Procedura ``solve()`` dla układów równań nieoznaczonych.
+   | Procedura ``solve()`` dla układów równań nieoznaczonych.
 
 Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
 liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
@@ -125,16 +125,15 @@ procedury. Zachęcam do wypróbowania go w Sage i zrozumienia.
 .. code-block:: python
 
    var('x1 x2')
-   s = solve([x1+x2==1, x1+x2==1], [x1,x2])
+
+   s = solve([x1+x2==1,x1+x2==1],[x1,x2])
    print s[0]
+
    # a little hack - wyłuskanie wszystkich parametrów od których zależy rozwiązanie
    lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
    for x in [x1,x2]: lvar.remove(x)
    for rvar in lvar: var(rvar)
    print lvar
+
    ss = [map(lambda w: w.rhs().subs({rvar:x}), s[0]) for x in srange(-1,1,0.1)]
-   point(ss, color='green', figsize=5)
-
-
-
-
+   points(ss,color='green',figsize=5)
