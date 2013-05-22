@@ -29,7 +29,7 @@ co łatwo sprawdzić ręcznie lub komputerowo:
 | Obrazem rozwiązania układu jest punkt leżący na obydwu prostych jednocześnie,
 | czyli punkt przecięcia się tych dwóch prostych (o ile proste się przecinają):
 
-.. figure:: sage1.png
+.. figure:: figs/uklad_rownan.png
    :align: center
 
 W ogólności mogą wystąpić następujące sytuacje:
