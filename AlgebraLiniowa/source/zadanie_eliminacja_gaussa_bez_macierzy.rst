@@ -1,27 +1,27 @@
 .. -*- coding: utf-8 -*-
 
+Zadanie. Eliminacja Gaussa dla układów równań
+---------------------------------------------
 
-Zadanie: Eliminacja Gaussa - dla układów równań
------------------------------------------------
+| Wykonując eliminację Gaussa rozwiąż odręcznie
+  co najmniej jeden układ 3 równań o 3 niewiadomych.
 
-Wykonując eliminację Gaussa rozwiązać co najmniej jeden układ 3x3
-równań na kartce papieru. Rozwiązać układ 4x4 z ew.  pomocą Sage i
-rozwiązanie zapisać w postaci notatnika Sage. 
+| Rozwiąż również układ 4 równań o 4 niewiadomych, ewentualnie z pomocą Sage'a.
 
+| Aby wygenerować układ równań naciśnij "Wykonaj";
+| aby zadać inną liczbę równań należy zmienić wartość n.
 
-Pod układem równań znajduje się poprawna odpowiedź, proszę ją
-wykorzystać do weryfikacji odpowiedzi.
-
-Aby wygenerować układ równań naciśnij "evaluate", aby zmienić liczbę
-równań należy zmienić zmienną n.
-
+| Pod układem będzie podane rozwiązanie - wykorzystaj je do sprawdzenia wyniku.
 
 .. sagecellserver::
 
    n = 3
-   A=random_matrix(ZZ,n,algorithm='echelonizable',rank=n)
-   x = vector([ var('x%d'%i) for i in range(1,n+1)])
-   b= random_vector(ZZ,n)
-   t = [ latex(r)+"&=&"+latex(l) for r,l in zip(A*x,b)]
-   html("<center>$\\begin{cases}%s\\end{cases}$</center>" % join(t," \\\ "))
+
+   A = random_matrix(ZZ, n, algorithm='echelonizable', rank=n)
+   b = random_vector(ZZ, n)
+
+   x = vector([var('x%d'%i) for i in range(1,n+1)])
+   t = ["\ " + latex(l) + "& = &" + latex(r) for (l,r) in zip(A*x,b)]
+   html("<center>$\\left\{\\begin{array}{rcr} %s \\end{array}\\right.$" % join(t," \\\ "))
+
    show(A\b)

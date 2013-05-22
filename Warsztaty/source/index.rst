@@ -13,7 +13,7 @@ Tematyka warsztatów:
 #) Demokracja
 #) playoffy
 #) Paradox Monty-Hall
-#) MT Rzut ukośny - numeryczna analiza równań ruchu - ogołocona armata. 
+#) MT Rzut ukośny - numeryczna analiza równań ruchu - ogołocona armata. (obwiednia)
    - przejrzyjcie Gra_w_Fizyke (20%)  - Odp. Mają TYLKO rozszerzenia
 #) MT Paczka falowa: MMK_Fale - czy maja w LO fale plaską? - Odp - mają bez rozszerzeia
 #) MT Równanie logistyczne i chaos.
