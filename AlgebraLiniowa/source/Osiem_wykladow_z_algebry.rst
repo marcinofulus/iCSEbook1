@@ -29,6 +29,8 @@ Literatura
 Wykład I:  Układy równań liniowych - eliminacja Gaussa
 ======================================================
 
+Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań liniowych.
+Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne na równaniach.
 
 .. toctree::
    :maxdepth: 1

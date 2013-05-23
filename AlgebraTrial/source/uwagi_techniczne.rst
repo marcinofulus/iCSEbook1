@@ -33,7 +33,8 @@ Procedura może być teraz wywołana w następnej komórce:
    A = random_matrix(ZZ, n, algorithm='echelonizable', rank=n)
    b = random_vector(ZZ, n)
    
-   display_set_of_lin_eqns(n, A, b)
+   try: display_set_of_lin_eqns(n, A, b)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 To powiązanie komórek ma zastosowanie w sekcji Geometria układów równań liniowych.
 Zdefiniowana jest tam funkcja ``verse3column()``, zapisująca dany układ trzech równań w postaci kolumnowej.

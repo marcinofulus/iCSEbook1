@@ -177,7 +177,8 @@ Aby wywołać funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3]`
 
    Eqns = [eq1,eq2,eq3]
    
-   verse3colmn(Eqns)
+   try: verse3colmn(Eqns)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 | Rozwiązanie układu równań sprowadza się do wyznaczenia współczynników :math:`\ x_1,\,x_2,\,x_3\ ` kombinacji liniowej
 | wektorów :math:`\ v_1,\,v_2,\,v_3,\ ` która równałaby się wektorowi :math:`\,w\,` wolnych wyrazów po prawej stronie równości.

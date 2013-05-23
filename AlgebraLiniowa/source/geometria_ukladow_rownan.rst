@@ -180,7 +180,8 @@ Aby zastosować funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3
 
    Eqns = [eq1,eq2,eq3]
    
-   verse3colmn(Eqns)
+   try: verse3colmn(Eqns)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 Rozwiązanie układu równań sprowadza się do wyznaczenia współczynników :math:`\ x_1,\,x_2,\,x_3\ ` kombinacji liniowej
 wektorów :math:`\ v_1,\,v_2,\,v_3,\ ` która równałaby się wektorowi :math:`\,w\,` wolnych wyrazów po prawej stronie równości.
@@ -293,7 +294,8 @@ składający się z nieskończenie wielu punktów.
 
 .. sagecellserver::
 
-   show(plot2)
+   try: show(plot2)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 Wektory kolumnowe :math:`\ v_1,\,v_2,\,v_3\ ` (oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim)
 leżą w jednej płaszczyźnie, a wektor :math:`w\,` (szary), będący prawą stroną układu równań, 
@@ -343,7 +345,7 @@ Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
    p2 = implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='green')
    p3 = implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='blue')
 
-   plot1 = p1+p2+p3
+   plot3 = p1+p2+p3
 
    [v1,v2,v3] = [vector([eq.lhs().coeff(x)
                  for eq in [eq1,eq2,eq3]])
@@ -351,18 +353,19 @@ Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
               
    w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
 
-   plot2 = arrow((0,0,0),v1, color='red')       +\
+   plot4 = arrow((0,0,0),v1, color='red')       +\
            arrow((0,0,0),v2, color='limegreen') +\
            arrow((0,0,0),v3, color='blue')      +\
            arrow((0,0,0), w, color='darkgrey')
 
-   show(plot1)
+   show(plot3)
 
 Płaszczyzny, odpowiadajace pierwszym dwóm równaniom układu (czerwona i zielona) są równoległe, ale nie pokrywają się. W tej sytuacji nie ma punktów wspólnych dla wszystkich trzech płaszczyzn.
 
 .. sagecellserver::
 
-   show(plot2)
+   try: show(plot4)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 Tutaj wektory :math:`\ v_1,\,v_2,\,v_3\ ` leżą na tej samej płaszczyźnie.
 W odróżnieniu jednak od poprzedniego przypadku z nieskończoną ilością rozwiązań,
