@@ -3,21 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=================================
-Osiem wykładów z Algebry Liniowej
-=================================
-
-.. sidebar:: Algebra liniowa:
-
-   | dział algebry zajmujący się badaniem
-   | przestrzeni liniowych i przekształceń liniowych.
+=============================
+8 wykładów z Algebry Liniowej
+=============================
 
 Wstęp
 =====
 
+Algebra liniowa:
+ dział algebry zajmujący się badaniem
+ przestrzeni liniowych i przekształceń liniowych. 
+
 .. toctree::
 
-   uwaga_techniczna
+   Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
 
 Literatura
 ==========

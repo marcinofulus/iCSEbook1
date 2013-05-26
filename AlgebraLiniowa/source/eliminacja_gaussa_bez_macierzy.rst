@@ -1,162 +1,139 @@
 .. -*- coding: utf-8 -*-
 
-
-Metoda Eliminacji Gaussa dla układów równań
+Metoda eliminacji Gaussa dla układów równań
 -------------------------------------------
+|
 
-Rozważmy układ trzech równań. Za pomocą operacji dodawania do siebie wielokrotności równań, oraz ich przestawiania doprowadzamy układ do postaci schodkowej.
+Postać schodkowa układu równań.
+ | Układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych ma postać schodkową,
+ | gdy w każdym :math:`\,k`-tym równaniu nie występują niewiadome :math:`x_1,\dots,x_{k-1}`
+ | (czyli współczynniki przy tych niewiadomych są równe zeru).
+ | Tutaj :math:`\ k=2,\dots,m;\ \ 2\le m\le n`. 
 
-.. admonition:: **Definicja**
+| Rozważmy układ trzech równań liniowych o trzech niewiadomych.
+ 
+| Doprowadzimy go do postaci schodkowej poprzez następujące
+| operacje elementarne, które nie zmieniają zbioru rozwiązań:
 
-   Układ równań w postaci schodkowej to taki w którym współczynnki w
-   :math:`n`-tym równaniu są zero dla zmiennych
-   :math:`x_1,...,x_{n-1}`.
-                
+#. przestawienie dwóch równań
+#. dodanie (bądź odjęcie) dwóch równań stronami
+#. pomnożenie obu stron równania przez liczbę różną od zera.
+
+|
+              
 .. code-block:: python
 
-    sage: var('x1 x2 x3')
-    sage: eq1=x1+2*x2+2*x3==4
-    sage: eq2=x1+3*x2+3*x3==5
-    sage: eq3=2*x1+6*x2+5*x3==6
-    sage: html.table([eq1,eq2,eq3])
+   var('x1 x2 x3')
 
+   eq1 = x1+2*x2+2*x3==4
+   eq2 = x1+3*x2+3*x3==5
+   eq3 = 2*x1+6*x2+5*x3==6
 
-.. MATH::
+   #show(vector([eq1,eq2,eq3]).column())
 
-    \begin{cases}
-    x_{1} + 2 \, x_{2} + 2 \, x_{3} = 4 \\
-    x_{1} + 3 \, x_{2} + 3 \, x_{3} = 5 \\
-    2 \, x_{1} + 6 \, x_{2} + 5 \, x_{3} = 6
-    \end{cases}
+.. math::
 
-.. end of output
-
-.. code-block:: python
-
-    sage: eq2=eq2-eq1
-    sage: #html.table([eq1,eq2,eq3])
-    sage: show(vector([eq1,eq2,eq3]).column())
-
-
-.. MATH::
-
-    \begin{cases}
-    x_{1} + 2 \, x_{2} + 2 \, x_{3} = 4 \\
-    x_{2} + x_{3} = 1 \\
-    2 \, x_{1} + 6 \, x_{2} + 5 \, x_{3} = 6
-    \end{cases}
-
-.. end of output
+   \begin{cases}\begin{alignat*}{4}
+   \  x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
+      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} & 3\,x_3 & {\;} = {\;} & 5 \\
+   2\,x_1 & {\,} + {\,} & 6\,x_2 & {\,} + {\,} & 5\,x_3 & {\;} = {\;} & 6
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
-    sage: eq3=eq3-2*eq1
-    sage: #html.table([eq1,eq2,eq3])
-    sage: show(vector([eq1,eq2,eq3]).column())
+    eq2 = eq2-eq1
+    eq3 = eq3-2*eq1
 
+    #show(vector([eq1,eq2,eq3]).column())
+    
+.. math::
 
-.. MATH::
-
-    \begin{cases}
-    x_{1} + 2 \, x_{2} + 2 \, x_{3} = 4 \\
-    x_{2} + x_{3} = 1 \\
-    2 \, x_{2} + x_{3} = \left(-2\right)
-    \end{cases}
-
-.. end of output
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+       &             & 2\,x_2 & {\,} + {\,} &    x_3 & {\;} = {} & -2
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
-    sage: eq3=eq3-2*eq2
-    sage: #html.table([eq1,eq2,eq3])
-    sage: show(vector([eq1,eq2,eq3]).column())
+   eq3 = eq3-2*eq2
 
+   #show(vector([eq1,eq2,eq3]).column())
+    
+.. math::
 
-.. MATH::
-
-    \begin{cases}
-    x_{1} + 2 \, x_{2} + 2 \, x_{3} = 4 \\
-    x_{2} + x_{3} = 1 \\
-    -x_{3} = \left(-4\right)
-    \end{cases}
-
-.. end of output
-
-Mnożąc ostatnie równanie przez :math:`-1` dostajemy układ równań w postaci schodkowej:
-
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+       &             &        & {\,} - {\,} &    x_3 & {\;} = {} & -4
+   \end{alignat*}\end{cases}
 
 .. code-block:: python
 
-    sage: eq3=-eq3
-    sage: #html.table([eq1,eq2,eq3])
-    sage: show(vector([eq1,eq2,eq3]).column())
+   eq3 = -eq3
 
+   #show(vector([eq1,eq2,eq3]).column())
+   
+.. math::
 
-.. MATH::
-
-    \begin{cases}
-    x_{1} + 2 \, x_{2} + 2 \, x_{3} = 4 \\
-    x_{2} + x_{3} = 1 \\
-    x_{3} = 4
-    \end{cases}
-
-.. end of output
+   \begin{cases}\begin{alignat*}{4}
+   x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
+       &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
+       &             &        &             &    x_3 & {\;} = {\;} & 4
+   \end{alignat*}\end{cases}
 
 Wykonując odpowiednie podstawienia wstecz otrzymujemy:
 
-
 .. code-block:: python
 
-    sage: html.table( [eq1.subs(eq2.subs(eq3)-4).subs(eq3)-2,eq2.subs(eq3)-4,eq3] )
-    
-
+   html.table( [eq1.subs(eq2.subs(eq3)-4).subs(eq3)-2,eq2.subs(eq3)-4,eq3] )
+  
 .. math::
    
-    \begin{cases}
-    x_{1} = 2\\
-    x_{2} =-3\\
-    x_{3} = 4
-    \end{cases}
+   \begin{cases}\begin{alignat*}{2}
+   \  x_1 & {\,} = {} &  2 \\
+      x_2 & {\,} = {} & -3 \\
+      x_3 & {\,} = {} &  4
+   \end{alignat*}\end{cases}
 
-.. end of output
+Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 
-Sprawdźmy czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
+.. sagecellserver::
 
+   var('x1 x2 x3')
+
+   eq1 = x1+2*x2+2*x3==4
+   eq2 = x1+3*x2+3*x3==5
+   eq3 = 2*x1+6*x2+5*x3==6
+
+   show(solve([eq1,eq2,eq3],[x1,x2,x3]))
+
+.. admonition:: Uwaga
+
+   | Procedura ``solve()`` dla układów równań nieoznaczonych.
+
+Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
+liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
+wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
+wykorzystać te parametry np. do narysowania rozwiązań to musimy po
+pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
+drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
+procedurę, która automatycznie wyciągnie ze wzorów wszystkie
+zmienne. W poniższym kodzie jest zapisany przykład takiej
+procedury. Zachęcam do wypróbowania go w Sage i zrozumienia.
 
 .. code-block:: python
 
-    sage: solve([eq1,eq2,eq3],[x1,x2,x3])
-    [[x1 == 2, x2 == -3, x3 == 4]]
+   var('x1 x2')
 
-.. end of output
+   s = solve([x1+x2==1,x1+x2==1],[x1,x2])
+   print s[0]
 
-.. note:: Procedura ``solve`` dla układów równań nieoznaczonych
+   # a little hack - wyłuskanie wszystkich parametrów od których zależy rozwiązanie
+   lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
+   for x in [x1,x2]: lvar.remove(x)
+   for rvar in lvar: var(rvar)
+   print lvar
 
-   Wyobraźmy sobie, że rozwiązujemy układ równań (nie koniecznie
-   liniowy) w Sage za pomocą ``solve`` i jako odpowiedź dostajemy
-   wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
-   wykorzystać te parametry np. do narysowania rozwiązań to musimy po
-   pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
-   drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
-   procedurę, która automatycznie wyciągnie ze wzrorów wszystkie
-   zmienne. W poniższym kodzie jest zapisany przykład takiej
-   procedury, zachecam do jedo wypróbowania w Sage i zrozumienia:
-
-   .. code-block:: python
-
-    sage: var('x1 x2')
-    sage: s=solve([x1+x2==1,x1+x2==1],[x1,x2])
-    sage: print s[0]
-    sage: # little hack - wyłuskanie wszytkich parametrów od których zalezy rozwiązanie
-    sage: lvar=uniq(flatten(map(lambda w: w.variables(), s[0])))
-    sage: for x in [x1,x2]:
-    ...       lvar.remove(x)
-    sage: for rvar in lvar:
-    ...       var(rvar)
-    sage: print lvar
-    sage: ss=[ map(lambda w: w.rhs().subs({rvar:x}), s[0]) for x in srange(-1,1,0.1) ]
-    sage: point(ss,color='green',figsize=5)
-
-
-
-
+   ss = [map(lambda w: w.rhs().subs({rvar:x}), s[0]) for x in srange(-1,1,0.1)]
+   points(ss,color='green',figsize=5)

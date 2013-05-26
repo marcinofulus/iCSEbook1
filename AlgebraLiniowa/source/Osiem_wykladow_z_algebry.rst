@@ -7,38 +7,38 @@
 Osiem wykładów z Algebry liniowej
 =================================
 
+Wstęp
+=====
+
+Algebra liniowa:
+ dział algebry zajmujący się badaniem
+ przestrzeni liniowych i przekształceń liniowych. 
+
+.. toctree::
+
+   Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
+
 Literatura
 ==========
-
 
 .. toctree::
    :maxdepth: 1
 
    literatura 
 
-
-
 Wykład I:  Układy równań liniowych - eliminacja Gaussa
 ======================================================
 
-.. sidebar:: Algebra liniowa
-
-   Algebra liniowa - dział algebry zajmujący się badaniem przestrzeni
-   liniowych i przekształceń liniowych.
-
-Układy równań liniowych, metoda eliminacji, przykłady osobliwe,
-interpretacja geometryczna, 
-
+Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań liniowych.
+Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne na równaniach.
 
 .. toctree::
    :maxdepth: 1
-   :glob:
-   
+      
    geometria_ukladow_rownan
    eliminacja_gaussa_bez_macierzy
 
-
-Zadania do wykladu I:
+Zadania do wykładu I:
 ---------------------
 
 .. toctree::
