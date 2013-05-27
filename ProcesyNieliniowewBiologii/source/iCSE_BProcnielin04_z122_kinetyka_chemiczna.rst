@@ -4,7 +4,7 @@
 Kinetyka reakcji chemicznych
 ============================
 
-Kinetyka zajmuje się przewidywaniem zmian stężeń substratów i produktów reakcji chemicznych w czasie, badaniem szybkości reakcji,  wpływu rozmaitych czynników na tę szybkość i ogólnie przebiegiem całej  reakcji. W reakcji chemicznej zachodzi przemiana jednej lub kilku wyjściowych substancji (substratów) w jedną lub kilka innych substancji (produkty). Zarówno substraty jak i produkty mogą występować w formie cząsteczkowej, atomowej, jonowej lub rodnikowej. Zbadanie danej reakcji od strony kinetycznej polega zazwyczaj  na ustaleniu zależności tempa powstawania produktów (i ubytku  substratów) od  różnych czynników takich jak np.  rodzaju i stężenia katalizatora,  wyjściowych proporcji substratów, . Uzyskane dane mogą pozwolić na wyznaczenie stałych szybkości reakcji i sformułowanie matematycznego równania kinetycznego reakcji oraz na ustalenie mechanizmu reakcji.  **Równanie kinetyczne**  to zazwyczaj równanie różniczkowe opisujące  zmiany stężenia molowego reagentów w czasie zachodzenia reakcji chemicznej.  Konstrukcja takich równań bazuje w głównej mierze na prawie działania mas, zwane także  **prawem Guldberga i Waagego**  \- wyprowadzone w 1864 r. przez norweskich chemików Guldberga i Waagego. Można je sformułować w następujący sposób:
+Kinetyka zajmuje się przewidywaniem zmian stężeń substratów i produktów reakcji chemicznych w czasie, badaniem szybkości reakcji,  wpływu rozmaitych czynników na tę szybkość i ogólnie przebiegiem całej  reakcji. W reakcji chemicznej zachodzi przemiana jednej lub kilku wyjściowych substancji (substratów) w jedną lub kilka innych substancji (produkty). Zarówno substraty jak i produkty mogą występować w formie cząsteczkowej, atomowej, jonowej lub rodnikowej. Zbadanie danej reakcji od strony kinetycznej polega zazwyczaj  na ustaleniu zależności tempa powstawania produktów (i ubytku  substratów) od  różnych czynników takich jak np.  rodzaju i stężenia katalizatora,  wyjściowych proporcji substratów. Uzyskane dane mogą pozwolić na wyznaczenie stałych szybkości reakcji i sformułowanie matematycznego równania kinetycznego reakcji oraz na ustalenie mechanizmu reakcji.  **Równanie kinetyczne**  to zazwyczaj równanie różniczkowe opisujące  zmiany stężenia molowego reagentów w czasie zachodzenia reakcji chemicznej.  Konstrukcja takich równań bazuje w głównej mierze na prawie działania mas, zwane także  **prawem Guldberga i Waagego**  \- wyprowadzone w 1864 r. przez norweskich chemików Guldberga i Waagego. Można je sformułować w następujący sposób:
 
 
 *Szybkość reakcji chemicznej jest proporcjonalna do iloczynu stężeń składników  wszystkich uczestniczących w niej reagentów.*
@@ -100,7 +100,9 @@ Najprostszym przykładem takiej reakcji jest reakcja:
 
     A  + Y \overset{ k_1} {\underset {k_2} \longleftrightarrow}  2Y 
 
-  czyli  
+
+czyli
+
 .. MATH::
 
     A  + Y \overset{ k_1} {\underset {k_2} \longleftrightarrow}  Y+Y
@@ -223,7 +225,7 @@ to współczynniki przy wyrazie liniowym jest ujemny i otrzymujemy równanie:
 .. MATH::
 
     \frac{dy}{dt}  =  - r_0 y - k_2 y^2, \quad \quad r_0 =
-    \|k_1 a \- k_3 b\|
+    \|k_1 a - k_3 b\|
     \gt  0, \quad k_2  \gt  0
 
 
@@ -260,31 +262,21 @@ Reakcje enzymatyczne
 --------------------
 
 
-Wiele białek występujących w organizmach żywych to enzymy, czyli katalizatory
+Wiele białek występujących w organizmach żywych to enzymy, czyli katalizatory przyspieszające przemiany biochemiczne. Reakcje katalizowane przez enzymy mają wspólne właściwości. Najważniejszą z nich jest zjawisko wysycenia enzymu substratem, ograniczające szybkość reakcji. Przedstawia to model Michaelisa\-Menten opisany przez równanie:
 
-przyspieszające przemiany biochemiczne. Reakcje katalizowane przez enzymy mają wspólne
+.. MATH::
 
-właściwości. Najważniejszą z nich jest zjawisko wysycenia enzymu substratem, ograniczające
+    E + S \, \overset{k_f}{\underset{k_r}\Longleftrightarrow} \, ES \, \overset{k_3} {\Longrightarrow} \, E + P
 
-szybkość reakcji. Przedstawia to model Michaelisa\-Menten opisany przez równanie:
-
-Wiele białek występujących w organizmach żywych to enzymy, czyli katalizatory przyspieszające przemiany biochemiczne. Reakcje katalizowane przez enzymy mają wspólne
-
-właściwości. Najważniejszą z nich jest zjawisko wysycenia enzymu substratem, ograniczające szybkość reakcji. Przedstawia to model Michaelisa\-Menten opisany przez równanie:
-
-
-
-
-.. MATH::    E + S \, \overset{k_f}{\underset{k_r}\Longleftrightarrow} \, ES \, \overset{k_3} {\Longrightarrow} \, E + P
------------------------------------------------------------------------------------------------------------------------------
 
 gdzie :math:`S` jest substratem, :math:`E` jest enzymem, :math:`P` jest produktem. Pierwsza reakcja jest tworzeniem kompleksu enzym-substrat. Reakcja ta jest odwracalna. W modelu Michaelisa-Menten zakłada się, że druga reakcja jest nieodwracalna.
 
 
-Jak wszystkie katalizatory, enzymy obniżają energię aktywacji  reakcji chemicznej, przyspieszając w ten sposób przebieg reakcji.  Większość reakcji enzymatycznych (tj. z udziałem enzymów) przebiega  miliony razy szybciej niż ich niekatalizowane enzymatycznie  odpowiedniki. Jednym z najszybciej działających znanych enzymów jest anhydraza węglanowa. Jedna cząsteczka tego enzymu potrafi w sprzyjających warunkach w jedną sekundę uwodnić od 10 <sup>4</sup>  do 10 <sup>6</sup>  cząsteczek dwutlenku węgla. Z kolei jedna cząsteczka jednego z najwolniejszych enzymów – lizozymu, katalizuje 1 akt elementarny co 2 sekundy. Jak wszystkie katalizatory, również enzymy nie zużywają się w trakcie przebiegu reakcji, a także nie wpływają na ich równowagę. Enzymy różnią się od zwykłych katalizatorów, przejawiając znacznie większą specyficzność substratową. Aktywność enzymatyczna może być zatrzymana lub obniżona przez inne cząsteczki – inhibitory. Wiele leków i trucizn jest inhibitorami enzymów. Z kolei aktywatory enzymatyczne  to cząsteczki zwiększające aktywność enzymów. Ponadto aktywność enzymów  zależy od parametrów fizykochemicznych środowiska reakcji, takich jak: temperatura, pH, siła jonowa, obecność niektórych jonów i innych.
+Jak wszystkie katalizatory, enzymy obniżają energię aktywacji  reakcji chemicznej, przyspieszając w ten sposób przebieg reakcji.  Większość reakcji enzymatycznych (tj. z udziałem enzymów) przebiega  miliony razy szybciej niż ich niekatalizowane enzymatycznie  odpowiedniki. Jednym z najszybciej działających znanych enzymów jest anhydraza węglanowa. Jedna cząsteczka tego enzymu potrafi w sprzyjających warunkach w jedną sekundę uwodnić od 10 :sup:`4`  do 10 :sup:`6`  cząsteczek dwutlenku węgla. Z kolei jedna cząsteczka jednego z najwolniejszych enzymów – lizozymu, katalizuje 1 akt elementarny co 2 sekundy. Jak wszystkie katalizatory, również enzymy nie zużywają się w trakcie przebiegu reakcji, a także nie wpływają na ich równowagę. Enzymy różnią się od zwykłych katalizatorów, przejawiając znacznie większą specyficzność substratową. Aktywność enzymatyczna może być zatrzymana lub obniżona przez inne cząsteczki – inhibitory. Wiele leków i trucizn jest inhibitorami enzymów. Z kolei aktywatory enzymatyczne  to cząsteczki zwiększające aktywność enzymów. Ponadto aktywność enzymów  zależy od parametrów fizykochemicznych środowiska reakcji, takich jak: temperatura, pH, siła jonowa, obecność niektórych jonów i innych.
 
 
 Szybkość procesu enzymatycznego zależy od łatwości tworzenia kompleksu enzymu z substratem (powinowactwo enzymu do substratu). Zależność tę przedstawia równanie matematyczne L. Michaelisa i M.L. Menten, zawierające tzw.  **stałą Michaelisa**   charakterystyczną dla danego enzymu.
+
  Stała Michaelisa  :math:`\boldsymbol{K_m}`  to wielkość liczbowa, określająca stężenie substratu (w molach na litr roztworu), przy którym szybkość reakcji enzymatycznej jest równa połowie szybkości maksymalnej, osiąganej przy wysyceniu enzymu substratem i niezależnej już od dalszego wzrostu jego stężenia.
 
 
@@ -296,7 +288,7 @@ Stosując prawo działania mas do powyższej reakcji enzymatycznej, otrzymujemy 
     \begin{array}{cccccccc} d s / d t &  = &  - &  k_f  e  s &  + &  k_r  c &  \\ d e / d t &  = &  - &  k_f  e  s &  + &  k_r  c &  + &  k_3  c \\ d  c / d t &  = &  + &  k_f  e  s  &  - &  k_r  c &  - &  k_3  c \\ d p / d t &  = &  &  &  + &  k_3 c \end{array}
 
 
-gdzie małymi literami oznaczyliśmy koncentracje poszczególnych substancji :math:`s=s(t), e=e(t), p=p(t)`,  natomiast  :math:`c=c(t) ` oznacza koncentrację kompleksu :math:`ES`.
+gdzie małymi literami oznaczyliśmy koncentracje poszczególnych substancji :math:`s=s(t), e=e(t), p=p(t)`,  natomiast  :math:`c=c(t)` oznacza koncentrację kompleksu :math:`ES`.
 
 
 Musimy zadać warunki początkowe:
@@ -354,7 +346,8 @@ Układ czterech nieliniowych równań różniczkowych wydaje się być  skomplik
     p(t) = p(0) + k_3 \int_{0}^t c(\tau) d\tau =  k_3 \int_{ 0}^t c(\tau) d\tau
 
 
-Wiedząc jak ewoluuje stężenie kompleksu, wiemy też jak  ewoluuje  produkt.
+\ 
+  Wiedząc jak ewoluuje stężenie kompleksu, wiemy też jak  ewoluuje  produkt.
 
 
 (2) Enzym jest katalizatorem, więc jego całkowita koncentracja (  wolnego składnika i w kompleksie) jest stała. To widać, dodając do  siebie stronami równanie drugie i trzecie:
@@ -365,7 +358,8 @@ Wiedząc jak ewoluuje stężenie kompleksu, wiemy też jak  ewoluuje  produkt.
      \frac{de}{dt} + \frac{dc}{dt} =0, \quad \quad \mbox{stąd  wynika,  że } \quad \quad e(t) + c(t) = const. = e(0) + c(0) = e_0
 
 
-Z relacji tej wynika, że
+\ 
+  Z relacji tej wynika, że
 
 
 .. MATH::
@@ -381,7 +375,8 @@ Z relacji tej wynika, że
     \begin{array}{cccccccc} d s / d t &  = &  - &  k_f  e   [e_0 - c]  &  + &  k_r  c &  \\  d  c / d t &  = &  +  &  k_f  s [e_0-c]   &  - & ( k_r +  k_3) c   \end{array}
 
 
-Mająć doświadczenie ze skalowaniem, nabyte przy analizie dynamiki populacyjnej, wprowadzamy bezwymiarowe wielkości:
+\ 
+  Mająć doświadczenie ze skalowaniem, nabyte przy analizie dynamiki populacyjnej, wprowadzamy bezwymiarowe wielkości:
 
 
 .. MATH::
@@ -389,7 +384,8 @@ Mająć doświadczenie ze skalowaniem, nabyte przy analizie dynamiki populacyjne
      x= \frac{s}{s_0}, \quad y=\frac{c}{e_0}, \quad \tau = k_f  e_0  t,  \quad \lambda = \frac{k_3}{k_f  s_0}, \quad K= \frac{k_r +  k_3}{k_f  s_0}, \quad \epsilon =\frac{e_0}{s_0}
 
 
-W nowych zmiennych, równania powyższe przyjmują postać:
+\ 
+  W nowych zmiennych, równania powyższe przyjmują postać:
 
 
 .. MATH::
@@ -397,7 +393,8 @@ W nowych zmiennych, równania powyższe przyjmują postać:
     \begin{array}{cccccccc} \frac{dx}{d\tau} & =&   - x +  (x+K-\lambda)  y, \quad \quad x(0)   =  1 \\ \epsilon  \frac{dy}{d\tau}  & =&  x - (x+K)  y, \quad \quad y(0) = 0   \end{array}
 
 
-Zauważmy, że :math:`K - \lambda = k_r/k_f  s_0  \gt 0`.
+\ 
+  Zauważmy, że :math:`K - \lambda = k_r/k_f  s_0  \gt 0`.
 
 
 Zachowanie się w czasie stężenia substratu  :math:`x(\tau)` i kompleksu :math:`y(\tau)`, które jest przedstawione na rysunku otrzymanym  z rozwiązań numerycznych, można przewidzieć z następujących rozważań heurystycznych:
@@ -406,10 +403,10 @@ Zachowanie się w czasie stężenia substratu  :math:`x(\tau)` i kompleksu :math
 1. dla krótkich  chwil :math:`\tau`, stężenia :math:`y(\tau) \approx 0` ponieważ :math:`y(0)=0`. Natomiast :math:`dx/d\tau \approx -x  \lt 0`, ponieważ drugi wyraz (zawierający :math:`y`) można pominąć.
 
 
-Ale :math:`dx/d\tau   \lt 0` oznacza, że :math:`x(\tau)` maleje od wartości początkowej :math:`x(0)=1`.
+  Ale :math:`dx/d\tau   \lt 0` oznacza, że :math:`x(\tau)` maleje od wartości początkowej :math:`x(0)=1`.
 
 
-2.  dla małych wartości :math:`\tau`, wielkość :math:`\epsilon dy/d\tau \approx x  \gt 0`,  ponieważ drugi wyraz (zawierający :math:`y`) można pominąć. Oznacza to, że  :math:`y(\tau)` rośnie od wartości początkowej :math:`y(0)=0`. Stężenie kompleksu rośnie tak długo, jak długo prawa strona w równaniu dla :math:`y` jest dodatnia, czyli gdy :math:` x(\tau_1) - [x(\tau_1) + K] y(\tau_1)=0`, czyli gdy
+2.  dla małych wartości :math:`\tau`, wielkość :math:`\epsilon dy/d\tau \approx x  \gt 0`,  ponieważ drugi wyraz (zawierający :math:`y`) można pominąć. Oznacza to, że  :math:`y(\tau)` rośnie od wartości początkowej :math:`y(0)=0`. Stężenie kompleksu rośnie tak długo, jak długo prawa strona w równaniu dla :math:`y` jest dodatnia, czyli gdy :math:`x(\tau_1) - [x(\tau_1) + K] y(\tau_1)=0`, czyli gdy
 
 
 .. MATH::
@@ -434,8 +431,6 @@ W ten sposób odtworzyliśmy jakościową ewolucję :math:`s(t) \propto x(\tau)`
 
 
 czyli jest to pole pod krzywą  :math:`c(t)`.  A pole pod tą krzywą rośnie, gdy rośnie górny przedział całkowania, czyli :math:`t`. Stąd wniosek, że :math:`p(t)` rośnie monotonicznie od zera do pewnej wartości.
-
-
 
 
 
@@ -478,9 +473,6 @@ Zadania
 
 
 Oceń jaka powinna być relacja między początkowymi stężeniami enzymu i substratu, aby przybliżenie stanu stacjonarnego było poprawne.
-
-
-
 
 
 
@@ -568,6 +560,7 @@ II. Dany jest ciąg reakcji:
     A \overset{ k_1} {\rightarrow}  X, \quad  \quad B  + X \overset{ k_2} { \rightarrow} Y + D,   \quad \quad 2X + Y     \overset{ k_3} { \rightarrow}3X,  \quad \quad X      \overset{ k_4} { \rightarrow} E
 
 
-Wykonać wszystkie 3 zadania jak w przykładzie I.  Teraz zakładamy, że stężenia substancji :math:`A, B, D` oraz :math:`E` nie zmieniają się.
+\ 
+  Wykonać wszystkie 3 zadania jak w przykładzie I.  Teraz zakładamy, że stężenia substancji :math:`A, B, D` oraz :math:`E` nie zmieniają się.
 
 

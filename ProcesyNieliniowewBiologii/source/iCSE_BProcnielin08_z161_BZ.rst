@@ -4,30 +4,13 @@
 Reakcje Biełusowa\-Żabotyńskiego
 ================================
 
-1. Wstęp: opis reakcji 
------------------------
+Wstęp: opis reakcji 
+-------------------
 
-Reakcja Biełousowa\-Żabotyńskiego \- oscylacyjna reakcja chemiczna występująca w wodnym roztworze w temperaturze pokojowej, w której występują okresowe zmiany barwy roztworu z okresem ok. jednej minuty.
-
-W reakcji tej miesza się trzy wyjściowe roztwory wodne, które zaraz po zmieszaniu dają barwę zieloną, która po chwili przechodzi w niebieską, purpurową, czerwoną aż do powrotu do zieleni. Roztworami tymi są:
-
-    0,23 M KBrO :sub:`3` (bromian(V) potasu)
-
-    0,31 M kwas malonowy (lub kwas cytrynowy) \+ 0,059 M KBr
-
-    0,019 M (NH :sub:`4`) :sub:`2` Ce(NO :sub:`3`) :sub:`6` \+ 2,7 M H :sub:`2` SO :sub:`4`
-
-Oprócz tego do układu reakcji dodaje się niewielką ilość ferroiny, która zmienia barwę w wyniku ubocznej reakcji redoks, lecz nie wpływa bezpośrednio na przebieg całego procesu.
-
-W sprzyjających warunkach, przy bardzo dokładnym utrzymaniu proporcji i przy zachowaniu idealnej czystości cykl powtarza się kilkanaście razy. 
-
-Po zmieszaniu zakwaszonego roztworu bromianu, kwasu malonowego, soli ceru oraz wskaźnika \- ferroiny, przez pewien czas istnieje stan indukcji. Szczegółowy mechanizm Reakcji jest bardzo zawiły.  Obejmuje trzy grupy złożonych procesów.  
-
- 
 
 Istnieje wiele przykładów reakcji Biełousowa\-Żabotyńskiego (będziemy czasami używali skrótu B\-Ż). Są one niezwykłe i mają niezwykłą historię. Dlaczego? Ponieważ są to reakcje oscylacyjne. W 1951 roku Biełousow opisał taką reakcję i napisał pracę na ten temat. Edytorzy czasopisma, do którego został wysłany maszynopis pracy, nie zaakceptowali  jej do druku, nie wierząc w jej wyniki. Sześć lat później, Biełousow znowu wysłał pracę do publikacji, ale tym razem do innego czasopisma. I znowu edytorzy byli sceptyczni. Zaproponowali aby przedstawić tylko opis reakcji, ale Bielousow nie zgodził się. Obrażony postanowił nie wysyłać więcej jej do publikacji. W 1961 roku inny adept radzieckiej nauki, Żabotyński odkrył odkrytą  już reakcję, ale o tym nie wiedział. Na szczęście opiekun naukowy Żabotyńskiego znał wyniki prac Biełousowa i prosił swego podopiecznego o kontakt z Biełousowem. Niestety, w tamtych czasach nie było ani telefonii komórkowej, ani internetu. Dopiero w 1968 roku, w czasie obrad sympozjum w Pradze, świat zachodni dowiedział się o tych niezwykłych reakcjach.  
 
-Reakcje oscylacyjne  występują np.  w wodnym roztworze w temperaturze pokojowej, w której zachodzą okresowe zmiany barwy roztworu z okresem ok. jednej minuty.  Na podstawowy mechanizm reakcji  składa się utlenianie kwasu malanowego w środowisku kwaśnym przez jony bromianowe BrO :sub:`3` w obecności katalizatora - jonów ceru. Okresowe oscylacje obserwowane są w stężeniu jonów ceru. Oscylacje przejawiają  się jako zmiany koloru przy przejściu Ce :sup:`3+` w Ce :sup:`4+` . Obecnie znanych jest wiele reakcji, które mogą zachowywać się okresowo. Mianem reakcji BŻ nazywa się klasę reakcji, w których związek organiczny jest utleniany przez jony bromianowe wspomagane jonami metalu w środowisku kwaśnym. Jeśli substraty dyfundują mogą się wówczas wytwarzać wzory przestrzenne. Dla katalizatorów będących jonami innych metali np. żelaza Fe :sup:`2+` i Fe :sup:`3+` zmiany barw mogą być bardziej spektakularne czerwony↔ niebieski.  Istnieją jeszcze inne reakcje tego typu.  Np. reakcja Briggsa-Rauschera jest jeszcze atrakcyjniejsza, bo oscylacje są bardzo kontrastowe (bezbarwny-złoty-granatowy) i bardzo szybkie: co kilkanaście sekund; a jej uruchomienie jest bardzo proste. Reagenty: zakwaszony roztwór jodanu, kwasu malonowego, nadtlenku wodoru, katalizowany solą manganawą, z dodatkiem skrobi. Mechanizm tej reakcji jest słabo poznany; prawdopodobnie są to dwie sprzężone reakcje oscylacyjne. 
+Reakcje oscylacyjne  występują np.  w wodnym roztworze w temperaturze pokojowej, w której zachodzą okresowe zmiany barwy roztworu z okresem ok. jednej minuty.  Na podstawowy mechanizm reakcji  składa się utlenianie kwasu malanowego w środowisku kwaśnym przez jony bromianowe BrO :sub:`3` w obecności katalizatora - jonów ceru. Okresowe oscylacje obserwowane są w stężeniu jonów ceru. Oscylacje przejawiają  się jako zmiany koloru przy przejściu Ce :sup:`3+` w Ce :sup:`4+` . Obecnie znanych jest wiele reakcji, które mogą zachowywać się okresowo. Mianem reakcji BŻ nazywa się klasę reakcji, w których związek organiczny jest utleniany przez jony bromianowe wspomagane jonami metalu w środowisku kwaśnym. Jeśli substraty dyfundują mogą się wówczas wytwarzać wzory przestrzenne. Dla katalizatorów będących jonami innych metali np. żelaza Fe :sup:`2+` i Fe :sup:`3+` zmiany barw mogą być bardziej spektakularne czerwony ↔ niebieski.  Istnieją jeszcze inne reakcje tego typu.  Np. reakcja Briggsa-Rauschera jest jeszcze atrakcyjniejsza, bo oscylacje są bardzo kontrastowe (bezbarwny-złoty-granatowy) i bardzo szybkie: co kilkanaście sekund; a jej uruchomienie jest bardzo proste. Reagenty: zakwaszony roztwór jodanu, kwasu malonowego, nadtlenku wodoru, katalizowany solą manganawą, z dodatkiem skrobi. Mechanizm tej reakcji jest słabo poznany; prawdopodobnie są to dwie sprzężone reakcje oscylacyjne. 
 
 W przykładowej  reakcji  miesza się trzy wyjściowe roztwory wodne, które zaraz po zmieszaniu dają barwę zieloną, która po chwili przechodzi w niebieską, purpurową, czerwoną aż do powrotu do zieleni. Roztworami tymi są:
 
@@ -153,8 +136,8 @@ Stężenie początkowych roztworów jest tak dobrane, aby najpierw zaszła szybk
 
 
 
-2. Równania kinetyczne: oregonator  
-------------------------------------
+Równania kinetyczne: oregonator  
+-------------------------------
 
 W literaturze opis reakcji B\-Ż  nie jest jednolity. Można pogubić się w tym, ile jest reakcji elementarnych, ile istotnych, ile pośrednich, itd. Opisane powyżej wszystkie reakcje chamiczne są trudne do modelowania matematycznego. Jednak praktyka i doświadczenie w modelowaniu  pokazuje, że należy uwzględnić tylko najbardziej istotne elementy jakie pojawiają się w powyższych reakcjach. Innymi słowy, należy umiejętnie zredukować ilość reakcji i sformułować efektywne reakcje. Jeden z takich zredukowanych modeli został opracowany przez Fielda, Korosa i  Noyesa (1974)  z  University of  Oregon. Dlatego nazywa się "oregonatorem" lub mechanizmem FKN. Jest zbudowany z 5 elementarnych reakcji jakie pojawiają sie w reakcjach Biełousowa\-Żabotyńskiego.  Niech student/studentka (hm, nie jestem pewien: jeżeli minister/ministra to może student/studenta??)  postara się je odszukać w powyższym gąszczu i porówna z poniżej zaprezentowanymi 5 reakcjami.   Wprowadźmy oznaczenia dla odpowiednich stężeń:
 
@@ -167,40 +150,19 @@ X = [HBrO :sub:`2` ] ,     Y = [Br :sup:`−` ],        Z = [Ce :sup:`4+`],     
 Koncentracje A,  B oraz P  nie zmieniają się (lub zmieniają sie bardzo wolno w porównaniu do zamian stężeń X, Y oraz Z.   Efektywne reakcje to reakcje:
 
 
-*A\+Y → X \+P* w tempie :math:`k_1`
+A\+Y → X \+P w tempie :math:`k_1`
 
+X \+ Y → 2P w tempie :math:`k_2`
 
-**
-
-
-*X \+ Y → 2P
-
-w tempie :math:`k_2`
-
-**
-
-
-*A \+ X → 2X \+ 2Z
-
-w tempie :math:`k_3`
+A \+ X → 2X \+ 2Z w tempie :math:`k_3`
   
-  
+2X → A \+ P w tempie :math:`k_4`
 
-2X → A \+ P
-
-w tempie :math:`k_4`
-
-**
+B \+ Z →  u Y w tempie :math:`k_5`
 
 
-*B \+ Z →  u Y
 
-w tempie :math:`k_5`
-
-**
-
-
-Symbol u w ostatniej reakcji to  **współczynnik stechiometryczny (** liczba przypisana do określonego reagenta określająca proporcję w jakiej uczestniczy on w reakcji w stosunku do innych reagentów).
+Symbol u w ostatniej reakcji to  **współczynnik stechiometryczny** (liczba przypisana do określonego reagenta określająca proporcję w jakiej uczestniczy on w reakcji w stosunku do innych reagentów).
 
 
 Uwaga: W prawie wszystkich źródłach (ksiązkach, pracach, in ternecie), używa się oznaczenia f na ten współczynnik. Ale  my rezerwujemy f do tradycyjnego oznaczania funkcji.
@@ -214,7 +176,9 @@ Odpowiedznie równania kinetyczne są postaci:
 
 .. MATH::
 
-    \frac{dX}{dt} =  k_1  A  Y − k_2  X  Y + k_3  A  X − k_4  X^ 2 , \quad \quad \frac{dY}{dt} =  −k_1  A  Y − k_2  X  Y + u  k_5  B  Z , \quad \quad \frac{dZ}{dt} =  2  k_3  A  X − k_5  B  Z
+    \begin{array}{l}
+    \frac{dX}{dt} =  k_1  A  Y − k_2  X  Y + k_3  A  X − k_4  X^ 2 , \\ \frac{dY}{dt} =  −k_1  A  Y − k_2  X  Y + u  k_5  B  Z , \\ \frac{dZ}{dt} =  2  k_3  A  X − k_5  B  Z
+    \end{array}
 
 
 Należy te równania przeskalować do nowych zmiennych
@@ -230,7 +194,9 @@ gdzie
 
 .. MATH::
 
-    X_0=\frac{k_3 A}{k_4}, \quad \quad Y_0=\frac{k_3 A}{k_2}, \quad \quad Z_0=\frac{ (k_3 A)^2}{k_4 k_5 B}, \quad \quad t_0=\frac{1}{k_5 B}, \quad \quad  c=\frac{k_5 B}{k_3 A}, \quad \quad  \delta =\frac{k_4 k_5 B}{k_2 k_3 A}, \quad \quad q=\frac{k_1 k_4}{k_2 k_3}
+    \begin{array}{l}
+    X_0=\frac{k_3 A}{k_4}, \quad \quad Y_0=\frac{k_3 A}{k_2}, \quad \quad Z_0=\frac{ (k_3 A)^2}{k_4 k_5 B}, \\ t_0=\frac{1}{k_5 B}, \quad \quad  c=\frac{k_5 B}{k_3 A}, \quad \quad  \delta =\frac{k_4 k_5 B}{k_2 k_3 A}, \quad \quad q=\frac{k_1 k_4}{k_2 k_3}
+    \end{array}
 
 
 Przeskalowane równania redukują się do postaci zwanej "oregonatorem":
@@ -238,7 +204,9 @@ Przeskalowane równania redukują się do postaci zwanej "oregonatorem":
 
 .. MATH::
 
-      c \, \frac{dx}{d\tau}= q y -x y + x(1 - x) \equiv f(x, y, z), \quad \quad \quad \delta\,  \frac{dy}{d\tau} = -q y - x y +u z \equiv g(x, y, z), \quad \quad \quad \frac{dz}{d\tau} = x-z \equiv h(x, y, z)\quad \quad \quad \quad \mbox{<span style="color: #ff0000;"><strong>OREGONATOR</strong></span>}
+    \begin{array}{l}
+      c \, \frac{dx}{d\tau}= q y -x y + x(1 - x) \equiv f(x, y, z), \\ \delta\,  \frac{dy}{d\tau} = -q y - x y +u z \equiv g(x, y, z), \\ \frac{dz}{d\tau} = x-z \equiv h(x, y, z) \quad \mbox{OREGONATOR}
+    \end{array}
 
 
 Ta postać równań jest powszechnie stosowana do opisu reakcji B-Ż. W równanich tych występują 4 parametry: :math:`c, q, \delta, u`. Rząd ich wielkości jest następujący:
@@ -249,7 +217,7 @@ Ta postać równań jest powszechnie stosowana do opisu reakcji B-Ż. W równani
      c = 5 \times 10^{-5}, \quad q = 8 \times 10^{-4}, \quad  \delta = 2 \times 10^{-4}, \quad  u =1
 
 
-Znalazłem też taki zestaw danych (patrz:  `http://www.rose\-hulman.edu/search.aspx?q=bielousov <http://www.rose-hulman.edu/search.aspx?q=bielousov>`_ ):
+Znalazłem też taki zestaw danych (patrz:  `http://www.rose\-hulman.edu/search.aspx?q=bielousov <http://www.rose-hulman.edu/search.aspx?q=bielousov>`_):
 
 
 
@@ -281,7 +249,7 @@ Reakcje opisywane za pomocą "oregonatora" posiadają bogactwo własności dynam
 Okazuje się, że oryginalny  "oregonator" przedstawiony tutaj, nie wykazuje własności chaotycznych.  Oznacza to,  że własności 3 oraz 4 nie można zaobserwować dla tego modelu. W 1992 roku, zaproponowano zmodyfikowany model reakcji    B\-Ż który wykazuje chaos. Szczegóły można znależć w oryginalnej pracy:
 
 
-L. Gyorgyi and  R. J.  Field,  (1992) A Three\-Variable Model of Deterministic Chaos in the Belousov\-Zhabotinsky Reaction. Nature, 355, 808\-810.
+L. Gyorgyi and  R. J.  Field,  (1992) *A Three\-Variable Model of Deterministic Chaos in the Belousov\-Zhabotinsky Reaction*. Nature, 355, 808\-810.
 
 
 
@@ -350,7 +318,7 @@ Ponieważ wielkości stacjonarne to stężenia stacjonarne, więc są one dodatn
 
 .. MATH::
 
-    x_1=  z_1 = \frac{1}{2} \left\{(1 - q - u) + \sqrt{\Delta}\right\} \quad \quad \quad \mbox{oraz } \quad\quad\quad y_1 = \frac{ u x_1}{q+x_1},
+    x_1=  z_1 = \frac{1}{2} \left\{(1 - q - u) + \sqrt{\Delta}\right\} \quad \quad \quad \mbox{oraz } \quad\quad\quad y_1 = \frac{ u x_1}{q+x_1}
 
 
 Badanie stabilności powyższych stanów stacjonarnych wymaga wyznaczenia wartości własnych macierzy Jacobiego, której wymiar wynosi 3. Oznacza to, że otrzymujemy wielomian  3-stopnia dla wartości własnej :math:`\lambda`. Mamy kilka możliwości:
@@ -365,7 +333,7 @@ Badanie stabilności powyższych stanów stacjonarnych wymaga wyznaczenia warto�
 (c) zastosować SAGE \- i to jest to!
 
 
-Bedziemy badać stabilność niezerowego stanu stacjonarnego. W stanie tym ustala się stężenie trzech składników: X = [HBrO:math:`_2` ] ,     Y = [Br:math:`^−` ],        Z = [Ce:math:`^{4+}`].
+Bedziemy badać stabilność niezerowego stanu stacjonarnego. W stanie tym ustala się stężenie trzech składników: X = [HBrO :sub:`2` ] ,     Y = [Br :sup:`−` ],        Z = [Ce :sup:`4+` ].
 
 
 Poniżej jest program, który możemy wykorzystać  do "zabawy" jednocześnie się ucząc. Możemy zmieniać wartości różnych parametrów i warunków początkowych. Pamiętajmy, że stacjonarne wartości :math:`x`  oraz  :math:`z`  są sobie zawsze równe: :math:`x=z`. Natomiast wartość :math:`y` jest na ogół różniąca się.
@@ -427,8 +395,8 @@ Powyżej przedstawiony jest przebieg czasowy koncentracji substancji :math:`x` o
 Aby dołączyć do rysunku ewolucję zmiennej :math:`y` należy w oknie powyżej zlikwidować symbol  # #  w dolnej linii. Czasami wartość :math:`y` jest bardzo duża w relacji do pozostałych. W tym przypadku lepiej nie dokładać wykresu dla :math:`y`.
 
 
-W poniższym oknie możemy obserwować kształt krzywej fazowej dla paramatrów z okna pierwszego i drugiego. 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**W poniższym oknie możemy obserwować kształt krzywej fazowej dla paramatrów z okna pierwszego i drugiego.**
+
 
 Zamkniętej krzywej fazowej odpowiadają rozwiązania periodyczne. W takim reżimie można obserwować oscylacje, które  w 1951 roku odkrył Biełousow.
 
@@ -478,15 +446,16 @@ i  dlatego dokonamy przybliżenia :math:`\delta  \approx 0`.  Wówczas równania
 Z drugiego równania wyznaczamy zmienną :math:`y`: 
 
 .. MATH::    
+   :label: BZ1
 
-   y = \frac{u z}{q+x}  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  (\*)   
+   y = \frac{u z}{q+x}
 
 
 i wstawiamy do pierwszego równania otrzymując układ zredukowany: 
 
 .. MATH::    
 
-   c  \frac{dx}{d\tau}= x (1 - x) + u  z  \frac{q - x}{q + x} \equiv F(x, z),  \quad \quad \quad \frac{dz}{d\tau} = x-z  = \equiv H(x, z) \quad \quad \quad \quad \mbox{zredukowany układ} 
+   c  \frac{dx}{d\tau}= x (1 - x) + u  z  \frac{q - x}{q + x} \equiv F(x, z),  \quad \quad \quad \frac{dz}{d\tau} = x-z  = \equiv H(x, z) \quad \quad \quad \mbox{zredukowany układ} 
 
 
 Stany stacjonarne tego układu pokrywają się ze stanami stacjonarnymi pełnego układu.  
@@ -500,11 +469,12 @@ Tak więc mamy stan stacjonarmy:
 Drugi stan stacjonarny określony jest  przez równania: 
 
 .. MATH::
+   :label: BZ2
 
-   1-x + u    \frac {q-x}{q+x} = 0,  \quad \quad \quad z=x \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad (\*\*)  
+   1-x + u    \frac {q-x}{q+x} = 0,  \quad \quad \quad z=x
 
 
-Stan dla :math:`y` jest wyznaczony przez równanie :math:`(*)`.  Aby zbadać stabilność stanu określonego przez równanie :math:`(**)`, musimy zbadać wartości własne macierzy Jacobiego: 
+Stan dla :math:`y` jest wyznaczony przez równanie :eq:`BZ1`.  Aby zbadać stabilność stanu określonego przez równanie :eq:`BZ2`, musimy zbadać wartości własne macierzy Jacobiego: 
     
 .. MATH::
 
@@ -530,36 +500,37 @@ Stąd  otrzymujemy równanie dla :math:`\lambda`. Jest to równanie kwadratowe:
    \lambda ^2 - (A+D)  \lambda + (A D - B C) = 0  
 
     
-Zauważamy, że :math:`A+D` to ślad macierzy Jacobiego :math:`Tr J` , a wielkość :math:`A D - B C` to wyznacznik macierzy :math:`Det J`, czyli równanie to przepiszemy w postaci: 
+Zauważamy, że :math:`A+D` to ślad macierzy Jacobiego :math:`{\text Tr} J` , a wielkość :math:`A D - B C` to wyznacznik macierzy :math:`{\text Det} J`, czyli równanie to przepiszemy w postaci: 
     
 .. MATH::
 
-   \lambda ^2 - (Tr J)  \lambda + (Det J) = 0  
+   \lambda ^2 - ({\text Tr} J)  \lambda + ({\text Det} J) = 0  
 
    
 Pierwiastki tego równania są dane przez wzór: 
     
 .. MATH::
 
-   \lambda_{1/2} = (1/2) \left[ Tr J \pm \sqrt{ (Tr J)^2 - 4 (Det J)}\right] 
+   \lambda_{1/2} = (1/2) \left[ {\text Tr} J \pm \sqrt{ ({\text Tr} J)^2 - 4 ({\text Det} J)}\right] 
 
 
 Jeżeli  przy zmianie parametrów pojawiają się  relacje
 
 .. MATH::
 
-   Tr J = 0 \quad \quad \quad \mbox{oraz} \quad \quad \quad Det J \gt  0 
+   {\text Tr} J = 0 \quad \quad \quad \mbox{oraz} \quad \quad \quad {\text Det} J \gt  0 
 
      
 to dwie wartości własne stają się liczbami urojonymi, czyli obserwuje się  **bifurkację Hopfa.**
-Obliczamy pochodne cząstkowe funkcji :math:`F` oraz :math:`H`. Warunek :math:`Tr J = 0` ma postać
+Obliczamy pochodne cząstkowe funkcji :math:`F` oraz :math:`H`. Warunek :math:`{\text Tr} J = 0` ma postać
 
 .. MATH::
+   :label: BZ3
 
-   c=1-2 x - \frac{2u q x}{(q + x)^2} \quad \quad \quad \quad \quad \quad  \quad \quad \quad \quad \quad \quad (\*\*\*) 
+   c=1-2 x - \frac{2u q x}{(q + x)^2}
 
 
-gdzie :math:`x` jest wyznaczone przez równanie (**).  Te dwa równanie, przy naszej ustalonej wartości :math:`q = 0.0008`, wyznaczają granicę rozwiązań oscylacyjnych. Na płaszczyźnie (u, c) otrzymujemy diagram bifurkacyjny dla zredukowanego układu.  Dla wartości  :math:`(u \gt  0,  c \gt  0)`  między krzywą a osią poziomą pojawiają się oscylacje. Jak widać z poniższego wykresu, zwiększanie  wartości :math:`q` powoduje zmiejszanie się obszaru  parametrów :math:`(u, c)` dla których pojawiają się oscylacje.  Powyżej   pewnej wartości krytycznej :math:` q \gt   q_c`  oscylacje zanikają całkowicie.
+gdzie :math:`x` jest wyznaczone przez równanie :eq:`BZ2`.  Te dwa równanie, przy naszej ustalonej wartości :math:`q = 0.0008`, wyznaczają granicę rozwiązań oscylacyjnych. Na płaszczyźnie (u, c) otrzymujemy diagram bifurkacyjny dla zredukowanego układu.  Dla wartości  :math:`(u \gt  0,  c \gt  0)`  między krzywą a osią poziomą pojawiają się oscylacje. Jak widać z poniższego wykresu, zwiększanie  wartości :math:`q` powoduje zmiejszanie się obszaru  parametrów :math:`(u, c)` dla których pojawiają się oscylacje.  Powyżej   pewnej wartości krytycznej :math:`q \gt   q_c`  oscylacje zanikają całkowicie.
 
 
 
@@ -582,8 +553,9 @@ gdzie :math:`x` jest wyznaczone przez równanie (**).  Te dwa równanie, przy na
 
 .. end of output
 
-Wyprowadzenie powyższych wzorów wykorzystując algebrę komputerową:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Wyprowadzenie powyższych wzorów wykorzystując algebrę komputerową:**
+
 
 .. code-block:: python
 
@@ -596,7 +568,9 @@ Wyprowadzenie powyższych wzorów wykorzystując algebrę komputerową:
     sage: show(J.trace())
     sage: Tr(u,q,c) = J.trace().subs({x:x0,z:x0})
     sage: C(u,q) = Tr(u,q,c).solve(c)[0].rhs().simplify()
-    Tr(J) łatwo rozwiazać na c!
+
+
+Tr(J) łatwo rozwiazać na c!
 
 .. MATH::
 
@@ -615,7 +589,7 @@ Wyprowadzenie powyższych wzorów wykorzystując algebrę komputerową:
 
 .. end of output
 
-Obszar pod czerwoną krzywą zawiera miejsca gdzie Tr(J)\gt 0 co sugeruje oscylacje (punkt stały jest niestabilny).
+Obszar pod czerwoną krzywą zawiera miejsca gdzie Tr(J)>0 co sugeruje oscylacje (punkt stały jest niestabilny).
 
 
 .. code-block:: python
@@ -694,7 +668,7 @@ Demostracja użycia CAS do selektywnego uproszczenia wzorów
     sage: show(sum( (-tr.operands()[0].operands()[0]).operands()[0:2] ).factor() )
     sage: print "Ma być:"
     sage: show( 1-2*x - 2*u*q*x/(q + x)^2 )
-    Ma być:
+
 
 .. MATH::
 
@@ -731,6 +705,8 @@ Demostracja użycia CAS do selektywnego uproszczenia wzorów
     -\frac{2 \, q u x}{{\left(q + x\right)}^{2}}
 
 
+Ma być:
+
 .. MATH::
 
     -\frac{2 \, q u x}{{\left(q + x\right)}^{2}} - 2 \, x + 1
@@ -756,7 +732,7 @@ Diagram bifurkacyjny układu zredukowanego :math:`x^*(q)`
 
 .. end of output
 
-Narysujmy jak zmienia sie punkt stały z :math:`q` przy ustalonych pozostałych parametrach. Kolorem czerwonym zaznaczamy punkt stały niestabilny (:math:`TrJ\gt 0`) a niebieskim stabilny.
+Narysujmy jak zmienia sie punkt stały z :math:`q` przy ustalonych pozostałych parametrach. Kolorem czerwonym zaznaczamy punkt stały niestabilny (:math:`{\text Tr} J \gt 0`) a niebieskim stabilny.
 
 
 .. code-block:: python
@@ -839,7 +815,9 @@ Powtarzając poprzedni algorytm, jeśli punkt jest niestabilny
     sage: X = sol[sol.shape[0]/2:,0]#- x0.subs(pars).n()
     sage: print X.min(),X.max()
     sage: list_plot(list(X))
-    0.0500712624079 0.506595108388
+
+
+0.0500712624079 0.506595108388
 
 .. image:: iCSE_BProcnielin08_z161_BZ_media/cell_63_sage0.png
     :align: center
@@ -963,7 +941,8 @@ Porównanie układu 2d i 3d:
 .. end of output
 
 
-
+.. image:: iCSE_BProcnielin08_z161_BZ_media/indeks.jpeg
+    :align: center
 
 
 .. code-block:: python
@@ -977,8 +956,14 @@ Porównanie układu 2d i 3d:
 .. code-block:: python
 
     sage: html.table(fp_n  )
-    <html>...</html>
 
+
+\ 
+    ====================  =====================
+    −0.604242327531896     −0.604242327531896
+     0.00344232753189605    0.00344232753189605
+     0.000000000000000      0.000000000000000
+    ====================  =====================
 
 .. end of output
 
@@ -1011,15 +996,11 @@ Porównanie układu 2d i 3d:
     ...       
     ...       print map(N,A.eigenvalues())
     ...       print A.eigenvectors_right()
-    -0.604242327531896 -0.604242327531896
-    [55.3183153770813, 0.000000000000000]
-    [(56480/1021, [], 1), (0, [(0, 1)], 1)]
-    0.00344232753189605 0.00344232753189605
-    [12.5866900175131, 0.000000000000000]
-    [(7187/571, [], 1), (0, [(0, 1)], 1)]
-    0.000000000000000 0.000000000000000
-    [0.000000000000000, 25.0000000000000]
-    [(0, [(0, 1)], 1), (25, [(1, 1/25)], 1)]
+
+
+
+
+-0.604242327531896 -0.604242327531896
 
 .. MATH::
 
@@ -1028,12 +1009,24 @@ Porównanie układu 2d i 3d:
     1 & 0
     \end{array}\right)
 
+
+[55.3183153770813, 0.000000000000000]
+[(56480/1021, [], 1), (0, [(0, 1)], 1)]
+
+0.00344232753189605 0.00344232753189605
+
 .. MATH::
 
     \left(\begin{array}{rr}
     12.5866898308665 & 0.000000000000000 \\
     1 & 0
     \end{array}\right)
+
+
+[12.5866900175131, 0.000000000000000]
+[(7187/571, [], 1), (0, [(0, 1)], 1)]
+
+0.000000000000000 0.000000000000000
 
 .. MATH::
 
@@ -1042,25 +1035,36 @@ Porównanie układu 2d i 3d:
     1 & 0
     \end{array}\right)
 
+
+[0.000000000000000, 25.0000000000000]
+[(0, [(0, 1)], 1), (25, [(1, 1/25)], 1)]
+
+
 .. end of output
 
 .. code-block:: python
 
     sage: m=matrix(QQ,[[12.5966,0],[1,0]])
     sage: m
-    [62983/5000          0]
-    [         1          0]
+
+
+| [62983/5000          0]
+| [         1          0]
+
 
 .. end of output
 
 .. code-block:: python
 
     sage: m.eigenvectors_right()
-    [(62983/5000, [
-    (1, 5000/62983)
-    ], 1), (0, [
-    (0, 1)
-    ], 1)]
+
+
+| [(62983/5000, [
+| (1, 5000/62983)
+| ], 1), (0, [
+| (0, 1)
+| ], 1)]
+
 
 .. end of output
 
@@ -1099,10 +1103,16 @@ Rozwiązania spiralne w układzie reakcji z dyfuzją (Bielousow\-Zabotyński)
     sage: plt_phase = vfield+line(sol,color='red',figsize=5)
     sage: plt_time = line(zip(t,sol[:,0]),figsize=5)
     sage: html.table([[plt_phase,plt_time]])
-    <html>...</html>
-
 
 .. end of output
+
+
+.. image:: iCSE_BProcnielin08_z161_BZ_media/cell_65_sage0.png
+    :align: center
+
+.. image:: iCSE_BProcnielin08_z161_BZ_media/cell_65_sage1.png
+    :align: center
+
 
 .. code-block:: python
 
@@ -1171,10 +1181,12 @@ Rozwiązania spiralne w układzie reakcji z dyfuzją (Bielousow\-Zabotyński)
     ...       essential_boundary_conditions(u)
     ...       
     sage: print "Saved ",len(Tlst), " from ", Nsteps
-    dt,dt_dyn 0.0205688066136624 0.111111111111111
-    sps= 48 dt= 0.0205688066136624 Nsteps= 4800
-    Saved  100  from  4800
-    CPU time: 9.54 s,  Wall time: 9.54 s
+
+
+| dt,dt_dyn 0.0205688066136624 0.111111111111111
+| sps= 48 dt= 0.0205688066136624 Nsteps= 4800
+| Saved  100  from  4800
+| CPU time: 9.54 s,  Wall time: 9.54 s
 
 .. end of output
 
@@ -1182,6 +1194,10 @@ Rozwiązania spiralne w układzie reakcji z dyfuzją (Bielousow\-Zabotyński)
 
     sage: anim=animate([matrix_plot(u,cmap='jet',figsize=(4,4)) for u in Tlst[:]])
     sage: anim.show()
+
+
+.. image:: iCSE_BProcnielin08_z161_BZ_media/cell_70_sage0.gif
+    :align: center
 
 
 .. end of output
@@ -1201,7 +1217,7 @@ Rozwiązania spiralne w układzie reakcji z dyfuzją (Bielousow\-Zabotyński)
     ...       else:
     ...           p =  matrix_plot(Tlst[ti])
     ...           p.show(figsize=(4,4))
-    <html>...</html>
+
 
 
 .. end of output
