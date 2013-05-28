@@ -92,10 +92,20 @@ Rozwiązaniem 2\-wymiarowego równania dyfuzji jest funkcja
 
     sage: times = [.1,0.4,0.9]
     sage: html.table([["t=%0.2f"%t for t in times],[plt_t(t) for t in times]])
-    <html>...</html>
 
 
 .. end of output
+
+
+
+.. image:: iCSE_BProcnielin05_z125_reakcja_dyfuzja_media/cell_6_sage0.png
+    :align: center
+
+.. image:: iCSE_BProcnielin05_z125_reakcja_dyfuzja_media/cell_6_sage1.png
+    :align: center
+
+.. image:: iCSE_BProcnielin05_z125_reakcja_dyfuzja_media/cell_6_sage2.png
+    :align: center
 
 
 Wszystkie dotychczas rozważane modele (Malthusa, Verhuslta,  autokatalizy, Lotki\-Volterry, Maya, Biełousowa\-Żabotyńskiego) mogą być  uogólnione na przypadek przestrzennych zmian. Dla przykładu, jeżeli  równanie dynamiki populacyjnej ma postać
@@ -114,7 +124,7 @@ to odpowiednie równanie uwzględniające proces dyfuzji ma postać
     \frac{\partial N(\vec r, t)}{\partial t} = F(N(\vec r, t) ) +  D  \Delta N(\vec r, t)
 
 
-gdzie w zależności od zagadnienia, laplasjan jest w jednym, dwóch lub trzech wymiarach.   ***Tego typu równanie nazywa się równaniem reakcji\-dyfuzji.***
+gdzie w zależności od zagadnienia, laplasjan jest w jednym, dwóch lub trzech wymiarach.  **Tego typu równanie nazywa się równaniem reakcji\-dyfuzji.**
 
 
 Rozważamy poniżej dwa modele: model Malthusa i model Verhulsta.
@@ -123,8 +133,8 @@ Rozważamy poniżej dwa modele: model Malthusa i model Verhulsta.
 
 
 
-Model Malthusa z migracją (Równanie Skellama)
-=============================================
+Model Malthusa z migracją: Równanie Skellama
+============================================
 
 
 
@@ -151,18 +161,11 @@ gdzie teraz :math:`N(x, y,  t)` ma interpretację koncentracji populacji  (subst
 .. image:: http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bisamratte-drawing.jpg/250px-Bisamratte-drawing.jpg
     :align: center
 
-<http://pl.wikipedia.org/w/index.php?title=Plik:Bisamratte-drawing.jpg&filetimestamp=20041114193425>`_
-
-.. image:: http://bits.wikimedia.org/static-1.21wmf6/skins/common/images/magnify-clip.png
-    :align: center
-
-<http://pl.wikipedia.org/w/index.php?title=Plik:Bisamratte-drawing.jpg&filetimestamp=20041114193425>`_
+`<http://pl.wikipedia.org/w/index.php?title=Plik:Bisamratte-drawing.jpg&filetimestamp=20041114193425>`_
 
 
 
 Do Europy  piżmaki sprowadzone zostały na początku XX w. z  Ameryki  Północnej  przez księcia Colloredo\-Mansfelda jako zwierzę futerkowe.   Cała dzisiejsza europejska populacja  dziko żyjących piżmaków pochodzi  od kilku osobników, które w 1905 roku uciekły z  farmy  położonej w  Czechach, 40 km na południowy zachód od Pragi.   Na ziemiach polskich  pojawił się w latach 30. XX w.
-
-
 
 
 
@@ -346,7 +349,8 @@ Analiza równania Fishera\-Kołmogorowa
     \tau = rt, \quad \quad y^2=\frac{r}{D} x^2, \quad \quad n(x,t) \equiv  c(y, \tau)
 
 
-Przeskalowana koncentracja spełnia równanie
+\ 
+  Przeskalowana koncentracja spełnia równanie
 
 
 .. MATH::
@@ -354,9 +358,8 @@ Przeskalowana koncentracja spełnia równanie
     \frac{\partial c }{\partial \tau} =  c  [1-  c ] + \frac{\partial^2  c}{\partial y^2}, \quad \quad c=c(y, \tau)
 
 
-Funkcje :math:`c=0` oraz :math:`c=1` są rozwiązaniami stacjonarnymi.
-
-
+\ 
+  Funkcje :math:`c=0` oraz :math:`c=1` są rozwiązaniami stacjonarnymi.
 
 
 
@@ -368,10 +371,12 @@ Funkcje :math:`c=0` oraz :math:`c=1` są rozwiązaniami stacjonarnymi.
     c(y, \tau) = U(z), \quad \mbox{gdzie } \quad z=y-v_0 \tau
 
 
-Oznacza to, że fala przesuwa się w prawo z prędkością :math:`v_0`.  Często mówi się, że  front falowy koncentracji porusza się w prawo z prędkością :math:`v_0`.
+
+\ 
+  Oznacza to, że fala przesuwa się w prawo z prędkością :math:`v_0`.  Często mówi się, że  front falowy koncentracji porusza się w prawo z prędkością :math:`v_0`.
 
 
-Zauważamy, że
+  Zauważamy, że
 
 
 .. MATH::
@@ -389,7 +394,8 @@ Zauważamy, że
      \frac{\partial ^2 c }{\partial y^2} = \frac{\partial^2 U }{\partial y^2} = \frac{d ^2U }{d z^2}
 
 
-Stąd, nowa funkcja :math:`U(z)` spełnia równanie różniczkowe zwyczajne drugiego rzędu:
+\ 
+  Stąd, nowa funkcja :math:`U(z)` spełnia równanie różniczkowe zwyczajne drugiego rzędu:
 
 
 .. MATH::
@@ -397,7 +403,8 @@ Stąd, nowa funkcja :math:`U(z)` spełnia równanie różniczkowe zwyczajne drug
     U'' + v_0 U' + U(1-U)=0
 
 
-Jest ono równoważne układowi 2 równań:
+\ 
+  Jest ono równoważne układowi 2 równań:
 
 
 .. MATH::
@@ -405,7 +412,8 @@ Jest ono równoważne układowi 2 równań:
     U'=V = F(U, V), \quad \quad V'=-v_0 - U(1-U) = G(U, V)
 
 
-Stany stacjonarne określone są przez pierwiastki równań:
+\ 
+  Stany stacjonarne określone są przez pierwiastki równań:
 
 
 .. MATH::
@@ -413,7 +421,8 @@ Stany stacjonarne określone są przez pierwiastki równań:
      F(U, V) = 0, \quad \quad  G(U, V) = 0,
 
 
-stąd otrzymujemy 2 par rozwiązań
+\ 
+  stąd otrzymujemy 2 par rozwiązań
 
 .. MATH::
 
@@ -429,7 +438,8 @@ stąd otrzymujemy 2 par rozwiązań
     \quad \quad \quad \quad J = \begin{bmatrix}\frac{ \partial F}{\partial U}&  \frac{\partial F}{\partial V}\\ \frac{\partial  G}{\partial U}&  \frac{\partial Gg}{\partial V}  \end{bmatrix}= \begin{bmatrix}0,  &  1\\ -1+2U,  &  -v_0  \end{bmatrix}
 
 
-w punktach stacjonarnych:
+\ 
+  w punktach stacjonarnych:
 
 .. MATH::
 
@@ -447,7 +457,8 @@ w punktach stacjonarnych:
      \lambda_{\pm}(0, 0) = (1/2)[-v_0\pm\sqrt{v_0^2-4}]
 
 
-Należy rozważyć 2 przypadki: :math:`v_0 \lt  2` oraz :math:`v_0 \ge 2`. Pierwszy przypadek należy odrzucić, ponieważ wartości własne są zespolone, o rzeczywistej części ujemnej i krzywe fazowe tworzą spiralę wokół punktu :math:`(0, 0)`. Ale to oznacza, że :math:`U`  przyjmuje także ujemne wartości, co nie jest dopuszczalne (koncentracje populacji mogą być tylko dodatnie lub zerowe). Pozostaje tylko drugi przypadek:
+\ 
+ Należy rozważyć 2 przypadki: :math:`v_0 \lt  2` oraz :math:`v_0 \ge 2`. Pierwszy przypadek należy odrzucić, ponieważ wartości własne są zespolone, o rzeczywistej części ujemnej i krzywe fazowe tworzą spiralę wokół punktu :math:`(0, 0)`. Ale to oznacza, że :math:`U`  przyjmuje także ujemne wartości, co nie jest dopuszczalne (koncentracje populacji mogą być tylko dodatnie lub zerowe). Pozostaje tylko drugi przypadek:
 
 
 .. MATH::
@@ -455,7 +466,7 @@ Należy rozważyć 2 przypadki: :math:`v_0 \lt  2` oraz :math:`v_0 \ge 2`. Pierw
     v_0 \ge 2
 
 
-(b)    dla :math:`(1, 0)` otrzymujemy: :math:` \lambda_{\pm}(1, 0) = (1/2)[-v_0\pm\sqrt{v_0^2+4}]`.  Ponieważ jedna  z wartości własnych jest dodatnia, ten stan stacjonarny jest niestabilny (jest to stan stacjonarny typu siodło).
+(b)    dla :math:`(1, 0)` otrzymujemy: :math:`\lambda_{\pm}(1, 0) = (1/2)[-v_0\pm\sqrt{v_0^2+4}]`.  Ponieważ jedna  z wartości własnych jest dodatnia, ten stan stacjonarny jest niestabilny (jest to stan stacjonarny typu siodło).
 
 
 

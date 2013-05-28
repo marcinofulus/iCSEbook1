@@ -1,6 +1,9 @@
 .. -*- coding: utf-8 -*-
 
 
+Model Hodgkinga\-Huxleya  \- numeryka
+======================================
+
 .. code-block:: python
 
     sage: var('C,g_Na,m,h,g_K,G_L,V,E_Na,n,E_K,E_L,I_ext')
@@ -23,8 +26,11 @@
     sage: pars.remove(n)
     sage: pars.remove(h)
     sage: print pars
-    [C, E_K, E_L, E_Na, G_L, I_ext, V, g_K, g_Na, h, m, n]
-    [C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
+
+
+| [C, E_K, E_L, E_Na, G_L, I_ext, V, g_K, g_Na, h, m, n]
+| [C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
+
 
 .. end of output
 
@@ -100,7 +106,10 @@ gdzie :math:`g_{Na}` jest maksymalną wartościa przewodności jonów sodowych.
 .. code-block:: python
 
     sage: pars
-    [C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
+    
+
+[C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
+
 
 .. end of output
 
@@ -111,22 +120,22 @@ gdzie :math:`g_{Na}` jest maksymalną wartościa przewodności jonów sodowych.
 
 .. MATH::
 
-    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
+    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, \\ -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, \\ -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, \\ -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
 
 
 .. MATH::
 
-    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
+    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, \\ -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, \\ -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, \\ -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
 
 
 .. MATH::
 
-    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
+    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, \\ -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, \\ -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, \\ -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
 
 
 .. MATH::
 
-    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
+    \left[\frac{{\left(E_{\mbox{Na}} - V\right)} g_{\mbox{Na}} h m^{3} + {\left(E_{K} - V\right)} g_{K} n^{4} + {\left(E_{L} - V\right)} G_{L} + I_{\mbox{ext}}}{C}, \\ -4 \, m e^{\left(-\frac{1}{18} \, V - \frac{65}{18}\right)} + \frac{{\left(m - 1\right)} {\left(0.100000000000000 \, V + 4.00000000000000\right)}}{e^{\left(-\frac{1}{10} \, V - 4\right)} - 1}, \\ -0.0700000000000000 \, {\left(h - 1\right)} e^{\left(-\frac{1}{20} \, V - \frac{13}{4}\right)} - \frac{h}{e^{\left(-\frac{1}{10} \, V - \frac{7}{2}\right)} + 1}, \\ -0.125000000000000 \, n e^{\left(-\frac{1}{80} \, V - \frac{13}{16}\right)} + \frac{n - 1}{e^{\left(-\frac{1}{10} \, V - \frac{11}{2}\right)} - 1}\right]
 
 
 .. end of output
@@ -143,8 +152,11 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
     sage: set1 = {g_K:36,g_Na:120,E_Na:50,E_K:-77,E_L:-54.4,C:1.0,G_L:0.3,I_ext:0.}
     sage: set2 = {g_K:36,g_Na:120,E_Na:50,E_K:-77,E_L:-54.4,C:1.0,G_L:0.3,I_ext:8000.}
     sage: print [p.subs(set1) for p in pars]
-    [C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
-    [1.00000000000000, -77, -54.4000000000000, 50, 0.300000000000000, 0.000000000000000, 36, 120]
+
+
+| [C, E_K, E_L, E_Na, G_L, I_ext, g_K, g_Na]
+| [1.00000000000000, -77, -54.4000000000000, 50, 0.300000000000000, 0.000000000000000, 36, 120]
+
 
 .. end of output
 
@@ -152,7 +164,10 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
 
     sage: #0<n<1, 0<h<1, 0<m<1 and -77<V<50,
     sage: varlst
-    [V, m, h, n]
+
+
+[V, m, h, n]
+
 
 .. end of output
 
@@ -162,6 +177,9 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
     sage: ic = [10,.5,.5,.5]
     sage: t = srange(0,10,0.1)
     sage: sol=desolve_odeint(f,ic,t,varlst)
+
+
+\ 
      lsoda--  warning..internal t (=r1) and h (=r2) are
            such that in the machine, t + h = t on the next step  
            (h = step size). solver will continue anyway
@@ -212,6 +230,7 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
     Excess work done on this call (perhaps wrong Dfun type).
     Run with full_output = 1 to get quantitative information.
 
+
 .. end of output
 
 .. code-block:: python
@@ -236,8 +255,10 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
 .. code-block:: python
 
     sage: sol[-1]
-    array([  7.67888551e+01,   9.99870103e-01,   8.35248468e-05,
-             9.79176017e-01])
+
+
+array([  7.67888551e+01,   9.99870103e-01,   8.35248468e-05,   9.79176017e-01])
+
 
 .. end of output
 
@@ -256,6 +277,9 @@ e g max K = 36 mS/cm2 and g max Na = 120 mS/cm2 d
     sage: t3 = srange(12,22,0.1)
     sage: ic = sol2[-1]
     sage: sol3=desolve_odeint(f1,ic,t3,varlst)
+
+
+\ 
      lsoda--  warning..internal t (=r1) and h (=r2) are
            such that in the machine, t + h = t on the next step  
            (h = step size). solver will continue anyway

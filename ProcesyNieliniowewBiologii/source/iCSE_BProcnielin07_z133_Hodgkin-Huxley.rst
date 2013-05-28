@@ -5,26 +5,25 @@ Transmisja impulsów nerwowych: Model Hodgkinga\-Huxleya
 =======================================================
 
 
-I. Wstęp: Podstawowe informacje
--------------------------------
+Wstęp: Podstawowe informacje
+----------------------------
 
 Aktywnością organizmu i koordynacją jego czynności  steruje układ nerwowy, który funkcjonuje na zasadzie przekazywania sygnałów z jednej komórki nerwowej do innych komórek nerwowych  lub do komórek mięśniowych albo  gruczołów.   Układ nerwowy ma wśród innych narządów i układów ustroju pozycję centralną i jest ich administratorem i koordynatorem. Każda bowiem czynność czy zadanie wykonywane przez określony narząd lub układ narządów, pozostaje pod jego ścisłym nadzorem. Za pośrednictwem zmysłów, z którymi jest bezpośrednio \- anatomicznie i fizjologicznie \- związany, układ nerwowy zapewnia ustrojowi możliwość komunikowania się ze światem zewnętrznym. Potrafi odbierać z zewnątrz najrozmaitsze bodźce (sygnały, informacje), przewodzić je do własnych ośrodków odczytujących ich treść, selekcjonować i wreszcie \- przetwarzać w zrozumiałe dla siebie pojęcia i wyobrażenia oraz wydawać polecenia zwrotne. Układ nerwowy człowieka w ciągu jednej sekundy odbiera z otoczenia aż 109 bitów informacji. Warto przy tym pamiętać, że do świadomości dociera jednak minimalna ich część, bo jedynie 102 bitów/s. To oznacza, że przytłaczająca większość informacji dociera do mózgu i jest tam przetwarzana w sposób całkowicie nieświadomy.  
  
- Układ nerwowy jest  zbudowany z 2 rodzajów komórek:  
+Układ nerwowy jest  zbudowany z 2 rodzajów komórek:  
  
- 1. nerwowych 
- 2. glejowych.  
+1. nerwowych 
+2. glejowych.  
  
- Komórki glejowe pełnia rolę pomocniczą, tzn. fizjologiczą. Komórki glejowe współtworzą barierę krew\-mózg, pełnią istotną rolę w odżywianiu komórek nerwowych składnikami odżywczymi transportowanymi układem krążenia, syntetyzują wiele istotnych enzymów używanych m.in. do wytwarzania neuroprzekaźników, tworzą osłonki mielinowe aksonów, a nawet pełnią funkcje ochronne.
+Komórki glejowe pełnia rolę pomocniczą, tzn. fizjologiczą. Komórki glejowe współtworzą barierę krew\-mózg, pełnią istotną rolę w odżywianiu komórek nerwowych składnikami odżywczymi transportowanymi układem krążenia, syntetyzują wiele istotnych enzymów używanych m.in. do wytwarzania neuroprzekaźników, tworzą osłonki mielinowe aksonów, a nawet pełnią funkcje ochronne.
 
 
 Komórki nerwowe pełnią rolę zasadniczą. Reagują  one na bodźce zewnętrzne i wewnętrzne,  a następnie przesyłają je do jednostek wykonawczych organizmu. Powstanie bodźca w organizmie jest odpowiedzią na działanie czynników zewnętrznych takich jak światło, dźwięk, temperatura, ciśnienie, związki chemiczne smakowe i zapachowe. Za odbiór tych czynników odpowiedzialne są komórki receptorowe: chemoreceptory (węchowe, smakowe), fotoreceptory (pręciki, czopki) i mechanoreceptory (komórki rzęsate).
 
 
 Komórką  układu nerwowego jest komórka nerwowa \-  neuron.
-   Neuron jest podstawową jednostką  przetwarzania informacji w mózgu.
-   To właśnie ta komórka charakteryzuje się zdolnością do wytwarzania, przekazywania, odbierania i przetwarzania specyficznych sygnałów elektrochemicznych, którym przypisuje się istotne znaczenie w przetwarzaniu informacji o otoczeniu i podejmowaniu decyzji dotyczących reakcji.
-
+**Neuron jest podstawową jednostką  przetwarzania informacji w mózgu.**
+To właśnie ta komórka charakteryzuje się zdolnością do wytwarzania, przekazywania, odbierania i przetwarzania specyficznych sygnałów elektrochemicznych, którym przypisuje się istotne znaczenie w przetwarzaniu informacji o otoczeniu i podejmowaniu decyzji dotyczących reakcji.
 
 
 
@@ -36,7 +35,7 @@ Komórką  układu nerwowego jest komórka nerwowa \-  neuron.
 Powyższy obraz neuronu ukazuje jego uproszczoną budowę. Brakuje tu zaznaczonego jednego ważnego elementu: synapsy,  która jest  miejscem komunikacji błony kończącej akson z błoną komórkową  następnej  komórki nerwowej. Ale tam gdzie jest oznaczenie "Zakończenie aksonów" znajduje sie własnie synapsa (co  z greckiego oznacza połączenie). W  synapsach neurony prawie się stykają . W synapsach elektrycznych przerwa wynosi tylko 2 nanometry. W synapsach chemicznych jest to odlegołość 20 nanometrów.
 
 
-Neurony połączone są ze sobą wzajemnie tworząc sieci, dzięki którym realizowane są funkcje inteligencji, emocji, pamięci i zdolności twórczych. Pojedynczy neuron przyjmuje pobudzenie od ogromnej liczby innych neuronów dochodzącej do tysiąca. Szacuje się, że w mózgu człowieka jest około :math:`10^{11}` neuronów, które oddziałują na siebie poprzez około :math:`10^{15}`  połączeń.
+Neurony połączone są ze sobą wzajemnie tworząc sieci, dzięki którym realizowane są funkcje inteligencji, emocji, pamięci i zdolności twórczych. Pojedynczy neuron przyjmuje pobudzenie od ogromnej liczby innych neuronów dochodzącej do tysiąca. Szacuje się, że w mózgu człowieka jest około 10 :sup:`11` neuronów, które oddziałują na siebie poprzez około 10 :sup:`15`  połączeń.
 
 
 
@@ -52,28 +51,23 @@ Neurony połączone są ze sobą wzajemnie tworząc sieci, dzięki którym reali
 Oto jak w uproszczeniu wygląda schematu propagacji impulsów :
 
 
-.. MATH::
-
-    -----\gt  \mbox{dendryty} \quad  ------\gt  \quad \mbox{ciało komórki} \quad ------\gt  \quad \mbox{akson} ------\gt   \quad \mbox{synapsa} -----\gt  \mbox{dendryty} ------\gt 
+----->  dendryty  ------>  ciało komórki  ------>  akson  ------>  synapsa  ----->  dendryty  ------>
 
 
 Dendryty są łącznikiem z  innymi komórkami (dokładniej z aksonami innych neuronów). Otrzymują impulsy od wielu (od kilku do  wielu tysięcy)  komórek. To jest znak, że jest jakiś bodziec. Ten bodziec w postaci impulsu elektrycznego propaguje się  wzdłuż komórki nerwowej od dentrydów  poprzez  ciało komórkowe i akson do synapsy. Ale impuls musi mieć minimalną wielkość (amplitudę)  aby mógł przekazać informacje do następnej komórki. Model  propagacji takiego impuslu będzie opisany poniżej.
 
 
 
+Model propagacji impulsu
+------------------------
 
-
-II. Model propagacji impulsu
-----------------------------
-
-Gdy dendryt odbierze jeden z bodźców z  drugiej strony   synapsy oddzielającej akson od dendrytu, przez błonę dendrytu zaczynają przepływać miniaturowe prądy elektryczne. Zazwyczaj są to prądy wpływające do wnętrza dendrytu, określane jako pobudzające. Prądy mogą także wypływać na zewnątrz komórki i wtedy nosza nazwę prądów hamujących. Zarówno dodatnie jak i ujemne wahania prądu, powstające w błonach   dendrytów, przepływają do ciała komórkowego. Jeżeli ich suma jest niewielka, prądy takie zanikają i nie uruchamiają dalszych procesów. Jednak jeśli w wyniku ich dodawania zostanie przekroczona określona wartość progowa, to  generowany jest tzw.  potencjał czynnościowy
-  propagujący się wzdłuż aksonu i komórka nerwowa  wyśle wiadomość do innych neuronów.  To działa prawie tak  jak komputer: jest impuls lub nie ma impulsu. Jeżeli jest impuls to jest na plus (czyli \+1), jeżeli nie ma impulsu to jest na minus (czyli \-1). Logika 2\-wartościowa (\+1, \-1) potrafi zrobić wszystko:  potrafi zakodować wszelkie informacje, potrafi wykonywać skomplikowane operacje, ba potrafi się nawet uczyć (są takie algorytmy) . Na tym polega cud działania komórek nerwowych. I nie jest to cud boski, ale zupełnie (przy)ziemski, prozaiczny, prawie banalny (co nie oznacza, że rozumiemy jak działa mózg). Model stworzony przez angielskich uczonych  Hodgkina i Huxleya w 1952 roku opisuje  to w sposób jakościowy.
+Gdy dendryt odbierze jeden z bodźców z  drugiej strony   synapsy oddzielającej akson od dendrytu, przez błonę dendrytu zaczynają przepływać miniaturowe prądy elektryczne. Zazwyczaj są to prądy wpływające do wnętrza dendrytu, określane jako pobudzające. Prądy mogą także wypływać na zewnątrz komórki i wtedy nosza nazwę prądów hamujących. Zarówno dodatnie jak i ujemne wahania prądu, powstające w błonach   dendrytów, przepływają do ciała komórkowego. Jeżeli ich suma jest niewielka, prądy takie zanikają i nie uruchamiają dalszych procesów. Jednak jeśli w wyniku ich dodawania zostanie przekroczona określona wartość progowa, to  generowany jest tzw.  **potencjał czynnościowy** propagujący się wzdłuż aksonu i komórka nerwowa  wyśle wiadomość do innych neuronów.  To działa prawie tak  jak komputer: jest impuls lub nie ma impulsu. Jeżeli jest impuls to jest na plus (czyli \+1), jeżeli nie ma impulsu to jest na minus (czyli \-1). Logika 2\-wartościowa (\+1, \-1) potrafi zrobić wszystko:  potrafi zakodować wszelkie informacje, potrafi wykonywać skomplikowane operacje, ba potrafi się nawet uczyć (są takie algorytmy) . Na tym polega cud działania komórek nerwowych. I nie jest to cud boski, ale zupełnie (przy)ziemski, prozaiczny, prawie banalny (co nie oznacza, że rozumiemy jak działa mózg). Model stworzony przez angielskich uczonych  Hodgkina i Huxleya w 1952 roku opisuje  to w sposób jakościowy.
 
 
 Neuron i jego otocznie wypelnione jest płynem zawierajacym jony: potasu (K\+ ), sodu (Na\+ ), wapnia (Ca\+2 ) i chloru (Cl− ). Pompy jonowe  wypompowują  z komórki jony sodu, a wpompowują jony potasu.  Na zewnątrz komórki istnieje wysoka  koncentracja  Na\+ , Cl− i Ca\+2 . Wewnątrz istnieje wysokie stężenie K\+ oraz ujemnie naładowanych molekuł. Membrana komórkowa, oprócz pomp jonowych, zawiera kanały jonowe. W stanie równowagi, zewnętrzna część  błony komórkowej naładowana jest dodatnio, a wewnętrzna ujemnie. Różnicę potencjałów nazywamy potencjałem spoczynkowym. Typowo waha się on pomiędzy −90 mV  a −65 mV. Jeżeli  sygnał  pobudzający  neuron przekroczy wartość  progową ̧, w neuronie nastąpi generacja tzw. potencjału czynnościowego o wartości około \+40 mV i sygnał  rozchodzi się  w aksonie w postaci fali depolaryzacji  i następującej po niej repolaryzacji o stałej czasowej 1 ms.
 
 
-Przez :math:`V` oznaczymy różnicę  potencjałów pomiędzy wewnętrzną a zewnętrzną  stroną ściany neuronu ( to jest membrana!!). Gradient stężeń danego typu jonów "k"  powoduje powstanie różnicy potencjałów :math:`E_k` (nazywanego potencjałem Nernsta).    Wypadkowym potencjałem jest  :math:`V - E_k` (tzw. potecjał elektrochemiczny). Z praw Ohma otrzymujemy relację dla natężenia prądu danego typu jonów:
+Przez :math:`V` oznaczymy różnicę  potencjałów pomiędzy wewnętrzną a zewnętrzną  stroną ściany neuronu (to jest membrana!!). Gradient stężeń danego typu jonów "k"  powoduje powstanie różnicy potencjałów :math:`E_k` (nazywanego potencjałem Nernsta).    Wypadkowym potencjałem jest  :math:`V - E_k` (tzw. potecjał elektrochemiczny). Z praw Ohma otrzymujemy relację dla natężenia prądu danego typu jonów:
 
 
 .. MATH::
@@ -100,7 +94,6 @@ Z powyższego równania otrzymujemy równanie różniczkowe na zmianę potencja�
 .. MATH::
 
      C \frac{dV}{dt}  = I  - G_{Na} ( V  - E_{Na})  - G_{K} ( V  - E_{K})  - G_{L} ( V  - E_{L})
-
 
 
 
@@ -132,7 +125,8 @@ gdzie :math:`m` można interpretować jako prawdopodobieństwo otwarcia danej br
     G_{Na} = g_{Na}   m^3  h
 
 
-gdzie :math:`g_{Na}` jest maksymalną wartościa przewodności jonów sodowych.
+\ 
+  gdzie :math:`g_{Na}` jest maksymalną wartościa przewodności jonów sodowych.
 
 
 2. Kanał potasowy  składa się z  czterech  bramek typu :math:`"n"`.  Stąd przewodność jonów potasu  jest proporcjonalna do iloczynu :math:`n  n  n  n`:
@@ -143,7 +137,8 @@ gdzie :math:`g_{Na}` jest maksymalną wartościa przewodności jonów sodowych.
     G_{K} = g_{K}   n^4
 
 
-gdzie :math:`g_{K}` jest maksymalną wartościa przewodności jonów potasowych.
+\ 
+  gdzie :math:`g_{K}` jest maksymalną wartościa przewodności jonów potasowych.
 
 
 Dla każdej z bramek otrzymujemy równania kinetyczne podobne to tego powyżej:
@@ -167,7 +162,7 @@ Niestety, to nie koniec modelowania. Okazuje się, że wszystkie szybkości prze
      \alpha_m = \alpha_m(V) ,  \quad  \alpha_h = \alpha_m(V)  , \quad   \alpha_n = \alpha_m(V),  \quad   \beta_m = \beta_m(V)  , \quad \beta_h  = \beta_h(V)  , \quad \beta_n  = \beta_n(V)
 
 
-W oryginalnej  pracy Hodgkina\-Huxleya ( J. Physiol. 117 (1952) 500\-544) podano wyrażenia dla szybkości przejść. Współczesna wersja jest przeskalowana do postaci:
+W oryginalnej  pracy Hodgkina\-Huxleya (J. Physiol. 117 (1952) 500\-544) podano wyrażenia dla szybkości przejść. Współczesna wersja jest przeskalowana do postaci:
 
 
 .. MATH::
@@ -231,8 +226,6 @@ To zamyka teorię Hodgkina-Huxleya. Otrzymujemy układ 4 równań różniczkowyc
 
 
 
-
-
 Typowy zestaw parametrów 
 -------------------------
 
@@ -242,8 +235,6 @@ Typowy zestaw parametrów
     C = 1, \quad \quad g_{Na} = 120, \quad  \quad E_{Na} = 50,   \quad \quad g_{K} = 36, \quad \quad E_{K} =  -77, \quad \quad G_{L} = 0.03, \quad \quad E_{L} = 54.4
 
 
- 
-
 
 .. MATH::
 
@@ -251,4 +242,5 @@ Typowy zestaw parametrów
 
 
 Aby zaobserwować  potencjał czynnościowy należy przyłożyć krótko trwający  prąd  (e.g. :math:`I=8 \mu A/cm^2` przez okres czasu  2ms)  .
+
 

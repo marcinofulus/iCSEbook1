@@ -4,8 +4,8 @@
 Modele oddziałujących populacji: ofiara \- drapieżca
 ====================================================
 
-A. Model Lotki\-Volterry
-------------------------
+Model Lotki\-Volterry
+---------------------
 
 W modelu tym rozważamy 2 populacje: populacja zwana "ofiary" i populacja zwana "drapieżniki" lub drapieżcy. Osobniki jednej  z nich ("ofiary") są (niestety) zjadane przez osobniki drugiej  populacji ("drapieżniki").  "Ofiary" mogą rozmnażać się i umierać śmiercią naturalaną. Ponadto "ofiary" giną śmiercią tragiczną zjadane przez "drapieżników", które to rozmnażają się i umierają śmiercią naturalną (niestety).
 
@@ -222,20 +222,30 @@ Możemy z powyższych  rozwiązań czasowych  otrzymać krzywą fazową jako pun
 Jak wpływa parametr :math:`H_0` na okres oscylacji rozwiązań?   Poniżej pokazujemy wpływ warunków początkowych ( tzn. :math:`H_0`) na okres oscylacji.
 
 
-Jeden warunek początkowy to :math:`(1, 0.8)  --\gt  H1` . Drugi warunek początkowy jest z powyższego przykładu:   :math:`(1, 0.3) --\gt  H2`.
+Jeden warunek początkowy to :math:`(1, 0.8)  --\gt  H1`. Drugi warunek początkowy jest z powyższego przykładu:   :math:`(1, 0.3) --\gt  H2`.
 
 
 .. code-block:: python
 
     sage: H1==2*(1-ln(1)) + 0.8 - ln(0.8)
+
+
+.. MATH::
+
     H1 == 3.02314355131421
+
 
 .. end of output
 
 .. code-block:: python
 
     sage: H2==2*(1-ln(1)) + 0.3 - ln(0.3)
+
+
+.. MATH::
+
     H2 == 3.50397280432594
+
 
 .. end of output
 
@@ -271,8 +281,8 @@ Rozwiązaniom tym odpowiadają krzywe fazowe przedstawione poniżej. Z tych dwó
 
 
 
-B. Bardziej realistyczny: Model Maya
--------------------------------------
+Bardziej realistyczny: Model Maya
+---------------------------------
 
 W modelu Lotki-Volterry występuje 1 stabilny punkt równowagi: gdy w chwili początkowej przeskalowane populacje :math:`x_0=1, y_0=1`  to w dowolnej innej chwili, liczba osobników w populacjach nie zmienia się. Natomiast drobne zaburzenia powodują odejście od tego stanu równowagi i pojawiają się oscylacje w obu populacjach. Jeżeli znowu zaburzymy układ, zmienią się także oscylacje, tzn.  ich amplituda i ich okres. Często obserwuje się inny rodzaj zachowania. Mimio, że układ zaburza się w niewielkim stopniu, układ powraca do swego poprzedniego stanu.  Mówimy, że układ jest strukturalnie stabilny. Tej własności nie posiada model Lotki-Volterry.  Przypomnijmy, że model Lotki-Volterry jest  w zasadzie 2-wymiarowym modelem Malthusa:
 
@@ -413,8 +423,9 @@ Inne stany stacjonarne  są określone przez równania:
 
 
 .. MATH::
+   :label: OD1
 
-     (1)   \quad \quad \quad \quad   y=x , \quad \quad  (1-x)   - \alpha  \frac{ y}{d+x} = 0
+     y=x , \quad \quad  (1-x)   - \alpha  \frac{ y}{d+x} = 0
 
 
 Stąd otrzymujemy równanie dla :math:`x` w postaci
@@ -467,7 +478,7 @@ Zauważmy, że ten stan nie zależy od wartości parametru :math:`\beta`.
      \quad \quad \quad  J(1, 0)  =  \begin{bmatrix}-1&  -  \frac{\alpha}{1+d} \\ 0&  \beta \end{bmatrix}
 
 
-Stąd wartości własne :math:` \lambda_{1} = -1, \quad  \lambda_{2} = \beta`. Więc rozwiązanie to nie jest asymptotycznie  stabilne, ponieważ jedna z wartości własnych jest dodatnia, tzn.  :math:`\lambda_{2} \gt  0`. Dowolnie małe zaburzenie tego stanu spowoduje  ucieczkę układu z tego stanu.
+Stąd wartości własne :math:`\lambda_{1} = -1, \quad  \lambda_{2} = \beta`. Więc rozwiązanie to nie jest asymptotycznie  stabilne, ponieważ jedna z wartości własnych jest dodatnia, tzn.  :math:`\lambda_{2} \gt  0`. Dowolnie małe zaburzenie tego stanu spowoduje  ucieczkę układu z tego stanu.
 
 
 (b)    dla  drugiego stanu analiza stabilności jest bardziej skomplikowana  ponieważ macierz Jacobiego jest postaci
@@ -478,12 +489,12 @@ Stąd wartości własne :math:` \lambda_{1} = -1, \quad  \lambda_{2} = \beta`. W
      \quad \quad \quad  J(x_1, y_1)  =  \begin{bmatrix}x_1\left[ \frac{\alpha x_1}{(x_1+d)^2} -1\right]&  -  \frac{\alpha x_1}{x_1+d} \\ \beta &  -\beta \end{bmatrix}
 
 
-Aby otrzymać wyraz :math:`J_{11}` tej macierzy, wykorzystaliśmy równanie (1) na stan stacjonarny. Zamiast wyznaczyć wartości własne :math:`(\lambda_{1}, \lambda_{2})` tej macierzy, wystarczy sprawdzić, kiedy część rzeczywista wartości własnych jest ujemna (lub dodatnia).  Ponieważ macierz Jacobiego jest macierzą :math:`2 \times 2`, więc otrzymujemy równanie kwadratowe  dla :math:`\lambda`. Aby wartości własne miały część rzeczywistą ujemną muszą zachodzić dwie relacje:
+Aby otrzymać wyraz :math:`J_{11}` tej macierzy, wykorzystaliśmy równanie :eq:`OD1` na stan stacjonarny. Zamiast wyznaczyć wartości własne :math:`(\lambda_{1}, \lambda_{2})` tej macierzy, wystarczy sprawdzić, kiedy część rzeczywista wartości własnych jest ujemna (lub dodatnia).  Ponieważ macierz Jacobiego jest macierzą :math:`2 \times 2`, więc otrzymujemy równanie kwadratowe  dla :math:`\lambda`. Aby wartości własne miały część rzeczywistą ujemną muszą zachodzić dwie relacje:
 
 
 .. MATH::
 
-     \lambda_1 + \lambda_2 \lt 0  \quad \mbox{oraz} \quad \lambda_1 \; \lambda_2 \gt  0, \quad \quad \mbox{to oznacza że} \quad \mbox{Tr} \, J \lt  0, \quad \quad \mbox{det} \,J \gt  0
+     \lambda_1 + \lambda_2 \lt 0  \quad \mbox{oraz} \quad \lambda_1 \; \lambda_2 \gt  0, \quad \quad \mbox{to oznacza, że} \quad \mbox{Tr} \, J \lt  0, \quad \quad \mbox{det} \,J \gt  0
 
 
 
@@ -640,7 +651,7 @@ Ponieważ :math:`x_1` zależy od 2 parametrów :math:`\alpha` i :math:`d`, prawa
 
 .. MATH::
 
-    -\frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)} a}{a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1} + \frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2} a}{{\left(a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2}} + a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1}
+    -\frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)} a}{a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1} \\ + \frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2} a}{{\left(a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2}} \\ + a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1}
 
 
 .. end of output
@@ -650,21 +661,18 @@ Ponieważ :math:`x_1` zależy od 2 parametrów :math:`\alpha` i :math:`d`, prawa
     sage: p={a:1.23,d:1.01}
     sage: show( JJ0.trace().subs({x0:x_0}).subs(p) )
     sage: expr_murray.subs({x0:x_0}).subs(p)
-    1.35696399470668
+
+
+.. end of output
 
 .. MATH::
 
-    -b - 0.404054289657954
+    -b - 0.404054289657954 \\
+    1.35696399470668
 
 
 .. end of output
 
-.. code-block:: python
-
-    sage: b
-    b
-
-.. end of output
 
 
 .. code-block:: python
@@ -782,7 +790,13 @@ mamy cykl graniczny:
 
 .. end of output
 
-Rozwiązania dążące do stabilnego stanu stacjonarnego:  :math:`a \in (0, 0.5), \beta \gt  0, d \gt 0`
+
+.. image:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_21_1.png
+    :align: center
+
+
+
+**Rozwiązania dążące do stabilnego stanu stacjonarnego:**  :math:`a \in (0, 0.5), \beta \gt  0, d \gt 0`
 
 
 .. code-block:: python
@@ -817,7 +831,8 @@ Rozwiązania dążące do stabilnego stanu stacjonarnego:  :math:`a \in (0, 0.5)
 
 .. end of output
 
-Rozwiązania dążące do stabilnego cyklu granicznego:  :math:`a \gt  0.5 , \beta \gt  0, d \gt 0`
+
+**Rozwiązania dążące do stabilnego cyklu granicznego:**  :math:`a \gt  0.5 , \beta \gt  0, d \gt 0`
 
 
 .. code-block:: python

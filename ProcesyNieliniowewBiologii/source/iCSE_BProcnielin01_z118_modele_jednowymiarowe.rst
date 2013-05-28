@@ -4,22 +4,17 @@
 Dynamika populacyjna: ciągłe modele jednowymiarowe
 --------------------------------------------------
 
-1. Model Malthusa
+Model Malthusa
+
+Model Verhulsta
+
+Uogólnienia modelu Verhulsta
 
 
-2. Model Verhulsta
+Model Malthusa 
+~~~~~~~~~~~~~~
 
-
-3. Uogólnienia modelu Verhulsta
-
-
-
-
-
-1. Model Malthusa 
-~~~~~~~~~~~~~~~~~~
-
-W  przyrodzie występuje wiele gatunków zwierząt i roślin. Ich liczebność  ciągle się zmienia: procesy są dynamiczne, powiązane między sobą, oddziaływania są skomplikowane, często losowe. Można powiedzieć, że jest to niewątpliwie przykład realnego układu złożonego z wielu elementów połączonych z sobą w skomplikowaną sieć. Opis takich układów jest trudny. Jak to często bywa w naukach przyrodniczych, stosuje się opis przybliżony, "gruboziarnisty", pomija się elementy mniej istotne i uwzględnia się najważniejsze składniki układu. Jest to metoda  *idealizacji* nagminnie stosowana przez fizyków do opisu rzeczywistości. Historia pokazuje, że metoda ta nie jest zła. Ba, czasami bardzo dobra i nawet znakomita. Podobne podejście zastosujemy do opisu dynamiki populacyjnej. Zaczniemy od najprostszego modelu: jedna populacja. Może to być populacja ludzi na  określonym obszarze,  populacja zajęcy, bakterii czy populacja komórek nowotworowych. Może to być "populacja" związku chemicznego (molekuł ). Populację określa się liczbami naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, :math:`10^{20}` molekuł. Posługiwanie się liczbami całkowitymi jest trudne w modelowaniu. Postąpimy podobnie jak w opisie dynamiki płynów, np. wody czy krwii. Woda w szklance składa się z dyskretnej liczby molekuł. Ale nikt do charakterystyki wody nie stosuje opisu bazyjącego na liczbach naturalnych.  Stosujemy  *przybliżenie ośrodka ciągłego*  scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej objętości. Podobny opis zastosujemy w modelowaniu dynamiki populacyjnej. Liczba N charakteryzująca liczbę osobników w populacji będzie nieujemną liczbą rzeczywistą, interpretowaną jako względna liczba osobników (liczba osobników w stosunku do np. średniej liczby osobników w ostatnich 50 latach lub maksymalnej liczby osobników w poprzednim roku, itp.). Liczba ta może zmieniać się w sposób ciągły. Liczba N(t) będzie charakteryzować liczbę osobników populacji w chwili czasu t.  Zmiana w czasie tej funkcji wynika z zastosowanego modelu. Modele będziemy budować bazując na wiedzy z teorii funkcji i obserwacjach otaczającego nas świata. Nie trzeba być wybitnym matematykiem, żeby umieć zinterpretować różnicę  dwóch  prędkości samochodu A i samochodu B gdy  samochód A jedzie z prędkością 40 km/h, a samochód B jedzie z prędkością 150 km/h. Wielkość, która mówi o *tempie zmiany położenia w czasie* to pochodna położenia jako funkcji czasu, czyli prędkość. To właśnie pochodna mówi nam, w jakim tempie zmienia się dana wielkość. Jeżeli pochodna jest dodatnia, to funkcja rośnie; gdy pochodna jest ujemna, to funkcja maleje. Oto niezbędna wiedza, aby zacząć modelowanie.
+W  przyrodzie występuje wiele gatunków zwierząt i roślin. Ich liczebność  ciągle się zmienia: procesy są dynamiczne, powiązane między sobą, oddziaływania są skomplikowane, często losowe. Można powiedzieć, że jest to niewątpliwie przykład realnego układu złożonego z wielu elementów połączonych z sobą w skomplikowaną sieć. Opis takich układów jest trudny. Jak to często bywa w naukach przyrodniczych, stosuje się opis przybliżony, "gruboziarnisty", pomija się elementy mniej istotne i uwzględnia się najważniejsze składniki układu. Jest to metoda  *idealizacji* nagminnie stosowana przez fizyków do opisu rzeczywistości. Historia pokazuje, że metoda ta nie jest zła. Ba, czasami bardzo dobra i nawet znakomita. Podobne podejście zastosujemy do opisu dynamiki populacyjnej. Zaczniemy od najprostszego modelu: jedna populacja. Może to być populacja ludzi na  określonym obszarze,  populacja zajęcy, bakterii czy populacja komórek nowotworowych. Może to być "populacja" związku chemicznego (molekuł ). Populację określa się liczbami naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, 10 :sup:`20` molekuł. Posługiwanie się liczbami całkowitymi jest trudne w modelowaniu. Postąpimy podobnie jak w opisie dynamiki płynów, np. wody czy krwii. Woda w szklance składa się z dyskretnej liczby molekuł. Ale nikt do charakterystyki wody nie stosuje opisu bazyjącego na liczbach naturalnych.  Stosujemy  *przybliżenie ośrodka ciągłego*  scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej objętości. Podobny opis zastosujemy w modelowaniu dynamiki populacyjnej. Liczba N charakteryzująca liczbę osobników w populacji będzie nieujemną liczbą rzeczywistą, interpretowaną jako względna liczba osobników (liczba osobników w stosunku do np. średniej liczby osobników w ostatnich 50 latach lub maksymalnej liczby osobników w poprzednim roku, itp.). Liczba ta może zmieniać się w sposób ciągły. Liczba N(t) będzie charakteryzować liczbę osobników populacji w chwili czasu t.  Zmiana w czasie tej funkcji wynika z zastosowanego modelu. Modele będziemy budować bazując na wiedzy z teorii funkcji i obserwacjach otaczającego nas świata. Nie trzeba być wybitnym matematykiem, żeby umieć zinterpretować różnicę  dwóch  prędkości samochodu A i samochodu B gdy  samochód A jedzie z prędkością 40 km/h, a samochód B jedzie z prędkością 150 km/h. Wielkość, która mówi o *tempie zmiany położenia w czasie* to pochodna położenia jako funkcji czasu, czyli prędkość. To właśnie pochodna mówi nam, w jakim tempie zmienia się dana wielkość. Jeżeli pochodna jest dodatnia, to funkcja rośnie; gdy pochodna jest ujemna, to funkcja maleje. Oto niezbędna wiedza, aby zacząć modelowanie.
 
 
 Pierwszy krok modelowania: dlaczego zmienia się liczba osobników N(t) w danej populacji?  Można wyróżnić trzy podstawowe procesy: ktoś się rodzi, ktoś umiera, jeszcze inny  "wyjeżdża", emigruje, opuszcza populację,  a jeszcze inny "przyjeżdża", imigruje. W języku matematyki możemy to zapisać w postaci relacji:
@@ -27,7 +22,7 @@ Pierwszy krok modelowania: dlaczego zmienia się liczba osobników N(t) w danej 
 
 .. MATH::
 
-    \frac{dN(t)}{dt}= +  przyrost \; (narodziny) - ubytek \;(śmierć)  \pm  migracja
+    \frac{dN(t)}{dt}= +\text{przyrost (narodziny)} - \text{ubytek (śmierć)}  \pm  \text{migracja}
 
 
 (i) Lewa  strona  tej relacji opisuje tempo zmiany populacji: :math:`dN(t)/dt`
@@ -90,7 +85,7 @@ Z rozwiązania tego wynika, że:
 3. jeżeli  tempo rozmnażania  jest  mniejsze niż  tempo śmiertelności, :math:`k\lt 0` czyli :math:`a \lt b`,   to liczba osobników w populacji maleje:  :math:`N(t)  \lt  N(0)`.
 
 
-Powyższy model został zaproponowany przez Malthusa w 1798 roku. Wynika z niego eksponencjalnie szybkie  tempo wzrostu ( gdy a>b) lub eksponencjalnie szybki zanik populacji (gdy a<b). Są takie przykłady,  dla których model Malthusa realizuje się w pewnych przedziałach czasu, w szczególności  w początkowych fazach wzrostu (np. wzrost kolonii bakterii w odpowiednich warunkach).
+Powyższy model został zaproponowany przez Malthusa w 1798 roku. Wynika z niego eksponencjalnie szybkie  tempo wzrostu (gdy a>b) lub eksponencjalnie szybki zanik populacji (gdy a<b). Są takie przykłady,  dla których model Malthusa realizuje się w pewnych przedziałach czasu, w szczególności  w początkowych fazach wzrostu (np. wzrost kolonii bakterii w odpowiednich warunkach).
 
 
 **Wykorzystanie Sage do analizy  modelu Malthusa**
@@ -114,7 +109,12 @@ W SAGE można bardzo łatwo otrzymać postać analityczną rozwiązania równani
     sage: row = N.diff()== k*N
     sage: rozw = desolve(row,N,ivar = t)
     sage: rozw
-    c*e^(k*t)
+
+
+.. MATH::
+
+    c*e^{(k*t)}
+
 
 .. end of output
 
@@ -189,7 +189,7 @@ W SAGE można bardzo łatwo otrzymać postać analityczną rozwiązania równani
 W modelu Malthusa, wzrost jest eksponencjalny. Więc w skali logarytmicznej otrzymujemy prostą:
 
 
-:math:`y(t) = ln N(t) = ln N_0 + k t = c + k t`
+:math:`y(t) = \ln N(t) = \ln N_0 + k t = c + k t`
 
 
 Przedstawiamy  dane wzrostu bakterii na  skali logarytmicznej:
@@ -214,7 +214,12 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
     sage: model(x) = a * exp(b * x )
     sage: fit = find_fit (zip(t,X), model, solution_dict=True,initial_guess=(.1,.1)) # initial_guess  ustala punkt startowy w iteracjach procedury nieliniowej optymalizacji
     sage: fit
-    {b: 0.032184803220426876, a: 0.021538179879268291}
+
+
+.. MATH::
+
+    \{b: 0.032184803220426876, a: 0.021538179879268291\}
+
 
 .. end of output
 
@@ -223,7 +228,12 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
     sage: fit2 = find_fit (zip(t[:2],X[:2]), model, solution_dict=True)
     sage: print fit2
     sage: plot( model(x).subs(fit), (x,-20,70))  + plot( model(x).subs(fit2), (x,-20,70),color='green')  + point(zip(t,X),color='red',figsize=4)
-    {b: 0.030779780318612133, a: 0.021999999999999999}
+
+
+.. MATH::
+
+    \{b: 0.030779780318612133, a: 0.021999999999999999\}
+
 
 .. image:: iCSE_BProcnielin01_z118_modele_jednowymiarowe_media/cell_27_sage0.png
     :align: center
@@ -234,12 +244,17 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
 .. code-block:: python
 
     sage: log(0.036/0.022)/16
+
+
+.. MATH::
+
     0.0307797803186121
+
 
 .. end of output
 
-Ostatnia liczba to wartość k obliczona z danych dla wzrostu bakterii. Jest on bardzo bliska wartości b obliczonej z dopasowania danych do krzywej eksponencjalnej: :math:`n(t) = a \mbox{exp}(a t)`. Stała :math:`a` też jest bliska wartości 0.22 z danych.
 
+Ostatnia liczba to wartość k obliczona z danych dla wzrostu bakterii. Jest on bardzo bliska wartości b obliczonej z dopasowania danych do krzywej eksponencjalnej: :math:`n(t) = a \mbox{exp}(a t)`. Stała :math:`a` też jest bliska wartości 0.22 z danych.
 
 
 
@@ -270,15 +285,15 @@ Ostatnia liczba to wartość k obliczona z danych dla wzrostu bakterii. Jest on 
     ===========  ================
 
 
-Vibrio natrigens,
+Vibrio natrigens
 
 Sprawdź,  czy model Malthusa opisuje powyższy wzrost kolonii bakterii.  Oceń rzetelność tego modelu.
 
 
-2. Model Verhulsta
-~~~~~~~~~~~~~~~~~~
+Model Verhulsta
+~~~~~~~~~~~~~~~
 
-Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i pomijamy procesy śmierci, tzn. :math:`b =0`. Wówczas populacja wzrasta w tempie wykładniczym:
+Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i pomijamy procesy śmierci, tzn. b=0. Wówczas populacja wzrasta w tempie wykładniczym:
 
 
 .. MATH::
@@ -286,7 +301,7 @@ Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i pomijamy
      N(t)= N_0 e^{at}
 
 
-co ilustruje powyższy rysunek dla przypadku :math:`k \gt 0`. Tak szybkie tempo wzrostu może być obserwowane dla pewnych układów tylko w niewielkim przedziale czasu.    W ogólności zbyt  szybkie tempo wzrostu populacji spowodowałoby zachwianie równowagi w przyrodzie. Na przykład w roku 1859 farmer Thomas Austin wypuścił w  swoich włościach w Australii 24 króliki europejskie, licząc na to, że będzie mógł  oddawać się przyjemnościom polowania. Inni farmerzy podchwycili pomysł i  rzeczywiście - polować mogli wkrótce do woli. W roku 1869 królików w  Australii było już tyle, że odstrzeliwano ich dwa miliony rocznie, bez  żadnych widocznych ubytków w liczebności populacji. Króliki zdewastowały przyrodę Australii. Pożerały roślinność, przez co  wymarło wiele gatunków australijskich ssaków. Udało się je wytępić  dopiero w latach pięćdziesiątych ostatniego stulecia, sprowadzając na  wyspę chorobę: myksomatozę. Wirus w ciągu dwóch lat zabił pół miliarda z  sześciuset milionów królików. Pozostałe króliki były na chorobę odporne  i ich liczebność znowu zaczęła wzrastać, dlatego w latach  dziewięćdziesiątych ludzie pognębili je kolejną plagą, zwaną chińskim  pomorem królików.
+co ilustruje powyższy rysunek dla przypadku k>0. Tak szybkie tempo wzrostu może być obserwowane dla pewnych układów tylko w niewielkim przedziale czasu.    W ogólności zbyt  szybkie tempo wzrostu populacji spowodowałoby zachwianie równowagi w przyrodzie. Na przykład w roku 1859 farmer Thomas Austin wypuścił w  swoich włościach w Australii 24 króliki europejskie, licząc na to, że będzie mógł  oddawać się przyjemnościom polowania. Inni farmerzy podchwycili pomysł i  rzeczywiście - polować mogli wkrótce do woli. W roku 1869 królików w  Australii było już tyle, że odstrzeliwano ich dwa miliony rocznie, bez  żadnych widocznych ubytków w liczebności populacji. Króliki zdewastowały przyrodę Australii. Pożerały roślinność, przez co  wymarło wiele gatunków australijskich ssaków. Udało się je wytępić  dopiero w latach pięćdziesiątych ostatniego stulecia, sprowadzając na  wyspę chorobę: myksomatozę. Wirus w ciągu dwóch lat zabił pół miliarda z  sześciuset milionów królików. Pozostałe króliki były na chorobę odporne  i ich liczebność znowu zaczęła wzrastać, dlatego w latach  dziewięćdziesiątych ludzie pognębili je kolejną plagą, zwaną chińskim  pomorem królików.
 
 
 Z reguły nadmierny rozrost populacji na  *ograniczonym*  terenie powoduje trudny dostęp do pożywienia i tempo wzrostu populacji zaczyna spowalniać.  Model uwzględniający ten efekt ograniczonego dostępu do pożywienia został po raz pierwszy zaproponowany przez Verhulsta w roku 1838.  W modelu tym tempo wzrostu  :math:`a` nie jest stałe, ale zależy od stanu populacji:
@@ -313,7 +328,7 @@ Zależność  funkcyjna :math:`a(N)` od :math:`N` powinna mieć następującą w
      a(N)= r \left[1- \frac{N}{K}\right]
 
 
-gdzie :math:`r \gt 0` jest parametrem o podobnej interpretacji jak parametr a w modelu Malthusa (charakteryzuje tempo wzrostu) oraz stała :math:`K \gt 0` charakteryzuje zasoby pożywienia i czasami nazywa się pojemnością środowiska. Zauważmy, że stała :math:`K` pojawia się w ilorazie :math:`N/K` i jest charakterystyczną liczbą osobników :math:`K=N_c` w populacji.  Jeżeli :math:`N \gt  K` to :math:`a(N) \lt 0`  i populacja maleje. Z kolei jeżeli :math:`N \lt K` to :math:`a(N) \gt 0` i populacja rozrasta się.
+gdzie :math:`r \gt 0` jest parametrem o podobnej interpretacji jak parametr :math:`a` w modelu Malthusa (charakteryzuje tempo wzrostu) oraz stała :math:`K \gt 0` charakteryzuje zasoby pożywienia i czasami nazywa się pojemnością środowiska. Zauważmy, że stała :math:`K` pojawia się w ilorazie :math:`N/K` i jest charakterystyczną liczbą osobników :math:`K=N_c` w populacji.  Jeżeli :math:`N \gt  K` to :math:`a(N) \lt 0`  i populacja maleje. Z kolei jeżeli :math:`N \lt K` to :math:`a(N) \gt 0` i populacja rozrasta się.
 
 
 Jak zmiana K wpływa na tempo wzrostu populacji? Jeżeli K rośnie to N/K maleje. Z kolei to powoduje,  że 1\-N/K rośnie,  czyli a(N) rośnie. Oznacza to, że tempo wzrostu rośnie i populacja rozrasta się szybciej. Stąd wniosek:  **Wzrost parametru K powoduje szybsze tempo wzrostu populacji.**
@@ -362,15 +377,16 @@ Jak widać, w równaniu tym nie pojawiają się żadne parametry. Jest to istotn
 Znaleźć stany stacjonarne układu i zbadać ich stabilność.
 
 
-.. MATH::
+(i) :math:`f(x) =0`, tzn. :math:`x(1-x)=0`,
 
-     \begin{array}{l}
-     (i) \quad f(x) =0, \quad  \mbox{tzn.} \quad x(1-x)=0, \\ \mbox{stąd otrzymujemy 2 stany stacjonarne} \quad x_1=0  \quad \mbox{oraz} \quad x_2=1 \\ 
-     (ii) \quad \mbox{ich stabilność:} \quad \lambda = f'(x) = 1- 2 x, \\ \mbox{ czyli} \quad  \lambda_1= f'(x_1) = 1 \gt  0 \;  \mbox{(niestabilny)},  \quad \lambda_2= f'(x_2) =-1 \lt  0 \; \mbox{(stabilny)}
-     \end{array}
+stąd otrzymujemy 2 stany stacjonarne :math:`x_1=0` oraz :math:`x_2=1`
+
+(ii) ich stabilność: :math:`\lambda = f'(x) = 1- 2 x`,
+
+czyli :math:`\lambda_1= f'(x_1) = 1 \gt  0` (niestabilny), :math:`\lambda_2= f'(x_2) =-1 \lt  0` (stabilny)
 
 
-Ponieważ otrzymujemy jeden stabilny stan stacjonarny x=1, wszystkie rozwiązania :math:`x(s)` z warunkiem początkowym :math:`x_0 \gt 0` dążą do tego stanu.
+Ponieważ otrzymujemy jeden stabilny stan stacjonarny :math:`x=1`, wszystkie rozwiązania :math:`x(s)` z warunkiem początkowym :math:`x_0 \gt 0` dążą do tego stanu.
 
 
 Gdy warunek początkowy :math:`x_0=0`  to rozwiązaniem jest :math:`x(s)=0`, ale dowolnie małe zaburzenie powoduje, że układ "wyskoczy" z tego stanu i zacznie ewoluować do stanu :math:`x=1`.
@@ -423,13 +439,13 @@ Na wykresie pokazano 3 charakterystyczne krzywe w zależności od warunku począ
 :math:`(B) \quad N_0 \in [K/2, K), \quad \quad N(t)  \quad\mbox{jest funkcją rosnącą do wartości K}`
 
 
-:math:`(C)  \quad N_0 \gt K, \quad \quad N(t) \quad \mbox{jest funkcją malejącą do wartości K}`
+:math:`(C)  \quad N_0 \gt K, \quad \quad \quad \quad N(t) \quad \mbox{jest funkcją malejącą do wartości K}`
 
 
 W przypadku  (A), krzywa ma kształt zdeformowanej litery S i dlatego nazywana jest czasami funkcją sigmoidalną (z j. ang. sigmoid function), popularna w zagadnieniach sztucznej inteligencji i sieciach neuronowych.
 
 
-Ewolucja czasowa populacji w modelu Verhulsta dla różnych warunków początkowych
+**Ewolucja czasowa populacji w modelu Verhulsta dla różnych warunków początkowych**
 
 
 .. code-block:: python
@@ -454,10 +470,8 @@ Ewolucja czasowa populacji w modelu Verhulsta dla różnych warunków początkow
 
 
 
-
-
-3. Uogólnienia modelu Verhuslta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uogólnienia modelu Verhulsta
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -482,7 +496,7 @@ Funkcja :math:`F(N)` opisująca malenie populacji wskutek istnienia drapieżnik�
 (ii) dla dużych wartości N, funkcja :math:`F(N)` powinna się nasycać, to znaczy dążyć do stałej wartości gdy :math:`N\to \infty`. Oznacza to tyle, że drapieżnik może zjeść pewną maksymalną ale skończoną liczbę ofiar.
 
 
-Gdy populacja jest zbyt mała,   drapieżnik woli zmienić teren i poszukać populację o większej liczbie osobników. W modelowaniu stosuje się funkcję Hilla, znaną z kinetyki reakcji chemicznych w procesie transkrypcji ( proces syntezy RNA na matrycy DNA przez różne polimerazy RNA, czyli przepisywanie informacji zawartej w DNA na RNA). Ma ona postać:
+Gdy populacja jest zbyt mała,   drapieżnik woli zmienić teren i poszukać populację o większej liczbie osobników. W modelowaniu stosuje się funkcję Hilla, znaną z kinetyki reakcji chemicznych w procesie transkrypcji (proces syntezy RNA na matrycy DNA przez różne polimerazy RNA, czyli przepisywanie informacji zawartej w DNA na RNA). Ma ona postać:
 
 
 .. MATH::
@@ -504,7 +518,7 @@ Powyższe równanie i jego modyfikacje był i jest stosowany do opisu różnorak
 
 
 
-Funkcja Hilla dla 3 wartości wykładnika n.
+**Funkcja Hilla dla 3 wartości wykładnika n.**
 
 
 .. code-block:: python
@@ -546,7 +560,7 @@ Funkcja Hilla dla 3 wartości wykładnika n.
 **(B) Model opisujący efekt Alleego**
 
 
-W 1931 r. W.C. Allee sformułował koncepcję wskazującą na istnienie drugiego stabilnego  stanu  stacjonarnego, różnego od stanu stacjonarnego :math:`N=K` w modelu Verhulsta.  Allee wykazał, że przy niskich liczebnościach  i zagęszczeniach  spada przyrost populacji.   Mniejsze populacje są bardziej podatne na wymieranie (trudności w  znalezieniu partnera, zmniejszona zdolność do grupowej obrony przed  drapieżnikami, obniżona wydajność żerowania w grupie). Zgodnie z modelem Verhulsta wzrost populacji  jest hamowany tym silniej im bardziej populacja zbliża  się do  stanu stacjonarnego  N=K . Allee wykazał, ze istnieje  drugi punkt stacjonarny, który populacja osiąga podczas spadku liczebności. Populacje, w których obserwujemy taki efekt, zmniejszają swoją liczebność, jeśli spadnie ona poniżej pewnego progu. Obecnie  efekt Alleego oznacza każdy mechanizm, który prowadzi do  zależności między liczbą i/lub zagęszczeniem osobników w populacji a średnim dostosowaniem osobnika.  Dobrym przykładem jest losowy rozkład płci, który w małej populacji może prowadzić do zmniejszenia średniego dostosowania poprzez mniejsze szanse na trafienie partnera.
+W 1931 r. W.C. Allee sformułował koncepcję wskazującą na istnienie drugiego stabilnego  stanu  stacjonarnego, różnego od stanu stacjonarnego N=K w modelu Verhulsta.  Allee wykazał, że przy niskich liczebnościach  i zagęszczeniach  spada przyrost populacji.   Mniejsze populacje są bardziej podatne na wymieranie (trudności w  znalezieniu partnera, zmniejszona zdolność do grupowej obrony przed  drapieżnikami, obniżona wydajność żerowania w grupie). Zgodnie z modelem Verhulsta wzrost populacji  jest hamowany tym silniej im bardziej populacja zbliża  się do  stanu stacjonarnego  N=K . Allee wykazał, ze istnieje  drugi punkt stacjonarny, który populacja osiąga podczas spadku liczebności. Populacje, w których obserwujemy taki efekt, zmniejszają swoją liczebność, jeśli spadnie ona poniżej pewnego progu. Obecnie  efekt Alleego oznacza każdy mechanizm, który prowadzi do  zależności między liczbą i/lub zagęszczeniem osobników w populacji a średnim dostosowaniem osobnika.  Dobrym przykładem jest losowy rozkład płci, który w małej populacji może prowadzić do zmniejszenia średniego dostosowania poprzez mniejsze szanse na trafienie partnera.
 
 
 Przykładem modelu uwzgledniajacego efekt Alleego jest zmodyfikowane równanie Verhulsta:
@@ -581,7 +595,7 @@ Analiza stabilności:
 Otrzymujemy 2 stabilne stany stacjonarne: :math:`N=0` oraz :math:`N=K`. Stan :math:`N=N_c` jest stanem niestabilnym.
 
 
-Ewolucja czasowa populacji dla modelu Alleego w zależności od różnych warunków początkowych (dla :math:`K=1` oraz :math:`N_c=0.5`)
+**Ewolucja czasowa populacji dla modelu Alleego w zależności od różnych warunków początkowych**  (dla :math:`K=1` oraz :math:`N_c=0.5`)
 
 
 .. code-block:: python
