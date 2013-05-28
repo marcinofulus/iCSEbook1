@@ -54,7 +54,8 @@ Dodatek
    :maxdepth: 2
    :glob:
 
-      sws2/i*
-      uzywane_komendy_w_sage
+   uzywane_komendy_w_sage
+..      sws2/i*
+
 
 

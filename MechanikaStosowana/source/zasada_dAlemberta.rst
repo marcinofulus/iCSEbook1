@@ -31,7 +31,7 @@ a wielkości :math:`\delta x_j`, są dowolnymi liczbami spełniającymi:
 .. MATH::
    :label: fdx
 
-    \sum_{j=1}^{3N} \frac{\partial f_j}{\partial x_j} \delta x_j,\quad k=1,2,...,p. 
+    \sum_{j=1}^{3N} \frac{\partial f_k}{\partial x_j} \delta x_j,\quad k=1,2,...,p. 
 
 
 Równania :eq:`fdx` tworzą jednorodny układ :math:`p` równań liniowych na
