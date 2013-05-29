@@ -4,7 +4,9 @@
 Zadanie 5 - rozwiązanie
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Wytłumacz, dlaczego wymiar fraktalny trójkąta Sierpińskiego (TS) :math:`HD_{S} = 1.5849625007211562977005314678535796701908111572265625\dots`
+Wytłumacz, dlaczego wymiar fraktalny trójkąta Sierpińskiego (TS)
+
+:math:`HD_{S} = 1.5849625007211562977005314678535796701908111572265625\dots`
 
 
 Posłużymy się definicją wymiaru fraktalnego bazującą na gęstości :math:`HD = D_G`. Przeprowadźmy eksperyment myślowy (bądź ten z zadania 4) i skonstruujmy iteracyjnie TS usuwając kolejno środkowe trójkąty. Wyobraźmy sobie jednak, że po każdej iteracji przeskalujemy TS tak, aby pozostałe trójkąty miały bok o długości :math:`r=1`. Zobaczymy jak gęstość takiego obiektu zmienia się wraz z kolejną iteracją (z rozmiarem). Mając tę wiedzę możemy zastosować wzór definiujący :math:`D_G` i sprawdzić ile wynosi :math:`HD`. Zakładamy, że każdy trójkąt ma masę :math:`m` (ponieważ skalujemy obiekt) oraz jednostkową gęstość.
@@ -24,7 +26,6 @@ Krok "zerowy": :math:`L = r, M = m`
 .. code-block:: python
 
     sage: rho0 = rho(m,r); show(rho0)
-    <html>...</html>
 
 .. end of output
 
@@ -34,7 +35,6 @@ Krok pierwszy: :math:`L=2r, M=3m` (z jednego trójkąta robią się 3, a długo�
 .. code-block:: python
 
     sage: rho1 = rho(3*m, 2*r); show(rho1)
-    <html>...</html>
 
 .. end of output
 
@@ -44,7 +44,6 @@ Krok drugi: :math:`L=4r, M=9m` (z jednego trójkąta robią się 3 - więc mamy 
 .. code-block:: python
 
     sage: rho2 = rho(3*3*m, 2*2*r); show(rho2)
-    <html>...</html>
 
 .. end of output
 
@@ -54,7 +53,6 @@ możemy, oczywiście zobaczyć kilka kolejnych kroków szybciej...
 .. code-block:: python
 
     sage: lrho = [rho(3^i*m, 2^i *r) for i in range(10)]; show(lrho)
-    <html>...</html>
 
 .. end of output
 
@@ -71,9 +69,7 @@ widzimy, że wykres zależności :math:`\log(\rho)` od :math:`\log(L)` będzie l
 
 .. MATH::
 
-    D_G - 2 = \frac{\Delta \log(\rho)}{\Delta \log(L)}
-
- .
+    D_G - 2 = \frac{\Delta \log(\rho)}{\Delta \log(L)}.
 
 
 Możemy sobie to łatwo obliczyć
@@ -82,7 +78,9 @@ Możemy sobie to łatwo obliczyć
 .. code-block:: python
 
     sage: DG = 2 + (log(rho0/rho0) - log(rho1/rho0)) / (log(1) - log(2)); print "DG =", n(DG)
-    DG = 1.58496250072116
+
+
+DG = 1.58496250072116
 
 .. end of output
 
@@ -95,6 +93,7 @@ Jeszcze tylko drobna uwaga na koniec. Z każdą iteracją rośnie masa dziuraweg
     sage: list_plot([rho(3^i, 2^i) for i in range(20)], size=50, faceted=1, color="orange").show(figsize=[10,3])
 
 .. image:: iCSE_BMetmatem02_Fraktale-odpowiedzi_media/cell_15_sage0.png
+    :scale: 75%
     :align: center
 
 
