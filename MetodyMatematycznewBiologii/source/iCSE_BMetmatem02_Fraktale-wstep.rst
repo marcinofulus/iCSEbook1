@@ -233,7 +233,7 @@ Należało by jeszcze narysować ów zbiór Cantora. W wizualizacji tkwi przecie
 **Zadanie 2** . Ponieważ powyższa grafika nie wygląda zbyt okazale, spróbuj napisać funkcję rysującą m/w w poniższy sposób. Spróbuj też każdą iterację oznaczyć innym kolorem z dowolnej palety Sage.
 
 
-.. image:: iCSE_BMetmatem02_Fraktale-wstep_media/http://upload.wikimedia.org/wikipedia/commons/5/56/Cantor_set_in_seven_iterations.svg
+.. image:: iCSE_BMetmatem02_Fraktale-wstep_media/Cantor_set_in_seven_iterations.svg
     :align: center
 
 
@@ -247,7 +247,6 @@ Pójdźmy o krok dalej i spróbujmy wykorzystać to co daje nam pakiet Sage.
     sage: def _(n=(0..5)):
     ...       html("Zbiór Cantora, krok iteracji: %d"%n)
     ...       show(draw_cantor(cantor_set(n)), figsize=[10,1], axes=False)
-    <html>...</html>
 
 
 .. end of output
@@ -276,11 +275,13 @@ widzimy więc, że potrzebujemy minimum :math:`3` odcinków o długości :math:`
     sage: html("HD=$%s$"%latex(D1b))
     sage: html("Wymiar Hausdorffa zbioru Cantora wynosi HD=%.4f" % D1b(N=2, s=1/3).n())
     sage: html("spełnione jest zatem HD > 0")
-    <html>...</html>
-    <html>...</html>
-    <html>...</html>
 
 .. end of output
+
+| :math:`HD = - \frac{\log(N)}{\log(s)}`
+| Wymiar Hausdorffa zbioru Cantora wynosi HD=0.6309
+| spełnione jest zatem HD > 0
+
 
 
 **Zadanie 3** . Spróbuj ominąć wykorzystanie pakietu  *numpy*  podczas konstrukcji powyższych funkcji.

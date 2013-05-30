@@ -23,7 +23,7 @@ Aby określić funkcje :math:`u(x,t)` musimy znać stan początkowy i warunku br
 
 .. MATH::
 
-     u(x=a,t=0)=u_a \textbf{ oraz } u(x=b,t=0)=u_b
+     u(x=a,t=0)=u_a \quad \textbf{oraz} \quad u(x=b,t=0)=u_b
 
 
 lub
@@ -31,7 +31,7 @@ lub
 
 .. MATH::
 
-     u'(x=a,t=0)=J_a \textbf{ oraz } u'(x=b,t=0)=J_b
+     u'(x=a,t=0)=J_a \quad \textbf{oraz} \quad u'(x=b,t=0)=J_b
 
 
 
@@ -54,10 +54,32 @@ Można przestawić go jako złożenie dwóch operatorów różnic skończonych, 
     sage: for i in range(1,A.ncols()):
     ...       A[i,i-1]=-1
     sage: html.table([[B,A,"=",B*A]])
-    <html>...</html>
-
 
 .. end of output
+
+.. MATH::
+
+    \left( \begin{array}{rrrrr}
+    -1 &  1 &  0 &  0 &  0 \\
+     0 & -1 &  1 &  0 &  0 \\
+     0 &  0 & -1 &  1 &  0 \\
+     0 &  0 &  0 & -1 &  1 \\
+     0 &  0 &  0 &  0 & -1 \\
+     \end{array} \right) \left( \begin{array}{rrrrr}
+      1 &  0 &  0 &  0 & 0 \\
+     -1 &  1 &  0 &  0 & 0 \\
+      0 & -1 &  1 &  0 & 0 \\
+      0 &  0 & -1 &  1 & 0 \\
+      0 &  0 &  0 & -1 & 1 \\
+      \end{array} \right) = \left( \begin{array}{rrrrr}
+     -2 &  1 &  0 &  0 &  0 \\
+      1 & -2 &  1 &  0 &  0 \\
+      0 &  1 & -2 &  1 &  0 \\
+      0 &  0 &  1 & -2 &  1 \\
+      0 &  0 &  0 &  1 & -1 \\
+      \end{array} \right)
+
+
 
 Można też wykonać bezpośrednią konstrukcję korzystając z przybliżenia drugiej pochodnej:
 
@@ -132,10 +154,19 @@ Można też skorzystać z definicji i obliczyć przybliżenie pochodnej stosują
     sage: c[1:-1]=-2.0*u[1:-1]
     sage: d[1:-1]=u[:-2]
     sage: html.table([[u],[d],[b],[c],'=',[a]])
-    <html>...</html>
-
 
 .. end of output
+
+\ 
+    ================================  ==
+     [4.1.2.4.1.3.1.4.1.3.]
+     [0.4.1.2.4.1.3.1.4.0.]
+     [0.2.4.1.3.1.4.1.3.0.]
+     [0.-2.-4.-8.-2.-6.-2.-8.-2.0.]
+     =
+     [0.4.1.-5.5.-4.5.-6.5.0.]
+    ================================  ==
+
 
 Dalej, będziemy dla wygody stosować skonczony operator liniowy :math:`L`.  Zobaczny jak działa taki operator na dolowlną funkcję wypróbkowaną na równoodległych punktach
 
@@ -144,20 +175,31 @@ Dalej, będziemy dla wygody stosować skonczony operator liniowy :math:`L`.  Zob
 
     sage: f = vector( [var('f%d'%i) for i in range(N)])
     sage: html.table([[L,'$\cdot$',f.column() ,'$=$',  (L*f).column() ]])
-    <html>...</html>
-
 
 .. end of output
 
-.. code-block:: python
+.. MATH::
 
-    sage: #print  latex(L), latex(f.column()), latex((L*f).column() )
-    sage: #var('dt,D')
-    sage: #f = vector( [var('u_i%d'%i) for i in range(N)])
-    sage: #print latex(identity_matrix(N)),latex(dt*D), latex(L), latex(f.column()), latex((L*f).column() )
+    \left(\begin{array}{rrrrrrr}
+    -2.0 & 1.0 & 0.0 & 0.0 & 0.0 & 0.0 & 1.0 \\
+    1.0 & -2.0 & 1.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+    0.0 & 1.0 & -2.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
+    0.0 & 0.0 & 1.0 & -2.0 & 1.0 & 0.0 & 0.0 \\
+    0.0 & 0.0 & 0.0 & 1.0 & -2.0 & 1.0 & 0.0 \\
+    0.0 & 0.0 & 0.0 & 0.0 & 1.0 & -2.0 & 1.0 \\
+    1.0 & 0.0 & 0.0 & 0.0 & 0.0 & 1.0 & -2.0
+    \end{array}\right) \cdot \left( \begin{array}{rrrrrrr}
+    f_0 \\ f_1 \\ f_2 \\ f_3 \\ f_4 \\ f_5 \\ f_6 \\
+    \end{array} \right) = \left( \begin{array}{rrrrrrr}
+    -2.0 f_0 + f_1 + f_6 \\
+     f_0 - 2.0 f_1 + f_2 \\
+     f_1 - 2.0 f_2 + f_3 \\
+     f_2 - 2.0 f_3 + f_4 \\
+     f_3 - 2.0 f_4 + f_5 \\
+     f_4 - 2.0 f_5 + f_6 \\
+     f_0 + f_5 - 2.0 f_6 \\
+     \end{array} \right)
 
-
-.. end of output
 
 
 Numeryczne rozwiązywanie jednowymiarowego równania dyfuzji
@@ -171,7 +213,7 @@ Równanie dyfuzji możemy zdyskretyzować w dziedzinie czasowej stosując  jawny
     u^{i+1}  = u^i + \left[ \frac{D dt}{h^2} \right] Lu^i.
 
 
-Schemat, jak i jego zbieżność zależą od jednej stałej :math:`\frac{D dt}{h^2}`, zwanej też  `liczbą Couranta <http://pl.wikipedia.org/wiki/Warunek_Couranta-Friedrichsa-Lewy'ego>`_ , w której tkwią zarówno wielkości fizyczne jak i dyskretyzacja układu. Dalej, zapisując układ iteracji jako:
+Schemat, jak i jego zbieżność zależą od jednej stałej :math:`\frac{D dt}{h^2}`, zwanej też **liczbą Couranta** `<http://pl.wikipedia.org/wiki/Warunek_Couranta-Friedrichsa-Lewy'ego>`_ , w której tkwią zarówno wielkości fizyczne jak i dyskretyzacja układu. Dalej, zapisując układ iteracji jako:
 
 
 .. MATH::
@@ -203,7 +245,7 @@ co przepisując szukaną :math:`u_{i+1}` na prawą stronę daje nam niejednorodn
      \left( I - \frac{D dt}{h^2} Lu_i \right) u^{i+1}= u^{i}.
 
 
-W przypadku małego :math:`dt` schematy te są równoważne. Korzystając z twierdzenia o macierzowym szeregu geometrycznym, lub rozwinięcia  w szereg Taylora funkcji  macierzowej ( `link <http://en.wikipedia.org/wiki/Matrix_function>`_ ) mamy:
+W przypadku małego :math:`dt` schematy te są równoważne. Korzystając z twierdzenia o macierzowym szeregu geometrycznym, lub rozwinięcia  w szereg Taylora funkcji  macierzowej (`<http://en.wikipedia.org/wiki/Matrix_function>`_) mamy:
 
 
 .. MATH::
@@ -225,8 +267,10 @@ Widzimy, że formalnie rozwiązując układ równań liniowych ze schematu nieja
     sage: u = vector(RDF,[0,0,0,1,0,0,0])
     sage: print u
     sage: print L*u
-    (0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0)
-    (0.0, 0.0, 1.0, -2.0, 1.0, 0.0, 0.0)
+
+
+| (0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0)
+| (0.0, 0.0, 1.0, -2.0, 1.0, 0.0, 0.0)
 
 .. end of output
 
@@ -278,13 +322,6 @@ Zauważmy, że wtedy w kolejnym kroku wartościami krańcowymi wektora :math:`u`
 
 
 Warunki Dirichleta, są zwane "istotnymi warunkami brzegowymi" (essential boundary conditions). Nie da się tak zmodyfikować dyskretnego operatora :math:`L` by automatycznie spełniał te warunki i muszą być dołączone dodatkowo w schemacie numerycznym.
-
-
-
-
-
-
-
 
 
 
@@ -371,7 +408,9 @@ Widać, że taki operator oblicza poprawnie Laplacjan dla punktów skrajcym, bia
 .. code-block:: python
 
     sage: L.rank()
-    7
+
+
+7
 
 .. end of output
 
@@ -458,7 +497,9 @@ Warto odnotować, że taki operator ma rząd o jednej większy od wymiaru. Wynik
 .. code-block:: python
 
     sage: L.rank()
-    6
+
+
+6
 
 .. end of output
 
@@ -543,7 +584,9 @@ Mając juz wszystkie składniki można napisać algorytm który będzie rozwiąz
 .. code-block:: python
 
     sage: L.ncols(),L.rank()
-    (7, 7)
+
+
+(7, 7)
 
 .. end of output
 
@@ -579,9 +622,12 @@ Warunek unormowania:
 .. code-block:: python
 
     sage: [sum(T_) for T_ in Tlst]
-    [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+
+[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 
 .. end of output
+
 
 Numeryczne rozwiązanie równanie dyfuzji \- porównanie z rozwiązaniem dokładnym.
 -------------------------------------------------------------------------------
@@ -615,7 +661,7 @@ przy czym maksymalny krok czasowy zależy od parametrów układu i jest ogranicz
 
 .. MATH::
 
-    dt_{max}&lt;0.25 \frac{l^2}{(N-1)^2 D}.
+    dt_{max} < 0.25 \frac{l^2}{(N-1)^2 D}.
 
 
 
@@ -630,7 +676,9 @@ przy czym maksymalny krok czasowy zależy od parametrów układu i jest ogranicz
     sage: dt = dt_max/2.0
     sage: C = dt*Dyf*(N-1)^2/l^2
     sage: print C,dt
-    0.100000000000000 0.0650364203954214
+
+
+0.100000000000000 0.0650364203954214
 
 .. end of output
 
@@ -735,9 +783,11 @@ Układ reakcji\-dyfuzji: Model Fishera Kołogomorowa
     ...       
     ...       essential_boundary_conditions(u)
     sage: print "Saved ",len(Tlst), " from ", Nsteps
-    sps= 119 dt= 0.00838696150062096 Nsteps= 59500
-    Saved  500  from  59500
-    CPU time: 23.92 s,  Wall time: 23.92 s
+
+
+| sps= 119 dt= 0.00838696150062096 Nsteps= 59500
+| Saved  500  from  59500
+| CPU time: 23.92 s,  Wall time: 23.92 s
 
 .. end of output
 
@@ -801,9 +851,11 @@ Układ reakcji\-dyfuzji: Model Fishera Kołogomorowa
     ...       
     ...       essential_boundary_conditions(u)
     sage: print "Saved ",len(Tlst), " from ", Nsteps
-    sps= 18 dt= 0.0530558106315682 Nsteps= 1800
-    Saved  100  from  1800
-    CPU time: 1.58 s,  Wall time: 1.58 s
+
+
+| sps= 18 dt= 0.0530558106315682 Nsteps= 1800
+| Saved  100  from  1800
+| CPU time: 1.58 s,  Wall time: 1.58 s
 
 .. end of output
 
@@ -824,14 +876,13 @@ Układ reakcji\-dyfuzji: Model Fishera Kołogomorowa
 
 .. end of output
 
+
+
 Rozwiązania spiralne w układzie reakcji z dyfuzją (Bielousow\-Zabotyński)
 -------------------------------------------------------------------------
 
 .. image:: iCSE_BMetmatem03_z123_numeryczne_RDS_media/spiral.gif
     :align: center
-
-
-
 
 
 
@@ -929,10 +980,12 @@ Dynamika modelu bez dyfuzji.
     ...       essential_boundary_conditions(u)
     ...       
     sage: print "Saved ",len(Tlst), " from ", Nsteps
-    dt,dt_dyn 0.0205688066136624 0.111111111111111
-    sps= 48 dt= 0.0205688066136624 Nsteps= 4800
-    Saved  100  from  4800
-    CPU time: 9.66 s,  Wall time: 9.66 s
+
+
+| dt,dt_dyn 0.0205688066136624 0.111111111111111
+| sps= 48 dt= 0.0205688066136624 Nsteps= 4800
+| Saved  100  from  4800
+| CPU time: 9.66 s,  Wall time: 9.66 s
 
 .. end of output
 
@@ -943,6 +996,11 @@ Dynamika modelu bez dyfuzji.
 
 
 .. end of output
+
+
+.. image:: iCSE_BMetmatem03_z123_numeryczne_RDS_media/cell_250_sage0.gif
+    :align: center
+
 
 .. code-block:: python
 
@@ -972,7 +1030,11 @@ Dynamika modelu bez dyfuzji.
 .. end of output
 
 
+.. image:: iCSE_BMetmatem03_z123_numeryczne_RDS_media/spiral.gif
+    :align: center
 
+
+0.26456124029465322
 
 
 
@@ -1103,10 +1165,12 @@ Dynamika modelu (bez dyfuzji)
     sage: pylab.imshow(u,vmin=0.2,vmax=1,origin='top') 
     sage: pylab.colorbar()
     sage: pylab.savefig('1.png',dpi=70)
-    dt,dt_dyn 1.00000000000000 0.00800000000000000
-    sps= 10 dt= 1.00000000000000 Nsteps= 20000
-    Saved  2000  from  20000
-    CPU time: 88.02 s,  Wall time: 88.02 s
+
+
+| dt,dt_dyn 1.00000000000000 0.00800000000000000
+| sps= 10 dt= 1.00000000000000 Nsteps= 20000
+| Saved  2000  from  20000
+| CPU time: 88.02 s,  Wall time: 88.02 s
 
 .. end of output
 
@@ -1126,14 +1190,6 @@ Dynamika modelu (bez dyfuzji)
 
 
 .. end of output
-
-
-
-
-
-
-
-
 
 
 

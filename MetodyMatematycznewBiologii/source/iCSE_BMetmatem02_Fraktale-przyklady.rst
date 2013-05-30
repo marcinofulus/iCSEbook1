@@ -1,13 +1,13 @@
 .. -*- coding: utf-8 -*-
 
 
-wymagane umiejętności:
+Wymagane umiejętności:
 
 
 
  - znajomość Sage, programowanie w języku Python
 
- - podstawowa wiedza z teori miary, liczby zespolone
+ - podstawowa wiedza z teorii miary, liczby zespolone
 
 
 Przykłady fraktali
@@ -64,7 +64,7 @@ Wymiar fraktalny smoka wynosi 2 (patrz zadanie 2 w zestawie zadań).
 Gra w chaos
 """""""""""
 
-Istnieje kilka algorytmów na zbudowanie trójkąta Sierpińskiego (patrz zadania 3 i 4). Tutaj  `zagramy sobie w chaos <http://pl.wikipedia.org/wiki/Gra_w_chaos>`_ . Idea tego algorytmu polega na losowym wybieraniu jednego z wierzchołków do obliczania nowych punktów na płaszczyźnie. Ale po kolei
+Istnieje kilka algorytmów na zbudowanie trójkąta Sierpińskiego (patrz zadania 3 i 4). Tutaj  zagramy sobie w chaos `<http://pl.wikipedia.org/wiki/Gra_w_chaos>`_. Idea tego algorytmu polega na losowym wybieraniu jednego z wierzchołków do obliczania nowych punktów na płaszczyźnie. Ale po kolei
 
 
 1. Wybieramy 3 niewspółliniowe punkty na płaszczyźnie. Będą to nasze wierzchołki trójkąta. Ten początkowy krok będzie miał bardzo duży wpływ na ostateczny kształt trójkąta, więc jeżeli chcemy otrzymać klasyczny trójkąt Sierpińskiego, powinniśmy wybrać takie punkty, aby tworzyły trójkąt równoboczny :math:`\{(0,0), (1,0), (\cos\frac{\pi}{3}, \sin\frac{\pi}{3})\}`. Ten wybór oznacza jednostkową długość boku.
@@ -157,6 +157,17 @@ Iteracja wygląda następująco
 
 .. end of output
 
+
+.. MATH::
+
+    (x_{n+1},y_{n+1}) = 
+    \begin{cases}(0.5, 0.27 y_n) &\text{2%}\\
+    (-0.139x_n + 0.263 y_n +0.57,0.246x_n + 0.224 y_n-0.036) &\text{15%}\\
+    (0.17 x_n - 0.215y_n +0.408, 0.222x_n + 0.176y_n+0.0893) &\text{13%}\\
+    (0.781 x_n + 0.034y_n +0.1075, -0.032x_n + 0.739y_n+0.27) &\text{70%}
+    \end{cases}
+
+
 Spróbujmy zrealizować taka paproć. Cython przyspieszy nieco obliczenia.
 
 
@@ -189,7 +200,9 @@ Spróbujmy zrealizować taka paproć. Cython przyspieszy nieco obliczenia.
 
     sage: %time
     sage: _a = paproc_barnsleya(100000)
-    CPU time: 0.24 s,  Wall time: 0.25 s
+
+
+CPU time: 0.24 s,  Wall time: 0.25 s
 
 .. end of output
 
@@ -247,4 +260,10 @@ Poniżej zaprezentujemy nico zmodyfikowany kod.
 
 
 .. end of output
+
+
+.. image:: iCSE_BMetmatem02_Fraktale-przyklady_media/cell_31_fern.png
+    :align: center
+
+
 

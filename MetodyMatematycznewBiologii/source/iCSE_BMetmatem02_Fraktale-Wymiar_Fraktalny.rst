@@ -74,6 +74,7 @@ Obliczmy :math:`D_P` dla poniższych danych.
     sage: list_plot(data.tolist(), plotjoined=True).show(figsize=[10,3])
 
 .. image:: iCSE_BMetmatem02_Fraktale-Wymiar_Fraktalny_media/cell_6_sage0.png
+    :scale: 75%
     :align: center
 
 
@@ -92,7 +93,9 @@ Dla :math:`r=1000` dostaniemy :math:`Nr` pudełek.
     ...       _amp = max(data[idx_start:idx_stop]) - min(data[idx_start:idx_stop])
     ...       N1000 += ceil(_amp/_scale)
     sage: print N1000
-    111
+
+
+111
 
 .. end of output
 
@@ -130,6 +133,7 @@ Zobaczmy jak to wygląda.
     sage: plot_boxes_on_data(data, 1000)
 
 .. image:: iCSE_BMetmatem02_Fraktale-Wymiar_Fraktalny_media/cell_37_sage0.png
+    :scale: 75%
     :align: center
 
 
@@ -137,10 +141,8 @@ Zobaczmy jak to wygląda.
 
 Zobaczymy, jaki uzyskamy wymiar fraktalny. Ilość segmentów dla rozmiaru :math:`r` obliczymy jako
 
+ceil(len(data)/r)
 
-.. code-block:: python
-
-    ceil(len(data)/r)
 
 .. code-block:: python
 
@@ -161,6 +163,7 @@ Zobaczymy, jaki uzyskamy wymiar fraktalny. Ilość segmentów dla rozmiaru :math
     sage: list_plot(zip(numpy.log(1./scales),numpy.log(Nr)), size=50, faceted=True, color="yellow").show(figsize=[10,3])
 
 .. image:: iCSE_BMetmatem02_Fraktale-Wymiar_Fraktalny_media/cell_16_sage0.png
+    :scale: 75%
     :align: center
 
 
@@ -182,7 +185,9 @@ Obliczymy teraz nachylenie wykresu.
 .. code-block:: python
 
     sage: DP = -wynik[0].rhs(); print "Wymiar fraktalny danych wynosi:", DP
-    Wymiar fraktalny danych wynosi: 0.99565265783452461
+
+
+Wymiar fraktalny danych wynosi: 0.99565265783452461
 
 .. end of output
 
@@ -191,6 +196,7 @@ Obliczymy teraz nachylenie wykresu.
     sage: (plot(-wynik[0].rhs()*x + wynik[1].rhs(),-7,0) + list_plot(zip(numpy.log(1./scales),numpy.log(Nr)), size=50, faceted=True, color="yellow")).show(figsize=[10,3])
 
 .. image:: iCSE_BMetmatem02_Fraktale-Wymiar_Fraktalny_media/cell_31_sage0.png
+    :scale: 75%
     :align: center
 
 

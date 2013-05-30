@@ -37,29 +37,25 @@ Głównym obiektem modelowania będą populacje biologiczne, tzn.  zespół orga
 W rzeczywistych warunkach populacje nie są izolowane, ale są to układy otwarte, oddziałujące z otoczeniem, innymi populacjami, przemieszczające się. Można mówic o sub\-populacjach czy meta\-populacjach.  Populacja występuje na ograniczonych obszarach,  w nadającym  się do zasiedlenia środowisku. Pojawiają się konkurenci, drapieżniki,  pasożyty. Istnieje wiele elementów wpływających na liczebność populacji i dynamikę zmian osobników w populacji. Gdybyśmy chcieli uwzględnić wszystkie elementy i powiązania, otrzymalibyśmy model sieci, podobnych do sieci komputerowych czy sieci neuronowych.  Modelowanie takie wymaga potężnych mocy obliczeniowych i jest coraz szerzej rozwijane we współczesnych badaniach naukowych. Obecnie jest to początek drogi. W obecnym kursie ograniczymy się do prostszego modelowania, uwzględniajacego jeden, dwa czy kilka istotnych czynników. To ma swoje plusy i minusy. Niewątpliwie plusem jest prostota i przejrzystość modeli. Wadą jest ich ograniczona i wąska stosowalność.   Ale startując od najprostszych modeli, możemy krok po kroku, mając odpowiedni zasób doświadczenia w modelowaniu, komplikować modele dodając nowe elementy. Tak też będziemy postępowali.
 
 
-Zaczniemy od najprostszego modelu: jedna populacja. Może to być populacja ludzi w Ghanie,  populacja zajęcy w Borach Tucholskich, bakterii na hienie rozkładającej się na afrykańskiej sawannie  czy populacja komórek nowotworowych u  pana  Smithowa. Może to być "populacja" związku chemicznego (molekuł ). Populację określa się liczbami naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, 10^20 molekuł. Posługiwanie się liczbami całkowitymi jest rozsądne jeżeli te liczby nie są zbyt wielkie. Rozsądne jest zapytać, ile ludzi mieszka w Wysokiej Lelowskiej, a ile we Wrocławiu. Można też zapytać jakie jest zaludnienie czy zagęszczenie wysp Bali czy Nowego Jorku. Pytamy, ile ludzi przypada średnio  na kilometr kwadratowy powierzchni na tej wyspie czy w tym mieście.  W jednym przypadku pytamy o wartość bezwględną osobników, w drugim przypadku \- o gęstość populacji, czyli średnią liczbę osobników na jednostkę powierzchni (gęstość powierzchniowa). W przypadku reakcji chemicznych, rozsądniej jest wprowadzić gęstość objętościową molekuł \- średnią ilość molekuł w jednostce objętości. To jest tak jak  w opisie dynamiki płynów, np. wody czy krwi. Woda w szklance składa się z dyskretnej liczby molekuł. Ale nikt do charakterystyki wody w szklance nie stosuje opisu bazującego na liczbach naturalnych.  Stosujemy  *przybliżenie ośrodka ciągłego*  scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej objętości. Często podobny opis stosowany jest  w modelowaniu dynamiki populacyjnej.
+Zaczniemy od najprostszego modelu: jedna populacja. Może to być populacja ludzi w Ghanie,  populacja zajęcy w Borach Tucholskich, bakterii na hienie rozkładającej się na afrykańskiej sawannie  czy populacja komórek nowotworowych u  pana  Smithowa. Może to być "populacja" związku chemicznego (molekuł ). Populację określa się liczbami naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, 10 :sup:`20` molekuł. Posługiwanie się liczbami całkowitymi jest rozsądne jeżeli te liczby nie są zbyt wielkie. Rozsądne jest zapytać, ile ludzi mieszka w Wysokiej Lelowskiej, a ile we Wrocławiu. Można też zapytać jakie jest zaludnienie czy zagęszczenie wysp Bali czy Nowego Jorku. Pytamy, ile ludzi przypada średnio  na kilometr kwadratowy powierzchni na tej wyspie czy w tym mieście.  W jednym przypadku pytamy o wartość bezwględną osobników, w drugim przypadku \- o gęstość populacji, czyli średnią liczbę osobników na jednostkę powierzchni (gęstość powierzchniowa). W przypadku reakcji chemicznych, rozsądniej jest wprowadzić gęstość objętościową molekuł \- średnią ilość molekuł w jednostce objętości. To jest tak jak  w opisie dynamiki płynów, np. wody czy krwi. Woda w szklance składa się z dyskretnej liczby molekuł. Ale nikt do charakterystyki wody w szklance nie stosuje opisu bazującego na liczbach naturalnych.  Stosujemy  *przybliżenie ośrodka ciągłego*  scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej objętości. Często podobny opis stosowany jest  w modelowaniu dynamiki populacyjnej.
 
 
 Jeżeli stosujemy opis bazujący na liczbach naturalnych, wprowadzamy oznaczenie
 
 
-.. MATH::
-
-    N_t  = 0, 1, 2, 3, ...  \quad \quad - \mbox{liczba osobników w chwili czasu t;  czas też jest dyskretny}
+:math:`N_t  = 0, 1, 2, 3, ...`  - liczba osobników w chwili czasu t;  czas też jest dyskretny.
 
 
 Jeżeli stosujemy opis bazujący na liczbach ciągłych, wprowadzamy oznaczenie
 
 
-.. MATH::
-
-    N(t) \in [0, \infty) \quad \quad - \mbox{względna liczba osobników w chwili czasu t;  czas jest wielkością ciągłą}
+:math:`N(t) \in [0, \infty)` - względna liczba osobników w chwili czasu t;  czas jest wielkością ciągłą.
 
 
 Liczba :math:`N = N(t)`  charakteryzująca liczbę osobników w populacji będzie nieujemną liczbą rzeczywistą, interpretowaną jako względna liczba osobników (liczba osobników w stosunku do np. średniej liczby osobników w ostatnich 50 latach lub maksymalnej liczby osobników w poprzednim roku, itp.). Liczba ta może zmieniać się w sposób ciągły.
 
 
-W związku z powyższym, definiuje się modele dyskretne i modele ciągłe.
+W związku z powyższym, definiuje się **modele dyskretne i modele ciągłe**.
 
 
 Trzeba pamiętać,   że modele dyskretne mogą mieć  radykalnie różne własności niż ich odpowiedniki ciągłe.
@@ -74,58 +70,25 @@ Modele dyskretne
 Rozważamy najprostszy model: jedna populacja, na przykład populacja ludzi na zamkniętym obszarze Y. Nie interesuje nas rozmieszczenie populacji w tym obszarze, tylko liczba ludzi w chwili czasu t. Dodatkowo, w modelach dyskretnych, nie śledzimy stanu ludności w sposób ciągły, tylko interesuje nas liczba ludzi pierwszego dnia każdego miesiąca o godzinie 14. 00.  Wprowadzamy oznaczenia:
 
 
-.. MATH::
+:MATH:`N_t =` liczba ludzi w chwili t
 
-     N_t = \mbox{liczba ludzi w chwili t}
-
-
-.. MATH::
-
-     N_{t+1} = \mbox{liczba ludzi   miesiąc później, czyli w chwili  t+1}
+:MATH:`N_{t+1} =` liczba ludzi   miesiąc później, czyli w chwili  t+1
 
 
 Rozważamy najprostszy model: jedna populacja, na przykład populacja ludzi na zamkniętym obszarze Y. Nie interesuje nas rozmieszczenie populacji w tym obszarze, tylko liczba ludzi w chwili czasu t. Dodatkowo, w modelach dyskretnych, nie śledzimy stanu ludności w sposób ciągły, tylko interesuje nas liczba ludzi pierwszego dnia każdego miesiąca o godzinie 14. 00.  Wprowadzamy oznaczenia: 
 
 
-.. MATH::
+:MATH:`N_t =` liczba ludzi w chwili t
 
-    N_t = \mbox{liczba ludzi w chwili} \, t
+:MATH:`N_{t+1} =` liczba ludzi  miesiąc później, czyli w chwili  t+1
 
+:MATH:`B_t =` liczba ludzi urodzonych  w ciągu ostatniego miesiąca, tzn. w czasie (t, t+1)
 
+:MATH:`D_t =` liczba ludzi, którzy umarli  w ciągu ostatniego miesiąca, tzn. w czasie (t, t+1)
 
+:MATH:`E_t =` liczba ludzi, którzy wyjechali z obszaru Y (wyemigrowali)  w ciągu ostatniego miesiąca, tzn. w czasie (t, t+1)
 
-.. MATH::
-
-     N_{t+1} = \mbox{liczba ludzi  miesiąc później, czyli w chwili}  \, t+1 
-
-
-
-
-.. MATH::
-
-    B_t = \mbox{liczba ludzi urodzonych  w ciągu ostatniego miesiąca, tzn. w czasie} \, (t, t+1) 
-
-
-
-
-.. MATH::
-
-    D_t = \mbox{liczba ludzi, którzy umarli  w ciągu ostatniego miesiąca, tzn. w czasie} \, (t, t+1) 
-
-
-
-
-.. MATH::
-
-    E_t = \mbox{liczba ludzi, którzy wyjechali z obszaru Y (wyemigrowali)  w ciągu ostatniego miesiąca}, \\  \mbox{tzn. w czasie} \,  (t, t+1) 
-
-
-
-
-.. MATH::
-
-    I_t = \mbox{liczba ludzi, którzy przyjechali do obszaru Y (imigrowali) w ciągu ostatniego miesiąca}, \\  \mbox{tzn. w czasie} \,  (t, t+1) 
-
+:MATH:`I_t =` liczba ludzi, którzy przyjechali do obszaru Y (imigrowali) w ciągu ostatniego miesiąca, tzn. w czasie (t, t+1)
 
 
 Zauważmy, że uwzględniamy 4 procesy demograficzne: narodziny, śmierć, emigrację i imigrację. Możemy napisać równanie, które łączy te 4 procesy:
@@ -152,7 +115,7 @@ Równanie to jest mało użyteczne, ponieważ ciągle nie znamy wielkości :math
 
 .. MATH::
 
-    B_t  = f( N_t), \quad \quad \mbox{gdzie} \quad \quad f \quad \quad \mbox{jest funkcją rosnącą }
+    B_t  = f( N_t), \quad \quad \mbox{gdzie} \quad \quad f \quad \quad \mbox{jest funkcją rosnącą.}
 
 
 Najprostszą taką funkcją jest funkcja liniowa
@@ -171,7 +134,7 @@ Podobne rozważania można zastosować do wyrazu opisującego  zmniejszanie się
 
 .. MATH::
 
-    D_t  = g( N_t), \quad \quad \mbox{gdzie} \quad \quad g \quad \quad \mbox{jest funkcją rosnącą }
+    D_t  = g( N_t), \quad \quad \mbox{gdzie} \quad \quad g \quad \quad \mbox{jest funkcją rosnącą.}
 
 
 Najprostszą taką funkcją znowu  jest funkcja liniowa
@@ -198,8 +161,7 @@ Model ten można dalej upraszczać lub go bardziej komplikować. Uproszczenie po
     N_{t+1} = N_t + (b - d) N_t = N_t + r N_t = \lambda N_t, \quad \quad \lambda = 1 + r, \quad \quad r = b - d
 
 
-Model ten nazywa sie modelem  geometrycznym  wzrostu populacji, ponieważ
-  w chwili następnej :math:`t+1`  populacja wzrasta (lub maleje) :math:`\lambda` razy w porównaniu z chwilą poprzednią. Aby wyznaczyć współczynnik :math:`\lambda` np. dla ptaków, należy zmierzyć populację  :math:`N_1`  w pewnej chwili :math:`t_1`,  a następnie po cyklu reprodukcji, zmierzyć  populację  :math:`N_2`  w chwili :math:`t_2`.   Wówczas  :math:`\lambda = N_2/N_1`.
+Model ten nazywa sie modelem  **geometrycznym**  wzrostu populacji, ponieważ w chwili następnej :math:`t+1`  populacja wzrasta (lub maleje) :math:`\lambda` razy w porównaniu z chwilą poprzednią. Aby wyznaczyć współczynnik :math:`\lambda` np. dla ptaków, należy zmierzyć populację  :math:`N_1`  w pewnej chwili :math:`t_1`,  a następnie po cyklu reprodukcji, zmierzyć  populację  :math:`N_2`  w chwili :math:`t_2`.   Wówczas  :math:`\lambda = N_2/N_1`.
 
 
 
@@ -240,7 +202,7 @@ Podaj prawo zaniku penicyliny.
 Uogólnienia 
 -----------
 
-Uogólnienie ( i komplikacja) modelu geometrycznego polega na obserwacji, że w pewnych sytuacjach tempo wzrostu i tempo zaniku populacji może zależeć od liczby osobników w populacji. Innymi słowy, funkcje :math:`f(N_t)` oraz :math:`g(N_t)` są nieliniowymi funkcjami.
+Uogólnienie (i komplikacja) modelu geometrycznego polega na obserwacji, że w pewnych sytuacjach tempo wzrostu i tempo zaniku populacji może zależeć od liczby osobników w populacji. Innymi słowy, funkcje :math:`f(N_t)` oraz :math:`g(N_t)` są nieliniowymi funkcjami.
 
 Uogólnienie ( i komplikacja) modelu geometrycznego polega na obserwacji, że w pewnych sytuacjach tempo wzrostu i tempo zaniku populacji może zależeć od liczby osobników w populacji. Innymi słowy, funkcje :math:`f(N_t)` oraz :math:`g(N_t)` są nieliniowymi funkcjami lub tempo wzrostu i tempo smierci zależy od :math:`N_t`. Znowu można założyć prostą postać tej zależności, a mianowicie w postaci funkcji liniowych:
 
@@ -269,7 +231,7 @@ Można dokonywać dalszych uogólnięć biorą pod uwagę inne mechanizmy wpływ
 
 .. MATH::
 
-    N_{t+1}= F(N_t), \quad \quad \mbox{oraz warunek początkowy} \quad \quad N_0=n
+    N_{t+1}= F(N_t), \quad \mbox{oraz warunek początkowy} \quad N_0=n
 
 
 
@@ -278,7 +240,7 @@ Można rozważać kilka populacji oddziałujących na siebie (typu ofiara-drapie
 
 .. MATH::
 
-    N_{t+1}= F(N_t, P_t), \quad \quad P_{t+1}= G(N_t, P_t), \mbox{ oraz warunki  początkowe} \quad \quad N_0=n, \quad \quad P_0=p
+    N_{t+1}= F(N_t, P_t), \quad P_{t+1}= G(N_t, P_t), \quad \mbox{oraz warunki  początkowe} \quad N_0=n, \quad P_0=p
 
 
 
@@ -375,8 +337,7 @@ Dokonujemy przejścia granicznego :math:`\Delta \to 0` i rozpoznajemy z  lewej s
     \frac{dN(t)}{dt} =  k N(t)
 
 
-Jest to odpowiednik równania dyskretnego :math:`N_{t+1} = \lambda N_t`. Jednak jego natura jest odmienna. Jest to  równanie różniczkowe.
- W celu jego jednoznacznego rozwiązania  musimy zadać warunek początkowy, czyli :math:`N(0) = N_0`. Równanie powyższe można modyfikować, uogólniać uwzględniając różne mechanizmy wzrostu i śmierci. Jego ogólna struktura jest postaci
+Jest to odpowiednik równania dyskretnego :math:`N_{t+1} = \lambda N_t`. Jednak jego natura jest odmienna. Jest to  **równanie różniczkowe**. W celu jego jednoznacznego rozwiązania  musimy zadać warunek początkowy, czyli :math:`N(0) = N_0`. Równanie powyższe można modyfikować, uogólniać uwzględniając różne mechanizmy wzrostu i śmierci. Jego ogólna struktura jest postaci
 
 
 .. MATH::
@@ -532,7 +493,7 @@ Jeżeli możliwy jest ruch  w przestrzeni :math:`(X, Y, Z)`,  to równanie ewolu
      \frac{\partial N(x, y, z, t)}{\partial t} = F(N(x, y, z, t)) + D\left[  \frac{\partial^2 N(x, y, z,  t)}{\partial x^2} + \frac{\partial^2 N(x, y, z,  t)}{\partial y^2} + \frac{\partial^2 N(x, y, z,  t)}{\partial z^2}\right]
 
 
-Powyższe równania ewolucji to  równania różniczkowe cząstkowe. Matematycy uczą nas, że same równania ewolucji nie są wystarczające. Potrzebne są jeszcze  warunki początkowe i warunki brzegowe dla takich równań. O ile sformułowanie  warunków początkowych nie jest problemem , o tyle wybór poprawnych warunków brzegowych  może być zadaniem trudnym. Należy o tym pamiętać, ponieważ wybór niepoprawnych warunków brzegowych może powodować, że otrzymane rozwiązania będą niepoprawne, praktycznie nieprzydatne i nie akceptowalne, mogą prowadzić do paradoksów lub nawet do absurdu.
+Powyższe równania ewolucji to  **równania różniczkowe cząstkowe**. Matematycy uczą nas, że same równania ewolucji nie są wystarczające. Potrzebne są jeszcze  **warunki początkowe i warunki brzegowe** dla takich równań. O ile sformułowanie  warunków początkowych nie jest problemem , o tyle wybór poprawnych warunków brzegowych  może być zadaniem trudnym. Należy o tym pamiętać, ponieważ wybór niepoprawnych warunków brzegowych może powodować, że otrzymane rozwiązania będą niepoprawne, praktycznie nieprzydatne i nie akceptowalne, mogą prowadzić do paradoksów lub nawet do absurdu.
 
 
 W następnych wykładach przedstawimy typowe modele dynamiki populacyjnej. Będziemy krok po kroku  budować modele, zaczynając od najprostszych modeli. W kolejnych krokach będziemy udoskonalali lub/i rozszerzali nasze modele, co zwykle powoduje ich komplikacje. Stwierdzimy także, że modele dynamiki populacyjnej są podobne w swej strukturze do modeli opisujących kinetykę reakcji chemicznych. Reakacje enzymatyczne czy też reakcje Biełousowa\-Żabotyńskiego mają wiele cech podobnych to zachowania się kolonii  bakterii, komórek biologicznych czy też  populacji myszy na polach uprawnych.   Przedstawimy też metody analizy takich równań. Zobaczymy, że współczesne osiągnięcia w dziedzinie metod komputerowych pozwalają na elegancką i relatywnie prostą analizę równań i wizualizację ich rozwiązań. Programy do takiej  analizy i wizualizacji  liczą często tylko kilka linijek kodu. Na tym polega potęga stosowania takich metod jak iCSE.
