@@ -245,7 +245,8 @@ Jeśli stworzymy macierz :math:`X`, której kolumny będą wektorami
 Zadanie 2.9
 ~~~~~~~~~~~
 
-Oblicz macierz odwrotną do dolne trójkątnej `Macierzy Pascala <http://en.wikipedia.org/wiki/Pascal_matrix>`_  (:math:`L_5`).
+Oblicz macierz odwrotną do dolnej trójkątnej `Macierzy Pascala
+<http://en.wikipedia.org/wiki/Pascal_matrix>`_ (:math:`L_5`).
 
 
 Zadanie 2.10
