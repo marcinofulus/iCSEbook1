@@ -16,7 +16,7 @@ Algebra liniowa:
 
 .. toctree::
 
-   Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
+   Uwagi techniczne <uwagi_techniczne>
 
 Literatura
 ==========
@@ -178,8 +178,8 @@ W tej sekcji znajdują się zadania obowiązujące na zaliczenie i egzamin.
    :maxdepth: 1
 
    zadania_01
-
-
-
+   zadania_02
+   zadania_03
+..   zadania_test1
 
 .. .. include:: orginaly.rst

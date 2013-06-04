@@ -1,5 +1,5 @@
-Zadania z Algebry liniowej
-==========================
+Zadania z Algebry liniowej: układy równań liniowych, eliminacja Gaussa
+=======================================================================
 
 
 Układy równań liniowych

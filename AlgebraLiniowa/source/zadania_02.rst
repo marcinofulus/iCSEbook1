@@ -26,7 +26,7 @@ Jeżeli jest to prawdą to powinno zachodzić:
 
 - :math:`A(-\phi) = A(\phi)^{-1}`
 - :math:`A(0) = I`
-- za zachowuję długość wektora, tzn.: :math:`|A(\phi)x|=|x|`.
+- :math:`A(-\phi)` zachowuje długość wektora, tzn.: :math:`|A(\phi)x|=|x|`.
 
 Udowonić powyższe własności.
 
@@ -66,34 +66,19 @@ Macierz :math:`A` w postaci:
 
 .. math::
 
-   A = \left(\begin{array}{rr}
-   0 & -1 \\
-   1 & 0)
+   A = 
+   \left(\begin{array}{rrr}
+   0 & 1 & 0 \\
+   1 & 0 & 0 \\
+   0 & 0 & 1
    \end{array}\right)
 
-jest zwana macierzą rzutu równoległego na oś :math:`X`. 
+jest zwana macierzą permutacji. Podziałaj macierzą :math:`A` na pewien
+wektor :math:`(x_1,x_2,x_3)`. 
 
-Jeżeli jest to prawdą to powinno zachodzić:
-
-- :math:`A^2 = A`
-- jądro operatora, tzn. zbiór wektorów spełniających: :math:`Ax = 0` są osią :math:`X`.
-
-Udowonić powyższe własności.
-
-Ponadto zaproponować postać rzutu równoległego na płaszczyznę
-:math:`XY` i obliczyć jądro tej macierzy.
+- które współrzędne ulegają permutacji pod działaniem tej operacji?
+- pokaż, że  :math:`A^2 = A`, 
+- jaka jest interpretacja geometryczna powyższej operacji liniowej?
 
 
-
-
-
-
-
-
-
-.. math::
-
-   \left(\begin{array}{rr}
-   -2 & 0 \\
-   -5 & 3
-   \end{array}\right)
+ 
