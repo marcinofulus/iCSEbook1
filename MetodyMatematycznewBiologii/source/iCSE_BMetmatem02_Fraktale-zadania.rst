@@ -7,13 +7,12 @@ Zadania
 Zadanie 1
 ~~~~~~~~~
 
-Przedstawiony algorytm otrzymywania i wykreślania smoka Heighwaya to tylko jeden z możliwych. Nieco bardziej "klasyczną" metoda przebiega następująco: W pierwszym kroku :math:`D_0` smok to jednostkowy odcinek. W kolejnym kroku :math:`P_1` zamieniamy ów odcinek na dwa odcinki o długości :math:`1/\sqrt{2}` zaczepione w końcach wyjściowego odcinka i połączonych pod odpowiednim kątem
+Przedstawiony algorytm otrzymywania i wykreślania smoka Heighwaya to tylko jeden z możliwych. Nieco bardziej "klasyczną" metoda przebiega następująco: W pierwszym kroku :math:`D_0` smok to jednostkowy odcinek. W kolejnym kroku :math:`P_1` zamieniamy ów odcinek na dwa odcinki o długości :math:`1/\sqrt{2}` zaczepione w końcach wyjściowego odcinka i połączonych pod odpowiednim kątem (oblicz jakim). Możliwe są dwie wersje - budujemy smoka łącząc odcinki obracając je zgodnie z ruchem wskazówek zegara lub odwrotnie (na rysunku poniżej jasno widać obroty zgodne z ruchem wskazówek). W kroku :math:`P_2` postepujemy podobnie z dwoma odcinkami, odkładając odcinki długości :math:`(1/\sqrt{2})/\sqrt{2} = 1/\sqrt{2}^2 = 1/2`, itd. Każdy kolejny :math:`n`-ty krok budowany jest z odcinków o długości :math:`(\sqrt{2})^{-n}`.
 
 
-(oblicz jakim). Możliwe są dwie wersje - budujemy smoka łącząc odcinki obracając je zgodnie z ruchem wskazówek zegara lub odwrotnie (na rysunku poniżej jasno widać obroty zgodne z ruchem wskazówek). W kroku :math:`P_2` postepujemy podobnie z dwoma odcinkami, odkładając odcinki długości :math:`(1/\sqrt{2})/\sqrt{2} = 1/\sqrt{2}^2 = 1/2`, itd. Każdy kolejny :math:`n`-ty krok budowany jest z odcinków o długości :math:`(\sqrt{2})^{-n}`.
-
-
-.. image:: http://upload.wikimedia.org/wikipedia/commons/9/97/Dragon_curve_iterations_%282%29.svg
+.. image:: iCSE_BMetmatem02_Fraktale-zadania_media/Dragon_curve_iterations_(2).svg
+    :height: 100px
+    :width: 600px
     :align: center
 
 
@@ -61,7 +60,7 @@ Zbuduj klasę rysującą ów fraktal korzysając z powyższego IFS.
 Zadanie 4
 ~~~~~~~~~
 
-Kolejną metoda na otrzymanie rrójkąta Sierpińskiego to bezpośrednia metoda usuwania środkowych trójkątów, tak jak opisane to zostało w definicji (punkt 2) w arkuszu  *iCSE_BMetmatem02_Fraktale\-przykłady* . Czyli - zaczynamy od pełnego, równobocznego trójkąta (krok :math:`S_0`) i dzielimy go na równe 4 części łącząc środki boków odcinkami. Na koniec usuwamy środkowy trójkąt (krok :math:`P_1`). W kroku :math:`P_2` powtarzamy dzielenie i usunięcie środka w każdym z poprzednio otrzymanych trójkątów (tym razem 3).
+Kolejną metoda na otrzymanie rrójkąta Sierpińskiego to bezpośrednia metoda usuwania środkowych trójkątów, tak jak opisane to zostało w definicji (punkt 2) w arkuszu  `*Przykłady fraktali* <iCSE_BMetmatem02_Fraktale-przyklady.html>`_. Czyli - zaczynamy od pełnego, równobocznego trójkąta (krok :math:`S_0`) i dzielimy go na równe 4 części łącząc środki boków odcinkami. Na koniec usuwamy środkowy trójkąt (krok :math:`P_1`). W kroku :math:`P_2` powtarzamy dzielenie i usunięcie środka w każdym z poprzednio otrzymanych trójkątów (tym razem 3).
 
 
 Zaprogramuj w Sage taką konstrukcję.
@@ -73,6 +72,8 @@ Uwaga: zamiast usuwać środkowy trójkąt, możesz tak naprawdę w danym kroku 
 Zadanie 5
 ~~~~~~~~~
 
-Wytłumacz, dlaczego wymiar fraktalny trójkąta Sierpińskiego :math:`HD_{S} = 1.5849625007211562977005314678535796701908111572265625\dots`
+Wytłumacz, dlaczego wymiar fraktalny trójkąta Sierpińskiego
+
+:math:`HD_{S} = 1.5849625007211562977005314678535796701908111572265625\dots`
 
 

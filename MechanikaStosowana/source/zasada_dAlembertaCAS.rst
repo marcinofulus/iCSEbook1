@@ -259,13 +259,13 @@ Wykorzystanie powyższego kodu najlepiej zrozumieć śledząc jego działanie na
 Jak to działa?
 ~~~~~~~~~~~~~~
 
-Zautomatyzowanie definicji zarówno deklaracji zmiennych i funkcji jak i słowników, pozwala na uniknięcie licznych pomyłek przy wpisywaniu powyższych formuł ręcznie. Jednak dla potrzeb dydaktycznych pokażemy równoważny kod zapisany jawnie dla przypadku wahadła matematycznego.
+Zautomatyzowanie definicji zarówno deklaracji zmiennych i funkcji jak
+i słowników, pozwala na uniknięcie licznych pomyłek przy wpisywaniu
+powyższych formuł ręcznie. Jednak dla potrzeb dydaktycznych pokażemy
+równoważny kod zapisany jawnie dla przypadku wahadła matematycznego.
 
 
-
-
-
-.. code-block:: python
+.. sagecellserver::
 
     sage: var('t')
     sage: var("x",latex_name='x')
@@ -285,7 +285,10 @@ Zautomatyzowanie definicji zarówno deklaracji zmiennych i funkcji jak i słowni
 
 .. end of output
 
-.. code-block:: python
+Wykonajmy powyższy kod i spróbujmy przetestować go na tym samym
+przykładzie:
+
+.. sagecellserver::
 
     sage: show( (1+x^2*y) )
     sage: show( (1+x^2*y).subs(to_fun))

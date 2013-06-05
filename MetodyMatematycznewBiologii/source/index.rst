@@ -27,6 +27,7 @@ Fraktale
    :maxdepth: 2
 
    iCSE_BMetmatem02_Fraktale-wstep
+   iCSE_BMetmatem02_Fraktale-Wymiar_Fraktalny
    iCSE_BMetmatem02_Fraktale-przyklady
    iCSE_BMetmatem02_Fraktale-Zbior_Mandelbrota
    iCSE_BMetmatem02_Fraktale-zadania

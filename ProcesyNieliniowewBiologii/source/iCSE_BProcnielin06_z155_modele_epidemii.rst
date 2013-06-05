@@ -78,8 +78,6 @@ Jeżeli dodamy obustronnie do siebie wszystkie 3 równania, to wyrazy po prawej 
     \frac{dS}{dt} + \frac{dI}{dt} + \frac{dR}{dt} =  \frac{d(S + I + R)}{dt} = 0  \quad \quad \Rightarrow \quad \quad  S + I + R  = const.   \quad \quad \Rightarrow \\  S(t) + I(t) + R(t)  = const. = S(0) + I(0) + R(0)  = N_0
 
 
-:math:`\Longrightarrow`
-
 Jak widać, całkowita liczba osobników  :math:`S(t) + I(t) + R(t)` w populacji nie zmienia się w czasie i jest określona przez :math:`S(0) + I(0) + R(0)` w początkowej  chwili czasu. Więc równania ewolucji są zgodne z założeniem o wyizolowanej populacji. Powyższy model można modyfikować na wiele sposobów. Po wykładach o modelowaniu dynamiki populacyjnej, każdy student może stworzyć swój model i   badać jego własności.
 
 
@@ -192,7 +190,7 @@ Znak pochodnej w zerze to:
     \frac{dI}{dt}|_{t=0}  =   r S(0)  I(0)  - a I(0)  = I(0) [r S(0) - a]
 
 
-Jeżeli :math:`r S(0) - a \gt  0`  to funkcja :math:`I(t) \gt  I(0) `  rośnie i pojawia się epidemia. Jeżeli :math:`r S(0) - a  \lt   0`  to funkcja :math:`I(t)  \lt   I(0)` maleje  i  nie pojawia się epidemia. W zagadnieniu tym pojawia się zjawisko progowe. Wartością progową jest wielkość:
+Jeżeli :math:`r S(0) - a \gt  0`  to funkcja :math:`I(t) \gt  I(0)`  rośnie i pojawia się epidemia. Jeżeli :math:`r S(0) - a  \lt   0`  to funkcja :math:`I(t)  \lt   I(0)` maleje  i  nie pojawia się epidemia. W zagadnieniu tym pojawia się zjawisko progowe. Wartością progową jest wielkość:
 
 
 .. MATH::
@@ -200,7 +198,7 @@ Jeżeli :math:`r S(0) - a \gt  0`  to funkcja :math:`I(t) \gt  I(0) `  rośnie i
      S_c = \frac{a}{r}
 
 
-Gdy w chwili początkowej  :math:`S(0) \gt  S_c` to pojawia się  epidemia!
+**Gdy w chwili początkowej**  :math:`S(0) \gt  S_c` **to pojawia się  epidemia!**
 
 
 Pojawienie sie epidemii zależy od tego jak duża jest populacja ludzi podatnych na zakażenie.  Populacja ta musi być odpowiednio duża, a jej minimalna wartość zależy od tego jakie jest tempo zdrowienia :math:`a` w relacji do tempa infekcji :math:`r`.  To jest najważniejszy wniosek z tej analizy.
@@ -276,7 +274,7 @@ W przypadku uproszczonych modeli, operator Laplace'a może dotyczyć tylko jedne
     \frac{\partial I }{\partial t} =   r S I  - a I +  D  \Delta I
 
 
-Model tego typu był szeroko stosowany do opisu rozprzestrzeniania się wścielkizny wśród dzikich zwierząt, zwałaszcza wśród populacji lisów. Jeszcze pod koniec lat 60\-ych  do połowy lat 70\-tych XXwieku we Francji wścielkizna stanowiła poważny problem i rozprzestrzeniała się w szybkim tempie z północnej części Francji aż do południowych krańców Francji.
+Model tego typu był szeroko stosowany do opisu rozprzestrzeniania się wścielkizny wśród dzikich zwierząt, zwałaszcza wśród populacji lisów. Jeszcze pod koniec lat 60\-ych  do połowy lat 70\-tych XX wieku we Francji wścielkizna stanowiła poważny problem i rozprzestrzeniała się w szybkim tempie z północnej części Francji aż do południowych krańców Francji.
 
 
 Powyższy model rozszerzono uwzględniając naturalny wzrost populacji lisów wskutek urodzin:
@@ -316,9 +314,7 @@ W nowych zmiennych  równania mają postać:
     \frac{\partial V }{\partial t} =   \alpha V ( U - \lambda)  +  \Delta V
 
 
-Jak widać, jedynie 2 parametry (:math:`\alpha`  oraz  :math:`\lambda` ) pojawijają się w przeskalowanych równaniach. Jedynie te 2 parametry są istotne dla charakteryzacji własności układu.
-
-
+Jak widać, jedynie 2 parametry (:math:`\alpha`  oraz  :math:`\lambda`) pojawijają się w przeskalowanych równaniach. Jedynie te 2 parametry są istotne dla charakteryzacji własności układu.
 
 
 
@@ -333,11 +329,11 @@ Można rozbudować modele o następujące czynnki:
  #. Epidemia w ośrodku jednorodnym
 
  #. Epidemia w ośrodku niejednorodnym:     
-  #. Przeszkody będące scianką odbijającą dla dyfuzji u i v rozmieszczone w pewien sposób (np. losowy).
+  - Przeszkody będące scianką odbijającą dla dyfuzji u i v rozmieszczone w pewien sposób (np. losowy).
 
-  #. Przeszkody będące źródłem lub zlewem u lub v. Na przykład można sobie wyobrazić, że mamy miejsca w przestrzeni w które usuwają chorych (szpitale).
+  - Przeszkody będące źródłem lub zlewem u lub v. Na przykład można sobie wyobrazić, że mamy miejsca w przestrzeni w które usuwają chorych (szpitale).
 
-  #. Dodanie zmienności różnych stałych od miejsca. Na przykład miejsc w których zachodi zdrowienie chorych z dużą prędkościa dyfuzja chorych jest zero a dyfizja zdrowych duża (Uwaga na modelowanie zmiennej stałej dyfuzji!).
+  - Dodanie zmienności różnych stałych od miejsca. Na przykład miejsc w których zachodi zdrowienie chorych z dużą prędkościa dyfuzja chorych jest zero a dyfizja zdrowych duża (Uwaga na modelowanie zmiennej stałej dyfuzji!).
  
 
 
@@ -353,9 +349,7 @@ Poniżej zamieszczone są dwa przykłady, w pierszym mamy możliwość dodania �
     sage: uvt = line( zip ( T,sol[:,0]) ,figsize=4,legend_label="S (podatni)") +\
     ...    line( zip ( T,sol[:,1]) ,color='red',legend_label="I (chorzy)")
     sage: html.table([["Przestrzeń fazowa (u,v)","u(t) i v(t)"],[line( sol,figsize=4 ),uvt]])
-    Traceback (most recent call last):
-    ...
-    NameError: name 'a' is not defined
+
 
 .. end of output
 
@@ -420,10 +414,15 @@ Model rozprzestrzeniania się epidemii w ośrodku jednorodnym
     ...       essential_boundary_conditions(u)
     ...       
     sage: print "Saved ",len(Tlst), " from ", Nsteps
-    dt,dt_dyn 0.0201654966800612 0.0200000000000000
-    sps= 50 dt= 0.0200000000000000 Nsteps= 10000
-    Saved  200  from  10000
-    CPU time: 24.83 s,  Wall time: 24.82 s
+
+
+
+
+| dt,dt_dyn 0.0201654966800612 0.0200000000000000
+| sps= 50 dt= 0.0200000000000000 Nsteps= 10000
+| Saved  200  from  10000
+| CPU time: 24.83 s,  Wall time: 24.82 s
+
 
 .. end of output
 
@@ -463,11 +462,19 @@ Model rozprzestrzeniania się epidemii w ośrodku jednorodnym
     sage: anim.show()
 
 
+.. image:: iCSE_BProcnielin06_z155_modele_epidemii_media/cell_23_sage0.gif
+    :align: center
+
+
 .. end of output
 
 .. code-block:: python
 
     sage: anim.show()
+
+
+.. image:: iCSE_BProcnielin06_z155_modele_epidemii_media/cell_16_sage0.gif
+    :align: center
 
 
 .. end of output
@@ -569,12 +576,22 @@ Model rozprzestrzenienia się epidemii w losowej geometrii
     sage: wall[np.logical_not(m)]=np.nan    
     sage: print "Saved ",len(Tlst), " from ", Nsteps
     sage: html.table([["U","V"],[matrix_plot(u*wall,origin='lower',cmap='rainbow',figsize=8 ),matrix_plot(v*wall,origin='lower',cmap='rainbow',figsize=8 )]])
-    dt,dt_dyn 0.0520155006191845 0.0200000000000000
-    sps= 50 dt= 0.0200000000000000 Nsteps= 2500
-    Saved  50  from  2500
-    <html>...</html>
 
-    CPU time: 8.68 s,  Wall time: 8.68 s
+
+| dt,dt_dyn 0.0520155006191845 0.0200000000000000
+| sps= 50 dt= 0.0200000000000000 Nsteps= 2500
+| Saved  50  from  2500
+
+
+.. image:: iCSE_BProcnielin06_z155_modele_epidemii_media/cell_21_sage0.png
+    :align: center
+
+.. image:: iCSE_BProcnielin06_z155_modele_epidemii_media/cell_21_sage1.png
+    :align: center
+
+
+CPU time: 8.68 s,  Wall time: 8.68 s
+
 
 .. end of output
 
@@ -601,6 +618,9 @@ Model rozprzestrzenienia się epidemii w losowej geometrii
 
 .. end of output
 
+
+.. image:: iCSE_BProcnielin06_z155_modele_epidemii_media/cell_31_sage0.gif
+    :align: center
 
 
 
