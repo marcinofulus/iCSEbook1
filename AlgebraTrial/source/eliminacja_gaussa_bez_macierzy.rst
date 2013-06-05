@@ -110,15 +110,15 @@ Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 
    | Procedura ``solve()`` dla układów równań nieoznaczonych.
 
-Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
-liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
-wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
-wykorzystać te parametry np. do narysowania rozwiązań to musimy po
-pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
-drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
-procedurę, która automatycznie wyciągnie ze wzorów wszystkie
-zmienne. W poniższym kodzie jest zapisany przykład takiej
-procedury, zachęcam do wypróbowania go w Sage i zrozumienia:
+   | Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
+     liniowy) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
+     wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
+     wykorzystać te parametry np. do narysowania rozwiązań to musimy po
+     pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
+     drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
+     procedurę, która automatycznie "wyciągnie" ze wzorów wszystkie
+     zmienne. W poniższym kodzie jest zapisany przykład takiej
+     procedury, zachęcam do wypróbowania go w Sage i zrozumienia:
 
 .. code-block:: python
 

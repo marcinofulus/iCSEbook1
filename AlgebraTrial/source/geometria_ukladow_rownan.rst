@@ -2,11 +2,12 @@
 
 Geometria układów równań liniowych
 ----------------------------------
+|
 
 Interpretacja "wierszowa"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Rozważmy układ dwóch równań liniowych:
+|
+| Rozważmy układ dwóch równań liniowych:
 
 :math:`\qquad\qquad \begin{cases} \begin{alignat*}{3}
 \ 2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
@@ -29,7 +30,7 @@ co łatwo sprawdzić ręcznie lub komputerowo:
 | Obrazem rozwiązania układu jest punkt leżący na obydwu prostych jednocześnie,
 | czyli punkt przecięcia się tych dwóch prostych (o ile proste się przecinają):
 
-.. figure:: figs/uklad_rownan.png
+.. figure:: figures/Rys_1.png
    :align: center
 
 W ogólności mogą wystąpić następujące sytuacje:
@@ -44,10 +45,12 @@ Wtedy odpowiednio układ dwóch równań:
 #. ma nieskończenie wiele rozwiązań,
 #. nie ma żadnych rozwiązań (układ jest sprzeczny).
 
+|
+
 Interpretacja "kolumnowa"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Rozważany układ równań
+| 
+| Rozważany układ równań
 
 .. math::
    
@@ -74,22 +77,25 @@ czyli:
 
 .. sidebar:: Kombinacja liniowa:
 
-   | Kombinacja liniowa wektorów :math:`\ v_1\ \text{i}\ \, v_2\ `
-   | o współczynnikach liczbowych :math:`x_1\ \text{i} \ \, x_2\,` 
-   | jest z definicji ich "sumą ważoną" postaci :math:`\ x_1 v_1 + x_2 v_2\,.` 
+   | Kombinacja liniowa wektorów :math:`\ \,\boldsymbol{v}_1\ \text{i}\ \, \boldsymbol{v}_2\ `
+   | o współczynnikach liczbowych :math:`\:x_1\ \text{i} \ \, x_2\,` 
+   | jest z definicji ich "sumą ważoną" postaci :math:`\ x_1\,\boldsymbol{v}_1 + x_2\,\boldsymbol{v}_2\,.` 
 
 | Interpretacja takiego zapisu jest następująca:
   
 | dla jakich współczynników :math:`\;x_{1},x_{2}\;` kombinacja liniowa wektorów
 |  
-| :math:`\;v_1=\left[ \begin{array}{r} 2 \\ 1 \end{array} \right]\;` i 
-  :math:`\ \,v_2=\left[ \begin{array}{r} -1 \\ 1 \end{array} \right]\;` równa się wektorowi 
-  :math:`\;w\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\;`?
+| :math:`\;\boldsymbol{v}_1=\left[ \begin{array}{r} 2 \\ 1 \end{array} \right]\ \ \text{i}\ \ \,  
+  \boldsymbol{v}_2=\left[ \begin{array}{r} -1 \\ 1 \end{array} \right]\;` równa się wektorowi 
+  :math:`\;\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\;`?
 
 **Poeksperymentuj z Sage:**
 
-| W poniższym programie można dobrać suwakami wartości współczynników :math:`\,x_1\ \text{i} \ \, x_2\,`
-| tak, aby wektor :math:`\;x_1 v_1 + x_2 v_2\;` (oznaczony kolorem szarym) pokrył się z wektorem :math:`\,w`.
+| W poniższym programie wektory kolumnowe :math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
+  są reprezentowane przez wektory geometryczne :math:`\;\vec{v}_1,\,\vec{v}_2\ \ \text{i}\ \ \,\vec{w}.`
+
+| Operując suwakami, dobierz wartości współczynników :math:`\,x_1\ \ \text{i}\ \ x_2\,`
+  tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;` (oznaczony kolorem szarym) pokrył się z wektorem :math:`\,\vec{w}`.
 
 .. sagecellserver::
 
@@ -100,9 +106,9 @@ czyli:
    def _(x1=('$$x_1:$$', slider(0,3,1/2, default=3)),
          x2=('$$x_2:$$', slider(0,3,1/2, default=2))):
           
-       plt = arrow((0,0),v1, color='red',  legend_label=' $v_1$', zorder=5) +\
-             arrow((0,0),v2, color='green',legend_label=' $v_2$', zorder=5) +\
-             arrow((0,0), w, color='black',legend_label=' $w$',   zorder=5) +\
+       plt = arrow((0,0),v1, color='red',  legend_label=' $\\vec{v}_1$', zorder=5) +\
+             arrow((0,0),v2, color='green',legend_label=' $\\vec{v}_2$', zorder=5) +\
+             arrow((0,0), w, color='black',legend_label=' $\\vec{w}$',   zorder=5) +\
              arrow((0,0),x1*v1, color='gray', width=1, arrowsize=3) +\
              arrow((0,0),x2*v2, color='gray', width=1, arrowsize=3) +\
              arrow((0,0),x1*v1+x2*v2, color='gray', width=1.75, arrowsize=3) +\
@@ -119,6 +125,7 @@ Aby się upewnić, że jesteśmy w stanie przenieść wnioski na większą
 liczbę równań, rozważmy teraz układ trzech równań o trzech niewiadomych:
 
 .. math::
+   :label: set1
 
    \begin{cases}\begin{alignat*}{4}
    \  2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
@@ -132,10 +139,10 @@ Ma on rozwiązanie w punkcie :math:`\ x_1 = -\frac{1}{4},\ x_2 = \frac{3}{4},\ x
 | W trójwymiarowej przestrzeni współrzędnych :math:`\ x_1,\,x_2,\,x_3\ ` równanie liniowe przedstawia płaszczyznę;
 | rozwiązanie układu równań jest więc wyznaczone przez miejsce geometryczne przecięcia się trzech płaszczyzn.
 
-| Płaszczyzny odpowiadające kolejnym równaniom układu są oznaczone kolorem czerwonym, zielonym i niebieskim.
+| Płaszczyzny odpowiadające kolejnym równaniom układu :eq:`set1` są oznaczone kolorem czerwonym, zielonym i niebieskim.
 | W tym wypadku istnieje dokładnie jeden punkt wspólny tych płaszczyzn (kolor biały):
 
-.. figure:: sage2.jpg
+.. figure:: figures/Rys_24.png
    :align: center
 
 | Przejście do postaci kolumnowej układu trzech równań (o współczynnikach całkowitych)
@@ -181,12 +188,13 @@ Aby wywołać funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3]`
    except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
 | Rozwiązanie układu równań sprowadza się do wyznaczenia współczynników :math:`\ x_1,\,x_2,\,x_3\ ` kombinacji liniowej
-| wektorów :math:`\ v_1,\,v_2,\,v_3,\ ` która równałaby się wektorowi :math:`\,w\,` wolnych wyrazów po prawej stronie równości.
+| wektorów kolumnowych :math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\boldsymbol{v}_3,\ `
+  która równałaby się wektorowi :math:`\,\boldsymbol{w}\,` wolnych wyrazów po prawej stronie równości.
 
 | Poniższy program wyświetla geometryczny obraz tego zagadnienia.
 
-| Wektory :math:`\ v_1,\,v_2,\,v_3,\;` występujące po lewej stronie kolumnowej postaci układu równań,
-| są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim; wektor wolnych wyrazów :math:`\,w\;` jest szary.
+| Wektory geometryczne :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\;`
+  są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim; :math:`\,` wektor :math:`\,\vec{w}\;` jest szary.
 
 .. admonition:: **Poeksperymentuj z Sage**
 
@@ -213,13 +221,14 @@ Aby wywołać funkcję, trzeba utworzyć listę równań ``Eqns = [eq1,eq2,eq3]`
       
    show(plt)
 
-| Widać, że wektory :math:`\ v_1,\,v_2,\,v_3\ ` nie są komplanarne (nie leżą w jednej płaszczyźnie). 
+| Widać, że wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` nie są komplanarne (nie leżą w jednej płaszczyźnie). 
 | Można pokazać ogólnie, że wtedy i tylko wtedy układ równań ma dokładnie jedno rozwiązanie.
+|
 
-Przypadek osobliwy: układ równań liniowych  ma nieskończenie wiele rozwiązań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Weźmy układ równań:
+Przypadek osobliwy: nieskończenie wiele rozwiązań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| 
+| Weźmy układ równań:
 
 .. math::
 
@@ -242,6 +251,7 @@ która może przyjmować dowolne wartości:
 
    show(solve([eq1,eq2,eq3],[x1,x2,x3]))
 
+|
 | Oznacza to, że układ równań jest spełniony przez nieskończenie wiele trójek liczb w powyższej postaci.
 
 | Taka sytuacja wystąpi zawsze wtedy, gdy jedno z równań jest kombinacją liniową pozostałych.
@@ -290,16 +300,16 @@ są identyczne i pokrywają się. Trzecia płaszczyzna (niebieska), odpowiadają
 przecina się z nimi wzdłuż linii prostej (białej). Linia ta przedstawia zbiór rozwiązań układu,
 składający się z nieskończenie wielu punktów.
 
-Wektory kolumnowe :math:`\ v_1,\,v_2,\,v_3\ ` (oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim)
-leżą w jednej płaszczyźnie, a wektor :math:`w\,` (szary), będący prawą stroną układu równań, 
-też należy do tej płaszczyzny. W tej sytuacji nieskończenie wiele kombinacji liniowych wektorów
-:math:`\ v_1,\,v_2,\,v_3\ ` może równać się wektorowi :math:`w`.
-
+| Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` (oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim)
+  leżą w jednej płaszczyźnie, a wektor :math:`\ \vec{w}\,` (szary), reprezentujący prawą stronę układu równań, 
+  też należy do tej płaszczyzny. W tej sytuacji nieskończenie wiele kombinacji liniowych wektorów
+  :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` może równać się wektorowi :math:`\ \vec{w}.`
+|
 
 Przypadek osobliwy: układ sprzeczny
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
+| 
+| Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
 
 .. math::
 
@@ -356,8 +366,9 @@ Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
 
 Płaszczyzny, odpowiadajace pierwszym dwóm równaniom układu (czerwona i zielona) są równoległe, ale nie pokrywają się. W tej sytuacji nie ma punktów wspólnych dla wszystkich trzech płaszczyzn.
 
-Na drugim wykresie, przedstawiającym interpretację kolumnową układu, wektory :math:`\ v_1,\,v_2,\,v_3\ ` leżą na tej samej płaszczyźnie.
-W odróżnieniu jednak od poprzedniego przypadku z nieskończoną ilością rozwiązań, wektor :math:`w` nie jest z nimi komplanarny, przez co nie może być ich kombinacją liniową (każda kombinacja liniowa wektorów :math:`\ v_1,\,v_2,\,v_3\ ` leży w ich płaszczyźnie).
+Na drugim wykresie, przedstawiającym interpretację kolumnową układu, wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ `
+leżą na tej samej płaszczyźnie. :math:`\,` 
+W odróżnieniu jednak od poprzedniego przypadku z nieskończoną ilością rozwiązań, wektor :math:`\ \vec{w}\ ` nie jest z nimi komplanarny, przez co nie może być ich kombinacją liniową (każda kombinacja liniowa wektorów :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` leży w ich płaszczyźnie).
 
 
 

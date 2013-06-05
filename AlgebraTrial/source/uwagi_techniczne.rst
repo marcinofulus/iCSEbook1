@@ -11,7 +11,8 @@ Napis "Wykonaj" odróżnia komórki z tą dodatkową funkcjonalnością od komó
 które jej nie posiadają. Dla jednolitości można oczywiście zastąpić go przez "Evaluate".
 
 Dla ilustracji rozważmy procedurę wypisującą układ równań liniowych, 
-zadany przez macierz kwadratową :math:`\ {\small\mathbf{A}}\ ` stopnia :math:`\ n\ ` i  kolumnę  wolnych  wyrazów  :math:`\ b\ `
+zadany przez macierz kwadratową :math:`\ \boldsymbol{A}\ ` stopnia :math:`\ n\ ` 
+i  kolumnę  wolnych  wyrazów  :math:`\ \boldsymbol{b}\ `
 (przy wykorzystaniu kodu w sekcji Zadanie. Eliminacja Gaussa dla układów równań):
 
 .. sagecellserver::
