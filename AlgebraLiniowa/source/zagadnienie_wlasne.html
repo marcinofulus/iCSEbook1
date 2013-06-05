@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Zagadnienie własne</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="zagadnienie-wlasne">
+<h1 class="title">Zagadnienie własne</h1>
+
+<div class="section" id="wektory-i-wartosci-wlasne">
+<h1>Wektory i wartości własne</h1>
+<p>Wartości własne i wektory własne odgrywają zasadniczą rolę w
+rozwiązywaniu równań różniczkowych liniowych, w badaniu ich
+stabilności, w wyznaczaniu stanów stacjonarnych w zagadnieniach
+mechaniki kwantowej.  w równaniach cząstkowych oraz analizie drgań
+własnych.</p>
+<p>Dobrym punktem wyjścia do wprowadzenia pojęcia wartości własnej i
+wektora własnego są układy równań różniczkowych liniowych</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mstyle fontweight="bold"><mi>x</mi></mstyle><mo>'</mo><mo>=</mo><mi>A</mi><mstyle fontweight="bold"><mi>x</mi></mstyle><mo>,</mo></mtd></mtr></mtable></math>
+</div>
+<p>gdzie <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math> jest macierzą kwadratową o wymiarach <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math>.
+Szukamy rozwiązań postaci</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 23)</p>
+<p>
+Unknown LaTeX command: qquad</p>
+<pre class="literal-block">
+\mathbf x(t)=\mathbf v e^{\lambda t}, \qquad
+\lambda\in\mathbf C,
+\,\,\, \mathbf v\in \mathbf C^n.
+</pre>
+</div>
+<p>Ponieważ <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mo>(</mo><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup><mo>)</mo><mo>'</mo><mo>=</mo><mi>λ</mi><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup></mrow></math>, więc</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 31)</p>
+<p>
+Unknown LaTeX command: Big</p>
+<pre class="literal-block">
+\mathbf x'(t)=
+\frac{d}{dt}\Big(\mathbf v e^{\lambda t}\Big)
+=\lambda
+\mathbf v e^{\lambda t}.
+</pre>
+</div>
+<p>Podstawiając wyliczoną wartość <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>x</mi></mstyle><mo>'</mo><mo>(</mo><mi>t</mi><mo>)</mo></mrow></math> do naszego układu
+otrzymujemy</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>λ</mi><mstyle fontweight="bold"><mi>v</mi></mstyle><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup><mo>=</mo><mi>A</mi><mo>(</mo><mstyle fontweight="bold"><mi>v</mi></mstyle><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup><mo>)</mo><mo>=</mo><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup><mi>A</mi><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>.</mo></mtd></mtr></mtable></math>
+</div>
+<p>Zatem funkcja <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>x</mi></mstyle><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mstyle fontweight="bold"><mi>v</mi></mstyle><msup><mi>e</mi>
+<mrow><mi>λ</mi><mi>t</mi></mrow></msup></mrow></math> jest
+rozwiązaniem układu wtedy i tylko wtedy, gdy stała
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi><mo>∈</mo><mstyle fontweight="bold"><mi>C</mi></mstyle></mrow></math> i wektor <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>∈</mo><msup><mstyle fontweight="bold"><mi>C</mi></mstyle><mi>n</mi></msup></mrow></math>
+spełniają równanie</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>A</mi><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>=</mo><mi>λ</mi><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>.</mo></mtd></mtr></mtable></math>
+</div>
+<p>Jeżeli liczba <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi><mo>∈</mo><mstyle fontweight="bold"><mi>C</mi></mstyle></mrow></math> i niezerowy wektor
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>∈</mo><msup><mstyle fontweight="bold"><mi>C</mi></mstyle><mi>n</mi></msup></mrow></math> spełniają powyższe równanie, to <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi></mrow></math>
+nazywamy <em>wartością własną</em>, a wektor <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>v</mi></mstyle></mrow></math> <em>wektorem
+własnym</em> macierzy (odwzorowania) <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math>. Jeżeli <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi></mrow></math>
+jest wartością własną, a <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>v</mi></mstyle></mrow></math> wektorem własnym macierzy
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math> odpowiadającym <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi></mrow></math>, to spełniają one równanie</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mo>(</mo><mi>A</mi><mo>-</mo><mi>λ</mi><mi>I</mi><mo>)</mo><mstyle fontweight="bold"><mi>v</mi></mstyle><mo>=</mo><mstyle fontweight="bold"><mn>0</mn></mstyle><mo>.</mo></mtd></mtr></mtable></math>
+</div>
+<p>W istocie jest to jednorodny układ <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>n</mi></mrow></math> równań liniowych o
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>n</mi></mrow></math> niewiadomych i ma on niezerowe rozwiązanie <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mstyle fontweight="bold"><mi>v</mi></mstyle></mrow></math>
+wtedy i tylko wtedy, gdy</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mo>det</mo><mo>(</mo><mi>A</mi><mo>-</mo><mi>λ</mi><mi>I</mi><mo>)</mo><mo>=</mo><mn>0</mn><mo>.</mo></mtd></mtr></mtable></math>
+</div>
+<p>Ostatnie równanie nazywamy <em>równaniem charakterystycznym</em>.</p>
+</div>
+<div class="section" id="wazne-wlasnosci-wartosci-wlasnych">
+<h1>Ważne własności wartości własnych</h1>
+<p>Układ złożony z wektorów własnych odpowiadających różnym wartościom
+własnym jest liniowo niezależny. W szczególności, jeżeli macierz
+kwadratowa wymiaru <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> ma <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>n</mi></mrow></math> różnych wartości
+własnych, to odpowiadające im wektory własne tworzą bazę w
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msup><mstyle fontweight="bold"><mi>C</mi></mstyle><mi>n</mi></msup></mrow></math>.</p>
+<p>Weżmy dla przykładu dwie wartości własne <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>1</mn></msub></mrow></math> i
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>2</mn></msub></mrow></math> oraz odpowiadające im wektory własne: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></math> i
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>x</mi><mn>2</mn></msub></mrow></math>. Załóżmy, że wektory własne są liniowo zależne. Wtedy dla
+pewnych stałych <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>c</mi><mn>1</mn></msub></mrow></math> i <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>c</mi><mn>2</mn></msub></mrow></math> zachodzi:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 87)</p>
+<p>Error in &quot;math&quot; directive:
+unknown option: &quot;label&quot;.</p>
+<pre class="literal-block">
+.. math::
+   :label: lincom
+
+   c_1 x_1 + c_2 x_2 = 0
+
+</pre>
+</div>
+<p>pomnóżmy to równanie przez <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math> i wykorzystajmy równianie własne:</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mi>A</mi><msub><mi>c</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>A</mi><msub><mi>c</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mtd></mtr>
+<mtr>
+<mtd></mtd></mtr></mtable></math>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>c</mi><mn>1</mn></msub><msub><mi>λ</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><msub><mi>λ</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mtd></mtr></mtable></math>
+</div>
+<p>Do ostatniego rówania podstawmy iloczyn <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>c</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow></math> wyliczone z
+równania <a href="#id1"><span class="problematic" id="id2">:eq:`lincom`</span></a>, otrzymujemy:</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 100); <em><a href="#id2">backlink</a></em></p>
+Unknown interpreted text role &quot;eq&quot;.</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>c</mi><mn>1</mn></msub><msub><mi>λ</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>λ</mi><mn>2</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mtd></mtr>
+<mtr>
+<mtd></mtd></mtr></mtable></math>
+</div>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>c</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>-</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>)</mo><mo>=</mo><mn>0</mn></mtd></mtr></mtable></math>
+</div>
+<p>Ostatnie równanie jest spełnione jesli <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow></math>.</p>
+<p>Jeżeli macierz jest hermitowska tj.: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msup><mi>A</mi><mo>†</mo></msup><mo>=</mo><mi>A</mi></mrow></math> to:</p>
+<ol class="arabic" start="0">
+<li><p class="first"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msup><mi>x</mi><mo>†</mo></msup><mi>A</mi><mi>x</mi></mrow></math> jest rzeczywiste, sprawdźmy:</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mo>(</mo><msup><mi>x</mi><mo>†</mo></msup><mi>A</mi><mi>x</mi><msup><mo>)</mo><mo>†</mo></msup><mo>=</mo></mtd></mtr></mtable></math>
+</div>
+</li>
+<li><p class="first">wartości własne są rzeczywiste</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 129)</p>
+<p>
+Unknown LaTeX command: underbrace</p>
+<pre class="literal-block">
+\underbrace{(x^\dagger A x)}_{\text{rzeczywiste}} = \lambda \underbrace{(x^\dagger x)}_{\text{rzeczywiste}}
+</pre>
+</div>
+</li>
+<li><p class="first">wektory własne należąco do różnych wartości własnych są ortogonalne</p>
+</li>
+</ol>
+<p>Dla dowolnej macierzy wektory własne należące do różnych wartości
+własnych są liniowo niezależne od siebie, założenie hermitowskości
+implikuje dodatkowo ich ortogonalność.</p>
+</div>
+<div class="section" id="przyklad-rozwiazania-zagadnienia-wlasnego">
+<h1>Przykład rozwiązania zagadnienia własnego</h1>
+<p>Weźmy macierz:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 151)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+A =\left(\begin{array}{rr}
+1 &amp; 2 \\
+1 &amp; 0
+\end{array}\right)
+</pre>
+</div>
+<p>Tworzymy układ równań:</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><mo>(</mo><mi>A</mi><mo>-</mo><mi>λ</mi><mi>I</mi><mo>)</mo><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr></mtable></math>
+</div>
+<p>i pytamy się dla jakich wartości <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>λ</mi></mrow></math> układ ten posiada
+niezerowe rozwiązania. Warunkiem jest osobliwość macierzy
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi><mo>-</mo><mi>λ</mi><mi>I</mi></mrow></math> czyli znikanie jej wyznacznika. Mamy:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 168)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+\det \left(\begin{array}{rr}
+1-\lambda &amp; 2 \\
+1 &amp; -\lambda
+\end{array}\right) =  \lambda^{2} - \lambda - 2 = 0
+</pre>
+</div>
+<p>Istnieją dwa rozwiązania tego równania:</p>
+<div>
+<math xmlns="http://www.w3.org/1998/Math/MathML" mode="display">
+<mtable>
+<mtr>
+<mtd><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mtd></mtr>
+<mtr>
+<mtd><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn></mtd></mtr></mtable></math>
+</div>
+<p>Rozważmy przypadek wartości własnej  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow></math>:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 184)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+(A - \lambda_1 I) = \left(\begin{array}{rr}
+-1 &amp; 2 \\
+1 &amp; -2
+\end{array}\right)
+</pre>
+</div>
+<p>Rozwiązaniem tego układu jest wektor własny (w zasadzie jego dowolna
+wielokrotność) odpowiadający wartości własnej <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow></math>,
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 189)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+x_1 =\left(\begin{array}{r} 1 \\\frac{1}{2}\end{array}\right)
+</pre>
+</div>
+.</p>
+<p>Rozważmy przypadek  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn></mrow></math>:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 199)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+(A - \lambda_2 I) =\left(\begin{array}{rr} 2 &amp; 2 \\ 1 &amp; 1
+\end{array}\right)
+</pre>
+</div>
+<p>Rozwiązaniem tego układu jest wektor własny (w zasadzie jego dowolna
+wielokrotność) odpowiadający wartości własnej <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mo>-</mo><mn>1</mn></mrow></math>,
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 202)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+x_2 = \left(\begin{array}{r} 1 \\-1\end{array}\right)
+</pre>
+</div>
+.</p>
+<p>W bazie utworzonej z wektorów własnych macierz jest
+diagonalna. Sprawdźmy to. Niech <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>S</mi></mrow></math> będzie macierzą przejścia do
+bazy wektorów własnych, której kolumnami są wektory własne:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 213)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+S = \left(\begin{array}{rr}
+1 &amp; 1 \\
+\frac{1}{2} &amp; -1
+\end{array}\right)
+</pre>
+</div>
+<p>Policzmy zatem postać macierzy <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math> w bazie wektorów własnych:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">zagadnienie_wlasne.rst</tt>, line 222)</p>
+<p>
+Environment not supported! Supported environment: "matrix".</p>
+<pre class="literal-block">
+S^{-1}AS  =\left(\begin{array}{rr}
+\frac{2}{3} &amp; \frac{2}{3} \\
+\frac{1}{3} &amp; -\frac{2}{3}
+\end{array}\right) \left(\begin{array}{rr}
+1 &amp; 2 \\
+1 &amp; 0
+\end{array}\right) \left(\begin{array}{rr}
+1 &amp; 1 \\
+\frac{1}{2} &amp; -1
+\end{array}\right) =
+\left(\begin{array}{rr}
+2 &amp; 0 \\
+0 &amp; -1
+\end{array}\right)
+</pre>
+</div>
+<p>Jak widać macierz <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow><mi>A</mi></mrow></math> ma w bazie wektorów własnych postać diagonalną.</p>
+</div>
+</div>
+</body>
+</html>

@@ -196,6 +196,21 @@ Wzór :eq:`Laplace` zwany jest rozwinięciem Laplace'a wyznacznika względem j-t
     det1(A)
 
 
+Praktyczne obliczanie wyznacznika
+---------------------------------
+
+Zarówno rozwinięcie Laplace'a jak i jawna postać wzoru na wyznacznik
+dla dużych macierzy implikują wykonanie zbyt wielu operacji
+arytmetycznych. Jednak pamiętając o własnościach wyznacznika można:
+
+* zauwazyć, że wyznacznik macierzy trojkątnej jest równy iloczynowy elementów na jej diagonali
+* zauważyć, że każdą macierz da się sprowadzić do iloczynu macierzy trójkątnych oraz operacji permuatacji.
+
+Z powyższych obserwacji wynika, ze praktycznie, by wyliczyć wyznacznik najlepiej przeprowadzić rozkład LU macierzy i  
+
+
+A = random_matrix(QQ,3)
+
 Własności  funkcji  det,  wynikające  z  definicji
 --------------------------------------------------
 

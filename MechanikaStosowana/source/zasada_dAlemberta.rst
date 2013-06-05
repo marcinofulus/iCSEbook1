@@ -42,7 +42,7 @@ można wyrazić przez :math:`3N-p` pozostałych które są dowolne.
 Wstawiając te wyrażenia to równań d'Alemberta otrzymujemy z warunku
 znikania współczynników przy niezależnych przesunięciach wirtualnych
 układ :math:`3N-p` równań różniczkowych. Razem z równaniami więzów
-mamy w sumie :math:`3N` równań na :math:`3N` nie wiadomych
+mamy w sumie :math:`3N` równań na :math:`3N` niewiadomych
 :math:`x_j`.
 
 
