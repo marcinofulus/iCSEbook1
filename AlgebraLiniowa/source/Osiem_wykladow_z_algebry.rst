@@ -11,30 +11,23 @@ Wstęp
 =====
 
 Algebra liniowa:
- dział algebry zajmujący się badaniem
- przestrzeni liniowych i przekształceń liniowych. 
+  dział algebry zajmujący się badaniem przestrzeni liniowych i przekształceń liniowych. 
 
 .. toctree::
 
-   Uwagi techniczne <uwagi_techniczne>
+   Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
+   Przewodnik po strukturach algebraicznych <struktury_algebraiczne>
+   literatura
 
-Literatura
-==========
+Wykład I:  Układy równań liniowych. Eliminacja Gaussa
+=====================================================
 
-.. toctree::
-   :maxdepth: 1
-
-   literatura 
-
-Wykład I:  Układy równań liniowych - eliminacja Gaussa
-======================================================
-
-Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań liniowych.
-Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne na równaniach.
+| Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań liniowych.
+| Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne na równaniach.
 
 .. toctree::
-   :maxdepth: 1
-      
+
+   wektory_kolumnowe
    geometria_ukladow_rownan
    eliminacja_gaussa_bez_macierzy
 
@@ -42,22 +35,19 @@ Zadania do wykładu I:
 ---------------------
 
 .. toctree::
-   :maxdepth: 1
 
    zadanie_eliminacja_gaussa_bez_macierzy
-
 
 Wykład II:  Macierze
 ====================
 
-Notacja macierzowa układów równań, oraz wynikające z niej mnożenie
-macierzy przez wektor. Eliminacja Gaussa w zapisie macierzowym dla
-układów oznaczonych, nieoznaczonych i sprzecznych.
+| Wprowadzenie macierzy jako prostokątnej tablicy elementów z pewnego ciała.
+| Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.
+| Eliminacja Gaussa w zapisie macierzowym dla układów oznaczonych, nieoznaczonych i sprzecznych.
 
 .. toctree::
-   :maxdepth: 1
 
-   mnozenie_macierzy
+   dzialania_na_macierzach
    eliminacja_gaussa
    eliminacja_gaussa_II
    macierze_przyklady

@@ -4,7 +4,7 @@ Metoda eliminacji Gaussa dla układów równań
 -------------------------------------------
 |
 
-Postać schodkowa układu równań.
+Postać schodkowa układu równań:
  | Układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych ma postać schodkową,
  | gdy w każdym :math:`\,k`-tym równaniu nie występują niewiadome :math:`x_1,\dots,x_{k-1}`
  | (czyli współczynniki przy tych niewiadomych są równe zeru).
@@ -15,8 +15,8 @@ Postać schodkowa układu równań.
 | Doprowadzimy go do postaci schodkowej poprzez następujące
 | operacje elementarne, które nie zmieniają zbioru rozwiązań:
 
-#. przestawienie dwóch równań
-#. dodanie (bądź odjęcie) dwóch równań stronami
+#. przestawienie dwóch równań,
+#. dodanie (bądź odjęcie) dwóch równań stronami,
 #. pomnożenie obu stron równania przez liczbę różną od zera.
 
 |
@@ -118,7 +118,7 @@ wyrażenia zależne parametrów ``r1,r2,...``. Jeśli chcemy
 wykorzystać te parametry np. do narysowania rozwiązań to musimy po
 pierwsze zadeklarować zmienne, które odpowiadają tym parametrom. Po
 drugie, ich nazwy są często nieprzewidywalne, dlatego warto mieć
-procedurę, która automatycznie wyciągnie ze wzorów wszystkie
+procedurę, która automatycznie "wyciągnie" ze wzorów wszystkie
 zmienne. W poniższym kodzie jest zapisany przykład takiej
 procedury. Zachęcam do wypróbowania go w Sage i zrozumienia.
 

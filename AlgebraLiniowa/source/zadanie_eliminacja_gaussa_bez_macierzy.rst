@@ -2,8 +2,8 @@
 
 Zadanie. Eliminacja Gaussa dla układów równań
 ---------------------------------------------
-
-| Wykonując eliminację Gaussa rozwiąż odręcznie
+|
+| Wykonując eliminację Gaussa, rozwiąż odręcznie
   co najmniej jeden układ 3 równań o 3 niewiadomych.
 
 | Rozwiąż również układ 4 równań o 4 niewiadomych, ewentualnie z pomocą Sage'a.
