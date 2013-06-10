@@ -37,7 +37,7 @@ dla dowolnych :math:`\ g_1, g_2\,\in\,G,\ ` to grupę nazywamy przemienną.
 | 
 
 **Pierścień** (ang.: ring) składa się z jednego zbioru :math:`\,P\ ` i :math:`\ ` dwóch działań:
-  :math:`\ ` "dodawania" :math:`\,+\ \,` oraz :math:`\ ` "mnożenia" :math:`\ \cdot\ :\ \ \mathbb{P}\;=\;(P,\,+\,,\,\cdot\,)\,.`
+:math:`\ ` "dodawania" :math:`\,+\ \,` oraz :math:`\ ` "mnożenia" :math:`\ \cdot\ :\ \ \mathbb{P}\;=\;(P,\,+\,,\,\cdot\,)\,.`
 
 Działania w pierścieniu spełniają następujące warunki:
 

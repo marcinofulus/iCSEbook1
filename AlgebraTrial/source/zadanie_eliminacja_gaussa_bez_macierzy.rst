@@ -11,7 +11,7 @@ Zadanie. Eliminacja Gaussa dla układów równań
 | Aby wygenerować układ równań naciśnij "Wykonaj";
 | aby zadać inną liczbę równań należy zmienić wartość n.
 
-| Pod równaniem będzie podane rozwiązanie - wykorzystaj je do sprawdzenia wyniku.
+| Pod układem będzie podane rozwiązanie - wykorzystaj je do sprawdzenia wyniku.
 
 .. sagecellserver::
 
