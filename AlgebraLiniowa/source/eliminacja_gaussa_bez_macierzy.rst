@@ -33,11 +33,11 @@ Postać schodkowa układu równań:
 
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    \  x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
       x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} & 3\,x_3 & {\;} = {\;} & 5 \\
    2\,x_1 & {\,} + {\,} & 6\,x_2 & {\,} + {\,} & 5\,x_3 & {\;} = {\;} & 6
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 .. code-block:: python
 
@@ -48,11 +48,11 @@ Postać schodkowa układu równań:
     
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
        &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
        &             & 2\,x_2 & {\,} + {\,} &    x_3 & {\;} = {} & -2
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 .. code-block:: python
 
@@ -62,11 +62,11 @@ Postać schodkowa układu równań:
     
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
        &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
        &             &        & {\,} - {\,} &    x_3 & {\;} = {} & -4
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 .. code-block:: python
 
@@ -76,11 +76,11 @@ Postać schodkowa układu równań:
    
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
        &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
        &             &        &             &    x_3 & {\;} = {\;} & 4
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 Wykonując odpowiednie podstawienia wstecz otrzymujemy:
 
@@ -90,11 +90,11 @@ Wykonując odpowiednie podstawienia wstecz otrzymujemy:
   
 .. math::
    
-   \begin{cases}\begin{alignat*}{2}
+   \begin{cases}\begin{array}{ccc}
    \  x_1 & {\,} = {} &  2 \\
       x_2 & {\,} = {} & -3 \\
       x_3 & {\,} = {} &  4
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 Sprawdźmy, czy odpowiedź jest zgodna z wbudowaną procedurą  ``solve()`` :
 

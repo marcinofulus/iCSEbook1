@@ -14,9 +14,13 @@ Interpretacja "wierszowa"
 |
 | Rozważmy układ dwóch równań liniowych:
 
-:math:`\qquad\qquad\begin{cases} \begin{alignat*}{3}
-\ 2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
-\end{alignat*} \end{cases}`
+:math:`\qquad\qquad
+\begin{cases}
+\begin{array}{ccc}
+\ 2\,x_1  {\,} &- {\,}  x_2  {\;} &= {\;}  1 \\ 
+x_1  {\,} &+ {\,} x_2  {\;} &= {\;}  5
+\end{array}
+\end{cases}`
    
 Rozwiązaniem są liczby :math:`\ x_1=2\ \; \text{i} \ \; x_2=3\,,\:` 
 co łatwo sprawdzić ręcznie lub komputerowo:
@@ -57,10 +61,13 @@ Interpretacja "kolumnowa"
 | 
 | Rozważany układ równań
 
-:math:`\qquad\qquad\qquad\begin{cases} \begin{alignat*}{3}
-\  2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\
-x_1 & {\,} + {\,} & x_2 & {\;} = {\;} & 5
-\end{alignat*} \end{cases}`
+:math:`\qquad\qquad\qquad
+\begin{cases}
+\begin{array}{ccc}
+\  2\,x_1  {\,} &- {\,}  x_2  {\;} &= {\;}  1 \\
+x_1  {\,} &+ {\,}  x_2  {\;} &= {\;}  5
+\end{array}
+\end{cases}`
 
 można zapisać przy użyciu działań na wektorach kolumnowych:
 
@@ -128,11 +135,11 @@ można zapisać przy użyciu działań na wektorach kolumnowych:
 .. math::
    :label: set1
 
-   \begin{cases}\begin{alignat*}{4}
-   \  2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
-         x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
-         x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 
-   \end{alignat*}\end{cases}
+   \begin{cases}\begin{array}{ccccc}
+   \  2\,x_1  {\,} &+ {\,}  x_2  {\,} &+ {\,}     x_3  {\;} &= {}   &1 \\
+         x_1  {\,} &- {\,}  x_2             &          {\;} &= {}  &-1 \\
+         x_1  {\,} &+ {\,}  x_2  {\,} &+ {\,}  2\,x_3  {\;} &= {}   &2 
+   \end{array}\end{cases}
 
 Ma on rozwiązanie w punkcie :math:`\ \ x_1 = -\frac{1}{4},\ \ x_2 = \frac{3}{4},\ \ x_3 = \frac{3}{4}\,.`
 
@@ -233,11 +240,11 @@ Przypadek osobliwy: nieskończenie wiele rozwiązań
 
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    \  2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
       4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 2 \\
          x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 Stosując procedurę ``solve()`` otrzymujemy rozwiązanie zależne od zmiennej :math:`r_1`,  
 która może przyjmować dowolne wartości: 
@@ -317,11 +324,11 @@ Przypadek osobliwy: układ sprzeczny
 
 .. math::
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{ccccccc}
    \  2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 0 \\
       4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 5 \\
          x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 Układ ten nie ma rozwiązań:
 
