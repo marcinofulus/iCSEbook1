@@ -23,12 +23,12 @@ Macierzowy zapis układów równań
 .. math::
    :label: eq01
 
-   \begin{cases}\begin{alignat*}{4}
+   \begin{cases}\begin{array}{cccccccc}
    \ \;a_{11}\,x_1 & {\,} + {\,} & a_{12}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{1n}\,x_n & {\ } = {\ \ }  b_1    \\
        a_{21}\,x_1 & {\,} + {\,} & a_{22}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{2n}\,x_n & {\ } = {\ \ }  b_2    \\
        \ldots\ \   & {\,} + {\,} & \ldots\ \   & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & \ldots\ \   & {\ } = {\ }    \ldots \\
        a_{m1}\,x_1 & {\,} + {\,} & a_{m2}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{mn}\,x_n & {\ } = {\ \ }  b_m
-   \end{alignat*}\end{cases}
+   \end{array}\end{cases}
 
 | Współczynniki :math:`\,a_{ij}\,` przy niewiadomych :math:`(i=1,2,\ldots,m;\ \;j=1,2,\ldots,n)` tworzą 
 | **macierz prostokątną** :math:`\,\boldsymbol{A}\,` o :math:`\,m\,` wierszach i :math:`\,n\,` kolumnach,
@@ -154,12 +154,12 @@ Mnożenie macierzy przez wektor kolumnowy
    \ 
    \left[\begin{array}{c} x_1 \\ x_2 \\ \ldots \\ x_n \end{array}\right]
    \ :\,=\  
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,x_1 & {} + {} & a_{12}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{1n}\,x_n \\
        a_{21}\,x_1 & {} + {} & a_{22}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{2n}\,x_n \\
        \ldots\ \   & {} + {} & \ldots\ \   & {} + {} & \,\ldots\, & {} + {} & \ldots\ \ \ \\
        a_{m1}\,x_1 & {} + {} & a_{m2}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{mn}\,x_n
-   \end{alignat*}\right]
+   \end{array}\right]
    
 (działanie jest wykonalne tylko wtedy, gdy liczba kolumn macierzy równa się liczbie elementów wektora).
 
@@ -169,9 +169,9 @@ daje :math:`\,m`-elementowy wektor :math:`\,\boldsymbol{y}:`
 
 :math:`\quad\boldsymbol{A}\,\boldsymbol{x}\ =\ \boldsymbol{y}\,,
 \qquad\text{gdzie}\quad y_i\ = \ 
-\begin{alignat*}{4}
+\begin{array}{ccccccc}
 a_{i1}\,x_1 & {} + {} & a_{i2}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{in}\,x_n
-\end{alignat*}
+\end{array}
 \,,\quad i=1,2,\ldots,m.`
 
 |
@@ -179,12 +179,12 @@ a_{i1}\,x_1 & {} + {} & a_{i2}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{in}\,x
 
 .. math::
 
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,x_1 & {} + {} & a_{12}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{1n}\,x_n \\
        a_{21}\,x_1 & {} + {} & a_{22}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{2n}\,x_n \\
        \ldots\ \   & {} + {} & \ldots\ \   & {} + {} & \,\ldots\, & {} + {} & \ldots\ \ \ \\
        a_{m1}\,x_1 & {} + {} & a_{m2}\,x_2 & {} + {} & \,\ldots\, & {} + {} & a_{mn}\,x_n
-   \end{alignat*}\right]
+   \end{array}\right]
    \ =\  
    x_1 \; \left[\begin{array}{c} a_{11} \\ a_{21} \\ \ldots \\ a_{m1} \end{array}\right] \ +\ 
    x_2 \; \left[\begin{array}{c} a_{12} \\ a_{22} \\ \ldots \\ a_{m2} \end{array}\right] \ +\
@@ -218,12 +218,12 @@ równanie :eq:`eq02` przyjmuje więc postać
 
 .. math::
 
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,x_1 & {\,} + {\,} & a_{12}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{1n}\,x_n \\
        a_{21}\,x_1 & {\,} + {\,} & a_{22}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{2n}\,x_n \\
        \ldots\ \   & {\,} + {\,} & \ldots\ \   & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & \ldots\ \ \ \\
        a_{m1}\,x_1 & {\,} + {\,} & a_{m2}\,x_2 & {\,} + {\,} & \,\ldots\, & {\ } + {\,} & a_{mn}\,x_n
-   \end{alignat*}\right]
+   \end{array}\right]
    \ \ =\ \ 
    \left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{m} \end{array}\right]\,.
 
@@ -261,12 +261,12 @@ Mnożenie macierzy przez macierz
    \end{array}\right] \ 
    \left[\begin{array}{c} b_{11} \\ b_{21} \\ \ldots \\ b_{p1} \end{array}\right]
    \ =\ 
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,b_{11} & {} + {} & a_{12}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{1p}\,b_{p1} \\
        a_{21}\,b_{11} & {} + {} & a_{22}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{2p}\,b_{p1} \\
        \ldots\ \      & {} + {} & \ldots\ \      & {} + {} & \,\ldots\, & {} + {} & \ldots\ \ \ \\
        a_{m1}\,b_{11} & {} + {} & a_{m2}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{mp}\,b_{p1}
-   \end{alignat*}\right]\,.
+   \end{array}\right]\,.
 
 Oznaczając :math:`\ \boldsymbol{A} \boldsymbol{B}\ =\ \boldsymbol{C}\ =\ [c_{ij}]_{m\times 1}\ ` otrzymujemy
 
@@ -276,20 +276,20 @@ Oznaczając :math:`\ \boldsymbol{A} \boldsymbol{B}\ =\ \boldsymbol{C}\ =\ [c_{ij
    \boldsymbol{C}\ =\
    \left[\begin{array}{c} c_{11} \\ c_{21} \\ \ldots \\ c_{m1} \end{array}\right]
    \ =\ 
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,b_{11} & {} + {} & a_{12}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{1p}\,b_{p1} \\
        a_{21}\,b_{11} & {} + {} & a_{22}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{2p}\,b_{p1} \\
        \ldots\ \      & {} + {} & \ldots\ \      & {} + {} & \,\ldots\, & {} + {} & \ldots\ \ \ \\
        a_{m1}\,b_{11} & {} + {} & a_{m2}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{mp}\,b_{p1}
-   \end{alignat*}\right]\,;
+   \end{array}\right]\,;
 
 .. math::
    :label: eq05
 
    c_{i1}\ =\ 
-   \begin{alignat*}{4}
+   \begin{array}{ccccccc}
        a_{i1}\,b_{11} & {} + {} & a_{i2}\,b_{21} & {} + {} & \,\ldots\, & {} + {} & a_{ip}\,b_{p1}
-   \end{alignat*}
+   \end{array}
    \,,\quad i\,=\,1,2,\ldots,m\,.
 
 Niech teraz macierz :math:`\ \boldsymbol{B}\ ` składa się z :math:`\,n\,` kolumn :math:`\,p`-elementowych:
@@ -332,17 +332,17 @@ macierzy :math:`\ \boldsymbol{B}\ ` z lewej strony przez macierz :math:`\ \bolds
 
    \boldsymbol{C}_j\ =\ \left[\begin{array}{c} c_{1j} \\ c_{2j} \\ \ldots \\ c_{mj} \end{array}\right]
    \ =\ 
-   \left[\begin{alignat*}{4}
+   \left[\begin{array}{ccccccc}
        a_{11}\,b_{1j} & {} + {} & a_{12}\,b_{2j} & {} + {} & \,\ldots\, & {} + {} & a_{1p}\,b_{pj} \\
        a_{21}\,b_{1j} & {} + {} & a_{22}\,b_{2j} & {} + {} & \,\ldots\, & {} + {} & a_{2p}\,b_{pj} \\
        \ldots\ \      & {} + {} & \ldots\ \      & {} + {} & \,\ldots\, & {} + {} & \ldots\ \ \    \\
        a_{m1}\,b_{1j} & {} + {} & a_{m2}\,b_{2j} & {} + {} & \,\ldots\, & {} + {} & a_{mp}\,b_{pj}
-   \end{alignat*}\right]\,;
+   \end{array}\right]\,;
 
    c_{ij}\ =\ 
-   \begin{alignat*}{4}
+   \begin{array}{ccccccc}
        a_{i1}\,b_{1j} & {} + {} & a_{i2}\,b_{2j} & {} + {} & \,\ldots\, & {} + {} & a_{ip}\,b_{pj}
-   \end{alignat*}
+   \end{array}
    \,,\qquad\begin{array}{l} i\,=\,1,2,\ldots,m\,; \\ j\,=\,1,2,\ldots,n.\end{array}
 
 | Ostatni wzór wyraża elementy macierzy :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\ `
@@ -563,7 +563,7 @@ Własności mnożenia macierzowego
    :math:`\;\ \boldsymbol{B} \boldsymbol{A}\ \,=\ \,
    \left[\begin{array}{c} b_1 \\ b_2 \\ b_3 \end{array}\right]\ 
    [\,a_1\ a_2\ a_3\,]\ =\ 
-   \left[\,\begin{array}{c}
+   \left[\,\begin{array}{ccc}
    b_1\,a_1 & b_1\,a_2 & b_1\,a_3 \\ 
    b_2\,a_1 & b_2\,a_2 & b_2\,a_3 \\
    b_3\,a_1 & b_3\,a_2 & b_3\,a_3
@@ -573,7 +573,7 @@ Własności mnożenia macierzowego
    | :math:`\,` Jedynie macierze proporcjonalne do macierzy jednostkowej
 
    :math:`\,\ \qquad
-   c\ \boldsymbol{I}_n\ =\ \left[\begin{array}{c} 
+   c\ \boldsymbol{I}_n\ =\ \left[\begin{array}{cccc} 
    c      &    0   & \ldots &    0   \\
    0      &    c   & \ldots &    0   \\
    \ldots & \ldots & \ldots & \ldots \\
