@@ -33,13 +33,13 @@ Poniżej znajduje się przegląd pierścieni stosowanych w Sage:
 |         |                             |l. działań                   |
 |         |                             |                             |
 +---------+-----------------------------+-----------------------------+
-|QQ       |liczby wymierne              |dokładne, ZZ + ułamki       |
+|QQ       |liczby wymierne              |dokładne, ZZ + ułamki        |
 |         |                             |                             |
 +---------+-----------------------------+-----------------------------+
-|RR       |liczby rzeczywiste o dowolnej|arytmetyka interwałowa       |
+|RR       |liczby rzeczywiste o dowolnej|instancja RealField()        |
 |         |precyzji                     |                             |
 +---------+-----------------------------+-----------------------------+
-|CC       |liczby zespolone o dowolnej  |arytmetyka interwałowa       |
+|CC       |liczby zespolone o dowolnej  |instancja ComplexField()     |
 |         |precyzji                     |                             |
 +---------+-----------------------------+-----------------------------+
 |RDF      |liczby rzeczywiste o         |rachunki numeryczne          |
