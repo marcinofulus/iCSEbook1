@@ -56,10 +56,17 @@ i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
 | Łatwo też udowodnić rozdzielność mnożenia wektorów przez liczby,
 | zarówno względem dodawania liczb, :math:`\,` jak i dodawania wektorów:
 
-:math:`\quad (a + b)\ \boldsymbol{x}\ =\ a\,\boldsymbol{x}\ +\ b\,\boldsymbol{x}\,;`
+:math:`\quad (a + b)\ \boldsymbol{x}\ =\ a\,\boldsymbol{x}\ +\ b\,\boldsymbol{x}\,,\qquad
+a\,(\boldsymbol{x} + \boldsymbol{y})\ =\ a\,\boldsymbol{x}\,+\,a\,\boldsymbol{y}\,,`
 
-:math:`\quad\ a\,(\boldsymbol{x} + \boldsymbol{y})\ =\ a\,\boldsymbol{x}\,+\,a\,\boldsymbol{y}\,,
-\qquad a,\,b\,\in\, K,\quad \boldsymbol{x},\,\boldsymbol{y}\,\in\, K^n.`
+oraz związki
+
+:math:`\quad a\,(b\,\boldsymbol{x})\ =\ (ab)\,\boldsymbol{x},\qquad
+1\,\boldsymbol{x}\ =\ \boldsymbol{x},
+\qquad\quad a,\,b\,\in\, K,\quad \boldsymbol{x},\,\boldsymbol{y}\,\in\, K^n.`
+
+Stwierdziliśmy w ten sposób, że zbiór :math:`\ K^n\ ` jest przestrzenią wektorową nad ciałem :math:`\ K\ ` ze względu na dodawanie wektorów
+i mnożenie ich przez liczby z :math:`\ K.`
 
 |
 | Dwu- i trójelementowym wektorom kolumnowym nad ciałem liczb rzeczywistych odpowiadają wektory geometryczne,

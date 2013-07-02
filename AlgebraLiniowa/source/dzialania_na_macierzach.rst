@@ -131,8 +131,15 @@ zarówno względem dodawania liczb, :math:`\,` jak i dodawania macierzy:
 :math:`\quad (a + b)\,\boldsymbol{A}\ =\ a\,\boldsymbol{A}\, +\, b\,\boldsymbol{A}\,,`
 
 :math:`\quad a\,(\boldsymbol{A} + \boldsymbol{B})\ =\ a\,\boldsymbol{A}\, +\, a\,\boldsymbol{B}\,,
-\qquad a,\,b\,\in K,\quad\boldsymbol{A},\,\boldsymbol{B}\,\in\, M_{m\times n}(K)\,.`  
+\qquad a,\,b\,\in K,\quad\boldsymbol{A},\,\boldsymbol{B}\,\in\, M_{m\times n}(K)\,.`
 
+Spełnione są również warunki
+
+:math:`\quad a\,(b\,\boldsymbol{A})\ =\ (ab)\,\boldsymbol{A},\qquad 1\,\boldsymbol{A}\ =\ \boldsymbol{A},
+\qquad\qquad 1,\,a,\,b\,\in K,\quad\boldsymbol{A}\,\in\, M_{m\times n}(K)\,.`
+
+| Tak więc macierze o :math:`\,m\,` wierszach i :math:`\,n\,` kolumnach nad ciałem :math:`\,K\,` 
+  tworzą przestrzeń wektorową nad tym ciałem. 
 |
 
 Mnożenie macierzy przez wektor kolumnowy

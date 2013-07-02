@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Podstawowe struktury algebraiczne
----------------------------------
+Najważniejsze struktury algebraiczne
+------------------------------------
 |
 
 | **Struktura algebraiczna** składa się z jednego albo kilku zbiorów oraz działań określonych na tych zbiorach.
@@ -102,18 +102,75 @@ Działania w ciele spełniają następujące warunki:
 | Dokładnie: :math:`\,` ciało jest pierścieniem przemiennym z jednością, 
 | w którym dla każdego elementu niezerowego istnieje odwrotność.
 
-| Przykłady:
+Przykłady:
+
 | ciało liczb wymiernych: :math:`\ \mathbb{Q}\,=\,(Q,\,+\,,\;\cdot\;)\;;\ ` 
 | ciało liczb rzeczywistych: :math:`\ \mathbb{R}\,=\,(R,\,+\,,\;\cdot\;)\;;\ `
 | ciało liczb zespolonych: :math:`\ \mathbb{C}\,=\,(C,\,+\,,\;\cdot\;)\;.`
 
 | Ciałem (skończonym) jest również pierścień :math:`\ \mathbb{Z}_n\ ` 
   reszt modulo :math:`\,n,\ ` gdy :math:`\ n\ ` jest liczbą pierwszą.
-
 |
 
 .. admonition:: Uwaga
 
    | Często grupą (pierścieniem, ciałem) nazywa się sam zbiór :math:`\ G\ (P,\ K),\ ` 
    | o ile są w nim określone działania spełniające odpowiednie postulaty.
+
+|
+| **Przestrzeń wektorowa nad ciałem** :math:`\,K\,` 
+| jest strukturą :math:`\ \,\mathbb{V}\,=\,(\,V,\,\oplus\,;\ \,K,\,+\,,\,\cdot\ \,;\ \;\boxdot\,)\,,`
+  :math:`\ ` w której są spełnione następujące warunki:
+
+1. :math:`\ (V,\,\oplus\,)\quad` jest grupą przemienną;
+
+2. :math:`\ (K,\,+\,,\,\cdot\,)\quad` jest ciałem;
+
+3. | :math:`\ (\alpha + \beta)\,\boxdot\,v \ \,=\ \,(\alpha\,\boxdot\,v)\,\oplus\,(\beta\,\boxdot\,v),`
+   | :math:`\ \alpha\,\boxdot\,(v\,\oplus\,w) \ \,=\ \,(\alpha\,\boxdot\,v)\ \oplus\ (\alpha\,\boxdot\,w);`
+
+4. :math:`\ \alpha\,\boxdot\,(\beta\,\boxdot\,v) \ \,=\ \,(\alpha\cdot\beta)\,\boxdot\,v;`
+
+5. :math:`\ 1\ \boxdot\ v \ \,=\ \,v.`
+
+W powyższych wyrażeniach :math:`\ \alpha\ \,\text{i}\ \,\beta\ ` są dowolnymi elementami ciała :math:`\,K\ `
+(1 jest jednością tego ciała), :math:`\ ` natomiast :math:`\ v\ \,\text{i}\ \,w\ ` są dowolnymi elementami zbioru :math:`\,V.`
+
+Elementy zbioru :math:`\,K\ ` nazywamy skalarami, :math:`\ ` a :math:`\ ` 
+elementy zbioru :math:`\,V\ ` - :math:`\ ` wektorami.
+
+W praktyce sam zbiór wektorów :math:`\,V\,` nazywany jest przestrzenią wektorową.
+W tym ujęciu przestrzeń wektorowa to zbiór wektorów, które można dodawać
+(i które tworzą grupę przemienną ze względu na dodawanie) oraz mnożyć przez skalary z ciała :math:`\,K\,`
+(przy czym działanie to jest rozdzielne zarówno ze względu na dodawanie skalarów, jak i dodawania wektorów,
+jest łączne w sensie warunku 4. oraz  spełnia warunek :math:`\,` 5.).
+
+| Najczęściej ciałem :math:`\,K\,` jest zbiór liczb rzeczywistych :math:`\,R\,` bądź liczb zespolonych :math:`\,C.`
+| Mówimy wtedy odpowiednio o przestrzeni wektorowej rzeczywistej :math:`\ V(R)\ ` bądź zespolonej :math:`\ V(C).`
+
+Przykłady:
+
+| 1.) :math:`\ ` zbiór wektorów geometrycznych na płaszczyźnie albo w przestrzeni jest przestrzenią wektorową
+|     :math:`\ ` rzeczywistą ze względu na dodawanie wektorów i mnożenie ich przez liczby rzeczywiste;
+
+| 2.) :math:`\ ` zbiór :math:`\ n`-wyrazowych wektorów kolumnowych nad ciałem :math:`\,K\,` jest przestrzenią wektorową
+|     :math:`\ ` nad tym ciałem ze względu na dodawanie wektorów i mnożenie ich przez skalary z :math:`\,K;`
+
+| 3.) :math:`\ ` na tej samej zasadzie zbiór macierzy prostokątnych nad ciałem :math:`\,K\ ` 
+|     :math:`\ ` o ustalonych rozmiarach jest przestrzenią wektorową nad :math:`\,K.`
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 

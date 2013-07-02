@@ -19,8 +19,8 @@ Algebra liniowa:
    Przewodnik po strukturach algebraicznych <struktury_algebraiczne>
    literatura
 
-Wykład I:  Układy równań liniowych. Eliminacja Gaussa
-=====================================================
+Wykład I: Układy równań liniowych. Eliminacja Gaussa
+====================================================
 
 | Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań liniowych.
 | Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne na równaniach.
@@ -48,18 +48,10 @@ Wykład II:  Macierze
 .. toctree::
 
    dzialania_na_macierzach
-   eliminacja_gaussa
+   macierze_w_sage
+   eliminacja_gaussa_I
    eliminacja_gaussa_II
    macierze_przyklady
-
-Algebra liniowa w Sage:
------------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   algebra_liniowa_w_Sage
-
 
 Zadania do wykladu II:
 ----------------------
