@@ -162,7 +162,7 @@ W tej sekcji znajdują się zadania obowiązujące na zaliczenie i egzamin.
    zadania_01
    zadania_02
    zadania_03
-..   zadania_test1
-..   zadania_egzamin1
+   zadania_test1
+   zadania_egzamin1
 
 .. .. include:: orginaly.rst

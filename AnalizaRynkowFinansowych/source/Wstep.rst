@@ -1,0 +1,21 @@
+Wstęp
+==============
+
+Od autorów
+----------
+
+Zajęcia prowadzone przez nas na Uniwersytecie Śląskim na kierunku fizyka były powodem do powstania niniejszego opracowania.  Materiały,  które  były przydatne i omawiane na zajęciach zebralisy i  umiećiliśmy na stronach internetowych, tak,  by mogły wspomagać  zajęcia. Cel, jaki sobie postawiliśmy to zainteresowanie studentów, szczególnie studentów ekonofizyki,  złożonością rynków finansowych i mechanizmów ich funkcjonowania oraz instrumentami tych rynków. Dlatego powstał niniejszy przewodnik zbierający w jednym miejscu pewne, podstawowe a przydatne dla kursu informacje o instrumentach finansowych i pewnych ich aspektów analitycznych. Przewodnik ten nawiązuje do *" Wprowadzenie do funkcjonowania rynków finansowych"* w tym sensie, że pewna tematyka jest  właśnie tam, omówiona szerzej. Ale ponieważ można z tego przewodnika korzystać niezależnie, pewne tytuły paragrafów mogą robić wrażenie powtórzenia w stosunku do wspomnianego opracowania. Jest to jednak pierwsze wrażenie, gdyż, aby zapewnić możliwość niezależnego korzystania z obu opracowań w niniejszym wprowadzono tylko minimalną ilość informacji tak, aby zapewnić szerokość spojrzenia oraz rekomendacje by więcej informacji poszukiwać w *Wprowadzeniu do funkcjonowania rynków.*
+W przeciągu ostatniego półwiecza matematyka finansowa przerodziła się z rachunków rzadko wykraczających poza oprocentowanie i dyskontowanie bazujące na ciągach arytmetycznych i geometrycznych w samodzielną dyscyplinę nauki wykorzystującą zaawansowany formalizm matematyki, teorii prawdopodobieństwa, teorii informacji, fizyki statystycznej, a ostatnio nawet mechaniki kwantowej. Zmiany te są wynikiem niezwykle intensywnego rozwoju rynków i instytucji finansowych spowodowanych globalizacją i informatyzacją.
+
+Inwestycja finansowa jest tu rozumiana w bardzo szerokim sensie, a celem wykładu jest przedstawienie idei rynku finansowego, podstaw zmiany wartości kapitału w czasie, metod wyceny (modelowania wartości) strumieni przepływów kapitałowych, instrumentów pochodnych oraz portfeli inwestycyjnych. Do zrozumienia materiału wystarczy znajomość matematyki uzyskana w czasie pierwszych dwóch lat studiów (ekonofizyka). Ze względu na informacyjno-wprowadzający charakter wykładu omawiane są najważniejsze i najbardziej reprezentatywne instrumenty i narzędzia; staramy się też unikać zagłębiania w bardziej formalne i matematyczne zagadnienia związane z omawianymi tematami. Szersze matematyczne opracowania są tematem wykładów na wyższych latach.  Tutaj główny akcent jest położony na praktyczne aspekty dyskutowanych problemów. Wybór zagadnień prezentowanych jest jedynie wyborem i nie ma ambicji pełnego omówienia wszelkich aspektów analizy instrumentów finansowych.
+
+Celem, jaki sobie postawiliśmy to zebranie w jednym miejscu informacji dostępnych acz rozproszonych na wielu stronach internetowych i  publikacjach książkowych. Ma to być, naszym zdaniem, przewodnik podręczny, wstęp pozwalający lepiej zrozumieć i efektywniej korzystać z proponowanej literatury tematu. Staramy się wskazywać na  te prezentacje, które bardzo często zawierają istotne informacje i przedstawione są w sposób mistrzowski, tak, że trudno problem przedstawić lepiej niż autorzy tych prezentacji uczynili.  W kilku miejscach w dokonano adopcji polskiej, prezentowanych wywodów do potrzeb tegoż przewodnika.  Przykładem tego jest wycena  kontraktów futures, problem dywersyfikacji  portfela gdzie skorzystano z matematycznego wyprowadzenia  Davida Blake w  „Financial Market Analysis”.   Literatura źródłowa  jest dostępna  w przypisach.
+Literatura przedmiotu jest bardzo obszerna i ciągle się wzbogaca o nowe pozycje. Zainteresowanym polecamy następujące pozycje, będące „ klasyką „ tematu, z których sami często korzystaliśmy, korzystamy i najprawdopodobniej, korzystać, nadal będziemy:
+
+* David Blake- Financial Market Analysis, McGraw –Hill- 1990;
+* Richard.A. Breadley, Steward. C. Myers,  Principles of Corporate Finance, McGraw- Hill Comp.;
+* \M. Desmond Fitzgerald- Financial Futures- Euromoney Books
+* Ramesh. K.S. Rao- Financial Management- Concepts and Applications, South Western College Publishing;
+
+Oprócz tych tekstów  w języku angielskim polecamy szereg opracowań w języku polskim, o czym będzie mowa w osobnej sekcji testu.
+

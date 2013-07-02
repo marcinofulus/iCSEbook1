@@ -13,14 +13,6 @@
 
 import sys, os
 
-from sphinx.highlighting import PygmentsBridge
-from pygments.formatters.latex import LatexFormatter
-
-class CustomLatexFormatter(LatexFormatter):
-    def __init__(self, **options):
-        super(CustomLatexFormatter, self).__init__(**options)
-        self.verboptions = r"formatcom=\footnotesize"
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -48,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project. 
-project = u'iCSE_PROJECT_NAME'
-copyright = u'iCSE_YEAR, iCSE_AUTHOR_NAME'
+project = u'Wybrane zagadnienia analizy rynków finansowych'
+copyright = u'2013, Marek Łukaszewski, Jan Sładkowski'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -128,7 +120,7 @@ html_theme_path = ["../.."]
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -172,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'iCSE_SKRYPTDOC_NAME'
+htmlhelp_basename = 'Wybrane zagadnienia analizy rynkow finansowych'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -185,14 +177,14 @@ latex_elements = {
 'pointsize': '12pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\usepackage{amsmath,amssymb}\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother',
+'preamble': '\usepackage{amsmath,amssymb}\n',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'iCSE_FILE_NAME.tex', u'iCSE_SKRYPT_DOCUMENTATION_NAME',
-   u'iCSE_AUTHOR_NAME', 'manual'),
+  ('index', 'wybrane_zagadnienia_analizy_rynków_finansowych.tex', u'Wybrane zagadnienia analizy rynków finansowych - Skrypt',
+   u'Marek Łukaszewski, Jan Sładkowski', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -221,8 +213,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'iCSE_FILE_NAME', u'iCSE_SKRYPT_DOCUMENTATION_NAME',
-     [u'iCSE_AUTHOR_NAME'], 1)
+    ('index', 'wybrane_zagadnienia_analizy_rynków_finansowych', u'Wybrane zagadnienia analizy rynków finansowych - Skrypt',
+     [u'Marek Łukaszewski, Jan Sładkowski'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -235,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'iCSE_FILE_NAME', u'iCSE_SKRYPT_DOCUMENTATION_NAME',
-   u'iCSE_AUTHOR_NAME', 'iCSE_FILE_NAME', 'One line description of project.',
+  ('index', 'wybrane_zagadnienia_analizy_rynków_finansowych', u'Wybrane zagadnienia analizy rynków finansowych - Skrypt',
+   u'Marek Łukaszewski, Jan Sładkowski', 'wybrane_zagadnienia_analizy_rynków_finansowych', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -253,10 +245,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.  
-epub_title = u'iCSE_PROJECT_NAME'
-epub_author = u'iCSE_AUTHOR_NAME'
-epub_publisher = u'iCSE_AUTHOR_NAME'
-epub_copyright = u'iCSE_YEAR, iCSE_AUTHOR_NAME'
+epub_title = u'Wybrane zagadnienia analizy rynków finansowych'
+epub_author = u'Marek Łukaszewski, Jan Sładkowski'
+epub_publisher = u'Marek Łukaszewski, Jan Sładkowski'
+epub_copyright = u'2013, Marek Łukaszewski, Jan Sładkowski'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

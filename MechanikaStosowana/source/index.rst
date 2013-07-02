@@ -44,6 +44,29 @@ Dynamika z więzami
    zasada_dAlembertaCAS
    zasada_dAlembertaCAS_przyklady
 
+Notatki
+=======
+
+Notatki z wykładów:
+
+Zasada d'Alemberta
+------------------
+
+* teoria: zasada d'Alemberta :download:`pdf <pdf/Zasada_dAlemberta_ogolnie.pdf>`
+
+* przyklady: 
+
+  * ruch po powierzchni_stożka: :download:`pdf <pdf/Ruch_po_powierzchni_stozka.pdf>`
+  * wahadło ze swobodnym punktem zawieszenia: :download:`pdf <pdf/Wahadlo_ze_swobodnym_punktem_zawieszenia.pdf>`
+  * wahadlo podwójne: :download:`pdf <pdf/Wahadlo_podwojne.pdf>`
+
+
+Mechanika Lagrange'a
+--------------------
+
+* Wyprowadzenie równań Lagrange'a: :download:`pdf <pdf/Wyprowadzenie_rownan_Lagrangea.pdf>`
+
+* Wahadło z oscylującym punktem zawieszenia :download:`pdf <pdf/Wahadlo_z_oscylujacym_punktem_zawieszenia.pdf>`
 
    
 Dodatek

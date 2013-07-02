@@ -48,3 +48,14 @@ Zalecenia stylu
 
  * w każdym pliku jeden główny header 
  * używamy ``hint`` ``note`` i ``warning`` i ogólnego ``admonition`` (do Definicja, przyklad, streszczenie)
+ * układy równań najlepiej wpisywać poprzez 
+
+
+       ```:math:`\qquad\qquad
+       \begin{cases}
+       \begin{array}{ccc}
+       \ 2\,x_1  {\,} &- {\,}  x_2  {\;} &= {\;}  1 \\ 
+       x_1  {\,} &+ {\,} x_2  {\;} &= {\;}  5
+       \end{array}
+       \end{cases}`
+       ```
