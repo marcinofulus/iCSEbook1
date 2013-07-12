@@ -20,6 +20,7 @@ Tematyka warsztatów:
 #) MT IFS 
 #) MK sieci spinowe???
 #) MK ruchy Browna a bładzenie przypadkowe!
+#) ARMATA
 
 .. toctree::
    :maxdepth: 1
