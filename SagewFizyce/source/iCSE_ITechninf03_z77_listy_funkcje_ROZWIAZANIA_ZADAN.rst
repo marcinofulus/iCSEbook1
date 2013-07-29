@@ -81,7 +81,7 @@ Zadanie 3
 
 .. end of output
 
-**Zadanie 4**
+Zadanie 4
 ~~~~~~~~~~~~~
 
 .. code-block:: python

@@ -8,12 +8,21 @@
 Zadanie 1: Ruch pionowy w polu grawitacyjnym Ziemi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 5 min.</span><br />W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła :math:`3.44m∕s`.<br />Rozwiązanie<br />Znając rozwiązanie równań ruchu, mamy
-<div>:math:`h(t) = {v}_{0}t -{1\over 2}g{t}^{2}`</div>
-<p>Jeżeli :math:`{v}_{0} = 3.44m∕s`, a :math:`t = 0.54s`, to łatwo obliczyć, że</p>
-<div>:math:`h(t) = 3.44 \cdot 0.54 -{1\over 2}\cdot 9.81 \cdot  0.5{4}^{2}`</div>
-<p>i w Sage</p>
-</dd>
+czas: 5 min.
+
+W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła :math:`3.44m∕s`.
+
+**Rozwiązanie**
+
+Znając rozwiązanie równań ruchu, mamy
+
+:math:`h(t) = {v}_{0}t -{1\over 2}g{t}^{2}`
+
+Jeżeli :math:`{v}_{0} = 3.44m∕s`, a :math:`t = 0.54s`, to łatwo obliczyć, że
+
+:math:`h(t) = 3.44 \cdot 0.54 -{1\over 2}\cdot 9.81 \cdot  0.5{4}^{2}`
+
+i w Sage
 
 .. code-block:: python
 
@@ -25,13 +34,14 @@ Zadanie 1: Ruch pionowy w polu grawitacyjnym Ziemi
 Zadanie 2: Ruch pionowy w polu grawitacyjnym
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>czas: 5 min.<br />Proszę policzyć to samo zagadnienie na równikach: 
-<ul>
-<li>Księżyca,</li>
-<li>Marsa,</li>
-<li>Jowisza.</li>
-</ul>
-</dd>
+czas: 5 min.
+
+Proszę policzyć to samo zagadnienie na równikach: 
+
+- Księżyca,
+- Marsa,
+- Jowisza.
+
 
 .. code-block:: python
 
@@ -67,8 +77,8 @@ Zadanie 2: Ruch pionowy w polu grawitacyjnym
 Zadanie 3: Ile minut minęło od 6:15 dziś rano?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>czas: 10 min.</dd>
-<dd><br /></dd>
+czas: 10 min.
+
 
 .. code-block:: python
 
@@ -81,7 +91,9 @@ Zadanie 3: Ile minut minęło od 6:15 dziś rano?
 Zadanie 4: Oblicz swoją liczbę urodzenia.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>czas: 5 min.<br />Sprawdź później, co o tobie myślą <a href="http://pl.wikipedia.org/wiki/Numerologia">numerolodzy</a>.</dd>
+czas: 5 min.
+
+Sprawdź później, co o tobie myślą <a href="http://pl.wikipedia.org/wiki/Numerologia">numerolodzy</a>.
 
 .. code-block:: python
 
@@ -113,13 +125,17 @@ Zadanie 4: Oblicz swoją liczbę urodzenia.
 
 .. end of output
 
+
 Zadanie 5: Oblicz ile dni minęło od Bitwy pod Chojnicami (1657). 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zadanie 6: to samo dla zmiennych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>czas: 20 min.<br />Pomoc: <a href="http://pl.wikipedia.org/wiki/Data_Julia%C5%84ska">Data Juliańska</a></dd>
+czas: 20 min.
+
+Pomoc: <a href="http://pl.wikipedia.org/wiki/Data_Julia%C5%84ska">Data Juliańska</a>
+
 
 .. code-block:: python
 
@@ -155,18 +171,21 @@ Zadanie 6: to samo dla zmiennych
 
 .. end of output
 
+
 Zadanie 7: Jednostki wersja 1.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 15 min.</span><br />Napisz prosty program (tak, tak, już programujemy!) zamieniający długość z metrów na jednostki z wysp Brytyjskich (stopy, cale, jardy i mile).  
-<ul>
-<li>1 cal = 2.54 cm</li>
-<li>1 stopa = 12 cali</li>
-<li>1 jard = 3 stopy</li>
-<li>1 mila = 1760 jardów</li>
-</ul>
-<p>Uwaga: 640 m = 25196.85 cali = 2099.74 stóp = 699.91 jardów = 0.3977 mili (użyj tej wielkości do testów). Do wyświetlenia może przydać się funkcja <span><span><span>show()</span></span></span>. Jeżeli mamy zadeklarowaną zmienną <span><span><span>x=3</span></span></span> to <span><span><span>show(x)</span></span></span> zwróci nam wartość zmiennej na ekran (w tym przypadku liczbę 3).</p>
-</dd>
+czas: 15 min.
+
+Napisz prosty program (tak, tak, już programujemy!) zamieniający długość z metrów na jednostki z wysp Brytyjskich (stopy, cale, jardy i mile).  
+
+- 1 cal = 2.54 cm
+- 1 stopa = 12 cali
+- 1 jard = 3 stopy
+- 1 mila = 1760 jardów
+
+**Uwaga:** 640 m = 25196.85 cali = 2099.74 stóp = 699.91 jardów = 0.3977 mili (użyj tej wielkości do testów). Do wyświetlenia może przydać się funkcja ``show()``. Jeżeli mamy zadeklarowaną zmienną ``x=3`` to ``show(x)`` zwróci nam wartość zmiennej na ekran (w tym przypadku liczbę 3).
+
 
 .. code-block:: python
 
@@ -183,12 +202,13 @@ Zadanie 7: Jednostki wersja 1.
 
 .. end of output
 
+
 Zadanie 8: Temperatura pokojowa.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 10 min.</span><br />Przelicz temperaturę pokojową (r.t.) na stopnie Kelwina i Fahrenheita.</dd>
- 
-<dd> </dd>
+czas: 10 min.
+Przelicz temperaturę pokojową (r.t.) na stopnie Kelwina i Fahrenheita.
+
 
 .. code-block:: python
 
@@ -206,9 +226,12 @@ Zadanie 8: Temperatura pokojowa.
 Zadanie 9: Równanie kwadratowe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 10 min.</span><br />Rozwiąż równanie
-<div>:math:`{ x}^{2} + 3x + 2 = 0`</div>
-</dd>
+czas: 10 min.
+
+Rozwiąż równanie
+
+:math:`{ x}^{2} + 3x + 2 = 0`
+
 
 .. code-block:: python
 

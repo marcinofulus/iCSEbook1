@@ -10,7 +10,7 @@ Listy, Funkcje
 Listy
 ~~~~~~~~
 
-Sporo już o listach powiedzieliśmy. Wiemy jak je zdeﬁniować, jak odwołać się do:math:`n`-tegoelementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Dziś dowiemy się kilku nowych rzeczy.
+Sporo już o listach powiedzieliśmy. Wiemy jak je zdeﬁniować, jak odwołać się do :math:`n` -tegoelementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Dziś dowiemy się kilku nowych rzeczy.
 
 
 
@@ -28,19 +28,20 @@ Za pomocą ujemnych indeksów odnosimy się do elementów idących od końca do 
 
 .. end of output
 
-oznacza ostatni element,  lista[\-2]  przedostatni,  lista[\-3] odnosi się do 3 od końca elementu itd. Ostatnimelementem niepustej listy jest zawsze  lista[\-1].
+oznacza ostatni element,  ``lista[-2]``  przedostatni,  ``lista[-3]`` odnosi się do 3 od końca elementu itd. Ostatnim elementem niepustej listy jest zawsze  ``lista[-1]``.
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie 1:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Zbuduj posortowaną listę <span class="obeylines-h"><span class="verb"><span class="pltt-10">lp</span></span></span> wszystkich liczb pierwszych w zakresie od 0 do 30. Następnie za pomocą pętli
-     <span class="obeylines-h"><span class="verb"><span class="pltt-10">while</span></span></span> stwórz listę <span class="obeylines-h"><span class="verb"><span class="pltt-10">odw_lp</span></span></span> zawierającą posortowaną malejąco listę <span class="obeylines-h"><span class="verb"><span class="pltt-10">lp</span></span></span>. <span class="underline"><span class="plbx-10">Uwaga:</span></span> Nie wolno używać metody
-     <span class="obeylines-h"><span class="verb"><span class="pltt-10">reverse()</span></span></span>.</dd></dl>
+**Zadanie 1:**
+
+czas: 10 min.
+
+Zbuduj posortowaną listę ``lp`` wszystkich liczb pierwszych w zakresie od 0 do 30. Następnie za pomocą pętli ``while`` stwórz listę ``odw_lp`` zawierającą posortowaną malejąco listę ``lp`` **Uwaga:** Nie wolno używać metody ``reverse()``.
 
 
 Wycinanie list
 """"""""""""""
 
-Kolejną niezwykle użyteczną konstrukcją języka Python jest wycinanie list. Za pomocą podania dwóch indeksów możemy pobraćwycinek listy. Ogólne wyrażenie to  lista[a:b], gdzie  a  i  b  to właśnie żądane indeksy. Załóżmy, że zdeﬁniowaliśmy listę
+Kolejną niezwykle użyteczną konstrukcją języka Python jest wycinanie list. Za pomocą podania dwóch indeksów możemy pobraćwycinek listy. Ogólne wyrażenie to  ``lista[a:b]``, gdzie  ``a``  i  ``b``  to właśnie żądane indeksy. Załóżmy, że zdeﬁniowaliśmy listę
 
 
 .. code-block:: python
@@ -50,7 +51,7 @@ Kolejną niezwykle użyteczną konstrukcją języka Python jest wycinanie list. 
 
 .. end of output
 
-a potrzebny nam tylko kawałek, trzymający liczby z zakresu:math:`[8,16]`. Możemy oczywiście napisać sobie prostą pętlę i za pomocą instrukcji  if  zbudować nową listę  parzyste8_16
+a potrzebny nam tylko kawałek, trzymający liczby z zakresu :math:`[8,16]`. Możemy oczywiście napisać sobie prostą pętlę i za pomocą instrukcji  ``if``  zbudować nową listę  ``parzyste8_16``
 
 
 .. code-block:: python
@@ -87,9 +88,9 @@ lub  też  nieco  lepiej
 
 .. end of output
 
-Proszę zauważyć, że w obu przypadkach zmuszeni jesteśmy podać końcowy indeks o jeden większy od indeksu odpowiadającegowartości :math:`16`.Znając odpowiednie indeksy jesteśmy w stanie wycinać z list dowolne interesujące nas części. Możemy także podaćujemną wartość któregoś indeksu. Wycinanie wtedy także dobrze zadziała.
+Proszę zauważyć, że w obu przypadkach zmuszeni jesteśmy podać końcowy indeks o jeden większy od indeksu odpowiadającego wartości :math:`16`. Znając odpowiednie indeksy jesteśmy w stanie wycinać z list dowolne interesujące nas części. Możemy także podać ujemną wartość któregoś indeksu. Wycinanie wtedy także dobrze zadziała.
 
-Jeśli lewy indeks wynosi 0, możemy go opuścić, wartość 0 jest domyślna.  parzyste[:3]  jest tym samym, co  parzyste[0:3] (czyli  [2, 4, 6]). Podobnie jest z prawym indeksem. Jeżeli chcemy wyciąć np. drugą połowę listy wystarczy napisać
+Jeśli lewy indeks wynosi 0, możemy go opuścić, wartość 0 jest domyślna.  ``parzyste[:3]``  jest tym samym, co  ``parzyste[0:3]`` (czyli  ``[2, 4, 6]``). Podobnie jest z prawym indeksem. Jeżeli chcemy wyciąć np. drugą połowę listy wystarczy napisać
 
 
 .. code-block:: python
@@ -99,7 +100,7 @@ Jeśli lewy indeks wynosi 0, możemy go opuścić, wartość 0 jest domyślna.  
 
 .. end of output
 
-zamiast pisać  parzyste[int(len(parzyste)/2):len(parzyste)]. Można zauważyć, że
+zamiast pisać  ``parzyste[int(len(parzyste)/2):len(parzyste)]``. Można zauważyć, że
 
 
 .. code-block:: python
@@ -119,7 +120,7 @@ zwróci  pierwsze  7  elementów  listy,  a
 
 .. end of output
 
-kolejne 6, dopełniając listę (w tym przypadku lista ma 13 elementów). Oczywiście istniejespecyﬁczna konstrukcja  parzyste[:]  zwracająca całą listę. Używa się jej do kopiowania całej listy
+kolejne 6, dopełniając listę (w tym przypadku lista ma 13 elementów). Oczywiście istniejespecyﬁczna konstrukcja  ``parzyste[:]``  zwracająca całą listę. Używa się jej do kopiowania całej listy
 
 
 .. code-block:: python
@@ -154,13 +155,18 @@ Jest spora różnica pomiędzy skopiowaniem listy  parzyste  do nowej listy za p
 .. end of output
 
 
-Jak widać  kopia1  to kompletnie inna lista niż  parzyste, w przeciwieństwie do listy  kopia2, która tak naprawdę jesttym samym obiektem co  parzyste.
+Jak widać  kopia1  to kompletnie inna lista niż  parzyste, w przeciwieństwie do listy  kopia2, która tak naprawdę jest tym samym obiektem co  parzyste.
 
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie 2:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Z podanej listy wytnij dwie równoliczne listy zawierające wartości mniejsze i większe od ich mediany.
-     <span class="obeylines-h"><span class="verb"><span class="pltt-10">l1</span><span class="pltt-10"> =</span><span class="pltt-10"> [\-18,</span><span class="pltt-10"> \-9,</span><span class="pltt-10"> 1,</span><span class="pltt-10"> \-14,</span><span class="pltt-10"> \-2,</span><span class="pltt-10"> 7,</span><span class="pltt-10"> 5,</span><span class="pltt-10"> \-11,</span><span class="pltt-10"> 16,</span><span class="pltt-10"> 4,</span><span class="pltt-10"> 18,</span><span class="pltt-10"> 7,</span><span class="pltt-10"> \-18,</span><span class="pltt-10"> 19,</span><span class="pltt-10"> \-10,</span><span class="pltt-10"> 11,</span><span class="pltt-10"> 7,</span><span class="pltt-10"> \-18,</span><span class="pltt-10"> \-3,</span><span class="pltt-10"> \-6]</span></span></span></dd></dl>
+**Zadanie 2:**
+
+czas: 10 min.
+
+Z podanej listy wytnij dwie równoliczne listy zawierające wartości mniejsze i większe od ich mediany.
+
+``l1 = [-18, -9, 1, -14, -2, 7, 5, -11, 16, 4, 18, 7, -18, 19, -10, 11, 7, -18, -3, -6]``
+
 
 
 Wyrażenia listowe
@@ -168,7 +174,7 @@ Wyrażenia listowe
 
 Wyrażenia listowe są jednymi z najbardziej użytecznych cech języka Python (więc i Sage). Dzięki nim możemyodwzorować jedną listę w drugą wykonując na każdym elemencie pierwszej pewne działania. Ogólna składnia wyglądanastępująco
 
-nowa_lista = [E(e) for e in lista], gdzie  E(e)  to wyrażenie przekształcające element  e  z listy  lista. Najprościej wyjaśnić to na przykładzie
+``nowa_lista = [E(e) for e in lista]``, gdzie  ``E(e)``  to wyrażenie przekształcające element  ``e``  z listy  ``lista``. Najprościej wyjaśnić to na przykładzie
 
 
 .. code-block:: python
@@ -181,7 +187,7 @@ nowa_lista = [E(e) for e in lista], gdzie  E(e)  to wyrażenie przekształ
 
 .. end of output
 
-Jak widać takie wyrażenie zawiera w sobie deﬁnicję nowej listy  kwadrat_lcG  zbudowanej poprzez podniesienie wpętli  for  wszystkich elementów listy  lcG  do kwadratu. Pętla ta występuje w środku nawiasów  [], czyli niejako wśrodku listy. Zapis taki dość mocno przyspiesza zapis i konstrukcję list potomnych, budowanych z list już istniejących:
+Jak widać takie wyrażenie zawiera w sobie deﬁnicję nowej listy  ``kwadrat_lcG``  zbudowanej poprzez podniesienie wpętli  for  wszystkich elementów listy  ``lcG``  do kwadratu. Pętla ta występuje w środku nawiasów  ``[]``, czyli niejako wśrodku listy. Zapis taki dość mocno przyspiesza zapis i konstrukcję list potomnych, budowanych z list już istniejących:
 
 
 .. code-block:: python
@@ -210,12 +216,15 @@ Dzięki takiej konstrukcji wiele dotychczasowych zadań okazuje się zadaniami �
 
 
 
-<dl class="description"><dt class="description"> <span class="plbx-10">Zadanie 3:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Stwórz listy          <ol class="enumerate1">
-<li id="x1-4002x1" class="enumerate">kwadratów liczb nieparzystych w zakresie od 0 do 300 </li>
-<li id="x1-4004x2" class="enumerate">zawierających wysokość piłki rzuconej w polu grawitacyjnym Ziemi z prędkością początkową :math:`{v}_{0} = 3.44[m∕s]`,          wysokością początkową :math:`{h}_{0} = 0[m]`          dla poszczególnych chwil czasu :math:`t = 0,0.01,0.02,0.03,...,0.70[s]` </li>
-<li id="x1-4006x3" class="enumerate">zawierające :math:`\sin(x) - \cos(x)`          dla :math:`x \in  [-2 \pi,2 \pi]`          i :math:`x = 0.025`</li>
-</ol> </dd></dl>
+**Zadanie 3:**
 
+czas: 10 min.
+
+Stwórz listy
+
+1. kwadratów liczb nieparzystych w zakresie od 0 do 300
+2. zawierających wysokość piłki rzuconej w polu grawitacyjnym Ziemi z prędkością początkową :math:`{v}_{0} = 3.44[m∕s]`,  wysokością początkową :math:`{h}_{0} = 0[m]` dla poszczególnych chwil czasu :math:`t = 0,0.01,0.02,0.03,...,0.70[s]`
+3. zawierające :math:`\sin(x) - \cos(x)` dla :math:`x \in  [-2 \pi,2 \pi]` i :math:`x = 0.025`
 
 
 
@@ -285,8 +294,11 @@ Podczas deﬁniowania wyrażenia symbolicznego możemy pominąć argument i zapi
 
 
 
-<dl class="description"><dt class="description"> <span class="plbx-10">Zadanie 4:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Sprawdź czy całka z pochodnej funkcji :math:`\sin({x}^{2})`      jest równa tej funkcji.</dd></dl>
+**Zadanie 4:**
 
+czas: 10 min.
+
+Sprawdź czy całka z pochodnej funkcji :math:`\sin({x}^{2})` jest równa tej funkcji.
 
 
 
@@ -312,7 +324,7 @@ Na  przykład:
 
 .. end of output
 
-W tym przypadku nazwa funkcji to  F  a lista argumentów ogranicza się do jednego  C. Funkcja taprzelicza nam stopnie Celsiusa na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy return  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
+W tym przypadku nazwa funkcji to  ``F  a lista argumentów ogranicza się do jednego  ``C``. Funkcja taprzelicza nam stopnie Celsiusa na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy return  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
 
 
 .. code-block:: python
@@ -322,7 +334,7 @@ W tym przypadku nazwa funkcji to  F  a lista argumentów ogranicza się do jedne
 
 .. end of output
 
-Jak widzimy wywołania takiej funkcji są identyczne jak te do których już się przyzwyczailiśmy, czyli np:  sin(2), cos(pi). Należy podać nazwę funkcji i w nawiasie wartość argumentu. Dodatkowo wartości dla argumentów funkcji możemy podawać explicite
+Jak widzimy wywołania takiej funkcji są identyczne jak te do których już się przyzwyczailiśmy, czyli np:  ``sin(2)``, ``cos(pi)``. Należy podać nazwę funkcji i w nawiasie wartość argumentu. Dodatkowo wartości dla argumentów funkcji możemy podawać explicite
 
 
 .. code-block:: python
@@ -332,7 +344,7 @@ Jak widzimy wywołania takiej funkcji są identyczne jak te do których już si�
 
 .. end of output
 
-Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczyzapytać o to Sage korzystając z wbudowanej pomocy  F?  lub  F??  (pamiętacie jeszcze czym różnią się obawywołania?). Aby w pełni wykorzystać tę możliwość należy zdeﬁniować co pomoc Sage ma pokazywać gdynapiszemy  F? . Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
+Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczy zapytać o to Sage korzystając z wbudowanej pomocy  ``F?``  lub  ``F??``  (pamiętacie jeszcze czym różnią się obawywołania?). Aby w pełni wykorzystać tę możliwość należy zdeﬁniować co pomoc Sage ma pokazywać gdynapiszemy  ``F?`` . Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
 
 
 .. code-block:: python
@@ -375,7 +387,7 @@ Właśnie zdeﬁniowaną funkcję rozwiązującą równanie
 .. math::
    :label: IT03.77.1
 
-   a{x}^{2} \+ bx \+ c = 0
+   a{x}^{2} + bx + c = 0
 
 
 możemy  teraz  wywoływać  na  wiele  sposobów:
@@ -398,7 +410,7 @@ możemy  teraz  wywoływać  na  wiele  sposobów:
 
 .. end of output
 
-Jak widzimy możemy wywoływać funkcję zarówno podając nazwy argumentów (wtedy kolejnośc ichjest dowolna), nie podając ich wcale (wtedy musimy zachować kolejność taką jak w deﬁnicji funkcji)lub podając nazwy części z nich. Ważne jest, aby argumenty podawane bez nazwy występowały przedtymi deklarowanymi explicite, ponieważ Sage zwróci nam błąd, nawet jeżeli zachowamy kolejność
+Jak widzimy możemy wywoływać funkcję zarówno podając nazwy argumentów (wtedy kolejnośc ichjest dowolna), nie podając ich wcale (wtedy musimy zachować kolejność taką jak w deﬁnicji funkcji) lub podając nazwy części z nich. Ważne jest, aby argumenty podawane bez nazwy występowały przedtymi deklarowanymi explicite, ponieważ Sage zwróci nam błąd, nawet jeżeli zachowamy kolejność
 
 
 .. code-block:: python
@@ -410,7 +422,7 @@ Jak widzimy możemy wywoływać funkcję zarówno podając nazwy argumentów (wt
 
 .. end of output
 
-Funkcje nie muszą niczego zwracać, znaczy to, że komenda  return  nie musi występować w ciele funkcji. Funkcjetakie mogą być tworzone do testowania zachowania kodu, innych funkcji, wydrukowania pomocy, i wielu innych celów.
+Funkcje nie muszą niczego zwracać, znaczy to, że komenda  ``return``  nie musi występować w ciele funkcji. Funkcje takie mogą być tworzone do testowania zachowania kodu, innych funkcji, wydrukowania pomocy, i wielu innych celów.
 
 
 .. code-block:: python
@@ -442,8 +454,12 @@ Funkcje nie muszą niczego zwracać, znaczy to, że komenda  return  nie musi wy
 
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie 5: Funkcja Heaviside’a.</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Zdeﬁniuj funkcję Heaviside’a.</dd></dl>
+**Zadanie 5: Funkcja Heaviside’a.**
+
+czas: 10 min.
+
+Zdeﬁniuj funkcję Heaviside’a.
+
 
 
 Funkcja lambda
@@ -493,22 +509,57 @@ sprawdźmy
 
 
 
-<dl class="description"><dt class="description"> <span class="plbx-10">Zadanie 6: Parzysta funkcja lambda</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Zbuduj funkcję lambda sprawdzającą czy dana liczba jest parzysta. Funkcja powinna zwracać <span class="obeylines-h"><span class="verb"><span class="pltt-10">True</span></span></span> w      przypadku liczby parzystej i <span class="obeylines-h"><span class="verb"><span class="pltt-10">False</span></span></span> dla liczby nieparzystej.</dd></dl>
+**Zadanie 6: Parzysta funkcja lambda**
+
+czas: 10 min.
+
+Zbuduj funkcję lambda sprawdzającą czy dana liczba jest parzysta. Funkcja powinna zwracać ``True`` w  przypadku liczby parzystej i ``False`` dla liczby nieparzystej.
 
 
 Zadania
 ~~~~~~~~~~
 
+**Zadanie 7: Lista nieparzysta.**
 
-<dl class="description"><dt class="description"> <span class="plbx-10">Zadanie 7: Lista nieparzysta.</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Zdeﬁniuj lambda funkcję <span class="obeylines-h"><span class="verb"><span class="pltt-10">nieparzyste(n)</span></span></span> zwracającą listę liczb nieparzystych od 0 do podanej jako      argument liczby :math:`n`      włącznie. </dd><dt class="description"> <span class="plbx-10">Zadanie 8:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Napisz trzy funkcje          <ol class="enumerate1">
-<li id="x1-9002x1" class="enumerate"><span class="obeylines-h"><span class="verb"><span class="pltt-10">hw1</span></span></span> nie przyjmującą żadnych argumentów i zwracającą ciąg znaków ’Hello, World!’; </li>
-<li id="x1-9004x2" class="enumerate"><span class="obeylines-h"><span class="verb"><span class="pltt-10">hw2</span></span></span> nie przyjmującą żadnych argumentów i nie zwracającą też nic, ale drukującą na standardowe          wyjście ’Hello, World!’; </li>
-<li id="x1-9006x3" class="enumerate"><span class="obeylines-h"><span class="verb"><span class="pltt-10">hw3</span></span></span> przyjmującą dwa argumenty i drukującą na standardowe wyjście oba argumenty oddzielone przecinkiem.          Przetestuj te funkcje za pomocą
-<div id="verbatim-3" class="verbatim">print hw1()           <br />hw2()           <br />hw3(’Hello’, ’World!’)</div>
+czas: 10 min.
 
-<p class="nopar"> </p>
-</li>
-</ol> </dd><dt class="description"> <span class="plbx-10">Zadanie 9: Funkcja Gaussa.</span> </dt><dd class="description"><span class="underline">czas: 20 min.</span><br class="newline" />Zbuduj funkcję <span class="obeylines-h"><span class="verb"><span class="pltt-10">mygauss</span></span></span> zwracającą wartość funkcji Gaussa o średniej      :math:`\mu` i odchyleniu      standardowym :math:`\sigma`      w punkcie :math:`x`.      Zmienne :math:`\mu` oraz      :math:`\sigma` zaprogramuj z      domyślnymi wartościami :math:` \mu= 0`      i :math:` \sigma= 1`.      Nie zapomnij napisać <span class="plti-10">docstring</span>\-a. </dd><dt class="description"> <span class="plbx-10">Zadanie 10: Suma</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Napisz funkcję zwracającą sumę podanych w liście wartości. Funkcję nazwij <span class="obeylines-h"><span class="verb"><span class="pltt-10">suma</span></span></span>. Następnie przetestuj wpisując:      <span class="obeylines-h"><span class="verb"><span class="pltt-10">suma([3,6,\-3,4])</span></span></span>. </dd><dt class="description"> <span class="plbx-10">Zadanie 11: Pętla </span><span class="plbxti-10">for </span><span class="plbx-10">ze zmienną listą</span> </dt><dd class="description"><span class="underline">czas: 15 min.</span><br class="newline" />Rozważ poniższy przykład użycia pętli <span class="obeylines-h"><span class="verb"><span class="pltt-10">for</span></span></span>. Wyjaśnij co dzieje się przy każdym obrocie pętli.</dd></dl>
+Zdeﬁniuj lambda funkcję ``nieparzyste(n)`` zwracającą listę liczb nieparzystych od 0 do podanej jako argument liczby :math:`n` włącznie.
+
+
+**Zadanie 8:**
+
+czas: 10 min.
+
+Napisz trzy funkcje
+
+1. ``hw1`` nie przyjmującą żadnych argumentów i zwracającą ciąg znaków ’Hello, World!’;
+2. ``hw2`` nie przyjmującą żadnych argumentów i nie zwracającą też nic, ale drukującą na standardowe wyjście ’Hello, World!’;
+3. ``hw3`` przyjmującą dwa argumenty i drukującą na standardowe wyjście oba argumenty oddzielone przecinkiem. Przetestuj te funkcje za pomocą 
+
+| print hw1()
+| hw2()
+| hw3(’Hello’, ’World!’)
+
+
+**Zadanie 9: Funkcja Gaussa.**
+
+czas: 20 min.
+
+Zbuduj funkcję ``mygauss`` zwracającą wartość funkcji Gaussa o średniej :math:`\mu` i odchyleniu standardowym :math:`\sigma`  w punkcie :math:`x`. Zmienne :math:`\mu` oraz  :math:`\sigma` zaprogramuj z  domyślnymi wartościami :math:` \mu= 0`  i :math:` \sigma= 1`. Nie zapomnij napisać ``docstring`` -a.
+
+
+**Zadanie 10: Suma**
+
+czas: 10 min.
+
+Napisz funkcję zwracającą sumę podanych w liście wartości. Funkcję nazwij ``suma``. Następnie przetestuj wpisując: ``suma([3,6,-3,4])``.
+
+
+**Zadanie 11: Pętla for ze zmienną listą**
+
+czas: 15 min.
+
+Rozważ poniższy przykład użycia pętli ``for``. Wyjaśnij co dzieje się przy każdym obrocie pętli.
 
 .. code-block:: python
 
@@ -527,7 +578,7 @@ Zadania
 
 .. end of output
 
-**Uwaga:**  Nigdy nie modyﬁkuj listy używanej w pętli for! (No chyba, że naprawdę wiesz co robisz).
+**Uwaga:**  Nigdy nie modyﬁkuj listy używanej w pętli ``for`` ! (No chyba, że naprawdę wiesz co robisz).
 
 
 
@@ -537,17 +588,61 @@ Zadania domowe
 Stwórz notatnik ’Zadania domowe L05, Imię Nazwisko’. W tym notatniku rozwiąż poniższe zadania. Postaraj się jasno opisać jakie zadanie rozwiązujesz oraz metodykę rozwiązania tego zadania. Notatnik uwspólnij (tylko) z prowadzącym ćwiczenia.
 
 
-<dl class="description"><dt class="description"> <span class="plbx-10">Zadanie ZD5.1: Gra w kości.</span> </dt><dd class="description"><span class="underline">czas: – min.</span><br class="newline" />Funkcja <span class="obeylines-h"><span class="verb"><span class="pltt-10">random()</span></span></span> zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.      Napisz funkcję <span class="obeylines-h"><span class="verb"><span class="pltt-10">kostka(n)</span></span></span> zwracającą listę n losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie      funkcja powinna realizować 1 rzut kością (:math:`n = 1`). </dd><dt class="description"> <span class="plbx-10">Zadanie ZD5.2: Przypisania</span> </dt><dd class="description"><span class="underline">czas: – min.</span><br class="newline" />Część poniższych przypisań będzie działać, a część nie. Wytłumacz przy każdej linijce      dlaczego dane przypisanie działa lub nie działa. Jeżeli działa, napisz jakim obiektem jest      :math:`x` i      jaką trzyma wartość.
-<div id="verbatim-4" class="verbatim">x = 1       <br />x = 1.       <br />x = 1;       <br />x = 1!       <br />x = 1?       <br />x = 1:       <br />x = 1,</div>
+**Zadanie ZD5.1: Gra w kości.**
 
-<p class="nopar"><span class="underline"><span class="plbx-10">Uwaga:</span></span> Wywołaj powyższe przypisania jedno po drugim, za każdym razem sprawdź typ i zawartość zmiennej      x.</p>
-</dd><dt class="description"> <span class="plbx-10">Zadanie ZD5.3: Błąd zaokrąglania.</span> </dt><dd class="description"><span class="underline">czas: – min.</span><br class="newline" />Pierwiastkując jakąś liczbę :math:`M`      razy, a później podnosząc ją :math:`M`      razy do kwadratu powinniśmy otrzymać tą samą liczbę (przynajmniej na kartce papieru). Jeżeli wykonamy      podobną operację na kalkulatorze, okaże się, że nie zawsze jest to prawda - tzn. startując z liczby      :math:`A` nie      wrócimy do tej samej liczby. Mając Sage nie musimy przejmować się naciskaniem klawiszy kalkulatora - możemy      wykonać podobne operacje w pętli. Oto odpowiedni program:
-<div id="verbatim-5" class="verbatim">for n in range(60):       <br />    r = 2.0       <br />    for i in range(n):       <br />        r = sqrt(r)       <br />    for i in range(n):       <br />        r = r^2       <br />    print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)</div>
+czas: – min.
 
-<p class="nopar">Napisz w trybie edytora tekstu (<span class="obeylines-h"><span class="verb"><span class="pltt-10">SHIFT\+ENTER</span></span></span> na niebieskim polu) co powyższy program wykonuje. Potem      uruchom program. Zaokrąglanie liczb (błąd zaokrąglania) kompletnie niszczy obliczenia dla dostatecznie dużych      :math:`n`.      Zwróć uwagę na to, że dla niektórych przypadków z liczby 2 dostajemy 1! Zbadaj te przypadki ustalając liczbę      :math:`n` i      drukując na ekran to co zwracają pętle pierwiastkujące i podnoszące do kwadratu. Dlaczego dochodzimy do liczby      1? Odpowiedz w trybie edytora tekstu.</p>
-</dd><dt class="description"> <span class="plbx-10">Zadanie ZD5.4: Numeryczne zero.</span> </dt><dd class="description"><span class="underline">czas: – min.</span><br class="newline" />Wpisz poniższy kod i uruchom go.
-<div id="verbatim-6" class="verbatim">eps = 1.0       <br />while 1.0 != 1.0 \+ eps:       <br />    print ’............’, eps       <br />    eps = eps/2.0       <br />print ’koncowe eps:’, eps</div>
+Funkcja ``random()`` zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.      Napisz funkcję ``kostka(n)`` zwracającą listę n losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie funkcja powinna realizować 1 rzut kością ( :math:`n = 1` ).
 
-<p class="nopar">Jak to możliwe, że :math:`1 \ne 1 + eps`?      Jaka wartość <span class="obeylines-h"><span class="verb"><span class="pltt-10">eps</span></span></span> jest numerycznie traktowana przez Sage jak zero?</p>
-</dd></dl>
+
+**Zadanie ZD5.2: Przypisania**
+
+czas: – min.
+
+Część poniższych przypisań będzie działać, a część nie. Wytłumacz przy każdej linijce      dlaczego dane przypisanie działa lub nie działa. Jeżeli działa, napisz jakim obiektem jest  :math:`x` i  jaką trzyma wartość.
+
+| x = 1
+| x = 1.
+| x = 1;
+| x = 1!
+| x = 1?
+| x = 1:
+| x = 1,
+
+**Uwaga:** Wywołaj powyższe przypisania jedno po drugim, za każdym razem sprawdź typ i zawartość zmiennej x.
+
+
+**Zadanie ZD5.3: Błąd zaokrąglania.**
+
+czas: – min.
+
+Pierwiastkując jakąś liczbę :math:`M` razy, a później podnosząc ją :math:`M`  razy do kwadratu powinniśmy otrzymać tą samą liczbę (przynajmniej na kartce papieru). Jeżeli wykonamy  podobną operację na kalkulatorze, okaże się, że nie zawsze jest to prawda - tzn. startując z liczby :math:`A` nie wrócimy do tej samej liczby. Mając Sage nie musimy przejmować się naciskaniem klawiszy kalkulatora - możemy  wykonać podobne operacje w pętli. Oto odpowiedni program:
+
+| for n in range(60):
+|     r = 2.0
+|     for i in range(n):
+|         r = sqrt(r)
+|     for i in range(n):
+|         r = r^2
+|     print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)
+
+
+Napisz w trybie edytora tekstu (``SHIFT+ENTER`` na niebieskim polu) co powyższy program wykonuje. Potem  uruchom program. Zaokrąglanie liczb (błąd zaokrąglania) kompletnie niszczy obliczenia dla dostatecznie dużych :math:`n`. Zwróć uwagę na to, że dla niektórych przypadków z liczby 2 dostajemy 1! Zbadaj te przypadki ustalając liczbę  :math:`n` i      drukując na ekran to co zwracają pętle pierwiastkujące i podnoszące do kwadratu. Dlaczego dochodzimy do liczby 1? Odpowiedz w trybie edytora tekstu.
+
+
+**Zadanie ZD5.4: Numeryczne zero.**
+
+czas: – min.
+
+Wpisz poniższy kod i uruchom go.
+
+| eps = 1.0
+| while 1.0 != 1.0 + eps:
+|     print ’............’, eps
+|     eps = eps/2.0
+| print ’koncowe eps:’, eps
+
+
+Jak to możliwe, że :math:`1 \ne 1 + eps`?  Jaka wartość ``eps`` jest numerycznie traktowana przez Sage jak zero?
+
 

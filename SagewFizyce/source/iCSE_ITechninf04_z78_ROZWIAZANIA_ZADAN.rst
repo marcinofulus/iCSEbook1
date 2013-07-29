@@ -90,16 +90,13 @@ Zadania na lekcji
 Zadanie 2: Narysuj krzywe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>
-<ul>
-<li>ewolwentę</li>
-<li>cykloidę</li>
-<li>brachistochronę</li>
-<li>hiperbolę</li>
-<li>hipocykloidę</li>
-<li>lemniskatę Bernoulliego (we współrzędnych kartezjańskich i biegunowych)</li>
-</ul>
-</dd>
+- ewolwentę
+- cykloidę
+- brachistochronę
+- hiperbolę
+- hipocykloidę
+- lemniskatę Bernoulliego (we współrzędnych kartezjańskich i biegunowych)
+
 
 .. code-block:: python
 
@@ -179,9 +176,10 @@ Zadanie 2: Narysuj krzywe
 Zadanie 3: Dopasowanie
 ~~~~~~~~~~~~~~~~~~~~~~
 
-<dd>Do podanych punktów dopasuj krzywą (m/w).
-<div id="verbatim-3">l = [0, 0.8, 0.079, 4.8, 12., 18.51, 23., 31., 48., 81.]</div>
-</dd>
+Do podanych punktów dopasuj krzywą (m/w).
+
+``l = [0, 0.8, 0.079, 4.8, 12., 18.51, 23., 31., 48., 81.]``
+
 
 .. code-block:: python
 
@@ -194,10 +192,16 @@ Zadanie 3: Dopasowanie
 
 .. end of output
 
-<dd>
-<h3>Zadanie 4: Ruch balistyczny</h3>
-</dd>
-<dd>Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem :math:`\alpha = \pi∕3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m. <br /><strong>wersja łatwa</strong>: bez oporu powietrza<br /><strong>wersja trudna</strong>: z oporem powietrza</dd>
+
+Zadanie 4: Ruch balistyczny
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem :math:`\alpha = \pi∕3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m.
+
+**wersja łatwa**: bez oporu powietrza
+
+**wersja trudna**: z oporem powietrza
+
 
 .. code-block:: python
 
@@ -243,13 +247,12 @@ Zadanie 3: Dopasowanie
 
 .. end of output
 
+
 Zadania domowe
 ==============
 
 ZD6.1 (Batman)
 ~~~~~~~~~~~~~~
-
-
 
 
 .. code-block:: python
@@ -375,7 +378,7 @@ ZD6.3 (Lissaious)
 .. end of output
 
 
-**Zadanie ZD6.4: Metoda Newtona**
+Zadanie ZD6.4: Metoda Newtona
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

@@ -9,12 +9,7 @@ Typy złożone i pętle
 Wstęp
 ~~~~~~~~
 
-Poznaliśmy już elementarne typy danych w Sage’u takie jak  int
-  (liczby całkowite),  float
-  (liczby rzeczywiste),  complex
-  (liczby zespolone) oraz  string
-  (łańcuchy tekstowe). Dziś poznamy nowe typy danych takie jak listy, słowniki i tuple. Każdy z tych typów możemy najprościej opisać jako pewien zbiór elementów, przy czym każdy z elementów zbioru jest typu prostego np.  int, float, complex, etc. (nie jest to do końca prawda, ale na tym etapie nauki możemy przyjąć takie założenie).
-
+Poznaliśmy już elementarne typy danych w Sage’u takie jak  int (liczby całkowite), float (liczby rzeczywiste),  complex (liczby zespolone) oraz  string  (łańcuchy tekstowe). Dziś poznamy nowe typy danych takie jak listy, słowniki i tuple. Każdy z tych typów możemy najprościej opisać jako pewien zbiór elementów, przy czym każdy z elementów zbioru jest typu prostego np.  int, float, complex, etc. (nie jest to do końca prawda, ale na tym etapie nauki możemy przyjąć takie założenie).
 
 Na tej lekcji poznamy również pętle \- elementy języka, które pozwalają na wielokrotne wykonywanie zdanje czynności.
 
@@ -33,7 +28,7 @@ Poniżej znajduje się przykład listy, która zawiera 6 elementów, elementy od
 
 .. end of output
 
-Elementy listy indeksowane (numerowane) są kolejnymi liczbamicałkowitymi zaczynając od 0. Jeśli lista ma 6 elementów, to indeksyelementów zmieniają się od 0 do 5 (element pierwszy \- indeks 0). Dokonkretnego elementu listy odwołujemy się wpisując  moja_lista[indeks] :
+Elementy listy indeksowane (numerowane) są kolejnymi liczbami całkowitymi zaczynając od 0. Jeśli lista ma 6 elementów, to indeksy elementów zmieniają się od 0 do 5 (element pierwszy \- indeks 0). Do konkretnego elementu listy odwołujemy się wpisując  moja_lista[indeks] :
 
 
 .. code-block:: python
@@ -68,7 +63,7 @@ Element listy możemy też przypisać do innej zmiennej, podobnie jak zwykłą l
 
 .. end of output
 
-Dlaczego tak jest? Dlatego, że operacja przypisania (np a=2, znak = jestoperatorem przypisania) interpretowana jest ód prawej do lewej”tzn. najpierwwyliczana jest wartość wyrażenia po prawej stronie znaku =, a następnie ta wartośćjest przypisana do zmiennej po lewej stronie znaku =. Możemy zatem mieć
+Dlaczego tak jest? Dlatego, że operacja przypisania (np a=2, znak = jest operatorem przypisania) interpretowana jest ód prawej do lewej”tzn. najpierwwyliczana jest wartość wyrażenia po prawej stronie znaku =, a następnie ta wartośćjest przypisana do zmiennej po lewej stronie znaku =. Możemy zatem mieć
 
 
 .. code-block:: python
@@ -103,11 +98,12 @@ W powyższym przykładzie elementami listy  moja_lista  były liczby całkowite 
 .. end of output
 
 
+Zadanie:
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 5 min.</span><br class="newline" />Sprawdź,  czy  Sage  pozwala  na  stworzenie  listy,  której  elementy  mają
-     różny typ. Stwórz listę <span class="obeylines-h"><span class="verb"><span class="pltt-10">lista_2=[1,3.5,199.21,"ala",3\+2j],</span></span></span>następnie
-     sprawdź typ każdego elementu korzystając z funkcji <span class="obeylines-h"><span class="verb"><span class="pltt-10">type()</span></span></span></dd></dl>
+czas: 5 min.
+
+Sprawdź,  czy  Sage  pozwala  na  stworzenie  listy,  której  elementy  mają  różny typ. Stwórz listę lista_2=[1,3.5,199.21,"ala",3\+2j], następnie sprawdź typ każdego elementu korzystając z funkcji type()
+
 Na elementach listy możemy wykonywać takie same operacje jak na zwykłych zmiennych
 
 
@@ -134,32 +130,16 @@ Jeśli nie chcemy tworzyć listy z wartościami początkowymi, możemy stworzyć
 Funkcje potrzebne do pracy na listach
 """""""""""""""""""""""""""""""""""""
 
-Poniżej znajdziesz kilka funkcji, które są przydatne (a nie które niezbędne) w pracy zlistami.
+Poniżej znajdziesz kilka funkcji, które są przydatne (a nie które niezbędne) w pracy z listami.
 
 
-- len(lista)
-  \- zwraca liczbę elementów listy           
-
-- append(x)
-  \- dodaje element x na koniec listy           
-
-- insert(i,x)
-  \- dodaje do listy element  x
-  w miejsce o indeksie  i
- 
-
-- remove(x)
-  \- usuwa z listy pierwszy napotkany element x. Jeśli     na liście nie ma elementu o wartosści x, Sage wyświetli błąd.           
-
-- pop(i)
-  \- usuwa z listy element o indeksie i, jednocześnie zmniejszając rozmiar tablicy     o 1. Jeśli wywołamy  pop()
-  bez podawania wartości  i, usuniemy ostatni element listy.
-
-- count(x)
-  \- zwraca liczbę wystąpień x na liście     
-
-- sort()
-  \- sortuje elementy listy rosnąco
+- len(lista) \- zwraca liczbę elementów listy
+- append(x)  \- dodaje element x na koniec listy
+- insert(i,x)  \- dodaje do listy element  x  w miejsce o indeksie  i
+- remove(x) \- usuwa z listy pierwszy napotkany element x. Jeśli na liście nie ma elementu o wartosści x, Sage wyświetli błąd.
+- pop(i) \- usuwa z listy element o indeksie i, jednocześnie zmniejszając rozmiar tablicy o 1. Jeśli wywołamy  pop() bez podawania wartości  i, usuniemy ostatni element listy.
+- count(x) \- zwraca liczbę wystąpień x na liście
+- sort() \- sortuje elementy listy rosnąco
 
 
 .. code-block:: python
@@ -264,7 +244,7 @@ ani dodawac i usuwać jej elementów.
 Słowniki
 ~~~~~~~~~~~
 
-Słowniki (ang. dictionaries) to kolejne typy danych, który można najprościejopisać jako zbiory par  klucz:wartość, przy czym w ramach jednego słownikaklucz nie może się powtarzać \- musi być unikatowy. W odróżnieniu od list ikrotek, które są indeksowane liczbami, słowniki są indeksowane kluczami.Poniżej stworzono prostą zmienną typu słownikowego o nazwie telefony
+Słowniki (ang. dictionaries) to kolejne typy danych, który można najprościejopisać jako zbiory par  klucz:wartość, przy czym w ramach jednego słownikaklucz nie może się powtarzać \- musi być unikatowy. W odróżnieniu od list ikrotek, które są indeksowane liczbami, słowniki są indeksowane kluczami. Poniżej stworzono prostą zmienną typu słownikowego o nazwie telefony
 
 
 .. code-block:: python
@@ -275,11 +255,12 @@ Słowniki (ang. dictionaries) to kolejne typy danych, który można najprościej
 .. end of output
 
 
+Zadanie:
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 1 min.</span><br class="newline" />Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same.
-     Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe”w opisie
-     słownika).</dd></dl>
+czas: 1 min.
+
+Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same. Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe” w opisie słownika).
+
 Listę wszystkich kluczy i wartości w słowniku otrzymamy, wykonując odpowiednio polecenia
 
 
@@ -312,12 +293,13 @@ Zmiany wartości dla konkretnego klucza możemy dokonać w następujący sposób
 
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 2 min.</span><br class="newline" />Sprawdź,          jaki          komunikat          wyświetli          wykonanie
-     polecenia <span class="obeylines-h"><span class="verb"><span class="pltt-10">type(telefony.keys())</span></span></span>. Jakiego typu daną zwróci wykonanie
-     tego polecenia (int, ﬂoat, tuple, list )?</dd></dl>
-Jeśli chcemy usunąc element słownika, używamy polecenia  del
-  lub  pop()
+Zadanie:
+
+czas: 2 min.
+
+Sprawdź, jaki komunikat wyświetli wykonanie polecenia type(telefony.keys()). Jakiego typu daną zwróci wykonanie  tego polecenia (int, ﬂoat, tuple, list )?
+
+Jeśli chcemy usunąc element słownika, używamy polecenia  del  lub  pop()
 
 
 .. code-block:: python
@@ -352,16 +334,16 @@ Do słownika możemy również dodawać nowe elementy w następujący sposób
 Pętle
 ~~~~~~~~
 
-**UWAGA:** Proszę nie kopiować poniższych przykładów do Sage’a, lecz wpisywać jeręcznie! Kopiowanie może powodować nie zachowanie wcięć i ewentualnebłędy.
+**UWAGA:** Proszę nie kopiować poniższych przykładów do Sage’a, lecz wpisywać je ręcznie! Kopiowanie może powodować nie zachowanie wcięć i ewentualne błędy.
 
-Wyobraźmy sobie, że mamy 1000 elementową listę i musimy wypisać na ekran jejposzczególne elementy. Wypisywanie krok po kroku każdego elementu będzie bardzoczasochłonne. Lepiej użyć do tego pętli. Idea pętli polega na tym, że wykonuje ona tesame czynności określoną ilość razy.
+Wyobraźmy sobie, że mamy 1000 elementową listę i musimy wypisać na ekran jej poszczególne elementy. Wypisywanie krok po kroku każdego elementu będzie bardzo czasochłonne. Lepiej użyć do tego pętli. Idea pętli polega na tym, że wykonuje ona te same czynności określoną ilość razy.
 
 
 
 Pętla ``for``
 """""""""""""
 
-Instrukcja  for  powoduje iterację po elementach sekwencji (np. listy, tupli itd.) wtakim porządku, w jakim są one umieszczone w danej sekwencji. Na przykład:
+Instrukcja  for  powoduje iterację po elementach sekwencji (np. listy, tupli itd.) w takim porządku, w jakim są one umieszczone w danej sekwencji. Na przykład:
 
 
 .. code-block:: python
@@ -427,11 +409,7 @@ W pracy z pętę  for  przydaje się funkcja  range(start,stop,krok).Tworzy ona 
 
 .. end of output
 
-Parametry  krok
-  i  start
-  są opcjonalne. Jeśli ich niepodamy Sage przyjmie domyślne wartości  krok
- =1 i  start
- =0.
+Parametry  krok  i  start  są opcjonalne. Jeśli ich niepodamy Sage przyjmie domyślne wartości  krok =1 i start =0.
 
 
 .. code-block:: python
@@ -465,13 +443,11 @@ Kilka przykładów użycia z pętlą  for
 
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Przypomnij   sobie   zadanie   z   poprzednich   zajęć,   gdzie   przeliczałes
-                                                                  
+Zadanie:
 
-                                                                  
-     temperaturę ze stopni Celsjusza na Fahrenheity. Teraz wykonaj to samo
-     zadanie, ale w zakresie temperatur \-27,27 stopni Celsjusza, co 3 stopnie.</dd></dl>
+czas: 10 min.
+
+Przypomnij   sobie   zadanie   z   poprzednich   zajęć,   gdzie   przeliczałeś temperaturę ze stopni Celsjusza na Fahrenheity. Teraz wykonaj to samo  zadanie, ale w zakresie temperatur \-27,27 stopni Celsjusza, co 3 stopnie.
 
 
 Pętla ``while()``
@@ -540,72 +516,37 @@ Prosze zwrócić uwagę, że stosując pętlę  while()  musimy sami zmieniać w
 Aby dobrze kostruować warunki logiczne, musimy zapoznać się z operatorami wSage’u \- na razie tylko porównania
 
 
- 
-=============== ===================
-<hr />
-         <hr />
-            
-operator
-       znaczenie
-         
-<hr />
-         <hr />
-            
-==
-             równy
-             
-<hr />
-         <hr />
-            
-!=
-             różny
-             
-<hr />
-         <hr />
-            
-:math:` &lt;`
-  mniejszy
-          
-<hr />
-         <hr />
-            
-:math:` &lt;=`
- mniejszy lub równy
 
-<hr />
-         <hr />
-            
-:math:` &gt;`
-  większy
-           
-<hr />
-         <hr />
-            
-:math:` &gt;=`
- większy lub równy
- 
-<hr />
-         <hr />
-            
-
-                                  
-=============== ===================
+   =============== ===================
+     operator           znaczenie
+       ==                równy
+       !=                różny
+       <                mniejszy
+       <=          mniejszy lub równy
+       >                większy
+       >=          większy lub równy
+   =============== ===================
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Stworzyć pustą listę. Następnie w pętli <span class="obeylines-h"><span class="verb"><span class="pltt-10">for</span></span></span> i za pomocą <span class="obeylines-h"><span class="verb"><span class="pltt-10">append()</span></span></span> dodaj
-     do listy liczby od 1\-10</dd></dl>
+Zadanie:
+
+czas: 10 min.
+
+Stworzyć pustą listę. Następnie w pętli for i za pomocą append() dodaj do listy liczby od 1\-10
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 15 min.</span><br class="newline" />Za  pomocą  funkcji  <span class="obeylines-h"><span class="verb"><span class="pltt-10">range()</span></span></span> i  <span class="obeylines-h"><span class="verb"><span class="pltt-10">for</span></span></span> policzyć  sumę  pierwszych  100  liczb
-     naturalnych (od 1 do 100).</dd></dl>
+Zadanie:
+
+czas: 15 min.
+
+Za  pomocą  funkcji  range() i  for policzyć  sumę  pierwszych  100  liczb naturalnych (od 1 do 100).
 
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 10 min.</span><br class="newline" />Stworzyć  pustą  listę.  Następnie  za  pomocą  pętli  <span class="obeylines-h"><span class="verb"><span class="pltt-10">while()</span></span></span> i  instrukcji
-     <span class="obeylines-h"><span class="verb"><span class="pltt-10">append()</span></span></span> dodać do listy pierwiastki z liczb 0\-30 co 2.5. Pierwiastek z <span class="obeylines-h"><span class="verb"><span class="pltt-10">x</span></span></span>
-     obliczamy za pomocą funkcji <span class="obeylines-h"><span class="verb"><span class="pltt-10">sqrt(x)</span></span></span>.</dd></dl>
+Zadanie:
+
+czas: 10 min.
+
+Stworzyć  pustą  listę.  Następnie  za  pomocą  pętli  while()  i  instrukcji  append()  dodać do listy pierwiastki z liczb 0\-30 co 2.5. Pierwiastek z  x obliczamy za pomocą funkcji sqrt(x).
 
 
 Pętle i słowniki
@@ -629,8 +570,10 @@ Podobnie jak dla list, możemy stosować pętle do słowników.
 .. end of output
 
 
+Zadanie:
 
-<dl class="description"><dt class="description">
-<span class="plbx-10">Zadanie:</span> </dt><dd class="description"><span class="underline">czas: 15 min.</span><br class="newline" />Dla słownika <span class="obeylines-h"><span class="verb"><span class="pltt-10">wiek</span></span></span> policzyć (użyć instrukcji <span class="obeylines-h"><span class="verb"><span class="pltt-10">for</span></span></span> i <span class="obeylines-h"><span class="verb"><span class="pltt-10">len()</span></span></span>) średnią wieku
-     wszystkich osobników z listy.</dd></dl>
+czas: 15 min.
+
+Dla słownika wiek policzyć (użyć instrukcji for i len()) średnią wieku wszystkich osobników z listy.
+
 

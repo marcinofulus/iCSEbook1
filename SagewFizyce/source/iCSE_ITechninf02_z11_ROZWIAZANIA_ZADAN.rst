@@ -7,7 +7,13 @@ Zmienne - rozwiązania zadań
 Zadanie 1: Określ jaki typ mają poniższe zmienne
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 5 min.</span><br /><span><span><span>i</span><span> =</span><span> 1</span></span></span><br /><span><span><span>k</span><span> =</span><span> (1,2,3)</span></span></span><br /><span><span><span>zmienna_z_zadania</span><span> =</span><span> ("Ala",</span><span> 21,</span><span> 4.5)</span></span></span><br /><span><span><span>ocena</span><span> =</span><span> 3.5</span></span></span><br /><span><span><span>imie</span><span> =</span><span> "Feliks"</span></span></span></dd>
+czas: 5 min.
+
+| i = 1
+| k = (1,2,3)
+| zmienna_z_zadania = ("Ala", 21, 4.5)
+| ocena = 3.5
+| imie = "Feliks"
 
 .. code-block:: python
 
@@ -24,13 +30,18 @@ Zadanie 1: Określ jaki typ mają poniższe zmienne
 
 .. end of output
 
+
 Zadanie 2: Konwersja ze stopni Celsiusa do Fahrenheita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 5 min.</span><br />Napisz program konwertujący temperaturę mierzoną w stopniach Celsiusa do stopni Fahrenheita według równania
-<div>:math:` F = {9\over 5}C + 32`</div>
-<p>Użyj identycznych nazw zmiennych. Następnie napisz program konwertujący temperaturę w drugą stronę.</p>
-</dd>
+czas: 5 min.
+
+Napisz program konwertujący temperaturę mierzoną w stopniach Celsiusa do stopni Fahrenheita według równania
+
+:math:` F = {9\over 5}C + 32`
+
+Użyj identycznych nazw zmiennych. Następnie napisz program konwertujący temperaturę w drugą stronę.
+
 
 .. code-block:: python
 
@@ -56,11 +67,14 @@ Zadanie 2: Konwersja ze stopni Celsiusa do Fahrenheita
 Zadanie 3: Oblicz z wykorzystaniem tych samych zmiennych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 10 min.</span><br />
-<div>:math:` \text{Area} = \pi {r}^{2},\quad \text{gdzie}\quad r = {\pi}^{{1\over 3} }-  1 `</div>
-<div>:math:` \text{_}0 ={\cosh }^{2}(x) +{\sinh }^{2}(x),\quad \text{gdzie}\quad x = 32 \pi`</div>
-<div>:math:`  f = {{(x + {y}^{0.4})}^{0.25x}\over 0.8} +\log \Big ({x\over y}\Big ) + 10^{x+{y}^{2} },\quad \text{gdzie}\quad x =\sinh (1),y =\tanh (20)`</div>
-</dd>
+czas: 10 min.
+
+:math:`\text{Area} = \pi {r}^{2},\quad \text{gdzie}\quad r = {\pi}^{{1\over 3} }-  1`
+
+:math:`\text{_}0 ={\cosh }^{2}(x) +{\sinh }^{2}(x),\quad \text{gdzie}\quad x = 32 \pi`
+
+:math:`f = {{(x + {y}^{0.4})}^{0.25x}\over 0.8} +\log \Big ({x\over y}\Big ) + 10^{x+{y}^{2} },\quad \text{gdzie}\quad x =\sinh (1),y =\tanh (20)`
+
 
 .. code-block:: python
 
@@ -92,15 +106,18 @@ Zadanie 3: Oblicz z wykorzystaniem tych samych zmiennych
 
 .. end of output
 
+
 Zadanie 4: Rzut ukośny
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 20 min.</span><br />Jeżeli w polu grawitacyjnym wyrzucimy piłkę z wysokości :math:`h_0` i z prędkością początkową :math:`{v}_{0}` zorientowaną pod kątem :math:`\alpha` w stosunku do poziomu otrzymujemy zagadnienie rzutu ukośnego. Rozwiązywać je będziecie analitycznie na zajęciach z mechaniki. Równanie toru takiego ruchu we współrzędnych kartezjańskich (x,y) dane jest wzorem:</dd>
-<dd><br /></dd>
-<dd>
-<div>:math:`y = h_0 + x\mathop {tg} (\alpha) -     {g\over 2{v}_{0}^{2}{\mathop{ cos}^{2}(\alpha) }}{x}^{2}`</div>
-<p>Napisz program znajdujący ”wysokość”piłki :math:`y` dla zadanych wartości przyspieszenia grawitacyjnego :math:`g`, kąta :math:`\alpha`, prędkości początkowej :math:`{v}_{0}` i odległości :math:`x`. Postaraj się napisać jak najbardziej czytelny kod.</p>
-</dd>
+czas: 20 min.
+
+Jeżeli w polu grawitacyjnym wyrzucimy piłkę z wysokości :math:`h_0` i z prędkością początkową :math:`{v}_{0}` zorientowaną pod kątem :math:`\alpha` w stosunku do poziomu otrzymujemy zagadnienie rzutu ukośnego. Rozwiązywać je będziecie analitycznie na zajęciach z mechaniki. Równanie toru takiego ruchu we współrzędnych kartezjańskich (x,y) dane jest wzorem:
+
+:math:`y = h_0 + x\mathop {tg} (\alpha) -     {g\over 2{v}_{0}^{2}{\mathop{ cos}^{2}(\alpha) }}{x}^{2}`
+
+Napisz program znajdujący ”wysokość”piłki :math:`y` dla zadanych wartości przyspieszenia grawitacyjnego :math:`g`, kąta :math:`\alpha`, prędkości początkowej :math:`{v}_{0}` i odległości :math:`x`. Postaraj się napisać jak najbardziej czytelny kod.
+
 
 .. code-block:: python
 
@@ -131,12 +148,18 @@ Zadanie 4: Rzut ukośny
 
 .. end of output
 
+
 Zadanie 5: Rzut ukośny
 ~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 10 min.</span><br />Przepisz kod tak, aby zwracał m/w taką informację
-<div id="verbatim-4">Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z  <br />prędkością początkową 3 m/s pod kątem 0.12 rad  <br />znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.</div>
-</dd>
+czas: 10 min.
+
+Przepisz kod tak, aby zwracał m/w taką informację
+
+| Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z  
+| prędkością początkową 3 m/s pod kątem 0.12 rad  
+| znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.
+
 
 .. code-block:: python
 
@@ -156,10 +179,14 @@ Zadanie 5: Rzut ukośny
 
 .. end of output
 
+
 Zadanie 6: Słownik przyspieszeń
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 10 min.</span><br />Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego a jako wartość wartość przyspieszenia na nim podają w :math:`m∕s`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.</dd>
+czas: 10 min.
+
+Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego a jako wartość wartość przyspieszenia na nim podają w :math:`m∕s`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.
+
 
 .. code-block:: python
 
@@ -175,19 +202,24 @@ Zadanie 6: Słownik przyspieszeń
 
 .. end of output
 
+
 Zadanie 7: Przyrost pieniędzy w banku
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<dd><span>czas: 15 min.</span><br />Niech :math:`p` oznacza stopę procentową banku wyrażoną w procentach na rok. Początkowa wartość odłożonej gotówki w tym banku urośnie zgodnie ze wzorem<br />
-<p>:math:`W = A\Big( 1 + {p \over 100}\Big )^n`</p>
-<p>po :math:`n` latach. Oblicz do jakiej kwoty wzrośnie</p>
-<ol>
-<li id="x1-9003x1">1000 Euro po 3 latach dla stopy 5 procentowej</li>
-<li id="x1-9005x2">23513 zł po 5 latach dla stopy 3,54%</li>
-<li id="x1-9007x3">112,12 miliona Rubli po 1 roku dla stopy 7.14%</li>
-</ol>
-<p>Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak, by inwestor otrzymał pełną, <span>czytelną</span> informację.</p>
-</dd>
+czas: 15 min.
+
+Niech :math:`p` oznacza stopę procentową banku wyrażoną w procentach na rok. Początkowa wartość odłożonej gotówki w tym banku urośnie zgodnie ze wzorem
+
+:math:`W = A\Big( 1 + {p \over 100}\Big )^n`
+
+po :math:`n` latach. Oblicz do jakiej kwoty wzrośnie
+
+- 1000 Euro po 3 latach dla stopy 5 procentowej
+- 23513 zł po 5 latach dla stopy 3,54%
+- 112,12 miliona Rubli po 1 roku dla stopy 7.14%
+
+Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak, by inwestor otrzymał pełną, czytelną informację.
+
 
 .. code-block:: python
 

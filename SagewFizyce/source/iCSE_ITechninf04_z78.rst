@@ -107,6 +107,9 @@ Bardzo łatwo tworzy się również wykresy ”trójwymiarowe”, tzn. wykresy f
 .. end of output
 
 
+.. image:: iCSE_ITechninf04_z78_media/indeks.jpeg
+    :align: center
+
 
 czy też korzystając z Pythonowych funkcji lambda
 

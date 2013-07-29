@@ -4,10 +4,12 @@
 Typy złożone i pętle - zadania z toku lekcji
 --------------------------------------------
 
-<a id="x1-20002"><span id="cell_outer_14"> </span></a>
+**Zadanie:**
 
+czas: 5 min.
 
-<dl><dt><a id="x1-20002"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-20002"><span style="text-decoration: underline;">czas: 5 min.</span><br />Sprawdź, czy Sage pozwala na stworzenie listy, której elementy mają różny typ. Stwórz listę <span style="white-space: nowrap;"><span><span style="font-family: monospace;">lista_2=[1,3.5,199.21,"ala",3\+2j],</span></span></span>następnie sprawdź typ każdego elementu korzystając z funkcji<span style="white-space: nowrap;"><span><span style="font-family: monospace;">type()</span></span></span></a></dd></dl>
+Sprawdź, czy Sage pozwala na stworzenie listy, której elementy mają różny typ. Stwórz listę ``lista_2=[1,3.5,199.21,"ala",3+2j]``, następnie sprawdź typ każdego elementu korzystając z funkcji ``type()``
+
 
 .. code-block:: python
 
@@ -25,10 +27,13 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-50004"><span id="cell_outer_30"> </span></a>
 
 
-<dl><dt><a id="x1-50004"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-50004"><span style="text-decoration: underline;">czas: 1 min.</span><br />Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same. Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe”w opisie słownika).</a></dd></dl>
+**Zadanie:**
+
+czas: 1 min.
+
+Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same. Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe”w opisie słownika).
 
 .. code-block:: python
 
@@ -43,7 +48,11 @@ Typy złożone i pętle - zadania z toku lekcji
 <a id="x1-50004"><span id="cell_outer_35"> </span></a>
 
 
-<dl><dt><a id="x1-50004"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-50004"><span style="text-decoration: underline;">czas: 2 min.</span><br />Sprawdź, jaki komunikat wyświetli wykonanie polecenia <span style="white-space: nowrap;"><span><span style="font-family: monospace;">type(telefony.keys())</span></span></span>. Jakiego typu daną zwróci wykonanie tego polecenia (int, ﬂoat, tuple, list )?</a></dd></dl>
+**Zadanie:**
+
+czas: 2 min.
+
+Sprawdź, jaki komunikat wyświetli wykonanie polecenia ``type(telefony.keys())``. Jakiego typu daną zwróci wykonanie tego polecenia (``int``, ``ﬂoat``, ``tuple``, ``list`` )?
 
 .. code-block:: python
 
@@ -53,10 +62,13 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-70005.1"></a>
 
 
-<dl><dt><a id="x1-70005.1"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-70005.1"><span style="text-decoration: underline;">czas: 10 min.</span><br />Przypomnij sobie zadanie z poprzednich zajęć, gdzie przeliczałes temperaturę ze stopni Celsjusza na Fahrenheity. Teraz wykonaj to samo zadanie, ale w zakresie temperatur \-27,27 stopni Celsjusza, co 3 stopnie.</a></dd></dl>
+**Zadanie:**
+
+czas: 10 min.
+
+Przypomnij sobie zadanie z poprzednich zajęć, gdzie przeliczałes temperaturę ze stopni Celsjusza na Fahrenheity. Teraz wykonaj to samo zadanie, ale w zakresie temperatur -27,27 stopni Celsjusza, co 3 stopnie.
 
 .. code-block:: python
 
@@ -85,10 +97,13 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-80005.2"></a>
 
 
-<dl><dt><a id="x1-80005.2"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-80005.2"><span style="text-decoration: underline;">czas: 10 min.</span><br />Stworzyć pustą listę. Następnie w pętli <span style="white-space: nowrap;"><span><span style="font-family: monospace;">for</span></span></span> i za pomocą <span style="white-space: nowrap;"><span><span style="font-family: monospace;">append()</span></span></span> dodaj do listy liczby od 1\-10</a></dd></dl>
+**Zadanie:**
+
+czas: 10 min.
+
+Stworzyć pustą listę. Następnie w pętli ``for`` i za pomocą ``append()`` dodaj do listy liczby od 1-10
 
 .. code-block:: python
 
@@ -100,10 +115,12 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-80005.2"></a>
 
+**Zadanie:**
 
-<dl><dt><a id="x1-80005.2"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-80005.2"><span style="text-decoration: underline;">czas: 15 min.</span><br />Za pomocą funkcji <span style="white-space: nowrap;"><span><span style="font-family: monospace;">range()</span></span></span> i <span style="white-space: nowrap;"><span><span style="font-family: monospace;">for</span></span></span> policzyć sumę pierwszych 100 liczb naturalnych (od 1 do 100).</a></dd></dl>
+czas: 15 min.
+
+Za pomocą funkcji ``range()`` i ``for`` policzyć sumę pierwszych 100 liczb naturalnych (od 1 do 100).
 
 .. code-block:: python
 
@@ -115,10 +132,13 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-80005.2"></a>
 
+**Zadanie:**
 
-<dl><dt><a id="x1-80005.2"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-80005.2"><span style="text-decoration: underline;">czas: 10 min.</span><br />Stworzyć pustą listę. Następnie za pomocą pętli <span style="white-space: nowrap;"><span><span style="font-family: monospace;">while()</span></span></span> i instrukcji <span style="white-space: nowrap;"><span><span style="font-family: monospace;">append()</span></span></span> dodać do listy pierwiastki z liczb 0\-30 co 2.5. Pierwiastek z <span style="white-space: nowrap;"><span><span style="font-family: monospace;">x</span></span></span> obliczamy za pomocą funkcji <span style="white-space: nowrap;"><span><span style="font-family: monospace;">sqrt(x).</span></span></span></a></dd></dl>
+czas: 10 min.
+
+Stworzyć pustą listę. Następnie za pomocą pętli ``while()`` i instrukcji ``append()`` dodać do listy pierwiastki z liczb 0-30 co 2.5. Pierwiastek z ``x`` obliczamy za pomocą funkcji ``sqrt(x)``.
+
 
 .. code-block:: python
 
@@ -132,10 +152,13 @@ Typy złożone i pętle - zadania z toku lekcji
 
 .. end of output
 
-<a id="x1-90005.3"><span id="cell_outer_57"> </span></a>
 
 
-<dl><dt><a id="x1-90005.3"><span style="font-weight: bold;">Zadanie:</span></a></dt><dd><a id="x1-90005.3"><span style="text-decoration: underline;">czas: 15 min.</span><br />Dla słownika <span style="white-space: nowrap;"><span><span style="font-family: monospace;">wiek</span></span></span> policzyć (użyć instrukcji <span style="white-space: nowrap;"><span><span style="font-family: monospace;">for</span></span></span> i <span style="white-space: nowrap;"><span><span style="font-family: monospace;">len()</span></span></span>) średnią wieku wszystkich osobników z listy.</a></dd></dl>
+**Zadanie:**
+
+czas: 15 min.
+
+Dla słownika ``wiek`` policzyć (użyć instrukcji ``for`` i ``len()`` ) średnią wieku wszystkich osobników z listy.
 
 .. code-block:: python
 
