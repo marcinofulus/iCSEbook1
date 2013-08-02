@@ -1,20 +1,25 @@
-.. SPHINX_ICSE_START_PROJECT - Skrypt documentation master file, created by
-   sphinx-quickstart on Fri Mar  8 15:41:59 2013.
+.. Arduino documentation master file, created by
+   sphinx-quickstart on Mon Jul 29 09:27:20 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-============================
-SPHINX_ICSE_START_PROJECT
-============================
+Welcome to Arduino's documentation!
+===================================
 
-
-Test Template
-=========================
+Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   test_template
+   wprowadzenie
+   wejscia_wyjscia
 
 
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 

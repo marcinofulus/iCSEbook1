@@ -41,14 +41,14 @@ Arduino Uno
 
 	Mikrokontroler taktowany jest częstotliwością 16 MHz. W zestawie Uno można zastosować mikrokontrolery ATmega8 lub nowsze: Atmega168 i ATmega328. Komunikacja z komputerem odbywa się za pomocą wspomnianego interfejsu USB. Dzięki temu są dostępne sterowniki dla większości systemów operacyjnych. 
 
-.. image:: ArduinoUno_R3_Front.jpg
+.. image:: figs/ArduinoUno_R3_Front.jpg
    :width: 500px
    :height: 400px
    :align: center
 |
 |
 |
-.. image:: ArduinoUno_R3_Back.jpg
+.. image:: figs/ArduinoUno_R3_Back.jpg
    :width: 500px
    :height: 400px
    :align: center
@@ -67,7 +67,7 @@ Oprogramowanie Arduino IDE
 
 	Przycisk Serial Monitor uruchamia okno, w którym pojawiają się informacje wysyłane przez interfejs RS232 mikrokontrolera . Umożliwia ono także wysyłanie danych do mikrokontrolera. W  oknie monitora dostępne są opcje automatycznego przewijania otrzymanych znaków, możliwość wyboru prędkości transmisji czy opcji związanych ze znakami końca linii. Monitor będzie pomocny podczas sprawdzania pracy programu i wyszukiwania w nim błędów. 
 
-.. image:: Arduino_IDE.jpg
+.. image:: figs/Arduino_IDE.jpg
    :width: 400px
    :height: 550px
    :align: center
@@ -172,7 +172,7 @@ OUTPUT
 
 
 	Cyfrowe piny mogą być używane jako wejścia, wejścia podwyższające i wyjścia. Zmiana przeznaczenia pinu poprzez funkcję pinMode(), zmienia właściwości elektryczne pinu.
-	O pinach Arduino skonfigurowanych jako wyjścia przy użyciu funkcji pinMode() mówi się, że są w stanie nieskiej impedancji. Oznacza to, że mogą one zapewnić znaczną ilość prądu do innych układów. Piny Atmega mogą zasilać (prąd dodatni) lub uziemiać (prąd ujemy) aż do 40mA do innych urządzeń / obwodów. To sprawia, że ​​są one przydatne do zasilania diod LED, ale bezużyteczne do odczytu sensorów. 
+	O pinach Arduino skonfigurowanych jako wyjścia przy użyciu funkcji pinMode() mówi się, że są w stanie nieskiej impedancji. Oznacza to, że mogą one zapewnić znaczną ilość prądu do innych układów. Piny Atmega mogą zasilać (prąd dodatni) lub uziemiać (prąd ujemy) aż do 40mA do innych urządzeń/obwodów. To sprawia, że są one przydatne do zasilania diod LED, ale bezużyteczne do odczytu sensorów. 
 	Uwaga: Piny skonfigurowane jako wyjscia mogą zostać uszkodzone lub zniszczone, jeśli zostaną zwarte. Ilość prądu dostarczana prze Atmega nie wystarcza także na zasilanie większości przekaźników i silników elektrycznych. Wymagany więc będzie jakiś układ sprzęgający.
 
 Digital I/O
@@ -586,8 +586,9 @@ constrain()
 
 	**Przykład:**
 
-	sensorValue = constrain(sensorValue, 10, 150);
+::
 
+	sensorValue = constrain(sensorValue, 10, 150);
 	// ogranicza zakres wartości sensora do przedziału [10, 150]
 
 map()
@@ -629,12 +630,11 @@ map()
 
 	**Przykład:**
 
+::
 	x = map(x, 0, 255, 0, 1023);
-
 	// x będzie równy 4x
 
 	x = map(x, 0, 255, 0, -255);
-
 	// x będzie równy -x
 
 

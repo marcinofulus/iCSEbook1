@@ -61,18 +61,18 @@ Informacje wstępne
 Interfejs szeregowy  (UART)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	Do transmisji używane są dwie linie: RX (pin 0) – odbiornik (pin 1) oraz TX - nadajnik. Interfejs jest bardzo prosty w konfiguracji, pozwala na wymianę danych z komputerem, bądź obsługę urządzeń cyfrowych np. modułu Bluetooth lub sterownikia serw. Czasem oznaczany jest jako USART. Literka S oznacza jest dane wysyłane są w sposób synchroniczny, czyli do transmisji oprócz TX RX,﻿ potrzebna jest  jeszcze jedna linia - linia zegarowa (CLK).
+	Do transmisji używane są dwie linie: RX (pin 0) – odbiornik (pin 1) oraz TX - nadajnik. Interfejs jest bardzo prosty w konfiguracji, pozwala na wymianę danych z komputerem, bądź obsługę urządzeń cyfrowych np. modułu Bluetooth lub sterownikia serw. Czasem oznaczany jest jako USART. Literka S oznacza jest dane wysyłane są w sposób synchroniczny, czyli do transmisji oprócz TX RX,﻿ potrzebna jest jeszcze jedna linia - linia zegarowa (CLK).
 
 Przerwania zewnętrzne 
 ^^^^^^^^^^^^^^^^^^^^^
 
-	Mikrokontroler umożliwia wykonywanie procedur obsługi prze­rwań czyli podprogramów, których wykonanie musi odbyć się na­tychmiast po zaistnieniu określonego zdarzenia. Wtedy wykonywanie programu głównego jest przerywane na czas realizacji podprogramu obsługi przerwania. 
+	Mikrokontroler umożliwia wykonywanie procedur obsługi przerwań czyli podprogramów, których wykonanie musi odbyć się natychmiast po zaistnieniu określonego zdarzenia. Wtedy wykonywanie programu głównego jest przerywane na czas realizacji podprogramu obsługi przerwania. 
 
 	Przerwania zewnętrzne umożliwiają natychmiastową obsługę zdarzeń zewnętrznych, sygnalizowanych sygnałem logicznym. Zdarzenia mogą być wyzwalane za pomocą zbocza opadającego, narastającego lub jakiejkolwiek zmiany logicznej. Gdy zdarzenie wystąpi procesor natychmiast przerwie wszystkie dotychczasowe operacje i zacznie wykonywać fragment kodu związany z obsługą przerwania.﻿
 
-	Do obsługi przerwania zewnętrz­nego wykorzystywane są funkcje włączające przerwania attachInter­rupt(interrupt, function, mode) oraz wyłączające przerwanie detachIn­terrupt(interrupt). Parametr interrupt jest numerem portu, od którego jest zgłaszane przerwanie. 
+	Do obsługi przerwania zewnętrznego wykorzystywane są funkcje włączające przerwania attachInterrupt(interrupt, function, mode) oraz wyłączające przerwanie detachInterrupt(interrupt). Parametr interrupt jest numerem portu, od którego jest zgłaszane przerwanie. 
 
-	Parametr function to nazwa funkcji, która będzie wykonywana po zaistnieniu przerwania, a mode określa mo­ment zgłoszenia przerwania. Parametr mode ma następujące wartości: 
+	Parametr function to nazwa funkcji, która będzie wykonywana po zaistnieniu przerwania, a mode określa moment zgłoszenia przerwania. Parametr mode ma następujące wartości: 
 
 	- LOW – wywoływane gdy pin posiada stan niski, 
 
@@ -137,46 +137,34 @@ Opis
 	Dlaczego w przykładzie Blink nie ma opornika? – Pin 13 jako jedyny posiada opornik wbudowany w płytkę Arduino dlatego można do niego podłączyć diodę bezpośrednio i nie ulegnie ona przepaleniu.
 
 
-.. image:: Blink_bb.jpg
+.. image:: figs/Blink_bb.jpg
    :align: center
 
-.. image:: Blink_schem.jpg
+.. image:: figs/Blink_schem.jpg
    :align: center
 
 Kod
 ^^^
 
+::
 
-	// inicjalizacja zmiennych globalnych:
+   // inicjalizacja zmiennych globalnych:
+   int led = 13; 		// Pin 13 ma podłączony LED na płycie.
+   
+   // procedura setup() wykonuje się po resecie:
+   void setup() 	{    
+    pinMode(led, OUTPUT);    // zainicjalizuj pin cyfrowy jako wyjście    
+   }
 
-	int led = 13; 		// Pin 13 ma podłączony LED na płycie.
+   // procedura loop() - nieskończona pętla:
+   
+   void loop(){  
 
-
-	// procedura setup() wykonuje się po resecie:
-
-	void setup() 
-
-	{    
-              
-	pinMode(led, OUTPUT);    // zainicjalizuj pin cyfrowy jako wyjście    
-
-	}
-
-	// procedura loop() - nieskończona pętla:
-
-	void loop()
-
-	{  
-
-	digitalWrite(led, HIGH);   // zapal LED  
-
-	delay(1000);               // czekaj sekundę  
-
-	digitalWrite(led, LOW);    // zgaś LED  
-
-	delay(1000);               // czekaj sekundę
-
-	}
+       digitalWrite(led, HIGH);   // zapal LED  
+       delay(1000);               // czekaj sekundę  
+       digitalWrite(led, LOW);    // zgaś LED  
+       delay(1000);               // czekaj sekundę
+   }
 
 Fade
 ----
@@ -192,53 +180,40 @@ Opis
 	Anodę diody LED podłącza się do cyfrowego wyjścia na pinie 9 na Arduino poprzez 220 ohmowy rezystor, natomiast katodę bezpośrednio do uziemienia.
 
 
-.. image:: fade_bb.jpg
+.. image:: figs/fade_bb.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: fade_schem.jpg
+.. image:: figs/fade_schem.jpg
    :width: 600px
    :height: 500px
    :align: center
 Kod
 ^^^
 
-	int led = 9;           // pin, do którego podłączona jest dioda
+::
 
-	int brightness = 0;    // jak jasna jest dioda
+   int led = 9;           // pin, do którego podłączona jest dioda
+   int brightness = 0;    // jak jasna jest dioda
+   int fadeAmount = 5;    // jak szybko bleknie dioda
 
-	int fadeAmount = 5;    // jak szybko bleknie dioda
+   void setup() 	{ 
+      pinMode(led, OUTPUT);	// zadeklarowanie pinu 9 jako wyjście
+   } 
+   
+   void loop()  { 
+       analogWrite(led, brightness); 		// ustawienie jasności pinu 9
+       brightness = brightness + fadeAmount;	// zmiana jasności diody dla kolejnych iteracji pętli  
+  
+       // odwrócenie kierunku blaknięcia na końcach przedziału:
+  
+       if (brightness == 0 || brightness == 255) {
+           fadeAmount = -fadeAmount; 
+       }
+       delay(30);      // odczekanie 30 ms                      
 
-	void setup()  
-
-	{ 
-
-	pinMode(led, OUTPUT);	// zadeklarowanie pinu 9 jako wyjście
-
-	} 
-
-	void loop()  
-
-	{ 
- 
-	analogWrite(led, brightness); 		// ustawienie jasności pinu 9
-
-	brightness = brightness + fadeAmount;	// zmiana jasności diody dla kolejnych iteracji pętli  
-  	
-	// odwrócenie kierunku blaknięcia na końcach przedziału:
-  
-	if (brightness == 0 || brightness == 255) 
-
-	{
-    
-		fadeAmount = -fadeAmount; 
-  
-	}
-
-	delay(30);      // odczekanie 30 ms                      
-
-	}
+   }
 
 Pushbutton
 ----------
@@ -259,58 +234,37 @@ Opis
 	Po odłączeniu cyfrowego I / O pinu od wszystkiego, LED może migać nieregularnie. To dlatego, że wejście będzie losowo zwracać wartość HIGH lub LOW. Dlatego potrzebny jest w obwodzie rezystor pull-up lub pull-down.
 
 
-.. image:: Button_bb.jpg
+.. image:: figs/Button_bb.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: Button_schem.jpg
+.. image:: figs/Button_schem.jpg
    :align: center
 
 
 Kod
 ^^^
-	//przycisk
+::
 
+	//przycisk
 	//inicjalizacja zmiennych globalnych:
 
 	const int LED = 13; 
-
 	const int BUTTON = 2;
-
 	int val = 0;
 
 	//procedura setup() wykonuje się po resecie:
-
-	void setup()
-
-	{
-  
-	pinMode(LED, OUTPUT);
-  
-	pinMode(BUTTON, INPUT);
-
+	void setup()	{
+      	    pinMode(LED, OUTPUT);
+            pinMode(BUTTON, INPUT);
 	}
 
 	//procedura loop() - nieskończona pętla:
-
-	void loop()
-
-	{
-  
-	val = digitalRead(BUTTON);
-  
-	digitalWrite(LED, val);
-
+	void loop(){
+     	    val = digitalRead(BUTTON);
+            digitalWrite(LED, val);
 	}
-
-
-|
-|
-|
-|
-
-
 
 
 	//przycisk odwrotnie
@@ -358,64 +312,41 @@ Opis
 	Podłączamy trzy przewody do płyty Arduino – dwa, zapewniające dostęp do 5 V i uziemienia, oraz jeden, łączący cyfrowy pin z jednym z ramion przycisku. Te samo ramię uziemia się poprzez 10 kOhm-owy rezystor pull-down. Drugie ramię przycisku podłącza się do zasilania 5 V. 
 
 
-.. image:: Button_bb.jpg
+.. image:: figs/Button_bb.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: Button_schem.jpg
+.. image:: figs/Button_schem.jpg
    :align: center
 
 Kod
 ^^^
 
+::
 
 	//inicjalizacja zmiennych globalnych:
-
 	const int LED = 13;
-
 	const int BUTTON = 7;
-
 	int val = 0;
-
 	int state = 0;
-
 	int old = 0;
-
 	//procedura setup wykonuje się po resecie:
-
-	void setup()
-
-	{
-  
-	pinMode(LED, OUTPUT);
-  
-	pinMode(BUTTON, INPUT);
-
+	void setup()	{
+    	    pinMode(LED, OUTPUT);
+  	    pinMode(BUTTON, INPUT);
 	}
 
 	//procedura loop – nieskończona pętla:
-
-	void loop()
-
-	{
- 
-	val = digitalRead(BUTTON);
+	void loop(){
+  	    val = digitalRead(BUTTON);
   
-  	if ((val == HIGH) && (old == LOW))
- 
-	{
-    
-		state = 1-state;
-    
-		delay(20);
-  
-	}
-  
-	old = val;
-  
-	digitalWrite(LED, state);
-
+            if ((val == HIGH) && (old == LOW)){
+    		state = 1-state;
+    		delay(20);
+            }
+            old = val;
+            digitalWrite(LED, state);
 	}
 
 
@@ -428,12 +359,12 @@ Opis
 
 	Program ilustruje zachowanie sześciu diod, migających losowo.
 
-.. image:: Loop_bb.jpg
+.. image:: figs/Loop_bb.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: Loop_schem.jpg
+.. image:: figs/Loop_schem.jpg
    :width: 600px
    :height: 500px
    :align: center
@@ -442,32 +373,21 @@ Opis
 Kod
 ^^^
 
+::
+
+
 	int time;
-
 	int ledPins[] = {2, 3, 4, 5, 6, 7};
-
 	int ledsNum = 6;
-
 	int raLed;
-
 	int raTime;
-
-	void setup()
-
-	{
- 
-	for(int led = 0; led < ledsNum; led++)
-  
-	{
-    
-		pinMode(ledPins[led], OUTPUT);
-
-	}
+	void setup(){
+            for(int led = 0; led < ledsNum; led++){
+    	        pinMode(ledPins[led], OUTPUT);
+            }
 	}
 
-	void loop()
-
-	{
+	void loop(){
   
 	time = 110;
   
@@ -508,12 +428,12 @@ Opis
 	Program ilustruje działanie sygnalizacji świetlnej dla pojazdów.
 
 
-.. image:: car.jpg
+.. image:: figs/car.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: car_schem.jpg
+.. image:: figs/car_schem.jpg
    :width: 600px
    :height: 500px
    :align: center
@@ -611,12 +531,12 @@ Opis
 	Program ilustruje działanie sygnalizacji świetlnej dla pojazdów oraz pieszych.
 
 
-.. image:: carandpedestrians.jpg
+.. image:: figs/carandpedestrians.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: carandpedestrians_schem.jpg
+.. image:: figs/carandpedestrians_schem.jpg
    :width: 600px
    :height: 500px
    :align: center
@@ -768,12 +688,12 @@ Opis
 
 
 
-.. image:: TrafficLight_bb.jpg
+.. image:: figs/TrafficLight_bb.jpg
    :width: 600px
    :height: 500px
    :align: center
 
-.. image:: TrafficLight_schem.jpg
+.. image:: figs/TrafficLight_schem.jpg
    :width: 600px
    :height: 500px
    :align: center
@@ -981,19 +901,12 @@ Bibliografia
 ============
  
 	1. Banzi Massimo, “Getting started with Arduino”
-
 	2. Durfee W., “Arduino Microcontroller Guide”
-
 	3. Evans Brian, “Arduino programming notebook”
-
 	4. Wiązania Marcin, “Elektronika praktyczna”
-
 	5. http://arduino.cc/
-
 	6. http://botland.com.pl/
-
 	7. http://nettigo.pl/
-
 	8. http://www.o.bzzz.net/
 
 
