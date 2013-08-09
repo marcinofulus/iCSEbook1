@@ -9,15 +9,16 @@ Informacje wstępne
 Co to jest Arduino?
 -------------------
 
-	Arduino jest narzędziem do tworzenia systemów mikroprocesorowych w oparciu o mikrokontrolery AVR. Jest to open-source’owa platforma obliczeniowa oparta na prostej konstrukcji sprzętowej i zintegrowanym środowisku programistycznym (IDE - integrated development environment), przeznaczona dla artystów, projektantów, hobbystów i każdego zainteresowanego tworzeniem interaktywnych obiektów i środowisk.
+	Arduino jest narzędziem do tworzenia systemów mikroprocesorowych w oparciu o mikrokontrolery AVR. Jest to open-source’owa platforma obliczeniowa oparta na prostej konstrukcji sprzętowej i zintegrowanym środowisku programistycznym (IDE - integrated development environment), przeznaczona dla artystów, projektantów, hobbystów i każdego zainteresowanego tworzeniem interaktywnych obiektów i środowisk. Celem projektu jest przygotowywanie narzędzi - ogólnodostępnych, nie wymagających duzych nakładów finansowych, elastycznych i łatwych w użyciu. Częściowo Arduino stanowi również alternatywę dla osób, które nie mają dostępu do bardziej zaawansowanych mikrokontrolerów, wymagającyh bardziej skomplikowanych narzędzi.
 
-	Arduino może zostać wykorzystane do tworzenia modułowych urządzeń z różnymi układami peryferyjnymi, takimi jak przyciski, czujniki, wyświetlacze, interfejsy komunikacyjne przewodowe oraz bezprzewodowe, sterowniki silników itp.  
+	Arduino składa się:
 
-	Specyfikacja sprzętowa jest ogólnodostępna. Pliki CAD są udostępnione na licencji Creative Commons Attribution Share-Alike 2.5. Każdy może je dowolnie modyfikować. Układ można zbudować samodzielnie lub kupić (nie ma jednego oficjalnego producenta), każdy może produkować i sprzedawać zarówno układy zbudowane z oryginalnych planów, jak i własne modyfikacje. 
+	- z mikrokontrolera na płytce z układami pomocniczymi), sensorów i aktuatorów
 
-	Projekty Arduino mogą pracować samodzielnie lub komunikować się z oprogramowaniem zainstalowanym na komputerze. Dostępne jest do tego celu zintegrowane środowisko programistyczne IDE (zbudowanego na Processing: http://www.processing.org/), które można dostosować do własnych potrzeb. Język bazuje na Wiring (http://wiring.org.co/). Kod źródłowy IDE Arduino i biblioteki sprzętowe dla Arduino są udostępniane i rozpowszechniane na licencji GPLv2. 
+	- oraz zintegrowanego środowiska programistycznego (IDE - integrated development environment).
 
-	Od dostępnych na rynku rozwiązań Arduino odróżnia się wyposażeniem w biblioteki do obsługi urządzeń dołączanych do mikrokontrolera, takich jak Wi-Fi, GPS, GSM, MIDI, MP3, Ethernet czy Bluetooth.
+	Arduino może zostać wykorzystane do tworzenia modułowych urządzeń z różnymi układami peryferyjnymi, takimi jak przyciski, czujniki, wyświetlacze, interfejsy komunikacyjne przewodowe oraz bezprzewodowe, sterowniki silników itp. 
+
 
 Dlaczego Arduino?
 -----------------
@@ -33,6 +34,13 @@ Dlaczego Arduino?
 	- System Arduino jest systemem typu open-source, dlatego też może być zmodyfikowany do własnych potrzeb przez doświadczonych programistów,
 
 	- Jest niezwykle prosty dzięki modułowej konstrukcji zestawu ewaluacyjnego (Arduino Uno). Przygotowywana jest również bogata liczba modułów rozszerzających dla zestawu Arduino Uno, nazwanych AVT-Duino, dzięki którym można zbudować bardzo wiele niebanalnych urządzeń. 
+
+
+Otwarty sprzęt i otwarte oprogramowanie
+---------------------------------------
+
+	Specyfikacja sprzętowa jest ogólnodostępna. Pliki CAD są udostępnione na licencji Creative Commons Attribution Share-Alike 2.5 i jest dostępny na stronie projektu Arduino. Dostępne są również dokładne schematy budowy niektóryh wersji układów Arduino. Układ można zbudować samodzielnie lub kupić (nie ma jednego oficjalnego producenta), każdy może produkować i sprzedawać zarówno układy zbudowane z oryginalnych planów, jak i własne modyfikacje. Kod źródłowy IDE Arduino i biblioteki sprzętowe dla Arduino są udostępniane i rozpowszechniane na licencji GPLv2. 
+
 	
 Arduino Uno
 -----------
@@ -53,19 +61,24 @@ Arduino Uno
    :height: 400px
    :align: center
 
+
 Arduino IDE
 ===========
 
 Oprogramowanie Arduino IDE
 --------------------------
 
-	Do programowania w  systemie Arduino jest przeznaczone oprogramowanie Arduino IDE, dostępne na http://arduino.cc/. Może ono pracować pod kontrolą systemów operacyjnych Windows, Linux oraz MAC OS X. Pliki z  przygotowanym programem dla mikrokontrolera są w  Arduino zapisywane z rozszerzeniem .pde. 
+	Projekty Arduino mogą pracować samodzielnie lub poprzez komunikację z oprogramowaniem zainstalowanym na komputerze (dostępnym na stronie http://arduino.cc/), przy wykorzystaniu zintegrowanego środowiska programistycznego IDE (na przykład zbudowanego na Processing: http://www.processing.org/, Flash, MaxMSP), które można dostosować do własnych potrzeb. Głównym założeniem twórców Processinng było stworzenie języka programowania na tyle prostego, aby był on przyjazny dla osób, nie posiadających doświadczenia związanego z programowaniem. Pierwotną grupą docelową byli artyści sztuk wizualnych, jednak z biegiem czasu okazało się, że język ten jest na tyle uniwersalny, że można go wykorzystywać do tworzenia innych aplikacji. 
 
-	Przygotowany program należy poddać weryfikacji i kompilacji. Po wybraniu ikony Verify/Compile kompilator sprawdza składnię programu, a  następnie poddaje ją kompilacji. Po jej prawidłowym zakończeniu program jest gotowy do wysłania do mikrokontrolera. W  przypadku nieprawidłowości w  kodzie, w dolnej części okienka systemu Arduino zostaną wyświetlone znalezione błędy. Przed wysłaniem programu do mikrokontrolera należy skonfigurować typ zestawu Arduino oraz numer portu w komputerze, do którego jest dołączony. 
+	Oprogramowanie Arduino jest darmowe. Aplikacje pisane w Processing są multiplatformowe - mogą być uruchamiane na każdym systemie operacyjnym (Windows, OSX, Linux). IDE posiada edytor tekstu z takimi funkcjami jak podświetlanie składni czy automatyczne tworzenie wcięć w kodzie, oraz pozwala na kompilację i załadowanie programu do płyty Arduino. Zazwyczaj nie ma potrzeby dodatkowej edycji plików Makefile lub uruchamiania programów z listy poleceń. Pliki z przygotowanym programem dla mikrokontrolera są zapisywane z rozszerzeniem .pde. 
 
-	Ikona przycisku Stop zatrzymuje działanie Serial Monitor (monitor komunikacji szeregowej). Jest to pomocne, gdy przesyłane przez interfejs szeregowy RS232 informacje  pojawiają się szybciej, niż można je zaobserwować. 
+	Standardowo IDE Arduino zawiera bibliotekę C/C++ o nazwie Wiring (http://wiring.org.co/) z projektu o tej samej nazwie, dzięki czemu wykonywanie podstawowych operacji wejścia/wyjścia staje się znacznie łatwiejsze. 
 
-	Przycisk Serial Monitor uruchamia okno, w którym pojawiają się informacje wysyłane przez interfejs RS232 mikrokontrolera . Umożliwia ono także wysyłanie danych do mikrokontrolera. W  oknie monitora dostępne są opcje automatycznego przewijania otrzymanych znaków, możliwość wyboru prędkości transmisji czy opcji związanych ze znakami końca linii. Monitor będzie pomocny podczas sprawdzania pracy programu i wyszukiwania w nim błędów. 
+	Przygotowany program należy poddać weryfikacji i kompilacji. Po wybraniu ikony Verify/Compile kompilator sprawdza składnię programu, a następnie poddaje ją kompilacji. Po jej prawidłowym zakończeniu program jest gotowy do wysłania do mikrokontrolera. W przypadku nieprawidłowości w kodzie, w dolnej części okienka systemu Arduino zostaną wyświetlone znalezione błędy. Przed wysłaniem programu do mikrokontrolera należy skonfigurować typ zestawu Arduino oraz numer portu w komputerze, do którego jest dołączony. 
+
+	Ikona przycisku Stop zatrzymuje działanie Serial Monitor (monitor komunikacji szeregowej). Jest to pomocne, gdy przesyłane przez interfejs szeregowy RS232 informacje pojawiają się szybciej, niż można je zaobserwować. 
+
+	Przycisk Serial Monitor uruchamia okno, w którym pojawiają się informacje wysyłane przez interfejs RS232 mikrokontrolera . Umożliwia ono także wysyłanie danych do mikrokontrolera. W oknie monitora dostępne są opcje automatycznego przewijania otrzymanych znaków, możliwość wyboru prędkości transmisji czy opcji związanych ze znakami końca linii. Monitor będzie pomocny podczas sprawdzania pracy programu i wyszukiwania w nim błędów. 
 
 .. image:: Arduino_IDE.jpg
    :width: 400px
@@ -75,7 +88,7 @@ Oprogramowanie Arduino IDE
 Uruchomienie zestawu
 --------------------
 
-	Zestaw może być zasilany z użyciem zewnętrznego zasilacza lub z interfejsu USB. Po połączeniu zestawu Arduino UNO z komputerem za pomocą przewodu USB należy w pierwszej kolejności zainstalować sterowniki USB wirtualnego portu COM. Sterowniki te znajdują się w pakiecie Arduino w katalogu Drivers. Należy jeszcze odpowiednio skonfigurować oprogramowanie Arduino IDE, korzystając z zakładki Tools z menu,a  następnie ustawić numer portu, przez który będzie się odbywała komunikacja. Oprogramowanie Arduino IDE może się już komunikować z zestawem Arduino UNO. Prawidłowa komunikacja będzie sygnalizowana za pomocą diod TX oraz RX. Aby przesłać do zestawu przygotowany program, po jego weryfikacji i  kompilacji wystarczy przycisnąć przycisk Upload. Problemy z  komunikacją może powodować sprzęt lub nieprawidłowa konfiguracja portu komunikacyjnego. Zainstalowany numer portu powinien być zgodny z wybranym portem w oprogramowaniu Arduino IDE. 
+	Zestaw może być zasilany z użyciem zewnętrznego zasilacza lub z interfejsu USB. Po połączeniu zestawu Arduino UNO z komputerem za pomocą przewodu USB należy w pierwszej kolejności zainstalować sterowniki USB wirtualnego portu COM. Sterowniki te znajdują się w pakiecie Arduino w katalogu Drivers. Należy jeszcze odpowiednio skonfigurować oprogramowanie Arduino IDE, korzystając z zakładki Tools z menu,a następnie ustawić numer portu, przez który będzie się odbywała komunikacja. Oprogramowanie Arduino IDE może się już komunikować z zestawem Arduino UNO. Prawidłowa komunikacja będzie sygnalizowana za pomocą diod TX oraz RX. Aby przesłać do zestawu przygotowany program, po jego weryfikacji i kompilacji wystarczy przycisnąć przycisk Upload. Problemy z komunikacją może powodować sprzęt lub nieprawidłowa konfiguracja portu komunikacyjnego. Zainstalowany numer portu powinien być zgodny z wybranym portem w oprogramowaniu Arduino IDE. 
 
 
 Język programowania
@@ -124,6 +137,38 @@ Typy pamięci
 	- pamięć EEPROM - pamięć do stałego przechowywania danych. Zapisane dane nie są wymazywane po wyłączeniu zasilania. Można jej używać do długoterminowego przechowywania informacji.
 
 
+Przydatne programy
+==================
+
+Eagle PCB
+---------
+
+	http://cadsoft.de/
+	
+	Program typu CAD wspierający projektowanie schematów i płytek drukowanych. Jest komercyjny, ale z bezpłatną wersją do użytku domowego, posiadającą ograniczenia:
+
+	- Maksymalny rozmiar płytki 100x80mm
+
+	- Tylko dwie warstwy sygnałowe
+
+	- Edytor schematów może tworzyć tylko jeden arkusz
+
+	Pozwala otwierać, przeglądać i drukować projekty utworzone w pełnej wersji.
+
+Fritzing
+--------
+
+	http://fritzing.org
+	
+	Bardzo prosty w obsłudze program do tworzenia dokumentacji open-source, zaprojektowany do współpracy z Arduino. Nie wymaga od użytkownika znajomości zasad projektowania, bo cały proces opracowania schematu ideowego układu odbywa się poprzez kilka kliknięć myszką. Możliwe są trzy widoki układu:
+
+	- schemat,
+
+	- płytka stykowa (breadboard),
+
+	- płytka drukowana.
+
+
 
 Stałe i funkcje do obsługi mikrokontrolera
 ==========================================
@@ -136,7 +181,7 @@ HIGH
 
 	Podczas odczytu lub zapisu pinu cyfrowego, możliwe jest przyjęcie przez niego tylko dwóch wartości: HIGH i LOW.
 	Znaczenie HIGH różni się nieco w zależności od tego, czy pin jest ustawiony na wejście czy na wyjście. Gdy pin jest skonfigurowany jako wejście z użyciem funkcji pinMode() i odczytywany poprzez digitalRead(), mikrokontroler będzie zwracać wartość HIGH, gdy na pinie obecne będzie napięcie 3V lub więcej.
-	Pin może być również skonfigurowany jako wejście poprzez pinMode(),  a następnie ustawiony na wartość HIGH poprzez digitalWrite(). To ustawi wewnętrzny 20kΩ rezystor podwyższający i ustabilizuje wejście pinu na odczytywanie wartości HIGH, chyba że zewnętrzny obwód wymusi na nim przyjęcie wartości LOW. Ten sam efekt można szybciej uzyskać poprzez użycie argumentu INPUT_PULLUP (wejście podwyższające) w funkcji pinMode().
+	Pin może być również skonfigurowany jako wejście poprzez pinMode(), a następnie ustawiony na wartość HIGH poprzez digitalWrite(). To ustawi wewnętrzny 20kΩ rezystor podwyższający i ustabilizuje wejście pinu na odczytywanie wartości HIGH, chyba że zewnętrzny obwód wymusi na nim przyjęcie wartości LOW. Ten sam efekt można szybciej uzyskać poprzez użycie argumentu INPUT_PULLUP (wejście podwyższające) w funkcji pinMode().
 	Gdy pin jest skonfigurowany jako wyjście poprzez pinMode() i ustawiony na wartość HIGH z digitalWrite(), to ustala się na nim napięcie 5V. W tym stanie może służyć jako źródło prądu i np. zasilać diodę LED podłączoną szeregowo poprzez rezystor do masy, lub do innego pinu skonfigurowanego jako wyjście i ustawionego na wartość LOW.
 
 LOW
@@ -212,7 +257,7 @@ digitalWrite()
 
 	Jeśli pin jest skonfigurowany jako wyjście poprzez pinMode(), jego napięcie będzie ustawione na odpowiednią wartość: 5V lub 3.3V dla HIGH oraz 0V (masa) dla LOW.
 
-	Jeśli pin jest skonfigurowany jako wejście, przypisanie wartości HIGH poprzez digitalWrite() włączy wewnętrzny 20KΩ rezystor podwyższający. Przypisanie wartości LOW - wyłączy. Rezystor podwyższający wciąż zapewnia napięcie wystarczające, aby dioda LED lekko świeciła, więc jeśli diody wydają się działać, ale bardzo słabo, to jest to prawdopodobnie przyczyną ich zachowania. Rozwiązaniem jest ustawienie pinu na wyjście poprzez pinMode(). 
+	Jeśli pin jest skonfigurowany jako wejście, przypisanie wartości HIGH poprzez digitalWrite() włączy wewnętrzny 20kΩ rezystor podwyższający. Przypisanie wartości LOW - wyłączy. Rezystor podwyższający wciąż zapewnia napięcie wystarczające, aby dioda LED lekko świeciła, więc jeśli diody wydają się działać, ale bardzo słabo, to jest to prawdopodobnie przyczyną ich zachowania. Rozwiązaniem jest ustawienie pinu na wyjście poprzez pinMode(). 
 
 
 	**Ostrzeżenie:**
@@ -329,7 +374,7 @@ analogWrite()
 
 	Zapisuje wartość analogową (falę modulacji szerokości impulsów PWM, ang. pulse width modulation wave) do pinu. Może być używana do zapalania diody LED ze zmieniającą się jasnością, albo zasilania silnika elektrycznego z różnymi prędkościami. Po odwołaniu się do funkcji analogWrite(), pin będzie generował stabilny sygnał prostokątny o określonym cyklu pracy, aż do ponownego wywołania funkcji analogWrite() (lub digitalRead(), digitalWrite()) na tym samym pinie. Częstotliwość sygnału PWM wynosi około 490Hz.
 
-	Na płytce Arduino UNO funkcja ta jest dostępna na pinch 3, 5, 6, 9, 10 lub 11,   i oznaczona jako ~<pin>.
+	Na płytce Arduino UNO funkcja ta jest dostępna na pinch 3, 5, 6, 9, 10 lub 11, i oznaczona jako ~<pin>.
 
 	Nie musisz używać funkcji pinMode() aby ustawić pin jako wyjście zanim odwołasz się do funkcji analogWrite().
 
@@ -407,14 +452,14 @@ noTone()
 
 	**Parametry:**
 
-	<pin>:  pin na którym generowanie sygnału prostokątnego ma zostać zakończone.
+	<pin>: pin na którym generowanie sygnału prostokątnego ma zostać zakończone.
 
 shiftIn()
 ^^^^^^^^^
 
 	**Opis:**
 
-	Przesuwa bajt danych po jednym bicie. Zaczyna albo od najbardziej znaczącego bitu (pierwszy po lewej) albo od najmniej znaczącego (pierwszyn po prawej). Dla każdego bitu,  clock pin ustawia się na wartość HIGH, bit jest odczytywany ze strumienia danych, a potem clock pin wraca z powrotem do wartości LOW.
+	Przesuwa bajt danych po jednym bicie. Zaczyna albo od najbardziej znaczącego bitu (pierwszy po lewej) albo od najmniej znaczącego (pierwszyn po prawej). Dla każdego bitu, clock pin ustawia się na wartość HIGH, bit jest odczytywany ze strumienia danych, a potem clock pin wraca z powrotem do wartości LOW.
 
 
 	**Uwaga:**
@@ -468,7 +513,7 @@ pulseIn()
 
 	**Zwraca:**
 
-	Długość impulsu w ms lub 0, jeśli impuls nie zaczął się w  czasie mniejszym niż czas oczekiwania.
+	Długość impulsu w ms lub 0, jeśli impuls nie zaczął się w czasie mniejszym niż czas oczekiwania.
 
 Time
 ----
@@ -566,7 +611,7 @@ constrain()
 
 	**Parametry:**
 
-	<liczba>:  liczba, którą chcemy ograniczyć
+	<liczba>: liczba, którą chcemy ograniczyć
 
 	<ograniczenie_dolne>: liczba, bedąca ogr. dolnym przedziału
 
@@ -579,7 +624,7 @@ constrain()
 
 	a: x < a
 
-	x: a = < x  &  x <= b
+	x: a = < x & x <= b
 
 	b: b < x
 
@@ -611,7 +656,7 @@ map()
 
 	**Parametry:**
 
-	<liczba>:  liczba, którą chcemy przetransformować
+	<liczba>: liczba, którą chcemy przetransformować
 
 	<ograniczenie_dolne_początkowe>: początkowe ograniczenie dolne liczby
 
@@ -825,9 +870,9 @@ Serial
 
 	**Serial – komunikacja seryjna**
 
-	Używana do komunikacji seryjnej płytki Arduino z komputerem lub innym urzadzeniem. Wszystkie płytki Arduino posiadają przynajmniej jeden port komunikacji seryjnej. Do komunikacji wewnętrznej używa pinów 0 (RX) i 1  (TX), natomiast do komunikacji z komputerem – łącza USB. Dlatego podczas jej używania nie mamy możliwości wykorzystywania pinów 0 i 1.
+	Używana do komunikacji seryjnej płytki Arduino z komputerem lub innym urzadzeniem. Wszystkie płytki Arduino posiadają przynajmniej jeden port komunikacji seryjnej. Do komunikacji wewnętrznej używa pinów 0 (RX) i 1 (TX), natomiast do komunikacji z komputerem – łącza USB. Dlatego podczas jej używania nie mamy możliwości wykorzystywania pinów 0 i 1.
 
-	Aby komunikować się z płytką Arduino, możemy używać wbudowanego w jego środowisko monitora seryjnego, którego ikonka widoczna jest w prawym rogu paska narzędzi. Musimy tylko ustalić przepustowość  wyrażoną w bit/s.
+	Aby komunikować się z płytką Arduino, możemy używać wbudowanego w jego środowisko monitora seryjnego, którego ikonka widoczna jest w prawym rogu paska narzędzi. Musimy tylko ustalić przepustowość wyrażoną w bit/s.
 
 Stream
 ^^^^^^^
@@ -844,11 +889,16 @@ Stream
 Bibliografia
 ============
  
-	1. Banzi Massimo, “Getting started with Arduino”
-	2. Durfee W., “Arduino Microcontroller Guide ”
-	3. Evans Brian, “Arduino programming notebook”
-	4. Wiązania Marcin, “Elektronika praktyczna”
-	5. http://arduino.cc/
-	6. http://nettigo.pl/
+	1. Banzi Massimo, “Getting started with Arduino"
+
+	2. Wiązania Marcin, “Elektronika praktyczna”
+
+	3. http://arduino.cc/
+
+	4. http://nettigo.pl/
+
+	5. http://startet-kit.nettigo.pl/
+
+	6. http://www.o.bzzz.net/
 
 

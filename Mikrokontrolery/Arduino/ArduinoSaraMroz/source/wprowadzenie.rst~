@@ -160,7 +160,7 @@ Fritzing
 
 	http://fritzing.org
 	
-	Bardzo prosty w obsłudze program do tworzenia dokumentacji open-source, zaprojektowany do współpracy z Arduino. Nie wymaga od użytkownika znajomości zasad projektowania, bo cały proces opracowania schematu ideowego układu odbywa się poprzez kilka kliknięć myszką. Możliwe są trzy widoki układu:
+	Bardzo prosty w obsłudze program do tworzenia dokumentacji open-source, zaprojektowany do współpracy z arduino. Możliwe są trzy widoki układu:
 
 	- schemat,
 
@@ -889,16 +889,11 @@ Stream
 Bibliografia
 ============
  
-	1. Banzi Massimo, “Getting started with Arduino"
-
-	2. Wiązania Marcin, “Elektronika praktyczna”
-
-	3. http://arduino.cc/
-
-	4. http://nettigo.pl/
-
-	5. http://startet-kit.nettigo.pl/
-
-	6. http://www.o.bzzz.net/
+	1. Banzi Massimo, “Getting started with Arduino”
+	2. Durfee W., “Arduino Microcontroller Guide ”
+	3. Evans Brian, “Arduino programming notebook”
+	4. Wiązania Marcin, “Elektronika praktyczna”
+	5. http://arduino.cc/
+	6. http://nettigo.pl/
 
 

@@ -11,7 +11,7 @@ Podstawowe elementy zestawu Arduino
 
 	Zestaw ma gniazdo USB, za pomocą którego odbywa się komunikacja komputera PC z mikrokontrolerem zestawu. Zestaw może być zasilany z interfejsu USB lub z wykorzystaniem zewnętrznego zasilania. 
 
-	Dostępne są linie DIGITAL (cyfrowe) mikrokontrolera oznaczone od 0 do 13, przy czym linie 0 i  1 są liniami interfejsu RS232. Cyfrowe linie portów mikrokontrolerów mogą być skonfigurowane jako wejścia lub wyjścia.
+	Dostępne są linie DIGITAL (cyfrowe) mikrokontrolera oznaczone od 0 do 13, przy czym linie 0 i 1 są liniami interfejsu RS232. Cyfrowe linie portów mikrokontrolerów mogą być skonfigurowane jako wejścia lub wyjścia.
 
 	Dostępna jest również linia AREF, do której można dołączyć zewnętrzne napięcie odniesienia dla przetwornika A/C mikrokontrolera. 
 
@@ -19,16 +19,16 @@ Podstawowe elementy zestawu Arduino
 
 	Częśc z wejść/wyjść może pełnić funkcje dostarczane przez oprogramowanie Arduino: komunikacja szeregowa (RS), protokół I2C, zewnętrzne przerwania. 
 
-	Do gniazda Power doprowadzono linie masy, napięcia zasilające 5  V i  3,3  V oraz linię zerującą RESET.  Dostępne jest również gniazdo ICSP, do którego można dołączyć zewnętrzny programator. Umożliwia on załadowania do pamięci mikrokontrolera programu Bootloadera lub zaprogramowania go dowolnym innym programem. Ponadto zestaw wyposażono w diodę sygnalizującą zasilanie, diody sygnalizujące transmisję z  wykorzystaniem interfejsu RS232 oraz diodę „L” sygnalizującą stan linii 13 mikrokontrolera. 
+	Do gniazda Power doprowadzono linie masy, napięcia zasilające 5V i 3,3V oraz linię zerującą RESET. Dostępne jest również gniazdo ICSP, do którego można dołączyć zewnętrzny programator. Umożliwia on załadowania do pamięci mikrokontrolera programu Bootloadera lub zaprogramowania go dowolnym innym programem. Ponadto zestaw wyposażono w diodę sygnalizującą zasilanie, diody sygnalizujące transmisję z wykorzystaniem interfejsu RS232 oraz diodę „L” sygnalizującą stan linii 13 mikrokontrolera. 
 
 Obsługa cyfrowych linii 
 -----------------------
 
-	Obsługa linii cyfrowych mikrokontrolera w głównej mierze polega na konfiguracji ich czy mają pracować jako wyjścia lub wejścia z rezystorem podciągającym. W  zestawie Arduino z  mikrokontrolerem ATmega domyślnie linie portów są skonfigurowane jako wejścia z  wyłączonym  rezystorem podciągającym. Czyli domyślnie są to wejścia, prawie nie pobierające prądu  i  bardzo często są wykorzystywane do odczytu sygnałów z czujników. 
+	Obsługa linii cyfrowych mikrokontrolera w głównej mierze polega na konfiguracji ich czy mają pracować jako wyjścia lub wejścia z rezystorem podciągającym. W zestawie Arduino z mikrokontrolerem ATmega domyślnie linie portów są skonfigurowane jako wejścia z wyłączonym rezystorem podciągającym. Czyli domyślnie są to wejścia, prawie nie pobierające prądu i bardzo często są wykorzystywane do odczytu sygnałów z czujników. 
 
-	W mikrokontrolerach ATmega jest możliwość programowego włączenia rezystora podciągającego, który domyślnie na linii wejściowej będzie ustalał stanu wysoki. Rozwiązanie z  rezystorem podciągającym jest bardzo często wykorzystywane podczas odczytu stanu z  przycisków. Jego naciśnięcie, na linii wejściowej ustawi stan niski, a domyślnie po jego puszczeniu będzie panował stan wysoki wymuszany przez rezystor podciągający. 
+	W mikrokontrolerach ATmega jest możliwość programowego włączenia rezystora podciągającego, który domyślnie na linii wejściowej będzie ustalał stanu wysoki. Rozwiązanie z rezystorem podciągającym jest bardzo często wykorzystywane podczas odczytu stanu z przycisków. Jego naciśnięcie, na linii wejściowej ustawi stan niski, a domyślnie po jego puszczeniu będzie panował stan wysoki wymuszany przez rezystor podciągający. 
 
-	Cyfrowe linie mogą również być wyjściami, na których stan może się zmieniać na niski lub wysoki co odpowiada napięciu 0 V i 5 V.Wydajność prądowa wyjść mikrokontrolerów Atmega umożliwia zasilanie dołączonych do nich diod LED. W przypadku większych obciążeń wymagane są dodatkowe wzmacniacze, chociażby w postaci tranzystorów. 
+	Cyfrowe linie mogą również być wyjściami, na których stan może się zmieniać na niski lub wysoki co odpowiada napięciu 0V i 5V. Wydajność prądowa wyjść mikrokontrolerów Atmega umożliwia zasilanie dołączonych do nich diod LED. W przypadku większych obciążeń wymagane są dodatkowe wzmacniacze, chociażby w postaci tranzystorów. 
 
 	Do obsługi cyfrowych linii w Arduino dostępne są trzy funkcje pinMode(), digitalWrite() i digitalRead(). 
 
@@ -48,7 +48,7 @@ Informacje wstępne
 
 	Wyprowadzenia Arduino oprócz standardowej roli wejść/wyjść cyfrowych posiadają także pewne funkcje specjalne. Są to między innymi: wyprowadzenia sprzętowych interfejsów komunikacyjnych, wyjścia analogowe czy wyjścia timerów (liczników). Dla każdego z nich Arduino posiada bibliotekę, która sprawia, że korzystanie z nich staje się niezwykle proste.
 
-	- Serial: 0 (RX) i 1 (TX).  Używane do odbioru (RX) i nadawania (TX) TTL [Transistor-transistor logic – klasa cyfrowych układów scalonych] danych seryjnych. Te piny są podłączone do odpowiednich styków na  ATmega8U2 USB-to-TTL Serial chip.
+	- Serial: 0 (RX) i 1 (TX). Używane do odbioru (RX) i nadawania (TX) TTL [Transistor-transistor logic – klasa cyfrowych układów scalonych] danych seryjnych. Te piny są podłączone do odpowiednich styków na ATmega8U2 USB-to-TTL Serial chip.
 
 	- External Interrupts: 2 i 3. Te piny mogą być skonfigurowane do wyzwalania przerwania o niskiej wartości, wzrastania i opadania wykresu sygnału cyfrowego, lub zmiany wartości (szczegóły: funkcja attachInterrupt()).
 
@@ -89,7 +89,7 @@ Obsługa generatora PWM
 
 	6 z 14 pinów Arduino Uno (3, 5, 6, 9, 10 i 11), służących jako wyjście lub wejścia, może działać w trybie PWM output, czyli można sterować mocą przekazywaną (doskonale nadaje się do sterowania jasnością świecenia diody). 
 
-	Sygnał PWM (Pulse-width modulation, czyli modulacja szerokości impulsu)  jest to sygnał prostokątny o  modyfikowanym wypełnieniu. Z  wykorzystaniem sygnału PWM i  jego późniejszym uśrednieniu z  wykorzystaniem prostego filtra, składającego się z  rezystora i kondensatora można uzyskać prosty przetwornik cyfrowo-analogowy, na wyjściu którego wartość analogowa (napięcie) będzie zależne od wypełnienia generowanego sygnału PWM. Częstotliwość sygnału PWM w Arduino to około 500 Hz. 
+	Sygnał PWM (Pulse-width modulation, czyli modulacja szerokości impulsu) jest to sygnał prostokątny o modyfikowanym wypełnieniu. Z wykorzystaniem sygnału PWM i jego późniejszym uśrednieniu z wykorzystaniem prostego filtra, składającego się z rezystora i kondensatora można uzyskać prosty przetwornik cyfrowo-analogowy, na wyjściu którego wartość analogowa (napięcie) będzie zależne od wypełnienia generowanego sygnału PWM. Częstotliwość sygnału PWM w Arduino to około 500 Hz. 
 
 	Do generowania sygnału PWM dostępna jest funkcja analogWrite(<pin>, <value>) gdzie pierwszym parametrem jest numer linii cyfrowej PWM, a value wartością wypełnienia generowanego sygnału PWM w zakresie od 0 do 255. 
 
@@ -99,9 +99,9 @@ Obsługa generatora PWM
 
 	- Natomiast wartość 0 daje wypełnienie 0% i napięcie 0 V. 
 
-	Z wykorzystaniem sygnału PWM można modyfikować np. jasność dołączonej diody LED czy prędkości silnika. Sygnał PWM dla mikrokontrolera ATmega168, który zamontowany jest w  Arduino UNO może być generowany na pinach 3, 5, 6, 9, 10 i 11. Na przykład funkcja: 
+	Z wykorzystaniem sygnału PWM można modyfikować np. jasność dołączonej diody LED czy prędkości silnika. Sygnał PWM dla mikrokontrolera ATmega168, który zamontowany jest w Arduino UNO może być generowany na pinach 3, 5, 6, 9, 10 i 11. Na przykład funkcja: 
 
-	analogWrite(5, 127); //Sygnał PWM o wypełnieniu 127 generuje sygnał PWM na pinie 5 o  wypełnieniu 50 %. 
+	analogWrite(5, 127); //Sygnał PWM o wypełnieniu 127 generuje sygnał PWM na pinie 5 o wypełnieniu 50 %. 
 
 	Nie trzeba również ustawiać linii PWM jako wyjścia przez wywołaniem funkcji analogWrite(), ale dla czytelności programu zalecane jest ustawienie linii PWM jako wyjście z wykorzystaniem funkcji pinMode(). 
 
@@ -149,16 +149,16 @@ Kod
 
 	// inicjalizacja zmiennych globalnych:
 
-	int led = 13; 		// Pin 13 ma podłączony LED na płycie.
+	int led = 13;			// Pin 13 ma podłączony LED na płycie.
 
 
 	// procedura setup() wykonuje się po resecie:
 
 	void setup() 
 
-	{    
-              
-	pinMode(led, OUTPUT);    // zainicjalizuj pin cyfrowy jako wyjście    
+	{
+ 
+	pinMode(led, OUTPUT);		// zainicjalizuj pin cyfrowy jako wyjście
 
 	}
 
@@ -166,15 +166,15 @@ Kod
 
 	void loop()
 
-	{  
+	{ 
 
-	digitalWrite(led, HIGH);   // zapal LED  
+	digitalWrite(led, HIGH);	// zapal LED 
 
-	delay(1000);               // czekaj sekundę  
+	delay(1000);			// czekaj sekundę 
 
-	digitalWrite(led, LOW);    // zgaś LED  
+	digitalWrite(led, LOW);		// zgaś LED 
 
-	delay(1000);               // czekaj sekundę
+	delay(1000); 			// czekaj sekundę
 
 	}
 
@@ -204,17 +204,17 @@ Opis
 Kod
 ^^^
 
-	int led = 9;           // pin, do którego podłączona jest dioda
+	int led = 9;           			// pin, do którego podłączona jest dioda
 
-	int brightness = 0;    // jak jasna jest dioda
+	int brightness = 0;    			// jak jasna jest dioda
 
-	int fadeAmount = 5;    // jak szybko bleknie dioda
+	int fadeAmount = 5;    			// jak szybko bleknie dioda
 
 	void setup()  
 
 	{ 
 
-	pinMode(led, OUTPUT);	// zadeklarowanie pinu 9 jako wyjście
+	pinMode(led, OUTPUT);			// zadeklarowanie pinu 9 jako wyjście
 
 	} 
 
@@ -236,7 +236,7 @@ Kod
   
 	}
 
-	delay(30);      // odczekanie 30 ms                      
+	delay(30);     				 // odczekanie 30 ms                      
 
 	}
 
@@ -285,9 +285,9 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	pinMode(LED, OUTPUT);
-  
+ 
 	pinMode(BUTTON, INPUT);
 
 	}
@@ -297,9 +297,9 @@ Kod
 	void loop()
 
 	{
-  
+ 
 	val = digitalRead(BUTTON);
-  
+ 
 	digitalWrite(LED, val);
 
 	}
@@ -328,9 +328,9 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	pinMode(LED, OUTPUT);
-  
+ 
 	pinMode(BUTTON, INPUT);
 
 	}
@@ -340,9 +340,9 @@ Kod
 	void loop()
 	
 	{
-  
+ 
 	val = 1 - digitalRead(BUTTON);
-  
+ 
 	digitalWrite(LED, val);
 
 	}
@@ -387,9 +387,9 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	pinMode(LED, OUTPUT);
-  
+ 
 	pinMode(BUTTON, INPUT);
 
 	}
@@ -401,19 +401,19 @@ Kod
 	{
  
 	val = digitalRead(BUTTON);
-  
-  	if ((val == HIGH) && (old == LOW))
+ 
+ 	if ((val == HIGH) && (old == LOW))
  
 	{
-    
+  
 		state = 1-state;
-    
+  
 		delay(20);
-  
+ 
 	}
-  
+ 
 	old = val;
-  
+ 
 	digitalWrite(LED, state);
 
 	}
@@ -457,9 +457,9 @@ Kod
 	{
  
 	for(int led = 0; led < ledsNum; led++)
-  
+ 
 	{
-    
+  
 		pinMode(ledPins[led], OUTPUT);
 
 	}
@@ -468,33 +468,33 @@ Kod
 	void loop()
 
 	{
-  
+ 
 	time = 110;
-  
+ 
 	raTime = rand() % ledsNum;
-  
+ 
 	if (raTime == 1)
-  
+ 
 	{
-    
+  
 		time += 100;
-  
+ 
 	}
-  
+ 
 	if (raTime == 2)
-  	
+ 	
 	{
-    
+  
 		time -= 100;
-  	
+ 	
 	}
-  
+ 
 	raLed = rand() % ledsNum;
-  
+ 
 	digitalWrite(ledPins[raLed], HIGH);
-  
+ 
 	delay(time);
-  
+ 
 	digitalWrite(ledPins[raLed], LOW);
 
 	}
@@ -541,13 +541,13 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	for(int pin = 0; pin < num; pin++)
-  
+ 
 	{
-    
-		pinMode(ledPins[pin], OUTPUT);
   
+		pinMode(ledPins[pin], OUTPUT);
+ 
 	}
 
 	}
@@ -558,45 +558,45 @@ Kod
 
 	{
 
-  
+ 
 	digitalWrite(green, HIGH);
-  
+ 
 	delay(4.5 * time);
  
 	for(int blink = 0; blink < 2; blink++)
-  
+ 
 	{
-    
+  
 		digitalWrite(green, LOW);
-    
+  
 		delay(300);
-    
+  
 		digitalWrite(green, HIGH);
-    
+  
 		delay(300);
-  	
+ 	
 	}
-  
+ 
 	digitalWrite(green, LOW);
-  
+ 
 	delay(300);
-      
-  	digitalWrite(yellow, HIGH);
-  
+   
+ 	digitalWrite(yellow, HIGH);
+ 
 	delay(time);
-  
+ 
 	digitalWrite(yellow, LOW);
-  
-  	digitalWrite(red, HIGH);
-  
+ 
+ 	digitalWrite(red, HIGH);
+ 
 	delay(8.25 * time);
-  
+ 
 	digitalWrite(yellow, HIGH);
-  
+ 
 	delay(0.75 * time);
-  
+ 
 	digitalWrite(red, LOW);
-  
+ 
 	digitalWrite(yellow, LOW);
 
 	}
@@ -629,7 +629,7 @@ Kod
 	int traffic_lights[] = {8, 9, 10, 11, 12};
 
 	int num = 5;
-  
+ 
 	// pedestrians:
 
 	int P_red = traffic_lights[0];
@@ -648,112 +648,112 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	// pins output activation:
-  
+ 
 	for(int i = 0; i < num; i++)
-  
+ 
 	{
-    
+
 		pinMode(traffic_lights[i], OUTPUT);
-  	}
+ 	}
 
 	}
 
 	void loop()
 	
 	{
-  
+ 
 	// vehicle green:
-  
+ 
 	digitalWrite(V_green, HIGH);
-    
+
 	// pedestrian red:
-  
+ 
 	digitalWrite(P_red, HIGH);
-  
+ 
 	delay(7900);
-  
+ 
 	// vehicle green blinking:
-  
+ 
 	for(int i = 0; i < 3; i++)
-  
+ 
 	{
-    
+
 		digitalWrite(V_green, LOW);
-    
+
 		delay(300);
-    
+
 		digitalWrite(V_green, HIGH);
-    
+
 		delay(300);
  
 	}
-  
+ 
 	digitalWrite(V_green, LOW);
-  
+ 
 	delay(300);
-  
+ 
 	// vehicle yellow:
-  
+ 
 	digitalWrite(V_yellow, HIGH);
-  
+ 
 	delay(2000);
-  
+ 
 	digitalWrite(V_yellow, LOW);
-  
+ 
 	// vehicle red:
-  
+ 
 	digitalWrite(V_red, HIGH);
-  
+ 
 	delay(2000);
-    
+
 	// pedestrian red / green:
-  
+ 
 	digitalWrite(P_red, LOW);
-  
+ 
 	digitalWrite(P_green, HIGH);
-  
+ 
 	delay(7900);
-    
+
 	// pedestrian green blinking:
-  
+ 
 	for(int i = 0; i < 3; i++)
-  
+ 
 	{
-    
+
 		digitalWrite(P_green, LOW);
-    
+
 		delay(300);
-    
+
 		digitalWrite(P_green, HIGH);
-    
+
 		delay(300);
-  
+ 
 	}
-  
+ 
 	digitalWrite(P_green, LOW);
-  
+ 
 	delay(300);
-    
+
 	// pedestrian red:
-  
+ 
 	digitalWrite(P_red, HIGH);
-  
+ 
 	delay(2000);
-  
+ 
 	// vehicle red with yellow:
-  
+ 
 	digitalWrite(V_yellow, HIGH);
-  
+ 
 	delay(2000);
-  
+ 
 	digitalWrite(V_yellow, LOW);
-  
+ 
 	digitalWrite(V_red, LOW);
-    
+
 	// pedestrian red:
-  
+ 
 	digitalWrite(P_red, LOW);
 
 	}
@@ -782,12 +782,12 @@ Kod
 ^^^
 
 	/* Program simulates one side of a simple crossroad
-   
+
 	with traffic lights for vehicles and pedestrians. */
 
 	// pins:
 
-	const int traffic_lights[] = {2, 3, 5, 6, 7};
+	const int traffic_lights[] = {9, 8, 10, 11, 12};
 
 	int num = 5;
 
@@ -807,9 +807,7 @@ Kod
 
 	//button
 
-	const int button = 8;
-
-	const int Sun = 9;
+	const int button = 2;
 
 	int current_value = HIGH;
 
@@ -820,25 +818,23 @@ Kod
 	void setup()
 
 	{
-  
+ 
 	// pins output activation:
-  
+ 
 	for(int i = 0; i < num; i++)
-  
+ 
 	{
-    
+
 		pinMode(traffic_lights[i], OUTPUT);
-  
+ 
 	}
-  
+ 
 	// button
-  
+ 
 	pinMode(button, INPUT);
-  
+ 
 	digitalWrite(button, HIGH);
-  
-	pinMode(Sun, OUTPUT);
-  
+ 
 	Serial.begin(9600);
 
 	}
@@ -846,154 +842,140 @@ Kod
 	void loop()
 
 	{
-  
+ 
 	// button
-  
-  	current_value = digitalRead(button);
-  
+ 
+ 	current_value = digitalRead(button);
+ 
 	if(current_value == LOW && previous_value == HIGH)
-  
+ 
 	{
-    
-		state = (state+1)%3;
-    
+
+		state = 1 - state;
+
 		delay(20);
-  
+ 
 	}
-  
-  	previous_value = current_value;
-  
-	digitalWrite(Sun, state);
-  
-  	if(state == 1)
-  
+ 
+ 	previous_value = current_value;
+ 
+ 	// day mode
+ 
+	if(state == 1)
+ 
 	{
-    
-		digitalWrite(V_green, HIGH);
-    
-		delay(500);
-    
-		digitalWrite(V_green, LOW);
-    
-		delay(500);
-  	
-	}
-  
-  	// day mode
-  
-	if(state == 2)
-  
-	{
-    
+
 		// vehicle green:
-    
+
 		digitalWrite(V_green, HIGH);
-      
+
 		// pedestrian red:
-    
+
 		digitalWrite(P_red, HIGH);
-    
+
 		delay(7900);
-    
+
 		// vehicle green blinking:	
-    
+
 		for(int i = 0; i < 3; i++)
-   
+
  		{
-      
+
 			digitalWrite(V_green, LOW);
-      
+
 			delay(300);
-      
+
 			digitalWrite(V_green, HIGH);
-      
+
 			delay(300);
-    
+
 		}
-    
+
 		digitalWrite(V_green, LOW);
-    
+
 		delay(300);
-    
+
 		// vehicle yellow:
-    
+
 		digitalWrite(V_yellow, HIGH);
-    
+
 		delay(2000);
-    
+
 		digitalWrite(V_yellow, LOW);
-    
+
 		// vehicle red:
-    
+
 		digitalWrite(V_red, HIGH);
-    
+
 		delay(2000);
-      
+
 		// pedestrian red / green:
-    
+
 		digitalWrite(P_red, LOW);
-    
+
 		digitalWrite(P_green, HIGH);
-    
+
 		delay(7900);
-      
+
 		// pedestrian green blinking:
-    
+
 		for(int i = 0; i < 3; i++)
-    
+
 		{
-      
+
 			digitalWrite(P_green, LOW);
-      
+
 			delay(300);
-      
+
 			digitalWrite(P_green, HIGH);
-      
+
 			delay(300);
-    
+
 		}
-    
+
 		digitalWrite(P_green, LOW);
-    
+
 		delay(300);
-      
+
 		// pedestrian red:
-    	
+
 		digitalWrite(P_red, HIGH);
-    
+
 		delay(2000);
-    
+
 		// vehicle red with yellow:
-    
+
 		digitalWrite(V_yellow, HIGH);
-    
+
 		delay(2000);
-    
+
 		digitalWrite(V_yellow, LOW);
-    
+
 		digitalWrite(V_red, LOW);
-      
+
 		// pedestrian red:
-    
+
 		digitalWrite(P_red, LOW);
-  
+ 
 	}
-  
-  	// night mode
-  
+ 
+ 	// night mode
+ 
 	if(state == 0)
-  
+ 
 	{
-    
+
 		digitalWrite(V_yellow, HIGH);
-    
+
 		delay(500);
-    
+
 		digitalWrite(V_yellow, LOW);
-    
+
 		delay(500);
-  	}
+ 	}
+
 	}
+
 
 
 Bibliografia
@@ -1001,18 +983,16 @@ Bibliografia
  
 	1. Banzi Massimo, “Getting started with Arduino”
 
-	2. Durfee W., “Arduino Microcontroller Guide”
+	2. Wiązania Marcin, “Elektronika praktyczna”
 
-	3. Evans Brian, “Arduino programming notebook”
+	3. http://arduino.cc/
 
-	4. Wiązania Marcin, “Elektronika praktyczna”
+	4. http://botland.com.pl/
 
-	5. http://arduino.cc/
+	5. http://nettigo.pl/
+	
+	6. http://startet-kit.nettigo.pl/
 
-	6. http://botland.com.pl/
-
-	7. http://nettigo.pl/
-
-	8. http://www.o.bzzz.net/
+	7. http://www.o.bzzz.net/
 
 
