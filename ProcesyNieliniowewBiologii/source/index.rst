@@ -16,15 +16,15 @@ Jerzy Łuczka, Marcin Kostur
 Modele opisujące rzeczywiste procesy biologiczne z reguły nie
 dostarczają badaczom w prezencie swoich rozwiązań. Nieliniowość prawie
 w każdym przypadku prowadzi do istotnych trudności i metody
-analityczne dają wynik tylko dla szczególnych przypadków. Metody
-numeryczne często okazują się jedynym narzędziem umożliwiających
-poznanie calego zjawiska.
+analityczne dają wynik tylko dla szczególnych przypadków. Często
+jedynym narzędziem umożliwiającym poznanie calego zjawiska jest
+podejście numeryczne.
 
 Ten podręcznik w odróżnieniu od klasycznych pozycji, proponuje
 podejście do zagadnień modelowania z efektywnym zastosowaniem metod
-komputerowych jako jednego z podstawowych narzędzi. Wszędzie tam gdzie
-jest to możliwe, umiejętnie zaprogramowany komputer, będziee wykonywał
-żmudną pracę i pomagał w zrozumieniu zjawiska. Poza metodami
+komputerowych jako jednego z podstawowych narzędzi. Wszędzie tam,
+gdzie jest to możliwe, umiejętnie zaprogramowany komputer, będzie
+wykonywał żmudną pracę i pomagał w zrozumieniu zjawiska. Poza metodami
 numerycznymi, komputer zostanie intensywnie wykorzystywany do
 wizualizacji jak i zostaną użyte metody algebry komputerowej do
 przekształcania wyrażeń analitycznych.
