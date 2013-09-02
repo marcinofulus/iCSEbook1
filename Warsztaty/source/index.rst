@@ -30,7 +30,7 @@ Tematyka warsztatów:
    Warsztat 2<iCSE_2>
    Rzut ukośny numeryczna analiza równań ruchu (rozszerzona fizyka) <rzut_ukosny>
    Akcelerometr <akcelerometr>
-
+   Teoria Chaosu <teoria_chaosu>
 
 
 
