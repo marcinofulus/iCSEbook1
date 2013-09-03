@@ -36,15 +36,17 @@ metereologii.
       :align: right
    
    Kowekcja to proces przekazywania ciepła związany z makroskopowym
-   ruchem materii w gazie. W atmosferze, powietrze jest nagrzewane
+   ruchem materii w plynie. W atmosferze, powietrze jest nagrzewane
    przez słońce przy powierzchni ziemi i jako lżejsze unosi się do
    góry, gdzie z kolei się oziębia i znowu opada. Taki opis jest
-   oczywiście dużym uproszczeniem i jedyną ścisłą metodą badania
-   takich zjawisk jest rozwiązywanie odpowiednich równań transportu, w
-   tym równania Naviera-Stokesa. Lorenz w swojej pracy analizował
-   numerycznie radykalnie uproszczony przypadek konwekcji - tak
+   oczywiście jedynie jakościowym wnioskiem z obserwacji. Jedyną
+   ścisłą metodą badania takich zjawisk jest rozwiązywanie
+   odpowiednich równań transportu, w tym równania
+   Naviera-Stokesa. Lorenz w swojej pracy analizował numerycznie
+   radykalnie uproszczony przypadek konwekcji, do tego stopnia
    uproszczony, że nie miał żadnego zastosowania w modelowaniu realnej
-   atmosfery, chociaż zapoczątkował rewolucję.
+   atmosfery, ale zapoczątkował rewolucję w i nową dyscyplinę -
+   teorię chaosu.
    
 
 Radykalne uproszczenie było konieczne. Nie zapominajmy, że w owych
@@ -71,11 +73,12 @@ niego układ był opisywany przez trzy zmienne, które podlegały trzem
 równaniom różniczkowym. Mając do dyspozycji komputer Lorenz rozpoczął
 badnie wyprowadzonych równań. Okazało się, że pomimo prostoty
 rozwiązania w pewnych przypadkach były wysoce nieregularne i
-zachowanie układu czułe na warunki początkowe. W meteorologii, już w tych
-latach panował pogląd o wrażliwości pogody na niewielkie zaburzenie
-stanu początkowego, jednak przypisywano to z reguły złożoności
-układu. Zaskakującym wynikiem otrzymanym przez Lorenza było to, że
-własność ta tkwi już  bardzo prostym, tzw. niskowymiarowym,  modelu.
+zachowanie układu czułe na warunki początkowe. W meteorologii, już w
+tych latach panował pogląd o wrażliwości pogody na niewielkie
+zaburzenie stanu początkowego, jednak przypisywano tą cechę efektowi
+złożoności układu. Zaskakującym wynikiem otrzymanym przez Lorenza było
+to, że własność ta tkwi już bardzo prostym, tzw. niskowymiarowym,
+modelu.
 
 
 W poniższym rozdziale zachęcamy czytelnika do przeniesienia się w lata
@@ -133,8 +136,8 @@ Układ Lorenza
 
 
 
-Równania, które Edward Lorenz zastosował do badania konwekcji mają
-następującą postać:
+Równania, które wyprowadził Edward Lorenz w 1963 roku, jako
+uproszczone konwekcji mają następującą postać:
 
    .. math ::
 
@@ -143,23 +146,24 @@ następującą postać:
        \frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
 
 
-Układ taki można rozwiązać stosując metody numeryczne dla równań
-różniczkowych (patrz box). Mając do dyspozycji pakiet Sage możemy
-spróbować wykonań następujący kod:
-
+Od tego czasu ten układ równań jest zwany modelem Lorenza i stał się
+archetypem chaotycznego układu dynamicznego. Taki układ równań można
+rozwiązać stosując metody numeryczne dla równań różniczkowych (patrz
+box). Mając do dyspozycji pakiet Sage napisanie programu nie jest
+specjalnie trudne:
 
 
 .. sagecellserver::
 
-   x,y,z = var('x,y,z')
+   var('x,y,z')
    sigma = 10
    rho = 28
    beta = 8/3
    lorenz = [sigma*(y-x),x*(rho-z)-y,x*y-beta*z]
-   times = srange(0,4200,0.015)
+   times = srange(0,200,0.01)
    ics = [0,1,1]
    sol = desolve_odeint(lorenz,ics,times,[x,y,z])
-   line3d( sol[:1000], viewer='tachyon',thickness=2,color='green')
+   line3d( sol[-3000:], viewer='tachyon',thickness=2,color='green')
 
 
 Kluczowym elementem jest wykorzystanie funkcji
@@ -171,7 +175,16 @@ początkowy, punkty czasowe w których ma być obliczone rozwiązanie oraz
 lista zmiennych symbolicznych w takiej kolejności w jakiej zostały
 podane równania. Po wykonianiu obliczeń funkcja ta zwraca tablicę
 zawierającą wartości wszystkich zmiennych czyli :math:`x,y,z` w
-ządanych momentach czasu.
+żądanych momentach czasu. Tablica ta jest obiektem typu
+:code:`numpy.ndarray` więc możemy sprawdzić jaki jest rozmiar danych
+wyjściowych poleceniem:
+
+.. code-block:: python
+
+    print sol.shape
+
+Widzimy, że zostaną zwrócone dwie liczby, które odpowiadają zakresom
+zmienności wskaźników tabeli :code:`sol`.
 
 Procedura :code:`line3d` rysuje wykres krzywej w przestrzeni
 :math:`x,y,z`. Jeżeli zmienimy opcje :code:`viewer='tachyon'` na
@@ -180,20 +193,26 @@ wymaga to jednak wtyczki Java.
 
 Otrzymany wykres przedstawia kształt atraktora Lorenza - słynnego
 motyla. Co ciekawego jest w tym wykresie? Po pierwsze w oczy rzuca się
-nieregularność. Jeśli by narysować wykres tylko jednej współrzędnej od
-czasu, .... ale  po co gdybać, narysujmy!
+nieregularność, którą jeszcze lepiej widać jeśli by narysować wykres
+wybranej współrzędnej od czasu, .... ale po co gdybać, narysujmy!
 
 
 .. sagecellserver::
 
-   line( zip(times,sol[-2000:,0]) )
+   c=['red','blue','black']
+   sum([line( zip(times,sol[-2000:,i],color=c[i]) ) for i in range(3)])
+
+
+Układ Lorenza nie dla każdego zestawu parametrów posiada własności
+chaotyczne. Weźmy na przykład dowolne :math:`\rho<24`. Łatwo się
+przekonać wyonując powyższy kod, że rozwiązanie w takim przypadku
+będzie regularne i będzie dążyło do skończonej wartości.
 
 
 Kolejną cechą układu jest czułość na warunki początkowe. Rozwiążmy
 układ dla dwóch zestawów warunków pczątkowych, różniących się o bardzo
-małą wartość.
-
-
+małą wartość (ciekawostką jest fakt, że Lorenz to sprostrzeżenie
+opubikował dopiero sześć lat po pierwszym artykule).
 
 
 .. sagecellserver::
@@ -205,19 +224,82 @@ małą wartość.
    lorenz = [sigma*(y-x),x*(rho-z)-y,x*y-beta*z]
    times = srange(0,31,0.01)
    ics = [0,1,0]
-   sol = desolve_odeint(lorenz,ics,times,[x,y,z])# ,rtol=1e-13,atol=1e-14)
-
-   ics2 = [0,1.00001,0]
-   sol2 = desolve_odeint(lorenz,ics2,times,[x,y,z])# ,rtol=1e-13,atol=1e-14)
-
-   print "calc ok, plotting...."
-
+   sol = desolve_odeint(lorenz,ics,times,[x,y,z])
+   ics2 = [0,1.01,0]
+   sol2 = desolve_odeint(lorenz,ics2,times,[x,y,z])
    line( zip(times,sol[:,0]) )+line( zip(times,sol2[:,0]),color='red' )
 
 
-Spróbujmy z trajektorii układu wyłowić lokalne maksima. Zobaczmy jaką
-wartość przyjmują kolejne wartości parametru :math:`z` w maksimach.
+W powyższym kodzie mozna próbowac zmiejszać różnicę między warunkami
+poczatkowymi np. dla drugiego układu kładąc :math:`y(0)=1.001` lub
+:math:`y(0)=1.0001` a następnie obserwować w jakim momencie
+rozwiązania zaczynają się różnić od siebie. Warto też spróbować
+zbadań jak wyglądają trajektorie układu dla parametrów przy których
+nie jest on chaotyczny.
 
+Edward Lorenz analizując zachowanie tego układu w 1963 roku, dokonał
+jeszcze jednego ważnego kroku - powiązał on dynamikę ciągłego
+trójwymiarowego układu dynamicznego z zachowaniem tzw. dyskretnego
+układu dynamicznego. Przeanalizujmy po kolei kroki, które wykonał
+Lorenz.  Mając trajektorię układu, dla zmiennej :math:`z(t)` obliczył
+on wartości :math:`z_i` wszystkich lokalnych maksimów. Następnie na
+wykresie naniósł ich kolejne wartości tzn. narysował pary
+:math:`(z_i,z_{i+1})`. Okazało się, że dla parametrów w których układ
+jest chaotyczny pary te układają się na pewnej krzywej :math:`F`
+takiej, że :math:`z_{i+1}=F(z_i)`. Można by teraz zapomnieć skąd
+wzięły się wartości :math:`z_i` i dysponując jedynie krzywą :math:`F`,
+z jednego stanu otrzymuwac kolejny. Taki układ jest jednowymiarowy,
+gdyż stan określony jest przez jedną liczbę :math:`z_i`, ale ewolucja
+w czasie jest dokonywana w sposób skokowy, zapomocą przekształcenia
+:math:`z_{i+1}=F(z_i)`. Taki układ dynamiczny ze skokową ewolucją w
+czasie nazywa się właśnie dyskretnym układem dynamicznym. Układy te
+stanowią są znaną już dziś z zaskakująco skomplikowanego zachowiania,
+pomimo swojej prostoty. Zanim przejdziemy do analizy układów
+dyskretnych spróbujmy praktycznie odtworzyć komputerowy wynik Edwarda
+Lorenza.
+
+Mając trajektorię układu Lorenza musimy się zastanowić jak z niej
+wyłowić lokalne maksima? Oczywiście ponieważ rozwiązanie układu
+Lorenza jest ciągłą funkcją czasu, powinniśmy zastosowować metody
+badania przebiegu zmienności funkcji, czyli policzyć pierwszą
+pochodną, znaleźć jej wszstkie zera na zadanym odcinku i sprawdzić czy
+tak uzyskane ekstrema są maksimami. Niestety rozwiązanie układu
+Lorenza nie jest dane wzorem analitycznym. I tu jest pies pogrzebany,
+bo metodologia postępowania znana ze szkoły średniej wymaga
+algebraicznego obliczenia pochodnej. Dlatego zrobimy
+inaczej. Prodedura :code:`desolve_odeint` daje nam tabelę z
+wynikami. Zakładająć ze odstępy pomiędzy kolejnymi punktami czasu w
+tej tabeli są odpowiednio małe, możemy policzyć lokakne maksima dla
+ciągu, zauważając, że punkt :math:`z_i` jest lokalnym maksimum jeżeli
+jego otoczenie jest od niego mniejsze czyli zachodzi
+:math:`z_{i-1}<z_{i}` i :math:`z_{i-1}<z_i`. Oczywiście nie będą to
+"prawdziwe" maksima funkcji :math:`z(t)` a jedynie ich przybliżenie.
+Jedną z możliwości jest napisanie pętli (zachęcamy do zrobienia tego
+własnoręcznie), która dla każdego punktu z tabeli sprawdziła by czy
+zachodzą powyższe warunki i jeśli tak, to zapisałaby punkt na listę
+maksimów. Mając jednak do dyspozycji "oręż" w postaci biblioteki numpy
+możemy zrobić to w jednej lini, oznaczając przez :code:`Z` tablicę z
+wartościami trzeciej zmiennej układu Lorenza mamy:
+
+
+.. code-block:: python
+
+   Zp = np.diff(Z)
+   idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
+   Zm = Z[idx+1]
+
+
+Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
+
+.. sagecellserver::
+
+   import numpy as np 
+   t = np.linspace(0,50,550)
+   Z = np.sin(t)
+   Zp = np.diff(Z)
+   idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
+   Zm = Z[idx+1]
+   point(zip(t[idx+1][::2],Zm[::2]),color='red') + line(zip(t,Z))
 
 .. sagecellserver::
 
@@ -229,8 +311,7 @@ wartość przyjmują kolejne wartości parametru :math:`z` w maksimach.
    lorenz = [sigma*(y-x),x*(rho-z)-y,x*y-beta*z]
    times = srange(0,4200,0.015)
    ics = [0,1,1]
-   sol = desolve_odeint(lorenz,ics,times,[x,y,z])# ,rtol=1e-13,atol=1e-14)
-
+   sol = desolve_odeint(lorenz,ics,times,[x,y,z])
 
    Z = sol[:,2]
    times = np.array(times)
