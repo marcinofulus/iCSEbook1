@@ -179,16 +179,15 @@ Układ Lorenza
    początkowy i powtarzamy całą operację.
 
 
-
 Równania, które wyprowadził Edward Lorenz w 1963 roku, jako
 uproszczone konwekcji mają następującą postać:
 
    .. math ::
-   :label: lorenz
+       :label: lorenz
           
-   \frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (y - x), \\
-   \frac{\mathrm{d}y}{\mathrm{d}t} &= x (\rho - z) - y, \\
-   \frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
+       \frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (y - x), \\
+       \frac{\mathrm{d}y}{\mathrm{d}t} &= x (\rho - z) - y, \\
+       \frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
 
 
 Od tego czasu ten układ równań jest zwany modelem Lorenza i stał się
@@ -245,7 +244,51 @@ Wróćmy do naszego wykresu. Jeżeli zmienimy opcje
 interaktywną przeglądarkę wykresów 3d - wymaga to jednak wtyczki Java.
 
 Otrzymany wykres przedstawia kształt atraktora Lorenza - słynnego
-motyla. Co ciekawego jest w tym wykresie? Po pierwsze w oczy rzuca się
+motyla. 
+
+Zanim przejdziemy do badania jego własności, musimy dowiedzieć się co
+to jest atraktor. Pewne układy dynamiczne opisywane równaniami
+różniczkowymi (należy do ich model Lorenza), mają taką własność, że
+wszystkie rozwiązania dążą do jednego (lub wielu) rowiązania
+granicznego. Takie rozwiązanie do którego inne dążą własnie nazwana
+atraktorem (z pewnością od od angielskiego słowa attract -
+przyciągać). Aby lepiej zrozumiec tą koncepcję rozważmy następujący
+przykład. Rozważmy równanie, mogące modelować rozpad radioaktywny:
+
+.. math::
+   :label: rozpad
+
+    \frac{dN(t)}{dt}=-\alpha N(t).
+
+
+Przez bezpośrednie sprawdzenie możemy się przekonać, że funkcja
+:math:`N(t)=N(0)e^{-\alpha t}` jest rozwiązaniem tego równania. W
+szczególności jeśli :math:`N(0)=0` rozwiązanie stałe :math:`N(t)=0`
+też jest rozwiązaniem. Ma ono jednak szczególną własność: każde inne
+rozwiązanie dąży do niego. Mówimy, że punkt :math:`N=0` jest
+atraktorem układu (:eq:`rozpad`). 
+
+Jakie jeszcze geometryczne formy może przyjmować atraktor? Z przykładu
+widać, że może być pojedyńczym punktem. Można też łatwo znaleźć
+przykłady gdy jest zbiorem wielu izolowanych punktów. Dla układów
+dwuwymiarowych może być też krzywą zamkniętą, zwaną cyklem
+granicznym. Najbardziej fascynująca jest jednak możliwość, która
+pojawia sie dla układów trój- lub więcej wymiarowych. Atraktor może
+przyjmować formę zbioru z wymiarem ułamkowym i mieć strukturę
+fraktalną. Taki atraktor jest zwany "dziwnym atraktorem" i attraktor
+Lorenzta jest własnie jego przykładem.
+
+Czas w którym dowolne rozwiązanie układu Lorenza zbliży się do
+atraktora Lorenza na odległość która jest ponizej grubości lini którą
+go rysujemy, dla wybranych przez nas parametrów jest
+rzędu 10. Dlatego, odcinając pierwsze kilkadziesiąc jednostek czasu
+wykres trajektorii fazowej praktycznie jest obrazem punktów leżących
+na atrraktorze Lorenza. Ponieważ ma on naturę fraktalną nie można do
+"dokładnie" narysować, ale można pokazać jego przybliżenie w pewnej
+skali. 
+
+
+Co ciekawego jest w tym wykresie? Po pierwsze w oczy rzuca się
 nieregularność, którą jeszcze lepiej widać jeśli by narysować wykres
 wybranej współrzędnej od czasu, .... ale po co gdybać, narysujmy!
 
@@ -321,7 +364,7 @@ układem dynamicznym. Układy te stanowią są znaną już dziś z
 zaskakująco skomplikowanego zachowiania, pomimo swojej prostoty. W
 dalszej części przejdziemy do analizy fascynujących własności tych
 układów. Zanim jednak to zrobimy, spróbujmy samodzielnie odtworzyć
- wynik Edwarda Lorenza.
+wynik Edwarda Lorenza.
 
 Mając trajektorię układu Lorenza musimy się zastanowić jak z niej
 wyłowić lokalne maksima? Oczywiście ponieważ rozwiązanie układu
@@ -406,7 +449,7 @@ Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
 Otrzymujemy odwzorowanie, które przeprowadza jedno maximum w
 kolejne. Ułożenie punktów na lini sugeruje, że pewne własności układu
 Lorenza mogą być ukryte w jeszcze prostszym type układów
-dynamicznych - mapie dyskretnej.
+dynamicznych - mapie dyskretnej:
 
 .. math::
 
@@ -415,6 +458,7 @@ dynamicznych - mapie dyskretnej.
 
 Równanie  logistyczne
 =====================
+
 
 
 
