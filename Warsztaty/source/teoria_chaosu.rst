@@ -56,41 +56,70 @@ dzisiejszy telefon komórkowy wykonuje nawet miliardy operacji na
 sekundę!  Wysiłki zotały skierowane na stworzenie maksymalnie prostego
 modelu, który by jednak oddawał istotę zjawiska. Lorenz stworzył model
 składający się z dwunastu zmiennych, który ostatecznie został
-uproszczony do trzech. Publikując ten wynik, Lorenz mógł nie
-spodziewać się dwóch rzeczy. Po pierwsze, okazało się, że jego model
-nie miał większego praktycznego wpływu na meteorologię (w kraju,
-oznaczało by to, że projekt nie zostałby rozliczony ;). Dzisiejsze
-podejscie do prognozowania jest oparte na modelach zawierających
-miliardy zmiennych, które są rozwiązywane na największych dostępnych
-komputerach i nie wydaje się by cokolwiek mogło zmienic ten trend. Po
-drugie, Lorenz mógł nie przewidzieć, że jego praca doprowadzi do
-powstania "teorii chaosu" i nieodwracalnie zmieni sposób patrzenia na
-rzeczywistość.
+uproszczony do trzech.  
+
+Publikując ten wynik, Lorenz mógł nie spodziewać się dwóch rzeczy. Po
+pierwsze, okazało się, że jego model nie miał większego praktycznego
+wpływu na meteorologię (w kraju, oznaczało by to, że projekt nie
+zostałby rozliczony ;). Dzisiejsze podejscie do prognozowania jest
+oparte na modelach zawierających miliardy zmiennych, które są
+rozwiązywane na największych dostępnych komputerach i nie wydaje się
+by cokolwiek mogło zmienic ten trend. Po drugie, Lorenz mógł nie
+przewidzieć, że jego praca doprowadzi do powstania "teorii chaosu" i
+nieodwracalnie zmieni sposób patrzenia na rzeczywistość.
 
 
 Co takiego nieoczekiwanego wynikło z modelu Lorenza? Otrzymany przez
-niego układ był opisywany przez trzy zmienne, które podlegały trzem
-równaniom różniczkowym. Mając do dyspozycji komputer Lorenz rozpoczął
-badnie wyprowadzonych równań. Okazało się, że pomimo prostoty
-rozwiązania w pewnych przypadkach były wysoce nieregularne i
-zachowanie układu czułe na warunki początkowe. W meteorologii, już w
-tych latach panował pogląd o wrażliwości pogody na niewielkie
-zaburzenie stanu początkowego, jednak przypisywano tą cechę efektowi
-złożoności układu. Zaskakującym wynikiem otrzymanym przez Lorenza było
-to, że własność ta tkwi już bardzo prostym, tzw. niskowymiarowym,
-modelu.
+niego układ, którego stan jest opisywany przez trzy zmienne
+:math:`x(t),y(t),z(t)`. Zmienne te podlegają ewolucji w czasie zgodnie
+w trzema równaniami różniczkowymi. Oznacza to, że znając stan układu w
+pewnej chwili :math:`t_0`, możemy, korzystając z równań różniczkowych,
+wyliczyć stan układu w dowolnej poźniejszej chwili
+:math:`t`. Spełnienie takiego prawa, jest ogólnie zwane determinizmen:
+"teraźniejszość w pełni determinuje przyszłość". W otaczającym nas
+świecie jest wiele zjawisk, które podlegają deterministycznym
+prawom. Na przykład położenie samochodu jadącego po prostej z
+prędkością 10 metrów na sekunkę jest zdeterminowane w każdej chwili i
+może być wyliczone ze znanego wzoru na drogę w ruchu jednostajnie
+prostoliniowym. Gdyby jednak zapytać jaką drogę przejedzie ten sam
+samochód w miescie to odpowiedź nie będzie łatwa bo zaleźy to od
+natężenia ruchu w mieście, ilości świateł. Można jednak przewidzieć,
+co bardzo dobrze robią programy do nawigacji satelitarnej, średni czas
+oczekiwany na pokonanie wyznaczonej drogi przez miasto. W takich
+obliczeniach wiele zależy od zmiennych, ktore są losowe - jak czas
+oczekiwania na zielone światło. Mówimy więc, że model szacujący czas
+przejazdu przez miasto jest probablistyczny.
 
+Wróćmy jednak do modelu Lorenza. Mając do dyspozycji komputer Lorenz
+rozpoczął badnie wyprowadzonych, jak już ustaliliśmy -
+deterministycznych - równań. Okazało się, że pomimo prostoty samych
+równań, rozwiązania w pewnych przypadkach były wysoce nieregularne i
+zachowanie układu czułe na warunki początkowe. Co więcej czułość na
+warunki początkowe była tak duża, że praktycznie przewidzenie dokładne
+dalekiej przyszłości w tym modelu było tak samo niemożliwe jak w
+modelach probablistycznych. Nawet, zakładając, że obliczenia
+przeprowadzamy z dowolną dokładnością, to w każdym modelu warunki
+początkowe pochodzą z pewnych pomiarów fizycznych a te z kolei zawsze
+obarczone są pewnym błędem. W efekcie, dysponując prostą i w pełni
+deterministyczną regułą "przepowiadania" przyszłości i nie możemy z
+niej w pełnii skorzystać. Paradoks ten jest dzisiaj określany terminem
+"Chaos Deterministyczny" - oksymoronem, który dobrze oddaje naturę
+tego zjawiska.
+
+W meteorologii, już w tych latach panował pogląd o wrażliwości pogody
+na niewielkie zaburzenie stanu początkowego, jednak przypisywano tą
+cechę efektowi złożoności układu. Zaskakującym wynikiem otrzymanym
+przez Lorenza było to, że własność ta tkwi już bardzo prostym,
+tzw. niskowymiarowym, modelu.
 
 W poniższym rozdziale zachęcamy czytelnika do przeniesienia się w lata
 60-te i powtórzenia obliczeń komputerowych. Fascynujące jest, że w tej
-chwili mamy do dyspozycji milion razy szybszy sprzęt
-komputerowy. Ponadto otwarte oprogramowanie Sage umożliwia wykonywanie
-eksperymentów na zasadzie podobnej do klocków lego - można korzystać z
-wielu gotowych procedur, niekoniecznie wnikając od razu w szczegóły
-implementacji. Zatem, dowiedzmy się jakie równania badał Lorenz?
-
-
-
+chwili mamy do dyspozycji milion razy szybszy sprzęt komputerowy. Do
+obliczeń wykorzystamy otwarte oprogramowanie "Sage", które umożliwia
+wykonywanie eksperymentów na zasadzie podobnej do klocków Lego - można
+korzystać z wielu gotowych procedur, niekoniecznie wnikając od razu w
+szczegóły ich implementacji. Zatem, dowiedzmy się jakie równania badał
+Lorenz?
 
 
 Układ Lorenza
@@ -102,6 +131,7 @@ Układ Lorenza
    pochodne. Często spotyka się następującą postać:
 
    .. math ::
+      :label: odesys1
 
        \frac{dx}{dt} = f(x,y) \\
        \frac{dy}{dt} = g(x,y) 
@@ -120,19 +150,33 @@ Układ Lorenza
    sprawdzić, że równanie takie ma rozwiązanie :math:`N(t)=N(0)e^{at}`.
 
    Narzędziem stosowanym do analizy równań różniczkowych na komputerze
-   są metody numeryczne. Najprostrzym schematem jest metoda
-   Eulera. Polega ona na zastąpieniu pochodnych ilorazem różnicowym:
+   są metody numeryczne. Najprostrza jest metoda Eulera. Polega ona na
+   zastąpieniu pochodnych ilorazami różnicowymi. Niech
+   :math:`h=t_{1}-t_0` będzie małym przyrostem czasu, wtedy mamy:
 
    .. math ::
 
-       \frac{dx}{dt} \sim \frac{x-x_0}{t-t_0} 
+       \frac{dx}{dt} \sim \frac{x(t+h)-x(t)}{h} 
 
-   Stosując takie przybliżenie można zapisać równanie różniczkowe jako
-   ciąg kolejnych iteracji. Startując w chwili :math:`t_0` z punktu
-   :math:`x_0,y_0` obliczamy nowy punkt :math:`x,y` w chwili
-   :math:`t_0+h`, gdzie :math:`h=t-t_0` jest krokiem
-   czasowym. Następnie przyjmujemy obliczony punkt jako początkowy i
-   powtarzamy całą operację :math:`x,y \to x_0,y_0`.
+   Podstawiając to przybliżenie do równań (:eq:`odesys1`) i po
+   przeniesieniu wszystkich wyrazów zawierających :math:`x(t+h),y(t+h)` na
+   lewą a wyrazów z :math:`x(t),y(t)` na prawą stronę otrzymujemy:
+
+
+   .. math ::
+       :label: euler
+
+       x(t+h) = x(t) + h \cdot f(x(t),y(t)) \\
+       y(t+h) = y(t) + h \cdot g(x(t),y(t))
+
+
+
+   Taka postać sugeruje, że można uzyskać rozwiązanie w kolejnych
+   chwilach czasu stosując kolejne iteracje: Startując w chwili
+   :math:`t` z punktu :math:`x(t),y(t)` obliczamy nowy punkt
+   :math:`x(t+h),y(t+h)` w chwili :math:`t+h`. :math:`h` jest zwany
+   krokiem czasowym. Następnie przyjmujemy obliczony nowy punkt jako
+   początkowy i powtarzamy całą operację.
 
 
 
@@ -140,10 +184,11 @@ Równania, które wyprowadził Edward Lorenz w 1963 roku, jako
 uproszczone konwekcji mają następującą postać:
 
    .. math ::
-
-       \frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (y - x), \\
-       \frac{\mathrm{d}y}{\mathrm{d}t} &= x (\rho - z) - y, \\
-       \frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
+   :label: lorenz
+          
+   \frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (y - x), \\
+   \frac{\mathrm{d}y}{\mathrm{d}t} &= x (\rho - z) - y, \\
+   \frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
 
 
 Od tego czasu ten układ równań jest zwany modelem Lorenza i stał się
@@ -168,16 +213,16 @@ specjalnie trudne:
 
 Kluczowym elementem jest wykorzystanie funkcji
 :code:`desolve_odeint`. Rozwiązuje ona numerycznie dowolny układ
-równań różniczkowych z wykorzystaniem bardzo efektywnych metod
-(znacznie bardziej zaawansowanych od metody Eulera). Minimalna liczba
-parametrów to: lista lewych stroń układu równań różniczkowych, warunek
-początkowy, punkty czasowe w których ma być obliczone rozwiązanie oraz
-lista zmiennych symbolicznych w takiej kolejności w jakiej zostały
-podane równania. Po wykonianiu obliczeń funkcja ta zwraca tablicę
-zawierającą wartości wszystkich zmiennych czyli :math:`x,y,z` w
-żądanych momentach czasu. Tablica ta jest obiektem typu
-:code:`numpy.ndarray` więc możemy sprawdzić jaki jest rozmiar danych
-wyjściowych poleceniem:
+równań różniczkowych z wykorzystaniem bardzo efektywnych schematów
+numerycznych, których idea jest jednak taka sama jak w metodzie Eulera
+(patrz box). Minimalna liczba parametrów to: lista lewych stroń układu
+równań różniczkowych, warunek początkowy, punkty czasowe w których ma
+być obliczone rozwiązanie oraz lista zmiennych symbolicznych w takiej
+kolejności w jakiej zostały podane równania. Po wykonianiu obliczeń
+funkcja ta zwraca tablicę zawierającą wartości wszystkich zmiennych
+czyli :math:`x,y,z` w żądanych momentach czasu. Tablica ta jest
+obiektem typu :code:`numpy.ndarray` więc możemy sprawdzić jaki jest
+rozmiar danych wyjściowych poleceniem:
 
 .. code-block:: python
 
@@ -187,9 +232,17 @@ Widzimy, że zostaną zwrócone dwie liczby, które odpowiadają zakresom
 zmienności wskaźników tabeli :code:`sol`.
 
 Procedura :code:`line3d` rysuje wykres krzywej w przestrzeni
-:math:`x,y,z`. Jeżeli zmienimy opcje :code:`viewer='tachyon'` na
-:code:`viewer='jmol'` uruchomi interaktywną przeglądarkę wykresów 3d -
-wymaga to jednak wtyczki Java. 
+:math:`x,y,z`. Przestrzeń ta jest tak zwaną przestenią fazową dla
+układu równań różniczkowych. Choć brzmi to skompikowanie, idea jest
+bardzo prosta. Jest to przestrzeń wszystkich możliwych stanów układu
+równań różniczkowych (:eq:'lorenz'). Ponieważ mamy trzy zmienne to
+przestrzeń ta jest trójwymiarowa. Ewolucja czasowa układu jest krzywą
+w takiej przestrzeni i jest zwana krzywą fazową. Ciekawą własnością
+jest to, że dwie krzywe fazowe się nie przecinają. 
+
+Wróćmy do naszego wykresu. Jeżeli zmienimy opcje
+:code:`viewer='tachyon'` na :code:`viewer='jmol'` uruchomi
+interaktywną przeglądarkę wykresów 3d - wymaga to jednak wtyczki Java.
 
 Otrzymany wykres przedstawia kształt atraktora Lorenza - słynnego
 motyla. Co ciekawego jest w tym wykresie? Po pierwsze w oczy rzuca się
@@ -200,8 +253,14 @@ wybranej współrzędnej od czasu, .... ale po co gdybać, narysujmy!
 .. sagecellserver::
 
    c=['red','blue','black']
-   sum([line( zip(times,sol[-2000:,i],color=c[i]) ) for i in range(3)])
+   sum([line( zip(times,sol[-2000:,i]),color=c[i]) for i in range(3)])
 
+Taki wykres, a właściwie trzy wykresy, to zależność każdej zmiennej
+układu od czasu podczas jego ewolucji. Gdyby kontynuować ewoluje
+dalej, to żaden kawałek wykresu nigdy by się nie powtórzył (warto
+sprobować!). Niezwykłość układu Lorenza polega na tym, że
+nieskończony i niepowtarzający się obraz, "zakodowany" jest w jedynie
+trzech równaniach różniczkowych.
 
 Układ Lorenza nie dla każdego zestawu parametrów posiada własności
 chaotyczne. Weźmy na przykład dowolne :math:`\rho<24`. Łatwo się
@@ -237,6 +296,11 @@ rozwiązania zaczynają się różnić od siebie. Warto też spróbować
 zbadań jak wyglądają trajektorie układu dla parametrów przy których
 nie jest on chaotyczny.
 
+
+Od układu Lorenza do równania logistycznego
+===========================================
+
+
 Edward Lorenz analizując zachowanie tego układu w 1963 roku, dokonał
 jeszcze jednego ważnego kroku - powiązał on dynamikę ciągłego
 trójwymiarowego układu dynamicznego z zachowaniem tzw. dyskretnego
@@ -247,16 +311,17 @@ wykresie naniósł ich kolejne wartości tzn. narysował pary
 :math:`(z_i,z_{i+1})`. Okazało się, że dla parametrów w których układ
 jest chaotyczny pary te układają się na pewnej krzywej :math:`F`
 takiej, że :math:`z_{i+1}=F(z_i)`. Można by teraz zapomnieć skąd
-wzięły się wartości :math:`z_i` i dysponując jedynie krzywą :math:`F`,
-z jednego stanu otrzymuwac kolejny. Taki układ jest jednowymiarowy,
-gdyż stan określony jest przez jedną liczbę :math:`z_i`, ale ewolucja
-w czasie jest dokonywana w sposób skokowy, zapomocą przekształcenia
-:math:`z_{i+1}=F(z_i)`. Taki układ dynamiczny ze skokową ewolucją w
-czasie nazywa się właśnie dyskretnym układem dynamicznym. Układy te
-stanowią są znaną już dziś z zaskakująco skomplikowanego zachowiania,
-pomimo swojej prostoty. Zanim przejdziemy do analizy układów
-dyskretnych spróbujmy praktycznie odtworzyć komputerowy wynik Edwarda
-Lorenza.
+wzięły się wartości :math:`z_i` bo dysponując jedynie krzywą
+:math:`F`, z jednego stanu możemy otrzymać kolejny. Układ po takieg
+operacji jest jednowymiarowy, gdyż stan określony jest przez jedną
+liczbę :math:`z_i`, ale ewolucja w czasie jest dokonywana w sposób
+skokowy, zapomocą przekształcenia :math:`z_{i+1}=F(z_i)`. Taki układ
+dynamiczny ze skokową ewolucją w czasie nazywa się właśnie dyskretnym
+układem dynamicznym. Układy te stanowią są znaną już dziś z
+zaskakująco skomplikowanego zachowiania, pomimo swojej prostoty. W
+dalszej części przejdziemy do analizy fascynujących własności tych
+układów. Zanim jednak to zrobimy, spróbujmy samodzielnie odtworzyć
+ wynik Edwarda Lorenza.
 
 Mając trajektorię układu Lorenza musimy się zastanowić jak z niej
 wyłowić lokalne maksima? Oczywiście ponieważ rozwiązanie układu
@@ -278,16 +343,30 @@ Jedną z możliwości jest napisanie pętli (zachęcamy do zrobienia tego
 własnoręcznie), która dla każdego punktu z tabeli sprawdziła by czy
 zachodzą powyższe warunki i jeśli tak, to zapisałaby punkt na listę
 maksimów. Mając jednak do dyspozycji "oręż" w postaci biblioteki numpy
-możemy zrobić to w jednej lini, oznaczając przez :code:`Z` tablicę z
-wartościami trzeciej zmiennej układu Lorenza mamy:
+możemy zrobić to w praktycznie jednej lini kodu. Oznaczając przez
+:code:`Z` tablicę z wartościami trzeciej zmiennej układu Lorenza 
+obliczamy najpierw tablicę różnic kolejnych elementów:
 
 
 .. code-block:: python
 
    Zp = np.diff(Z)
+
+nastepnie znajdujemy miejsca (:code:`np.nonzero`) w których kolejne
+różnice mają przeciwny znak:
+
+.. code-block:: python
+
    idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
+
+
+i ostatecznie wyciągamy z tablicy :code:`Z` te elementy:
+
+.. code-block:: python
+
    Zm = Z[idx+1]
 
+(pytanie do czytelinka - skąd to +1?)
 
 Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
 
@@ -299,7 +378,8 @@ Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
    Zp = np.diff(Z)
    idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
    Zm = Z[idx+1]
-   point(zip(t[idx+1][::2],Zm[::2]),color='red') + line(zip(t,Z))
+   point(zip(t[idx+1][::2],Zm[::2]),color='red',figsize=(8,2),size=40) + line(zip(t,Z))
+
 
 .. sagecellserver::
 
@@ -332,6 +412,9 @@ dynamicznych - mapie dyskretnej.
 
    z_{i+1} = F(z_{i})
 
+
+Równanie  logistyczne
+=====================
 
 
 
