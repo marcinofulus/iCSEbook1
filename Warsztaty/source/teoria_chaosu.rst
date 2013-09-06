@@ -340,6 +340,9 @@ zbadań jak wyglądają trajektorie układu dla parametrów przy których
 nie jest on chaotyczny.
 
 
+*Dalsze eksperymenty komputerowe z układem Lorentza: zadania ze Strogaz-a!*
+
+
 Od układu Lorenza do równania logistycznego
 ===========================================
 
@@ -411,7 +414,7 @@ i ostatecznie wyciągamy z tablicy :code:`Z` te elementy:
 
 (pytanie do czytelinka - skąd to +1?)
 
-Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
+Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`\sin(x)`:
 
 .. sagecellserver::
 
@@ -443,17 +446,31 @@ Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`sin(x)`:
    idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
    Zm = Z[idx+1]
 
-   point(zip(Zm[1::2][::2],Zm[1::2][1::2]))
+   point(zip(Zm[1::2][::2],Zm[1::2][1::2])) + point(zip(np.zeros_like(Zm[1::2][::2]),Zm[1::2][1::2])) 
 
 
-Otrzymujemy odwzorowanie, które przeprowadza jedno maximum w
-kolejne. Ułożenie punktów na lini sugeruje, że pewne własności układu
-Lorenza mogą być ukryte w jeszcze prostszym type układów
-dynamicznych - mapie dyskretnej:
+Zaskakujące jest to, że wszystkie punkty znajdują się na jednej
+linii. Oznacza to bowiem, że otrzymany obrazek jest wykresem funkcji
+przeprowadzającej jedno maximum w kolejne.  Możemy więc zapomnieć o
+układzie równań różniczkowych a jedynie badać jak jedno maksimum
+przechodzi w drugie. Skoro wyjściowy układ Lorenza ma własności
+chaotyczne: nieregularność i czułość na warunki początkowe, to
+powinniśmy zaobserwować to również w zachowaniu się ciągu :math:`z_i`
+generowanym przez iteracje funkcji, której wykres wcześniej
+narysowalismy:
 
 .. math::
+   :label: ifs
 
    z_{i+1} = F(z_{i})
+
+Można również odwrócić problem i zastanowić się dla jakich funkcji
+:math:`F`, układ dynamiczny ze skokowym, lub jak częściej się mówi,
+dyskretnym czasem, będzie posiadał własności chaotyczne. Przekonamy
+się, że takie rozważania doprowadzą nas do kolejnej rodziny zagadnień
+matematycznych. Zanim jednak do tego przejdziemy, musimy się
+zastanowić nad populacją karaluchów.
+
 
 
 Równanie  logistyczne
