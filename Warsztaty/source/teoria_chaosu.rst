@@ -476,15 +476,100 @@ zastanowić nad populacją karaluchów.
 Równanie  logistyczne
 =====================
 
+W latach siedemdziesiątych XX wieku, na Uniwersytecie w Oxford,
+austalijski uczony Robert May zajmował się teoretycznymi aspektami
+dynamiki populacyjnej. Swoje prace podsumował w artykule, który ukazał
+się w *Nature* pod prowokującym tytułem "Proste modele matematyczne z
+bardzo skomplikowaną dynamiką" [may76]_. Artykuł ten po latach stał
+się jedną z najczęściej cytowanych prac z teoretycznej ekologii.  Co
+wzbudziło tak wielkie zainteresowanie w tej pracy?
 
+May zajmował się zastosowaniem matematyki w ilościowym opisie zjawisk
+ekologicznych. Klasycznym zadaniem w tej dziedzinie jest obliczenie
+populacji pewnego gatunku w czasie znając jego stan liczebny w chwili
+początkowej. Najprostszym do modelowania rodzajem ekosystemów wydawały
+się takie w których życie jednego pokolenia populacji trwa pewnien
+sezon. Dobrym przykładem jest populacja owadów, które w ciągu jednego
+sezonu przechodzą pełną metamorfozę np. motyle. Czas jest w naturalny
+sposób podzielony na dyskretne okresy, odpowiadające cyklom
+wegetatywnym danego gatunku. Równania opisujące taki ekosystem mają
+więc formę dyskretnych układów iterowanych w których bieżąca
+liczebność osobników danego gatunku w ekosystemie jest funkcją
+wielkości populacji w poprzednim okresie. 
 
+Robert May zajmował się właśnie taką dynamiką. Badając układy
+iteracyjne, uprościł ekosystem do jedngo gatunku w którym populacja
+była funkcją kwadratową populacji w roku poprzednim. Równanie,
+można było sprowadzić do matematycznie równoważnego:
 
 .. math::
+   :label: logistic
 
-   x_{i+1} = a x_{i} (1 - x_{i})
+   x_{i+1} = a x_{i} (1 - x_{i}),
 
+gdzie :math:`a<=4` jest pewną dodatnią stałą a :math:`x_i\in(0,1)`
+jest proporcjonalne do liczebności populacji w i-tym sezonie. Mogło
+by się wydawać, że tak prosty model będzie dawał proste
+wyniki. Spróbujmy sami! 
 
+Rozważmy model populacji dla parametru :math:`a=0.5`, startując z
+liczebności :math:`x=0.5`. Kolejne wartości populacji można otrzymać
+stosując przekształcenie kwadratowe :eq:`logistic` do wartości z
+poprzedniego sezonu, na przykład za pomocą poniższego kodu:
 
+.. sagecellserver::
+
+   var('a x')
+   a = 0.5 
+   x = 0.134
+   for i in range(10):
+       x = a*x*(1-x)
+       print x
+
+Wykonując ten kod otrzymujemy kolejne wartości populacji, które wraz z
+upływem czasu dążą do zera. Eksperymentując z powyższym kodem łatwo
+się jest przekonać, że niezależnie od wartości z której startujemy,
+zawsze populacja ginie. Możemy sobie też ułatwić zadanie,
+wykorzystując w Sage narzędzie do szybkiego prototypowania elementów
+interaktywnych. Ponadto, zamiast wypisywać wartości liczbowe
+przedstawmy je graficzne rysując wykres liczebności populacji od
+położenia.
+
+.. sagecellserver::
+
+   @interact
+   def myf(x = slider(0.0,1.0,0.01,default=0.5),a=slider(0,4,0.01,default=0.5)):
+       pkts = []
+       for i in range(10):
+           pkts.append( (i,x) )
+           x = a*x*(1-x)
+       point(pkts,figsize=5,xmin=0,xmax=1).show()
+
+W powyższym kodzie, elementy slider pozwalają nam na wykonanie funkcji
+myf dla wybranych interaktywnie wartości :math:`x \text{i}
+a`. Zwiększmy teraz parametr :math:`a` do wartości z przedziału
+:math:`a\in(1,3)`.  Okazuje się, że wtedy ciąg :math:`x_i` dąży do
+pewnej wielkości - tym razem jednak nie jest to zero. Interpretując w
+kategoriach ekologii - wielkość populacji ustala się na pewnym
+poziomie, który nie zmienia się z sezonu na sezon. Podobnie jak
+poprzednim razem, ta wartość graniczna nie zależy od punktu
+startowego. Czyli niezależnie od tego czy populacja wystaruje bardzo
+małą liczebnością czy dużą, po kilku pokoleniach i tak będzie taka
+sama. Ustalmy teraz wartość parametru na :math:`a=3.2`. Zaskoczeniem
+może być fakt, że tym razem populacja nie osiąga jednej wartości, ale
+dwie, które wystepują kolejno po sobie do drugi sezon.
+
+Przyjrzyjmy się bliżej temu zjawisku. Po pierwsze jeżeli ciąg
+kolejnych wartości :math:`x_i` dąży do pewnej granicy, to możemy
+napisać dokładny warunek na jej wartość :math:`x_g`. Musi zachodzić
+:math:`x_g=f(x_g)`. Jeżeli taki punkt istnieje dla pewnej funkcji
+:math:`f`, to mówimy, że jest to jej punkt stały. Możemy dokładnie
+wyznaczyć wartość punktów stałych odwzorowania logistycznego w
+zależności od parametru :math:`a` - :math:`x_g = 0` oraz
+:math:`x_g=1-frac{1}{a}`. O ile :math:`x_g = 0` jest punktem stałym
+dla dowolnej wartości parame
+
+.. [may76] May, R. M. "Simple mathematical models with very complicated dynamics". Nature 261 (5560): 459–467,1976.
 
 
 ..
