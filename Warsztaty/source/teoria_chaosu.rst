@@ -150,7 +150,7 @@ Układ Lorenza
    sprawdzić, że równanie takie ma rozwiązanie :math:`N(t)=N(0)e^{at}`.
 
    Narzędziem stosowanym do analizy równań różniczkowych na komputerze
-   są metody numeryczne. Najprostrza jest metoda Eulera. Polega ona na
+   są metody numeryczne. Najprostsza jest metoda Eulera. Polega ona na
    zastąpieniu pochodnych ilorazami różnicowymi. Niech
    :math:`h=t_{1}-t_0` będzie małym przyrostem czasu, wtedy mamy:
 
@@ -363,11 +363,12 @@ operacji jest jednowymiarowy, gdyż stan określony jest przez jedną
 liczbę :math:`z_i`, ale ewolucja w czasie jest dokonywana w sposób
 skokowy, zapomocą przekształcenia :math:`z_{i+1}=F(z_i)`. Taki układ
 dynamiczny ze skokową ewolucją w czasie nazywa się właśnie dyskretnym
-układem dynamicznym. Układy te stanowią są znaną już dziś z
-zaskakująco skomplikowanego zachowiania, pomimo swojej prostoty. W
-dalszej części przejdziemy do analizy fascynujących własności tych
-układów. Zanim jednak to zrobimy, spróbujmy samodzielnie odtworzyć
-wynik Edwarda Lorenza.
+układem dynamicznym. Można się też spotkać z określeniem "system
+funkcji iterowanych" ( z ang. iterated function system, IFS). Układy
+te stanowią są znaną już dziś z zaskakująco skomplikowanego
+zachowiania, pomimo swojej prostoty. W dalszej części przejdziemy do
+analizy fascynujących własności tych układów. Zanim jednak to zrobimy,
+spróbujmy samodzielnie odtworzyć wynik Edwarda Lorenza.
 
 Mając trajektorię układu Lorenza musimy się zastanowić jak z niej
 wyłowić lokalne maksima? Oczywiście ponieważ rozwiązanie układu
@@ -487,20 +488,60 @@ wzbudziło tak wielkie zainteresowanie w tej pracy?
 May zajmował się zastosowaniem matematyki w ilościowym opisie zjawisk
 ekologicznych. Klasycznym zadaniem w tej dziedzinie jest obliczenie
 populacji pewnego gatunku w czasie znając jego stan liczebny w chwili
-początkowej. Najprostszym do modelowania rodzajem ekosystemów wydawały
-się takie w których życie jednego pokolenia populacji trwa pewnien
-sezon. Dobrym przykładem jest populacja owadów, które w ciągu jednego
-sezonu przechodzą pełną metamorfozę np. motyle. Czas jest w naturalny
-sposób podzielony na dyskretne okresy, odpowiadające cyklom
-wegetatywnym danego gatunku. Równania opisujące taki ekosystem mają
-więc formę dyskretnych układów iterowanych w których bieżąca
-liczebność osobników danego gatunku w ekosystemie jest funkcją
-wielkości populacji w poprzednim okresie. 
+początkowej. Najprostszym, z punktu widzenia modelowania
+matemetycznego, rodzajem ekosystemów wydawały się takie w których
+życie jednego pokolenia populacji trwa jeden sezon. Dobrym przykładem
+jest populacja owadów, które w ciągu jednego sezonu przechodzą pełną
+metamorfozę np. motyle. Czas jest w naturalny sposób podzielony na
+dyskretne okresy, odpowiadające cyklom życia populacji. Równania
+opisujące taki ekosystem mają więc formę dyskretnych układów
+iterowanych w których bieżąca liczebność osobników danego gatunku w
+ekosystemie jest funkcją liczebności w poprzednim okresie.
 
-Robert May zajmował się właśnie taką dynamiką. Badając układy
-iteracyjne, uprościł ekosystem do jedngo gatunku w którym populacja
-była funkcją kwadratową populacji w roku poprzednim. Równanie,
-można było sprowadzić do matematycznie równoważnego:
+Robert May zajmował się między innymi właśnie taką dynamiką. Badając
+układy iteracyjne, uprościł ekosystem do jedngo gatunku w którym
+populacja była funkcją kwadratową populacji w roku poprzednim. Skąd
+taki model?  Najprostszym równaniem dyskretnym opisującym ewolucję
+populacji jest model liniowy:
+
+.. math::
+   :label: Ni
+
+   N_{i+1} = \alpha \; N_{i},
+
+gdzie :math:`N_i` to liczebność w i-tym sezonie. Łatwo się przekonać,
+że takie równanie może prowadzić to trzech scenariuszy. Jeżeli
+:math:`\alpha>1` to populacja będzie nieograniczenie rosnąć, jeżeli
+:math:`\alpha<1` to zaniknie oraz dla :math:`\alpha=1` ewolucja nie
+będzie zmieniać stanu liczebnego populacji. Najprostszym rozwinięciem
+tego modelu jest wprowadzenie zależności stałej :math:`\alpha` od
+wielkości populacji. Wyobraźmy sobie populacje szkodników zamkniętym
+ekosystemie. Szkodniki zjadają zboże, którego jest dokładnie ta sama
+ilość do roku. Jeżeli owadów jest mało w porównaniu do ilości
+pożywienia to mogą rozmnażać się z pełną siła rozrodczą - na przykład
+w następnym sezonie będzie ich cztery razy więcej niż w
+poprzednim. Jednak w miarę wzrostu liczebności szkodników, pożywienia
+nie będzie wystarczać i siła rozrodcza będzie maleć. W krytycznym
+przypadku można sobie wyobrazić ze owady zjadają latem całe zboże po
+czym wszystkie osobniki umierają z głodu przed osiągnieciem zdolności
+rozrodczej. Załóżmy więc, że nasza stała rozrodu będzie liniową
+funkcją populacji:
+
+.. math::
+   :label: alpha
+
+   \alpha = \alpha( N_{i} ) = A - B N_{i},
+
+gdzie :math:`A` to stała wzrostu populacji w warunkach dostatku
+pożywienia a :math:`B` jest stałą, która określa jak szybko brak
+pożywienia będzie zmiejszał siłę rozrodczą. W szczególności jeśli
+:math:`N_i=A/B` to pożywienia jest na tyle mało, że zaden osobnik nie
+przeżywa sezonu żerowania.
+
+
+Równanie :eq:`Ni` ze stałą :eq:`alpha`, można przeskalować do postaci
+matematycznie równoważnej, zależnej tylko od jednego
+parametru. Równanie takie obecnie jest znane pod nazwą odwzorowania logistycznego:
 
 .. math::
    :label: logistic
@@ -508,12 +549,14 @@ można było sprowadzić do matematycznie równoważnego:
    x_{i+1} = a x_{i} (1 - x_{i}),
 
 gdzie :math:`a<=4` jest pewną dodatnią stałą a :math:`x_i\in(0,1)`
-jest proporcjonalne do liczebności populacji w i-tym sezonie. Mogło
-by się wydawać, że tak prosty model będzie dawał proste
-wyniki. Spróbujmy sami! 
+jest proporcjonalne do liczebności populacji w i-tym sezonie. 
 
-Rozważmy model populacji dla parametru :math:`a=0.5`, startując z
-liczebności :math:`x=0.5`. Kolejne wartości populacji można otrzymać
+
+Mogło by się wydawać, że tak prosty model będzie dawał proste
+wyniki. Spróbujmy sami!
+
+Rozważmy model :eq:`logistic` dla parametru :math:`a=0.5`, startując z
+liczebności :math:`x=0.45`. Kolejne wartości populacji można otrzymać
 stosując przekształcenie kwadratowe :eq:`logistic` do wartości z
 poprzedniego sezonu, na przykład za pomocą poniższego kodu:
 
@@ -521,53 +564,280 @@ poprzedniego sezonu, na przykład za pomocą poniższego kodu:
 
    var('a x')
    a = 0.5 
-   x = 0.134
+   x = 0.45
    for i in range(10):
        x = a*x*(1-x)
        print x
 
 Wykonując ten kod otrzymujemy kolejne wartości populacji, które wraz z
 upływem czasu dążą do zera. Eksperymentując z powyższym kodem łatwo
-się jest przekonać, że niezależnie od wartości z której startujemy,
-zawsze populacja ginie. Możemy sobie też ułatwić zadanie,
-wykorzystując w Sage narzędzie do szybkiego prototypowania elementów
-interaktywnych. Ponadto, zamiast wypisywać wartości liczbowe
-przedstawmy je graficzne rysując wykres liczebności populacji od
-położenia.
+też jest się przekonać, że niezależnie od wartości z której
+startujemy, zawsze populacja ginie. 
+
+Możemy sobie też ułatwić zadanie, wykorzystując w Sage narzędzie do
+szybkiego prototypowania elementów interaktywnych. Ponadto, zamiast
+wypisywać wartości liczbowe przedstawmy je graficzne rysując wykres
+liczebności populacji od położenia.
 
 .. sagecellserver::
 
    @interact
-   def myf(x = slider(0.0,1.0,0.01,default=0.5),a=slider(0,4,0.01,default=0.5)):
+   def myf(x = slider(0.0,1.0,0.01,default=0.4),a=slider(0,4,0.01,default=0.5)):
        pkts = []
-       for i in range(10):
+       for i in range(25):
            pkts.append( (i,x) )
            x = a*x*(1-x)
-       point(pkts,figsize=5,xmin=0,xmax=1).show()
+       point(pkts,figsize=(7,3),ymin=0,ymax=1).show()
 
-W powyższym kodzie, elementy slider pozwalają nam na wykonanie funkcji
-myf dla wybranych interaktywnie wartości :math:`x \text{i}
-a`. Zwiększmy teraz parametr :math:`a` do wartości z przedziału
+W powyższym kodzie, elementy :code:`slider` pozwalają nam na wykonanie
+funkcji :code:`myf` dla wybranych interaktywnie wartości :math:`x` i
+:math:`a`. 
+
+Zwiększmy teraz parametr :math:`a` do dowolnej wartości z przedziału
 :math:`a\in(1,3)`.  Okazuje się, że wtedy ciąg :math:`x_i` dąży do
-pewnej wielkości - tym razem jednak nie jest to zero. Interpretując w
-kategoriach ekologii - wielkość populacji ustala się na pewnym
+pewnej wielkości - tym razem jednak nie jest to zero. Interpretując
+możemy powiedzieć, że wielkość populacji ustala się na pewnym
 poziomie, który nie zmienia się z sezonu na sezon. Podobnie jak
 poprzednim razem, ta wartość graniczna nie zależy od punktu
 startowego. Czyli niezależnie od tego czy populacja wystaruje bardzo
 małą liczebnością czy dużą, po kilku pokoleniach i tak będzie taka
-sama. Ustalmy teraz wartość parametru na :math:`a=3.2`. Zaskoczeniem
-może być fakt, że tym razem populacja nie osiąga jednej wartości, ale
-dwie, które wystepują kolejno po sobie do drugi sezon.
+sama. W takim przypadku mamy efekt dążenia ekosystemu do
+stabilizacji - populacja dostosowuje swoją liczebność do możliwości
+wyżywienia się. 
 
-Przyjrzyjmy się bliżej temu zjawisku. Po pierwsze jeżeli ciąg
-kolejnych wartości :math:`x_i` dąży do pewnej granicy, to możemy
-napisać dokładny warunek na jej wartość :math:`x_g`. Musi zachodzić
-:math:`x_g=f(x_g)`. Jeżeli taki punkt istnieje dla pewnej funkcji
-:math:`f`, to mówimy, że jest to jej punkt stały. Możemy dokładnie
-wyznaczyć wartość punktów stałych odwzorowania logistycznego w
-zależności od parametru :math:`a` - :math:`x_g = 0` oraz
-:math:`x_g=1-frac{1}{a}`. O ile :math:`x_g = 0` jest punktem stałym
-dla dowolnej wartości parame
+Taki efekt był oczekiwany przez badaczy i równanie logistyczne
+:eq:`logistic` nie przyciągnęło by szczególnej uwagi gdyby nie
+pewna niespodzianka. Okazało się bowiem, że dla pewnych wartości
+parametru :math:`a` model nie zachowuje się w przewidywalny
+sposób. Pojawiąją się nie tylko stany okresowe, ale i stany w których
+populacja z roku na rok zmienia się w chaotyczny sposób i występuje
+czułość na warunki początkowe - wszystkie cechy, które są
+charakterystyczne dla chaosu deterministycznego.
+
+Zbadajmy to! Na początek ustalmy wartość parametru na :math:`a = 3.2`
+i przyjrzyjmy się ewolucji. Zaskoczeniem może być fakt, że tym razem
+populacja nie osiąga jednej wartości, ale dwie, które wystepują
+kolejno po sobie do drugi sezon.  Przyjrzyjmy się bliżej temu
+zjawisku. Po pierwsze jeżeli ciąg kolejnych wartości :math:`x_i` dąży
+do pewnej granicy, to możemy napisać dokładny warunek na jej wartość
+:math:`x_g`. Musi bowiem zachodzić :math:`x_g=f(x_g)`. Jeżeli taki
+punkt istnieje dla pewnej funkcji :math:`f`, to mówimy, że jest to
+punkt stały odwzorowania. Możemy więc dokładnie wyznaczyć wartość
+punktów stałych odwzorowania logistycznego w zależności od parametru
+:math:`a`. Prosty rachunek pokazuje, że mamy dwa rozwiązania:
+:math:`x_g = 0` oraz :math:`x_g=1-\frac{1}{a}`. O ile :math:`x_g = 0`
+jest punktem stałym dla dowolnej wartości parametru, to pamiętając, że
+sens mają tylko wartości :math:`x_i\in(0,1)`, drugi punkt stały
+istnieje dla wartości :math:`a\in(1,4)`. Możemy 
+
+
+.. sagecellserver::
+
+   var('a')
+   plot(0,(a,0,1),thickness=2)+\
+    plot(1-1/a,(a,1,4),thickness=2)+\
+    plot(0,(a,1,4),thickness=2,color='red',figsize=(7,3))
+
+
+Jeżeli mamy równanie zależne od parameru i ilość rozwiązań zmienia się
+wraz z tymże parametrem to mówimy, że następuje bifurkacja. W punkcie
+:math:`a=1` natępuje własnie bifurkacja i układ zamiast jednego
+rozwiązania ma dwa. Jednak zauwazmy jeszcze jedno ciekawe zjawisko. Z
+dowolnego warunku początkowego dla :math:`a<1` zawsze otrzymywaliśmy
+ciąg populacji malejący, który wydawał się byc przyciągany do jedynego
+w tym obszarze punktu stałego. Taki punkt do którego układ jest
+przyciągany zwany jest też attraktorem układu. Dla :math:`a>1` mamy
+dwa punkty stałe. Okazuje się, że w tym obszarze startując z dowolnego
+punktu z wyjątkiem :math:`x=0` zawsze będziemy dążyć do drugiego
+rozwiązania, ktory jest attraktorem!  Oznacza to, że jeżeli
+rozwiązanie :math:`x=0` zaburzymy dowolnie małą liczbą
+np. :math:`x=0.0001` to i tak po kilkunastu iteracjach populacja
+będzie dążyła do :math:`x_g=1-\frac{1}{a}` (Poeksperymentujmy!).
+Stabilny dla :math:`a<1` punkt stały :math:`x=0` staje się niestabilny
+dla :math:`a>1`. 
+
+Wróćmy więc do naszej sytuacji, w której mamy :math:`a = 3.2`. Według
+poprzednich wyliczeń dalej powinniśmy mieć punkt stały
+:math:`x_g=1-\frac{1}{a}`! I mamy, sprawdźmy:
+
+.. sagecellserver::
+
+   a=3.2
+   x=1-1/a
+   print "Wartosc poczatkowa x=",x
+   pkts = []
+   for i in range(125):
+       pkts.append( (i,x) )
+       x = a*x*(1-x)
+   point(pkts,figsize=(7,3),ymin=0,ymax=1).show()
+
+Dodajmy jednak do warości początkowej pewną małą liczbę np. niech
+:code:`x=x+1e-6`. Zobaczmy co się stanie? Okazuje się, że w punktcie
+:math:`a=3` nastąpiła kolejna bifurkacja w wyniku której i rozwiązanie
+:math:`x_g=1-\frac{1}{a}` utraciło stabilność na rzecz
+oscylacji. Ponieważ oscylacje te są w pomiędzy dwoma wartościami, to
+mówimy, że dla :math:`a=3.2` układ ma punkt okresowy z
+okresem 2. Właściwie to możemy tylko przypuszczać, że tak jest bo
+wynika to tylko z zabaw podczas których liczba iteracji była
+skończona. Możemy jednak w tym przypadku pokazać to dokładnie. Jeżeli
+populacja do drugi sezon przechodzi w tą samą to możemy rozważyć
+odwzorowanie :math:`g(x)=f(f(x))`, które przeprowadza układ o dwa
+sezony do przodu. W taki przypadku powinniśmy punkt stały dla
+:math:`g` odpowiada punktowi okresowemu o okresie 2 dla
+:math:`f`. Zastosumy tą chytrą sztuczkę, tym razem z pomocą Sage:
+
+.. sagecellserver::
+
+   var('a x')
+   f(x) = a*x*(1-x)
+   show( expand( f(f(x))==x) ) 
+   s = solve(f(f(x))==x,x)
+   show(s)
+
+Dobrze, że możemy wyręczyć się systemem algebry komputerowej, bo
+niestety równanie :math:`f(f(x))=x` jest równaniem czwartego stopnia!
+Sage na szczęście "potrafi" rozwiązywać analitycznie równania czwartego
+stopnia i otrzymujemy rozwiązania. Od razu widzimy wsród pierwiastków
+punkty stałe odwzrorowania :math:`f`, co jest zrozumiałe, bo jeśli
+zachodzi :math:`f(x)=x` to tym bardziej :math:`f(f(x))=x`. Narysujmy
+zatem nasz wynik.
+
+
+.. sagecellserver::
+
+   var('x a')
+   f(x)=a*x*(1-x)
+   s = solve(x==f(f(x)),x)
+   show(s)
+
+   plot(s[3].rhs(),(a,0,1),thickness=2)+\
+    plot(s[2].rhs(),(a,1,3),thickness=2)+\
+    plot(s[3].rhs(),(a,1,4),thickness=2,color='red',figsize=(7,3))+\
+    plot(s[0].rhs(),(a,3,4),thickness=2)+\
+    plot(s[1].rhs(),(a,3,4),thickness=2)+\
+    plot(s[2].rhs(),(a,3,4),thickness=2,ymin=0,ymax=1,color='red')
+
+
+Wykres ten, zwany diagramem bifurkacyjnym, nie jest do końca
+kompletny - skoro pojawiły się dwie bifurkacje to nie ma powodu, żeby
+zakładać, że więcej się nie pojawi! W dajszej analizie pojawia się jednak
+zasadniczy problem. Otóż nie możemy badać analitycznie punktów stałych
+dalszych złożeń odwzorowania :math:`f(f(f(x)))=x`, bo w poprzednim
+przypadku wyczerpaliśmy możliwość dokładnego znajdywnania miejsc
+zerowych wielomianów. Zgodnie z `Teoria Galois
+<http://pl.wikipedia.org/wiki/Teoria_Galois>`_ wzory analityczne na
+pierwiastki wielomianu kończą się w przypadku ogólnym na stopniu
+cztery. Oczywiście można zastosować metody przybliżone, lub metodę
+graficzną. Jednak okazuje się, że całkiem niezlym sposobem na poznanie
+struktury cykli układu jest po prostu jego symulacja na tyle długa by
+układ zdążył dojść wystarczająco blisko do attraktora.
+
+
+Jednym z ciekawych sposobów pozanania dynamiki układów dyskretnych są
+wykresy "pajęczynowe" (z ang. cobweb plot), znane także jako wykresy
+Verhulsta. Spróbujemy samodzielnie skonstruować owy wykres. Na osiach
+będą umieszczone wartości populacji w kolejnych iteracjach:
+:math:`x_i,x_{i+1}`, zakresy obu osi będą więc :math:`0..1`. Zaczynamy
+od narysowania prostej :math:`x_{i+1}=x_i`, będącą przekątną wykresu,
+a następnie wykresu zależności :math:`x_{i+1}=f(x_i)`, dla pewnego
+ustalonego parametru :math:`a`. Chcemy przedstawić trajektorię
+ewolucji pewnego stanu początkowego :math:`x_0`. Procedura rysowania
+składa się z czterech etapów:
+
+#) Znajdujemy punkt przecięcia się pionowej prostej przechodzącej
+    przez punkt :math:`(x_0,0)` z wykresem funkcji :math:`f`, czyli:
+    :math:`x_0, f(x_0)`
+
+#) Łączymy ten punkt poziomą linią z przekątną, tzn z punktem
+   :math:`f(x_0), f(x_0)`.
+
+#) Linią pionową łączymy powyższy punkt z wykresem funkcji :math:`f`,
+   czyli z punktem :math:`f(x_0), f(f(x_0))`.
+
+#) Potwarzamy dowolną ilość razy kroki 2 i 3.
+
+Powyższy algorytm łatwo jest wykonać nawet na kartce papieru, bez
+użycia komputera. Wystarczy na wykresie zawierającym przekątną oraz
+krzywą :math:`f(x)`, łączyć naprzemienne funkcję z przekątną i
+przekątną i z funkcją, odcinkami, odpowiednio: poziomymi i pionowymi.
+
+Poniższa implementacja, oprócz rysowania wykresu, koloruje pierwszych
+pięć iteracji na niebiesko a ostatnie pięć na czerwono, co pozwala na
+lepsze dostrzeżenie pojawiających się cykli. Zachęcamy do
+eksperymentowania z poniższym kodem i manipulacji sposobem
+wizualizacji.
+
+.. sagecellserver::
+
+    var('r,x0,n')
+    @interact
+    def cobweb(r=slider(0,4.001,0.001,default=2),x0=slider(0,1,0.1,default=0.4)):
+        f(x)=r*x*(1-x)
+        p = plot(f(x)==0,(x,0,1),ymin=-0.1,ymax=1.5,xmin=0,xmax=1.5,color='black')
+        p += plot(x,(x,0,1),color='green',figsize=7)
+        for n in range(50):
+            th = 1
+            if n>45:
+                th = 1.5
+                color='red'
+            elif n < 5:
+                color='blue'
+                th=1.5    
+            else:
+                color='grey'
+                th =0.5        
+            l1 = line([(x0,x0),(x0,f(x0))],color=color,thickness=th)
+            l2 = line([(x0,f(x0)),(f(x0),f(x0))],color=color,thickness=th,xmin=0,xmax=1,ymin=0,ymax=1)
+            p = p+l1+l2
+            x0 = f(x0)
+        p.axes_labels(["$x_n$","$x_{n+1}$"])     
+        p.show(aspect_ratio=1)
+    
+
+Badanie układu można rozpocząć od przyglądania się jak układ dąży do
+zerowego punktu stałego dla :math:`a<1`. W tym przypadku widać brak
+punktu przecięcia się paraboli z przekątną, z wyjątkiem zera. W
+obszarze parametru :math:`1<a<3` parabola ma niezerowy punkt
+przecięcia się z przekątną. Zwiększanie parametru powyżej :math:`a=2`
+powoduje, że ewolucja coraz wolniej dąży do punktu stałego, a gdy się
+zbliżymy do trzech np. :math:`a=2.9` układ wykonuje wiele oscylacji
+zamin znajdzie się w otoczeniu attraktora. Wygląda to tak jakby
+attrator coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
+powyżej trójki np.: :math:`a=3.5` to otrzymujemy rozwiązanie. które
+jest zamkniętą krzywą owijającą się jeden raz wokół niestabilnego
+punktu stałego, co odpowiada rozwiązaniu o okresię 2. Dla
+:math:`a=3.5` krzywa owija się już dwa razy. Odpowiada to rozwiązaniu
+o okresie 4, co sugeruje, że układ pomiędzy wartościami parametru
+:math:`a=3.2` a :math:`a=3.5` przeszedł kolejną bifurkację!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+.. sagecellserver::
+
+    x = a*x*(1-x)
+    point(pkts,figsize=5,xmin=0,xmax=1).show()
+
 
 .. [may76] May, R. M. "Simple mathematical models with very complicated dynamics". Nature 261 (5560): 459–467,1976.
 
