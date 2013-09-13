@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
 
-Zmienne - rozwiązania zadań
----------------------------
+Zmienne
+-------
 
 Zadanie 1: Określ jaki typ mają poniższe zmienne
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,11 +22,13 @@ czas: 5 min.
     sage: zmienna_z_zadania = ("Ala", 21, 4.5); print zmienna_z_zadania, type(zmienna_z_zadania)
     sage: ocena = 3.5; print ocena, type(ocena)
     sage: imie = "Feliks"; print imie, type(imie)
-    1 <type 'sage.rings.integer.Integer'>
-    (1, 2, 3) <type 'tuple'>
-    ('Ala', 21, 4.50000000000000) <type 'tuple'>
-    3.50000000000000 <type 'sage.rings.real_mpfr.RealLiteral'>
-    Feliks <type 'str'>
+
+
+| 1 <type 'sage.rings.integer.Integer'>
+| (1, 2, 3) <type 'tuple'>
+| ('Ala', 21, 4.50000000000000) <type 'tuple'>
+| 3.50000000000000 <type 'sage.rings.real_mpfr.RealLiteral'>
+| Feliks <type 'str'>
 
 .. end of output
 
@@ -38,7 +40,7 @@ czas: 5 min.
 
 Napisz program konwertujący temperaturę mierzoną w stopniach Celsiusa do stopni Fahrenheita według równania
 
-:math:` F = {9\over 5}C + 32`
+:math:`F = {9 \over 5}C + 32`
 
 Użyj identycznych nazw zmiennych. Następnie napisz program konwertujący temperaturę w drugą stronę.
 
@@ -48,7 +50,9 @@ Użyj identycznych nazw zmiennych. Następnie napisz program konwertujący tempe
     sage: C = 25
     sage: F = 9./5 * C + 32
     sage: print C, "stopni Celsiusa to", F, "stopni Fahrenheita"
-    25 stopni Celsiusa to 77.0000000000000 stopni Fahrenheita
+
+
+25 stopni Celsiusa to 77.0000000000000 stopni Fahrenheita
 
 .. end of output
 
@@ -57,7 +61,9 @@ Użyj identycznych nazw zmiennych. Następnie napisz program konwertujący tempe
     sage: F = 77
     sage: C = (F-32)*5/9.
     sage: print  F, "stopni Fahrenheita to", C, "stopni Celsiusa"
-    77 stopni Fahrenheita to 25.0000000000000 stopni Celsiusa
+
+
+77 stopni Fahrenheita to 25.0000000000000 stopni Celsiusa
 
 .. end of output
 
@@ -71,7 +77,7 @@ czas: 10 min.
 
 :math:`\text{Area} = \pi {r}^{2},\quad \text{gdzie}\quad r = {\pi}^{{1\over 3} }-  1`
 
-:math:`\text{_}0 ={\cosh }^{2}(x) +{\sinh }^{2}(x),\quad \text{gdzie}\quad x = 32 \pi`
+:math:`\_0 ={\cosh }^{2}(x) +{\sinh }^{2}(x),\quad \text{gdzie}\quad x = 32 \pi`
 
 :math:`f = {{(x + {y}^{0.4})}^{0.25x}\over 0.8} +\log \Big ({x\over y}\Big ) + 10^{x+{y}^{2} },\quad \text{gdzie}\quad x =\sinh (1),y =\tanh (20)`
 
@@ -82,7 +88,9 @@ czas: 10 min.
     sage: r = pi^(1/3) - 1
     sage: Area = pi * r^2
     sage: print "Area =", Area, "=", Area.n()
-    Area = (pi^(1/3) - 1)^2*pi = 0.678099020346954
+
+
+Area = (pi^(1/3) - 1)^2*pi = 0.678099020346954
 
 .. end of output
 
@@ -92,7 +100,9 @@ czas: 10 min.
     sage: x = 32*pi
     sage: _0 = cosh(x)^2 + sinh(x)^2
     sage: print "_0 =", _0, "=", _0.n()
-    _0 = sinh(32*pi)^2 + cosh(32*pi)^2 = 1.04485650343921e87
+
+
+_0 = sinh(32*pi)^2 + cosh(32*pi)^2 = 1.04485650343921e87
 
 .. end of output
 
@@ -102,7 +112,9 @@ czas: 10 min.
     sage: x, y = sinh(1), tanh(20)
     sage: f = (x+y^0.4)^(0.25*x)/0.8 + log(x/y) + 10^(x+y^2)
     sage: print "f =", f, "=", f.n()
-    f = 1.25000000000000*(tanh(20)^0.400000000000000 + sinh(1))^(0.250000000000000*sinh(1)) + 10^(tanh(20)^2 + sinh(1)) + log(sinh(1)/tanh(20)) = 151.424943167773
+
+
+f = 1.25000000000000*(tanh(20)^0.400000000000000 + sinh(1))^(0.250000000000000*sinh(1)) + 10^(tanh(20)^2 + sinh(1)) + log(sinh(1)/tanh(20)) = 151.424943167773
 
 .. end of output
 
@@ -130,7 +142,9 @@ Napisz program znajdujący ”wysokość”piłki :math:`y` dla zadanych wartoś
     sage: x = 1 #m
     sage: y = h0 + x*tan(alpha) - g/(2*v0^2*cos(alpha)^2)*x^2
     sage: print "Wysokość piłki po %.2fm wynosi %.2fm" % (x,y)
-    Wysokość piłki po 1.00m wynosi 0.62m
+
+
+Wysokość piłki po 1.00m wynosi 0.62m
 
 .. end of output
 
@@ -173,9 +187,11 @@ Przepisz kod tak, aby zwracał m/w taką informację
     sage: print """Na odległości %.3f m ciało rzucone z wysokości %.1f m z  
     sage: prędkością początkową %d m/s pod kątem %.2f rad  
     sage: znajduje się na wysokości %.1f m w polu grawitacyjnym Ziemi.""" % (x, h0, v0, alpha, y)
-    Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z  
-    prędkością początkową 3 m/s pod kątem 0.12 rad  
-    znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.
+
+
+| Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z  
+| prędkością początkową 3 m/s pod kątem 0.12 rad  
+| znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.
 
 .. end of output
 
@@ -185,7 +201,7 @@ Zadanie 6: Słownik przyspieszeń
 
 czas: 10 min.
 
-Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego a jako wartość wartość przyspieszenia na nim podają w :math:`m∕s`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.
+Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego a jako wartość wartość przyspieszenia na nim podają w :math:`m/s`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.
 
 
 .. code-block:: python
@@ -230,7 +246,9 @@ Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak
     sage: waluta = "Euro"
     sage: W = A * (1 + p/100)^n
     sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
-    Zainwestowane 1000.00 Euro wzrośnie po 3 latach do kwoty 1157.62 Euro przy stopie 5.00 procentowej
+
+
+Zainwestowane 1000.00 Euro wzrośnie po 3 latach do kwoty 1157.62 Euro przy stopie 5.00 procentowej
 
 .. end of output
 
@@ -243,7 +261,9 @@ Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak
     sage: waluta = "zł"
     sage: W = A * (1 + p/100)^n
     sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
-    Zainwestowane 23513.00 zł wzrośnie po 5 latach do kwoty 27980.07 zł przy stopie 3.54 procentowej
+
+
+Zainwestowane 23513.00 zł wzrośnie po 5 latach do kwoty 27980.07 zł przy stopie 3.54 procentowej
 
 .. end of output
 
@@ -256,7 +276,9 @@ Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak
     sage: waluta = "Rubli"
     sage: W = A * (1 + p/100)^n
     sage: print "Zainwestowane %.2f %s wzrośnie po %d roku do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
-    Zainwestowane 112120000.00 Rubli wzrośnie po 1 roku do kwoty 120125368.00 Rubli przy stopie 7.14 procentowej
+
+
+Zainwestowane 112120000.00 Rubli wzrośnie po 1 roku do kwoty 120125368.00 Rubli przy stopie 7.14 procentowej
 
 .. end of output
 

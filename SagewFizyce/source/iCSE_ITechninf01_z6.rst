@@ -10,7 +10,7 @@
 Pakiet SAGE, notatnik Sage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Po zalogowaniu do serwisu `sage.phys.us.edu.pl <http://sage.phys.us.edu.pl>`_  dostaniemy mniej więcej taki obraz
+Po zalogowaniu do serwisu `sage.phys.us.edu.pl <http://sage.phys.us.edu.pl>`_  dostaniemy taki obraz
 
 .. image:: iCSE_ITechninf01_z6_media/scr001.png
     :align: center
@@ -123,11 +123,11 @@ Arkusz powinien wyglądać jak na rysunku 2.
 
 #. Pierwszy notatnik studenta.
    Nazwa edytowanego notatnika. Pod nazwą  dostaniemy  informację  o  dacie  i  użytkowniku  który  dokonał  ostatnich  zmian dokumentu. 
-#. **File...**
-   Rozwijalna lista służąca do obsługi notatnika. Możemy wybrać **Load worksheet from a ﬁle** Sage ładuje notatnik zapisany uprzednio  w pliku (operacja tworzy nowy notatnik) a następnie przechodzi do          niego.
+#. **file...**
+   Rozwijalna lista służąca do obsługi notatnika. Możemy wybrać **Load worksheet from a file** Sage ładuje notatnik zapisany uprzednio  w pliku (operacja tworzy nowy notatnik) a następnie przechodzi do          niego.
 
    - **New worksheet** Tworzy nowy notatnik, patrz 10.
-   - **Save worksheet to a ﬁle** Zapisuje  notatnik  do  pliku  o  rozszerzeniu **sws**. Domyślna nazwa pliku to nazwa edytowanego notatnika.
+   - **Save worksheet to a file** Zapisuje  notatnik  do  pliku  o  rozszerzeniu **sws**. Domyślna nazwa pliku to nazwa edytowanego notatnika.
    - **Print** Otwiera odpowiednią do wydruku, statyczną wersję notatnika.
    - **Rename worksheet** Zmiana nazwy edytowanego notatnika.
    - **Copy worksheet** Kopiuje zawartość notatnika do innego o podawanej później nazwie.
@@ -147,7 +147,7 @@ Arkusz powinien wyglądać jak na rysunku 2.
 
 #. **Data...**
 
-   - **Upload or create ﬁle** Po wybraniu przejdziemy do formularza, dzięki  któremu będziemy w stanie przesłać plik (obrazek, arkusz CSV, ...) na  serwer.
+   - **Upload or create file** Po wybraniu przejdziemy do formularza, dzięki  któremu będziemy w stanie przesłać plik (obrazek, arkusz CSV, ...) na  serwer.
 
    Uwaga: Gdy dla konkretnego arkusza dostępny będzie jakiś plik, będzie on   uwidoczniony i dostępny tutaj. Dostęp do plików w notatniku dostajemy   po wpisaniu  **DATA\+’nazwa_pliku’**
 
@@ -189,8 +189,6 @@ Arkusz powinien wyglądać jak na rysunku 2.
 Pierwsze kroki w Sage
 ~~~~~~~~~~~~~~~~~~~~~
 
-Sage to stosunkowo młody pakiet, pierwsza jego wersja pojawiła się w 2005 roku. Jest to pakiet w pełni otwarty nie tylko pod względem kodu, ale i metodologii rozwoju. Dzięki wykorzystaniu dostępnych technologii i innowacyjnemu podejściu głównego twórcy pakietu \- dr. Williama Steina z University of Washington w Seattle \- pakiet doścignął, a w wielu dziedzinach już przegonił konkurencyjne rozwiązania komercyjne. Dziś jest rozwijany przez ponad 200 osób z całego świata, przy czym większość z nich czynnie pracuje w instytucjach naukowych \- dzięki temu dostosowany jest on do prowadzenia badań i tworzenia materiałów dydaktycznych. Potwierdza to ponad 150 artykułów, rozpraw i książek cytujących pakiet oraz liczne kursy realizowane z wykorzystaniem tego pakietu, głównie z grupy nauk ścisłych, zarazem z matematyki, informatyki, jak i ﬁzyki.
-
 
 Sage (Software for Algebra and Geometry Experimentation) \- system algebry komputerowej napisanego w Pythonie i Cythonie. Do podstawowych ale i tych bardzo zaawansowanych obliczeń język Python nie będzie niezbędny, choć jeżeli ktoś go zna, na pewno ułatwi to naukę samego Sage.
 
@@ -210,7 +208,7 @@ Zanim zaczniemy, potrzebna nam jeszcze tylko kilka informacji:
 Proste obliczenia w Sage
 """"""""""""""""""""""""
 
-Sage bez problemu potraﬁ obsłużyć najprostsze operacja arytmetyczne. 
+Sage bez problemu potrafi obsłużyć najprostsze operacja arytmetyczne. 
 
 Dodawanie
 
@@ -284,7 +282,7 @@ Ile wynosi?
 -------------
 
 
-Oczywiście najprościej sprawdzić w notatniku
+Oczywiście najprościej sprawdzić w notatniku:
 
 
 .. code-block:: python
@@ -293,8 +291,6 @@ Oczywiście najprościej sprawdzić w notatniku
 
 
 .. end of output
-
-ale, aby na przyszłość nie robić głupot, należy zapoznać się z tabelą pierwszeństwa operatorów. W tym celu odsyłamy do  `Samouczka <https://sage2.icse.us.edu.pl/doc/live/tutorial/appendix.html#arithmetical-binary-operator-precedence>`_  (Help \- Tutorial \- Appendix).
 
 
 
@@ -305,7 +301,7 @@ Zadania
 
 czas: 5 min.
 
-W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła  3.44 m∕s.
+W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła  3.44 m/s.
 
 **Rozwiązanie**
 
@@ -316,7 +312,7 @@ Znając rozwiązanie równań ruchu, mamy
    h(t) = {v}_{0}t - {1\over 2}g t^2
 
 
-Jeżeli :math:`{v}_{0} = 3.44` m∕s,  a :math:`t = 0.54` s, to łatwo obliczyć, że
+Jeżeli :math:`{v}_{0} = 3.44` m/s,  a :math:`t = 0.54` s, to łatwo obliczyć, że
 
 .. math::
 
@@ -379,7 +375,7 @@ Ostatnie zadanie jest lekko karkołomne jeżeli obliczać podane wartości osobn
 
 .. end of output
 
-Teraz korzystając z tych  deﬁnicji możemy obliczyć np: sumę wszystkich zmiennych x, y i z.
+Teraz korzystając z tych  definicji możemy obliczyć np: sumę wszystkich zmiennych x, y i z.
 
 
 .. code-block:: python
@@ -390,7 +386,7 @@ Teraz korzystając z tych  deﬁnicji możemy obliczyć np: sumę wszystkich zmi
 .. end of output
 
 
-Spróbujmy obliczyć jeszcze raz na jaką wysokość doleci piłka rzucona na równiku Ziemskim z prędkością początkową :math:`{v}_{0} = 3.44` m∕s po czasie :math:`t = 0.54` s (patrz zadanie 2). Tym razem wykorzystamy zmienne \- zobaczycie, że późniejsze zmiany dowolnych parametrów układu (jak np: grawitacja) będą już znacznie łatwiejsze.
+Spróbujmy obliczyć jeszcze raz na jaką wysokość doleci piłka rzucona na równiku Ziemskim z prędkością początkową :math:`{v}_{0} = 3.44` m/s po czasie :math:`t = 0.54` s (patrz zadanie 2). Tym razem wykorzystamy zmienne \- zobaczycie, że późniejsze zmiany dowolnych parametrów układu (jak np: grawitacja) będą już znacznie łatwiejsze.
 
 
 .. code-block:: python

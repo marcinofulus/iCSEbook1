@@ -13,6 +13,7 @@ Podręcznik użytkownika
 .. toctree::
    :maxdepth: 1
 
+   iCSE_Sage1
    iCSE_ITechninf01_z6
    iCSE_ITechninf04_z78
    iCSE_ITechninf05_z80_mechanika

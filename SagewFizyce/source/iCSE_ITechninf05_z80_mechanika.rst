@@ -83,13 +83,16 @@ Rozwiązanie:
 
     sage: v = x.diff(t); print "prędkość"; show(v)
     sage: a = x.diff(t,2); print "przyspieszenie"; show(a)
-    prędkość
-    przyspieszenie
+
+
+prędkość
 
 .. MATH::
 
     \left( t, v_{0}, k \right) \ {\mapsto} \ v_{0} e^{\left(-k t\right)}
 
+
+przyspieszenie
 
 .. MATH::
 
@@ -110,7 +113,9 @@ Rozwiązanie:
     sage: plot(a(t,v_0=v0n,k=kn), (t,0,10), color='green', legend_label=r"$a(t)$") + 
     sage: plot(asympt1(v_0=v0n,k=kn), (t,0,10), color='black', legend_label=r"asymptota $x(0) = %s$"%asympt1, linestyle='dotted') + 
     sage: plot(asympt2(v_0=v0n,k=kn), (t,0,10), color='black', legend_label=r"asymptota $x(\infty) = %s$"%asympt2, linestyle='dotted')).show(axes_labels=["$t$","$x,v,a$"], fontsize=14, legend_loc='lower right')
-    v_n = 2, k = 1
+
+
+v_n = 2, k = 1
 
 .. MATH::
 
@@ -138,7 +143,9 @@ Znak prędkości zawsze jest odwrotny do znaku przyspieszenia, bo :math:`a(t) = 
     sage: plot(a(t,v_0=v0n,k=kn), (t,0,10), color='green', legend_label=r"$a(t)$") + 
     sage: plot(asympt1(v_0=v0n,k=kn), (t,0,10), color='black', legend_label=r"asymptota $x(0) = %s$"%asympt1, linestyle='dotted') + 
     sage: plot(asympt2(v_0=v0n,k=kn), (t,0,10), color='black', legend_label=r"asymptota $x(\infty) = %s$"%asympt2, linestyle='dotted')).show(axes_labels=["$t$","$x,v,a$"], fontsize=14, legend_loc=0)
-    v_n = -2, k = 0.300000000000000
+
+
+v_n = -2, k = 0.300000000000000
 
 .. MATH::
 
@@ -224,7 +231,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
     sage: # obliczmy t dla którego mamy owo maksimum - wystarczy znajeźć miejsca zerowe pochodnej
     sage: v = x.diff(t); print v
     sage: zerav = solve(v == 0, t)
-    (t, a, b) |--> -3*b*t^2 + 2*a*t
+
+
+(t, a, b) --> -3*b*t^2 + 2*a*t
 
 .. end of output
 
@@ -232,7 +241,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
 
     sage: # czas po jakim osiągamy maksimum
     sage: maksimumx_t(a,b) = zerav[0].rhs(); print maksimumx_t
-    (a, b) |--> 2/3*a/b
+
+
+(a, b) --> 2/3*a/b
 
 .. end of output
 
@@ -240,7 +251,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
 
     sage: # zatem, dla naszych parametrów 
     sage: print "maksymalna odległość w kierunku dodatnim osi x osiągnięta zostanie po ", maksimumx_t(an,bn), "sekundach"
-    maksymalna odległość w kierunku dodatnim osi x osiągnięta zostanie po  2 sekundach
+
+
+maksymalna odległość w kierunku dodatnim osi x osiągnięta zostanie po  2 sekundach
 
 .. end of output
 
@@ -250,7 +263,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
     sage: # należy wziąść pod uwagę, że punkt na początku poruszał się w kierunku dodatnich x
     sage: # a później w kierunku ujemnych, więc najprościej jest napisać
     sage: droga = abs(x(4,an,bn)) + x(maksimumx_t(an,bn),an, bn) * 2; print "droga po 4 sekundach wynosi %dm" % droga
-    droga po 4 sekundach wynosi 24m
+
+
+droga po 4 sekundach wynosi 24m
 
 .. end of output
 
@@ -260,7 +275,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
     sage: xn(t) = x(t,an,bn)
     sage: #s = integral_numerical(sqrt(1 + (diff(xn,t))^2), (t,0, 4))
     sage: droga = integral_numerical(sqrt(1+(xn.diff(t))^2),0,4)[0]; print "droga po 4 sekundach wynosi %dm" % droga
-    droga po 4 sekundach wynosi 24m
+
+
+droga po 4 sekundach wynosi 24m
 
 .. end of output
 
@@ -268,7 +285,9 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
 
     sage: # 4. przemieszczenie po 4 s?
     sage: print "przemieszczenie po 4 sekundach wynosi %dm" % x(4,an,bn)
-    przemieszczenie po 4 sekundach wynosi -16m
+
+
+przemieszczenie po 4 sekundach wynosi -16m
 
 .. end of output
 
@@ -278,12 +297,15 @@ Pytania (przyjmijmy, że :math:`a = 3`, :math:`b=1`):
     sage: # jako, że już obliczyliśmy predkość, bo była potrzebna do znalezienia maksimum, wystarczy teraz zapisać
     sage: for tn in range(1,5):
     ...       print "Prędkość dla t = %d wynosi v(%d) = %d" %(tn, tn, v(tn,an,bn))
-    Prędkość dla t = 1 wynosi v(1) = 3
-    Prędkość dla t = 2 wynosi v(2) = 0
-    Prędkość dla t = 3 wynosi v(3) = -9
-    Prędkość dla t = 4 wynosi v(4) = -24
+
+
+| Prędkość dla t = 1 wynosi v(1) = 3
+| Prędkość dla t = 2 wynosi v(2) = 0
+| Prędkość dla t = 3 wynosi v(3) = -9
+| Prędkość dla t = 4 wynosi v(4) = -24
 
 .. end of output
+
 
 **Zadanie 3, (ResHol45r3t1)**
 
@@ -310,12 +332,14 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
     sage: x = function('x', t); print x
     sage: xs(t,aw,g,h0,v0) = desolve(diff(x,t,2) - aw - g == 0, x, ivar=t, ics=[0,h0,v0], contrib_ode=True)
     sage: xs
-    x(t)
-    (t, aw, g, h0, v0) |--> 1/2*(aw + g)*t^2 + t*v0 + h0
 
 .. MATH::
 
     \hbox{$m\ddot{x}_s(t) = ma_{w} + mg \qquad \Rightarrow \qquad \ddot{x}_s = a_{w} + g$}
+
+
+| x(t)
+| (t, aw, g, h0, v0) --> 1/2*(aw + g)*t^2 + t*v0 + h0
 
 
 .. end of output
@@ -327,11 +351,13 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
     sage: # potrzebujemy tylko wzoru na prędkość
     sage: vw(t,aw,h0,v0) = desolve(diff(x,t) - aw == 0, x, ivar=t, ics=[0,h0], contrib_ode=True); print vw
     sage: plot(vw(t,a_windy, 0, 0),0,4).show(axes_labels=["$t$","$v_w(t)$"], fontsize=28, dpi=40)
-    (t, aw, h0, v0) |--> aw*t + h0
 
 .. MATH::
 
     \hbox{$m\ddot{x}_w(t) = ma_{w}\qquad \Rightarrow \qquad \ddot{x}_w = a_{w}$}
+
+
+(t, aw, h0, v0) --> aw*t + h0
 
 
 .. image:: iCSE_ITechninf05_z80_mechanika_media/cell_51_sage0.png
@@ -351,13 +377,18 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
     sage: plot(xw(t,a_windy, 0, 0),0,3).show(axes_labels=["$t$","$x_w(t)$"], fontsize=28, dpi=40)
     sage: xw0 = xw(t0n,a_windy, 0, 0)
     sage: print "wysokość windy po %.2fs wynosi %.2fm" %(t0n, xw0)
-    (aw, h0, v0) |--> -1/5*(5*h0 - 12)/aw
-    czas do prędkośći windy = 2.4 wynosi 2.00s
-    (t, aw, h0, v0) |--> 1/2*aw*t^2 + t*v0 + h0
-    wysokość windy po 2.00s wynosi 2.40m
+
+
+| (aw, h0, v0) --> -1/5*(5*h0 - 12)/aw
+| czas do prędkośći windy = 2.4 wynosi 2.00s
+| (t, aw, h0, v0) --> 1/2*aw*t^2 + t*v0 + h0
+
 
 .. image:: iCSE_ITechninf05_z80_mechanika_media/cell_52_sage0.png
     :align: center
+
+
+wysokość windy po 2.00s wynosi 2.40m
 
 
 .. end of output
@@ -365,10 +396,12 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
 .. code-block:: python
 
     sage: tmp = solve(xs(t,a_windy,gZ,0,0) == h_windy, t); print tmp
-    [
-    t == -6/367*sqrt(5)*sqrt(367),
-    t == 6/367*sqrt(5)*sqrt(367)
-    ]
+
+
+| [
+| t == -6/367*sqrt(5)*sqrt(367),
+| t == 6/367*sqrt(5)*sqrt(367)
+| ]
 
 .. end of output
 
@@ -376,7 +409,9 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
 
     sage: # jako, że czas musi byc > 0, to
     sage: czas_spadku = tmp[1].rhs().n(); print "czas spadku śruby to %.2fs"%czas_spadku
-    czas spadku śruby to 0.70s
+
+
+czas spadku śruby to 0.70s
 
 .. end of output
 
@@ -384,10 +419,14 @@ Winda wznosi się do góry z przyspieszeniem :math:`1.2 m/s^2`. W momencie gdy j
 
     sage: print "odległość jaką pokona śruba względem ścian domu wynosi %.2fm" % (xw0 + h_windy - xw(t0n+czas_spadku,a_windy,0,0))
     sage: html("<hr>")
-    odległość jaką pokona śruba względem ścian domu wynosi 0.72m
-    <html>...</html>
+
+
+odległość jaką pokona śruba względem ścian domu wynosi 0.72m
+
+----------
 
 .. end of output
+
 
 **Zadanie, (ResHolP1r4t1)**
 
@@ -427,8 +466,10 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
 
     sage: eqx = diff(x,t,t) == 0; print eqx
     sage: xs(t, v0) = desolve(eqx, x, ics=[0,0,v0]); print xs
-    D[0, 0](x)(t) == 0
-    (t, v0) |--> t*v0
+
+
+| D[0, 0](x)(t) == 0
+| (t, v0) --> t*v0
 
 .. end of output
 
@@ -436,8 +477,10 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
 
     sage: eqy = diff(y,t,t) == -g; print eqy
     sage: ys(t, y0, g) = desolve(eqy, y, ics=[0,y0,0], ivar=t, contrib_ode=True); print ys
-    D[0, 0](y)(t) == -g
-    (t, y0, g) |--> -1/2*g*t^2 + y0
+
+
+| D[0, 0](y)(t) == -g
+| (t, y0, g) --> -1/2*g*t^2 + y0
 
 .. end of output
 
@@ -452,7 +495,9 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
 
     sage: # równanie parametryczne na (x,y) tutaj niepotrzebne, ale jakby co...
     sage: ys(tt, y0, g)
-    -1/2*g*x(t)^2/v0^2 + y0
+
+
+-1/2*g*x(t)^2/v0^2 + y0
 
 .. end of output
 
@@ -460,10 +505,12 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
 
     sage: # czas spadku na ziemię
     sage: tmp = solve(ys == 0, t); print tmp
-    [
-    t == -sqrt(y0/g)*sqrt(2),
-    t == sqrt(y0/g)*sqrt(2)
-    ]
+
+
+| [
+| t == -sqrt(y0/g)*sqrt(2),
+| t == sqrt(y0/g)*sqrt(2)
+| ]
 
 .. end of output
 
@@ -473,7 +520,9 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
     sage: czas_spadku(y0, g) = tmp[1].rhs()
     sage: t_end = czas_spadku(y0n, gZ).n()
     sage: print "czas spadku na ziemię = %.2fs" % t_end
-    czas spadku na ziemię = 31.93s
+
+
+czas spadku na ziemię = 31.93s
 
 .. end of output
 
@@ -481,7 +530,9 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
 
     sage: x_zero = xs(czas_spadku(y0n, gZ).n(), vx0n)
     sage: print "odległość w kierunku poziomym jest zatem równa %.2fm" %x_zero
-    odległość w kierunku poziomym jest zatem równa 4434.38m
+
+
+odległość w kierunku poziomym jest zatem równa 4434.38m
 
 .. end of output
 
@@ -491,8 +542,10 @@ Samolot leci ze stałą poziomą prędkością 500 km/h na wysokości 5000 m, w 
     sage: phi = arctan(x_zero/y0n)
     sage: print "Kąt = %.2f radiany" % phi
     sage: print "Kąt = %.2f stopnie" % (phi*180/pi)
-    Kąt = 0.73 radiany
-    Kąt = 41.57 stopnie
+
+
+| Kąt = 0.73 radiany
+| Kąt = 41.57 stopnie
 
 .. end of output
 

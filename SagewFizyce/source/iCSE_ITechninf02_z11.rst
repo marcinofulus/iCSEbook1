@@ -13,11 +13,14 @@ Wróćmy na chwilę do zadania z podrzucaniem piłki w górę.
 
 **Zadanie: Ruch pionowy w polu grawitacyjnym Ziemi**
 
-W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość  wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła 3.44 m∕s.
+W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość  wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła 3.44 m/s.
 
-Rozwiązaliśmy ten problem już dwukrotnie \- raz bez zmiennych, a drugi raz z użyciem zmiennymi. Zatrzymajmy się teraz na tym samym problemie, ale skupmy się nie na rozwiązaniu, ale na metodyce wykorzystania zmiennych. Pamiętamy, że rozwiązanie dane jest wzorem
+Rozwiązaliśmy ten problem już dwukrotnie - raz bez zmiennych, a drugi raz z użyciem zmiennymi. Zatrzymajmy się teraz na tym samym problemie, ale skupmy się nie na rozwiązaniu, ale na metodyce wykorzystania zmiennych. Pamiętamy, że rozwiązanie dane jest wzorem
 
-:math:`h(t) = {v}_{0}t -{1\over 2}g{t}^{2}`
+.. math::
+   :label: Z1
+
+   h(t) = {v}_{0}t -{1\over 2}g{t}^{2}
 
 
 możemy  zatem  napisać  w  Sage
@@ -34,9 +37,9 @@ możemy  zatem  napisać  w  Sage
 
 .. end of output
 
-co zwróci nam oczywiście poprawne rozwiązanie. Jeżeli terazktoś zapyta się nas  a jak wysoko owa piłka poleci po 0.1 sekundy?
+co zwróci nam oczywiście poprawne rozwiązanie. Jeżeli teraz ktoś zapyta się nas  a jak wysoko owa piłka poleci po 0.1 sekundy?
 
-Mając dostępny wzór ( `1 <#x1-1001r1>`_ ) bez problemu zidentyﬁkujemy zmienne jako: :math:`{v}_{0} = c,t = b` i :math:`g = a`. Gorzej, jeżeli wzoru nie widzimy. Może pamiętacie w jaki sposób podano rozwiązanieza pomocą zmiennych na poprzedniej lekcji? Wybór  nazw zmiennych nie byłprzypadkowy – dobrano je tak, aby jak najbardziej przypominały równanie ( `1 <#x1-1001r1>`_ ).
+Mając dostępny wzór :eq:`Z1` bez problemu zidentyfikujemy zmienne jako: :math:`{v}_{0} = c,t = b` i :math:`g = a`. Gorzej, jeżeli wzoru nie widzimy. Może pamiętacie w jaki sposób podano rozwiązanie za pomocą zmiennych na poprzedniej lekcji? Wybór nazw zmiennych nie był przypadkowy – dobrano je tak, aby jak najbardziej przypominały równanie :eq:`Z1`.
 
 
 .. code-block:: python
@@ -49,10 +52,10 @@ Mając dostępny wzór ( `1 <#x1-1001r1>`_ ) bez problemu zidentyﬁkujemy zmien
 
 .. end of output
 
-W przypadku dość intuicyjnego (dla ﬁzyka) nazewnictwa zmiennych w równaniu( `1 <#x1-1001r1>`_ ), zrozumienie powyższego kodu nie powinno dla nikogo (z nas) stanowić problemu.Pamiętajcie: możemy jednak zapisać powyższe równanie w dowolny sposób
+W przypadku dość intuicyjnego (dla fizyka) nazewnictwa zmiennych w równaniu :eq:`Z1`, zrozumienie powyższego kodu nie powinno dla nikogo (z nas) stanowić problemu. Pamiętajcie: możemy jednak zapisać powyższe równanie w dowolny sposób
 
 - niezrozumiale, wykorzystując pierwsze lepsze nazwy dla zmiennych     
-- bardziej  zrozumiale,  choć  nieco  hermetycznie,  wykorzystując  naturalne  nazewnictwo zmiennych, np: z podręcznika do ﬁzyki     
+- bardziej  zrozumiale,  choć  nieco  hermetycznie,  wykorzystując  naturalne  nazewnictwo zmiennych, np: z podręcznika do fizyki     
 - stosując  pełne  nazwy,  co  daje  nam  pełne  informacje  o  problemie     (zazwyczaj)
 
 
@@ -68,7 +71,7 @@ W przypadku dość intuicyjnego (dla ﬁzyka) nazewnictwa zmiennych w równaniu(
 .. end of output
 
 
-Takie podejście do użycia zmiennych ma swoje plusy i minusy. Plusem jest czytelność rozwiązania. Minusem długość kodu i czas potrzebny na wprowadzenie takiej ilości tekstu (z czasem ten problem znika). Plusem łatwość modyﬁkacji i rozszerzania problemu (możemy dodać np: zmienną  przyspieszenie_ksiezyc = 1.622 i później łatwo i czytelnie wykorzystać ją w kodzie). Minusem (ale tylko dla alfabetów niespójnych z  `ASCII <http://pl.wikipedia.org/wiki/ASCII>`_ ) jest konieczność pisania  po polskiemu. Sami zdecydujecie w toku nauki programowania jaki styl kodu najbardziej Wam odpowiada \- bardziej hermetyczny i szybszy kod wykorzystujący typowe stałe matematyczno/ﬁzyczne oraz intuicję programisty, czy sposób wykorzystujący pełne nazwy. Często stosuje się też swego rodzaju mieszaninę ich obu, ale  nigdy nie powinniśmy programować używając pierwszych z brzegu nazw zmiennych.
+Takie podejście do użycia zmiennych ma swoje plusy i minusy. Plusem jest czytelność rozwiązania. Minusem długość kodu i czas potrzebny na wprowadzenie takiej ilości tekstu (z czasem ten problem znika). Plusem łatwość modyfikacji i rozszerzania problemu (możemy dodać np: zmienną  przyspieszenie_ksiezyc = 1.622 i później łatwo i czytelnie wykorzystać ją w kodzie). Minusem (ale tylko dla alfabetów niespójnych z  `ASCII <http://pl.wikipedia.org/wiki/ASCII>`_ ) jest konieczność pisania  po polskiemu. Sami zdecydujecie w toku nauki programowania jaki styl kodu najbardziej Wam odpowiada - bardziej hermetyczny i szybszy kod wykorzystujący typowe stałe matematyczno/fizyczne oraz intuicję programisty, czy sposób wykorzystujący pełne nazwy. Często stosuje się też swego rodzaju mieszaninę ich obu, ale  nigdy nie powinniśmy programować używając pierwszych z brzegu nazw zmiennych.
 
 **Uwaga:** Na tym kursie używanie przypadkowych nazw zmiennych będzie skutkowało obniżeniem oceny.
 
@@ -76,7 +79,7 @@ Takie podejście do użycia zmiennych ma swoje plusy i minusy. Plusem jest czyte
 Istnieją pewne reguły, do których można i powinno się stosować. Część z nich powoduje po prostu błędy, inne są wynikiem pewnych przyjętych standardów programowania.
 
 
-W Sage (i w języku Python) nie musimy deklarować typu zmiennej, typ jest ściśle związany z wartością zmiennej, nie z jej identyﬁkatorem. Identyﬁkator (nazwa) zmiennej, może się składać z dowolnych liter, znaku podkreślenia oraz cyfr. Zwykłe zmienne powinny się rozpoczynać od litery, zmienne zaczynające lub kończące się od znaku podkreślenia mają zwykle specjalne znaczenie, zatem lepiej ich unikać, choć znak podkreślenia wewnątrz zmiennej jest dozwolony. Nazwy zmiennych nie mogą zaczynać się od cyfry. Należy zwrócić uwagę na fakt, że Sage (Python) rozróżnia wielkość liter.
+W Sage (i w języku Python) nie musimy deklarować typu zmiennej, typ jest ściśle związany z wartością zmiennej, nie z jej identyfikatorem. Identyfikator (nazwa) zmiennej, może się składać z dowolnych liter, znaku podkreślenia oraz cyfr. Zwykłe zmienne powinny się rozpoczynać od litery, zmienne zaczynające lub kończące się od znaku podkreślenia mają zwykle specjalne znaczenie, zatem lepiej ich unikać, choć znak podkreślenia wewnątrz zmiennej jest dozwolony. Nazwy zmiennych nie mogą zaczynać się od cyfry. Należy zwrócić uwagę na fakt, że Sage (Python) rozróżnia wielkość liter.
 
 
 .. code-block:: python
@@ -93,7 +96,7 @@ W Sage (i w języku Python) nie musimy deklarować typu zmiennej, typ jest ści�
 
 .. end of output
 
-Do przypisania wartości do zmiennej służy operator przypisania (=). Powyżej do wszystkich zmiennych przypisaliśmy wartość :math:`0`. Oczywiście musimy być ostrożni, nie powinniśmy przypisywać nowych wartości nazwom już zdeﬁniowanym, może to prowadzić do nieoczekiwanych rezultatów:
+Do przypisania wartości do zmiennej służy operator przypisania (=). Powyżej do wszystkich zmiennych przypisaliśmy wartość :math:`0`. Oczywiście musimy być ostrożni, nie powinniśmy przypisywać nowych wartości nazwom już zdefiniowanym, może to prowadzić do nieoczekiwanych rezultatów:
 
 
 .. code-block:: python
@@ -116,7 +119,7 @@ teraz  przypiszemy  sobie
 
 .. end of output
 
-W ten sposób uszkodziliśmy funkcję sinus, przypisując pod nazwę sin napis. Pakiet Sagedostarcza funkcję  restore, która pozwala na przywrócenie domyślnej deﬁnicji danej nazwy:
+W ten sposób uszkodziliśmy funkcję sinus, przypisując pod nazwę sin napis. Pakiet Sage dostarcza funkcję  restore, która pozwala na przywrócenie domyślnej definicji danej nazwy:
 
 
 .. code-block:: python
@@ -127,7 +130,7 @@ W ten sposób uszkodziliśmy funkcję sinus, przypisując pod nazwę sin napis. 
 
 .. end of output
 
-Jak widzieliśmy już wcześniej, aby podzielić długą linię,należy użyć znaku  \  (wsteczny ukośnik, lewy ukośnik).
+Jak widzieliśmy już wcześniej, aby podzielić długą linię, należy użyć znaku  \\  (wsteczny ukośnik, lewy ukośnik).
 
 
 .. code-block:: python
@@ -138,58 +141,61 @@ Jak widzieliśmy już wcześniej, aby podzielić długą linię,należy użyć z
 
 .. end of output
 
-należy jednak pamiętać, żeby po znaku ukośnika nie wpisywać żadnych znaków (wtym znaków białych).
+należy jednak pamiętać, żeby po znaku ukośnika nie wpisywać żadnych znaków (w tym znaków białych).
 
 
 
 Nazwy zarezerwowane
 """""""""""""""""""
 
-W Sage jako pewnego rodzaju potomku języka Python występują nazwy, których niemożemy użyć jako nazw zmiennych, tzw. nazwy zarezerwowane. Oto ich lista:
+W Sage jako pewnego rodzaju potomku języka Python występują nazwy, których nie możemy użyć jako nazw zmiennych, tzw. nazwy zarezerwowane. Oto ich lista:
 
-and  assert  break  class  continue 
-
-
-def  del  elif  else  except 
+``and  assert  break  class  continue``
 
 
-exec  finally  for  from  global 
+``def  del  elif  else  except``
 
 
-if  import  in  is  lambda 
+``exec  finally  for  from  global``
 
 
-not  or  pass  print  raise 
+``if  import  in  is  lambda``
 
 
-return  try  while
-Nie powinno się również używać poniższych nazw, aczkolwiek nie są to słowazarezerwowane. Użycie ich spowoduje jednak konﬂikt z dość szeroko używanymifunkcjami Python\-a.
-
-Data  Float  Int  Numeric  Oxphys 
+``not  or  pass  print  raise``
 
 
-array  close  float  int  input 
+``return  try  while``
+
+Nie powinno się również używać poniższych nazw, aczkolwiek nie są to słowa zarezerwowane. Użycie ich spowoduje jednak konflikt z dość szeroko używanymifunkcjami Python\-a.
+
+``Data  float  Int  Numeric  Oxphys``
 
 
-open  range  type  write  zeros
+``array  close  float  int  input``
+
+
+``open  range  type  write  zeros``
+
 Powinno się również unikać stosowania nazw popularnych funkcji matematycznych.
 
-acos  asin  atan  cos  e 
+``acos  asin  atan  cos  e``
 
 
-exp  fabs  floor  log  log10 
+``exp  fabs  floor  log  log10``
 
 
-pi  sin  sqrt  tan
+``pi  sin  sqrt  tan``
 
-**Uwaga:**  Jeżeli jednak zdarzy się nam użyć którejś z powyższych nazw (oprócz tychzastrzeżonych), zawsze można odzyskać ją funkcją  restore().
+
+**Uwaga:**  Jeżeli jednak zdarzy się nam użyć którejś z powyższych nazw (oprócz tych zastrzeżonych), zawsze można odzyskać ją funkcją  restore().
 
 
 
 Komentarze
 ~~~~~~~~~~
 
-Komentarze w języku Python a więc i w Sage zaczynają się od znaku  #. Wszystko coznajduje się za tym znakiem będzie pomijane przez interpreter. Komentarze stosujesię w kilku celach. Można nimi zablokować na jakiś czas kawałek kodu stwarzającyproblemy. Zwykle jednak służy on do bezpośredniego opisu samego kodu. Przykładowo
+Komentarze w języku Python, a więc i w Sage zaczynają się od znaku  #. Wszystko coznajduje się za tym znakiem będzie pomijane przez interpreter. Komentarze stosujesię w kilku celach. Można nimi zablokować na jakiś czas kawałek kodu stwarzającyproblemy. Zwykle jednak służy on do bezpośredniego opisu samego kodu. Przykładowo
 
 
 .. code-block:: python
@@ -206,9 +212,9 @@ Komentarze w języku Python a więc i w Sage zaczynają się od znaku  #. Wszyst
 
 .. end of output
 
-W ten sposób praktycznie każdy program przez nas napisany będzieczytelny.
+W ten sposób praktycznie każdy program przez nas napisany będzie czytelny.
 
-Jest jeszcze jedna możliwość dodawanie komentarza doskryptów/programów Sage/Python \- używanie ciągów znakowych
+Jest jeszcze jedna możliwość dodawanie komentarza do skryptów/programów Sage/Python \- używanie ciągów znakowych
 
 
 .. code-block:: python
@@ -261,15 +267,15 @@ Ciągi znaków możemy dowolnie przypisywać do zmiennych
 .. end of output
 
 
-Istnieje specjalna konstrukcja ciągu znaków zaczynająca i kończąca się trzema cudzysłowami  """. Jest to ciąg znaków charakterystyczny dla języka Python i możeon ciągnąć się przez wiele linii. Odstępy użyte w środku zostaną zachowane. Ponadto możemy w takim środowisku używać pojedynczych apostrofów i cudzysłowów w zasadzie dowolnie. Przed literałem łańcuchowym takim jak powyżej  "ala ma kota" możemy użyć preﬁksów  r,u,b. Oznaczają one odpowiednio (pod warunkiem, że jako baza Sage mamy język Python w wersji 2.\*)
+Istnieje specjalna konstrukcja ciągu znaków zaczynająca i kończąca się trzema cudzysłowami  """. Jest to ciąg znaków charakterystyczny dla języka Python i możeon ciągnąć się przez wiele linii. Odstępy użyte w środku zostaną zachowane. Ponadto możemy w takim środowisku używać pojedynczych apostrofów i cudzysłowów w zasadzie dowolnie. Przed literałem łańcuchowym takim jak powyżej  "ala ma kota" możemy użyć prefiksów  r,u,b. Oznaczają one odpowiednio (pod warunkiem, że jako baza Sage mamy język Python w wersji 2.\*)
 
-r (row, raw string literal) w tak oznaczonym literale łańcuchowym wszystkie znaki traktowane będą dosłownie, np. ukośnik wsteczny traktowany będzie jak zwykły ukośnik wsteczny
+``r`` (row, raw string literal) w tak oznaczonym literale łańcuchowym wszystkie znaki traktowane będą dosłownie, np. ukośnik wsteczny traktowany będzie jak zwykły ukośnik wsteczny
 np: r"ala ma kota", r’\sin to komenda \LaTeX{}a’
 
-u (unicode) napis w Unikodzie
+``u`` (unicode) napis w Unikodzie
 np: u"ala ma kota", u’zażółć gęślą jaźń’
 
-b napis w ASCII
+``b`` napis w ASCII
 np: b"ala ma kota", b’A quick brown fox jumps over the lazy dog’
 
 Oczywiście jest spora różnica pomiędzy  1  i  "1"
@@ -297,35 +303,35 @@ Na chwilę skupimy się na języku Python. Język ten, jak wiemy, stanowi bazę 
 Typy danych w Pythonie
 """"""""""""""""""""""
 
-W Pythonie wartości, a nie zmienne, posiadają typ – tak więc Python jest językiem ztypami dynamicznymi. Wszystkie wartości przekazywane są przez referencję. Wporównaniu z innymi językami z typami dynamicznymi Python sprawdza typy wumiarkowanym stopniu. Dla typów numerycznych zdeﬁniowana jest automatycznakonwersja, tak więc możliwe jest np. mnożenie liczby zespolonej przez liczbęcałkowitą typu long bez rzutowania. Nie ma natomiast automatycznej konwersjipomiędzy napisami i liczbami.
+W Pythonie wartości, a nie zmienne, posiadają typ – tak więc Python jest językiem z typami dynamicznymi. Wszystkie wartości przekazywane są przez referencję. W porównaniu z innymi językami z typami dynamicznymi Python sprawdza typy w umiarkowanym stopniu. Dla typów numerycznych zdefiniowana jest automatyczna konwersja, tak więc możliwe jest np. mnożenie liczby zespolonej przez liczbę całkowitą typu long bez rzutowania. Nie ma natomiast automatycznej konwersji pomiędzy napisami i liczbami.
 
-Tutaj podamy jedynie podstawowe informacje na temat typów danych. Po niecoobszerniejszą lekturę odsyłamy np. do części  Wbudowane typy danych podręcznika `Zanurkuj w Pythonie <http://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie>`_.
+Tutaj podamy jedynie podstawowe informacje na temat typów danych. Po nieco obszerniejszą lekturę odsyłamy np. do części  Wbudowane typy danych podręcznika `Zanurkuj w Pythonie <http://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie>`_.
 
-bool typ logiczny True, False
+``bool`` typ logiczny True, False
 
-int liczba całkowita 1, 13
+``int`` liczba całkowita 1, 13
 
-ﬂoat liczba zmiennoprzecinkowa 3.1415
+``float`` liczba zmiennoprzecinkowa 3.1415
 
-complex liczba zespolona 1 \+ 3j
+``complex`` liczba zespolona 1 \+ 3j
 
-str napis (niezmienny) ”To jest napis”
+``str`` napis (niezmienny) ”To jest napis”
 
-unicode napis w Unikodzie (niezmienny) ”To jest napis”
+``unicode`` napis w Unikodzie (niezmienny) ”To jest napis”
 
-bytes napis w ASCII b”To jest napis ASCII”
+``bytes`` napis w ASCII b”To jest napis ASCII”
 
-list lista (zmienna zawartość i długość) [2, "Ala", -12.32]
+``list`` lista (zmienna zawartość i długość) [2, "Ala", -12.32]
 
-tuple krotka (niezmienna) (2, "Ala", -12.32)
+``tuple`` krotka (niezmienna) (2, "Ala", -12.32)
 
-set zbiór (zmienny) set([2, "Ala", -12.32])
+``set`` zbiór (zmienny) set([2, "Ala", -12.32])
 
-frozenset zbiór (niezmienny) frozenset([2, "Ala", -12.32])
+``frozenset`` zbiór (niezmienny) frozenset([2, "Ala", -12.32])
 
-dict słownik (tablica asocjacyjna) (zmienny) {1: "jeden", "dwa": 2}
+``dict`` słownik (tablica asocjacyjna) (zmienny) {1: "jeden", "dwa": 2}
 
-type(None) odpowiednik null None
+``type(None)`` odpowiednik null None
 
 
 Większość, jeżeli nie wszystkie powyższe typy poznacie w ramach tego kursu. Sage domyślnie posiada jednak swoje własne typy danych, które w większości odpowiadają typom Pythona, ale zbudowane są od nowa. Jako, że Sage pomyślany został jako program przede wszystkim do obliczeń symbolicznych czy ich wizualizacji, typy wbudowane w Sage skonstruowane są podobnie jak w matematyce. Typy liczbowe budowane są w oparciu odpowiednie pierścienie (liczb całkowitych, wymiernych, itp.). Więcej na temat pierścieni znajdziesz w  `Samouczku <https://sage.phys.us.edu.pl/doc/live/tutorial/index.html>`_  lub w podręczniku  `Konstrukcje Sage <https://sage.phys.us.edu.pl/doc/live/constructions/index.html>`_ .
@@ -375,11 +381,12 @@ czas: 10 min.
 
 .. math::
 
-   \text{Area} = \pi {r}^{2},\quad \text{gdzie}\quad r = {\pi}^{{1\over   3} }-  1
+   \text{Area} = \pi r^2, \quad \text{gdzie} \quad r = \pi ^{1\over 3} - 1
 
-   \text{_}0 ={\cosh }^{2}(x) +{\sinh }^{2}(x),\quad \text{gdzie}\quad x = 32 \pi`
+   \_0 ={\cosh }^{2}(x) +{\sinh }^{2}(x), \quad \text{gdzie} \quad x = 32 \pi
 
-   f = {{(x + {y}^{0.4})}^{0.25x}\over 0.8}  +\log \Big ({x\over  y}\Big ) + 10^{x+{y}^{2}},\quad \text{gdzie}\quad x =\sinh (1),y =\tanh (20)
+   f = {{(x + y^{0.4})^{0.25x}}\over {0.8}}  +\log \Big( {x\over y} \Big) + 10^{x+ y^2}, \quad \text{gdzie} \quad x =\sinh (1), y =\tanh (20)
+
 
 
 **Zadanie 4: Rzut ukośny**
@@ -390,7 +397,7 @@ Jeżeli w polu grawitacyjnym wyrzucimy piłkę z wysokości  :math:`h_0` i z pr�
 
 .. math::
 
-   y = h_0 + x\mathop {tg} (\alpha) - {g\over   2{v}_{0}^{2}{\mathop{ cos}^{2}(\alpha) }}{x}^{2}
+   y = h_0 + x\mathop {tg} (\alpha) - {g\over {2v_0 ^2 \mathop{ cos}^{2}(\alpha)}} x^2
 
 
 Napisz program znajdujący ”wysokość” piłki :math:`y`  dla zadanych wartości przyspieszenia grawitacyjnego  :math:`g`, kąta :math:`\alpha`, prędkości początkowej :math:`{v}_{0}` i odległości :math:`x`.  Postaraj się napisać jak najbardziej czytelny kod.
@@ -416,7 +423,7 @@ Polecenie (które może być używane jak funkcja)  print  służy do wyświetla
 
 .. end of output
 
-Polecenie  print  łamie końcową linię przechodząc do nowegowiersza, chyba, że na końcu polecenia umieścimy przecinek
+Polecenie  print  łamie końcową linię przechodząc do nowego wiersza, chyba, że na końcu polecenia umieścimy przecinek
 
 
 .. code-block:: python
@@ -447,33 +454,33 @@ To samo możemy osiągnąć stosując formatowanie tekstu w poleceniu  print.
 
 .. end of output
 
-Po kolei. Polecenie  print  drukuje na ekran ciąg znaków \- wszystko, co zawarte jest pomiędzy cudzysłowami (lub apostrofami). Pomiędzy nimi występują specjalne znaki zaczynające się od znaku  %. W ich miejsce podstawiane są odpowiednio interpretowane wartości zmiennych (bądź literały) występujące za identycznym znakiem znajdującym się za ciągiem zawartym w cudzysłowach. Pierwsza wartość z nawiasu podstawiana jest do w miejsce pierwszego wystąpienia  %f. Analogicznie druga wartość podstawiana jest w miejsce drugiego wystąpienia  %f. Znak  f  występujący po procencie wymusza interpretację argumentu jako liczby zmiennoprzecinkowej (ﬂoat). Inne możliwe formatowania print
+Po kolei. Polecenie  print  drukuje na ekran ciąg znaków \- wszystko, co zawarte jest pomiędzy cudzysłowami (lub apostrofami). Pomiędzy nimi występują specjalne znaki zaczynające się od znaku  %. W ich miejsce podstawiane są odpowiednio interpretowane wartości zmiennych (bądź literały) występujące za identycznym znakiem znajdującym się za ciągiem zawartym w cudzysłowach. Pierwsza wartość z nawiasu podstawiana jest do w miejsce pierwszego wystąpienia  %f. Analogicznie druga wartość podstawiana jest w miejsce drugiego wystąpienia  %f. Znak  f  występujący po procencie wymusza interpretację argumentu jako liczby zmiennoprzecinkowej (float). Inne możliwe formatowania print
 
-%s ciąg znaków
+``%s`` ciąg znaków
 
-%d liczba całkowita
+``%d`` liczba całkowita
 
-%0Nd liczba całkowita poprzedzona zerami w taki sposób, że otrzymujemy N cyfr na wyjściu (pod warunkiem, że N ¡ liczby cyfr danej liczby)
+``%0Nd`` liczba całkowita poprzedzona zerami w taki sposób, że otrzymujemy N cyfr na wyjściu (pod warunkiem, że N ¡ liczby cyfr danej liczby)
 
-%f liczba zmiennoprzecinkowa
+``%f`` liczba zmiennoprzecinkowa
 
-%e notacja naukowa (e przy eksponencie)
+``%e`` notacja naukowa (e przy eksponencie)
 
-%E notacja naukowa (E przy eksponencie)
+``%E`` notacja naukowa (E przy eksponencie)
 
-%g,%G notacja dziesiątkowa
+``%g,%G`` notacja dziesiątkowa
 
-%Xz formatowanie liczby z do prawej dla pola o szerokości X
+``%Xz`` formatowanie liczby z do prawej dla pola o szerokości X
 print "%31f" % 0.0123412
 
-%\-Xz formatowanie liczby z do lewej dla pola o szerokości X
+``%-Xz`` formatowanie liczby z do lewej dla pola o szerokości X
 print "%\-31f" % 0.0123412
 
-%.Yz formatowanie liczby :math:`z` z Y miejscami po przecinku
+``%.Yz`` formatowanie liczby :math:`z` z Y miejscami po przecinku
 
-%X.Yz formatowanie liczby :math:`z` z Y miejscami po przecinku w polu o szerokości X
+``%X.Yz`` formatowanie liczby :math:`z` z Y miejscami po przecinku w polu o szerokości X
 
-%% znak procenta
+``%%`` znak procenta
 
 
 
@@ -496,7 +503,7 @@ Przepisz kod tak, aby zwracał m/w taką informację
 
 czas: 10 min.
 
-Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego  a jako wartość wartość przyspieszenia na nim podają w  :math:`m∕s^2`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.
+Zbuduj słownik zawierający jako klucz nazwę ciała niebieskiego  a jako wartość wartość przyspieszenia na nim podają w  :math:`m/s^2`. Słowinik powinien zawierać wpisy dla conajmniej 7 ciał niebieskich.
 
 
 **Zadanie 7: Przyrost pieniędzy w banku**

@@ -419,7 +419,7 @@ Możemy zobaczyć jednocześnie i punkty i linię. Należy dodać do siebie dwa 
 
 Oczywiście możemy opisać osie, ustalić wielkość wykresu, wielkość czcionek dokładnie tak jak robiliśmy to dla funkcji ``plot()``. Możemy do tego użyć oczywiście funkcji  ``show()``.
 
-Jeżeli chcielibyśmy aby na wykresie znajdowała się owa funkcja, którą zdeﬁniowaliśmy za pomocą naszego wyrażenia listowego, tzn: na osi OX znalazł się czas :math:`t` a na OY położenie w spadku swobodnym, należy do naszej funkcji podać nie listę, ale listę krotek w postaci :math:`[({t}_{1},{h}_{1}),({t}_{2},{h}_{2}),({t}_{3},{h}_{3}),...]`. Nie chcemy oczywiście robić tego ręcznie (dla 20 punktów to nie takie straszne, ale dla 2000?). Możemysobie napisać pętlę (ale to zostawimy na zadanie domowe), albo skorzystać z funkcji  ``zip()``. Funkcja ta tworzy z wielu list identycznej długości listę krotek, z których każda zawiera wartości odpowiadającetemu samemu indeksowi. Najpierw jednak stworzymy sobie listę ćzasów” (dyskretnych wartości czasu).
+Jeżeli chcielibyśmy aby na wykresie znajdowała się owa funkcja, którą zdefiniowaliśmy za pomocą naszego wyrażenia listowego, tzn: na osi OX znalazł się czas :math:`t` a na OY położenie w spadku swobodnym, należy do naszej funkcji podać nie listę, ale listę krotek w postaci :math:`[({t}_{1},{h}_{1}),({t}_{2},{h}_{2}),({t}_{3},{h}_{3}),...]`. Nie chcemy oczywiście robić tego ręcznie (dla 20 punktów to nie takie straszne, ale dla 2000?). Możemysobie napisać pętlę (ale to zostawimy na zadanie domowe), albo skorzystać z funkcji  ``zip()``. Funkcja ta tworzy z wielu list identycznej długości listę krotek, z których każda zawiera wartości odpowiadającetemu samemu indeksowi. Najpierw jednak stworzymy sobie listę ćzasów” (dyskretnych wartości czasu).
 
 
 .. code-block:: python
@@ -610,7 +610,7 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 .. end of output
 
 
-- ``graphics_array()`` macierz graﬁk, dzięki tej funkcji możemy wykresy przedstawiać obok siebie, w jednym obiekcie, funkcja  przyjmuje listę lub krotkę obiektów graﬁcznych (jakichkolwiek powyższych wykresów) i rysuje je razem w żądanym układzie
+- ``graphics_array()`` macierz grafik, dzięki tej funkcji możemy wykresy przedstawiać obok siebie, w jednym obiekcie, funkcja  przyjmuje listę lub krotkę obiektów graficznych (jakichkolwiek powyższych wykresów) i rysuje je razem w żądanym układzie
 
  
 
@@ -631,6 +631,9 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 
 .. end of output
 
+
+.. image:: iCSE_ITechninf04_z78_media/sage0.png
+    :align: center
 
 
 Kółka, krzywe zamknięte, strzałki i inne
@@ -679,7 +682,7 @@ Do podanych punktów dopasuj krzywą (m/w).
 
 czas: 20 \- 40 min.
 
-Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem   :math:`\alpha = \pi∕3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m.
+Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem   :math:`\alpha = \pi/3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m.
 
 **wersja łatwa**: bez oporu powietrza
 
@@ -707,7 +710,7 @@ Stwórz poniższy znaczek Batmana używając funkcji ``implicit_plot()``
 
 czas: – min.
 
-Zdeﬁniuj swoją własną funkcję ``myzip()`` działającą dokładnie jak funkcja ``zip()``.
+Zdefiniuj swoją własną funkcję ``myzip()`` działającą dokładnie jak funkcja ``zip()``.
 
 **Wersja normalna** tylko dla dwóch list
 
@@ -718,7 +721,7 @@ Zdeﬁniuj swoją własną funkcję ``myzip()`` działającą dokładnie jak fun
 
 czas: – min.
 
-Są to parametryczne krzywe opisujące drgania harmoniczne. Narysuj 9 różnych krzywych na jednym obrazku za  pomocą macierzy graﬁk. Każda krzywa ma mieć inny kolor, musi być opisana (na każdym obrazku muszą być      podane wszystkie parametry krzywej). Osie X i Y mają zostać wyłączone, krzywe powinny być obrysowane      ramką.
+Są to parametryczne krzywe opisujące drgania harmoniczne. Narysuj 9 różnych krzywych na jednym obrazku za  pomocą macierzy grafik. Każda krzywa ma mieć inny kolor, musi być opisana (na każdym obrazku muszą być      podane wszystkie parametry krzywej). Osie X i Y mają zostać wyłączone, krzywe powinny być obrysowane      ramką.
 
 
 **Zadanie ZD6.4: Metoda Newtona**

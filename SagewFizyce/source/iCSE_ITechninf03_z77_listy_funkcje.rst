@@ -10,7 +10,7 @@ Listy, Funkcje
 Listy
 ~~~~~~~~
 
-Sporo już o listach powiedzieliśmy. Wiemy jak je zdeﬁniować, jak odwołać się do :math:`n` -tegoelementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Dziś dowiemy się kilku nowych rzeczy.
+Sporo już o listach powiedzieliśmy. Wiemy jak je zdefiniować, jak odwołać się do :math:`n` -tego elementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Dziś dowiemy się kilku nowych rzeczy.
 
 
 
@@ -24,7 +24,9 @@ Za pomocą ujemnych indeksów odnosimy się do elementów idących od końca do 
 
     sage: lista = ["ala", "ma", "kota"]
     sage: lista[-1]
-    'kota'
+
+
+'kota'
 
 .. end of output
 
@@ -41,7 +43,7 @@ Zbuduj posortowaną listę ``lp`` wszystkich liczb pierwszych w zakresie od 0 do
 Wycinanie list
 """"""""""""""
 
-Kolejną niezwykle użyteczną konstrukcją języka Python jest wycinanie list. Za pomocą podania dwóch indeksów możemy pobraćwycinek listy. Ogólne wyrażenie to  ``lista[a:b]``, gdzie  ``a``  i  ``b``  to właśnie żądane indeksy. Załóżmy, że zdeﬁniowaliśmy listę
+Kolejną niezwykle użyteczną konstrukcją języka Python jest wycinanie list. Za pomocą podania dwóch indeksów możemy pobrać wycinek listy. Ogólne wyrażenie to  ``lista[a:b]``, gdzie  ``a``  i  ``b``  to właśnie żądane indeksy. Załóżmy, że zdefiniowaliśmy listę
 
 
 .. code-block:: python
@@ -96,7 +98,9 @@ Jeśli lewy indeks wynosi 0, możemy go opuścić, wartość 0 jest domyślna.  
 .. code-block:: python
 
     sage: parzyste[int(len(parzyste)/2):]
-    [14, 16, 18, 20, 22, 24, 26]
+
+
+[14, 16, 18, 20, 22, 24, 26]
 
 .. end of output
 
@@ -106,7 +110,9 @@ zamiast pisać  ``parzyste[int(len(parzyste)/2):len(parzyste)]``. Można zauważ
 .. code-block:: python
 
     sage: parzyste[:7]
-    [2, 4, 6, 8, 10, 12, 14]
+
+
+[2, 4, 6, 8, 10, 12, 14]
 
 .. end of output
 
@@ -116,11 +122,13 @@ zwróci  pierwsze  7  elementów  listy,  a
 .. code-block:: python
 
     sage: parzyste[7:]
-    [16, 18, 20, 22, 24, 26]
+
+
+[16, 18, 20, 22, 24, 26]
 
 .. end of output
 
-kolejne 6, dopełniając listę (w tym przypadku lista ma 13 elementów). Oczywiście istniejespecyﬁczna konstrukcja  ``parzyste[:]``  zwracająca całą listę. Używa się jej do kopiowania całej listy
+kolejne 6, dopełniając listę (w tym przypadku lista ma 13 elementów). Oczywiście istnieje specyficzna konstrukcja  ``parzyste[:]``  zwracająca całą listę. Używa się jej do kopiowania całej listy
 
 
 .. code-block:: python
@@ -149,8 +157,10 @@ Jest spora różnica pomiędzy skopiowaniem listy  parzyste  do nowej listy za p
     sage: %python
     sage: print "[:] ", parzyste is kopia1
     sage: print "= ",   parzyste is kopia2
-    [:]  False
-    =  True
+
+
+| [:]  False
+| =  True
 
 .. end of output
 
@@ -172,7 +182,7 @@ Z podanej listy wytnij dwie równoliczne listy zawierające wartości mniejsze i
 Wyrażenia listowe
 """""""""""""""""
 
-Wyrażenia listowe są jednymi z najbardziej użytecznych cech języka Python (więc i Sage). Dzięki nim możemyodwzorować jedną listę w drugą wykonując na każdym elemencie pierwszej pewne działania. Ogólna składnia wyglądanastępująco
+Wyrażenia listowe są jednymi z najbardziej użytecznych cech języka Python (więc i Sage). Dzięki nim możemy odwzorować jedną listę w drugą wykonując na każdym elemencie pierwszej pewne działania. Ogólna składnia wygląda następująco
 
 ``nowa_lista = [E(e) for e in lista]``, gdzie  ``E(e)``  to wyrażenie przekształcające element  ``e``  z listy  ``lista``. Najprościej wyjaśnić to na przykładzie
 
@@ -187,7 +197,7 @@ Wyrażenia listowe są jednymi z najbardziej użytecznych cech języka Python (w
 
 .. end of output
 
-Jak widać takie wyrażenie zawiera w sobie deﬁnicję nowej listy  ``kwadrat_lcG``  zbudowanej poprzez podniesienie wpętli  for  wszystkich elementów listy  ``lcG``  do kwadratu. Pętla ta występuje w środku nawiasów  ``[]``, czyli niejako wśrodku listy. Zapis taki dość mocno przyspiesza zapis i konstrukcję list potomnych, budowanych z list już istniejących:
+Jak widać takie wyrażenie zawiera w sobie definicję nowej listy  ``kwadrat_lcG``  zbudowanej poprzez podniesienie w pętli  for  wszystkich elementów listy  ``lcG``  do kwadratu. Pętla ta występuje w środku nawiasów  ``[]``, czyli niejako wśrodku listy. Zapis taki dość mocno przyspiesza zapis i konstrukcję list potomnych, budowanych z list już istniejących:
 
 
 .. code-block:: python
@@ -200,7 +210,7 @@ Jak widać takie wyrażenie zawiera w sobie deﬁnicję nowej listy  ``kwadrat_l
 
 .. end of output
 
-Dzięki takiej konstrukcji wiele dotychczasowych zadań okazuje się zadaniami ”jednolinikowymi”:
+Dzięki takiej konstrukcji wiele dotychczasowych zadań okazuje się zadaniami ”jednolinijkowymi”:
 
 
 .. code-block:: python
@@ -223,7 +233,7 @@ czas: 10 min.
 Stwórz listy
 
 1. kwadratów liczb nieparzystych w zakresie od 0 do 300
-2. zawierających wysokość piłki rzuconej w polu grawitacyjnym Ziemi z prędkością początkową :math:`{v}_{0} = 3.44[m∕s]`,  wysokością początkową :math:`{h}_{0} = 0[m]` dla poszczególnych chwil czasu :math:`t = 0,0.01,0.02,0.03,...,0.70[s]`
+2. zawierających wysokość piłki rzuconej w polu grawitacyjnym Ziemi z prędkością początkową :math:`{v}_{0} = 3.44[m/s]`,  wysokością początkową :math:`{h}_{0} = 0[m]` dla poszczególnych chwil czasu :math:`t = 0,0.01,0.02,0.03,...,0.70[s]`
 3. zawierające :math:`\sin(x) - \cos(x)` dla :math:`x \in  [-2 \pi,2 \pi]` i :math:`x = 0.025`
 
 
@@ -238,7 +248,7 @@ Jeżeli chodzi o Sage to pojęcie funkcja może być rozumiane w dwojaki sposób
 Wyrażenie symboliczne, które można wywoływać
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Takie wyrażenia najbardziej przypominają znane wam funkcje matematyczne. Deﬁniujemy je następująco
+Takie wyrażenia najbardziej przypominają znane wam funkcje matematyczne. Definiujemy je następująco
 
 
 .. code-block:: python
@@ -257,12 +267,14 @@ Takie wyrażenia najbardziej przypominają znane wam funkcje matematyczne. Deﬁ
     sage: print f^2
     sage: # czy tez proste wywolanie w punkcie
     sage: print f(3)
-    r |--> r^2
-    r |--> 2*r
-    r |--> 2
-    r |--> 1/3*r^3
-    r |--> r^4
-    9
+
+
+| r \|--> r^2
+| r \|--> 2*r
+| r \|--> 2
+| r \|--> 1/3*r^3
+| r \|--> r^4
+| 9
 
 .. end of output
 
@@ -281,7 +293,7 @@ i wiele wiele innych możliwych operacji dostępnych zarówno jako metody obiekt
 
 .. end of output
 
-Podczas deﬁniowania wyrażenia symbolicznego możemy pominąć argument i zapisać
+Podczas definiowania wyrażenia symbolicznego możemy pominąć argument i zapisać
 
 
 .. code-block:: python
@@ -305,7 +317,7 @@ Sprawdź czy całka z pochodnej funkcji :math:`\sin({x}^{2})` jest równa tej fu
 Funkcje programistyczne
 """""""""""""""""""""""
 
-Aby w Sage zdeﬁniować nową funkcję należy użyć komendy  def  oraz postawić dwukropek za listą argumentów podanych w nawiasie.
+Aby w Sage zdefiniować nową funkcję należy użyć komendy  def  oraz postawić dwukropek za listą argumentów podanych w nawiasie.
 
 
 def nazwa_funkcji(argument1, argument2, ..., argumentN):  
@@ -324,27 +336,31 @@ Na  przykład:
 
 .. end of output
 
-W tym przypadku nazwa funkcji to  ``F  a lista argumentów ogranicza się do jednego  ``C``. Funkcja taprzelicza nam stopnie Celsiusa na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy return  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
+W tym przypadku nazwa funkcji to  ``F  a lista argumentów ogranicza się do jednego  ``C``. Funkcja ta przelicza nam stopnie Celsiusa na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy return  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
 
 
 .. code-block:: python
 
     sage: F(25)
-    77.0000000000000
+
+
+77.0000000000000
 
 .. end of output
 
-Jak widzimy wywołania takiej funkcji są identyczne jak te do których już się przyzwyczailiśmy, czyli np:  ``sin(2)``, ``cos(pi)``. Należy podać nazwę funkcji i w nawiasie wartość argumentu. Dodatkowo wartości dla argumentów funkcji możemy podawać explicite
+Jak widzimy wywołania takiej funkcji są identyczne jak te, do których już się przyzwyczailiśmy, czyli np:  ``sin(2)``, ``cos(pi)``. Należy podać nazwę funkcji i w nawiasie wartość argumentu. Dodatkowo wartości dla argumentów funkcji możemy podawać explicite
 
 
 .. code-block:: python
 
     sage: F(C=25)
-    77.0000000000000
+
+
+77.0000000000000
 
 .. end of output
 
-Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczy zapytać o to Sage korzystając z wbudowanej pomocy  ``F?``  lub  ``F??``  (pamiętacie jeszcze czym różnią się obawywołania?). Aby w pełni wykorzystać tę możliwość należy zdeﬁniować co pomoc Sage ma pokazywać gdynapiszemy  ``F?`` . Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
+Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczy zapytać o to Sage korzystając z wbudowanej pomocy  ``F?``  lub  ``F??``  (pamiętacie jeszcze czym różnią się oba wywołania?). Aby w pełni wykorzystać tę możliwość należy zdefiniować co pomoc Sage ma pokazywać, gdy napiszemy  ``F?`` . Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
 
 
 .. code-block:: python
@@ -382,7 +398,7 @@ Do funkcji możemy podawać wiele argumentów, wystarczy podać je po przecinkac
 
 .. end of output
 
-Właśnie zdeﬁniowaną funkcję rozwiązującą równanie
+Właśnie zdefiniowaną funkcję rozwiązującą równanie
 
 .. math::
    :label: IT03.77.1
@@ -401,16 +417,18 @@ możemy  teraz  wywoływać  na  wiele  sposobów:
     sage: y = rownanie_kwadratowe(c=-1, b=1, a=2); print y
     sage: y = rownanie_kwadratowe(2, 1, c=-1); print y
     sage: y = rownanie_kwadratowe(2, c=-1, b=1); print y
-    [-1, 1/2]
-    [-1, 1/2]
-    [-1, 1/2]
-    [-1, 1/2]
-    [-1, 1/2]
-    [-1, 1/2]
+
+
+| [-1, 1/2]
+| [-1, 1/2]
+| [-1, 1/2]
+| [-1, 1/2]
+| [-1, 1/2]
+| [-1, 1/2]
 
 .. end of output
 
-Jak widzimy możemy wywoływać funkcję zarówno podając nazwy argumentów (wtedy kolejnośc ichjest dowolna), nie podając ich wcale (wtedy musimy zachować kolejność taką jak w deﬁnicji funkcji) lub podając nazwy części z nich. Ważne jest, aby argumenty podawane bez nazwy występowały przedtymi deklarowanymi explicite, ponieważ Sage zwróci nam błąd, nawet jeżeli zachowamy kolejność
+Jak widzimy możemy wywoływać funkcję zarówno podając nazwy argumentów (wtedy kolejnośc ich jest dowolna), nie podając ich wcale (wtedy musimy zachować kolejność taką jak w definicji funkcji) lub podając nazwy części z nich. Ważne jest, aby argumenty podawane bez nazwy występowały przed tymi deklarowanymi explicite, ponieważ Sage zwróci nam błąd, nawet jeżeli zachowamy kolejność
 
 
 .. code-block:: python
@@ -439,16 +457,18 @@ Funkcje nie muszą niczego zwracać, znaczy to, że komenda  ``return``  nie mus
     ...     return (F-32)*5/9
     sage: lista_Fahr = [0, 4, 20, 25, 100]
     sage: drukuj_temperatury(lista_Fahr, CF=False)
-    0 stopni Celsiusa to 32.0000000000000 stopni Fahrenheita
-    4 stopni Celsiusa to 39.2000000000000 stopni Fahrenheita
-    20 stopni Celsiusa to 68.0000000000000 stopni Fahrenheita
-    25 stopni Celsiusa to 77.0000000000000 stopni Fahrenheita
-    100 stopni Celsiusa to 212.000000000000 stopni Fahrenheita
-    0 stopni Fahrenheita to -160/9 stopni Celsiusa
-    4 stopni Fahrenheita to -140/9 stopni Celsiusa
-    20 stopni Fahrenheita to -20/3 stopni Celsiusa
-    25 stopni Fahrenheita to -35/9 stopni Celsiusa
-    100 stopni Fahrenheita to 340/9 stopni Celsiusa
+
+
+| 0 stopni Celsiusa to 32.0000000000000 stopni Fahrenheita
+| 4 stopni Celsiusa to 39.2000000000000 stopni Fahrenheita
+| 20 stopni Celsiusa to 68.0000000000000 stopni Fahrenheita
+| 25 stopni Celsiusa to 77.0000000000000 stopni Fahrenheita
+| 100 stopni Celsiusa to 212.000000000000 stopni Fahrenheita
+| 0 stopni Fahrenheita to -160/9 stopni Celsiusa
+| 4 stopni Fahrenheita to -140/9 stopni Celsiusa
+| 20 stopni Fahrenheita to -20/3 stopni Celsiusa
+| 25 stopni Fahrenheita to -35/9 stopni Celsiusa
+| 100 stopni Fahrenheita to 340/9 stopni Celsiusa
 
 .. end of output
 
@@ -458,14 +478,14 @@ Funkcje nie muszą niczego zwracać, znaczy to, że komenda  ``return``  nie mus
 
 czas: 10 min.
 
-Zdeﬁniuj funkcję Heaviside’a.
+Zdefiniuj funkcję Heaviside’a.
 
 
 
 Funkcja lambda
 """"""""""""""
 
-W języku Python możliwość zaimplementowania funkcji w jednej linii kodu. Zazwyczajfunkcje takie deﬁniuje się jako szybkie, krótkie funkcje, które mogą służyć jako argumentydo innych funkcji. Nazywamy je funkcjami lambda. Ogólna składnia wygląda następująco
+W języku Python możliwość zaimplementowania funkcji w jednej linii kodu. Zazwyczaj funkcje takie definiuje się jako szybkie, krótkie funkcje, które mogą służyć jako argumenty do innych funkcji. Nazywamy je funkcjami lambda. Ogólna składnia wygląda następująco
 
 
 .. code-block:: python
@@ -485,7 +505,7 @@ Np
 
 .. end of output
 
-co  odpowiada  zwykłej  deﬁnicji
+co  odpowiada  zwykłej  definicji
 
 
 .. code-block:: python
@@ -502,7 +522,9 @@ sprawdźmy
 .. code-block:: python
 
     sage: CtoF(33.) == normalCtoF(33.)
-    True
+
+
+True
 
 .. end of output
 
@@ -523,7 +545,7 @@ Zadania
 
 czas: 10 min.
 
-Zdeﬁniuj lambda funkcję ``nieparzyste(n)`` zwracającą listę liczb nieparzystych od 0 do podanej jako argument liczby :math:`n` włącznie.
+Zdefiniuj lambda funkcję ``nieparzyste(n)`` zwracającą listę liczb nieparzystych od 0 do podanej jako argument liczby :math:`n` włącznie.
 
 
 **Zadanie 8:**
@@ -569,16 +591,18 @@ Rozważ poniższy przykład użycia pętli ``for``. Wyjaśnij co dzieje się prz
     ...       i = int(len(numery)/2)
     ...       del numery[i]
     ...       print 'n=%d, del %d' % (n, i), numery
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    n=0, del 5 [0, 1, 2, 3, 4, 6, 7, 8, 9]
-    n=1, del 4 [0, 1, 2, 3, 6, 7, 8, 9]
-    n=2, del 4 [0, 1, 2, 3, 7, 8, 9]
-    n=3, del 3 [0, 1, 2, 7, 8, 9]
-    n=8, del 3 [0, 1, 2, 8, 9]
+
+
+| [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+| n=0, del 5 [0, 1, 2, 3, 4, 6, 7, 8, 9]
+| n=1, del 4 [0, 1, 2, 3, 6, 7, 8, 9]
+| n=2, del 4 [0, 1, 2, 3, 7, 8, 9]
+| n=3, del 3 [0, 1, 2, 7, 8, 9]
+| n=8, del 3 [0, 1, 2, 8, 9]
 
 .. end of output
 
-**Uwaga:**  Nigdy nie modyﬁkuj listy używanej w pętli ``for`` ! (No chyba, że naprawdę wiesz co robisz).
+**Uwaga:**  Nigdy nie modyfikuj listy używanej w pętli ``for`` ! (No chyba, że naprawdę wiesz co robisz).
 
 
 
@@ -592,14 +616,14 @@ Stwórz notatnik ’Zadania domowe L05, Imię Nazwisko’. W tym notatniku rozwi
 
 czas: – min.
 
-Funkcja ``random()`` zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.      Napisz funkcję ``kostka(n)`` zwracającą listę n losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie funkcja powinna realizować 1 rzut kością ( :math:`n = 1` ).
+Funkcja ``random()`` zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.  Napisz funkcję ``kostka(n)`` zwracającą listę n losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie funkcja powinna realizować 1 rzut kością ( :math:`n = 1` ).
 
 
 **Zadanie ZD5.2: Przypisania**
 
 czas: – min.
 
-Część poniższych przypisań będzie działać, a część nie. Wytłumacz przy każdej linijce      dlaczego dane przypisanie działa lub nie działa. Jeżeli działa, napisz jakim obiektem jest  :math:`x` i  jaką trzyma wartość.
+Część poniższych przypisań będzie działać, a część nie. Wytłumacz przy każdej linijce  dlaczego dane przypisanie działa lub nie działa. Jeżeli działa, napisz jakim obiektem jest  :math:`x` i  jaką trzyma wartość.
 
 | x = 1
 | x = 1.
@@ -627,7 +651,7 @@ Pierwiastkując jakąś liczbę :math:`M` razy, a później podnosząc ją :math
 |     print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)
 
 
-Napisz w trybie edytora tekstu (``SHIFT+ENTER`` na niebieskim polu) co powyższy program wykonuje. Potem  uruchom program. Zaokrąglanie liczb (błąd zaokrąglania) kompletnie niszczy obliczenia dla dostatecznie dużych :math:`n`. Zwróć uwagę na to, że dla niektórych przypadków z liczby 2 dostajemy 1! Zbadaj te przypadki ustalając liczbę  :math:`n` i      drukując na ekran to co zwracają pętle pierwiastkujące i podnoszące do kwadratu. Dlaczego dochodzimy do liczby 1? Odpowiedz w trybie edytora tekstu.
+Napisz w trybie edytora tekstu (``SHIFT+ENTER`` na niebieskim polu) co powyższy program wykonuje. Potem  uruchom program. Zaokrąglanie liczb (błąd zaokrąglania) kompletnie niszczy obliczenia dla dostatecznie dużych :math:`n`. Zwróć uwagę na to, że dla niektórych przypadków z liczby 2 dostajemy 1! Zbadaj te przypadki ustalając liczbę  :math:`n` i   drukując na ekran to co zwracają pętle pierwiastkujące i podnoszące do kwadratu. Dlaczego dochodzimy do liczby 1? Odpowiedz w trybie edytora tekstu.
 
 
 **Zadanie ZD5.4: Numeryczne zero.**

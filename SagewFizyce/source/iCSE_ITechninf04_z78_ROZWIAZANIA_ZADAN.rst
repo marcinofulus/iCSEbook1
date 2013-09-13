@@ -144,11 +144,13 @@ Zadanie 2: Narysuj krzywe
     sage: a, b = 1, 1
     sage: (sum([implicit_plot(x^2/a^2 - y^2/b^2 == 1, (x,-2,2), (y,-2,2), color=(a,1,a)) for a in srange(.1,1,0.1)])).show(aspect_ratio=1)
     sage: 2
-    2
+
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_45_sage0.png
     :align: center
 
+
+2
 
 .. end of output
 
@@ -158,6 +160,10 @@ Zadanie 2: Narysuj krzywe
     sage: var('t')
     sage: r, R = 1, 2.13
     sage: graphics_array([parametric_plot(((r-R)*(cos(t) + r*cos((R-r)/r*t)), (r-R)*(sin(t) - r*sin((R-r)/r*t))), (t,-10,150), fill=1, color='firebrick', fillcolor='gold', thickness=0.3, plot_points=300) for R in srange(0.5,3, 0.23)], 4,3).show(dpi=250, frame=1, aspect_ratio=1, fontsize=5)
+
+.. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage0.png
+    :align: center
+    :width: 600px
 
 
 .. end of output
@@ -169,6 +175,11 @@ Zadanie 2: Narysuj krzywe
     sage: graphics_array([implicit_plot((x^2+y^2)^2 == 2 * a^2 * (x^2 - y^2), (x, -2, 2), (y, -1, 1), color='firebrick'),
     sage: polar_plot(2*a^2*cos(2*t), (t,0,2*pi), fill=0, color='firebrick', fillcolor='gold'),
     sage: parametric_plot((a*sqrt(2)*cos(t)/(1 + sin(t)^2),a*sqrt(2)*sin(t)*cos(t)/(1 + sin(t)^2)),(t,0,2*pi), color='firebrick')]).show(aspect_ratio=1, dpi=200, frame=1)
+
+
+.. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage1.png
+    :align: center
+    :width: 600px
 
 
 .. end of output
@@ -196,7 +207,7 @@ Do podanych punktów dopasuj krzywą (m/w).
 Zadanie 4: Ruch balistyczny
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem :math:`\alpha = \pi∕3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m.
+Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty ustawionej pod kątem :math:`\alpha = \pi/3` w stosunku do ziemi i z prędkością początkową :math:`{v}_{0} = 800` m/s. Wysokość końca lufy to 1 m.
 
 **wersja łatwa**: bez oporu powietrza
 
@@ -307,8 +318,10 @@ ZD6.2 (myzip)
     sage: b = range(5)
     sage: print zip(a,b)
     sage: print myzip(a,tuple(a))
-    [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
-    [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+
+
+| [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+| [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
 
 .. end of output
 
@@ -352,12 +365,14 @@ ZD6.2 (myzip)
 
     sage: print zip(a,tuple(a),tuple(b))        
     sage: print myzip2(a,tuple(a),tuple(b))
-    [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4)]
-    [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4)]
+
+
+| [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4)]
+| [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4)]
 
 .. end of output
 
-ZD6.3 (Lissaious)
+ZD6.3 (Lissajous)
 ~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
@@ -373,6 +388,9 @@ ZD6.3 (Lissaious)
     ...       g(x) = B*sin(b*x)
     ...       pp.append(parametric_plot((f,g),(-2*pi,2*pi), color=((a+b)/20.,a/10.,b/10.)) + text(r"$a=%d, b=%d$" % (a,b), (0,0), color="black") + text(r"$\delta=%.2f\pi$" % (delta), (0,-0.5), color="black")) 
     sage: graphics_array(((pp[0],pp[1],pp[2]),(pp[3],pp[4],pp[5]),(pp[6],pp[7],pp[8]))).show(frame=True, axes=False, aspect_ratio=1, ticks=None)
+
+.. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage2.png
+    :align: center
 
 
 .. end of output
@@ -390,8 +408,10 @@ Zadanie ZD6.4: Metoda Newtona
     sage: df(x) = diff(f,x); print df
     sage: # i jej wykres na szybko
     sage: plot(f,0,5).show(dpi=50)
-    x |--> sqrt(x) - 2
-    x |--> 1/2/sqrt(x)
+
+
+| x \|--> sqrt(x) - 2
+| x \|--> 1/2/sqrt(x)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_29_sage0.png
     :align: center
@@ -423,12 +443,14 @@ Zadanie ZD6.4: Metoda Newtona
     sage: print "Miejsce zerowe (x,f(x)) =", (y.n(), f(y.n()))   
     sage: # grafika - trzeba narysować wykres + odpowiednie proste styczne do punktów, w których obliczamy kolejne "zera" 
     sage: (sum(pts) +sum(pts2) + sum(sty2) + plot(f,0,6)).show(axes_labels=["$x$","$f(x)$"], ymax=1, fontsize=14)
-    0.500000000000000 -1.29289321881345
-    2.32842712474619 -0.474081547150638
-    3.77524668665126 -0.0570005953034218
-    3.99675093213506 -0.000812431977665673
-    3.99999933995428 -1.65011436292772e-7
-    Miejsce zerowe (x,f(x)) = (3.99999999999997, -6.88338275267597e-15)
+
+
+| 0.500000000000000 -1.29289321881345
+| 2.32842712474619 -0.474081547150638
+| 3.77524668665126 -0.0570005953034218
+| 3.99675093213506 -0.000812431977665673
+| 3.99999933995428 -1.65011436292772e-7
+| Miejsce zerowe (x,f(x)) = (3.99999999999997, -6.88338275267597e-15)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_28_sage0.png
     :align: center
@@ -440,7 +462,9 @@ Zadanie ZD6.4: Metoda Newtona
 
     sage: # a co nam powie o miejscu zerowym Sage?
     sage: f.find_root(1,5)
-    3.9999999999999996
+
+
+3.9999999999999996
 
 .. end of output
 

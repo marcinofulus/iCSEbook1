@@ -18,7 +18,9 @@ Sage posiada olbrzymią wbudowaną dokumentację. Dostępna jest ona po wpisaniu
 
 
 
-   File: /opt/sage/sage-4.7.1/local/lib/python2.6/site-packages/sage/functions/trig.py
+.. code-block:: python
+
+   file: /opt/sage/sage-4.7.1/local/lib/python2.6/site-packages/sage/functions/trig.py
 
    Type: <class ‘sage.functions.trig.Function_sin’>
 
@@ -58,51 +60,59 @@ Sage posiada olbrzymią wbudowaną dokumentację. Dostępna jest ona po wpisaniu
 .. end of output
 
 
-Oprócz instrukcji użycia znajdziemy tam za każdym razem szereg przykładów i zastosowań danego obiektu Sage. Po wpisaniu na końcu interesującej nas nazwy dwóch pytajników, np:  sin??  dostaniemy deﬁnicję odpowiedniej klasy. W ten sposób mamy dostęp do większości zmiannych, stałych, funkcji czy klas właściwych dla Sage.
+Oprócz instrukcji użycia znajdziemy tam za każdym razem szereg przykładów i zastosowań danego obiektu Sage. Po wpisaniu na końcu interesującej nas nazwy dwóch pytajników, np:  sin??  dostaniemy definicję odpowiedniej klasy. W ten sposób mamy dostęp do większości zmiannych, stałych, funkcji czy klas właściwych dla Sage.
 
 
 
 Instrukcje sterujące
 ~~~~~~~~~~~~~~~~~~~~
 
-Na poprzedniej lekcji poznaliśmy dwie instrukcje sterujące: pętle  for  oraz  while. Pierwsza z nich bazuje na iterowaniukolejnych elementów jakiegoś zbioru danych (najcześciej listy). Druga bazuje spełnieniu warunku logicznego. Jest zatem w pewnym sensie zarówno pętlą jak i instrukcją warunkową. Instrukcje tego typu bazują naporównaniach.
+Na poprzedniej lekcji poznaliśmy dwie instrukcje sterujące: pętle  for  oraz  while. Pierwsza z nich bazuje na iterowaniu kolejnych elementów jakiegoś zbioru danych (najcześciej listy). Druga bazuje spełnieniu warunku logicznego. Jest zatem w pewnym sensie zarówno pętlą jak i instrukcją warunkową. Instrukcje tego typu bazują na porównaniach.
 
 
 
 Porównania
 """"""""""
 
-Najprostszymi porównaniami jakie znamy jest porównywanie dwóch liczb. Sage stosując podstawowe operatoryporównania  ==, !=, <=, >=, >, < zawsze będzie się starał automatycznie skonwertować typy liczb do takich samych(jeżeli jest to wykonalne to rzutowanie typu odbędzie się na typ nadrzędny). W wyniku zastosowaniaporównania dwóch liczb otrzymamy jedną z dwóch możliwych logicznych odpowiedzi  True  lub  False.
+Najprostszymi porównaniami jakie znamy jest porównywanie dwóch liczb. Sage stosując podstawowe operatory porównania  ==, !=, <=, >=, >, < zawsze będzie się starał automatycznie skonwertować typy liczb do takich samych (jeżeli jest to wykonalne to rzutowanie typu odbędzie się na typ nadrzędny). W wyniku zastosowania porównania dwóch liczb otrzymamy jedną z dwóch możliwych logicznych odpowiedzi  **True**  lub  **False**.
 
 
 .. code-block:: python
 
     sage: 3 != 2
-    True
+
+
+True
 
 .. end of output
 
 .. code-block:: python
 
     sage: 10 >= 2
-    True
+
+
+True
 
 .. end of output
 
 .. code-block:: python
 
     sage: 2/3 > 3/2
-    False
+
+
+False
 
 .. end of output
 
-Porównywać możemy praktycznie wszystkie obiekty, czasami dostaniemy jednak odpowiedźlosową (kiedy pytanie będzie źle postawione). Porównywać można również wielkości symboliczne,
+Porównywać możemy praktycznie wszystkie obiekty, czasami dostaniemy jednak odpowiedź losową (kiedy pytanie będzie źle postawione). Porównywać można również wielkości symboliczne,
 
 
 .. code-block:: python
 
     sage: x < x + 1
-    x < x + 1
+
+
+x < x + 1
 
 .. end of output
 
@@ -112,17 +122,21 @@ należy  do  tego  użyć  funkcji   bool()
 .. code-block:: python
 
     sage: bool(x < x + 1)
-    True
+
+
+True
 
 .. end of output
 
-Jeżeli chcemy porównać dwa obiekty włączając w to porównanie ich typów należy użyć operatora  is.
+Jeżeli chcemy porównać dwa obiekty włączając w to porównanie ich typów należy użyć operatora  ``is``.
 
 
 .. code-block:: python
 
     sage: 1 == 2/2
-    True
+
+
+True
 
 .. end of output
 
@@ -133,29 +147,37 @@ Jeżeli chcemy porównać dwa obiekty włączając w to porównanie ich typów n
 .. code-block:: python
 
     sage: type(1); type(2-1)
-    <type 'sage.rings.integer.Integer'>
-    <type 'sage.rings.integer.Integer'>
+
+
+| <type 'sage.rings.integer.Integer'>
+| <type 'sage.rings.integer.Integer'>
 
 .. end of output
 
 .. code-block:: python
 
     sage: 1 is 2-1
-    False
+
+
+False
 
 .. end of output
 
 .. code-block:: python
 
     sage: 1 is 2/2
-    False
+
+
+False
 
 .. end of output
 
 .. code-block:: python
 
     sage: 1 is 1
-    True
+
+
+True
 
 .. end of output
 
@@ -180,7 +202,7 @@ gdzie :math:`n` to stopień wielomianu, a :math:`x` to argument danego wielomian
 Nieco logiki
 """"""""""""
 
-Na zajęciach z analizy matematycznej większość z was dowiedziała się co to takiego jest zdanie, warunek zdaniowy, funktory zdaniotwórcze (negacja, alternatywa, koniunkcja, implikacja, równoważność). Poznaliście też podstawowe prawa logiki (tautologie).
+Na zajęciach z analizy matematycznej większość z Państwa dowiedziała się co to takiego jest zdanie, warunek zdaniowy, funktory zdaniotwórcze (negacja, alternatywa, koniunkcja, implikacja, równoważność). Poznaliście też podstawowe prawa logiki (tautologie).
 
 
 Sage bardzo naturalnie korzysta z owych funktorów zdaniotwórczych
@@ -203,10 +225,12 @@ Możemy  je  łączyć  ze  sobą
     sage: print "not t and f:", not t and f
     sage: print "(not t) and f:", not t and f
     sage: print "not (t and f):", not (t and f)
-    t and f: False
-    not t and f: False
-    (not t) and f: False
-    not (t and f): True
+
+
+| t and f: False
+| not t and f: False
+| (not t) and f: False
+| not (t and f): True
 
 .. end of output
 
@@ -218,7 +242,9 @@ jak  i  z  innymi  operatorami  porównania
     sage: wiek = 19
     sage: uni = "Uniwersytet w Katowicach"
     sage: wiek > 18 and uni == "Uniwersytet w Katowicach"
-    True
+
+
+True
 
 .. end of output
 
@@ -242,14 +268,16 @@ Korzystając z pętli zbuduj tabele prawdy (matryce logiczne) dla
     sage: for p in [0, 1]:
     ...       for q in [0, 1]:
     ...           print "%d|\t%d|\t%d" % (p, q, p and q)
-    0 lub 0 => 0
-    0 lub 1 => 1
-    1 lub 0 => 1
-    1 lub 1 => 1
-    0|	0|	0
-    0|	1|	0
-    1|	0|	0
-    1|	1|	1
+
+
+| 0 lub 0 => 0
+| 0 lub 1 => 1
+| 1 lub 0 => 1
+| 1 lub 1 => 1
+| 0\|	0\|	0
+| 0\|	1\|	0
+| 1\|	0\|	0
+| 1\|	1\|	1
 
 .. end of output
 
@@ -339,11 +367,13 @@ Bądź  też  coś  nieco  bardziej  skomplikowanego.
     ...     print "Rownanie ma jeden podwojny pierwiastek rzeczywisty"
     sage: else:
     ...     print "Rownanie nie ma rozwiazan w ciele liczb rzeczywistych"
-    Rownanie kwadratowe postaci
-    a: 2
-    b: 3
-    c: 1
-    Rownanie ma 2 rozne pierwiastki rzeczywiste
+
+
+| Rownanie kwadratowe postaci
+| a: 2
+| b: 3
+| c: 1
+| Rownanie ma 2 rozne pierwiastki rzeczywiste
 
 .. MATH::
 
@@ -357,7 +387,7 @@ Bądź  też  coś  nieco  bardziej  skomplikowanego.
 Jeszcze jedno przydatne porównanie
 """"""""""""""""""""""""""""""""""
 
-Czasami traﬁmy na problem, w którym mając jakąś listę (krotkę, słownik, zbiór...) zastanawiamy się, czy dany obiektzawiera np: interesującą nas liczbę  ``12``. Można oczywiście w pętli przeiterować wszystkie elementy listy (czy innego obiektu) isprawdzić :math:`if` -emczy dana liczba w niej siedzi. Szybciej można to osiągnąć korzystając z operatora  ``in`` (lub a  ``not in``)
+Czasami trafimy na problem, w którym mając jakąś listę (krotkę, słownik, zbiór...) zastanawiamy się, czy dany obiekt zawiera np: interesującą nas liczbę  ``12``. Można oczywiście w pętli przeiterować wszystkie elementy listy (czy innego obiektu) i sprawdzić :math:`if` -emczy dana liczba w niej siedzi. Szybciej można to osiągnąć korzystając z operatora  ``in`` (lub a  ``not in``)
 
 | zmienna in lista
 | 
@@ -378,10 +408,12 @@ Na  przykład
     sage: print "szukana_liczba in krotka:", szukana_liczba in krotka
     sage: print "szukana_liczba in slownik:", szukana_liczba in slownik
     sage: print "szukana_liczba in zbior:", szukana_liczba in zbior
-    szukana_liczba in lista: True
-    szukana_liczba in krotka: True
-    szukana_liczba in slownik: False
-    szukana_liczba in zbior: True
+
+
+| szukana_liczba in lista: True
+| szukana_liczba in krotka: True
+| szukana_liczba in slownik: False
+| szukana_liczba in zbior: True
 
 .. end of output
 
@@ -406,9 +438,11 @@ i jest w porządku.
     sage: print """"ala" in txt:""", "ala" in txt
     sage: print """"Ala" in txt:""", "Ala" in txt
     sage: print "txt[4]:", txt[4] # powinno byc m
-    "ala" in txt: False
-    "Ala" in txt: True
-    txt[4]: m
+
+
+| "ala" in txt: False
+| "Ala" in txt: True
+| txt[4]: m
 
 .. end of output
 
@@ -431,7 +465,7 @@ Z użyciem pętli ``while`` napisz program generujący wszystkie liczby nieparzy
 
 czas: 10 min.
 
-Zmodyﬁkuj program z poprzedniego zadania, tak aby składował generowane liczby nieparzyste w liście o      nazwie ``liczby_nieparzyste``. Zacznij od zadeklarowania pustej listy a następnie za pomocą pętli ``while`` dodaj sukcesywnie wszystkie żądane liczby do listy. Na koniec wydrukuj całą listę.
+Zmodyfikuj program z poprzedniego zadania, tak aby składował generowane liczby nieparzyste w liście o      nazwie ``liczby_nieparzyste``. Zacznij od zadeklarowania pustej listy a następnie za pomocą pętli ``while`` dodaj sukcesywnie wszystkie żądane liczby do listy. Na koniec wydrukuj całą listę.
 
 
 **Zadanie 6: Oblicz sumę**
@@ -461,7 +495,7 @@ Niech :math:`x(t)`  oznacza położenie ciała. Jeżeli położenie to zmienia s
 
 .. math::
 
-   v(t) ≃ {x(t + \Delta t) - x(t - \Delta t)\over  2 \Delta t},\qquad a(t) ≃ {x(t + \Delta t) - 2x(t) + x(t - \Delta t)\over  {\Delta t}^{2}}
+   v(t) \simeq {x(t + \Delta t) - x(t - \Delta t)\over  2 \Delta t},\qquad a(t) \simeq {x(t + \Delta t) - 2x(t) + x(t - \Delta t)\over  {\Delta t}^{2}}
 
 
 gdzie owo :math:`\Delta t` to stały (mały) odstęp czasowy. Oba wzory przechodzą w znany wzór różniczkowy na prędkość i przyspieszenie w granicy  :math:`\Delta t \to 0`.
@@ -503,10 +537,10 @@ Kiedy gotujemy jajko, białka zawarte w jajku najpierw ulegają denaturacji a do
 
 .. math::
 
-   t =  {{M}^{2∕3}c \rho ^{1∕3}\over   K \pi^{2}{(4\pi∕3)}^{2/3}}\ln [0.76{{T}_{0} - {T}_{w}\over { T}_{y} - {T}_{w}}].
+   t =  {{M}^{2/3}c \rho ^{1/3}\over   K \pi^{2}{(4\pi/3)}^{2/3}}\ln [0.76{{T}_{0} - {T}_{w}\over { T}_{y} - {T}_{w}}].
 
 
-gdzie :math:`M` to masa   jajka, :math:`\rho` jego gęstość, :math:`c` to specyﬁczna pojemność  cieplna a :math:`K` to przewodność cieplna  jajka. Rzeczywiste wartości to :math:`M = 47g` dla małego i :math:`M = 67g` dla  dużego jajka, :math:`\rho = 1.038` g  cm :math:`{}^{1}`,  :math:`c = 3.7` J g :math:`{}^{-1}`    K :math:`{}^{-1}` a  :math:`K = 5.4 *10^{-3}` W cm :math:`{}^{-1}` K :math:`{}^{-1}`. Ponadto :math:`{T}_{w}` to temperatura gotującej  się wody (w st. Celsiusa), :math:`{T}_{0}`  to początkowa temperatura jajka (w st. Celsiusa) przed włożeniem go do wody. Sprawdź ile będzie gotować  się
+gdzie :math:`M` to masa   jajka, :math:`\rho` jego gęstość, :math:`c` to specyficzna pojemność  cieplna a :math:`K` to przewodność cieplna  jajka. Rzeczywiste wartości to :math:`M = 47g` dla małego i :math:`M = 67g` dla  dużego jajka, :math:`\rho = 1.038` g  cm :math:`{}^{1}`,  :math:`c = 3.7` J g :math:`{}^{-1}`    K :math:`{}^{-1}` a  :math:`K = 5.4 *10^{-3}` W cm :math:`{}^{-1}` K :math:`{}^{-1}`. Ponadto :math:`{T}_{w}` to temperatura gotującej  się wody (w st. Celsiusa), :math:`{T}_{0}`  to początkowa temperatura jajka (w st. Celsiusa) przed włożeniem go do wody. Sprawdź ile będzie gotować  się
 
 1. wyjęte z lodówki małe jajko na miękko
 2. duże jajko leżące w temperaturze pokojowej, na twardo
@@ -521,10 +555,11 @@ Funkcja
 
 .. math::
 
-   H(x) = \left \{ \array{0, x<0 \\ 1, x0}  \right .
+   H(x) = 0, x<0 \\
+   H(x) = 1, x>0
 
 
-nazywana jest funkcją schodkową lub funkcja Heaviside’a. Zaimplementuj tą funkcję w Sage z użyciem instrukcji warunkowej ``if``.  Przetestuj ją dla :math:`x = 1∕2,0,3`.
+nazywana jest funkcją schodkową lub funkcja Heaviside’a. Zaimplementuj tą funkcję w Sage z użyciem instrukcji warunkowej ``if``.  Przetestuj ją dla :math:`x = 1/2,0,3`.
 
 
 **Zadanie ZD1.5: Przybliżanie funkcji** :math:`\mathop{cos}\nolimits (x)`
