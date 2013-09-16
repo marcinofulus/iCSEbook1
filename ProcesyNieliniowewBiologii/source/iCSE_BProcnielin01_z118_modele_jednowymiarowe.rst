@@ -4,20 +4,61 @@
 Dynamika populacyjna: ciągłe modele jednowymiarowe
 --------------------------------------------------
 
+
 Model Malthusa
-
-Model Verhulsta
-
-Uogólnienia modelu Verhulsta
-
-
-Model Malthusa 
 ~~~~~~~~~~~~~~
 
-W  przyrodzie występuje wiele gatunków zwierząt i roślin. Ich liczebność  ciągle się zmienia: procesy są dynamiczne, powiązane między sobą, oddziaływania są skomplikowane, często losowe. Można powiedzieć, że jest to niewątpliwie przykład realnego układu złożonego z wielu elementów połączonych z sobą w skomplikowaną sieć. Opis takich układów jest trudny. Jak to często bywa w naukach przyrodniczych, stosuje się opis przybliżony, "gruboziarnisty", pomija się elementy mniej istotne i uwzględnia się najważniejsze składniki układu. Jest to metoda  *idealizacji* nagminnie stosowana przez fizyków do opisu rzeczywistości. Historia pokazuje, że metoda ta nie jest zła. Ba, czasami bardzo dobra i nawet znakomita. Podobne podejście zastosujemy do opisu dynamiki populacyjnej. Zaczniemy od najprostszego modelu: jedna populacja. Może to być populacja ludzi na  określonym obszarze,  populacja zajęcy, bakterii czy populacja komórek nowotworowych. Może to być "populacja" związku chemicznego (molekuł ). Populację określa się liczbami naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, 10 :sup:`20` molekuł. Posługiwanie się liczbami całkowitymi jest trudne w modelowaniu. Postąpimy podobnie jak w opisie dynamiki płynów, np. wody czy krwii. Woda w szklance składa się z dyskretnej liczby molekuł. Ale nikt do charakterystyki wody nie stosuje opisu bazyjącego na liczbach naturalnych.  Stosujemy  *przybliżenie ośrodka ciągłego*  scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej objętości. Podobny opis zastosujemy w modelowaniu dynamiki populacyjnej. Liczba N charakteryzująca liczbę osobników w populacji będzie nieujemną liczbą rzeczywistą, interpretowaną jako względna liczba osobników (liczba osobników w stosunku do np. średniej liczby osobników w ostatnich 50 latach lub maksymalnej liczby osobników w poprzednim roku, itp.). Liczba ta może zmieniać się w sposób ciągły. Liczba N(t) będzie charakteryzować liczbę osobników populacji w chwili czasu t.  Zmiana w czasie tej funkcji wynika z zastosowanego modelu. Modele będziemy budować bazując na wiedzy z teorii funkcji i obserwacjach otaczającego nas świata. Nie trzeba być wybitnym matematykiem, żeby umieć zinterpretować różnicę  dwóch  prędkości samochodu A i samochodu B gdy  samochód A jedzie z prędkością 40 km/h, a samochód B jedzie z prędkością 150 km/h. Wielkość, która mówi o *tempie zmiany położenia w czasie* to pochodna położenia jako funkcji czasu, czyli prędkość. To właśnie pochodna mówi nam, w jakim tempie zmienia się dana wielkość. Jeżeli pochodna jest dodatnia, to funkcja rośnie; gdy pochodna jest ujemna, to funkcja maleje. Oto niezbędna wiedza, aby zacząć modelowanie.
+W przyrodzie występuje wiele gatunków zwierząt i roślin. Ich
+liczebność ciągle się zmienia: procesy są dynamiczne, powiązane między
+sobą, oddziaływania są skomplikowane, często losowe. Można powiedzieć,
+że jest to niewątpliwie przykład realnego układu złożonego z wielu
+elementów połączonych z sobą w skomplikowaną sieć. Opis takich układów
+jest trudny. Jak to często bywa w naukach przyrodniczych, stosuje się
+opis przybliżony, "gruboziarnisty", pomija się elementy mniej istotne
+i uwzględnia się najważniejsze składniki układu. Jest to metoda
+*idealizacji* nagminnie stosowana przez fizyków do opisu
+rzeczywistości. Historia pokazuje, że metoda ta nie jest zła. Ba,
+czasami bardzo dobra i nawet znakomita. 
+
+Podobne podejście zastosujemy do opisu dynamiki
+populacyjnej. Zaczniemy od najprostszego modelu: jedna populacja. Może
+to być populacja ludzi na określonym obszarze, populacja zajęcy,
+bakterii czy populacja komórek nowotworowych. Może to być "populacja"
+związku chemicznego (molekuł). Populację określa się liczbami
+naturalnymi: jest 4 tys. ludzi, 3 mld bakterii, 10 :sup:`20`
+molekuł. Posługiwanie się liczbami całkowitymi jest trudne w
+modelowaniu. Postąpimy podobnie jak w opisie dynamiki płynów, np. wody
+czy krwii. Woda w szklance składa się z dyskretnej liczby molekuł. Ale
+nikt do charakterystyki wody nie stosuje opisu bazyjącego na liczbach
+naturalnych.  Stosujemy *przybliżenie ośrodka ciągłego*
+scharakteryzowanego gęstością wody: ilością molekuł w jednostkowej
+objętości. Podobny opis zastosujemy w modelowaniu dynamiki
+populacyjnej. Liczba N charakteryzująca liczbę osobników w populacji
+będzie nieujemną liczbą rzeczywistą, interpretowaną jako względna
+liczba osobników (liczba osobników w stosunku do np. średniej liczby
+osobników w ostatnich 50 latach lub maksymalnej liczby osobników w
+poprzednim roku, itp.). Liczba ta może zmieniać się w sposób
+ciągły. Liczba N(t) będzie charakteryzować liczbę osobników populacji
+w chwili czasu t.  Zmiana w czasie tej funkcji wynika z zastosowanego
+modelu. 
+
+Modele będziemy budować bazując na wiedzy z teorii funkcji i
+obserwacjach otaczającego nas świata. Nie trzeba być wybitnym
+matematykiem, żeby umieć zinterpretować różnicę dwóch prędkości
+samochodu A i samochodu B gdy samochód A jedzie z prędkością 40 km/h,
+a samochód B jedzie z prędkością 150 km/h. Wielkość, która mówi o
+*tempie zmiany położenia w czasie* to pochodna położenia jako funkcji
+czasu, czyli prędkość. To właśnie pochodna mówi nam, w jakim tempie
+zmienia się dana wielkość. Jeżeli pochodna jest dodatnia, to funkcja
+rośnie; gdy pochodna jest ujemna, to funkcja maleje. Oto niezbędna
+wiedza, aby zacząć modelowanie.
 
 
-Pierwszy krok modelowania: dlaczego zmienia się liczba osobników N(t) w danej populacji?  Można wyróżnić trzy podstawowe procesy: ktoś się rodzi, ktoś umiera, jeszcze inny  "wyjeżdża", emigruje, opuszcza populację,  a jeszcze inny "przyjeżdża", imigruje. W języku matematyki możemy to zapisać w postaci relacji:
+Pierwszy krok modelowania: dlaczego zmienia się liczba osobników N(t)
+w danej populacji?  Można wyróżnić trzy podstawowe procesy: ktoś się
+rodzi, ktoś umiera, jeszcze inny "wyjeżdża", emigruje, opuszcza
+populację, a jeszcze inny "przyjeżdża", imigruje. W języku matematyki
+możemy to zapisać w postaci relacji:
 
 
 .. MATH::
