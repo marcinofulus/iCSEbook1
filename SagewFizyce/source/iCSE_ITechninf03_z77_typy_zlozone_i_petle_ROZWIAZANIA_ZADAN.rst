@@ -35,13 +35,14 @@ Sprawdź, czy Sage pozwala na stworzenie listy, której elementy mają różny t
 
 czas: 1 min.
 
-Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same. Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe”w opisie słownika).
+Spróbuj stworzyć nowy słownik, w którym dwa klucze będą takie same. Wyjaśnij zachowanie Sage’a (zwróć uwagę na słowo ”unikatowe” w opisie słownika).
 
 .. code-block:: python
 
     sage: dict = {1:"jeden", 2:"dwa", 1:"trzy"}
     sage: print dict
-    sage: print "wartość 'jeden' dpowiadająca początkowemu kluczowi '1' zostaje nadpisany przez 'trzy'"
+    sage: print "wartość 'jeden' odpowiadająca początkowemu kluczowi '1' 
+    ...      zostaje nadpisany przez 'trzy'"
 
 
 | {1: 'trzy', 2: 'dwa'}
@@ -58,7 +59,8 @@ Sprawdź, jaki komunikat wyświetli wykonanie polecenia ``type(telefony.keys())`
 
 .. code-block:: python
 
-    sage: telefony={'Ala':508605107, 'Ola':3452234,'Franek':505600600,'Pietrek':607233322}
+    sage: telefony={'Ala':508605107, 'Ola':3452234,'Franek':505600600,
+    ...      'Pietrek':607233322}
     sage: type(telefony.keys())
 
 
@@ -177,7 +179,8 @@ Dla słownika ``wiek`` policzyć (użyć instrukcji ``for`` i ``len()`` ) średn
 
 .. code-block:: python
 
-    sage: wiek={'Ala':14, 'Ola':34,'Franek':50,'Pietrek':15,'Monika':41,'Staszek':22}
+    sage: wiek={'Ala':14, 'Ola':34,'Franek':50,'Pietrek':15,'Monika':41,
+    ...      'Staszek':22}
     sage: srednia = 0
     sage: for lata in wiek.values():
     ...       srednia += lata

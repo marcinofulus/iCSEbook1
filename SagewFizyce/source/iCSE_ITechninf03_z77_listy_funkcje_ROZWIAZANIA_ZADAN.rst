@@ -31,7 +31,8 @@ Zadanie 2
 
 .. code-block:: python
 
-    sage: l1 = [-18, -9, 1, -14, -2, 7, 5, -11, 16, 4, 18, 7, -18, 19, -10, 11, 7, -18, -3, -6]
+    sage: l1 = [-18, -9, 1, -14, -2, 7, 5, -11, 16, 4, 18, 7, -18, 19, 
+    ...      -10, 11, 7, -18, -3, -6]
     sage: l1.sort()
     sage: l1a = l1[:len(l1)/2]
     sage: l1b = l1[len(l1)/2:]
@@ -64,7 +65,8 @@ Zadanie 3
     sage: v_0 = 3.44
     sage: h_0 = 0
     sage: g = 9.81
-    sage: h = [h_0 + v_0 * t - g * t^2 /2. for t in srange(0,0.7,0.01, include_endpoint=True)]
+    sage: h = [h_0 + v_0 * t - g * t^2 /2. for t in 
+    ...      srange(0,0.7,0.01, include_endpoint=True)]
     sage: print h
     sage: list_plot(h)
 
@@ -80,7 +82,8 @@ Zadanie 3
 .. code-block:: python
 
     sage: # punkt 3
-    sage: sin_cos = [sin(a) - cos(a) for a in [a * n(pi) for a in srange(-2,2,0.025,include_endpoint=True)]]
+    sage: sin_cos = [sin(a) - cos(a) for a in [a * n(pi) for a in 
+    ...      srange(-2,2,0.025,include_endpoint=True)]]
     sage: list_plot(sin_cos)
 
 .. image:: iCSE_ITechninf03_z77_listy_funkcje_ROZWIAZANIA_ZADAN_media/cell_10_sage0.png
@@ -204,10 +207,16 @@ Zadanie 9
 
 .. code-block:: python
 
-    sage: # http://upload.wikimedia.org/wikipedia/commons/7/74/Normal_Distribution_PDF.svg
+    sage: # http://upload.wikimedia.org/wikipedia/commons/7/74/
+    sage: # Normal_Distribution_PDF.svg
     sage: xmin, xmax, step = -5, 5, 0.1
     sage: iks = srange(xmin, xmax, step)
-    sage: sum([list_plot(zip(iks,[mygauss(x,mu,sqrt(sigma)) for x in iks]), legend_label=r"$\mu=%.2f\quad\sigma^2=%.2f$" % (mu,sigma), thickness=3, plotjoined=True, color=["blue","red","orange","green"][i]) for mu, sigma, i in [[0,0.2,0],[0,1,1],[0,5,2],[-2,0.5,3]]]).show(frame=True,axes_labels=[r'$x$',r'$\phi_{\mu,\sigma^2}(x)$'], fontsize=14, gridlines=True)
+    sage: sum([list_plot(zip(iks,[mygauss(x,mu,sqrt(sigma)) for x in iks]), 
+    ...      legend_label=r"$\mu=%.2f\quad\sigma^2=%.2f$" % (mu,sigma), 
+    ...      thickness=3, plotjoined=True, color=["blue","red","orange",
+    ...      "green"][i]) for mu, sigma, i in [[0,0.2,0],[0,1,1],[0,5,2],
+    ...      [-2,0.5,3]]]).show(frame=True,axes_labels=
+    ...      [r'$x$',r'$\phi_{\mu,\sigma^2}(x)$'], fontsize=14, gridlines=True)
 
 .. image:: iCSE_ITechninf03_z77_listy_funkcje_ROZWIAZANIA_ZADAN_media/cell_39_sage0.png
     :align: center
@@ -225,7 +234,8 @@ Zadanie 10
     ...       for element in lista:
     ...           suma += element
     ...       return suma
-    sage: suma([3,6,-3,4]) == sum([3,6,-3,4]) # sum to wbudowana funkcja Sage do obliczania sum elementów list
+    sage: suma([3,6,-3,4]) == sum([3,6,-3,4])
+    sage: # sum to wbudowana funkcja Sage do obliczania sum elementów list
 
 
 True
@@ -254,10 +264,10 @@ Zadanie 11
 
 .. end of output
 
-Jak widać, przy każdym obrocie pętli usuwana jest jedna wartość (środkowa\*) z listy, po której przebiega pętla  *for* , powodując za każdym razem skracanie listy.
+Jak widać, przy każdym obrocie pętli usuwana jest jedna wartość (środkowa\*) z listy, po której przebiega pętla  ``for`` , powodując za każdym razem skracanie listy.
 
 
-\* \- rzutowana na typ int, dla nieparzystej ilości elementów listy będzie to podłoga połowy długości listy
+\* \- rzutowana na typ ``int``, dla nieparzystej ilości elementów listy będzie to podłoga połowy długości listy
 
 
 Zadania domowe
@@ -295,7 +305,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # zwykłe przypisanie, x trzyma wartość 1 i ma typ int (python) i sage.rings.integer.Integer (Sage)
+    sage: # zwykłe przypisanie, x trzyma wartość 1 i ma typ int (python) 
+    sage: # i sage.rings.integer.Integer (Sage)
     sage: x = 1
 
 
@@ -305,7 +316,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # zwykłe przypisanie, x trzyma zmiennoprzecinkową wartość 1.0 i ma typ float (python) i sage.rings.real_mpfr.RealLiteral (Sage)
+    sage: # zwykłe przypisanie, x trzyma zmiennoprzecinkową wartość 1.0 i ma 
+    sage: # typ float (python) i sage.rings.real_mpfr.RealLiteral (Sage)
     sage: x = 1.
 
 
@@ -313,7 +325,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # zwykłe przypisanie, x trzyma wartość 1 i ma typ int (python) i sage.rings.integer.Integer (Sage)
+    sage: # zwykłe przypisanie, x trzyma wartość 1 i ma typ int (python) 
+    sage: # i sage.rings.integer.Integer (Sage)
     sage: x = 1;
     sage: type(x)
 
@@ -324,7 +337,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # przypisanie nie działa, w Sage (i Pythonie) nie występuje operator "!", 
+    sage: # przypisanie nie działa, w Sage (i Pythonie) 
+    sage: # nie występuje operator "!", 
     sage: # x jest niezdefiniowane więc nie trzyma żadnej wartości
     sage: xa = 1!
 
@@ -337,7 +351,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # przypisanie nie działa, w Sage odniesiemy się do podręcznej pomocy, w Pythonie dostaniemy SyntaxError, 
+    sage: # przypisanie nie działa, w Sage odniesiemy się do podręcznej pomocy, 
+    sage: # w Pythonie dostaniemy SyntaxError, 
     sage: # x jest niezdefiniowane więc nie trzyma żadnej wartości
     sage: x = 1?
 
@@ -347,7 +362,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # przypisanie nie działa, znak ":" występuje przy rozpoczęciach bloku instrukcji, 
+    sage: # przypisanie nie działa, znak ":" występuje przy 
+    sage: # rozpoczęciach bloku instrukcji, 
     sage: # x jest niezdefiniowane więc nie trzyma żadnej wartości
     sage: x = 1:
 
@@ -360,7 +376,8 @@ Zadanie ZD5.2
 
 .. code-block:: python
 
-    sage: # do x przypisana jest jednoelementowa krotka, typ w Sage (i Pythonie) to tuple, x trzyma krotkę (1)
+    sage: # do x przypisana jest jednoelementowa krotka, 
+    sage: # typ w Sage (i Pythonie) to tuple, x trzyma krotkę (1)
     sage: x = 1,
 
 
@@ -377,7 +394,8 @@ Zadanie ZD5.3
     ...           r = sqrt(r)
     ...       for i in range(n):
     ...           r = r^2
-    ...       print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)
+    ...       print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" 
+    ...       % (n, r)
 
 
 | 0 razy spierwiastkowane i podniesione do kwadratu: 2.0000000000000000

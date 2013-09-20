@@ -20,11 +20,13 @@ Sage posiada olbrzymią wbudowaną dokumentację. Dostępna jest ona po wpisaniu
 
 .. code-block:: python
 
-   file: /opt/sage/sage-4.7.1/local/lib/python2.6/site-packages/sage/functions/trig.py
+   file: /opt/sage/sage-4.7.1/local/lib/python2.6/site-packages/sage/
+   functions/trig.py
 
    Type: <class ‘sage.functions.trig.Function_sin’>
 
-   Definition: sin(*args, coerce=True, hold=False, dont_call_method_on_arg=False)
+   Definition: sin(*args, coerce=True, hold=False, 
+   dont_call_method_on_arg=False)
 
    Docstring:
 
@@ -46,7 +48,8 @@ Sage posiada olbrzymią wbudowaną dokumentację. Dostępna jest ona po wpisaniu
     sage: sin(0,hold=True)
     sin(0)
 
-    To then evaluate again, we currently must use Maxima via sage.symbolic.expression.Expression.simplify():
+    To then evaluate again, we currently must use Maxima via 
+    sage.symbolic.expression.Expression.simplify():
 
     sage: a = sin(0,hold=True); a.simplify()
     0
@@ -67,14 +70,14 @@ Oprócz instrukcji użycia znajdziemy tam za każdym razem szereg przykładów i
 Instrukcje sterujące
 ~~~~~~~~~~~~~~~~~~~~
 
-Na poprzedniej lekcji poznaliśmy dwie instrukcje sterujące: pętle  for  oraz  while. Pierwsza z nich bazuje na iterowaniu kolejnych elementów jakiegoś zbioru danych (najcześciej listy). Druga bazuje spełnieniu warunku logicznego. Jest zatem w pewnym sensie zarówno pętlą jak i instrukcją warunkową. Instrukcje tego typu bazują na porównaniach.
+Na poprzedniej lekcji poznaliśmy dwie instrukcje sterujące: pętle  ``for``  oraz  ``while``. Pierwsza z nich bazuje na iterowaniu kolejnych elementów jakiegoś zbioru danych (najczęściej listy). Druga bazuje na spełnieniu warunku logicznego. Jest zatem w pewnym sensie zarówno pętlą jak i instrukcją warunkową. Instrukcje tego typu bazują na porównaniach.
 
 
 
 Porównania
 """"""""""
 
-Najprostszymi porównaniami jakie znamy jest porównywanie dwóch liczb. Sage stosując podstawowe operatory porównania  ==, !=, <=, >=, >, < zawsze będzie się starał automatycznie skonwertować typy liczb do takich samych (jeżeli jest to wykonalne to rzutowanie typu odbędzie się na typ nadrzędny). W wyniku zastosowania porównania dwóch liczb otrzymamy jedną z dwóch możliwych logicznych odpowiedzi  **True**  lub  **False**.
+Najprostszymi porównaniami jakie znamy jest porównywanie dwóch liczb. Sage stosując podstawowe operatory porównania  ``==, !=, <=, >=, >, <`` zawsze będzie się starał automatycznie skonwertować typy liczb do takich samych (jeżeli jest to wykonalne to rzutowanie typu odbędzie się na typ nadrzędny). W wyniku zastosowania porównania dwóch liczb otrzymamy jedną z dwóch możliwych logicznych odpowiedzi  **True**  lub  **False**.
 
 
 .. code-block:: python
@@ -116,7 +119,7 @@ x < x + 1
 
 .. end of output
 
-należy  do  tego  użyć  funkcji   bool()
+należy  do  tego  użyć  funkcji   ``bool()``
 
 
 .. code-block:: python
@@ -202,7 +205,7 @@ gdzie :math:`n` to stopień wielomianu, a :math:`x` to argument danego wielomian
 Nieco logiki
 """"""""""""
 
-Na zajęciach z analizy matematycznej większość z Państwa dowiedziała się co to takiego jest zdanie, warunek zdaniowy, funktory zdaniotwórcze (negacja, alternatywa, koniunkcja, implikacja, równoważność). Poznaliście też podstawowe prawa logiki (tautologie).
+Z analizy matematycznej wiecie co to takiego jest zdanie, warunek zdaniowy, funktory zdaniotwórcze (negacja, alternatywa, koniunkcja, implikacja, równoważność). Poznaliście też podstawowe prawa logiki (tautologie).
 
 
 Sage bardzo naturalnie korzysta z owych funktorów zdaniotwórczych
@@ -298,14 +301,14 @@ Korzystając z tabel prawdy udowodnij:
 - prawa pochłaniania
 - prawa De Morgana (pierwsze i drugie)
 
-**Uwaga:** Skorzystaj z pętli for lub while.
+**Uwaga:** Skorzystaj z pętli ``for`` lub ``while``.
 
 
 
 Instrukcje warunkowe
 """"""""""""""""""""
 
-Instrukcje tego typu pozwalają na wykonanie zadeklarowanych przez programistę instrukcji w zależności od tego, czy dane wyrażenie logiczne jest prawdziwe czy fałszywe. Najogólniejszą postacią instrukcji warunkowej  if\-elif\-else  jest
+Instrukcje tego typu pozwalają na wykonanie zadeklarowanych przez programistę instrukcji w zależności od tego, czy dane wyrażenie logiczne jest prawdziwe czy fałszywe. Najogólniejszą postacią instrukcji warunkowej  **if\-elif\-else**  jest
 
 
 if warunek_1:  
@@ -387,7 +390,7 @@ Bądź  też  coś  nieco  bardziej  skomplikowanego.
 Jeszcze jedno przydatne porównanie
 """"""""""""""""""""""""""""""""""
 
-Czasami trafimy na problem, w którym mając jakąś listę (krotkę, słownik, zbiór...) zastanawiamy się, czy dany obiekt zawiera np: interesującą nas liczbę  ``12``. Można oczywiście w pętli przeiterować wszystkie elementy listy (czy innego obiektu) i sprawdzić :math:`if` -emczy dana liczba w niej siedzi. Szybciej można to osiągnąć korzystając z operatora  ``in`` (lub a  ``not in``)
+Czasami trafimy na problem, w którym mając jakąś listę (krotkę, słownik, zbiór...) zastanawiamy się, czy dany obiekt zawiera np: interesującą nas liczbę  ``12``. Można oczywiście w pętli przeiterować wszystkie elementy listy (czy innego obiektu) i sprawdzić ``if`` -em czy dana liczba w niej "siedzi". Szybciej można to osiągnąć korzystając z operatora  ``in`` (lub  ``not in``)
 
 | zmienna in lista
 | 
@@ -429,7 +432,7 @@ Hmmm... W słowniku istnieje wpis  ``12`` odpowiadający problemowi... Dostaliś
 
 i jest w porządku.
 
-**Uwaga:** W ten sam sposób możemy przeszukiwać ciągi znaków, szukając jakiegoś podciąguznaków. Ciągi znaków traktowane są niejako jak listy (choć nie do końca to prawda...).
+**Uwaga:** W ten sam sposób możemy przeszukiwać ciągi znaków, szukając jakiegoś podciągu znaków. Ciągi znaków traktowane są niejako jak listy (choć nie do końca to prawda...).
 
 
 .. code-block:: python
@@ -454,11 +457,11 @@ Zadania
 Korzystając z wiedzy zdobytej na lekcjach 1\-4 podaj rozwiązania zadań.
 
 
-**Zadanie 4: Pętla while i liczby nieparzyste.**
+**Zadanie 4: Pętla** ``while`` **i liczby nieparzyste.**
 
 czas: 10 min.
 
-Z użyciem pętli ``while`` napisz program generujący wszystkie liczby nieparzyste od 1 do :math:`n`.      Ustaw zmienną ``n`` na początku komórki, w której napiszesz program. Upewnij się, że jeżeli podane :math:`n` będzie parzyste, to największą liczbą jaką zwróci program będzie :math:`n  -1`.
+Z użyciem pętli ``while`` napisz program generujący wszystkie liczby nieparzyste od 1 do :math:`n`.      Ustaw zmienną :math:`n` na początku komórki, w której napiszesz program. Upewnij się, że jeżeli podane :math:`n` będzie parzyste, to największą liczbą jaką zwróci program będzie :math:`n  -1`.
 
 
 **Zadanie 5: Lista liczb nieparzystych.**
@@ -483,9 +486,14 @@ Poniższy kod powinien obliczać sumę :math:`s =\sum_{k=1}^{M}{1\over  k}`.
 
 Nie działa jednak poprawnie. Dlaczego? Postaraj się go poprawić. (Dla podanych wartości zmiennych wartość sumy powinna wynieść :math:`5.1773775176396208408391430566553026437759399414062`.)
 
-**Uwaga:** Pamiętaj, że zawsze możesz zatrzymać obliczenia poprzez wybranie ”Interrupt” w liście rozwijalnej ``Action``  na samej górze notatnika.
+**Uwaga:** Pamiętaj, że zawsze możesz zatrzymać obliczenia poprzez wybranie **Interrupt** w liście rozwijalnej **Action**  na samej górze notatnika.
 
-**Uwaga:** Metodyka znajdowania problemów w kodzie programu. Ogólnie istnieją dwie proste metody znajdywania  błędów w programach: (i) można przeczytać program powoli i dokładnie zastanowić się nad każdą linijką i  konsekwencją jej wywołania, oraz (ii) można drukować sobie kolejne kroki na ekran (postać zmiennych, ich wartości...)  i na podstawie ich zmian próbować znaleźć problem. Na początku zastosuj metodę (i) i znajdź tak wiele błędów  jak zdołasz. Popraw je. Jeżeli program dalej nie będzie działać poprawnie spróbuj metody (ii). Ustaw na wstępie  :math:`M = 3` i  porównaj obliczenia kolejnych kroków programu ze swoimi własnymi, sprawdzając co przechowują zmienne ``s`` i ``k``.
+**Uwaga:** Metodyka znajdowania problemów w kodzie programu. Ogólnie istnieją dwie proste metody znajdywania  błędów w programach:
+
+(i) można przeczytać program powoli i dokładnie zastanowić się nad każdą linijką i  konsekwencją jej wywołania, oraz
+(ii) można drukować sobie kolejne kroki na ekran (postać zmiennych, ich wartości...)  i na podstawie ich zmian próbować znaleźć problem.
+
+Na początku zastosuj metodę (i) i znajdź tak wiele błędów  jak zdołasz. Popraw je. Jeżeli program dalej nie będzie działać poprawnie spróbuj metody (ii). Ustaw na wstępie  :math:`M = 3` i  porównaj obliczenia kolejnych kroków programu ze swoimi własnymi, sprawdzając co przechowują zmienne :math:`s` i :math:`k`.
 
 **Zadanie 7: Prędkość i przyspieszenie**.\*
 
@@ -501,8 +509,8 @@ Niech :math:`x(t)`  oznacza położenie ciała. Jeżeli położenie to zmienia s
 gdzie owo :math:`\Delta t` to stały (mały) odstęp czasowy. Oba wzory przechodzą w znany wzór różniczkowy na prędkość i przyspieszenie w granicy  :math:`\Delta t \to 0`.
 Napisz program obliczający prędkość i przyspieszenie dla położeń zawartych w liście
 
-``x = [0.5, 0.5, 0.5, 0.71, 0.712, 0.331, 0.331, 0.331, 0.24, 0.245, 0.246, 0.247, 0.248]
-t = [ti\*0.1 for ti in range(len(x))]``
+| ``x = [0.5, 0.5, 0.5, 0.71, 0.712, 0.331, 0.331, 0.331, 0.24, 0.245, 0.246, 0.247, 0.248]``
+| ``t = [ti\*0.1 for ti in range(len(x))]``
 
 
 Wartości prędkości i przyspieszenia dla poszczególnych przedziałów proszę zapisać w tablicach odpowiednio ``v`` i ``a``.
@@ -533,14 +541,14 @@ Napisz program znajdujący najmniejszą i największą wartość z listy (zakła
 
 czas: – min.
 
-Kiedy gotujemy jajko, białka zawarte w jajku najpierw ulegają denaturacji a dopiero później się ścinają. Po osiągnięciu temperatury krytycznej rozpoczyna się właściwa reakcja, która  przyspiesza wraz z wzrostem temperatury. W białku jajka białka ścinają się już w temperaturze  :math:`63^{o}` C, natomiast w      żółtku dopiero przy :math:`70^{o}` C.  Aby ugotować jajko na miękko należy grzać białko jajka w temperaturze co najmniej  :math:`63^{o}` C  wystarczająco długo, ale żółtko nie powinno zostać rozgrzane powyżej  :math:`70^{o}` C.  Aby ugotować jajko na twardo, środek jajka powinien zostać ogrzany do temperatury  :math:`70^{o}` C. Poniższy wzór  szacuje ile czasu :math:`t` (w sekundach) potrzebuje żółtko do osiągnięcia temperatury  :math:`{T}_{y}` (w  stopniach Celsiusa)
+Kiedy gotujemy jajko, białka zawarte w jajku najpierw ulegają denaturacji, a dopiero później się ścinają. Po osiągnięciu temperatury krytycznej rozpoczyna się właściwa reakcja, która  przyspiesza wraz ze wzrostem temperatury. W białku jajka białka ścinają się już w temperaturze  :math:`63^{o}` C, natomiast w      żółtku dopiero przy :math:`70^{o}` C.  Aby ugotować jajko na miękko należy grzać białko jajka w temperaturze co najmniej  :math:`63^{o}` C  wystarczająco długo, ale żółtko nie powinno zostać rozgrzane powyżej  :math:`70^{o}` C.  Aby ugotować jajko na twardo, środek jajka powinien zostać ogrzany do temperatury  :math:`70^{o}` C. Poniższy wzór  szacuje ile czasu :math:`t` (w sekundach) potrzebuje żółtko do osiągnięcia temperatury  :math:`{T}_{y}` (w  stopniach Celsjusza)
 
 .. math::
 
    t =  {{M}^{2/3}c \rho ^{1/3}\over   K \pi^{2}{(4\pi/3)}^{2/3}}\ln [0.76{{T}_{0} - {T}_{w}\over { T}_{y} - {T}_{w}}].
 
 
-gdzie :math:`M` to masa   jajka, :math:`\rho` jego gęstość, :math:`c` to specyficzna pojemność  cieplna a :math:`K` to przewodność cieplna  jajka. Rzeczywiste wartości to :math:`M = 47g` dla małego i :math:`M = 67g` dla  dużego jajka, :math:`\rho = 1.038` g  cm :math:`{}^{1}`,  :math:`c = 3.7` J g :math:`{}^{-1}`    K :math:`{}^{-1}` a  :math:`K = 5.4 *10^{-3}` W cm :math:`{}^{-1}` K :math:`{}^{-1}`. Ponadto :math:`{T}_{w}` to temperatura gotującej  się wody (w st. Celsiusa), :math:`{T}_{0}`  to początkowa temperatura jajka (w st. Celsiusa) przed włożeniem go do wody. Sprawdź ile będzie gotować  się
+gdzie :math:`M` to masa   jajka, :math:`\rho` jego gęstość, :math:`c` to specyficzna pojemność  cieplna a :math:`K` to przewodność cieplna  jajka. Rzeczywiste wartości to :math:`M = 47` g dla małego i :math:`M = 67` g dla  dużego jajka, :math:`\rho = 1.038` g  cm :math:`{}^{1}`,  :math:`c = 3.7` J g :math:`{}^{-1}` K :math:`{}^{-1}` a  :math:`K = 5.4 *10^{-3}` W cm :math:`{}^{-1}` K :math:`{}^{-1}`. Ponadto :math:`{T}_{w}` to temperatura gotującej  się wody (w st. Celsjusza), :math:`{T}_{0}`  to początkowa temperatura jajka (w st. Celsjusza) przed włożeniem go do wody. Sprawdź ile będzie gotować  się
 
 1. wyjęte z lodówki małe jajko na miękko
 2. duże jajko leżące w temperaturze pokojowej, na twardo
@@ -581,7 +589,7 @@ gdzie
    {c}_{j} = -{c}_{j-1}       {{x}^{2}\over   2j(2j -1)},\qquad j = 1,2,...,n,
 
 
-a :math:`{c}_{0} = 1`. Używając pętli ``for`` napisz program obliczający wartość funkcji :math:`\mathop{cos}\nolimits ({x}_{k})` w punkcie  :math:`{x}_{k}` dla  danego :math:`n` deklarowanych w odpowiednich zmiennych na początku komórki. Korzystając z  wbudowanej w Sage funkcji ``cos`` policz jaki błąd generuje powyższy algorytm dla :math:`n = 5,25,50,100,200,1000` w punktach  :math:`{x}_{k} = 0,2,4,6,8,10`.
+a :math:`{c}_{0} = 1`. Używając pętli ``for`` napisz program obliczający wartość funkcji :math:`\mathop{cos}\nolimits ({x}_{k})` w punkcie  :math:`{x}_{k}` dla  danego :math:`n`, deklarowanych w odpowiednich zmiennych na początku komórki. Korzystając z  wbudowanej w Sage funkcji ``cos`` policz jaki błąd generuje powyższy algorytm dla :math:`n = 5,25,50,100,200,1000` w punktach  :math:`{x}_{k} = 0,2,4,6,8,10`.
 
 **Uwaga:** Dla :math:`n = 1000` należy użyć wartości numerycznych dla :math:`{x}_{k}`.
 

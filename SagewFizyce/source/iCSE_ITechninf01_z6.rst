@@ -29,7 +29,7 @@ Kiedy już chwilę popracujemy w Sage, tworząc lub współtworząc notatniki, p
 #. **Home**
    Odnośnik do katalogu domowego (Twojej strony domowej na danym serwerze Sage). 
 #. **Published**
-   Odnośnik  do  dokumentów  opublikowanych  na  tym  serwerze  Sage (mogą być one Twoje własne lub innych użytkowników). O tym czym różnią się notatniki od takich dokumentów dowiecie się za chwilę. 
+   Odnośnik  do  dokumentów  opublikowanych  na  tym  serwerze  Sage (mogą być one Twoje własne lub innych użytkowników). O tym czym różnią się notatniki od takich dokumentów będzie za chwilę. 
 #. **Log**
    Odnośnik do strony zawierającej historię zmian jakie wykonałeś na  swoim koncie. 
 #. **Settings**
@@ -193,7 +193,7 @@ Pierwsze kroki w Sage
 Sage (Software for Algebra and Geometry Experimentation) \- system algebry komputerowej napisanego w Pythonie i Cythonie. Do podstawowych ale i tych bardzo zaawansowanych obliczeń język Python nie będzie niezbędny, choć jeżeli ktoś go zna, na pewno ułatwi to naukę samego Sage.
 
 
-Zanim zaczniemy, potrzebna nam jeszcze tylko kilka informacji:
+Zanim zaczniemy, potrzeba nam jeszcze tylko kilka informacji:
 
 - komórki  wywołujemy  za  pomocą   SHIFT \+ Enter (Return)  (zupełnie jak w Mathematica). Naciśnięcie po prostu  Enter (Return)  spowoduje  dodanie kolejnej linii do komórki. 
 - Aby dodać nową komórkę należy najechać wskaźnikiem myszy lekko  powyżej lub poniżej dowolnej komórki i gdy pojawi się niebieski pasek  nacisnąć lewy przycisk myszy (LPM). Jeżeli w tym momencie naciśniemy i   przytrzymamy  SHIFT  dostaniemy komórkę tekstową (o niej później).

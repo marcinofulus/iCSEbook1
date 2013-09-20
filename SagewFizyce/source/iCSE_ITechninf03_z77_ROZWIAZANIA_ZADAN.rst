@@ -103,23 +103,29 @@ Zadanie 3
     sage: print "\nprawo przemienności koniunkcji"
     sage: for p in [0, 1]:
     ...       for q in [0, 1]:
-    ...           print "%s i %s: %s\t%s i %s: %s" %(p, q, p and q, q, p, q and p)
+    ...           print "%s i %s: %s\t%s i %s: %s" 
+    ...           %(p, q, p and q, q, p, q and p)
     ...           
     sage: print "\nprawo przemienności alternatywy"
     sage: for p in [0, 1]:
     ...       for q in [0, 1]:
-    ...           print "%s lub %s: %s\t%s lub %s: %s" %(p, q, p or q, q, p, q or p)
+    ...           print "%s lub %s: %s\t%s lub %s: %s" 
+    ...           %(p, q, p or q, q, p, q or p)
     ...                   
     sage: print "\nprawo łączności koniunkcji"
     sage: for p in [0, 1]:
     ...       for q in [0, 1]:
     ...           for r in [0, 1]:
-    ...               print "(%s i %s) i %s: %s\t%s i (%s i %s): %s" %(p, q, r, (p and q) and r,p,q,r, p and (q and r))
+    ...               print "(%s i %s) i %s: %s\t%s i (%s i %s): %s" 
+    ...               %(p, q, r, (p and q) 
+    ...               and r,p,q,r, p and (q and r))
     sage: print "\nprawo łączności alternatywy"
     sage: for p in [0, 1]:
     ...       for q in [0, 1]:
     ...           for r in [0, 1]:
-    ...               print "(%s lub %s) lub %s: %s\t%s lub (%s lub %s): %s" %(p,q,r,(p or q) or r,p,q,r,p or (q or r))
+    ...               print "(%s lub %s) lub %s: %s\t%s lub (%s lub %s): %s" 
+    ...               %(p,q,r,(p or q) 
+    ...               or r,p,q,r,p or (q or r))
     ...          
     sage: print "\nitd...\n"            
     sage: print "\nprawo idempotentności koniunkcji"
@@ -243,12 +249,14 @@ Zadanie 7
 
 .. code-block:: python
 
-    sage: x = [0.5, 0.5, 0.5, 0.71, 0.712, 0.331, 0.331, 0.331, 0.24, 0.245, 0.246, 0.247, 0.248]  
+    sage: x = [0.5, 0.5, 0.5, 0.71, 0.712, 0.331, 0.331, 0.331, 0.24, 0.245, 
+    ...      0.246, 0.247, 0.248]  
     sage: t = [ti*0.1 for ti in range(len(x))]
     sage: delta_t = t[1] - t[0]; print "delta t =", delta_t
     sage: v = []
     sage: a = []
-    sage: # jako, że nie znamy jeszcze mechanizmu dzielenia list (slice), to trzeba dać warunek...
+    sage: # jako, że nie znamy jeszcze mechanizmu dzielenia list (slice), 
+    sage: # to trzeba dać warunek...
     sage: for time in t:
     ...       indeks = t.index(time)
     ...       if indeks > 0 and indeks < len(t)-1:
@@ -286,12 +294,13 @@ Zadanie ZD4.1: Trójkąt.
     sage: if a + b > c and a + c > b and b + c > a:
     ...       p = (a + b + c)/2
     ...       Pole = sqrt(p*(p-a)*(p-b)*(p-c))
-    ...       print "Dla a = %f, b = %f, c = %f da się zbudować trójkąt o polu %f i obwodzie %f" % (a, b, c, Pole, p * 2)
+    ...       print "Dla a = %f, b = %f, c = %f da się zbud. trójkąt o polu %f 
+    ...       i obwodzie %f" % (a, b, c, Pole, p * 2)
     sage: else:
     ...       print "Dla a = %f, b = %f, c = %f nie da się zbudować trójkąta"
 
 
-| Dla a = 2.000000, b = 2.000000, c = 2.200000 da się zbudować trójkąt o polu 1.837362 i obwodzie 6.200000
+| Dla a = 2.000000, b = 2.000000, c = 2.200000 da się zbud. trójkąt o polu 1.837362 i obwodzie 6.200000
 
 .. end of output
 
@@ -333,25 +342,29 @@ Zadanie ZD4.3: jajo
     sage: M = M_male
     sage: Ty = Ty_miekko
     sage: T0 = 7
-    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * ln (0.76 * (T0 - Tw)/(Ty - Tw))
+    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * 
+    ...      ln (0.76 * (T0 - Tw)/(Ty - Tw))
     sage: print punkt_a, ":", t.n(digits=5), "s"
     sage: punkt_b = "duże jajko leżące w temperaturze pokojowej, na twardo"
     sage: M = M_duze
     sage: Ty = Ty_twardo
     sage: T0 = 20
-    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * ln (0.76 * (T0 - Tw)/(Ty - Tw))
+    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * 
+    ...      ln (0.76 * (T0 - Tw)/(Ty - Tw))
     sage: print punkt_b, ":", t.n(digits=5), "s"
-    sage: punkt_c = "przyniesione z bazaru w Słubicach (woj. lubuskie) w dniu 30 lipca 1994, duże jajko na twardo"
+    sage: punkt_c = "przyniesione z bazaru w Słubicach w dniu 30 lipca 1994, 
+    ...      duże jajko na twardo"
     sage: M = M_duze
     sage: Ty = Ty_twardo
     sage: T0 = 39.5
-    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * ln (0.76 * (T0 - Tw)/(Ty - Tw))
+    sage: t = M^(2/3) * c * rho^(1/3) / K / pi^2 / (4 * pi / 3)^(2/3) * 
+    ...      ln (0.76 * (T0 - Tw)/(Ty - Tw))
     sage: print punkt_c, ":", t.n(digits=5), "s"
 
 
 | wyjęte z lodówki małe jajko na miękko : 290.36 s
 | duże jajko leżące w temperaturze pokojowej, na twardo : 315.22 s
-| przyniesione z bazaru w Słubicach (woj. lubuskie) w dniu 30 lipca 1994, duże jajko na twardo : 190.55 s
+| przyniesione z bazaru w Słubicach w dniu 30 lipca 1994, duże jajko na twardo : 190.55 s
 
 .. end of output
 
@@ -378,8 +391,10 @@ Funkcja Heaviside’
 
 .. code-block:: python
 
-    sage: # dla zobrazowania z jaką funkcja mamy do czynienia (jezeli student nie zajrzał do wiki)
-    sage: plot(lambda x: 0 if x < 0 else 1, thickness=3, color='salmon', axes_labels=['$x$','$H(x)$'], fontsize=14)
+    sage: # dla zobrazowania z jaką funkcja mamy do czynienia 
+    sage: # (jezeli student nie zajrzał do wiki)
+    sage: plot(lambda x: 0 if x < 0 else 1, thickness=3, color='salmon', 
+    ...      axes_labels=['$x$','$H(x)$'], fontsize=14)
 
 .. image:: iCSE_ITechninf03_z77_ROZWIAZANIA_ZADAN_media/cell_44_sage0.png
     :align: center
@@ -403,7 +418,8 @@ Zadanie ZD4.5: Przybliżenie funkcji  ``cos``
     ...           for j in xrange(1,ni):
     ...               cj = -cj * n(xk)^2 / (2 * j * (2*j - 1))
     ...               C += cj
-    ...           print "n: %00i, xk: %s, C: %e, cos: %e, err: %e" % (ni, xk, C, cos(xk), cos(xk) - C)
+    ...           print "n: %00i, xk: %s, C: %e, cos: %e, err: %e" 
+    ...           % (ni, xk, C, cos(xk), cos(xk) - C)
 
 
 | n: 5, xk: 0, C: 1.000000e+00, cos: 1.000000e+00, err: 0.000000e+00
@@ -436,7 +452,8 @@ Zadanie ZD4.5: Przybliżenie funkcji  ``cos``
 
 .. code-block:: python
 
-    sage: # trochę lepiej byłoby zbierać dane do list i narysować zależności na wykresach
+    sage: # trochę lepiej byłoby zbierać dane do list 
+    sage: # i narysować zależności na wykresach
     sage: x_k = [0, 4 * pi, 6 * pi, 8 * pi, 10 * pi]
     sage: m = [5, 25, 50, 100, 200]
     sage: i = 0
@@ -449,7 +466,8 @@ Zadanie ZD4.5: Przybliżenie funkcji  ``cos``
     ...               cj = -cj * n(xk)**2R / (2R * j * (2R*j - 1))
     ...               C[i] += cj
     ...           blad.append(cos(xk) - C[i])
-    ...           #print "n: %00i, xk: %s, C: %e, cos: %e, err: %e" % (ni, xk, C[i], cos(xk), blad[i])
+    ...           #print "n: %00i, xk: %s, C: %e, cos: %e, err: %e" 
+    ...           #% (ni, xk, C[i], cos(xk), blad[i])
     ...           i += 1
     sage: C; blad;
 

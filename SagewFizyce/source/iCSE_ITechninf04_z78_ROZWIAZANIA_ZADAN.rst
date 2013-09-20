@@ -44,7 +44,8 @@ Wykresy - przykłady i zadania
 
 .. code-block:: python
 
-    sage: list_plot(h, plotjoined=True) + list_plot(h, faceted=True, color="red", size=50)
+    sage: list_plot(h, plotjoined=True) + list_plot(h, faceted=True, 
+    ...      color="red", size=50)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_5_sage0.png
     :align: center
@@ -55,7 +56,8 @@ Wykresy - przykłady i zadania
 .. code-block:: python
 
     sage: t = srange(tstart, tstop, tkrok)
-    sage: list_plot(zip(t,h), axes_labels=[r'$t$',r'$x(t)$'], size=20, color="navy")
+    sage: list_plot(zip(t,h), axes_labels=[r'$t$',r'$x(t)$'], size=20, 
+    ...      color="navy")
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_7_sage0.png
     :align: center
@@ -103,7 +105,8 @@ Zadanie 2: Narysuj krzywe
     sage: # ewolwenta
     sage: a = 1
     sage: var('t')
-    sage: parametric_plot((a*(cos(t) + t*sin(t)), a*(sin(t) - t*cos(t))), (t,0,6*pi), fill=1, color='firebrick', fillcolor='gold')
+    sage: parametric_plot((a*(cos(t) + t*sin(t)), a*(sin(t) - t*cos(t))), 
+    ...          (t,0,6*pi), fill=1, color='firebrick', fillcolor='gold')
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_37_sage0.png
     :align: center
@@ -116,7 +119,8 @@ Zadanie 2: Narysuj krzywe
     sage: # cykloida
     sage: a = 1
     sage: var('t')
-    sage: parametric_plot((a*(t-sin(t)), a*(1-cos(t))), (t,0,6*pi), fill=1, color='firebrick', fillcolor='gold')
+    sage: parametric_plot((a*(t-sin(t)), a*(1-cos(t))), (t,0,6*pi), fill=1, 
+    ...      color='firebrick', fillcolor='gold')
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_40_sage0.png
     :align: center
@@ -129,7 +133,8 @@ Zadanie 2: Narysuj krzywe
     sage: # brahistochrona (w zasadzie cykloida)
     sage: a = 1/2/9.81
     sage: var('t')
-    sage: parametric_plot((1/2*a^2*(t-sin(t)), 1/2*a^2*(1-cos(t))), (t,0,6*pi), fill=1, color='firebrick', fillcolor='gold')
+    sage: parametric_plot((1/2*a^2*(t-sin(t)), 1/2*a^2*(1-cos(t))), (t,0,6*pi), 
+    ...          fill=1, color='firebrick', fillcolor='gold')
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_41_sage0.png
     :align: center
@@ -142,7 +147,8 @@ Zadanie 2: Narysuj krzywe
     sage: # hiperbola
     sage: var('x y')
     sage: a, b = 1, 1
-    sage: (sum([implicit_plot(x^2/a^2 - y^2/b^2 == 1, (x,-2,2), (y,-2,2), color=(a,1,a)) for a in srange(.1,1,0.1)])).show(aspect_ratio=1)
+    sage: (sum([implicit_plot(x^2/a^2 - y^2/b^2 == 1, (x,-2,2), (y,-2,2), 
+    ...      color=(a,1,a)) for a in srange(.1,1,0.1)])).show(aspect_ratio=1)
     sage: 2
 
 
@@ -159,7 +165,11 @@ Zadanie 2: Narysuj krzywe
     sage: #hipocykloida
     sage: var('t')
     sage: r, R = 1, 2.13
-    sage: graphics_array([parametric_plot(((r-R)*(cos(t) + r*cos((R-r)/r*t)), (r-R)*(sin(t) - r*sin((R-r)/r*t))), (t,-10,150), fill=1, color='firebrick', fillcolor='gold', thickness=0.3, plot_points=300) for R in srange(0.5,3, 0.23)], 4,3).show(dpi=250, frame=1, aspect_ratio=1, fontsize=5)
+    sage: graphics_array([parametric_plot(((r-R)*(cos(t) + r*cos((R-r)/r*t)), 
+    ...      (r-R)*(sin(t) - r*sin((R-r)/r*t))), (t,-10,150), fill=1, 
+    ...      color='firebrick', fillcolor='gold', thickness=0.3, 
+    ...      plot_points=300) for R in srange(0.5,3, 0.23)], 
+    ...      4,3).show(dpi=250, frame=1, aspect_ratio=1, fontsize=5)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage0.png
     :align: center
@@ -172,9 +182,14 @@ Zadanie 2: Narysuj krzywe
 
     sage: #Lemniskata Bernoulliego
     sage: a = 1
-    sage: graphics_array([implicit_plot((x^2+y^2)^2 == 2 * a^2 * (x^2 - y^2), (x, -2, 2), (y, -1, 1), color='firebrick'),
-    sage: polar_plot(2*a^2*cos(2*t), (t,0,2*pi), fill=0, color='firebrick', fillcolor='gold'),
-    sage: parametric_plot((a*sqrt(2)*cos(t)/(1 + sin(t)^2),a*sqrt(2)*sin(t)*cos(t)/(1 + sin(t)^2)),(t,0,2*pi), color='firebrick')]).show(aspect_ratio=1, dpi=200, frame=1)
+    sage: graphics_array([implicit_plot((x^2+y^2)^2 == 2 * a^2 * (x^2 - y^2), 
+    ...      (x, -2, 2), (y, -1, 1), color='firebrick'),
+    sage: polar_plot(2*a^2*cos(2*t), (t,0,2*pi), fill=0, color='firebrick', 
+    ...      fillcolor='gold'),
+    sage: parametric_plot((a*sqrt(2)*cos(t)/(1 + sin(t)^2),
+    ...      a*sqrt(2)*sin(t)*cos(t)/(1 + sin(t)^2)),
+    ...      (t,0,2*pi), color='firebrick')]).show(aspect_ratio=1, 
+    ...      dpi=200, frame=1)
 
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage1.png
@@ -243,7 +258,12 @@ Narysuj tor lotu pocisku artyleryjskiego o kalibrze 155 mm wystrzelonej z armaty
 
 .. code-block:: python
 
-    sage: (plot(f(x, y0n, alpha, v0n, gZ), (x,0,zasieg), fill=0, color='green', fillcolor='yellow', thickness=2) + point((zasieg, 0), size=50, faceted=1, color='red') + text(" (%.2f,0)"%zasieg, (zasieg, 0), rotation=60, horizontal_alignment='left', vertical_alignment='bottom')).show(axes_labels=["$x [m]$","$y(x) [m]$"], fontsize=14)
+    sage: (plot(f(x, y0n, alpha, v0n, gZ), (x,0,zasieg), fill=0, color='green', 
+    ...      fillcolor='yellow', thickness=2) + point((zasieg, 0), size=50, 
+    ...      faceted=1, color='red') + text(" (%.2f,0)"%zasieg, (zasieg, 0), 
+    ...      rotation=60, horizontal_alignment='left', 
+    ...      vertical_alignment='bottom')).show(axes_labels=["$x [m]$",
+    ...      "$y(x) [m]$"], fontsize=14)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_51_sage0.png
     :align: center
@@ -270,12 +290,24 @@ ZD6.1 (Batman)
 
     sage: var('x,y')
     sage: F = region_plot((x<8,x>-8,y<4,y>-4),(x,-8,8),(y,-4,4),incol='black')
-    sage: G = implicit_plot((x/7)^2*sqrt(abs(abs(x)-3)/(abs(x)-3))+(y/3)^2*sqrt(abs(y+3*sqrt(33)/7)/(y+3*sqrt(33)/7))-1==0,(x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
-    sage: H = implicit_plot(abs(x/2)-((3*sqrt(33)-7)/112)*x^2-3+sqrt(1-(abs(abs(x)-2)-1)^2)-y==0,(x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
-    sage: I = implicit_plot(9*sqrt(abs((abs(x)-1)*(abs(x)-0.75))/((1-abs(x))*(abs(x)-0.75)))-8*abs(x)-y==0,(x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
-    sage: J = implicit_plot(3*abs(x)+0.75*sqrt(abs((abs(x)-0.75)*(abs(x)-0.5))/((0.75-abs(x))*(abs(x)-0.5)))-y==0, (x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
-    sage: K = implicit_plot(2.25*sqrt(abs((x-0.5)*(x+0.5))/((0.5-x)*(0.5+x)))-y==0,(x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
-    sage: L = implicit_plot((6*sqrt(10))/7+(1.5-0.5*abs(x))*sqrt(abs(abs(x)-1)/(abs(x)-1))-((6*sqrt(10))/14)*sqrt(4-(abs(x)-1)^2)-y==0,(x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
+    sage: G = implicit_plot((x/7)^2*sqrt(abs(abs(x)-3)/(abs(x)-3))+
+    ...      (y/3)^2*sqrt(abs(y+3*sqrt(33)/7)/(y+3*sqrt(33)/7))-1==0,(x,-8,8),
+    ...      (y,-4,4),plot_points=1200,color='yellow')
+    sage: H = implicit_plot(abs(x/2)-((3*sqrt(33)-7)/112)*x^2-3
+    ...      +sqrt(1-(abs(abs(x)-2)-1)^2)-y==0,(x,-8,8),(y,-4,4),
+    ...      plot_points=1200,color='yellow')
+    sage: I = implicit_plot(9*sqrt(abs((abs(x)-1)*(abs(x)-0.75))/
+    ...      ((1-abs(x))*(abs(x)-0.75)))-8*abs(x)-y==0,(x,-8,8),(y,-4,4),
+    ...      plot_points=1200,color='yellow')
+    sage: J = implicit_plot(3*abs(x)+0.75*sqrt(abs((abs(x)-0.75)*(abs(x)
+    ...      -0.5))/((0.75-abs(x))*(abs(x)-0.5)))-y==0, (x,-8,8),
+    ...      (y,-4,4),plot_points=1200,color='yellow')
+    sage: K = implicit_plot(2.25*sqrt(abs((x-0.5)*(x+0.5))/((0.5-x)*(0.5+x)))
+    ...      -y==0, (x,-8,8),(y,-4,4),plot_points=1200,color='yellow')
+    sage: L = implicit_plot((6*sqrt(10))/7+(1.5-0.5*abs(x))*
+    ...      sqrt(abs(abs(x)-1)/(abs(x)-1))-((6*sqrt(10))/14)*
+    ...      sqrt(4-(abs(x)-1)^2)-y==0,(x,-8,8),
+    ...      (y,-4,4),plot_points=1200,color='yellow')
     sage: (F+G+H+I+J+K+L).show(aspect_ratio=1, frame=False)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/cell_21_sage0.png
@@ -293,7 +325,9 @@ ZD6.2 (myzip)
 
     sage: def myzip(lista1, lista2):
     ...       "myzip: 2 listy"
-    ...       if (type(lista1) == list or type(lista1) == tuple) and (type(lista2) == list or type(lista2) == tuple):
+    ...       if (type(lista1) == list or type(lista1) == tuple) and 
+    ...      (type(lista2) == list or 
+    ...       type(lista2) == tuple):
     ...           l1 = len(lista1)
     ...           l2 = len(lista2)
     ...           if l1 == l2:
@@ -386,8 +420,13 @@ ZD6.3 (Lissajous)
     sage: for a, b, delta in zip(a,b,delta):
     ...       f(x) = A*sin(a*x + delta*pi) 
     ...       g(x) = B*sin(b*x)
-    ...       pp.append(parametric_plot((f,g),(-2*pi,2*pi), color=((a+b)/20.,a/10.,b/10.)) + text(r"$a=%d, b=%d$" % (a,b), (0,0), color="black") + text(r"$\delta=%.2f\pi$" % (delta), (0,-0.5), color="black")) 
-    sage: graphics_array(((pp[0],pp[1],pp[2]),(pp[3],pp[4],pp[5]),(pp[6],pp[7],pp[8]))).show(frame=True, axes=False, aspect_ratio=1, ticks=None)
+    ...       pp.append(parametric_plot((f,g),(-2*pi,2*pi), 
+    ...       color=((a+b)/20.,a/10.,b/10.)) 
+    ...       + text(r"$a=%d, b=%d$" % (a,b), (0,0), color="black") 
+    ...       + text(r"$\delta=%.2f\pi$" % (delta), (0,-0.5), color="black")) 
+    sage: graphics_array(((pp[0],pp[1],pp[2]),(pp[3],pp[4],pp[5]),
+    ...       (pp[6],pp[7],pp[8]))).show(frame=True, axes=False, 
+    ...       aspect_ratio=1, ticks=None)
 
 .. image:: iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN_media/sage2.png
     :align: center
@@ -434,15 +473,22 @@ Zadanie ZD6.4: Metoda Newtona
     sage: sty = []
     sage: sty2 = []
     sage: while not ((f(y) < epsilon) and (f(y) > -epsilon)):
-    ...       print y.n(), f(y).n()    
-    ...       pts1.append(point([y, f(y)], size=20, faceted=1, rgbcolor='yellow'))
-    ...       pts2.append(point([y - f(y)/df(y), 0], size=20, faceted=1, rgbcolor='red'))    
-    ...       sty2.append(plot(styczna(x, y),0,6,color='green', linestyle='solid'))    
-    ...       y -= f(y)/df(y)
+    ...      print y.n(), f(y).n()    
+    ...      pts1.append(point([y, f(y)], size=20, faceted=1, 
+    ...      rgbcolor='yellow'))
+    ...      pts2.append(point([y - f(y)/df(y), 0], size=20, faceted=1, 
+    ...      rgbcolor='red'))    
+    ...      sty2.append(plot(styczna(x, y),0,6,color='green', 
+    ...      linestyle='solid'))    
+    ...      y -= f(y)/df(y)
     ...       
     sage: print "Miejsce zerowe (x,f(x)) =", (y.n(), f(y.n()))   
-    sage: # grafika - trzeba narysować wykres + odpowiednie proste styczne do punktów, w których obliczamy kolejne "zera" 
-    sage: (sum(pts) +sum(pts2) + sum(sty2) + plot(f,0,6)).show(axes_labels=["$x$","$f(x)$"], ymax=1, fontsize=14)
+    sage: # grafika - trzeba narysować wykres + odpowiednie 
+    sage: # proste styczne do punktów, 
+    sage: # w których obliczamy kolejne "zera" 
+    sage: (sum(pts) +sum(pts2) + sum(sty2) + 
+    ...      plot(f,0,6)).show(axes_labels=["$x$","$f(x)$"], 
+    ...      ymax=1, fontsize=14)
 
 
 | 0.500000000000000 -1.29289321881345

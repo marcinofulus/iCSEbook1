@@ -9,7 +9,7 @@ Typy złożone i pętle
 Wstęp
 ~~~~~~~~
 
-Poznaliśmy już elementarne typy danych w Sage’u takie jak  int (liczby całkowite), float (liczby rzeczywiste),  complex (liczby zespolone) oraz  string  (łańcuchy tekstowe). Dziś poznamy nowe typy danych takie jak listy, słowniki i tuple. Każdy z tych typów możemy najprościej opisać jako pewien zbiór elementów, przy czym każdy z elementów zbioru jest typu prostego np.  int, float, complex, etc. (nie jest to do końca prawda, ale na tym etapie nauki możemy przyjąć takie założenie).
+Poznaliśmy już elementarne typy danych w Sage’u takie jak  **int** (liczby całkowite), **float** (liczby rzeczywiste),  **complex** (liczby zespolone) oraz  **string**  (łańcuchy tekstowe). Dziś poznamy nowe typy danych takie jak listy, słowniki i tuple. Każdy z tych typów możemy najprościej opisać jako pewien zbiór elementów, przy czym każdy z elementów zbioru jest typu prostego np.  **int**, **float**, **complex**, etc. (nie jest to do końca prawda, ale na tym etapie nauki możemy przyjąć takie założenie).
 
 Na tej lekcji poznamy również pętle \- elementy języka, które pozwalają na wielokrotne wykonywanie danej czynności.
 
@@ -76,7 +76,8 @@ Dlaczego tak jest? Dlatego, że operacja przypisania (np a=2, znak = jest operat
 
 .. code-block:: python
 
-    sage: a=2+1 # najpierw obliczana jest suma, a nastepnie przypisana do zmiennej a
+    sage: a=2+1 # najpierw obliczana jest suma, 
+    sage: # a nastepnie przypisana do zmiennej a
     sage: print a
 
 
@@ -112,7 +113,7 @@ W powyższym przykładzie elementami listy  moja_lista  były liczby całkowite 
 .. end of output
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 5 min.
 
@@ -146,7 +147,7 @@ Jeśli nie chcemy tworzyć listy z wartościami początkowymi, możemy stworzyć
 Funkcje potrzebne do pracy na listach
 """""""""""""""""""""""""""""""""""""
 
-Poniżej znajdziesz kilka funkcji, które są przydatne (a nie które niezbędne) w pracy z listami.
+Poniżej znajdziesz kilka funkcji, które są przydatne (a niektóre niezbędne) w pracy z listami.
 
 
 - ``len(lista)`` \- zwraca liczbę elementów listy
@@ -181,7 +182,8 @@ Poniżej znajdziesz kilka funkcji, które są przydatne (a nie które niezbędne
 
 .. code-block:: python
 
-    sage: moja_lista.insert(0,3.14) #wstawia na pocztek listy (index 0) liczbe 3.14
+    sage: moja_lista.insert(0,3.14) #wstawia na pocztek listy (index 0) 
+    sage: # liczbe 3.14
     sage: moja_lista.insert(1,e) #wstawia jako drugi element listy stala e
 
 
@@ -215,7 +217,7 @@ Poniżej znajdziesz kilka funkcji, które są przydatne (a nie które niezbędne
 .. end of output
 
 Sage podpowiada nam dostępne dla danego obiektu (listy, krotki itp)  funkcje. Jesli pisząc np.
- moja_lista. i wciśniemy klawisz Tab   pojawi się  okienko z podpowiedzią.
+ moja_lista. i wciśniemy klawisz **Tab**,   pojawi się  okienko z podpowiedzią.
 
 
 
@@ -275,13 +277,14 @@ Słowniki (ang. dictionaries) to kolejne typy danych, który można najprościej
 
 .. code-block:: python
 
-    sage: telefony={'Ala':508605107, 'Ola':3452234,'Franek':505600600,'Pietrek':607233322}
+    sage: telefony={'Ala':508605107, 'Ola':3452234,'Franek':505600600,
+    ...      'Pietrek':607233322}
 
 
 .. end of output
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 1 min.
 
@@ -325,13 +328,13 @@ Zmiany wartości dla konkretnego klucza możemy dokonać w następujący sposób
 
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 2 min.
 
-Sprawdź, jaki komunikat wyświetli wykonanie polecenia type(telefony.keys()). Jakiego typu daną zwróci wykonanie  tego polecenia (int, float, tuple, list )?
+Sprawdź, jaki komunikat wyświetli wykonanie polecenia ``type(telefony.keys()``). Jakiego typu daną zwróci wykonanie  tego polecenia (``int``, ``float``, ``tuple``, ``list``)?
 
-Jeśli chcemy usunąc element słownika, używamy polecenia  del  lub  pop()
+Jeśli chcemy usunąc element słownika, używamy polecenia  ``del``  lub  ``pop()``
 
 
 .. code-block:: python
@@ -355,7 +358,8 @@ Do słownika możemy również dodawać nowe elementy w następujący sposób
 
 .. code-block:: python
 
-    sage: telefony={'Ala':508605107, 'Ola':3452234,'Franek':505600600,'Pietrek':607233322}
+    sage: telefony={'Ala':508605107, 'Ola':3452234,
+    ...      'Franek':505600600,'Pietrek':607233322}
     sage: telefony["Kasia"]=555444333
     sage: telefony["Mirek"]=123456654
     sage: print telefony
@@ -376,10 +380,10 @@ Wyobraźmy sobie, że mamy 1000 elementową listę i musimy wypisać na ekran je
 
 
 
-Pętla ``for``
+Pętla **for**
 """""""""""""
 
-Instrukcja  for  powoduje iterację po elementach sekwencji (np. listy, tupli itd.) w takim porządku, w jakim są one umieszczone w danej sekwencji. Na przykład:
+Instrukcja  ``for``  powoduje iterację po elementach sekwencji (np. listy, tupli itd.) w takim porządku, w jakim są one umieszczone w danej sekwencji. Na przykład:
 
 
 .. code-block:: python
@@ -402,9 +406,9 @@ Instrukcja  for  powoduje iterację po elementach sekwencji (np. listy, tupli it
 
 .. end of output
 
-Powyższy kod możemy przetłumaczyć następująco: dla każdego elementu  i  z listy moja_lista : wypisz  i  (czyli ten element).
+Powyższy kod możemy przetłumaczyć następująco: dla każdego elementu  i  z listy ``moja_lista`` : wypisz  i  (czyli ten element).
 
-Bardzo ważne jest aby pamiętać, że instrukcje które mają być wykonanew pętli muszą zaczynać się wcięciem (spacje,tabulator) (na szczęście Sage automatycznie dokonuje wcięć). W poniższym przykładzie, pierwsza i druga instrukcja  print  wykonują się w pętli, natomiast trzecia już poza pętlą.
+Bardzo ważne jest aby pamiętać, że instrukcje które mają być wykonane w pętli muszą zaczynać się wcięciem (spacje, tabulator) (na szczęście Sage automatycznie dokonuje wcięć). W poniższym przykładzie, pierwsza i druga instrukcja  ``print``  wykonują się w pętli, natomiast trzecia już poza pętlą.
 
 
 .. code-block:: python
@@ -439,7 +443,7 @@ Bardzo ważne jest aby pamiętać, że instrukcje które mają być wykonanew p�
 
 .. end of output
 
-W pracy z pętę  for  przydaje się funkcja  range(start,stop,krok). Tworzy ona listę liczb całkowitych począwszy od wartości  start  do wartości najbliższej, ale mniejszej od  stop, zwiększając wartości o krok:
+W pracy z pętę  for  przydaje się funkcja  ``range(start,stop,krok)``. Tworzy ona listę liczb całkowitych począwszy od wartości  ``start``  do wartości najbliższej, ale mniejszej od  ``stop``, zwiększając wartości o krok:
 
 
 .. code-block:: python
@@ -450,7 +454,7 @@ W pracy z pętę  for  przydaje się funkcja  range(start,stop,krok). Tworzy ona
 
 .. end of output
 
-Parametry  krok  i  start  są opcjonalne. Jeśli ich nie podamy, Sage przyjmie domyślne wartości  krok =1 i start =0.
+Parametry  ``krok``  i  ``start``  są opcjonalne. Jeśli ich nie podamy, Sage przyjmie domyślne wartości  ``krok =1`` i ``start =0``.
 
 
 .. code-block:: python
@@ -461,7 +465,7 @@ Parametry  krok  i  start  są opcjonalne. Jeśli ich nie podamy, Sage przyjmie 
 
 .. end of output
 
-Kilka przykładów użycia z pętlą  for
+Kilka przykładów użycia z pętlą  ``for``
 
 
 .. code-block:: python
@@ -487,17 +491,17 @@ Kilka przykładów użycia z pętlą  for
 
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 10 min.
 
 Przypomnij   sobie   zadanie   z   poprzednich   zajęć,   gdzie   przeliczałeś temperaturę ze stopni Celsjusza na Fahrenheity. Teraz wykonaj to samo  zadanie, ale w zakresie temperatur \-27,27 stopni Celsjusza, co 3 stopnie.
 
 
-Pętla ``while()``
+Pętla **while()**
 """""""""""""""""
 
-Innym rodzajem pętli jest pętla  while, która wykonuje instrukcje w niej zawarte tak długo, dopóki spełniony jest warunek logiczny  warunek. Składnia instruckji  while() jest następująca
+Innym rodzajem pętli jest pętla  ``while``, która wykonuje instrukcje w niej zawarte tak długo, dopóki spełniony jest warunek logiczny  warunek. Składnia instruckji  ``while()`` jest następująca
 
 
 .. code-block:: python
@@ -559,7 +563,7 @@ Powyższy kod możemy przeczytać następująco: dopóki zmienna  licznik jest m
 .. end of output
 
 
-Prosze zwrócić uwagę, że stosując pętlę  while()  musimy sami zmieniać wartość zmiennej ’kontrolnej’  licznik. Gdybyśmy tego nie zrobili, zmienna licznik cały czas miałaby wartość 0 (w pierwszym przykładzie) i pętla wykonywała by się w nieskończoność!!!
+Prosze zwrócić uwagę, że stosując pętlę  ``while()``  musimy sami zmieniać wartość zmiennej ’kontrolnej’  licznik. Gdybyśmy tego nie zrobili, zmienna licznik cały czas miałaby wartość 0 (w pierwszym przykładzie) i pętla wykonywała by się w nieskończoność!!!
 
 Aby dobrze konstruować warunki logiczne, musimy zapoznać się z operatorami w Sage’u \- na razie tylko porównania
 
@@ -576,25 +580,25 @@ Aby dobrze konstruować warunki logiczne, musimy zapoznać się z operatorami w 
    =============== ===================
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 10 min.
 
-Stworzyć pustą listę. Następnie w pętli for i za pomocą append() dodaj do listy liczby od 1\-10
+Stworzyć pustą listę. Następnie w pętli ``for`` i za pomocą ``append()`` dodaj do listy liczby od 1\-10
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 15 min.
 
-Za  pomocą  funkcji  range() i  for policzyć  sumę  pierwszych  100  liczb naturalnych (od 1 do 100).
+Za  pomocą  funkcji  ``range()`` i  for policzyć  sumę  pierwszych  100  liczb naturalnych (od 1 do 100).
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 10 min.
 
-Stworzyć  pustą  listę.  Następnie  za  pomocą  pętli  while()  i  instrukcji  append()  dodać do listy pierwiastki z liczb 0\-30 co 2.5. Pierwiastek z  x obliczamy za pomocą funkcji sqrt(x).
+Stworzyć  pustą  listę.  Następnie  za  pomocą  pętli  ``while()``  i  instrukcji  ``append()``  dodać do listy pierwiastki z liczb 0\-30 co 2.5. Pierwiastek z  x obliczamy za pomocą funkcji ``sqrt(x)``.
 
 
 Pętle i słowniki
@@ -605,7 +609,8 @@ Podobnie jak dla list, możemy stosować pętle do słowników.
 
 .. code-block:: python
 
-    sage: wiek={'Ala':14, 'Ola':34,'Franek':50,'Pietrek':15,'Monika':41,'Staszek':22}
+    sage: wiek={'Ala':14, 'Ola':34,'Franek':50,'Pietrek':15,
+    ...      'Monika':41,'Staszek':22}
     sage: for i in wiek.values():
     ...      print i
 
@@ -620,10 +625,10 @@ Podobnie jak dla list, możemy stosować pętle do słowników.
 .. end of output
 
 
-Zadanie:
+**Zadanie:**
 
 czas: 15 min.
 
-Dla słownika wiek policzyć (użyć instrukcji for i len()) średnią wieku wszystkich osobników z listy.
+Dla słownika wiek policzyć (użyć instrukcji ``for`` i ``len()``) średnią wieku wszystkich osobników z listy.
 
 

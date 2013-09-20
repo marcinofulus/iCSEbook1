@@ -4,6 +4,7 @@
 Środowisko Sage
 ---------------
 
+ROZWIĄZANIA ZADAŃ
 
 Zadanie 1: Ruch pionowy w polu grawitacyjnym Ziemi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -77,7 +78,9 @@ Proszę policzyć to samo zagadnienie na równikach:
 
 .. code-block:: python
 
-    sage: # hmmm... coś nie tak, co? znaczy to , że piłka po prostu leży na powierzchni Jowisza (jeżeli takowa jest...)
+    sage: # hmmm... coś nie tak, co? znaczy to, 
+    sage: # że piłka po prostu leży na powierzchni Jowisza 
+    sage: # (jeżeli takowa jest...)
 
 
 .. end of output
@@ -136,7 +139,9 @@ Sprawdź później, co o tobie myślą `numerolodzy <http://pl.wikipedia.org/wik
 
 .. code-block:: python
 
-    sage: # 2 - to "dyplomata" mający świadomość dwóch obliczy świata, zainteresowany drugim człowiekiem, wrażliwy, kierujący się w życiu uczuciami
+    sage: # 2 - to "dyplomata" mający świadomość dwóch obliczy świata, 
+    sage: # zainteresowany drugim człowiekiem, wrażliwy, 
+    sage: # kierujący się w życiu uczuciami
 
 
 .. end of output
@@ -277,7 +282,8 @@ Rozwiąż równanie
     sage: (plot(x^2+3*x+2,(-3,1)) +
     sage: point((x1,0), faceted=True, size=50, color='gold') + 
     sage: point((x2,0), faceted=True, size=50, color='gold')
-    sage: ).show(xmin=-3, xmax=0, ymax=2, axes_labels=[r'$x$',r'$x^2 + 3x + 2$'], fontsize=16)
+    sage: ).show(xmin=-3, xmax=0, ymax=2, 
+    ...      axes_labels=[r'$x$',r'$x^2 + 3x + 2$'], fontsize=16)
 
 .. image:: iCSE_ITechninf01_z6_ROZWIAZANIA_ZADAN_media/cell_22_sage0.png
     :align: center

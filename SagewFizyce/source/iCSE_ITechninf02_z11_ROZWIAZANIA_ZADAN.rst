@@ -19,7 +19,8 @@ czas: 5 min.
 
     sage: i = 1; print i, type(i)
     sage: k = (1,2,3); print k, type(k)
-    sage: zmienna_z_zadania = ("Ala", 21, 4.5); print zmienna_z_zadania, type(zmienna_z_zadania)
+    sage: zmienna_z_zadania = ("Ala", 21, 4.5); print zmienna_z_zadania, 
+    ...      type(zmienna_z_zadania)
     sage: ocena = 3.5; print ocena, type(ocena)
     sage: imie = "Feliks"; print imie, type(imie)
 
@@ -33,12 +34,12 @@ czas: 5 min.
 .. end of output
 
 
-Zadanie 2: Konwersja ze stopni Celsiusa do Fahrenheita
+Zadanie 2: Konwersja ze stopni Celsjusza do Fahrenheita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 czas: 5 min.
 
-Napisz program konwertujący temperaturę mierzoną w stopniach Celsiusa do stopni Fahrenheita według równania
+Napisz program konwertujący temperaturę mierzoną w stopniach Celsjusza do stopni Fahrenheita według równania
 
 :math:`F = {9 \over 5}C + 32`
 
@@ -128,7 +129,7 @@ Jeżeli w polu grawitacyjnym wyrzucimy piłkę z wysokości :math:`h_0` i z prę
 
 :math:`y = h_0 + x\mathop {tg} (\alpha) -     {g\over 2{v}_{0}^{2}{\mathop{ cos}^{2}(\alpha) }}{x}^{2}`
 
-Napisz program znajdujący ”wysokość”piłki :math:`y` dla zadanych wartości przyspieszenia grawitacyjnego :math:`g`, kąta :math:`\alpha`, prędkości początkowej :math:`{v}_{0}` i odległości :math:`x`. Postaraj się napisać jak najbardziej czytelny kod.
+Napisz program znajdujący ”wysokość” piłki :math:`y` dla zadanych wartości przyspieszenia grawitacyjnego :math:`g`, kąta :math:`\alpha`, prędkości początkowej :math:`{v}_{0}` i odległości :math:`x`. Postaraj się napisać jak najbardziej czytelny kod.
 
 
 .. code-block:: python
@@ -154,7 +155,9 @@ Wysokość piłki po 1.00m wynosi 0.62m
     sage: X = srange(0,1,0.1, include_endpoint=1)
     sage: Y = [h0 + x*tan(alpha) - g/(2*v0^2*cos(alpha)^2)*x^2 for x in X]
     sage: (list_plot(zip(X,Y), color=(1,0,0), size=30, faceted=True) + 
-    sage: text(r"$(x,y) = (%.2f,%.2f)$"%(x,y),(x,y),horizontal_alignment='right')).show(fontsize=14, axes_labels=['$x$','$y$'])
+    sage: text(r"$(x,y) = (%.2f,%.2f)$"%(x,y),(x,y),
+    ...      horizontal_alignment='right')).show(fontsize=14, 
+    ...      axes_labels=['$x$','$y$'])
 
 .. image:: iCSE_ITechninf02_z11_ROZWIAZANIA_ZADAN_media/cell_26_sage0.png
     :align: center
@@ -186,7 +189,8 @@ Przepisz kod tak, aby zwracał m/w taką informację
     sage: y = h0 + x*tan(alpha) - g/(2*v0^2*cos(alpha)^2)*x^2
     sage: print """Na odległości %.3f m ciało rzucone z wysokości %.1f m z  
     sage: prędkością początkową %d m/s pod kątem %.2f rad  
-    sage: znajduje się na wysokości %.1f m w polu grawitacyjnym Ziemi.""" % (x, h0, v0, alpha, y)
+    sage: znajduje się na wysokości %.1f m w polu grawitacyjnym Ziemi.""" 
+    ...      % (x, h0, v0, alpha, y)
 
 
 | Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z  
@@ -245,7 +249,8 @@ Powyższe wielkości sformatuj odpowiednio dla wszystkich trzech przypadków tak
     sage: A = 1000
     sage: waluta = "Euro"
     sage: W = A * (1 + p/100)^n
-    sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
+    sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s 
+    ...      przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
 
 
 Zainwestowane 1000.00 Euro wzrośnie po 3 latach do kwoty 1157.62 Euro przy stopie 5.00 procentowej
@@ -260,7 +265,8 @@ Zainwestowane 1000.00 Euro wzrośnie po 3 latach do kwoty 1157.62 Euro przy stop
     sage: A = 23513
     sage: waluta = "zł"
     sage: W = A * (1 + p/100)^n
-    sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
+    sage: print "Zainwestowane %.2f %s wzrośnie po %d latach do kwoty %.2f %s 
+    ...      przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
 
 
 Zainwestowane 23513.00 zł wzrośnie po 5 latach do kwoty 27980.07 zł przy stopie 3.54 procentowej
@@ -275,7 +281,8 @@ Zainwestowane 23513.00 zł wzrośnie po 5 latach do kwoty 27980.07 zł przy stop
     sage: A = 112.12 * 1e6
     sage: waluta = "Rubli"
     sage: W = A * (1 + p/100)^n
-    sage: print "Zainwestowane %.2f %s wzrośnie po %d roku do kwoty %.2f %s przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
+    sage: print "Zainwestowane %.2f %s wzrośnie po %d roku do kwoty %.2f %s 
+    ...      przy stopie %.2f procentowej"%(A, waluta, n, W, waluta, p)
 
 
 Zainwestowane 112120000.00 Rubli wzrośnie po 1 roku do kwoty 120125368.00 Rubli przy stopie 7.14 procentowej

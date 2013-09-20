@@ -15,7 +15,7 @@ Wróćmy na chwilę do zadania z podrzucaniem piłki w górę.
 
 W górę rzucono piłkę. Zaniedbując siły oporu, oblicz na jaką wysokość  wzniesie się piłka po 0.54 sekundy, jeżeli wartość początkowa prędkości wynosiła 3.44 m/s.
 
-Rozwiązaliśmy ten problem już dwukrotnie - raz bez zmiennych, a drugi raz z użyciem zmiennymi. Zatrzymajmy się teraz na tym samym problemie, ale skupmy się nie na rozwiązaniu, ale na metodyce wykorzystania zmiennych. Pamiętamy, że rozwiązanie dane jest wzorem
+Rozwiązaliśmy ten problem już dwukrotnie - raz bez zmiennych, a drugi raz ze zmiennymi. Zatrzymajmy się teraz na tym samym problemie, ale skupmy się nie na rozwiązaniu, a na metodyce wykorzystania zmiennych. Pamiętamy, że rozwiązanie dane jest wzorem
 
 .. math::
    :label: Z1
@@ -65,15 +65,14 @@ W przypadku dość intuicyjnego (dla fizyka) nazewnictwa zmiennych w równaniu :
     sage: czas = 0.54
     sage: predkosc_poczatkowa = 3.44
     ...                                                                     
-    sage: wysokosc_pilki = predkosc_poczatkowa * czas - 0.5 * przyspieszenie_ziemskie * czas ^ 2
+    sage: wysokosc_pilki = predkosc_poczatkowa * czas - 0.5 * 
+    ...      przyspieszenie_ziemskie * czas ^ 2
 
 
 .. end of output
 
 
-Takie podejście do użycia zmiennych ma swoje plusy i minusy. Plusem jest czytelność rozwiązania. Minusem długość kodu i czas potrzebny na wprowadzenie takiej ilości tekstu (z czasem ten problem znika). Plusem łatwość modyfikacji i rozszerzania problemu (możemy dodać np: zmienną  przyspieszenie_ksiezyc = 1.622 i później łatwo i czytelnie wykorzystać ją w kodzie). Minusem (ale tylko dla alfabetów niespójnych z  `ASCII <http://pl.wikipedia.org/wiki/ASCII>`_ ) jest konieczność pisania  po polskiemu. Sami zdecydujecie w toku nauki programowania jaki styl kodu najbardziej Wam odpowiada - bardziej hermetyczny i szybszy kod wykorzystujący typowe stałe matematyczno/fizyczne oraz intuicję programisty, czy sposób wykorzystujący pełne nazwy. Często stosuje się też swego rodzaju mieszaninę ich obu, ale  nigdy nie powinniśmy programować używając pierwszych z brzegu nazw zmiennych.
-
-**Uwaga:** Na tym kursie używanie przypadkowych nazw zmiennych będzie skutkowało obniżeniem oceny.
+Takie podejście do użycia zmiennych ma swoje plusy i minusy. Plusem jest czytelność rozwiązania. Minusem długość kodu i czas potrzebny na wprowadzenie takiej ilości tekstu (z czasem ten problem znika). Plusem łatwość modyfikacji i rozszerzania problemu (możemy dodać np: zmienną  przyspieszenie_ksiezyc = 1.622 i później łatwo i czytelnie wykorzystać ją w kodzie). Minusem (ale tylko dla alfabetów niespójnych z  `ASCII <http://pl.wikipedia.org/wiki/ASCII>`_ ) jest konieczność pisania  po polsku. Sami zdecydujecie w toku nauki programowania jaki styl kodu najbardziej Wam odpowiada - bardziej hermetyczny i szybszy kod wykorzystujący typowe stałe matematyczno/fizyczne oraz intuicję programisty, czy sposób wykorzystujący pełne nazwy. Często stosuje się też swego rodzaju mieszaninę ich obu, ale  nigdy nie powinniśmy programować używając pierwszych z brzegu nazw zmiennych.
 
 
 Istnieją pewne reguły, do których można i powinno się stosować. Część z nich powoduje po prostu błędy, inne są wynikiem pewnych przyjętych standardów programowania.
@@ -167,7 +166,7 @@ W Sage jako pewnego rodzaju potomku języka Python występują nazwy, których n
 
 ``return  try  while``
 
-Nie powinno się również używać poniższych nazw, aczkolwiek nie są to słowa zarezerwowane. Użycie ich spowoduje jednak konflikt z dość szeroko używanymifunkcjami Python\-a.
+Nie powinno się również używać poniższych nazw, aczkolwiek nie są to słowa zarezerwowane. Użycie ich spowoduje jednak konflikt z dość szeroko używanymi funkcjami Python\-a.
 
 ``Data  float  Int  Numeric  Oxphys``
 
@@ -195,7 +194,7 @@ Powinno się również unikać stosowania nazw popularnych funkcji matematycznyc
 Komentarze
 ~~~~~~~~~~
 
-Komentarze w języku Python, a więc i w Sage zaczynają się od znaku  #. Wszystko coznajduje się za tym znakiem będzie pomijane przez interpreter. Komentarze stosujesię w kilku celach. Można nimi zablokować na jakiś czas kawałek kodu stwarzającyproblemy. Zwykle jednak służy on do bezpośredniego opisu samego kodu. Przykładowo
+Komentarze w języku Python, a więc i w Sage zaczynają się od znaku  #. Wszystko co znajduje się za tym znakiem będzie pomijane przez interpreter. Komentarze stosujesię w kilku celach. Można nimi zablokować na jakiś czas kawałek kodu stwarzający problemy. Zwykle jednak służy on do bezpośredniego opisu samego kodu. Przykładowo
 
 
 .. code-block:: python
@@ -245,7 +244,7 @@ Ciągi znaków w Sage traktowane są jako kolejny typ danych. Jedyną różnicą
 .. end of output
 
 
-W przeciwnym wypadku Sage potraktuje nasz ciąg jako funkcjęi będzie chciał ją wywołać. W wyniku dostaniemy  Syntax Error.
+W przeciwnym wypadku Sage potraktuje nasz ciąg jako funkcję i będzie chciał ją wywołać. W wyniku dostaniemy  Syntax Error.
 
 
 .. code-block:: python
@@ -267,10 +266,10 @@ Ciągi znaków możemy dowolnie przypisywać do zmiennych
 .. end of output
 
 
-Istnieje specjalna konstrukcja ciągu znaków zaczynająca i kończąca się trzema cudzysłowami  """. Jest to ciąg znaków charakterystyczny dla języka Python i możeon ciągnąć się przez wiele linii. Odstępy użyte w środku zostaną zachowane. Ponadto możemy w takim środowisku używać pojedynczych apostrofów i cudzysłowów w zasadzie dowolnie. Przed literałem łańcuchowym takim jak powyżej  "ala ma kota" możemy użyć prefiksów  r,u,b. Oznaczają one odpowiednio (pod warunkiem, że jako baza Sage mamy język Python w wersji 2.\*)
+Istnieje specjalna konstrukcja ciągu znaków zaczynająca i kończąca się trzema cudzysłowami  """. Jest to ciąg znaków charakterystyczny dla języka Python i może on ciągnąć się przez wiele linii. Odstępy użyte w środku zostaną zachowane. Ponadto możemy w takim środowisku używać pojedynczych apostrofów i cudzysłowów w zasadzie dowolnie. Przed literałem łańcuchowym takim jak powyżej  "ala ma kota" możemy użyć prefiksów  r,u,b. Oznaczają one odpowiednio (pod warunkiem, że jako baza Sage mamy język Python w wersji 2.\*)
 
 ``r`` (row, raw string literal) w tak oznaczonym literale łańcuchowym wszystkie znaki traktowane będą dosłownie, np. ukośnik wsteczny traktowany będzie jak zwykły ukośnik wsteczny
-np: r"ala ma kota", r’\sin to komenda \LaTeX{}a’
+np: r"ala ma kota", r’\sin to komenda \LaTeX’a
 
 ``u`` (unicode) napis w Unikodzie
 np: u"ala ma kota", u’zażółć gęślą jaźń’
@@ -305,7 +304,7 @@ Typy danych w Pythonie
 
 W Pythonie wartości, a nie zmienne, posiadają typ – tak więc Python jest językiem z typami dynamicznymi. Wszystkie wartości przekazywane są przez referencję. W porównaniu z innymi językami z typami dynamicznymi Python sprawdza typy w umiarkowanym stopniu. Dla typów numerycznych zdefiniowana jest automatyczna konwersja, tak więc możliwe jest np. mnożenie liczby zespolonej przez liczbę całkowitą typu long bez rzutowania. Nie ma natomiast automatycznej konwersji pomiędzy napisami i liczbami.
 
-Tutaj podamy jedynie podstawowe informacje na temat typów danych. Po nieco obszerniejszą lekturę odsyłamy np. do części  Wbudowane typy danych podręcznika `Zanurkuj w Pythonie <http://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie>`_.
+Tutaj podamy jedynie podstawowe informacje na temat typów danych. Po nieco obszerniejszą lekturę odsyłamy np. do części  *Wbudowane typy danych* podręcznika `Zanurkuj w Pythonie <http://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie>`_.
 
 ``bool`` typ logiczny True, False
 
@@ -365,7 +364,7 @@ Zadania
 
 czas: 5 min.
 
-Napisz program konwertujący temperaturę mierzoną w stopniach Celsiusa do stopni Fahrenheita według równania
+Napisz program konwertujący temperaturę mierzoną w stopniach Celsjusza do stopni Fahrenheita według równania
 
 .. math::
 
@@ -407,7 +406,7 @@ Napisz program znajdujący ”wysokość” piłki :math:`y`  dla zadanych warto
 Formatowanie tekstu
 ~~~~~~~~~~~~~~~~~~~
 
-Polecenie (które może być używane jak funkcja)  print  służy do wyświetlania tekstu. Tekstem nie musi być ciąg znaków (literał łańcuchowy). Może nim być zmienna bądź literał dowolnego typu.
+Polecenie (które może być używane jak funkcja)  **print**  służy do wyświetlania tekstu. Tekstem nie musi być ciąg znaków (literał łańcuchowy). Może nim być zmienna bądź literał dowolnego typu.
 
 
 .. code-block:: python
@@ -423,7 +422,7 @@ Polecenie (które może być używane jak funkcja)  print  służy do wyświetla
 
 .. end of output
 
-Polecenie  print  łamie końcową linię przechodząc do nowego wiersza, chyba, że na końcu polecenia umieścimy przecinek
+Polecenie  **print**  łamie końcową linię przechodząc do nowego wiersza, chyba, że na końcu polecenia umieścimy przecinek
 
 
 .. code-block:: python
@@ -444,17 +443,18 @@ Oczywiście przecinkiem możemy również oddzielać kolejne obiekty
 
 .. end of output
 
-To samo możemy osiągnąć stosując formatowanie tekstu w poleceniu  print.
+To samo możemy osiągnąć stosując formatowanie tekstu w poleceniu  **print**.
 
 
 .. code-block:: python
 
-    sage: print "liczba pi = %f a jej kwadrat to %f" % (3.1415, 3.1415 * 3.1415)
+    sage: print "liczba pi = %f a jej kwadrat to %f" 
+    ...      % (3.1415, 3.1415 * 3.1415)
 
 
 .. end of output
 
-Po kolei. Polecenie  print  drukuje na ekran ciąg znaków \- wszystko, co zawarte jest pomiędzy cudzysłowami (lub apostrofami). Pomiędzy nimi występują specjalne znaki zaczynające się od znaku  %. W ich miejsce podstawiane są odpowiednio interpretowane wartości zmiennych (bądź literały) występujące za identycznym znakiem znajdującym się za ciągiem zawartym w cudzysłowach. Pierwsza wartość z nawiasu podstawiana jest do w miejsce pierwszego wystąpienia  %f. Analogicznie druga wartość podstawiana jest w miejsce drugiego wystąpienia  %f. Znak  f  występujący po procencie wymusza interpretację argumentu jako liczby zmiennoprzecinkowej (float). Inne możliwe formatowania print
+Po kolei. Polecenie  **print**  drukuje na ekran ciąg znaków \- wszystko, co zawarte jest pomiędzy cudzysłowami (lub apostrofami). Pomiędzy nimi występują specjalne znaki zaczynające się od znaku  %. W ich miejsce podstawiane są odpowiednio interpretowane wartości zmiennych (bądź literały) występujące za identycznym znakiem znajdującym się za ciągiem zawartym w cudzysłowach. Pierwsza wartość z nawiasu podstawiana jest w miejsce pierwszego wystąpienia  %f. Analogicznie druga wartość podstawiana jest w miejsce drugiego wystąpienia  %f. Znak  f  występujący po procencie wymusza interpretację argumentu jako liczby zmiennoprzecinkowej (float). Inne możliwe formatowania print
 
 ``%s`` ciąg znaków
 
@@ -493,11 +493,10 @@ czas: 10 min.
 
 Przepisz kod tak, aby zwracał m/w taką informację
 
-   ===========================================================  ===
-   Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z
-   prędkością początkową 3 m/s pod kątem 0.12 rad
-   znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.
-   ===========================================================  ===
+| ``Na odległości 2.963 m ciało rzucone z wysokości 12.5 m z``
+| ``prędkością początkową 3 m/s pod kątem 0.12 rad``
+| ``znajduje się na wysokości 8.0 m w polu grawitacyjnym Ziemi.``
+
 
 **Zadanie 6: Słownik przyspieszeń**
 

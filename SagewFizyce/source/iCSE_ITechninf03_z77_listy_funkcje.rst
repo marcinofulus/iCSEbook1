@@ -10,7 +10,7 @@ Listy, Funkcje
 Listy
 ~~~~~~~~
 
-Sporo już o listach powiedzieliśmy. Wiemy jak je zdefiniować, jak odwołać się do :math:`n` -tego elementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Dziś dowiemy się kilku nowych rzeczy.
+Sporo już o listach powiedzieliśmy. Wiemy jak je zdefiniować, jak odwołać się do :math:`n` -tego elementu listy, jak ją rozszerzać, sortować czy usuwać jakiś element. Teraz dowiemy się kilku nowych rzeczy.
 
 
 
@@ -37,7 +37,9 @@ oznacza ostatni element,  ``lista[-2]``  przedostatni,  ``lista[-3]`` odnosi si�
 
 czas: 10 min.
 
-Zbuduj posortowaną listę ``lp`` wszystkich liczb pierwszych w zakresie od 0 do 30. Następnie za pomocą pętli ``while`` stwórz listę ``odw_lp`` zawierającą posortowaną malejąco listę ``lp`` **Uwaga:** Nie wolno używać metody ``reverse()``.
+Zbuduj posortowaną listę ``lp`` wszystkich liczb pierwszych w zakresie od 0 do 30. Następnie za pomocą pętli ``while`` stwórz listę ``odw_lp`` zawierającą posortowaną malejąco listę ``lp``.
+
+**Uwaga:** Nie wolno używać metody ``reverse()``.
 
 
 Wycinanie list
@@ -149,7 +151,7 @@ Można zapytać się: dlaczego nie przypisać po prostu listy  parzyste  do nowe
 .. end of output
 
 
-Jest spora różnica pomiędzy skopiowaniem listy  parzyste  do nowej listy za pomocą  "[:]"  i zwykłymprzypisaniem  "=". Pierwsza konstrukcja kopiuje listę do nowego obiektu (czyli wykonuje kopię listy) drugatworzy tylko dowiązanie (wskaźnik) do obiektu występującego po prawej stronie operatora  "=".
+Jest spora różnica pomiędzy skopiowaniem listy  ``parzyste``  do nowej listy za pomocą  "[:]"  i zwykłymprzypisaniem  "=". Pierwsza konstrukcja kopiuje listę do nowego obiektu (czyli wykonuje kopię listy), druga tworzy tylko dowiązanie (wskaźnik) do obiektu występującego po prawej stronie operatora  "=".
 
 
 .. code-block:: python
@@ -165,7 +167,7 @@ Jest spora różnica pomiędzy skopiowaniem listy  parzyste  do nowej listy za p
 .. end of output
 
 
-Jak widać  kopia1  to kompletnie inna lista niż  parzyste, w przeciwieństwie do listy  kopia2, która tak naprawdę jest tym samym obiektem co  parzyste.
+Jak widać  ``kopia1``  to kompletnie inna lista niż  ``parzyste``, w przeciwieństwie do listy  ``kopia2``, która tak naprawdę jest tym samym obiektem co  ``parzyste``.
 
 
 
@@ -206,7 +208,8 @@ Jak widać takie wyrażenie zawiera w sobie definicję nowej listy  ``kwadrat_lc
     sage: [z^2 for z in range(21)]
     sage: # szesciany liczb naturalnych od -30 do -20
     sage: [z^3 for z in range(-30, -19)]
-    [-27000, -24389, -21952, -19683, -17576, -15625, -13824, -12167, -10648, -9261, -8000]
+
+[-27000, -24389, -21952, -19683, -17576, -15625, -13824, -12167, -10648, -9261, -8000]
 
 .. end of output
 
@@ -241,14 +244,14 @@ Stwórz listy
 Funkcje
 ~~~~~~~~~~
 
-Jeżeli chodzi o Sage to pojęcie funkcja może być rozumiane w dwojaki sposób. Po pierwsze jako zwykła (no, może nie do końca taka zwykła) funkcja matematyczna, którą można badać (np. jej przebieg zmienności), narysować jej wykres, znaleźć miejsca zerowe, scałkować czy policzyć pochodną po jej argumencie. Po drugie jako zbiór poleceń który można wykonać w dowolnej części naszego notatnika. Lub obie możliwości na raz.
+Jeżeli chodzi o Sage to pojęcie funkcja może być rozumiane w dwojaki sposób. Po pierwsze jako zwykła (no, może nie do końca taka zwykła) funkcja matematyczna, którą można badać (np. jej przebieg zmienności), narysować jej wykres, znaleźć miejsca zerowe, scałkować czy policzyć pochodną po jej argumencie. Po drugie jako zbiór poleceń, który można wykonać w dowolnej części naszego notatnika. Lub obie możliwości na raz.
 
 
 
 Wyrażenie symboliczne, które można wywoływać
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Takie wyrażenia najbardziej przypominają znane wam funkcje matematyczne. Definiujemy je następująco
+Takie wyrażenia najbardziej przypominają znane Wam funkcje matematyczne. Definiujemy je następująco
 
 
 .. code-block:: python
@@ -317,7 +320,7 @@ Sprawdź czy całka z pochodnej funkcji :math:`\sin({x}^{2})` jest równa tej fu
 Funkcje programistyczne
 """""""""""""""""""""""
 
-Aby w Sage zdefiniować nową funkcję należy użyć komendy  def  oraz postawić dwukropek za listą argumentów podanych w nawiasie.
+Aby w Sage zdefiniować nową funkcję należy użyć komendy  ``def``  oraz postawić dwukropek za listą argumentów podanych w nawiasie.
 
 
 def nazwa_funkcji(argument1, argument2, ..., argumentN):  
@@ -336,7 +339,7 @@ Na  przykład:
 
 .. end of output
 
-W tym przypadku nazwa funkcji to  ``F  a lista argumentów ogranicza się do jednego  ``C``. Funkcja ta przelicza nam stopnie Celsiusa na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy return  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
+W tym przypadku nazwa funkcji to  ``F``  a lista argumentów ogranicza się do jednego  ``C``. Funkcja ta przelicza nam stopnie Celsjusza na Fahrenheita według znanego już wzoru i zwraca za pomocą komendy ``return``  obliczoną wartość. Aby wywołać ową funkcję dla temperatury pokojowej, wystarczy wykonać
 
 
 .. code-block:: python
@@ -360,13 +363,14 @@ Jak widzimy wywołania takiej funkcji są identyczne jak te, do których już si
 
 .. end of output
 
-Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczy zapytać o to Sage korzystając z wbudowanej pomocy  ``F?``  lub  ``F??``  (pamiętacie jeszcze czym różnią się oba wywołania?). Aby w pełni wykorzystać tę możliwość należy zdefiniować co pomoc Sage ma pokazywać, gdy napiszemy  ``F?`` . Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
+Oczywiście nie musimy pamiętać jakich nazw zmiennych użyliśmy do konstrukcji danej funkcji. Wystarczy zapytać o to Sage korzystając z wbudowanej pomocy  ``F?``  lub  ``F??``  (pamiętacie jeszcze czym różnią się oba wywołania?). Aby w pełni wykorzystać tę możliwość należy zdefiniować co pomoc Sage ma pokazywać, gdy napiszemy  ``F?``. Należy w tym celu dodać opis funkcji, tzw:  docstring. Nie jest to jednak obowiązkowe.
 
 
 .. code-block:: python
 
     sage: def F(C):
-    ...     """przelicza temperature podana w stopniach Celsiusa na stopnie Fahrenheita
+    ...     """przelicza temperature podana w stopniach Celsiusa 
+    ...        na stopnie Fahrenheita
     ...       typowe uzycie:
     ...       F(25)
     ...       F(C=100)"""
@@ -448,9 +452,9 @@ Funkcje nie muszą niczego zwracać, znaczy to, że komenda  ``return``  nie mus
     sage: def drukuj_temperatury(lTemp, CF=True):
     ...     for temp in lTemp:
     ...       if CF:
-    ...         print "%s stopni Celsiusa to %s stopni Fahrenheita" % (temp, F(temp))
+    ...     print "%s stopni Celsiusa to %s stopni Fahrenheita" % (temp, F(temp))
     ...       else:
-    ...         print "%s stopni Fahrenheita to %s stopni Celsiusa" % (temp, C(temp))
+    ...     print "%s stopni Fahrenheita to %s stopni Celsiusa" % (temp, C(temp))
     sage: lista_Celsius = [0, 4, 20, 25, 100]
     sage: drukuj_temperatury(lista_Celsius)
     sage: def C(F):
@@ -558,16 +562,16 @@ Napisz trzy funkcje
 2. ``hw2`` nie przyjmującą żadnych argumentów i nie zwracającą też nic, ale drukującą na standardowe wyjście ’Hello, World!’;
 3. ``hw3`` przyjmującą dwa argumenty i drukującą na standardowe wyjście oba argumenty oddzielone przecinkiem. Przetestuj te funkcje za pomocą 
 
-| print hw1()
-| hw2()
-| hw3(’Hello’, ’World!’)
+| ``print hw1()``
+| ``hw2()``
+| ``hw3(’Hello’, ’World!’)``
 
 
 **Zadanie 9: Funkcja Gaussa.**
 
 czas: 20 min.
 
-Zbuduj funkcję ``mygauss`` zwracającą wartość funkcji Gaussa o średniej :math:`\mu` i odchyleniu standardowym :math:`\sigma`  w punkcie :math:`x`. Zmienne :math:`\mu` oraz  :math:`\sigma` zaprogramuj z  domyślnymi wartościami :math:` \mu= 0`  i :math:` \sigma= 1`. Nie zapomnij napisać ``docstring`` -a.
+Zbuduj funkcję ``mygauss`` zwracającą wartość funkcji Gaussa o średniej :math:`\mu` i odchyleniu standardowym :math:`\sigma`  w punkcie :math:`x`. Zmienne :math:`\mu` oraz  :math:`\sigma` zaprogramuj z  domyślnymi wartościami :math:`\mu= 0`  i :math:`\sigma= 1`. Nie zapomnij napisać ``docstring`` -a.
 
 
 **Zadanie 10: Suma**
@@ -616,7 +620,7 @@ Stwórz notatnik ’Zadania domowe L05, Imię Nazwisko’. W tym notatniku rozwi
 
 czas: – min.
 
-Funkcja ``random()`` zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.  Napisz funkcję ``kostka(n)`` zwracającą listę n losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie funkcja powinna realizować 1 rzut kością ( :math:`n = 1` ).
+Funkcja ``random()`` zwraca losową liczbę zmiennoprzecinkową z zakresu :math:`[0,1)`.  Napisz funkcję ``kostka(n)`` zwracającą listę :math:`n` losowo wyrzuconych oczek sześciennej kostki do gry. Domyślnie funkcja powinna realizować 1 rzut kością ( :math:`n = 1` ).
 
 
 **Zadanie ZD5.2: Przypisania**
@@ -625,13 +629,13 @@ czas: – min.
 
 Część poniższych przypisań będzie działać, a część nie. Wytłumacz przy każdej linijce  dlaczego dane przypisanie działa lub nie działa. Jeżeli działa, napisz jakim obiektem jest  :math:`x` i  jaką trzyma wartość.
 
-| x = 1
-| x = 1.
-| x = 1;
-| x = 1!
-| x = 1?
-| x = 1:
-| x = 1,
+| ``x = 1``
+| ``x = 1.``
+| ``x = 1;``
+| ``x = 1!``
+| ``x = 1?``
+| ``x = 1:``
+| ``x = 1,``
 
 **Uwaga:** Wywołaj powyższe przypisania jedno po drugim, za każdym razem sprawdź typ i zawartość zmiennej x.
 
@@ -642,13 +646,13 @@ czas: – min.
 
 Pierwiastkując jakąś liczbę :math:`M` razy, a później podnosząc ją :math:`M`  razy do kwadratu powinniśmy otrzymać tą samą liczbę (przynajmniej na kartce papieru). Jeżeli wykonamy  podobną operację na kalkulatorze, okaże się, że nie zawsze jest to prawda - tzn. startując z liczby :math:`A` nie wrócimy do tej samej liczby. Mając Sage nie musimy przejmować się naciskaniem klawiszy kalkulatora - możemy  wykonać podobne operacje w pętli. Oto odpowiedni program:
 
-| for n in range(60):
-|     r = 2.0
-|     for i in range(n):
-|         r = sqrt(r)
-|     for i in range(n):
-|         r = r^2
-|     print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)
+| ``for n in range(60):``
+|     ``r = 2.0``
+|     ``for i in range(n):``
+|         ``r = sqrt(r)``
+|     ``for i in range(n):``
+|         ``r = r^2``
+|     ``print "%d razy spierwiastkowane i podniesione do kwadratu: %.16f" % (n, r)``
 
 
 Napisz w trybie edytora tekstu (``SHIFT+ENTER`` na niebieskim polu) co powyższy program wykonuje. Potem  uruchom program. Zaokrąglanie liczb (błąd zaokrąglania) kompletnie niszczy obliczenia dla dostatecznie dużych :math:`n`. Zwróć uwagę na to, że dla niektórych przypadków z liczby 2 dostajemy 1! Zbadaj te przypadki ustalając liczbę  :math:`n` i   drukując na ekran to co zwracają pętle pierwiastkujące i podnoszące do kwadratu. Dlaczego dochodzimy do liczby 1? Odpowiedz w trybie edytora tekstu.
@@ -660,11 +664,11 @@ czas: – min.
 
 Wpisz poniższy kod i uruchom go.
 
-| eps = 1.0
-| while 1.0 != 1.0 + eps:
-|     print ’............’, eps
-|     eps = eps/2.0
-| print ’koncowe eps:’, eps
+| ``eps = 1.0``
+| ``while 1.0 != 1.0 + eps:``
+|     ``print ’............’, eps``
+|     ``eps = eps/2.0``
+| ``print ’koncowe eps:’, eps``
 
 
 Jak to możliwe, że :math:`1 \ne 1 + eps`?  Jaka wartość ``eps`` jest numerycznie traktowana przez Sage jak zero?

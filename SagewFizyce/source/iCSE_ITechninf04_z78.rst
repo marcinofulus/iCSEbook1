@@ -37,7 +37,8 @@ Nieco  bardziej  skomplikowany  wykres
     ...        fillcolor='gold' , legend_label='g(x)')
     sage: taylorp = sum([g.taylor(x,0,i).plot(linestyle='--',
     ...             xmin=0, xmax=20, rgbcolor=(i/.4,i/4.,i/4.),
-    ...             legend_label='rozwiniecie rzedu %d' % i) for i in xrange(4)])
+    ...             legend_label='rozwiniecie rzedu %d' % i) 
+    ...             for i in xrange(4)])
     sage: p = gp + taylorp
     sage: p.axes_labels(['x','g(x)'])
     sage: p.show()
@@ -81,7 +82,8 @@ czy  też
 
     sage: lk = [circle((random(),random()), random()/20,
     ...        fill=True, edgecolor=(random(), random(), random()),
-    ...        facecolor=(random(), random(), random())) for i in xrange(500)]
+    ...        facecolor=(random(), random(), random())) 
+    ...        for i in xrange(500)]
     sage: show(sum(lk), axes=False, frame=True )
 
 .. image:: iCSE_ITechninf04_z78_media/cell_7_sage0.png
@@ -99,7 +101,8 @@ Bardzo łatwo tworzy się również wykresy ”trójwymiarowe”, tzn. wykresy f
 
     sage: def f(x,y):
     ...       return math.sin(y*y+x*x)/math.sqrt(x*x+y*y+.0001)
-    sage: P = plot3d(f,(-3,3),(-3,3), adaptive=True, color=rainbow(60, 'rgbtuple'),
+    sage: P = plot3d(f,(-3,3),(-3,3), adaptive=True, 
+    ...       color=rainbow(60, 'rgbtuple'),
     ...       max_bend=.1, max_depth=15)
     sage: P.show()
 
@@ -159,7 +162,7 @@ plot()
 
 Funkcja  ``plot()`` zainicjuje obiekt Sage o typie  ``sage.plot.plot.Graphics`` (możecie to sprawdzić sami).
 
-Składniafunkcji plot to
+Składnia funkcji **plot** to
 
 
 ``plot(f, (xmin, xmax), opcje)``
@@ -191,7 +194,7 @@ Przykładowym opcjonalnym parametrem może być  ``rgbcolor``,  który powoduje 
 
 
 
-Możemy podawać zarówno nazwy kolorów (w języku angielskim) lecz w ograniczonym zakresie, lub dowolny kolorz przestrzeni barw  `RGB <http://pl.wikipedia.org/wiki/RGB>`_  (Red Green Blue). A oto kilka możliwych kolorów i ich reprezentacje RGB:
+Możemy podawać zarówno nazwy kolorów (w języku angielskim) lecz w ograniczonym zakresie, lub dowolny kolor przestrzeni barw  `RGB <http://pl.wikipedia.org/wiki/RGB>`_  (Red Green Blue). A oto kilka możliwych kolorów i ich reprezentacje RGB:
 
 - ``"red"   : (1.0,0.0,0.0)``,
 - ``"orange": (1.0,0.5,0.0)``,
@@ -225,7 +228,9 @@ Słownik innych możliwych opcji, jakie możemy podać do funkcji  ``plot()``  d
 .. code-block:: python
 
     sage: plot.options
-    {'fillalpha': 0.5, 'detect_poles': False, 'plot_points': 200, 'thickness': 1, 'alpha': 1, 'adaptive_tolerance': 0.01, 'fillcolor': 'automatic', 'adaptive_recursion': 5, 'exclude': None, 'legend_label': None, 'rgbcolor': (0, 0, 1), 'fill': False}
+
+
+{'fillalpha': 0.5, 'detect_poles': False, 'plot_points': 200, 'thickness': 1, 'alpha': 1, 'adaptive_tolerance': 0.01, 'fillcolor': 'automatic', 'adaptive_recursion': 5, 'exclude': None, 'legend_label': None, 'rgbcolor': (0, 0, 1), 'fill': False}
 
 .. end of output
 
@@ -263,7 +268,7 @@ No, ale my chcemy stworzyć wykresy aż 3 funkcji (r,p,h) naraz. Na początku, z
 .. end of output
 
 
-``fig1`` to obiekt z klasy  ``sage.plot.plot.Graphics``, linia narysowana będzie pomiędzy 0 a 5 i będzie miała kolorniebieski,  ``fig2`` to linia czerwona a  ``fig3`` ciemnozielona.
+``fig1`` to obiekt z klasy  ``sage.plot.plot.Graphics``, linia narysowana będzie pomiędzy 0 a 5 i będzie miała kolor niebieski,  ``fig2`` to linia czerwona a  ``fig3`` ciemnozielona.
 
 
 
@@ -285,7 +290,8 @@ Tak jak w przypadku funkcji  ``plot()``  tylko pierwszy parametr jest obowiązko
 
 .. code-block:: python
 
-    sage: (fig1 + fig2 + fig3).show(xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], fontsize=20, axes_labels=['x','funkcje'])
+    sage: (fig1 + fig2 + fig3).show(xmin=0, xmax=1.5, ymin=-40, ymax=45, 
+    ...          figsize=[8,4], fontsize=20, axes_labels=['x','funkcje'])
 
 .. image:: iCSE_ITechninf04_z78_media/cell_23_sage0.png
     :align: center
@@ -301,12 +307,15 @@ lub  równoważnie
 .. code-block:: python
 
     sage: # wersja 2
-    sage: show(fig1 + fig2 + fig3, xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], fontsize=20)
+    sage: show(fig1 + fig2 + fig3, xmin=0, xmax=1.5, ymin=-40, ymax=45, 
+    ...      figsize=[8,4], fontsize=20)
     sage: # wersja 3
     sage: figs = fig1 + fig2 + fig3
-    sage: figs.show(xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], fontsize=20)
+    sage: figs.show(xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], 
+    ...      fontsize=20)
     sage: # wersja 4
-    sage: show(figs, xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], fontsize=20)
+    sage: show(figs, xmin=0, xmax=1.5, ymin=-40, ymax=45, figsize=[8,4], 
+    ...      fontsize=20)
 
 .. image:: iCSE_ITechninf04_z78_media/cell_25_sage0.png
     :align: center
@@ -387,7 +396,7 @@ Dość często z list korzystaliśmy i jeszcze nie raz będziemy korzystać. Je�
 
 
 
-Łatwo zauważyć, że na osi odciętych odłożone mamy indeksy listy a na osi rzędnych wartościodpowiadające danym indeksom. Domyślnym stylem wykresu będą niebieskie punkty. Jeżeli będziemychcieli zobaczyć linię łączącą punkty a nie same punkty, należy dodać opcję  ``plotjoined=True``
+Łatwo zauważyć, że na osi odciętych odłożone mamy indeksy listy a na osi rzędnych wartości odpowiadające danym indeksom. Domyślnym stylem wykresu będą niebieskie punkty. Jeżeli będziemy chcieli zobaczyć linię łączącą punkty a nie same punkty, należy dodać opcję  ``plotjoined=True``
 
 
 .. code-block:: python
@@ -407,7 +416,8 @@ Możemy zobaczyć jednocześnie i punkty i linię. Należy dodać do siebie dwa 
 
 .. code-block:: python
 
-    sage: list_plot(h, plotjoined=True) + list_plot(h, faceted=True, color="red", size=50)
+    sage: list_plot(h, plotjoined=True) + list_plot(h, faceted=True, 
+    ...      color="red", size=50)
 
 .. image:: iCSE_ITechninf04_z78_media/cell_31_sage0.png
     :align: center
@@ -419,7 +429,7 @@ Możemy zobaczyć jednocześnie i punkty i linię. Należy dodać do siebie dwa 
 
 Oczywiście możemy opisać osie, ustalić wielkość wykresu, wielkość czcionek dokładnie tak jak robiliśmy to dla funkcji ``plot()``. Możemy do tego użyć oczywiście funkcji  ``show()``.
 
-Jeżeli chcielibyśmy aby na wykresie znajdowała się owa funkcja, którą zdefiniowaliśmy za pomocą naszego wyrażenia listowego, tzn: na osi OX znalazł się czas :math:`t` a na OY położenie w spadku swobodnym, należy do naszej funkcji podać nie listę, ale listę krotek w postaci :math:`[({t}_{1},{h}_{1}),({t}_{2},{h}_{2}),({t}_{3},{h}_{3}),...]`. Nie chcemy oczywiście robić tego ręcznie (dla 20 punktów to nie takie straszne, ale dla 2000?). Możemysobie napisać pętlę (ale to zostawimy na zadanie domowe), albo skorzystać z funkcji  ``zip()``. Funkcja ta tworzy z wielu list identycznej długości listę krotek, z których każda zawiera wartości odpowiadającetemu samemu indeksowi. Najpierw jednak stworzymy sobie listę ćzasów” (dyskretnych wartości czasu).
+Jeżeli chcielibyśmy aby na wykresie znajdowała się owa funkcja, którą zdefiniowaliśmy za pomocą naszego wyrażenia listowego, tzn: na osi OX znalazł się czas :math:`t` a na OY położenie w spadku swobodnym, należy do naszej funkcji podać nie listę, ale listę krotek w postaci :math:`[({t}_{1},{h}_{1}),({t}_{2},{h}_{2}),({t}_{3},{h}_{3}),...]`. Nie chcemy oczywiście robić tego ręcznie (dla 20 punktów to nie takie straszne, ale dla 2000?). Możemy sobie napisać pętlę (ale to zostawimy na zadanie domowe), albo skorzystać z funkcji  ``zip()``. Funkcja ta tworzy z wielu list identycznej długości listę krotek, z których każda zawiera wartości odpowiadające temu samemu indeksowi. Najpierw jednak stworzymy sobie listę ”czasów” (dyskretnych wartości czasu).
 
 
 .. code-block:: python
@@ -436,7 +446,8 @@ i teraz możemy już sobie narysować naszą ”funkcję”
 
 .. code-block:: python
 
-    sage: list_plot(zip(t,h), axes_labels=[r'$t$',r'$x(t)$'], size=20, color="navy")
+    sage: list_plot(zip(t,h), axes_labels=[r'$t$',r'$x(t)$'], 
+    ...      size=20, color="navy")
 
 .. image:: iCSE_ITechninf04_z78_media/cell_35_sage0.png
     :align: center
@@ -450,7 +461,7 @@ i teraz możemy już sobie narysować naszą ”funkcję”
 Inne typy wykresów
 """"""""""""""""""
 
-Typów wykresów jest w Sage wiele. Oto lista z bardzo krótkimi wyjaśnieniami. Większość z nich ma dokładnie taką samą konstrukcję jak  ``plot()`` lub  ``list_plot``, w większości przypadków wystarczy podać funkcję lub listę donarysowania żądanej krzywej.
+Typów wykresów jest w Sage wiele. Oto lista z bardzo krótkimi wyjaśnieniami. Większość z nich ma dokładnie taką samą konstrukcję jak  ``plot()`` lub  ``list_plot``, w większości przypadków wystarczy podać funkcję lub listę do narysowania żądanej krzywej.
 
 - ``parametric_plot()`` jako argument wpisujemy listę (krotkę) dwóch lub trzech funkcji, na osi OX odkładają się wartości pierwszej funkcji, na OY drugiej a na OZ trzeciej (jeżeli ją podamy dostaniemy trójwymiarowy wykres)
 
@@ -458,7 +469,8 @@ Typów wykresów jest w Sage wiele. Oto lista z bardzo krótkimi wyjaśnieniami.
 
 .. code-block:: python
 
-    sage: parametric_plot([cos(x) + 2 * cos(x/4), sin(x) - 2 * sin(x/4)], (x,0, 8*pi), fill = True, color="gold")
+    sage: parametric_plot([cos(x) + 2 * cos(x/4), sin(x) - 2 * sin(x/4)], 
+    ...      (x,0, 8*pi), fill = True, color="gold")
 
 .. image:: iCSE_ITechninf04_z78_media/cell_37_sage0.png
     :align: center
@@ -489,7 +501,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 .. code-block:: python
 
     sage: var("x y")
-    sage: implicit_plot(y^2+sin(x^2) == 2, (x,-3,3), (y,-3,3), color="steelblue")
+    sage: implicit_plot(y^2+sin(x^2) == 2, (x,-3,3), (y,-3,3), 
+    ...      color="steelblue")
 
 .. image:: iCSE_ITechninf04_z78_media/cell_40_sage0.png
     :align: center
@@ -502,7 +515,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
     sage: G = Graphics()
     sage: counter = 0
     sage: for col in colors.keys():
-    ...          G += implicit_plot(x^2+y^2==1+counter*.1, (x,-4,4),(y,-4,4),color=col)
+    ...          G += implicit_plot(x^2+y^2==1+counter*.1, (x,-4,4),(y,-4,4),
+    ...      color=col)
     ...          counter += 1
     sage: G.show(frame=False)
 
@@ -535,8 +549,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 .. code-block:: python
 
     sage: region_plot(sin(x)*sin(y) >= 1/4, (x,-10,10), (y,-10,10),
-    ...                    incol='yellow', bordercol='black', borderstyle='dashed',
-    ...                    plot_points=250)
+    ...      incol='yellow', bordercol='black', borderstyle='dashed',
+    ...      plot_points=250)
 
 .. image:: iCSE_ITechninf04_z78_media/cell_45_sage0.png
     :align: center
@@ -551,7 +565,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 
 .. code-block:: python
 
-    sage: scatter_plot([[0,1],[2,2],[4.3,1.1]], marker='s', markersize=100, facecolor='green')
+    sage: scatter_plot([[0,1],[2,2],[4.3,1.1]], marker='s', markersize=100, 
+    ...      facecolor='green')
 
 .. image:: iCSE_ITechninf04_z78_media/cell_47_sage0.png
     :align: center
@@ -570,7 +585,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 
 .. code-block:: python
 
-    sage: density_plot(sin(x^2 + y^2)*cos(x)*sin(y), (x, -4, 4), (y, -4, 4), cmap='jet', plot_points=100)
+    sage: density_plot(sin(x^2 + y^2)*cos(x)*sin(y), (x, -4, 4), (y, -4, 4), 
+    ...      cmap='jet', plot_points=100)
 
 .. image:: iCSE_ITechninf04_z78_media/cell_49_sage0.png
     :align: center
@@ -586,7 +602,8 @@ bądź  też  narysować  coś  bardziej  ciekawskiego
 .. code-block:: python
 
     sage: f = exp(-(x^2+y^2))
-    sage: plot_vector_field(f.gradient(), (x,-2,2), (y,-2,2), color='darkorchid')
+    sage: plot_vector_field(f.gradient(), (x,-2,2), (y,-2,2), 
+    ...      color='darkorchid')
 
 .. image:: iCSE_ITechninf04_z78_media/cell_51_sage0.png
     :align: center
