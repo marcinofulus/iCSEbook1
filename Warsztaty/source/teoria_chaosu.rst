@@ -14,7 +14,7 @@ W połowie lat 50-tych XX wieku, Edward Lorenz, prowadził projekt
 badawczy z zakresu statystycznego modelowania pogody. Lorenz był
 matematykiem, jednak podczas wojny służąc w siłach powietrznych
 zajmował się tam prognozowaniem pogody. W rezultacie w 1948 obronił
-doktorat wydziale meteorolgii MIT i podjął tam pracę naukową. Jako
+doktorat wydziale meteorologii MIT i podjął tam pracę naukową. Jako
 matematyk Lorenz szybko stał się sceptyczny co do możliwości
 stosowania liniowej statystyki do długoterminowych przewidywań tak
 nieliniowego zjawiska jakim jest pogoda. Na marginesie, ówczesny stan
@@ -22,9 +22,9 @@ wiedzy i stosowane podejście było do złudzenia po podobne do
 dzisiejszych prób modelowania dynamiki rynków finansowych. W każdym
 razie Lorenz rozpoczął poszukiwania modeli opartych na leżących u
 podstaw meteorologii zjawisk fizycznych. Skoncentrował się na
-stworzeniu uproszcznego modelu konwekcji energii cieplnej w
+stworzeniu uproszczonego modelu konwekcji energii cieplnej w
 atmosferze - jednego z podstawowych zjawisk fizycznych w
-metereologii. 
+meteorologii. 
 
 .. sidebar:: Konwekcja w atmosferze
 
@@ -35,8 +35,8 @@ metereologii.
       :height: 300
       :align: right
    
-   Kowekcja to proces przekazywania ciepła związany z makroskopowym
-   ruchem materii w plynie. W atmosferze, powietrze jest nagrzewane
+   Konwekcja to proces przekazywania ciepła związany z makroskopowym
+   ruchem materii w płynie. W atmosferze, powietrze jest nagrzewane
    przez słońce przy powierzchni ziemi i jako lżejsze unosi się do
    góry, gdzie z kolei się oziębia i znowu opada. Taki opis jest
    oczywiście jedynie jakościowym wnioskiem z obserwacji. Jedyną
@@ -53,7 +53,7 @@ Radykalne uproszczenie było konieczne. Nie zapominajmy, że w owych
 czasach komputer miał 16kb pamięci i mógł wykonać jedynie
 kilkadziesiąt operacji zmiennoprzecinkowych na sekundę. Dla porównania
 dzisiejszy telefon komórkowy wykonuje nawet miliardy operacji na
-sekundę!  Wysiłki zotały skierowane na stworzenie maksymalnie prostego
+sekundę!  Wysiłki zostały skierowane na stworzenie maksymalnie prostego
 modelu, który by jednak oddawał istotę zjawiska. Lorenz stworzył model
 składający się z dwunastu zmiennych, który ostatecznie został
 uproszczony do trzech.  
@@ -61,10 +61,10 @@ uproszczony do trzech.
 Publikując ten wynik, Lorenz mógł nie spodziewać się dwóch rzeczy. Po
 pierwsze, okazało się, że jego model nie miał większego praktycznego
 wpływu na meteorologię (w kraju, oznaczało by to, że projekt nie
-zostałby rozliczony ;). Dzisiejsze podejscie do prognozowania jest
+zostałby rozliczony ;). Dzisiejsze podejście do prognozowania jest
 oparte na modelach zawierających miliardy zmiennych, które są
 rozwiązywane na największych dostępnych komputerach i nie wydaje się
-by cokolwiek mogło zmienic ten trend. Po drugie, Lorenz mógł nie
+by cokolwiek mogło zmienić ten trend. Po drugie, Lorenz mógł nie
 przewidzieć, że jego praca doprowadzi do powstania "teorii chaosu" i
 nieodwracalnie zmieni sposób patrzenia na rzeczywistość.
 
@@ -74,35 +74,35 @@ niego układ, którego stan jest opisywany przez trzy zmienne
 :math:`x(t),y(t),z(t)`. Zmienne te podlegają ewolucji w czasie zgodnie
 w trzema równaniami różniczkowymi. Oznacza to, że znając stan układu w
 pewnej chwili :math:`t_0`, możemy, korzystając z równań różniczkowych,
-wyliczyć stan układu w dowolnej poźniejszej chwili
-:math:`t`. Spełnienie takiego prawa, jest ogólnie zwane determinizmen:
+wyliczyć stan układu w dowolnej późniejszej chwili
+:math:`t`. Spełnienie takiego prawa, jest ogólnie zwane determinizmem:
 "teraźniejszość w pełni determinuje przyszłość". W otaczającym nas
 świecie jest wiele zjawisk, które podlegają deterministycznym
 prawom. Na przykład położenie samochodu jadącego po prostej z
-prędkością 10 metrów na sekunkę jest zdeterminowane w każdej chwili i
+prędkością 10 metrów na sekundę jest zdeterminowane w każdej chwili i
 może być wyliczone ze znanego wzoru na drogę w ruchu jednostajnie
 prostoliniowym. Gdyby jednak zapytać jaką drogę przejedzie ten sam
-samochód w miescie to odpowiedź nie będzie łatwa bo zaleźy to od
+samochód w mieście to odpowiedź nie będzie łatwa bo zależy to od
 natężenia ruchu w mieście, ilości świateł. Można jednak przewidzieć,
 co bardzo dobrze robią programy do nawigacji satelitarnej, średni czas
 oczekiwany na pokonanie wyznaczonej drogi przez miasto. W takich
-obliczeniach wiele zależy od zmiennych, ktore są losowe - jak czas
+obliczeniach wiele zależy od zmiennych, które są losowe - jak czas
 oczekiwania na zielone światło. Mówimy więc, że model szacujący czas
-przejazdu przez miasto jest probablistyczny.
+przejazdu przez miasto jest probabilistyczny.
 
 Wróćmy jednak do modelu Lorenza. Mając do dyspozycji komputer Lorenz
-rozpoczął badnie wyprowadzonych, jak już ustaliliśmy -
+rozpoczął badanie wyprowadzonych, jak już ustaliliśmy -
 deterministycznych - równań. Okazało się, że pomimo prostoty samych
 równań, rozwiązania w pewnych przypadkach były wysoce nieregularne i
 zachowanie układu czułe na warunki początkowe. Co więcej czułość na
 warunki początkowe była tak duża, że praktycznie przewidzenie dokładne
 dalekiej przyszłości w tym modelu było tak samo niemożliwe jak w
-modelach probablistycznych. Nawet, zakładając, że obliczenia
+modelach probabilistycznych. Nawet, zakładając, że obliczenia
 przeprowadzamy z dowolną dokładnością, to w każdym modelu warunki
 początkowe pochodzą z pewnych pomiarów fizycznych a te z kolei zawsze
 obarczone są pewnym błędem. W efekcie, dysponując prostą i w pełni
 deterministyczną regułą "przepowiadania" przyszłości i nie możemy z
-niej w pełnii skorzystać. Paradoks ten jest dzisiaj określany terminem
+niej w pełni skorzystać. Paradoks ten jest dzisiaj określany terminem
 "Chaos Deterministyczny" - oksymoronem, który dobrze oddaje naturę
 tego zjawiska.
 
@@ -125,7 +125,7 @@ Lorenz?
 Układ Lorenza
 =============
 
-.. sidebar:: Układ równań rózniczkowych
+.. sidebar:: Układ równań różniczkowych
 
    Układem równań różniczkowych to układ równań w którym występują
    pochodne. Często spotyka się następującą postać:
@@ -217,7 +217,7 @@ numerycznych, których idea jest jednak taka sama jak w metodzie Eulera
 (patrz box). Minimalna liczba parametrów to: lista lewych stroń układu
 równań różniczkowych, warunek początkowy, punkty czasowe w których ma
 być obliczone rozwiązanie oraz lista zmiennych symbolicznych w takiej
-kolejności w jakiej zostały podane równania. Po wykonianiu obliczeń
+kolejności w jakiej zostały podane równania. Po wykonaniu obliczeń
 funkcja ta zwraca tablicę zawierającą wartości wszystkich zmiennych
 czyli :math:`x,y,z` w żądanych momentach czasu. Tablica ta jest
 obiektem typu :code:`numpy.ndarray` więc możemy sprawdzić jaki jest
@@ -231,15 +231,15 @@ Widzimy, że zostaną zwrócone dwie liczby, które odpowiadają zakresom
 zmienności wskaźników tabeli :code:`sol`.
 
 Procedura :code:`line3d` rysuje wykres krzywej w przestrzeni
-:math:`x,y,z`. Przestrzeń ta jest tak zwaną przestenią fazową dla
-układu równań różniczkowych. Choć brzmi to skompikowanie, idea jest
+:math:`x,y,z`. Przestrzeń ta jest tak zwaną przestrzenią fazową dla
+układu równań różniczkowych. Choć brzmi to skomplikowanie, idea jest
 bardzo prosta. Jest to przestrzeń wszystkich możliwych stanów układu
 równań różniczkowych (:eq:`lorenz`). Ponieważ mamy trzy zmienne to
 przestrzeń ta jest trójwymiarowa. Ewolucja czasowa układu jest krzywą
 w takiej przestrzeni i jest zwana krzywą fazową. Ciekawą własnością
 jest to, że dwie krzywe fazowe się nie przecinają - jest to skutek
-twierszenia o jednoznaczności rozwiązań układu równań
-rożniczkowych. Intuicyjnie oznacza to, że przyszłość jest
+twierdzenia o jednoznaczności rozwiązań układu równań
+różniczkowych. Intuicyjnie oznacza to, że przyszłość jest
 jednoznacznie określona przez stan w pewnej chwili czasu. Jeśli krzywe
 fazowe przecinały by się to jeśli wybralibyśmy punkt przecięcia jako
 stan początkowy to układ "nie wiedział" na którą gałąź ma się udać. 
@@ -254,10 +254,10 @@ motyla.
 Zanim przejdziemy do badania jego własności, musimy dowiedzieć się co
 to jest atraktor. Pewne układy dynamiczne opisywane równaniami
 różniczkowymi (należy do ich model Lorenza), mają taką własność, że
-wszystkie rozwiązania dążą do jednego (lub wielu) rowiązania
-granicznego. Takie rozwiązanie do którego inne dążą własnie nazwana
+wszystkie rozwiązania dążą do jednego (lub wielu) rozwiązania
+granicznego. Takie rozwiązanie do którego inne dążą właśnie nazwana
 atraktorem (z pewnością od od angielskiego słowa attract -
-przyciągać). Aby lepiej zrozumiec tą koncepcję rozważmy następujący
+przyciągać). Aby lepiej zrozumieć tą koncepcję rozważmy następujący
 przykład. Rozważmy równanie, mogące modelować rozpad radioaktywny:
 
 .. math::
@@ -274,19 +274,19 @@ rozwiązanie dąży do niego. Mówimy, że punkt :math:`N=0` jest
 atraktorem układu (:eq:`rozpad`). 
 
 Jakie jeszcze geometryczne formy może przyjmować atraktor? Z przykładu
-widać, że może być pojedyńczym punktem. Można też łatwo znaleźć
+widać, że może być pojedynczym punktem. Można też łatwo znaleźć
 przykłady gdy jest zbiorem wielu izolowanych punktów. Dla układów
 dwuwymiarowych może być też krzywą zamkniętą, zwaną cyklem
 granicznym. Najbardziej fascynująca jest jednak możliwość, która
-pojawia sie dla układów trój- lub więcej wymiarowych. Atraktor może
+pojawia się dla układów trój- lub więcej wymiarowych. Atraktor może
 przyjmować formę zbioru z wymiarem ułamkowym i mieć strukturę
 fraktalną. Taki atraktor jest zwany "dziwnym atraktorem" i attraktor
-Lorenzta jest własnie jego przykładem.
+Lorenzta jest właśnie jego przykładem.
 
 Czas w którym dowolne rozwiązanie układu Lorenza zbliży się do
-atraktora Lorenza na odległość, która jest ponizej grubości lini go
+atraktora Lorenza na odległość, która jest poniżej grubości linii go
 przedstawiającej dla wybranych przez nas parametrów -  jest
-rzędu 10. Dlatego, odcinając pierwsze kilkadziesiąc jednostek czasu
+rzędu 10. Dlatego, odcinając pierwsze kilkadziesiąt jednostek czasu
 wykres trajektorii fazowej praktycznie jest obrazem punktów leżących
 na atrraktorze Lorenza. Ponieważ ma on naturę fraktalną nie można do
 "dokładnie" narysować, ale można pokazać jego przybliżenie w pewnej
@@ -303,22 +303,22 @@ wybranej współrzędnej od czasu, .... ale po co gdybać, narysujmy!
    sum([line( zip(times,sol[-2000:,i]),color=c[i]) for i in range(3)])
 
 Taki wykres, a właściwie trzy wykresy, to zależność każdej zmiennej
-układu od czasu podczas jego ewolucji. Gdyby kontynuować ewoluje
+układu od czasu podczas jego ewolucji. Gdyby kontynuować ewolucje
 dalej, to żaden kawałek wykresu nigdy by się nie powtórzył (warto
-sprobować!). Niezwykłość układu Lorenza polega na tym, że
+spróbować!). Niezwykłość układu Lorenza polega na tym, że
 nieskończony i niepowtarzający się obraz, "zakodowany" jest w jedynie
 trzech równaniach różniczkowych.
 
 Układ Lorenza nie dla każdego zestawu parametrów posiada własności
 chaotyczne. Weźmy na przykład dowolne :math:`\rho<24`. Łatwo się
-przekonać wyonując powyższy kod, że rozwiązanie w takim przypadku
+przekonać wykonując powyższy kod, że rozwiązanie w takim przypadku
 będzie regularne i będzie dążyło do skończonej wartości.
 
 
 Kolejną cechą układu jest czułość na warunki początkowe. Rozwiążmy
-układ dla dwóch zestawów warunków pczątkowych, różniących się o bardzo
-małą wartość (ciekawostką jest fakt, że Lorenz to sprostrzeżenie
-opubikował dopiero sześć lat po pierwszym artykule).
+układ dla dwóch zestawów warunków początkowych, różniących się o bardzo
+małą wartość (ciekawostką jest fakt, że Lorenz to spostrzeżenie
+opublikował dopiero sześć lat po pierwszym artykule).
 
 
 .. sagecellserver::
@@ -336,8 +336,8 @@ opubikował dopiero sześć lat po pierwszym artykule).
    line( zip(times,sol[:,0]) )+line( zip(times,sol2[:,0]),color='red' )
 
 
-W powyższym kodzie mozna próbowac zmiejszać różnicę między warunkami
-poczatkowymi np. dla drugiego układu kładąc :math:`y(0)=1.001` lub
+W powyższym kodzie można próbować zmniejszać różnicę między warunkami
+początkowymi np. dla drugiego układu kładąc :math:`y(0)=1.001` lub
 :math:`y(0)=1.0001` a następnie obserwować w jakim momencie
 rozwiązania zaczynają się różnić od siebie. Warto też spróbować
 zbadań jak wyglądają trajektorie układu dla parametrów przy których
@@ -365,27 +365,27 @@ wzięły się wartości :math:`z_i` bo dysponując jedynie krzywą
 :math:`F`, z jednego stanu możemy otrzymać kolejny. Układ po takiej
 operacji jest jednowymiarowy, gdyż stan określony jest przez jedną
 liczbę :math:`z_i`, ale ewolucja w czasie jest dokonywana w sposób
-skokowy, zapomocą przekształcenia :math:`z_{i+1}=F(z_i)`. Taki układ
+skokowy, za pomocą przekształcenia :math:`z_{i+1}=F(z_i)`. Taki układ
 dynamiczny ze skokową ewolucją w czasie nazywa się właśnie dyskretnym
 układem dynamicznym. Można się też spotkać z określeniem "system
 funkcji iterowanych" ( z ang. iterated function system, IFS). Układy
 te stanowią są znaną już dziś z zaskakująco skomplikowanego
-zachowiania, pomimo swojej prostoty. W dalszej części przejdziemy do
+zachowania, pomimo swojej prostoty. W dalszej części przejdziemy do
 analizy fascynujących własności tych układów. Zanim jednak to zrobimy,
 spróbujmy samodzielnie odtworzyć wynik Edwarda Lorenza.
 
 Mając trajektorię układu Lorenza musimy się zastanowić jak z niej
 wyłowić lokalne maksima? Oczywiście ponieważ rozwiązanie układu
-Lorenza jest ciągłą funkcją czasu, powinniśmy zastosowować metody
+Lorenza jest ciągłą funkcją czasu, powinniśmy zastosowywać metody
 badania przebiegu zmienności funkcji, czyli policzyć pierwszą
-pochodną, znaleźć jej wszstkie zera na zadanym odcinku i sprawdzić czy
+pochodną, znaleźć jej wszystkie zera na zadanym odcinku i sprawdzić czy
 tak uzyskane ekstrema są maksimami. Niestety rozwiązanie układu
 Lorenza nie jest dane wzorem analitycznym. I tu jest pies pogrzebany,
 bo metodologia postępowania znana ze szkoły średniej wymaga
 algebraicznego obliczenia pochodnej. Dlatego zrobimy
-inaczej. Prodedura :code:`desolve_odeint` daje nam tabelę z
-wynikami. Zakładająć ze odstępy pomiędzy kolejnymi punktami czasu w
-tej tabeli są odpowiednio małe, możemy policzyć lokakne maksima dla
+inaczej. Procedura :code:`desolve_odeint` daje nam tabelę z
+wynikami. Zakładając ze odstępy pomiędzy kolejnymi punktami czasu w
+tej tabeli są odpowiednio małe, możemy policzyć lokalne maksima dla
 ciągu, zauważając, że punkt :math:`z_i` jest lokalnym maksimum jeżeli
 jego otoczenie jest od niego mniejsze czyli zachodzi
 :math:`z_{i-1}<z_{i}` i :math:`z_{i-1}<z_i`. Oczywiście nie będą to
@@ -394,7 +394,7 @@ Jedną z możliwości jest napisanie pętli (zachęcamy do zrobienia tego
 własnoręcznie), która dla każdego punktu z tabeli sprawdziła by czy
 zachodzą powyższe warunki i jeśli tak, to zapisałaby punkt na listę
 maksimów. Mając jednak do dyspozycji "oręż" w postaci biblioteki
-**numpy** możemy zrobić to w praktycznie jednej lini kodu. Oznaczając
+**numpy** możemy zrobić to w praktycznie jednej linii kodu. Oznaczając
 przez :code:`Z` tablicę z wartościami trzeciej zmiennej układu Lorenza
 obliczamy najpierw tablicę różnic kolejnych elementów:
 
@@ -403,7 +403,7 @@ obliczamy najpierw tablicę różnic kolejnych elementów:
 
    Zp = np.diff(Z)
 
-nastepnie znajdujemy miejsca (:code:`np.nonzero`) w których kolejne
+następnie znajdujemy miejsca (:code:`np.nonzero`) w których kolejne
 różnice mają przeciwny znak:
 
 .. code-block:: python
@@ -417,7 +417,7 @@ i ostatecznie wyciągamy z tablicy :code:`Z` te elementy:
 
    Zm = Z[idx+1]
 
-(pytanie do czytelinka - skąd to +1?)
+(pytanie do czytelnika - skąd to +1?)
 
 Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`\sin(x)`:
 
@@ -462,7 +462,7 @@ przechodzi w drugie. Skoro wyjściowy układ Lorenza ma własności
 chaotyczne: nieregularność i czułość na warunki początkowe, to
 powinniśmy zaobserwować to również w zachowaniu się ciągu :math:`z_i`
 generowanym przez iteracje funkcji, której wykres wcześniej
-narysowalismy:
+narysowaliśmy:
 
 .. math::
    :label: ifs
@@ -482,7 +482,7 @@ Równanie  logistyczne
 =====================
 
 W latach siedemdziesiątych XX wieku, na Uniwersytecie w Oxford,
-austalijski uczony Robert May zajmował się teoretycznymi aspektami
+australijski uczony Robert May zajmował się teoretycznymi aspektami
 dynamiki populacyjnej. Swoje prace podsumował w artykule, który ukazał
 się w *Nature* pod prowokującym tytułem "Proste modele matematyczne z
 bardzo skomplikowaną dynamiką" [may76]_. Artykuł ten po latach stał
@@ -493,7 +493,7 @@ May zajmował się zastosowaniem matematyki w ilościowym opisie zjawisk
 ekologicznych. Klasycznym zadaniem w tej dziedzinie jest obliczenie
 populacji pewnego gatunku w czasie znając jego stan liczebny w chwili
 początkowej. Najprostszym, z punktu widzenia modelowania
-matemetycznego, rodzajem ekosystemów wydawały się takie w których
+matematycznego, rodzajem ekosystemów wydawały się takie w których
 życie jednego pokolenia populacji trwa jeden sezon. Dobrym przykładem
 jest populacja owadów, które w ciągu jednego sezonu przechodzą pełną
 metamorfozę np. motyle. Czas jest w naturalny sposób podzielony na
@@ -503,7 +503,7 @@ iterowanych w których bieżąca liczebność osobników danego gatunku w
 ekosystemie jest funkcją liczebności w poprzednim okresie.
 
 Robert May zajmował się między innymi właśnie taką dynamiką. Badając
-układy iteracyjne, uprościł ekosystem do jedngo gatunku w którym
+układy iteracyjne, uprościł ekosystem do jednego gatunku w którym
 populacja była funkcją kwadratową populacji w roku poprzednim. Skąd
 taki model?  Najprostszym równaniem dyskretnym opisującym ewolucję
 populacji jest model liniowy:
@@ -527,7 +527,7 @@ w następnym sezonie będzie ich cztery razy więcej niż w
 poprzednim. Jednak w miarę wzrostu liczebności szkodników, pożywienia
 nie będzie wystarczać i siła rozrodcza będzie maleć. W krytycznym
 przypadku można sobie wyobrazić ze owady zjadają latem całe zboże po
-czym wszystkie osobniki umierają z głodu przed osiągnieciem zdolności
+czym wszystkie osobniki umierają z głodu przed osiągnięciem zdolności
 rozrodczej. Załóżmy więc, że nasza stała rozrodu będzie liniową
 funkcją populacji:
 
@@ -538,8 +538,8 @@ funkcją populacji:
 
 gdzie :math:`A` to stała wzrostu populacji w warunkach dostatku
 pożywienia a :math:`B` jest stałą, która określa jak szybko brak
-pożywienia będzie zmiejszał siłę rozrodczą. W szczególności jeśli
-:math:`N_i=A/B` to pożywienia jest na tyle mało, że zaden osobnik nie
+pożywienia będzie zmniejszał siłę rozrodczą. W szczególności jeśli
+:math:`N_i=A/B` to pożywienia jest na tyle mało, że żaden osobnik nie
 przeżywa sezonu żerowania.
 
 
@@ -614,7 +614,7 @@ kategoriach ekologii, możemy powiedzieć, że wielkość populacji ustala
 się na pewnym poziomie, który nie zmienia się z sezonu na
 sezon. Podobnie jak poprzednim razem, ta wartość graniczna nie zależy
 od punktu startowego. Czyli niezależnie od tego czy populacja
-wystaruje bardzo małą liczebnością czy dużą, po kilku pokoleniach i
+wystartuje bardzo małą liczebnością czy dużą, po kilku pokoleniach i
 tak będzie taka sama. W takim przypadku mamy efekt dążenia ekosystemu
 do stabilizacji - populacja dostosowuje swoją liczebność do możliwości
 wyżywienia się.
@@ -623,14 +623,14 @@ Taki efekt był oczekiwany przez badaczy i równanie logistyczne
 :eq:`logistic` nie przyciągnęło by szczególnej uwagi gdyby nie
 pewna niespodzianka. Okazało się bowiem, że dla pewnych wartości
 parametru :math:`a` model nie zachowuje się w przewidywalny
-sposób. Pojawiąją się nie tylko stany okresowe, ale i stany w których
+sposób. Pojawiają się nie tylko stany okresowe, ale i stany w których
 populacja z roku na rok zmienia się w chaotyczny sposób i występuje
 czułość na warunki początkowe - wszystkie cechy, które są
 charakterystyczne dla chaosu deterministycznego.
 
 Zbadajmy to! Na początek ustalmy wartość parametru na :math:`a = 3.2`
 i przyjrzyjmy się ewolucji. Zaskoczeniem może być fakt, że tym razem
-populacja nie osiąga jednej wartości, ale dwie, które wystepują
+populacja nie osiąga jednej wartości, ale dwie, które występują
 kolejno po sobie do drugi sezon.  Przyjrzyjmy się bliżej temu
 zjawisku. Po pierwsze jeżeli ciąg kolejnych wartości :math:`x_i` dąży
 do pewnej granicy, to możemy napisać dokładny warunek na jej wartość
@@ -642,7 +642,7 @@ punktów stałych odwzorowania logistycznego w zależności od parametru
 :math:`x_g = 0` oraz :math:`x_g=1-\frac{1}{a}`. O ile :math:`x_g = 0`
 jest punktem stałym dla dowolnej wartości parametru, to pamiętając, że
 sens mają tylko wartości :math:`x_i\in(0,1)`, drugi punkt stały
-istnieje dla wartości :math:`a\in(1,4)`. Możemy narysować więc wykreś
+istnieje dla wartości :math:`a\in(1,4)`. Możemy narysować więc wykres
 punktów stałych od parametru:
 
 .. sagecellserver::
@@ -653,17 +653,17 @@ punktów stałych od parametru:
     plot(0,(a,1,4),thickness=2,color='red',figsize=(7,3))
 
 
-Jeżeli mamy równanie zależne od parameru i ilość rozwiązań zmienia się
+Jeżeli mamy równanie zależne od parametru i ilość rozwiązań zmienia się
 wraz z tymże parametrem to mówimy, że następuje bifurkacja. W punkcie
-:math:`a=1` natępuje własnie bifurkacja i układ zamiast jednego
-rozwiązania ma dwa. Jednak zauwazmy jeszcze jedno ciekawe zjawisko. Z
+:math:`a=1` następuje właśnie bifurkacja i układ zamiast jednego
+rozwiązania ma dwa. Jednak zauważmy jeszcze jedno ciekawe zjawisko. Z
 dowolnego warunku początkowego dla :math:`a<1` zawsze otrzymywaliśmy
-malejący ciąg populacji, który wydawał się byc przyciągany do jedynego
+malejący ciąg populacji, który wydawał się być przyciągany do jedynego
 w tym obszarze punktu stałego - do zera. Taki punkt do którego układ
 jest przyciągany zwany jest też attraktorem układu. Dla :math:`a>1`
 mamy dwa punkty stałe. Okazuje się, że w tym obszarze startując z
 dowolnego punktu z wyjątkiem :math:`x=0` zawsze będziemy dążyć do
-drugiego rozwiązania, ktory jest attraktorem!  Oznacza to, że jeżeli
+drugiego rozwiązania, który jest attraktorem!  Oznacza to, że jeżeli
 rozwiązanie :math:`x=0` zaburzymy dowolnie małą liczbą
 np. :math:`x=0.0001` to i tak po kilkunastu iteracjach populacja
 będzie dążyła do :math:`x_g=1-\frac{1}{a}` (Poeksperymentujmy!).
@@ -685,9 +685,9 @@ poprzednich wyliczeń dalej powinniśmy mieć punkt stały
        x = a*x*(1-x)
    point(pkts,figsize=(7,3),ymin=0,ymax=1).show()
 
-Dodajmy jednak do warości początkowej pewną małą liczbę np. niech
+Dodajmy jednak do wartości początkowej pewną małą liczbę np. niech
 :code:`x=x+1e-6`. Zobaczmy co się stanie? Okazuje się, że we
-wcześniejszym punktcie (jak sie okaże :math:`a=3`) nastąpiła kolejna
+wcześniejszym punkcie (jak się okaże :math:`a=3`) nastąpiła kolejna
 bifurkacja w wyniku której rozwiązanie :math:`x_g=1-\frac{1}{a}`
 utraciło stabilność na rzecz oscylacji. Ponieważ oscylacje te są w
 pomiędzy dwoma wartościami, to mówimy, że dla :math:`a=3.2` układ ma
@@ -698,7 +698,7 @@ dokładnie. Jeżeli populacja do drugi sezon przechodzi w tą samą to
 możemy rozważyć odwzorowanie :math:`g(x)=f(f(x))`, które przeprowadza
 układ o dwa sezony do przodu. W taki przypadku powinniśmy punkt stały
 dla :math:`g` odpowiada punktowi okresowemu o okresie 2 dla
-:math:`f`. Zastosumy tą chytrą sztuczkę, tym razem z pomocą Sage:
+:math:`f`. Zastosujmy tą chytrą sztuczkę, tym razem z pomocą Sage:
 
 .. sagecellserver::
 
@@ -711,11 +711,11 @@ dla :math:`g` odpowiada punktowi okresowemu o okresie 2 dla
 Dobrze, że możemy wyręczyć się systemem algebry komputerowej, bo
 niestety równanie :math:`f(f(x))=x` jest równaniem czwartego stopnia!
 Sage na szczęście "potrafi" rozwiązywać analitycznie równania czwartego
-stopnia i otrzymujemy rozwiązania. Od razu widzimy wsród pierwiastków
-punkty stałe odwzrorowania :math:`f`, co jest zrozumiałe, bo jeśli
+stopnia i otrzymujemy rozwiązania. Od razu widzimy wśród pierwiastków
+punkty stałe odwzorowania :math:`f`, co jest zrozumiałe, bo jeśli
 zachodzi :math:`f(x)=x` to tym bardziej :math:`f(f(x))=x`. Narysujmy
 zatem nasz wynik.
-
+ 
 
 .. sagecellserver::
 
@@ -734,21 +734,21 @@ zatem nasz wynik.
 
 Wykres ten, zwany diagramem bifurkacyjnym, nie jest do końca
 kompletny - skoro pojawiły się dwie bifurkacje to nie ma powodu, żeby
-zakładać, że więcej się nie pojawi! W dajszej analizie pojawia się
+zakładać, że więcej się nie pojawi! W dalszej analizie pojawia się
 jednak zasadniczy problem. Otóż nie możemy badać analitycznie punktów
 stałych dalszych złożeń odwzorowania :math:`f(f(f(x)))=x`, bo w
-poprzednim przypadku wyczerpaliśmy możliwość dokładnego znajdywnania
+poprzednim przypadku wyczerpaliśmy możliwość dokładnego znajdywania
 miejsc zerowych wielomianów. Zgodnie z `Teoria Galois
 <http://pl.wikipedia.org/wiki/Teoria_Galois>`_ wzory analityczne na
 pierwiastki wielomianu kończą się w przypadku ogólnym na stopniu
 cztery. Oczywiście można zastosować metody przybliżone, lub metodę
-graficzną. Jednak okazuje się, że całkiem niezlym sposobem na poznanie
+graficzną. Jednak okazuje się, że całkiem niezłym sposobem na poznanie
 struktury cykli układu jest po prostu jego symulacja na tyle długa by
 układ zdążył dojść wystarczająco blisko do attraktora. Zanim użyjemy
 tego sposobu, zapoznajmy się z metodą graficzną - jak mawiano,
 ilustracja jest warta tysiąca słów.
 
-Jednym z ciekawych sposobów pozanania dynamiki układów dyskretnych są
+Jednym z ciekawych sposobów poznania dynamiki układów dyskretnych są
 wykresy "pajęczynowe" (z ang. cobweb plot), znane także jako wykresy
 Verhulsta. Spróbujemy samodzielnie skonstruować taki wykres. Na osiach
 będą umieszczone wartości populacji w kolejnych iteracjach:
@@ -818,42 +818,41 @@ obszarze parametru :math:`1<a<3` parabola ma niezerowy punkt
 przecięcia się z przekątną. Zwiększanie parametru powyżej :math:`a=2`
 powoduje, że ewolucja coraz wolniej dąży do punktu stałego, a gdy się
 zbliżymy do trzech np. :math:`a=2.9` układ wykonuje wiele oscylacji
-zamin znajdzie się w otoczeniu attraktora. Wygląda to tak jakby
-attrator coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
+zanim znajdzie się w otoczeniu attraktora. Wygląda to tak jakby
+attraktor coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
 powyżej trójki np.: :math:`a=3.5` to otrzymujemy rozwiązanie. które
 jest zamkniętą krzywą owijającą się jeden raz wokół niestabilnego
-punktu stałego, co odpowiada rozwiązaniu o okresię 2. Dla
+punktu stałego, co odpowiada rozwiązaniu o okresie 2. Dla
 :math:`a=3.5` krzywa owija się już dwa razy. Odpowiada to rozwiązaniu
 o okresie 4, co sugeruje, że układ pomiędzy wartościami parametru
 :math:`a=3.2` a :math:`a=3.5` przeszedł kolejną bifurkację! Ustalmy
 teraz parametr na jest największą wartość :math:`a=4.0`. Zachowanie
 się układu jest w pełni chaotyczne i nie wskazuje na obecność
-cykli. Możemy zwiększyć ilośc iteracji lub zmienić punkt
-początkowy. Za każdym razem otrzymamy niepowtarząjącą się trajektorię. 
+cykli. Możemy zwiększyć ilość iteracji lub zmienić punkt
+początkowy. Za każdym razem otrzymamy niepowtarzającą się trajektorię. 
 
 
 .. sagecellserver::
 
     def cobweb(r=2,x0=0.4,color='red'):
         f(x)=r*x*(1-x)
-        p = plot(f(x)==0,(x,0,1),ymin=-0.1,ymax=1.5,xmin=0,xmax=1.5,color='black')
-        p += plot(x,(x,0,1),color='green',figsize=7)
 
-            elif n < 5:
-                color='blue'
-                th=1.5    
-            else:
-                color='grey'
-                th =0.5        
+
+        p = plot(f(x),(x,0,1),ymin=-0.1,ymax=1.5,xmin=0,xmax=1.5,color='black')
+        p += plot(x,(x,0,1),color='green',figsize=7)
+        th=1
+        for i in range(10):
+
             l1 = line([(x0,x0),(x0,f(x0))],color=color,thickness=th)
             l2 = line([(x0,f(x0)),(f(x0),f(x0))],\
              color=color,thickness=th,xmin=0,xmax=1,ymin=0,ymax=1)
             p = p+l1+l2
             x0 = f(x0)
-        p.axes_labels(["$x_n$","$x_{n+1}$"])     
+        p.axes_labels(["$x_n$","$x_{n+1}$"])
         return p
+
     p1 = cobweb(r=4,x0=0.40001,color='red')
-    p1 = cobweb(r=4,x0=0.4,color='blue')
+    p2 = cobweb(r=4,x0=0.4,color='blue')
     (p1+p2).show(aspect_ratio=1)
 
 
