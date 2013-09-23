@@ -171,13 +171,14 @@ htmlhelp_basename = 'MechanikaStosowana-Skryptdoc'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+	'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
-'pointsize': '12pt',
+	'pointsize': '12pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\usepackage{amsmath,amssymb}\n',
+	'preamble': '\usepackage{amsmath,amssymb}\n' + '\usepackage{babel}\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother',
+	'babel': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
