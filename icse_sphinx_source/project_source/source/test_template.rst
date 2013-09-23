@@ -180,3 +180,12 @@ Other test table
 	\end{cases}
 
 
+.. note::
+    Ut vitae neque eros. Ut sit amet laoreet sapien. Maecenas bibendum, massa porttitor aliquet accumsan, massa neque egestas erat, sed pulvinar diam nulla et elit. Duis a semper dolor. Morbi vel mi ante, nec mollis magna. Nunc lacinia, metus at laoreet rutrum, tellus lorem feugiat eros, eget pharetra purus eros ut odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;  **Suspendisse nulla eros, consequat et sodales et, aliquam vel metus.**  Aenean sed lorem sapien, vitae malesuada est. Phasellus pulvinar dui eu nulla tincidunt et ultrices elit tincidunt.
+    
+    
+.. tip::
+
+	\begin{cases}
+	2 \, x_{1} - x_{2} = 1\\  x_{1} + x_{2} = 5
+	\end{cases}
