@@ -13,7 +13,7 @@ Wstęp
 W połowie lat 50-tych XX wieku, Edward Lorenz, prowadził projekt
 badawczy z zakresu statystycznego modelowania pogody. Lorenz był
 matematykiem, jednak podczas wojny służąc w siłach powietrznych
-zajmował się tam prognozowaniem pogody. W rezultacie w 1948 obronił
+zajmował się prognozowaniem pogody. W rezultacie w 1948 obronił
 doktorat wydziale meteorologii MIT i podjął tam pracę naukową. Jako
 matematyk Lorenz szybko stał się sceptyczny co do możliwości
 stosowania liniowej statystyki do długoterminowych przewidywań tak
@@ -23,8 +23,7 @@ dzisiejszych prób modelowania dynamiki rynków finansowych. W każdym
 razie Lorenz rozpoczął poszukiwania modeli opartych na leżących u
 podstaw meteorologii zjawisk fizycznych. Skoncentrował się na
 stworzeniu uproszczonego modelu konwekcji energii cieplnej w
-atmosferze - jednego z podstawowych zjawisk fizycznych w
-meteorologii. 
+atmosferze - jednego z podstawowych zjawisk fizycznych w meteorologii.
 
 .. sidebar:: Konwekcja w atmosferze
 
@@ -49,14 +48,13 @@ meteorologii.
    teorię chaosu.
    
 
-Radykalne uproszczenie było konieczne. Nie zapominajmy, że w owych
-czasach komputer miał 16kb pamięci i mógł wykonać jedynie
-kilkadziesiąt operacji zmiennoprzecinkowych na sekundę. Dla porównania
-dzisiejszy telefon komórkowy wykonuje nawet miliardy operacji na
-sekundę!  Wysiłki zostały skierowane na stworzenie maksymalnie prostego
-modelu, który by jednak oddawał istotę zjawiska. Lorenz stworzył model
-składający się z dwunastu zmiennych, który ostatecznie został
-uproszczony do trzech.  
+Radykalne uproszczenie było konieczne. W owych czasach komputer miał
+16kb pamięci i mógł wykonać jedynie kilkadziesiąt operacji
+zmiennoprzecinkowych na sekundę. Dla porównania dzisiejszy telefon
+komórkowy wykonuje nawet miliardy operacji na sekundę!  Wysiłki
+zostały skierowane na stworzenie maksymalnie prostego modelu, który by
+jednak oddawał istotę zjawiska. Lorenz stworzył model składający się z
+dwunastu zmiennych, który ostatecznie został uproszczony do trzech.
 
 Publikując ten wynik, Lorenz mógł nie spodziewać się dwóch rzeczy. Po
 pierwsze, okazało się, że jego model nie miał większego praktycznego
