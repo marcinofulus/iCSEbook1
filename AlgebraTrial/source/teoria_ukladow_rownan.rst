@@ -178,7 +178,7 @@ zawsze istnieje co najmniej rozwiązanie zerowe :math:`\,\boldsymbol{x} = \bolds
 Kwestię istnienia rozwiązań niezerowych wyjaśnia
 
 **Twierdzenie 1.** :math:`\\`
-Jednorodny układ równań :eq:`02` ma rozwiązania niezerowe wtedy i tylko wtedy,
+Jednorodny układ równań :eq:`06` ma rozwiązania niezerowe wtedy i tylko wtedy,
 gdy rząd macierzy współczynników jest mniejszy od liczby niewiadomych:
 :math:`\ \ \text{rz}\boldsymbol{A}\,<\,n\,.`
 

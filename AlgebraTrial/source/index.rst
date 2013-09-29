@@ -63,7 +63,7 @@ Operacje na macierzach
 | Transpozycja macierzy. Macierze symetryczne i antysymetryczne.
 | Macierz odwrotna. Macierze elementarne. Macierze permutacji.
 | Algorytm praktycznego obliczania macierzy odwrotnej.
-| Rozkład LU i pokrewne.
+| Rozkład LU i jego zastosowania.
 
 .. toctree::
 
@@ -71,8 +71,10 @@ Operacje na macierzach
    transpozycja_macierzy
    macierz_odwrotna
    macierze_elementarne
-   macierze_elementarne_LU
-   
+   macierz_odwrotna_eliminacja
+   macierze_permutacji
+   macierze_trojkatne
+   rozklad_LU
 
 Zadania
 -------

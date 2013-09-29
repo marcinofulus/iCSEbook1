@@ -105,8 +105,17 @@ Rzeczywiście, korzystając z łączności mnożenia macierzowego mamy
    \boldsymbol{B}^{-1}(\boldsymbol{I}_n\boldsymbol{B})\ =\ 
    \boldsymbol{B}^{-1}\boldsymbol{B}\ =\ \boldsymbol{I}_n\,.
 
-:math:`\\`
-W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (w skrócie ``I``).
+Ogólnie, jeżeli macierze 
+:math:`\,\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_k\in M_n(K)\,`
+są odwracalne, to
+
+.. math::
+   
+   \left(\boldsymbol{A}_1\boldsymbol{A}_2\dots\boldsymbol{A}_k\right)^{-1}\ =\ 
+   \boldsymbol{A}_k^{-1}\dots\boldsymbol{A}_2^{-1}\boldsymbol{A}_1^{-1}\,.
+   \\
+
+W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (w skrócie ``I``). 
 :math:`\\`
 
 **Przykład.** :math:`\,` Znaleźć odwrotność macierzy
@@ -116,12 +125,8 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
 
 .. code-block:: python
 
-   sage: A = matrix([[1,-1,-2],
-   ...               [0, 1, 2],
-   ...               [1,-1,-1]])
-
+   sage: A = matrix([[1,-1,-2],[0, 1, 2],[1,-1,-1]])
    sage: B = A.I
-
    sage: html.table([[A, '$\cdot$', B, '=', A*B]])
 
 .. math::
@@ -139,6 +144,10 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
                                                      0 & 1 & 0 \\
                                                      0 & 0 & 1
                                                      \end{array}\right)\,.
+
+
+
+
 
 
 

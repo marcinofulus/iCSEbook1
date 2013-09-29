@@ -50,9 +50,9 @@ to istnieją trzy rodzaje macierzy elementarnych
 
 .. math::
    
-   \boldsymbol{E}_1(0,2) =
+   \boldsymbol{E}_1(0,1) =
    \left[\begin{array}{ccc} 
-   0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 
+   0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 
    \end{array}\right],\quad 
    \boldsymbol{E}_2(0,\textstyle{2\over 3}) =
    \left[\begin{array}{ccc}
@@ -142,6 +142,77 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
                                                                     4 & 12 & 0 & -8
                                                                    \end{array}\right)
 
+Przypuśćmy, że przekształcenie macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,`
+do zredukowanej postaci schodkowej :math:`\,\boldsymbol{C}\,` polega na kolejnym wykonaniu 
+operacji elementarnych :math:`\,O_1\,,O_2,\,\dots,\,O_k:`
+
+.. math::
+   
+   O_k\ \dots\,O_2\ O_1\ \boldsymbol{A}\ =\ \boldsymbol{C}
+
+którym odpowiadają macierze elementarne 
+:math:`\,\boldsymbol{E}_1,\boldsymbol{E}_2,\dots,\boldsymbol{E}_k\in M_m(K)\,.` Wtedy
+
+.. math::
+   :label: AC
+   
+   \boldsymbol{E}_k\dots\boldsymbol{E}_2\,\boldsymbol{E}_1\,\boldsymbol{A}\ =\ \boldsymbol{C}\,,
+
+   \boldsymbol{A}\ =\ 
+   \boldsymbol{E}_1'\,\boldsymbol{E}_2'\,\dots\,\boldsymbol{E}_k'\ \boldsymbol{C}\,,
+
+gdzie :math:`\ \boldsymbol{E}_i' = \boldsymbol{E}_i^{-1}\,,\quad i=1,2,\dots,k\,.` :math:`\\`
+
+**Twierdzenie 4.** :math:`\,` Macierz :math:`\,\boldsymbol{C}\in M_n(K)\,`
+o zredukowanej postaci schodkowej jest odwracalna wtedy i tylko wtedy, 
+gdy jest macierzą jednostkową: :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
+
+Dowód.
+
+:math:`\ \Rightarrow\,:\ ` Zakładamy, że kwadratowa macierz :math:`\,\boldsymbol{C}\in M_n(K)\,`
+o zredukowanej postaci schodkowej jest odwracalna. Zgodnie z twierdzeniem 1. 
+wszystkie jej wiersze są niezerowe. W każdym wierszu występuje więc jedynka wiodąca, 
+przesunięta w prawo względem takiej jedynki w wierszu poprzednim. 
+W każdej kolumnie wszystkie elementy poza jedynką wiodącą są równe zeru. 
+Oznacza to, że :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
+
+:math:`\ \Leftarrow\,:\ ` Zakładamy, że :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.\ `
+Wtedy :math:`\ \boldsymbol{C}\,` jest odwracalna, bo
+:math:`\ \boldsymbol{I}_n^{-1}=\,\boldsymbol{I}_n\,.` :math:`\\`
+
+**Twierdzenie 5.** :math:`\,`
+Jeżeli :math:`\ \boldsymbol{A}\in M_n(K)\,,\ ` to następujące warunki są równoważne:
+
+(1) :math:`\,\boldsymbol{A}\,` jest macierzą odwracalną;
+(2) :math:`\,` zredukowaną postacią schodkową macierzy :math:`\boldsymbol{A}\,` 
+    jest macierz jednostkowa;
+(3) :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych.
+
+Dowód.
+
+Wzory :eq:`AC` stwierdzają, że macierz :math:`\,\boldsymbol{A}\,` jest odwracalna wtedy i tylko wtedy, gdy jej zredukowana postać schodkowa :math:`\ \boldsymbol{C}\,` jest odwracalna.
+Z kolei według twierdzenia 4. macierz :math:`\ \boldsymbol{C}\,` jest odwracalna wtedy i tylko wtedy,
+gdy :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.\ ` Wynika stąd równoważność warunków 1. i 2.
+
+Dalej, jeżeli :math:`\,\boldsymbol{A}\,` jest macierzą odwracalną, to drugi wzór
+w równaniu :eq:`AC` przyjmuje postać
+
+.. math::
+   :label: AE
+   
+   \boldsymbol{A}\ =\ 
+   \boldsymbol{E}_1'\,\boldsymbol{E}_2'\,\dots\,\boldsymbol{E}_k'\,,
+
+co oznacza, że :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych.
+
+Odwrotnie, jeżeli :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych,
+czyli zachodzi warunek :eq:`AE`, to macierz :math:`\,\boldsymbol{A}\,` jest odwracalna
+jako iloczyn macierzy odwracalnych. :math:`\\`
+
+Przeprowadzona dyskusja wyjaśnia w pewnym stopniu kwestię istnienia macierzy odwrotnej do danej macierzy kwadratowej. Twierdzenie 1. podaje warunek konieczny, a każdy z punktów 2. oraz 3. 
+Twierdzenia 5. :math:`\ ` - :math:`\ ` warunek konieczny i wystarczający dla odwracalności macierzy.
+
+ 
 
 
 
