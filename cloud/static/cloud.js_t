@@ -117,14 +117,14 @@ $(document).ready(function (){
 
 $(document).ready(function (){
   var holder = $('<div class="sidebartoggle"><button id="sidebar-hide" title="Ukryj menu">Menu</button><button id="sidebar-show" style="display: none" title="Pokaż menu">Menu</button></div>');
-  var doc = $('div.document');
+  var doc = $('body');
 
   var show_btn = $('#sidebar-show', holder);
   var hide_btn = $('#sidebar-hide', holder);
   var copts = { expires: 7, path: DOCUMENTATION_OPTIONS.URL_ROOT };
 
   show_btn.click(function (){
-    doc.removeClass("collapsed-sidebar");
+    doc.addClass("expanded-sidebar");
     hide_btn.show();
     show_btn.hide();
     $.cookie("sidebar", "expanded", copts);
@@ -132,7 +132,7 @@ $(document).ready(function (){
   });
 
   hide_btn.click(function (){
-    doc.addClass("collapsed-sidebar");
+    doc.removeClass("expanded-sidebar");
     show_btn.show();
     hide_btn.hide();
     $.cookie("sidebar", "collapsed", copts);
@@ -141,14 +141,28 @@ $(document).ready(function (){
 
   var state = $.cookie("sidebar");
 
-
-  doc.append(holder);
+  $('.relbar-top .related').prepend(holder);
+  $('.relbar-top .related').append('<div class="clearer"></div>');
 
   if (state == "collapsed"){
-    doc.addClass("collapsed-sidebar");
+    doc.removeClass("expanded-sidebar");
     show_btn.show();
     hide_btn.hide();
+  } else if (state == "expanded"){
+    doc.addClass("expanded-sidebar");
+    show_btn.hide();
+    hide_btn.show();
   }
+
+  $('.document').click(function() {
+    if ($('body').hasClass('expanded-sidebar') && $(window).width() < 960) {
+      $('body').removeClass("expanded-sidebar");
+      show_btn.show();
+      hide_btn.hide();
+      $.cookie("sidebar", "collapsed", copts);
+      $(window).trigger("cloud-sidebar-toggled", true);
+    }
+  });
 });
 /* ==========================================================================
  * sticky sidebar
@@ -175,22 +189,23 @@ $(document).ready(function (){
   // getBoundClientRect is always viewport-relative.
   function left_offset($node){ return $node[0].getBoundingClientRect().left; }
   function top_offset($node){ return $node[0].getBoundingClientRect().top; }
-	if($(window).width() > 960 ) {
-		  // function to set style for given state
-	  function set_style(target, value, adjust)
-	  {
-	    if(value <= adjust || sticky_disabled){
-	      target.css({marginLeft: "", position: "", top: "", left: "", bottom: ""});
-	    }
-	    else if (value <= holder.height() - target.height() + adjust){
-	      target.css({marginLeft: 0, position: "fixed", top: -adjust,
-	                 left: left_offset(holder), bottom: ""});
-	    }
-	    else{
-	      target.css({marginLeft: 0, position: "absolute", top: "", left: 0, bottom: 0});
-	    }
-	  }
-	}
+
+      // function to set style for given state
+  function set_style(target, value, adjust)
+  {
+    if($(window).width() > 960 ) {
+      if(value <= adjust || sticky_disabled){
+        target.css({marginLeft: "", position: "", top: "", left: "", bottom: ""});
+      }
+      else if (value <= holder.height() - target.height() + adjust){
+        target.css({marginLeft: 0, position: "fixed", top: -adjust,
+                   left: left_offset(holder), bottom: ""});
+      }
+      else{
+        target.css({marginLeft: 0, position: "absolute", top: "", left: 0, bottom: 0});
+      }
+    }
+  }
 
 
   // func to update sidebar position based on scrollbar & container positions
@@ -199,7 +214,7 @@ $(document).ready(function (){
     var offset = -top_offset(holder);
     set_style(sidebar, offset, sidebar_adjust);
     // collapse button should follow along as well
-    set_style(toggle, offset, 0);
+    // set_style(toggle, offset, 0);
   };
 
   // func to update sidebar measurements, and then call update_sticky()
