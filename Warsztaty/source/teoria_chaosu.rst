@@ -1,3 +1,6 @@
+Zabawa w chaos
+--------------
+
 Teoria chaosu
 +++++++++++++
 
@@ -204,22 +207,24 @@ specjalnie trudne:
    lorenz = [sigma*(y-x),x*(rho-z)-y,x*y-beta*z]
    times = srange(0,200,0.01)
    ics = [0,1,1]
-   sol = desolve_odeint(lorenz,ics,times,[x,y,z])
-   line3d( sol[-3000:], viewer='tachyon',thickness=2,color='green')
+   sol = desolve_odeint(lorenz,ics,times,[x,y,z])   
+   line( sol[-3000:,[0,2]],thickness=1,color='green',figsize=4)
 
+Otrzymany wykres przedstawia kształt atraktora Lorenza,
+przypominającego motyla.
 
-Kluczowym elementem jest wykorzystanie funkcji
-:code:`desolve_odeint`. Rozwiązuje ona numerycznie dowolny układ
-równań różniczkowych z wykorzystaniem bardzo efektywnych schematów
-numerycznych, których idea jest jednak taka sama jak w metodzie Eulera
-(patrz box). Minimalna liczba parametrów to: lista lewych stroń układu
-równań różniczkowych, warunek początkowy, punkty czasowe w których ma
-być obliczone rozwiązanie oraz lista zmiennych symbolicznych w takiej
-kolejności w jakiej zostały podane równania. Po wykonaniu obliczeń
-funkcja ta zwraca tablicę zawierającą wartości wszystkich zmiennych
-czyli :math:`x,y,z` w żądanych momentach czasu. Tablica ta jest
-obiektem typu :code:`numpy.ndarray` więc możemy sprawdzić jaki jest
-rozmiar danych wyjściowych poleceniem:
+Po krótce omówmy elementy powyższego programu. Kluczowym elementem
+jest wykorzystanie funkcji :code:`desolve_odeint`. Rozwiązuje ona
+numerycznie dowolny układ równań różniczkowych z wykorzystaniem bardzo
+efektywnych schematów numerycznych, których idea jest jednak taka sama
+jak w metodzie Eulera (patrz box). Minimalna liczba parametrów to:
+lista lewych stroń układu równań różniczkowych, warunek początkowy,
+punkty czasowe w których ma być obliczone rozwiązanie oraz lista
+zmiennych symbolicznych w takiej kolejności w jakiej zostały podane
+równania. Po wykonaniu obliczeń funkcja ta zwraca tablicę zawierającą
+wartości wszystkich zmiennych czyli :math:`x,y,z` w żądanych momentach
+czasu. Tablica ta jest obiektem typu :code:`numpy.ndarray` więc możemy
+sprawdzić jaki jest rozmiar danych wyjściowych poleceniem:
 
 .. code-block:: python
 
@@ -242,19 +247,21 @@ jednoznacznie określona przez stan w pewnej chwili czasu. Jeśli krzywe
 fazowe przecinały by się to jeśli wybralibyśmy punkt przecięcia jako
 stan początkowy to układ "nie wiedział" na którą gałąź ma się udać. 
 
-Wróćmy do naszego wykresu. Jeżeli zmienimy opcje
-:code:`viewer='tachyon'` na :code:`viewer='jmol'` uruchomi
-interaktywną przeglądarkę wykresów 3d - wymaga to jednak wtyczki Java.
+Wróćmy jeszcze do naszego wykresu. Jeżeli nasz komputer jest
+wyposażony we wtyczkę Java to możemy dokonać inspekcji trójwymiarowej
+geometrii, zastępując ostatnią linijke w programie przez:
 
-Otrzymany wykres przedstawia kształt atraktora Lorenza - słynnego
-motyla. 
+.. code-block:: python
+
+   line3d( sol[-3000:],thickness=2,color='green')
+
 
 Zanim przejdziemy do badania jego własności, musimy dowiedzieć się co
 to jest atraktor. Pewne układy dynamiczne opisywane równaniami
 różniczkowymi (należy do ich model Lorenza), mają taką własność, że
 wszystkie rozwiązania dążą do jednego (lub wielu) rozwiązania
 granicznego. Takie rozwiązanie do którego inne dążą właśnie nazwana
-atraktorem (z pewnością od od angielskiego słowa attract -
+atraktorem (z pewnością od angielskiego słowa attract -
 przyciągać). Aby lepiej zrozumieć tą koncepcję rozważmy następujący
 przykład. Rozważmy równanie, mogące modelować rozpad radioaktywny:
 
@@ -438,7 +445,7 @@ Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`\sin(x)`:
    rho = 28
    beta = 8/3
    lorenz = [sigma*(y-x),x*(rho-z)-y,x*y-beta*z]
-   times = srange(0,4200,0.015)
+   times = srange(0,500,0.015)
    ics = [0,1,1]
    sol = desolve_odeint(lorenz,ics,times,[x,y,z])
 
@@ -449,7 +456,8 @@ Wypróbujmy czy taka procedura zadziała np. na funkcji :math:`\sin(x)`:
    idx = np.nonzero(Zp[1:]*Zp[:-1]<0)[0]
    Zm = Z[idx+1]
 
-   point(zip(Zm[1::2][::2],Zm[1::2][1::2])) + point(zip(np.zeros_like(Zm[1::2][::2]),Zm[1::2][1::2])) 
+   point(zip(Zm[1::2][::2],Zm[1::2][1::2]),figsize=6) 
+   # point(zip(np.zeros_like(Zm[1::2][::2]),Zm[1::2][1::2])) 
 
 
 Zaskakujące jest to, że wszystkie punkty znajdują się na jednej
@@ -477,7 +485,12 @@ zastanowić nad populacją karaluchów.
 
 
 Równanie  logistyczne
-=====================
++++++++++++++++++++++
+
+
+Trochę historii
+===============
+
 
 W latach siedemdziesiątych XX wieku, na Uniwersytecie w Oxford,
 australijski uczony Robert May zajmował się teoretycznymi aspektami
@@ -746,6 +759,10 @@ układ zdążył dojść wystarczająco blisko do attraktora. Zanim użyjemy
 tego sposobu, zapoznajmy się z metodą graficzną - jak mawiano,
 ilustracja jest warta tysiąca słów.
 
+
+Tkamy pajęczynę
+===============
+
 Jednym z ciekawych sposobów poznania dynamiki układów dyskretnych są
 wykresy "pajęczynowe" (z ang. cobweb plot), znane także jako wykresy
 Verhulsta. Spróbujemy samodzielnie skonstruować taki wykres. Na osiach
@@ -818,7 +835,7 @@ powoduje, że ewolucja coraz wolniej dąży do punktu stałego, a gdy się
 zbliżymy do trzech np. :math:`a=2.9` układ wykonuje wiele oscylacji
 zanim znajdzie się w otoczeniu attraktora. Wygląda to tak jakby
 attraktor coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
-powyżej trójki np.: :math:`a=3.5` to otrzymujemy rozwiązanie. które
+powyżej trójki np.: :math:`a=3.5` to otrzymujemy rozwiązanie, które
 jest zamkniętą krzywą owijającą się jeden raz wokół niestabilnego
 punktu stałego, co odpowiada rozwiązaniu o okresie 2. Dla
 :math:`a=3.5` krzywa owija się już dwa razy. Odpowiada to rozwiązaniu
@@ -829,6 +846,22 @@ się układu jest w pełni chaotyczne i nie wskazuje na obecność
 cykli. Możemy zwiększyć ilość iteracji lub zmienić punkt
 początkowy. Za każdym razem otrzymamy niepowtarzającą się trajektorię. 
 
+Rozwiązanie jest też czułe na warunki początkowe. Możemy się o tym
+przekonać, obliczając ciąg :math:`x_i` dla dwóch mało róźniących się
+warunków poczkątkowych:
+
+
+.. sagecellserver::
+
+   a = 4.0
+   x = 0.40000001
+   y = 0.4
+   for i in range(25):
+       x = a*x*(1-x)
+       y = a*y*(1-y)
+       print x, y, abs(x-y)
+
+Można też narysować na wykresie pajęczynowym to zjawisko:
 
 .. sagecellserver::
 
@@ -852,6 +885,45 @@ początkowy. Za każdym razem otrzymamy niepowtarzającą się trajektorię.
     p1 = cobweb(r=4,x0=0.40001,color='red')
     p2 = cobweb(r=4,x0=0.4,color='blue')
     (p1+p2).show(aspect_ratio=1)
+
+
+.. sagecellserver::
+
+    import numpy as np
+    Nx = 100
+    Na = 400
+
+    x = np.linspace(0,1,Nx)
+    x = x + np.zeros((Na,Nx))
+    x = np.transpose(x) 
+    a=np.linspace(1,4,Na)
+    a=a+np.zeros((Nx,Na))
+
+    for i in range(1000):
+        x=a*x*(1-x)
+
+    pt = [[a_,x_] for a_,x_ in zip(a.flatten(),x.flatten())]
+
+    point(pt,size=1,figsize=(7,5))
+
+
+.. sagecellserver::
+
+    var('x a')
+    f(x)=a*x*(1-x)
+    s = solve(x==f(f(x)),x)
+
+
+    plot(s[3].rhs(),(a,0,1),thickness=2)+\
+     plot(s[2].rhs(),(a,1,3),thickness=2)+\
+     plot(s[3].rhs(),(a,1,4),thickness=2,color='red',figsize=(7,3))+\
+     plot(s[0].rhs(),(a,3,4),thickness=2)+\
+     plot(s[1].rhs(),(a,3,4),thickness=2)+\
+     plot(s[2].rhs(),(a,3,4),thickness=2,xmin=2.5,ymin=0,ymax=1,color='red')+\
+     point(pt,color='green',size=1,figsize=(7,5))
+
+END
+
 
 
 
