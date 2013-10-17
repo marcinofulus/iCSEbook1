@@ -1,0 +1,1 @@
+sed -e 's/^\$\$/\.\.\ MATH\:\:\n\n\ \ \ \ /g' -e 's/\$\$.*//' 01_detdyn.txt  > 01_detdyn.rst

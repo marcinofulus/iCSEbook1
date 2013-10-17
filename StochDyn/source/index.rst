@@ -13,16 +13,19 @@ Dynamika stochastyczna
 :Wersja: 
         1.0, 10/2013
 :Pobierz:
-        :download:`podręcznik (PDF) <pdf/StochDyn_v1.0.pdf>`
+        :download:`podręcznik (v0.1, PDF) <pdf/StochDyn_v0.1.pdf>`
 
 Dynamika deterministyczna
 =========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    ch1/chI011
    ch1/chI012
    ch1/chI021
+   ch1/chI022
+   ch1/chI023
+   ch1/chI024
 
 
