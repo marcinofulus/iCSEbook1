@@ -11,7 +11,7 @@ Dynamika stochastyczna
         Jerzy Łuczka, 
         Łukasz Machura
 :Wersja: 
-        1.0, 10/2013
+        0.1, 10/2013
 :Pobierz:
         :download:`podręcznik (v0.1, PDF) <pdf/StochDyn_v0.1.pdf>`
 
