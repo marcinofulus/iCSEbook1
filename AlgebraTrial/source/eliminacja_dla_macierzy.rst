@@ -40,8 +40,6 @@ definiujemy *macierz współczynników* :math:`\,\boldsymbol{A},\ `
    \boldsymbol{b}\,=\,\left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{m} \end{array}\right]\,,\qquad
    \boldsymbol{x}\,=\,\left[\begin{array}{c} x_{1} \\ x_{2} \\ \ldots \\ x_{n} \end{array}\right]\,.
 
-:math:`\;`
-
 Układ :eq:`01` można wtedy zapisać zwięźle jako
 
 .. math::

@@ -10,7 +10,7 @@ Przykład eliminacji dla układu równań
 |
 | Aby wygenerować układ równań, naciśnij "Wykonaj"; :math:`\,`
 | aby zadać inną liczbę równań, wpisz nową wartość n.
-| Pod układem będzie podane rozwiązanie - wykorzystaj je do sprawdzenia wyniku.
+| Pod układem będzie podane rozwiązanie :math:`\,` - :math:`\,` wykorzystaj je do sprawdzenia wyniku.
 
 .. sagecellserver::
 

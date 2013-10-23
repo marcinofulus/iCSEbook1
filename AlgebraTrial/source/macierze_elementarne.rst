@@ -78,8 +78,14 @@ Okazuje się, że wykonanie na prostokątnej macierzy :math:`\,\boldsymbol{A}\ `
 operacji elementarnej jest równoważne pomnożeniu (z lewej strony)
 tej macierzy przez odpowiednią macierz elementarną. Dokładnie przedstawia to
 
-**Twierdzenie 3.** :math:`\,` Niech :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
-Wtedy :math:`\ (i,j=0,1,\ldots,m-1):`
+.. admonition:: Twierdzenie 3. :math:`\,` 
+
+   Niech :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
+   Wtedy :math:`\ (i,j=0,1,\ldots,m-1):`
+
+   #. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =\ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
+   #. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =\ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,`
+   #. | :math:`\,O_3(i,j,a)\,\boldsymbol{A}\ = \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,.`
 
 .. #. :math:`\,\boldsymbol{E}_1(i,j)\,\boldsymbol{A}\ \ ` jest macierzą otrzymaną z
    :math:`\,\boldsymbol{A}\,` przez zamianę :math:`\,i`-tego oraz :math:`\,j`-tego wiersza,
@@ -90,11 +96,6 @@ Wtedy :math:`\ (i,j=0,1,\ldots,m-1):`
    #. :math:`\,\boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\ \ ` jest macierzą otrzymaną z
    :math:`\,\boldsymbol{A}\,` przez dodanie do :math:`\,i`-tego wiersza 
    :math:`\,j`-tego wiersza pomnożonego przez :math:`\,a.`
-
-#. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =\ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
-#. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =\ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,`
-#. | :math:`\,O_3(i,j,a)\,\boldsymbol{A}\ = \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,.`
-   |
 
 W Sage macierze elementarne zwraca funkcja ``elementary_matrix()``. Argumentami są:
 pierścień bazowy (domyślnie ZZ), stopień macierzy oraz numery wierszy i czynnik skali, 
@@ -163,9 +164,12 @@ którym odpowiadają macierze elementarne
 
 gdzie :math:`\ \boldsymbol{E}_i' = \boldsymbol{E}_i^{-1}\,,\quad i=1,2,\dots,k\,.` :math:`\\`
 
-**Twierdzenie 4.** :math:`\,` Macierz :math:`\,\boldsymbol{C}\in M_n(K)\,`
-o zredukowanej postaci schodkowej jest odwracalna wtedy i tylko wtedy, 
-gdy jest macierzą jednostkową: :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
+.. admonition:: Twierdzenie 4. :math:`\,` 
+
+   Macierz :math:`\,\boldsymbol{C}\in M_n(K)\,`
+   o zredukowanej postaci schodkowej jest odwracalna :math:`\\`
+   wtedy i tylko wtedy, gdy jest macierzą jednostkową:
+   :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
 
 Dowód.
 
@@ -180,13 +184,16 @@ Oznacza to, że :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
 Wtedy :math:`\ \boldsymbol{C}\,` jest odwracalna, bo
 :math:`\ \boldsymbol{I}_n^{-1}=\,\boldsymbol{I}_n\,.` :math:`\\`
 
-**Twierdzenie 5.** :math:`\,`
-Jeżeli :math:`\ \boldsymbol{A}\in M_n(K)\,,\ ` to następujące warunki są równoważne:
+.. **Twierdzenie 5.** :math:`\,`
 
-(1) :math:`\,\boldsymbol{A}\,` jest macierzą odwracalną;
-(2) :math:`\,` zredukowaną postacią schodkową macierzy :math:`\boldsymbol{A}\,` 
-    jest macierz jednostkowa;
-(3) :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych.
+.. admonition:: Twierdzenie 5. :math:`\,`
+
+   Jeżeli :math:`\ \boldsymbol{A}\in M_n(K)\,,\ ` to następujące warunki są równoważne:
+
+   (1) :math:`\,\boldsymbol{A}\,` jest macierzą odwracalną;
+   (2) :math:`\,` zredukowaną postacią schodkową macierzy :math:`\boldsymbol{A}\,` 
+       jest macierz jednostkowa;
+   (3) :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych.
 
 Dowód.
 

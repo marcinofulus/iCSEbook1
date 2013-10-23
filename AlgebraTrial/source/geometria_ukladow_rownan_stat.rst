@@ -108,7 +108,7 @@ Sens takiego zapisu jest następujący: :math:`\;` dla jakich współczynników
 liniowa wektorów :math:`\ \ \boldsymbol{v}_1=\left[\begin{array}{r} 2 \\ 1 \end{array}\right]
 \ \ \,\text{i}\quad\boldsymbol{v}_2=\left[\begin{array}{r} -1 \\ 1 \end{array}\right]\ \,`
 równa się wektorowi 
-:math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `?
+:math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `? :math:`\\`
 
 .. .. sidebar:: Kombinacja liniowa.
 
@@ -120,8 +120,7 @@ równa się wektorowi
    | :math:`\qquad\qquad\boldsymbol{w}\ =\ x_1\,\boldsymbol{v}_1 + x_2\,\boldsymbol{v}_2\,.`
    |
 
-**Poeksperymentuj z Sage!**
-
+**Poeksperymentuj z Sage:** :math:`\\`
 W poniższym programie wektory kolumnowe 
 :math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
 są reprezentowane przez wektory geometryczne 

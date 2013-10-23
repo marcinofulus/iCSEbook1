@@ -22,17 +22,17 @@ otrzymaną przez dołączenie do macierzy :math:`\ \boldsymbol{A}\,` macierzy :m
       a_{n1} & \ldots & a_{nn} & b_{n1} & \ldots & b_{nn}
    \end{array}\right]\,\in\,M_{n\times 2n}(K)\,.
 
-   \;
+.. admonition:: Lemat. :math:`\,` 
 
-**Lemat.** :math:`\,` Zakładamy, jak wyżej, że :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.` 
+   Zakładamy, jak wyżej, że :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.` 
 
-1. Niech :math:`\ O\ ` będzie operacją elementarną. :math:`\,` 
-   Wtedy :math:`\,O\left(\boldsymbol{A},\boldsymbol{B}\right)\,=\,
-   \left(O\boldsymbol{A},O\boldsymbol{B}\right)\,.`
-
-2. Niech :math:`\,\boldsymbol{C}\in M_n(K)\,.\ \,` 
-   Wtedy :math:`\,\boldsymbol{C}\left(\boldsymbol{A},\boldsymbol{B}\right)\,=\,
-   \left(\boldsymbol{C}\boldsymbol{A},\,\boldsymbol{C}\boldsymbol{B}\right)\,.`
+   1. Niech :math:`\ O\ ` będzie operacją elementarną. :math:`\,` 
+      Wtedy :math:`\,O\left(\boldsymbol{A},\boldsymbol{B}\right)\,=\,
+      \left(O\boldsymbol{A},O\boldsymbol{B}\right)\,.`
+   
+   2. Niech :math:`\,\boldsymbol{C}\in M_n(K)\,.\ \,` 
+      Wtedy :math:`\,\boldsymbol{C}\left(\boldsymbol{A},\boldsymbol{B}\right)\,=\,
+      \left(\boldsymbol{C}\boldsymbol{A},\,\boldsymbol{C}\boldsymbol{B}\right)\,.`
 
 Dowód punktu 2.
 
@@ -99,7 +99,7 @@ Zauważmy od razu, że wtedy
 
 Zastosujmy teraz operacje :math:`\,O_1\,,O_2,\,\dots,\,O_k\ `
 do agregatu :math:`\,\left(\boldsymbol{A},\boldsymbol{I}_n\right).\,`
-Korzystając z Lematu, twierdzenia 3. oraz wzorów :eq:`id` i :eq:`rec` otrzymujemy:
+Korzystając z Lematu, Twierdzenia 3. oraz wzorów :eq:`id` i :eq:`rec` otrzymujemy:
 
 .. math::
 
@@ -118,12 +118,14 @@ Korzystając z Lematu, twierdzenia 3. oraz wzorów :eq:`id` i :eq:`rec` otrzymuj
 
 Otrzymany wynik daje praktyczny sposób obliczania macierzy odwrotnej.
 
-**Twierdzenie 6.** :math:`\,` (algorytm odwracania macierzy) :math:`\\`
-Niech :math:`\,\boldsymbol{A}\in M_n(K)\,` będzie macierzą odwracalną.
-Aby znaleźć jej odwrotność, tworzymy agregat 
-:math:`\,\left(\boldsymbol{A},\boldsymbol{I}_n\right)\,` 
-i wykonujemy na nim operacje elementarne, które przekształcają pierwszą macierz
-do macierzy jednostkowej. Wtedy drugą macierzą agregatu będzie :math:`\,\boldsymbol{A}^{-1}\,.`
+.. admonition:: Twierdzenie 6. :math:`\,` (algorytm odwracania macierzy) :math:`\,`
+
+   Niech :math:`\,\boldsymbol{A}\in M_n(K)\,` będzie macierzą odwracalną. :math:`\\`
+   Aby znaleźć jej odwrotność, tworzymy agregat 
+   :math:`\,\left(\boldsymbol{A},\boldsymbol{I}_n\right)\,` 
+   i wykonujemy na nim operacje elementarne, które przekształcają pierwszą macierz
+   do macierzy jednostkowej. :math:`\\`
+   Wtedy drugą macierzą agregatu będzie :math:`\,\boldsymbol{A}^{-1}\,.`
 
 **Przykład 1.** :math:`\,` Znaleźć macierz odwrotną do
 :math:`\ \boldsymbol{A}\ =\ \left[\begin{array}{rrrr}
@@ -206,7 +208,7 @@ Dana macierz :math:`\ \ \boldsymbol{A}\ =\
 
 Wyznaczyć jej zredukowaną postać schodkową i znaleźć macierz :math:`\,\boldsymbol{D}\,`
 taką, że iloczyn :math:`\,\boldsymbol{D}\boldsymbol{A}\,` równa się 
-tej postaci macierzy :math:`\,\boldsymbol{A}.` :math:`\\`
+zredukowanej postaci schodkowej macierzy :math:`\,\boldsymbol{A}.` :math:`\\`
 
 1.) :math:`\,` Sposób podstawowy.
  
@@ -262,7 +264,7 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
    sage: D = AED.matrix_from_columns(range(5,8))
 
    # Iloczyn D*A jest zredukowaną postacią schodkową A:
-   sage: html.table([[D, '$\\cdot$', A, '=', D*A]])
+   sage: html.table([[D, A, '=', D*A]])
 
 .. math::
    
@@ -270,7 +272,7 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
       0 & 0 &  \textstyle{1\over 2} \\
       0 & 1 &  \textstyle{1\over 2} \\
       1 & 0 & -\textstyle{1\over 2}
-   \end{array}\right)\quad\cdot\quad  
+   \end{array}\right)\quad
    \left(\begin{array}{rrrrr}
        1 & 0 &  2 & -1 &  2 \\
       -1 & 1 & -2 &  3 & -3 \\
@@ -282,9 +284,8 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
 
    \;
 
-
-Teraz :math:`\ \boldsymbol{D}\ =\ \displaystyle\frac{1}{2}\ 
-\left[\begin{array}{rrr} 0 & 0 & 1 \\ 0 & 2 & 1 \\  2 & 0 & -1 \end{array}\right]\,.\ \ `
+Teraz :math:`\ \ \boldsymbol{D}\ =\ \displaystyle\frac{1}{2}\ 
+\left[\begin{array}{rrr} 0 & 0 & 1 \\ 0 & 2 & 1 \\  2 & 0 & -1 \end{array}\right].\ \ `
 Jak widać, macierz :math:`\,\boldsymbol{D}\,` nie jest określona jednoznacznie.
  
 

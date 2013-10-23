@@ -217,11 +217,14 @@ równanie :eq:`02` przyjmuje więc postać
    \boldsymbol{A} \, \boldsymbol{x} \ =\ 
    x_1\,\boldsymbol{A}_1 \ +\ x_2\,\boldsymbol{A}_2 \ +\ \ldots \ + \ x_n\,\boldsymbol{A}_n\,.
 
-**Reguła 0.** :math:`\,` 
-Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,,\ \boldsymbol{x}\in K^n\,,\ ` 
-to iloczyn :math:`\,\boldsymbol{A}\,\boldsymbol{x}\ ` jest kombinacją liniową kolumn  
-macierzy :math:`\,\boldsymbol{A},\ ` przy czym współczynnikami tej kombinacji 
-są odpowiednie elementy wektora :math:`\,\boldsymbol{x}\,.`  
+.. **Reguła 0.** :math:`\,`
+
+.. admonition:: Reguła 0. :math:`\,`
+
+   Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,,\ \boldsymbol{x}\in K^n\,,\ ` 
+   to iloczyn :math:`\,\boldsymbol{A}\,\boldsymbol{x}\ ` jest kombinacją liniową kolumn  
+   macierzy :math:`\,\boldsymbol{A}.\ ` Współczynnikami tej kombinacji są kolejne elementy 
+   wektora :math:`\,\boldsymbol{x}\,.`  
 
 Wracając do wyjściowego ogólnego układu równań :eq:`01`, zapiszmy go w postaci równości dwóch wektorów kolumnowych:
 
@@ -318,8 +321,8 @@ składa się z :math:`\,n\,` kolumn :math:`\,p`-elementowych:
       b_{p1} & b_{p2} & \ldots & b_{pn} \\
    \end{array}\right]\,.
 
-Iloczyn :math:`\ \boldsymbol{A} \boldsymbol{B}\ ` definiujemy wtedy jako macierz otrzymaną przez pomnożenie każdej kolumny 
-macierzy :math:`\ \boldsymbol{B}\ ` z lewej strony przez macierz :math:`\ \boldsymbol{A}:`
+Iloczyn :math:`\ \boldsymbol{A} \boldsymbol{B}\ \,` *definiujemy* :math:`\ ` wtedy jako macierz otrzymaną przez pomnożenie każdej kolumny macierzy :math:`\ \boldsymbol{B}\ \,` przez macierz 
+:math:`\ \boldsymbol{A}:`
 
 .. math::
 
@@ -327,11 +330,15 @@ macierzy :math:`\ \boldsymbol{B}\ ` z lewej strony przez macierz :math:`\ \bolds
    \ \ :\,=\ \ 
    \left( \boldsymbol{A} \boldsymbol{B}_1,\ \boldsymbol{A} \boldsymbol{B}_2,\ \ldots,\ \boldsymbol{A} \boldsymbol{B}_n \right)\,.
 
-**Reguła 1.** :math:`\,` Jeżeli 
-:math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K),\ `
-to :math:`\ j`-ta kolumna iloczynu :math:`\ \boldsymbol{A} \boldsymbol{B}\ ` 
-jest iloczynem macierzy :math:`\ \boldsymbol{A}\ `
-przez :math:`\,j`-tą kolumnę macierzy :math:`\ \boldsymbol{B}\,,\ \ j=1,2,\ldots,n\,.` 
+.. **Reguła 1.** :math:`\,` 
+
+.. admonition:: Reguła 1. :math:`\,`
+
+   Jeżeli 
+   :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K),\ `
+   to :math:`\ j`-ta kolumna iloczynu :math:`\ \boldsymbol{A} \boldsymbol{B}\,` :math:`\\`
+   jest iloczynem macierzy :math:`\ \boldsymbol{A}\ `
+   przez :math:`\,j`-tą kolumnę macierzy :math:`\ \boldsymbol{B}\,,\ \ j=1,2,\ldots,n\,.` 
 
 Wprowadzając oznaczenia 
 :math:`\ \boldsymbol{A}\boldsymbol{B}\ =\ \boldsymbol{C}\ =\ 
@@ -359,8 +366,9 @@ otrzymujemy, :math:`\,` w analogii do równań :eq:`04`:
 Ostatni wzór wyraża elementy macierzy :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\ `
 poprzez elementy czynników :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}.`
 
-Element :math:`\ \,c_{ij}\,` można przedstawić w postaci iloczynu 
-:math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\,`
+Element :math:`\ \,c_{ij}\,` jest iloczynem 
+(w sensie wzoru :eq:`03` :math:`\,` i :math:`\:` Reguły 0.) 
+:math:`\ i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
 przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}:`
 
 .. math::
@@ -371,15 +379,16 @@ przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}:`
 
 Daje to praktyczny sposób obliczania iloczynu dwóch macierzy:
 
-**Reguła 2.** :math:`\,` Jeżeli 
-:math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K)\,,`
-to element w :math:`\,i`-tym wierszu oraz w :math:`\,j`-tej kolumnie iloczynu :math:`\,\boldsymbol{A} \boldsymbol{B}\,`
-jest iloczynem :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
-przez :math:`\,j`-tą kolumnę macierzy :math:`\boldsymbol{B},`
-w postaci sumy iloczynów odpowiednich elementów tego wiersza i tej kolumny,
-:math:`i\,=\,1,2,\ldots,m\,;\quad j\,=\,1,2,\ldots,n.`
+.. admonition:: Reguła 2. :math:`\,` 
 
-:math:`\ `
+   Jeżeli 
+   :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K)\,,`
+   to element w :math:`\,i`-tym wierszu oraz w :math:`\,j`-tej kolumnie iloczynu 
+   :math:`\,\boldsymbol  {A} \boldsymbol{B}\ `
+   jest iloczynem :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
+   przez :math:`\,j`-tą kolumnę macierzy :math:`\boldsymbol{B},\ `
+   w postaci sumy iloczynów odpowiednich elementów tego wiersza oraz tej kolumny,
+   :math:`\ \,i\,=\,1,2,\ldots,m\,,\ \,j\,=\,1,2,\ldots,n.`
 
 Równanie :eq:`05` dla kolumn macierzy
 :math:`\,\boldsymbol{C}\,=\,\boldsymbol{A}\boldsymbol{B}\,` 
@@ -394,34 +403,64 @@ można przepisać jako:
 gdzie :math:`\ \boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\ldots,\,\boldsymbol{A}_p\ `
 są kolumnami macierzy :math:`\,\boldsymbol{A}\,.\ ` Wynika stąd 
 
-**Reguła 3.** :math:`\,` Jeżeli 
-:math:`\,\boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K)\,,\ `
-to :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\boldsymbol{B}\ `
-jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}.\ `
-Współczynniki tej kombinacji są elementami :math:`\,j`-tej kolumny macierzy 
-:math:`\,\boldsymbol{B},\ \ j\,=\,1,2,\ldots,n.`
+.. **Reguła 3.** :math:`\,` 
 
-Zauważmy, że :math:`\,` **Reguła 0.** :math:`\,` z poprzedniej sekcji jest szczególnym przypadkiem :math:`\,` **Reguły 3.**
+.. admonition:: Reguła 3. :math:`\,`
 
-:math:`\ `
+   Jeżeli 
+   :math:`\,\boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K)\,,\ `
+   to :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\boldsymbol{B}` :math:`\\`
+   jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}.\ `
+   Współczynnikami tej kombinacji są kolejne elementy :math:`\,j`-tej kolumny macierzy 
+   :math:`\,\boldsymbol{B},\ \ j\,=\,1,2,\ldots,n.`
 
-**Podsumowanie.** :math:`\,`
-Niech :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}\ ` będą macierzami nad tym samym
-ciałem :math:`\,K.\,` Ich iloczyn :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` istnieje
-wtedy i tylko wtedy, gdy liczba kolumn macierzy 
-:math:`\,\boldsymbol{A}\ ` równa się liczbie wierszy macierzy :math:`\,\boldsymbol{B}.\ `
-Wówczas macierz :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` ma tyle wierszy, 
-co macierz :math:`\,\boldsymbol{A}\,` i tyle kolumn, co macierz :math:`\,\boldsymbol{B},\ `
-przy czym element tego iloczynu znajdujący się w :math:`\,i`-tym wierszu oraz w :math:`\,j`-tej 
-kolumnie
-jest iloczynem :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
-przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}.`
+Zauważmy, że :math:`\,` Reguła 0. :math:`\,` z poprzedniej sekcji 
+jest szczególnym przypadkiem :math:`\,` Reguły 3. 
 
-Konkretnie, jeżeli 
-:math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times p}\,,\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times n}\,,\ `
-to :math:`\ \,\boldsymbol{A} \boldsymbol{B} = \boldsymbol{C} = [c_{ij}]_{m\times n}\,,\ ` gdzie
+:math:`\\`
 
-.. math::
+.. admonition:: Podsumowanie. :math:`\,`
+
+   Niech :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}\ \,` będą macierzami nad tym samym
+   ciałem :math:`\,K.\,` :math:`\\`
+   Ich iloczyn :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` istnieje wtedy i tylko wtedy, 
+   gdy liczba kolumn macierzy :math:`\,\boldsymbol{A}\ ` równa się liczbie wierszy macierzy 
+   :math:`\,\boldsymbol{B}.\ `
+   Wówczas macierz :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` ma tyle wierszy, 
+   co macierz :math:`\,\boldsymbol{A}\,` i tyle kolumn, co macierz :math:`\,\boldsymbol{B},\ `
+   przy czym element iloczynu :math:`\,\boldsymbol{A} \boldsymbol{B}\ `
+   znajdujący się w :math:`\,i`-tym wierszu oraz w :math:`\,j`-tej kolumnie
+   jest iloczynem :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
+   przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}.`
+   
+   Konkretnie, jeżeli 
+   :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times p}\,,\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times n}\,,\ `
+   to :math:`\ \,\boldsymbol{A} \boldsymbol{B} = \boldsymbol{C} = [c_{ij}]_{m\times n}\,,\ ` gdzie
+   
+   .. math::
+      :label: 06
+   
+      c_{ij}\ =\ [\; a_{i1}\ \ a_{i2}\ \ \ldots\ \ a_{ip}\; ]
+      \ \left[\begin{array}{c} b_{1j} \\ b_{2j} \\ \ldots \\ b_{pj} \end{array}\right]
+      \ \, =\ \,\sum_{k=1}^p \; a_{ik}\,b_{kj}\,, 
+      \qquad\begin{array}{l} i\,=\,1,2,\ldots,m\,; \\ j\,=\,1,2,\ldots,n. \end{array}
+
+.. **Podsumowanie.** :math:`\,`
+   Niech :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}\ ` będą macierzami nad tym samym
+   ciałem :math:`\,K.\,` Ich iloczyn :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` istnieje
+   wtedy i tylko wtedy, gdy liczba kolumn macierzy 
+   :math:`\,\boldsymbol{A}\ ` równa się liczbie wierszy macierzy :math:`\,\boldsymbol{B}.\ `
+   Wówczas macierz :math:`\,\boldsymbol{A} \boldsymbol{B}\ ` ma tyle wierszy, 
+   co macierz :math:`\,\boldsymbol{A}\,` i tyle kolumn, co macierz :math:`\,\boldsymbol{B},\ `
+   przy czym element tego iloczynu znajdujący się w :math:`\,i`-tym wierszu 
+   oraz w :math:`\,j`-tej kolumnie jest iloczynem :math:`\,i`-tego wiersza macierzy 
+   :math:`\,\boldsymbol{A}\ ` przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}.`
+   
+   Konkretnie, jeżeli 
+   :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times p}\,,\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times n}\,,\ `
+   to :math:`\ \,\boldsymbol{A} \boldsymbol{B} = \boldsymbol{C} = [c_{ij}]_{m\times n}\,,\ ` gdzie
+   
+   .. math::
    :label: 06
    
    c_{ij}\ =\ [\; a_{i1}\ \ a_{i2}\ \ \ldots\ \ a_{ip}\; ]
@@ -441,17 +480,30 @@ czego wynikiem będzie znowu pewien wektor ze zbioru :math:`\,K^n.`
 
 Pozwala to wprowadzić niezależne określenie iloczynu dwóch macierzy kwadratowych tego samego stopnia.
 
-**Definicja.** :math:`\,`
-Niech będą dane macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.`
-Wtedy ich iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\ `
-jest macierzą ze zbioru :math:`\,M_n(K)\ ` spełniającą warunek   
-
-.. math::
+.. **Definicja.** :math:`\,`
+   Niech będą dane macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.`
+   Wtedy ich iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\ `
+   jest macierzą ze zbioru :math:`\,M_n(K)\ ` spełniającą warunek
+   
+   .. math::
 
    \boldsymbol{A}\,(\boldsymbol{B}\,\boldsymbol{x}) \ =\ 
    (\boldsymbol{A} \boldsymbol{B})\,\boldsymbol{x}
+   
+   dla każdego wektora :math:`\,\boldsymbol{x}\in K^n\,.`
+   
+.. admonition:: Definicja. :math:`\,`
 
-dla każdego wektora :math:`\,\boldsymbol{x}\in K^n\,.`
+   Niech będą dane macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.` :math:`\\`
+   Wtedy ich iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\ `
+   jest macierzą ze zbioru :math:`\,M_n(K)\ ` spełniającą warunek   
+
+   .. math::
+      :label: alt_def
+   
+      \boldsymbol{A}\,(\boldsymbol{B}\,\boldsymbol{x}) \ =\ 
+      (\boldsymbol{A} \boldsymbol{B})\,\boldsymbol{x}
+      \qquad\text{dla każdego wektora}\quad\boldsymbol{x}\in K^n\,.
 
 Dla sprawdzenia, że ta definicja jest zgodna z bardziej ogólnym
 określeniem :eq:`06` mnożenia macierzy prostokątnych w poprzedniej sekcji, 
@@ -501,29 +553,29 @@ Ostatni wzór można przepisać jako
 Na podstawie ogólnego wzoru :eq:`Ax` stwierdzamy, że wektor :math:`\ \boldsymbol{z}\ ` 
 można otrzymac bezpośrednio z wektora :math:`\ \boldsymbol{x}\ ` 
 mnożąc wektor :math:`\ \boldsymbol{x}\ ` z lewej strony przez macierz 
-:math:`\ \boldsymbol{C} = [c_{ij}]_{n\times n}\,:`
+:math:`\ \boldsymbol{C} = [c_{ij}]_{n\times n}:\ 
+\boldsymbol{z} = \boldsymbol{C}\,\boldsymbol{x}\,.`
 
-.. math::
+.. .. math::
 
    \boldsymbol{z}\ =\ \boldsymbol{C}\,\boldsymbol{x}\,.
 
 A zatem
-
-.. math::
-
-   \boldsymbol{A}\,(\boldsymbol{B}\,\boldsymbol{x}) \ =\ \boldsymbol{C}\,\boldsymbol{x}
-
+:math:`\ \boldsymbol{A}\,(\boldsymbol{B}\,\boldsymbol{x})  =  
+\boldsymbol{C}\,\boldsymbol{x},\ `
 gdzie macierz :math:`\ \boldsymbol{C}\ ` o elementach :math:`\ c_{ij}\ ` danych przez :eq:`07` jest
 iloczynem macierzy :math:`\ \boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}\ `
 w sensie definicji :eq:`06` w poprzedniej sekcji.
+ 
+Wzór :eq:`alt_def` pozwala interpretować iloczyn dwóch macierzy kwadratowych tego samego stopnia 
+jako macierz, odpowiadającą złożeniu dwóch operacji liniowych na wektorach kolumnowych.
 
 .. :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\,.`
 
-Podana tutaj definicja mnożenia macierzy kwadratowych jest więc szczególnym przypadkiem
-określenia iloczynu macierzy prostokątnych. Pozwala ona interpretować iloczyn dwóch macierzy kwadratowych tego samego stopnia jako macierz, odpowiadającą złożeniu dwóch operacji liniowych 
-na wektorach kolumnowych.
-
-..  o odpowiednio dobranych rozmiarach
+.. Podana tutaj definicja mnożenia macierzy kwadratowych jest więc szczególnym przypadkiem
+   określenia iloczynu macierzy prostokątnych. Pozwala ona interpretować iloczyn dwóch macierzy  
+   kwadratowych tego samego stopnia jako macierz, odpowiadającą złożeniu dwóch operacji liniowych 
+   na wektorach kolumnowych.
 
 Własności mnożenia macierzowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -611,9 +663,9 @@ b_2\,a_1 & b_2\,a_2 & b_2\,a_3 \\
 b_3\,a_1 & b_3\,a_2 & b_3\,a_3
 \end{array}\right]\,.`
 
-Z przedstawionych własności działań na macierzach wynika,
-że zbiór :math:`\ M_n(K)\ ` jest nieprze-miennym pierścieniem z jednością 
-ze względu na dodawanie macierzy i mnożenie macierzowe.
+Z przedstawionych własności wynika, że zbiór :math:`\ M_n(K)\ ` jest nieprzemienną algebrą 
+z jednością ze względu na dodawanie macierzy, mnożenie ich przez liczby z :math:`\,K\,`
+i mnożenie macierzowe.
 
 .. macierzy kwadratowych stopnia :math:`\ n\ `
 
@@ -678,8 +730,7 @@ Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \bol
 | W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
 | można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
 |
-| **Poeksperymentuj z Sage!**
-|     
+| **Poeksperymentuj z Sage:**     
 | W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
 | Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
 

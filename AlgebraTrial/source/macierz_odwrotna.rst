@@ -15,10 +15,11 @@ nad ciałem :math:`\,K\,` jest macierz jednostkowa
       0      &    0   & \ldots &    1     
    \end{array}\right]\,.
 
-Oznacza to, że dla dowolnej macierzy :math:`\,\boldsymbol{A}\in M_n(K)\ `
-zachodzi równość
+Oznacza to, że 
+:math:`\ \ \boldsymbol{A}\boldsymbol{I}_n\,=\,\boldsymbol{I}_n\boldsymbol{A}\,=\,\boldsymbol{A}\ \ `
+dla dowolnej macierzy :math:`\ \boldsymbol{A}\in M_n(K)\,.`
 
-.. math::
+.. .. math::
    
    \boldsymbol{A}\boldsymbol{I}_n\ =\ \boldsymbol{I}_n\boldsymbol{A}\ =\ \boldsymbol{A}\,.
 
@@ -62,10 +63,13 @@ Odwracalne mogą być tylko (warunek konieczny, ale nie wystarczający) macierze
 składające się wyłącznie z niezerowych wierszy i z niezerowych kolumn. 
 Wyjaśnia to 
 
-**Twierdzenie 1.** :math:`\\`
-Jeżeli :math:`\,\boldsymbol{A}\in M_n(K)\,` jest macierzą odwracalną,
-to :math:`\,\boldsymbol{A}\,` nie ma wiersza składającego się z samych zer
-ani kolumny składającej się z samych zer.
+.. **Twierdzenie 1.** :math:`\\`
+
+.. admonition:: Twierdzenie 1. :math:`\,`
+
+   Jeżeli :math:`\,\boldsymbol{A}\in M_n(K)\,` jest macierzą odwracalną,
+   to :math:`\,\boldsymbol{A}\,` nie ma wierszy składających się z samych zer
+   ani kolumn składających się z samych zer.
 
 Dowód.
 
@@ -83,13 +87,17 @@ W obydwu przypadkach nie istniałaby macierz :math:`\,\boldsymbol{B}\in M_n(K),\
 :math:`\ \boldsymbol{A}\boldsymbol{B} = \boldsymbol{B}\boldsymbol{A} = \boldsymbol{I}_n\,.` 
 :math:`\\`  
 
-**Twierdzenie 2.** :math:`\,`
-Jeżeli macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,` są odwracalne,
-to iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\,` też jest odwracalny, przy czym
+.. **Twierdzenie 2.** :math:`\,`
 
-.. math::
+.. admonition:: Twierdzenie 2. :math:`\,`
 
-   (\boldsymbol{A}\boldsymbol{B})^{-1}\ =\ \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\,.
+   Jeżeli macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,` są odwracalne, :math:`\\`
+   to iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\,` też jest odwracalny:
+   :math:`\ \ (\boldsymbol{A}\boldsymbol{B})^{-1}\ =\ \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\,.`
+
+.. .. math::
+   
+      (\boldsymbol{A}\boldsymbol{B})^{-1}\ =\ \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\,.
 
 Rzeczywiście, korzystając z łączności mnożenia macierzowego mamy
 
@@ -127,7 +135,7 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
 
    sage: A = matrix([[1,-1,-2],[0, 1, 2],[1,-1,-1]])
    sage: B = A.I
-   sage: html.table([[A, '$\cdot$', B, '=', A*B]])
+   sage: html.table([[A, B, '=', A*B]])
 
 .. math::
    
@@ -135,15 +143,15 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
    1 & -1 & -2 \\
    0 &  1 &  2 \\
    1 & -1 & -1
-   \end{array}\right)\ \cdot\ \left(\begin{array}{rrr}
-                               1 & 1 &  0 \\
-                               2 & 1 & -2 \\
-                              -1 & 0 &  1
-                              \end{array}\right)\ =\ \left(\begin{array}{rrr}
-                                                     1 & 0 & 0 \\
-                                                     0 & 1 & 0 \\
-                                                     0 & 0 & 1
-                                                     \end{array}\right)\,.
+   \end{array}\right)\quad\left(\begin{array}{rrr}
+                           1 & 1 &  0 \\
+                           2 & 1 & -2 \\
+                          -1 & 0 &  1
+                          \end{array}\right)\quad =\quad\left(\begin{array}{rrr}
+                                                         1 & 0 & 0 \\
+                                                         0 & 1 & 0 \\
+                                                         0 & 0 & 1
+                                                        \end{array}\right)\,.
 
 
 

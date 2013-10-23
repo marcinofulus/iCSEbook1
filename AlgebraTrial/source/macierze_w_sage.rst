@@ -6,8 +6,9 @@ Wektory i macierze w systemie Sage
 W poprzedniej sekcji przyjmowaliśmy, że elementami macierzy są
 liczby rzeczywiste z ciała :math:`\ R\ ` albo liczby zespolone z ciała :math:`\ C.`
 Tymczasem działania na macierzach są możliwe, a własności tych działań są zachowane 
-również wtedy, gdy elementy należą do prostszej struktury - pierścienia z jednością
-(którym w szczególności może być ciało).
+również wtedy, gdy elementy należą do prostszej struktury 
+:math:`\,` - :math:`\,` pierścienia z jednością (którym w szczególności może być ciało).
+
 Właśnie pierścień jest w systemie Sage podstawową strukturą algebraiczną,
 na której zbudowana jest algebra wielomianów i macierzy.
 
@@ -56,12 +57,14 @@ Istnieją dwie strategie rachunków na wektorach i macierzach:
   ze zbiorów RR, CC, RDF, CDF; błędy zaokrągleń kumulują się,
   co należy brać pod uwagę przy wykonywaniu różnych operacji.
 
-**Uwaga.** :math:`\,`
-Pierścieniem bazowym macierzy, której elementy zależą od pewnych zmiennych,
-jest pierścień symboliczny SR. Po nadaniu konkretnych wartości liczbowych tym zmiennym,
-pierścieniem bazowym jest nadal SR, chociaż macierz składa się z samych liczb.
-Aby skorzystać z metod numerycznych dostępnych tylko dla macierzy liczbowych,
-należy jawnie zmienić pierścień przy użyciu funkcji ``change_ring()``.
+.. **Uwaga.** :math:`\,`
+
+.. important::
+   Pierścieniem bazowym macierzy, której elementy zależą od pewnych zmiennych,
+   jest pierścień symboliczny SR. Po nadaniu konkretnych wartości liczbowych tym zmiennym,
+   pierścieniem bazowym jest nadal SR, chociaż macierz składa się z samych liczb.
+   Aby skorzystać z metod numerycznych dostępnych tylko dla macierzy liczbowych,
+   należy jawnie zmienić pierścień przy użyciu funkcji ``change_ring()``.
 
 Poniżej mamy przykład takiego postępowania:
 
@@ -117,8 +120,6 @@ C & = &
 \end{array}`
 
 ``Pierścień bazowy macierzy C: Real Double Field``
-
-:math:`\;`
 
 Sage preferuje podejście wierszowe do wektorów i macierzy. 
 Wektor wyświetlany jest w postaci "poziomej", a macierz jest układem (listą) wierszy. 
@@ -416,6 +417,15 @@ jest zero. Wobec tego wektor i macierz mają następującą strukturę:
 | 0. element (element o numerze 0) jest pierwszym elementem,
 | 1. wiersz (wiersz o numerze 1) jest drugim wierszem,
 | 2. kolumna (kolumna o numerze 2) jest trzecią kolumną itd.
+
+.. .. admonition:: Umowa. 
+   
+   :math:`\,` :math:`\!`
+
+   Numer podany słownie: :math:`\ ` pierwszy, drugi, itd. :math:`\ ` odnosi się do numeracji 
+   tradycyjnej;
+
+   Numer zapisany cyfrą: :math:`\ ` 0., 1., itd. :math:`\ ` dotyczy numeracji w systemie Sage.
 
 Na tej zasadzie można wydobyć jakiś element wektora albo wiersz, kolumnę bądź element macierzy:
 

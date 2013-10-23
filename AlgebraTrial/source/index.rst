@@ -13,16 +13,18 @@ Wstęp
 .. toctree::
 
    Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
+   podstawowe_pojecia
    struktury_algebraiczne
    podstawy_algebry_liniowej
+   permutacje
    literatura
 
 Wprowadzenie do układów równań liniowych
 ========================================
 
-| Przestrzeń wektorów kolumnowych nad ciałem :math:`\,K.`
-| Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań.
-| Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne.
+| *Przestrzeń wektorów kolumnowych nad ciałem* :math:`\,K.`
+| *Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań.*
+| *Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne.*
 
 .. toctree::
 
@@ -40,9 +42,9 @@ Zadania
 Algebra macierzy
 ================
 
-| Wprowadzenie macierzy jako prostokątnej tablicy elementów z pewnego ciała.
-| Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.
-| Praktyczne operacje na wektorach i macierzach w systemie Sage.
+| *Wprowadzenie macierzy jako prostokątnej tablicy elementów z pewnego ciała.*
+| *Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.*
+| *Praktyczne operacje na wektorach i macierzach w systemie Sage.*
 
 .. toctree::
 
@@ -59,11 +61,11 @@ Zadania
 Operacje na macierzach
 ======================
 
-| Metoda eliminacji w zastosowaniu do macierzy.
-| Transpozycja macierzy. Macierze symetryczne i antysymetryczne.
-| Macierz odwrotna. Macierze elementarne. Macierze permutacji.
-| Algorytm praktycznego obliczania macierzy odwrotnej.
-| Rozkład LU i jego zastosowania.
+| *Metoda eliminacji w zastosowaniu do macierzy.*
+| *Transpozycja macierzy. Macierze symetryczne i antysymetryczne.*
+| *Macierz odwrotna. Macierze elementarne. Macierze permutacji.*
+| *Algorytm praktycznego obliczania macierzy odwrotnej.*
+| *Rozkład LU i jego zastosowania.*
 
 .. toctree::
 
@@ -86,9 +88,9 @@ Zadania
 Wyznaczniki
 ===========
 
-| Aksjomatyczna definicja wyznacznika. Rozwinięcie permutacyjne.
-| Rozwinięcie Laplace'a jako praktyczna metoda obliczania wyznacznika.
-| Własności i zastosowania wyznaczników.
+| *Aksjomatyczna definicja wyznacznika. Rozwinięcie permutacyjne.*
+| *Rozwinięcie Laplace'a jako praktyczna metoda obliczania wyznacznika.*
+| *Własności i zastosowania wyznaczników.*
 
 .. toctree::
    
@@ -103,10 +105,8 @@ Zadania
 Teoria i praktyka układów równań liniowych
 ==========================================
 
-.. | Metoda eliminacji w zastosowaniu do macierzy.
-
-| Zarys teorii układów równań liniowych.
-| Rozwiązywanie układów równań w systemie Sage.
+.. | *Zarys teorii układów równań liniowych.*
+   | *Rozwiązywanie układów równań w systemie Sage.*
 
 .. toctree::
 
@@ -124,12 +124,12 @@ Zadania
 Przestrzenie unitarne
 =====================
 
-| Iloczyn skalarny w przestrzeni rzeczywistej i zespolonej.
-| Definicja i przykłady przestrzeni unitarnych.
-| Nierówność Schwarza i jej konkretne realizacje. 
-| Ortogonalność. Dopełnienie ortogonalne.
-| Baza ortogonalna i ortonormalna. Procedura Grama-Schmidta.
-| Macierze hermitowskie i unitarne.
+| *Iloczyn skalarny w przestrzeni rzeczywistej i zespolonej.*
+| *Definicja i przykłady przestrzeni unitarnych.*
+| *Nierówność Schwarza i jej konkretne realizacje.*
+| *Ortogonalność. Dopełnienie ortogonalne.*
+| *Baza ortogonalna i ortonormalna. Procedura Grama-Schmidta.*
+| *Macierze hermitowskie i unitarne.*
 
 Zadania
 -------
@@ -137,9 +137,9 @@ Zadania
 Przekształcenia liniowe
 =======================
 
-| Operator liniowy. Jądro i obraz operatora.
-| Macierzowa reprezentacja operatora liniowego.
-| Operatory hermitowskie i unitarne.
+| *Operator liniowy. Jądro i obraz operatora.*
+| *Macierzowa reprezentacja operatora liniowego.*
+| *Operatory hermitowskie i unitarne.*
 
 .. toctree::
    
@@ -151,9 +151,9 @@ Zadania
 Wartości i wektory własne
 =========================
 
-| Definicja problemu własnego operatora liniowego.
-| Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.
-| Wartości i wektory własne operatorów hermitowskich i unitarnych.
+| *Definicja problemu własnego operatora liniowego.*
+| *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
+| *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
 
 .. toctree::
    

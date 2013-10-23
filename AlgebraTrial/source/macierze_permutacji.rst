@@ -16,7 +16,7 @@ Niech będzie dana macierz
    i=1,2,\dots,m\,,
 
 
-oraz permutacja :math:`\,\sigma\in\Pi(m)\,` zapisana w postaci dwuwierszowej:
+oraz permutacja :math:`\,\sigma\in S_m\,` zapisana dwuwierszowo:
 
 .. math::
    
@@ -28,7 +28,7 @@ oraz permutacja :math:`\,\sigma\in\Pi(m)\,` zapisana w postaci dwuwierszowej:
    \;
 
 Permutacja :math:`\,\sigma\,` wyznacza operację :math:`\,O_\sigma\,` 
-na macierzy :math:`\,\boldsymbol{A}\,` zmieniającą kolejność wierszy:
+zmieniającą kolejność wierszy macierzy :math:`\,\boldsymbol{A}\,:`
 
 .. math::
    
@@ -72,7 +72,7 @@ z lewej strony przez :math:`\,\boldsymbol{P}_\sigma:`
 .. math::
    
    O_\sigma\,\boldsymbol{A}\ \ =\ \ \boldsymbol{P}_\sigma\,\boldsymbol{A}\,,
-   \qquad\sigma\in\Pi(m)\,.
+   \qquad\sigma\in S_m\,.
  
    \;
 
@@ -80,7 +80,7 @@ z lewej strony przez :math:`\,\boldsymbol{P}_\sigma:`
 :math:`\quad\sigma\ =\ \left(\begin{array}{ccccc}
 1 & 2 & 3 & 4 & 5 \\
 4 & 3 & 5 & 1 & 2
-\end{array}\right)\,\in \Pi(5)\,.`
+\end{array}\right)\,\in S_5\,.`
 
 Macierz tej permutacji przedstawia się następująco:
 
@@ -121,7 +121,7 @@ Macierz tej permutacji przedstawia się następująco:
 1. Każda macierz permutacji jest iloczynem macierzy elementarnych pierwszego rodzaju
    (odpowiadających przestawieniom wierszy macierzy).
 
-   Wynika to stąd, że każdą permutację :math:`\,\sigma\in\Pi(m)\,` można zapisać jako złożenie
+   Wynika to stąd, że każdą permutację :math:`\,\sigma\in S_m\,` można zapisać jako złożenie
    pewnej liczby transpozycji, którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
 2. Macierze permutacji są *ortogonalne*:
@@ -129,16 +129,16 @@ Macierz tej permutacji przedstawia się następująco:
    .. math::
       
       \boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^T\ = \ \boldsymbol{I}_m\,,
-      \qquad\sigma\in\Pi(m)\,.
+      \qquad\sigma\in S_m\,.
 
 3. Iloczyn dwóch macierzy permutacji jest macierzą permutacji, przy czym
 
    .. math::
       
       \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
-      \qquad\rho,\sigma\in\Pi(m)\,.
+      \qquad\rho,\sigma\in S_m\,.
 
-4. Permutacji identycznościowej :math:`\,\text{id}\in\Pi(m)\,` odpowiada macierz jednostkowa
+4. Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` odpowiada macierz jednostkowa
    :math:`\,\boldsymbol{I}_m.`
 
 5. Z punktów 1. i :math:`\,` 2. wynika, że macierze permutacji są odwracalne, przy czym
@@ -147,14 +147,13 @@ Macierz tej permutacji przedstawia się następująco:
    .. math::
       
       \boldsymbol{P}_\sigma^{-1}\ =\ \boldsymbol{P}_{\sigma^{-1}}\ =\ \,\boldsymbol{P}_\sigma^T\,,
-      \qquad\sigma\in\Pi(m)\,.
+      \qquad\sigma\in S_m\,.
 
-**Wniosek.** :math:`\,`
-Zbiór :math:`\,P=\{\,\boldsymbol{P}_\sigma :\ \sigma\in\Pi(m)\,\}\ `
-jest grupą ze względu na mnożenie macierzowe. Elementem neutralnym jest macierz jednostkowa
-:math:`\,\boldsymbol{I}_m.\ ` Dla :math:`\,m>2\,` jest to grupa nieprzemienna.
-:math:`\\` 
+.. admonition:: Wniosek. :math:`\,`
 
+   Zbiór :math:`\,P=\{\,\boldsymbol{P}_\sigma:\ \sigma\in S_m\,\}\ `
+   jest grupą ze względu na mnożenie macierzowe. :math:`\\`
+   Dla :math:`\,m>2\,` jest to grupa nieprzemienna.
 
 .. Warunek :eq:`comp` stwierdza, że grupa :math:`\,P\,` 
    jest izomorficzna z grupą permutacji :math:`\,\Pi(m).\ `
@@ -174,7 +173,7 @@ Polecenie ``SymmetricGroup(n)`` konstruuje grupę permutacji zbioru
    (1,4)(2,3)]
 
 Metoda ``matrix()`` zastosowana do elementu grupy permutacji daje macierz permutacji.
-Tutaj znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in \Pi(4),\,` która w pełnym 
+Tutaj znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4,\,` która w pełnym 
 zapisie dwuwierszowym ma postać
 
 .. math::

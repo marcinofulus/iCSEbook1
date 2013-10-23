@@ -6,7 +6,8 @@ Transpozycja macierzy
    :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)`
    jest macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
 
-Niech będzie dana macierz :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K).`
+Niech będzie dana macierz :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K).` 
+:math:`\\`
 *Macierzą transponowaną* względem :math:`\,\boldsymbol{A}\,`
 nazywamy macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
 
@@ -45,10 +46,11 @@ a_{1n} & a_{2n} & \ldots & a_{mn}
    \end{array}\right]\,.
 
 Tak więc :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}^T\,`
-równa się :math:`\,i`-tej kolumnie macierzy :math:`\,\boldsymbol{A},\ `
+składa się z elementów :math:`\,i`-tej kolumny macierzy :math:`\,\boldsymbol{A},` :math:`\\`
 a :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}^T\,`
-równa się :math:`\,j`-temu wierszowi macierzy :math:`\,\boldsymbol{A},\ \ 
-i=1,2,\ldots,n;\ j=1,2,\ldots,m.`
+składa się z elementów :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{A}.`
+
+.. \ \ i=1,2,\ldots,n;\ j=1,2,\ldots,m.`
    
 **Przykłady.**
 

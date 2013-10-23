@@ -248,7 +248,7 @@ i zapisuje jej rozkład :math:`\,\boldsymbol{A}=\boldsymbol{P}\boldsymbol{L}\bol
    (P,L,U) = A.LU()
    html.table([[A, '=', P, L, U]])
 
-.. note:: Metoda ``LU()`` działa niezawodnie  na pierścieniach dokładnych, np. na ciele liczb wymiernych QQ. W przypadku obliczeń numerycznych należy użyć ciała RDF liczb rzeczywistych o podwójnej precyzji albo ciała CDF liczb zespolonych o podwójnej precyzji.
+.. note:: Metoda ``LU()`` działa poprawnie  na pierścieniach dokładnych, np. na ciele liczb wymiernych QQ. W przypadku obliczeń numerycznych należy użyć ciała RDF liczb rzeczywistych o podwójnej precyzji albo ciała CDF liczb zespolonych o podwójnej precyzji.
 
 Zastosowania rozkładu LU
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -404,9 +404,10 @@ Obliczanie wyznaczników
 Zauważmy na wstępie, że wyznacznik macierzy permutacji równa się znakowi tej permutacji.
 Dokładnie ujmuje to
 
-**Lemat.** :math:`\,` 
-Jeżeli :math:`\ \boldsymbol{P}_\sigma\in M_n(K)\ ` jest macierzą permutacji 
-:math:`\,\sigma\in \Pi(n),\ ` to :math:`\ \det\boldsymbol{P}_\sigma = \text{sgn}\,\sigma\,.`
+.. admonition:: Lemat. :math:`\,`
+
+   Jeżeli :math:`\ \boldsymbol{P}_\sigma\in M_n(K)\ ` jest macierzą permutacji 
+   :math:`\,\sigma\in S_n,\ ` to :math:`\ \det\boldsymbol{P}_\sigma = \text{sgn}\,\sigma\,.`
 
 Rzeczywiście, permutację :math:`\,\sigma\,` można zapisać jako złożenie transpozycji:
 
@@ -434,11 +435,11 @@ Wyznacznik iloczynu macierzy równa się iloczynowi wyznaczników, więc
    
    \det\boldsymbol{P}_\sigma\ =\ 
    \det\left(\boldsymbol{E}_1^{(k)}\dots\,\boldsymbol{E}_1^{(2)}\,\boldsymbol{E}_1^{(1)}\right)
-   \ \,=\ \,
-   \det\boldsymbol{E}_1^{(k)}\,\dots\ 
-   \det\boldsymbol{E}_1^{(2)}\ \det\boldsymbol{E}_1^{(1)}\,.
+   \ \ =\ \ 
+   \det\boldsymbol{E}_1^{(k)}\,\cdot\ \dots\ \cdot\   
+   \det\boldsymbol{E}_1^{(2)}\,\cdot\ \det\boldsymbol{E}_1^{(1)}\,.
 
-Wyznacznik każdej macierzy :math:`\,\boldsymbol{E}_1^{(i)}\,,\ i=1,2,\dots,n\,,\ `
+Wyznacznik każdej macierzy :math:`\,\boldsymbol{E}_1^{(i)}\,,\ i=1,2,\dots,k\,,\ `
 (otrzymanej poprzez przestawienie dwóch wierszy macierzy jednostkowej :math:`\,\boldsymbol{I}_n`)
 wynosi :math:`\,-1.\ ` Stąd dochodzimy do tezy lematu:
 
