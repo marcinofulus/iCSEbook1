@@ -955,6 +955,27 @@ END
     point(pkts,figsize=5,xmin=0,xmax=1).show()
 
 
+.. sagecellserver::
+
+    import numpy as np
+    Nx = 200
+    Na = 300
+
+    x = np.linspace(0,1,Nx)
+    x = x + np.zeros((Na,Nx))
+    x = np.transpose(x)
+    a=np.linspace(3,4,Na)
+    a=a+np.zeros((Nx,Na))
+
+    for i in range(1000):
+        x=a*x*(1-x)
+
+    pt = [[a_,x_] for a_,x_ in zip(a.flatten(),x.flatten())]
+
+    point(pt,size=1,alpha=0.1,figsize=2.5)
+
+
+
 .. [may76] May, R. M. "Simple mathematical models with very complicated dynamics". Nature 261 (5560): 459–467,1976.
 
 
