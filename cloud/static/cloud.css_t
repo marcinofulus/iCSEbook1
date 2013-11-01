@@ -545,7 +545,7 @@ div.body h4.html-toggle-button:hover
  {
     text-align: justify;
     line-height: 160%;
-    margin: 0.8em 0 1.5em;
+    margin: 0 0 0;
 }
 
 div.body hr {
@@ -742,13 +742,13 @@ dt:target,
      div.admonition, p.deprecated
      {
         background: #E7F0FE;
-        border: 1px solid rgba(0,0,0,.05);
-        border-width: 0 1px 1px 0;
+        border: 2px solid #93b7ec;
+        border-width: 2px 2px 2px 15px;
         margin: 1em 0;
-        padding: .5em;
-        border-radius: 0 .7em 0 .7em;
-        -webkit-border-radius: 0 .7em 0 .7em;
-        -moz-border-radius: 0 .7em 0 .7em;
+        padding: 1em;
+        border-radius: .5em .5em .5em .5em;
+        -webkit-border-radius: .5em .5em .5em .5em;
+        -moz-border-radius: .5em .5em .5em .5em;
     }
 
     div.note, div.seealso, div.warning, div.admonition-todo, p.deprecated, div.caution
@@ -805,7 +805,7 @@ dt:target,
      div.admonition p,
      div.admonition pre,
      div.admonition ul,
-     div.admonition ol { margin-bottom: 5px; }
+     div.admonition ol { margin-bottom: 0px; }
 
      /* allow notes to float on right side w/in document */
      div.admonition.floater
@@ -816,9 +816,9 @@ dt:target,
     }
 
     /* next few rules merge the title into the first paragraph */
-    p.admonition-title { display: inline; margin-right: 0; }
-    p.admonition-title + p { display: inline; }
-    p.admonition-title:after { content: ":"; }
+    p.admonition-title { /*display: inline;*/ margin-right: 0; }
+    p.admonition-title + p { /*display: inline;*/ }
+    p.admonition-title:after { content: ""; } /* iCSE mod */
     p.admonition-title + ul { margin-top: 0; }
 
     /* don't indent admonitions inside definitions */
