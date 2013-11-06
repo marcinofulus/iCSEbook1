@@ -130,15 +130,15 @@ Macierze symetryczne i antysymetryczne
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Macierz :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\,` 
-nazywa się *macierzą symetryczną*, :math:`\\`
+nazywa się :math:`\,` *macierzą symetryczną*, :math:`\\`
 gdy :math:`\,\boldsymbol{A}^T=\boldsymbol{A}\,,\ `
 czyli gdy :math:`\ a_{ij} = a_{ji}\,,\ \ i,j=1,2,\ldots,n.`
  
-Taka macierz jest niezmiennicza przy odbiciu jej elementów względem głównej przekątnej.
+Taka macierz nie zmienia się przy odbiciu jej elementów względem głównej przekątnej.
 
 Jeżeli dla pewnej macierzy :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\,`
 spełniony jest warunek :math:`\,\boldsymbol{A}^T=-\boldsymbol{A}\,,` :math:`\\`
-to nazywamy ją *macierzą antysymetryczną*.
+to nazywamy ją :math:`\,` *macierzą antysymetryczną*.
 
 Wtedy :math:`\ a_{ij} = - a_{ji}\,,\ \ i,j=1,2,\ldots,n,\ `
 z czego wynika, że :math:`\ a_{ii} = 0\ \ \text{dla}\ \ i=1,2,\ldots,n.` :math:`\\`

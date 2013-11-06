@@ -82,7 +82,7 @@ Przykład dla :math:`\,n=5:`
 **Twierdzenie.** :math:`\,` 
 Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą :math:`\ \ (n=1,2,\dots).`
 
-Dowód.
+**Dowód.**
 
 0. Złożenie dwóch permutacji ze zbioru :math:`\,S_n\,` 
    jest również permutacją należącą do tego zbioru.

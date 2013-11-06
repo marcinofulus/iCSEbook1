@@ -811,6 +811,81 @@ mnożenie skalarne wektorów, :math:`\,`
 mnożenie wektora przez macierz bądź macierzy przez wektor, :math:`\,`
 mnożenie macierzy przez macierz.
 
+Mnożenie macierzy blokowych
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Każdą macierz można podzielić na cztery (lub więcej) prostokątnych
+bloków. Po takim podziale macierz nazywana jest macierzą blokową.
+Zaznaczenie struktury blokowej może uwidocznić regularność,
+występującą wśród elementów macierzy.
+
+Okazuje się, że mnożenie macierzy blokowych można
+zapisać w taki sam sposób, jak mnożenie macierzy elementarnych:
+
+.. math::
+   :label: blok1
+
+   \left[\begin{array}{c|c}
+       \boldsymbol{A} & \boldsymbol{B} \\
+       \hline
+       \boldsymbol{C} & \boldsymbol{D}
+    \end{array}\right]
+    \left[\begin{array}{c}
+        \boldsymbol{X} \\
+        \hline
+        \boldsymbol{Y}
+   \end{array}\right]
+   \ =\ 
+   \left[\begin{array}{c}
+       \boldsymbol{A} \boldsymbol{X} + \boldsymbol{B} \boldsymbol{Y} \\
+       \hline
+       \boldsymbol{C} \boldsymbol{X} + \boldsymbol{D} \boldsymbol{Y}
+   \end{array}\right]\,.
+
+Bloki :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D},\boldsymbol{X},\boldsymbol{Y}\ `
+są tutaj macierzami o dowolnych rozmiarach pod warunkiem, że liczby kolumn i wierszy umożliwiają ich mnożenie. 
+Wykonanie mnożenia w powyższy sposób na macierzach gęstych zasadniczo nie zmniejsza liczby operacji. 
+Jeżeli jednak pewne bloki (podmacierze) są zerowe lub są macierzami jednostkowymi, 
+to rachunki mogą istotnie się uprościć. 
+
+Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \boldsymbol{O}`). :math:`\ ` Wtedy:
+
+.. math::
+
+   \left[\begin{array}{c|c}
+      \boldsymbol{A} & \boldsymbol{O} \\
+      \hline
+      \boldsymbol{O} & \boldsymbol{D}
+   \end{array}\right]
+   \left[\begin{array}{c}
+       \boldsymbol{X} \\
+       \hline
+       \boldsymbol{Y}
+   \end{array}\right]
+   \ =\ 
+   \left[\begin{array}{c}
+       \boldsymbol{A} \boldsymbol{X} \\
+       \hline
+       \boldsymbol{D} \boldsymbol{Y}
+   \end{array}\right]
+
+| W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
+| można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
+|
+| **Poeksperymentuj z Sage:**     
+| W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
+| Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
+
+.. sagecellserver::
+
+   A  = random_matrix(QQ,2,2)
+   B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
+   B2 = block_matrix([[A],[identity_matrix(2)]])
+
+   html.table([["$B1\ :$","$B2\ :$","","$B1\ \cdot\ B2\ :$"],[B1,B2,"=",B1*B2]])
+
+
+
 
 
 

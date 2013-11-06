@@ -8,35 +8,42 @@ Niech będzie dana macierz
 .. math::
    
    \boldsymbol{A}\ \ =\ \ 
-   \left[\begin{array}{c} \boldsymbol{R}_1 \\
-                          \boldsymbol{R}_2 \\
+   \left[\begin{array}{c} \boldsymbol{A}_1 \\
+                          \boldsymbol{A}_2 \\
                           \ldots           \\
-                          \boldsymbol{R}_m\end{array}\right]\,,\quad
-   \text{gdzie}\quad\boldsymbol{R}_i\ =\ [\,a_{i1}\ \,a_{i2}\ \,\dots\ \,a_{in}\,]\,,\quad 
+                          \boldsymbol{A}_m\end{array}\right],\qquad
+   \text{gdzie}\quad\boldsymbol{A}_i\ =\ [\,a_{i1}\ \,a_{i2}\ \,\dots\ \,a_{in}\,]\,,\quad 
    i=1,2,\dots,m\,,
 
 
-oraz permutacja :math:`\,\sigma\in S_m\,` zapisana dwuwierszowo:
+oraz permutacja 
+:math:`\ \ \sigma\ =\ 
+\left(\begin{array}{cccc}
+1 & 2 & \ldots & m \\ \sigma(1) & \sigma(2) & \ldots & \sigma(m)
+\end{array}\right)\ \in\ S_m.`
 
-.. math::
+.. .. math::
    
    \sigma\ \ =\ \ \left(\begin{array}{cccc}
                       1     &     2     & \ldots &     m \\
                   \sigma(1) & \sigma(2) & \ldots & \sigma(m)
                   \end{array}\right)\,.
 
-   \;
+:math:`\;`
 
 Permutacja :math:`\,\sigma\,` wyznacza operację :math:`\,O_\sigma\,` 
 zmieniającą kolejność wierszy macierzy :math:`\,\boldsymbol{A}\,:`
 
 .. math::
+   :label: perm_verse
    
    O_\sigma\,\boldsymbol{A}\ :\,=\ 
-   \left[\begin{array}{c} \boldsymbol{R}_{\,\sigma(1)} \\
-                          \boldsymbol{R}_{\,\sigma(2)} \\
+   \left[\begin{array}{c} \boldsymbol{A}_{\,\sigma(1)} \\
+                          \boldsymbol{A}_{\,\sigma(2)} \\
                           \ldots           \\
-                          \boldsymbol{R}_{\,\sigma(m)}\end{array}\right]\,.
+                          \boldsymbol{A}_{\,\sigma(m)}\end{array}\right]\,.
+
+:math:`\;`
 
 Zastosowanie operacji :math:`\,O_\sigma\,` do macierzy jednostkowej
 
@@ -63,34 +70,16 @@ nazywaną *macierzą permutacji* :math:`\,\sigma:`
                                     \boldsymbol{e}_{\,\sigma(m)}
                                     \end{array}\right]\,.
 
-   \;
-
-Łatwo zauważyć, że wykonanie operacji :math:`\,O_\sigma\,`
-na macierzy :math:`\,\boldsymbol{A}\,` jest równoważne pomnożeniu :math:`\,\boldsymbol{A}\,`
-z lewej strony przez :math:`\,\boldsymbol{P}_\sigma:`
-
-.. math::
-   
-   O_\sigma\,\boldsymbol{A}\ \ =\ \ \boldsymbol{P}_\sigma\,\boldsymbol{A}\,,
-   \qquad\sigma\in S_m\,.
- 
-   \;
 
 **Przykład.** :math:`\,` Niech
 :math:`\quad\sigma\ =\ \left(\begin{array}{ccccc}
 1 & 2 & 3 & 4 & 5 \\
 4 & 3 & 5 & 1 & 2
-\end{array}\right)\,\in S_5\,.`
+\end{array}\right)\,\in S_5\,.` 
 
-Macierz tej permutacji przedstawia się następująco:
+:math:`\;`
 
-
-.. .. math::
-   
-   \sigma\ =\ \left(\begin{array}{ccccc}
-                       1 & 2 & 3 & 4 & 5 \\
-                       4 & 3 & 5 & 1 & 2
-                    \end{array}\right)\,\in \Pi(5):
+Macierz tej permutacji przedstawia się następująco: 
 
 .. math::
    
@@ -114,7 +103,25 @@ Macierz tej permutacji przedstawia się następująco:
                               0 & 1 & 0 & 0 & 0
    \end{array}\right]\,.
 
-   \;
+.. Wykorzystując wierszową regułę mnożenia macierzowego można stwierdzić, że wykonanie operacji 
+   :math:`\,O_\sigma\,` na macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` jest
+   równoważne     pomnożeniu :math:`\,\boldsymbol{A}  \,` z lewej strony przez 
+   :math:`\,\boldsymbol{P}_\sigma:`
+
+:math:`\;`
+
+W analogii do Twierdzenia 3. o operacjach i macierzach elementarnych,
+wykonanie operacji :math:`\,O_\sigma\,` na macierzy 
+:math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` jest równoważne pomnożeniu 
+:math:`\,\boldsymbol{A}  \,` z lewej strony przez :math:`\,\boldsymbol{P}_\sigma:`
+
+.. math::
+
+   O_\sigma\,\boldsymbol{A}\ \ =\ \ 
+   \boldsymbol{P}_\sigma\,\boldsymbol{A}\,,
+   \qquad\sigma\in S_m\,.
+
+:math:`\;`
 
 **Własności macierzy permutacji.**
 
@@ -125,11 +132,8 @@ Macierz tej permutacji przedstawia się następująco:
    pewnej liczby transpozycji, którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
 2. Macierze permutacji są *ortogonalne*:
-   
-   .. math::
-      
-      \boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^T\ = \ \boldsymbol{I}_m\,,
-      \qquad\sigma\in S_m\,.
+   :math:`\quad\boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^T\ = 
+   \ \boldsymbol{I}_m\,,\quad\sigma\in S_m\,.`
 
 3. Iloczyn dwóch macierzy permutacji jest macierzą permutacji, przy czym
 
@@ -141,7 +145,7 @@ Macierz tej permutacji przedstawia się następująco:
 4. Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` odpowiada macierz jednostkowa
    :math:`\,\boldsymbol{I}_m.`
 
-5. Z punktów 1. i :math:`\,` 2. wynika, że macierze permutacji są odwracalne, przy czym
+5. Macierze permutacji są odwracalne, przy czym
    odwrotność macierzy permutacji jest macierzą permutacji odwrotnej:
    
    .. math::
@@ -173,7 +177,7 @@ Polecenie ``SymmetricGroup(n)`` konstruuje grupę permutacji zbioru
    (1,4)(2,3)]
 
 Metoda ``matrix()`` zastosowana do elementu grupy permutacji daje macierz permutacji.
-Tutaj znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4,\,` która w pełnym 
+Tutaj znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4,\,` która 
 zapisie dwuwierszowym ma postać
 
 .. math::

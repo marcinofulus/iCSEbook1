@@ -305,7 +305,7 @@ w którym procesy rozmnażania i śmierci  są modelowane w najprostszy sposób.
 
 .. MATH::
 
-    a=r\left(1-\frac{N}{K}\right), \quad \quad b=b_0 \,\frac{N}{D+N} \;P
+    a=r\left(1-\frac{N}{K}\right), \quad \quad bN = b_0 \,\frac{N}{D+N} \;P
 
 
 (B) w części dla populacji drapieżników uwzględniamy  model Verhulsta
@@ -321,7 +321,7 @@ Dlatego w drugim równaniu otrzymamy
 
 .. MATH::
 
-    c P - e P  = c_0 \left(1-\frac{P}{K_0} \right)\;P - e P = (c_0 - e) P - c_0 \frac{P}{K_0} = s \left(1- \frac{P}{K_1} \right)
+    c P - e P  = c_0 \left(1-\frac{P}{K_0} \right)\;P - e P = (c_0 - e) P - c_0 \frac{P^2}{K_0} = s P \left(1- \frac{P}{K_1} \right)
 
 
 Zakładamy, że :math:`s=c_0-e \gt  0`.  Przeskalowana stała :math:`K_1 = K_0 (1-e/c_0).`

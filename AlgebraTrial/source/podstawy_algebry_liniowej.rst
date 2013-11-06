@@ -256,11 +256,11 @@ Liniowa zależność i niezależność wektorów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mówimy, że układ wektorów :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo zależny*
-(lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\,` są :math:`\,` *liniowo zależne*), :math:`\,`
+(lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo zależne*), :math:`\,`
 gdy istnieje nietrywialna kombinacja liniowa tych wektorów równa wektorowi zerowemu :math:`\,\theta.`
 
-Układ :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo niezależny*
-(wektory :math:`\,x_1,x_2,\ldots,x_r\,` są :math:`\,` *liniowo niezależne*),
+Układ :math:`\ (x_1,x_2,\ldots,x_r)\ ` jest *liniowo niezależny*
+(wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo niezależne*),
 gdy nie jest on liniowo zależny, czyli gdy każda nietrywialna kombinacja liniowa tych wektorów 
 jest różna od wektora zerowego.
 
@@ -297,7 +297,7 @@ liniowo przez wektory pozostałe, :math:`\,` czyli gdy dla pewnego wskaźnika
 
 Uwaga: :math:`\ ` co najmniej jeden, to znaczy niekoniecznie każdy.
 
-Dowód.
+**Dowód.**
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo zależne:
 
@@ -305,7 +305,7 @@ Dowód.
    
    \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\,,
 
-przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika :math:`\,i\in\{\,1,2,\ldots,r\,\}\,.`
+przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika :math:`\ i\in\{\,1,2,\ldots,r\,\}\,.`
 
 Po przeniesieniu na prawą stronę wszystkich składników z wyjątkiem :math:`\,i`-tego otrzymujemy
 
@@ -466,7 +466,7 @@ na ogół różne współrzędne.
 wtedy i tylko wtedy, gdy :math:`\,\mathcal{B}\,` jest liniowo niezależnym układem generatorów 
 tej przestrzeni.
 
-Dowód. :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
+**Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że układ :math:`\,\mathcal{B}\,`
 jest bazą przestrzeni :math:`\,V.`
@@ -531,7 +531,7 @@ Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
 wektorów przestrzeni :math:`\,V\,` jest bazą tej przestrzeni
 wtedy i tylko wtedy, :math:`\,` gdy jest on maksymalnym liniowo niezależnym układem.
 
-Dowód. :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
+**Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że układ :math:`\,\mathcal{B}\,`
 jest bazą przestrzeni :math:`\,V.`

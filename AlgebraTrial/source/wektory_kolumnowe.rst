@@ -91,7 +91,8 @@ Tutaj wektory
 :math:`\ \,\vec{e}_1,\,\vec{e}_2\ \,` albo :math:`\ \,\vec{e}_1,\,\vec{e}_2\,,\vec{e}_3\ \,`
 tworzą bazę złożoną ze wzajemnie prostopadłych wektorów jednostkowych.
 
-Relacja między wektorami kolumnowymi i geometrycznymi charakteryzuje się tym, że
+Relacja :math:`\ \simeq\ ` między wektorami kolumnowymi i geometrycznymi 
+charakteryzuje się tym, że
 
 jeżeli 
 :math:`\quad\boldsymbol{x}\ \simeq\ \vec{v}\quad\text{i}\quad\boldsymbol{y}\ \simeq\ \vec{w},\qquad`
@@ -100,7 +101,7 @@ to :math:`\qquad\ \boldsymbol{x}+\boldsymbol{y}\ \,\simeq\ \,\vec{v}+\vec{w}\qqu
 oraz :math:`\qquad c\ \boldsymbol{x}\ \simeq\ c\ \vec{v}\,,\quad c\in R.`
 
 Odpowiedniość, która w tym sensie zachowuje działania w zbiorach,
-nazywa się izomorfizmem grup (wektory geometryczne również tworzą grupę przemienną).
+nazywa się *izomorfizmem* grup (wektory geometryczne również tworzą grupę przemienną).
 W analogiczny sposób określa się izomorfizm innych, 
 bardziej zaawansowanych struktur algebraicznych.
 

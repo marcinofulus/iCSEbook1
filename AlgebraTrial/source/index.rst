@@ -31,13 +31,7 @@ Wprowadzenie do układów równań liniowych
    wektory_kolumnowe
    geometria_ukladow_rownan_stat
    eliminacja_dla_rownan
-
-Zadania
--------
-
-.. toctree::
-
-   zadanie_eliminacja_dla_rownan
+   zad_wprowadzenie_do_ukladow
 
 Algebra macierzy
 ================
@@ -50,13 +44,7 @@ Algebra macierzy
 
    dzialania_na_macierzach
    macierze_w_sage
-
-Zadania
--------
-
-.. toctree::
-
-   zadanie_mnozenie_macierzy
+   zad_algebra_macierzy
 
 Operacje na macierzach
 ======================
@@ -77,13 +65,7 @@ Operacje na macierzach
    macierze_permutacji
    macierze_trojkatne
    rozklad_LU
-
-Zadania
--------
-
-.. toctree::
-   
-   zadanie_macierz_odwrotna
+   zad_operacje_na_macierzach
 
 Wyznaczniki
 ===========
@@ -97,11 +79,6 @@ Wyznaczniki
    wyznacznik
    wyznacznik_zastosowania
 
-Zadania
--------
-
-.. toctree::
-
 Teoria i praktyka układów równań liniowych
 ==========================================
 
@@ -113,13 +90,7 @@ Teoria i praktyka układów równań liniowych
    teoria_ukladow_rownan
    przyklad_z_dyskusja
    przyklad_ze_statyki
-
-Zadania
--------
-
-.. toctree::
-
-   zadanie_uklady_rownan
+   zad_teoria_i_praktyka_ukladow
 
 Przestrzenie unitarne
 =====================
@@ -130,9 +101,6 @@ Przestrzenie unitarne
 | *Ortogonalność. Dopełnienie ortogonalne.*
 | *Baza ortogonalna i ortonormalna. Procedura Grama-Schmidta.*
 | *Macierze hermitowskie i unitarne.*
-
-Zadania
--------
 
 Przekształcenia liniowe
 =======================
@@ -145,9 +113,6 @@ Przekształcenia liniowe
    
    przeksztalcenia_liniowe
 
-Zadania
--------
-
 Wartości i wektory własne
 =========================
 
@@ -159,13 +124,12 @@ Wartości i wektory własne
    
    zagadnienie_wlasne
 
-Zadania
--------
+Dowody wybranych twierdzeń
+==========================
 
-Dodatek 1
-=========
-
-Dowody wybranych twierdzeń.
+.. toctree::
+   
+   dow_operacje_na_macierzach
 
 Dodatek 2
 =========

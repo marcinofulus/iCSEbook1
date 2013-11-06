@@ -1,7 +1,10 @@
 .. -*- coding: utf-8 -*-
 
+Zadania
+-------
+
 Przykłady mnożenia macierzy
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie.**
 Sprawdź odręcznym rachunkiem wynik :math:`\boldsymbol{A}\boldsymbol{B}` mnożenia komputerowego.

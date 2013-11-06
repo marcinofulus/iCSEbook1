@@ -1,4 +1,3 @@
-.. -*- coding: utf-8 -*-
 
 Działania na macierzach
 -----------------------
@@ -207,7 +206,7 @@ dla kolumn macierzy :math:`\,\boldsymbol{A}\,:`
 
 .. math::
    
-   \boldsymbol{A}\ =\ (\,\boldsymbol{A}_1,\ \boldsymbol{A}_2,\ \ldots,\,\boldsymbol{A}_n\,) 
+   \boldsymbol{A}\ \,=\ \,[\;\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\ldots,\,\boldsymbol{A}_n\;]
 
 równanie :eq:`02` przyjmuje więc postać
 
@@ -313,7 +312,7 @@ składa się z :math:`\,n\,` kolumn :math:`\,p`-elementowych:
 .. math::
 
    \boldsymbol{B}\ \ =\ \ 
-   \left(\,\boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\ldots,\,\boldsymbol{B}_n\,\right)\ \ =\ \ 
+   \left[\;\boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\ldots,\,\boldsymbol{B}_n\;\right]\ \ =\ \ 
    \left[\begin{array}{cccc}
       b_{11} & b_{12} & \ldots & b_{1n} \\
       b_{21} & b_{22} & \ldots & b_{2n} \\
@@ -321,41 +320,52 @@ składa się z :math:`\,n\,` kolumn :math:`\,p`-elementowych:
       b_{p1} & b_{p2} & \ldots & b_{pn} \\
    \end{array}\right]\,.
 
-Iloczyn :math:`\ \boldsymbol{A} \boldsymbol{B}\ \,` *definiujemy* :math:`\ ` wtedy jako macierz otrzymaną przez pomnożenie każdej kolumny macierzy :math:`\ \boldsymbol{B}\ \,` przez macierz 
-:math:`\ \boldsymbol{A}:`
+Iloczyn :math:`\ \boldsymbol{A} \boldsymbol{B}\ \,` *definiujemy* :math:`\ ` wtedy jako macierz otrzymaną przez pomnożenie każdej kolumny macierzy :math:`\ \boldsymbol{B}\ \,` 
+(z lewej strony) przez macierz :math:`\ \boldsymbol{A}:`
 
 .. math::
+   :label: rule_col
 
-   \boldsymbol{A} \boldsymbol{B}\ =\  \boldsymbol{A}\ \,\left( \boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\ldots,\,\boldsymbol{B}_n \right)
-   \ \ :\,=\ \ 
-   \left( \boldsymbol{A} \boldsymbol{B}_1,\ \boldsymbol{A} \boldsymbol{B}_2,\ \ldots,\ \boldsymbol{A} \boldsymbol{B}_n \right)\,.
+   \boldsymbol{A}\boldsymbol{B}\ \equiv\ 
+   \boldsymbol{A}\ \left[\;\boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\ldots,\,
+   \boldsymbol{B}_n\;\right]\ \ :\,=\ \ 
+   \left[\ \boldsymbol{A}\boldsymbol{B}_1,\ \boldsymbol{A}\boldsymbol{B}_2,\ \ldots,\ 
+   \boldsymbol{A}\boldsymbol{B}_n\ \right]\,.
 
-.. **Reguła 1.** :math:`\,` 
+Wzór :eq:`rule_col` będziemy nazywać :math:`\,` *kolumnową regułą mnożenia macierzowego*:
 
 .. admonition:: Reguła 1. :math:`\,`
 
    Jeżeli 
    :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K),\ `
    to :math:`\ j`-ta kolumna iloczynu :math:`\ \boldsymbol{A} \boldsymbol{B}\,` :math:`\\`
-   jest iloczynem macierzy :math:`\ \boldsymbol{A}\ `
-   przez :math:`\,j`-tą kolumnę macierzy :math:`\ \boldsymbol{B}\,,\ \ j=1,2,\ldots,n\,.` 
+   jest iloczynem macierzy :math:`\ \boldsymbol{A}\ \,`
+   przez :math:`\,j`-tą kolumnę macierzy :math:`\ \boldsymbol{B}\,,\ \ j=1,2,\ldots,n\,.`
+
+.. Wzór :eq:`rule_col` będziemy nazywać :math:`\,` *kolumnową regułą mnożenia macierzowego*. 
 
 Wprowadzając oznaczenia 
 :math:`\ \boldsymbol{A}\boldsymbol{B}\ =\ \boldsymbol{C}\ =\ 
-(\,\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\ldots,\,\boldsymbol{C}_n\,)\ =\ [c_{ij}]_{m\times n}\ `
-otrzymujemy, :math:`\,` w analogii do równań :eq:`04`:
+[\;\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\ldots,\,\boldsymbol{C}_n\;]\ =\ [c_{ij}]_{m\times n}\ `
+otrzymujemy 
+
+.. math::
+
+   \boldsymbol{C}_j\ =\ 
+   \left[\begin{array}{c} 
+         c_{1j} \\ c_{2j} \\ \ldots \\ c_{mj} 
+         \end{array}
+   \right]\ =\ 
+   \left[\begin{array}{c}
+         a_{11}\,b_{1j} +\,a_{12}\,b_{2j} + \,\ldots\, +\,a_{1p}\,b_{pj} \\
+         a_{21}\,b_{1j} +\,a_{22}\,b_{2j} + \,\ldots\, +\,a_{2p}\,b_{pj} \\
+         \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                  \\
+         a_{m1}\,b_{1j} +\,a_{m2}\,b_{2j} + \,\ldots\, +\,a_{mp}\,b_{pj}
+        \end{array}
+   \right]\,,\quad j=1,2,\ldots,n\,,
 
 .. math::
    :label: 05
-
-   \boldsymbol{C}_j\ =\ \left[\begin{array}{c} c_{1j} \\ c_{2j} \\ \ldots \\ c_{mj} \end{array}\right]
-   \ =\ 
-   \left[\begin{array}{c}
-      a_{11}\,b_{1j} +\,a_{12}\,b_{2j} + \,\ldots\, +\,a_{1p}\,b_{pj} \\
-      a_{21}\,b_{1j} +\,a_{22}\,b_{2j} + \,\ldots\, +\,a_{2p}\,b_{pj} \\
-      \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                  \\
-      a_{m1}\,b_{1j} +\,a_{m2}\,b_{2j} + \,\ldots\, +\,a_{mp}\,b_{pj}
-   \end{array}\right]\,;
 
    \text{czyli}\qquad
    c_{ij}\ =\ 
@@ -363,10 +373,10 @@ otrzymujemy, :math:`\,` w analogii do równań :eq:`04`:
    \,,\qquad
    \begin{array}{l} i\,=\,1,2,\ldots,m\,; \\ j\,=\,1,2,\ldots,n.\end{array}
 
-Ostatni wzór wyraża elementy macierzy :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\ `
-poprzez elementy czynników :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}.`
+Wzór :eq:`05` wyraża elementy macierzy :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\ `
+poprzez elementy czynników :math:`\,\boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}:`
 
-Element :math:`\ \,c_{ij}\,` jest iloczynem 
+element :math:`\ \,c_{ij}\,` jest iloczynem 
 (w sensie wzoru :eq:`03` :math:`\,` i :math:`\:` Reguły 0.) 
 :math:`\ i`-tego wiersza macierzy :math:`\,\boldsymbol{A}\ `
 przez :math:`\,j`-tą kolumnę macierzy :math:`\,\boldsymbol{B}:`
@@ -612,14 +622,15 @@ z niej regułach i wzorach można udowodnić następujące własności:
    \qquad
    c\in K,\ \ \boldsymbol{A}\in M_{m\times p}(K),\ \ \boldsymbol{B}\in M_{p\times n}(K)\,.`
 
-4. | Elementem neutralnym dla mnożenia w zbiorze :math:`\ M_n(K)\ ` jest macierz jednostkowa
-   | :math:`\ \qquad\qquad\qquad\qquad\boldsymbol{I}_n \ :\,=\ 
-     \left[\begin{array}{cccc} 
-     1      &    0   & \ldots &    0   \\
-     0      &    1   & \ldots &    0   \\
-     \ldots & \ldots & \ldots & \ldots \\
-     0      &    0   & \ldots &    1     
-     \end{array}\right]\,.`
+4. Elementem neutralnym dla mnożenia w zbiorze :math:`\ M_n(K)\ ` jest macierz jednostkowa 
+
+   :math:`\ \qquad\qquad\qquad\qquad\boldsymbol{I}_n \ :\,=\ 
+   \left[\begin{array}{cccc} 
+   1      &    0   & \ldots &    0   \\
+   0      &    1   & \ldots &    0   \\
+   \ldots & \ldots & \ldots & \ldots \\
+   0      &    0   & \ldots &    1     
+   \end{array}\right]\,.`
 
    Oznacza to, że
    :math:`\quad\boldsymbol{I}_n\,\boldsymbol{A}\ =\ 
@@ -667,80 +678,204 @@ Z przedstawionych własności wynika, że zbiór :math:`\ M_n(K)\ ` jest nieprze
 z jednością ze względu na dodawanie macierzy, mnożenie ich przez liczby z :math:`\,K\,`
 i mnożenie macierzowe.
 
-.. macierzy kwadratowych stopnia :math:`\ n\ `
+Wierszowa reguła mnożenia macierzowego
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mnożenie macierzy blokowych
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Każdą macierz można podzielić na cztery (lub więcej) prostokątnych
-bloków. Po takim podziale macierz nazywana jest macierzą blokową.
-Zaznaczenie struktury blokowej może uwidocznić regularność,
-występującą wśród elementów macierzy.
-
-Okazuje się, że mnożenie macierzy blokowych można
-zapisać w taki sam sposób, jak mnożenie macierzy elementarnych:
+Niech będą dane dwie macierze nad ciałem :math:`\,K,\,` zapisane w postaci wierszowej:
 
 .. math::
-   :label: blok1
+   
+   \boldsymbol{A}\ =\ \left[\begin{array}{c}
+                            \boldsymbol{A}_1 \\ 
+                            \boldsymbol{A}_2 \\
+                            \dots            \\
+                            \boldsymbol{A}_m \end{array}\right]\ =\ [a_{ij}]_{m\times p}\,,
+   \qquad
+   \boldsymbol{B}\ =\ \left[\begin{array}{c}
+                            \boldsymbol{B}_1 \\ 
+                            \boldsymbol{B}_2 \\
+                            \dots            \\
+                            \boldsymbol{B}_p \end{array}\right]\ =\ [b_{ij}]_{p\times n}\,.
 
-   \left[\begin{array}{c|c}
-       \boldsymbol{A} & \boldsymbol{B} \\
-       \hline
-       \boldsymbol{C} & \boldsymbol{D}
-    \end{array}\right]
-    \left[\begin{array}{c}
-        \boldsymbol{X} \\
-        \hline
-        \boldsymbol{Y}
-   \end{array}\right]
-   \ =\ 
+Tutaj
+:math:`\quad\boldsymbol{A}_i\ =\ [\;a_{i1}\ a_{i2}\ \dots a_{ip}\;]\ \ (i=1,2,\dots,m),\quad
+\boldsymbol{B}_i\ =\ [\;b_{i1}\ b_{i2}\ \dots b_{in}\;]\ \ (i=1,2,\dots,p). \\`
+
+Iloczyn macierzy :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B}\ `
+można teraz zapisać następująco:
+
+.. .. math::
+   :label: rule_verse
+   
    \left[\begin{array}{c}
-       \boldsymbol{A} \boldsymbol{X} + \boldsymbol{B} \boldsymbol{Y} \\
-       \hline
-       \boldsymbol{C} \boldsymbol{X} + \boldsymbol{D} \boldsymbol{Y}
-   \end{array}\right]\,.
+         \boldsymbol{A}_1 \\ 
+         \boldsymbol{A}_2 \\
+         \dots            \\
+         \boldsymbol{A}_m \end{array}\right]\boldsymbol{B}
+   \ \ =\ \   
+   \left[\begin{array}{c}
+         \boldsymbol{A}_1\,\boldsymbol{B} \\ 
+         \boldsymbol{A}_2\,\boldsymbol{B} \\
+         \dots            \\
+         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
+   \qquad
+   \boldsymbol{A}_i\,\boldsymbol{B}\ \ =\ \ 
+   \sum_{k=1}^p \,a_{ik}\,\boldsymbol{B}_k\,,\quad i=1,2,\dots, m.
 
-Bloki :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D},\boldsymbol{X},\boldsymbol{Y}\ `
-są tutaj macierzami o dowolnych rozmiarach pod warunkiem, że liczby kolumn i wierszy umożliwiają ich mnożenie. 
-Wykonanie mnożenia w powyższy sposób na macierzach gęstych zasadniczo nie zmniejsza liczby operacji. 
-Jeżeli jednak pewne bloki (podmacierze) są zerowe lub są macierzami jednostkowymi, 
-to rachunki mogą istotnie się uprościć. 
+.. math::
+   :label: rule_verse
+   
+   \left[\begin{array}{c}
+         \boldsymbol{A}_1 \\ 
+         \boldsymbol{A}_2 \\
+         \dots            \\
+         \boldsymbol{A}_m \end{array}\right]\boldsymbol{B}
+   \ \ =\ \   
+   \left[\begin{array}{c}
+         \boldsymbol{A}_1\,\boldsymbol{B} \\ 
+         \boldsymbol{A}_2\,\boldsymbol{B} \\
+         \dots            \\
+         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
 
-Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \boldsymbol{O}`). :math:`\ ` Wtedy:
+   \text{przy czym}\qquad
+   \boldsymbol{A}_i\,\boldsymbol{B}\ \ =\ \ 
+   \sum_{k=1}^p \,a_{ik}\,\boldsymbol{B}_k\,,\quad i=1,2,\dots, m.
+
+Wzór :eq:`rule_verse` będziemy nazywać :math:`\,` 
+*wierszową regułą mnożenia macierzowego*. :math:`\\`
+Zawiera on wierszowe odpowiedniki Reguły 1. oraz Reguły 3.: 
+
+.. Treść wzorów w równaniu :eq:`rule_verse` można zawrzeć w dwóch formułach, które są wierszowymi
+   odpowiednikami Reguły 1. oraz Reguły 3.: :math:`\\`
+
+.. Na podstawie wzoru :eq:`prod_AB` można sformułować dwie reguły, które są wierszowymi
+   odpowiednikami Reguły 1. oraz Reguły 3.: :math:`\\`
+
+.. admonition:: Reguła 1a. :math:`\,`
+
+   Jeżeli 
+   :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K),\ `
+   to :math:`\ i`-ty wiersz iloczynu :math:`\ \boldsymbol{A} \boldsymbol{B}\,` :math:`\\`
+   jest iloczynem :math:`\ i`-tego wiersza macierzy :math:`\ \boldsymbol{A}\ `
+   przez macierz :math:`\ \boldsymbol{B},\ \ i=1,2,\ldots,m\,.`
+
+.. admonition:: Reguła 3a. :math:`\,`
+
+   Jeżeli 
+   :math:`\,\boldsymbol{A}\,\in M_{m\times p}(K),\ \boldsymbol{B}\,\in M_{p\times n}(K)\,,\ `
+   to :math:`\ i`-ty wiersz macierzy :math:`\,\boldsymbol{A}\boldsymbol{B}` :math:`\\`
+   jest kombinacją liniową wierszy macierzy :math:`\,\boldsymbol{B}.\ `
+   Współczynnikami tej kombinacji są kolejne elementy :math:`\,i`-tego wiersza macierzy 
+   :math:`\,\boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.`
+
+:math:`\,`
+
+**Dowód.** :math:`\,` Wprowadzamy oznaczenie
+
+.. math::
+   
+   \boldsymbol{W}\ \equiv\ \left[\begin{array}{c}
+                            \boldsymbol{W}_1 \\ 
+                            \boldsymbol{W}_2 \\
+                            \dots            \\
+                            \boldsymbol{W}_m \end{array}\right]\ :\,=\ 
+   \left[\begin{array}{c}
+         \boldsymbol{A}_1\,\boldsymbol{B} \\ 
+         \boldsymbol{A}_2\,\boldsymbol{B} \\
+         \dots            \\
+         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
+   \qquad
+   \boldsymbol{W}\ =\ [w_{ij}]_{m\times n}\,,
+
+oraz zapisujemy macierz :math:`\ \boldsymbol{B}\ ` w postaci kolumnowej:
+
+.. math::
+   
+   \boldsymbol{B}\ \,=\ \,
+   \left[\;\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\dots,\,\boldsymbol{C}_n\;\right],
+   \qquad
+   \boldsymbol{C}_j\ =\ \left[\begin{array}{c}
+                              b_{1j} \\ b_{2j} \\ \dots \\ b_{pj}
+                              \end{array}\right]\,,\quad j=1,2,\dots,n.
+
+Wobec tego
+
+.. math::
+   
+   \boldsymbol{W}_i\ =\ 
+   \boldsymbol{A}_i\,\boldsymbol{B}\ \,=\ \,
+   \boldsymbol{A}_i\,\left[\;\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\dots,\,
+   \boldsymbol{C}_n\;\right]\ \ =\ \ 
+   \left[\ \boldsymbol{A}_i\,\boldsymbol{C}_1,\ 
+           \boldsymbol{A}_i\,\boldsymbol{C}_2,\ 
+           \dots,\ 
+           \boldsymbol{A}_i\,\boldsymbol{C}_n\ \right],
 
 .. math::
 
-   \left[\begin{array}{c|c}
-      \boldsymbol{A} & \boldsymbol{O} \\
-      \hline
-      \boldsymbol{O} & \boldsymbol{D}
-   \end{array}\right]
-   \left[\begin{array}{c}
-       \boldsymbol{X} \\
-       \hline
-       \boldsymbol{Y}
-   \end{array}\right]
-   \ =\ 
-   \left[\begin{array}{c}
-       \boldsymbol{A} \boldsymbol{X} \\
-       \hline
-       \boldsymbol{D} \boldsymbol{Y}
-   \end{array}\right]
+   w_{ij}\ =\ \boldsymbol{A}_i\,\boldsymbol{C}_j\ \,=\ \,
+   [\,a_{i1}\ a_{i2}\ \dots a_{ip}\,]\ 
+   \left[\begin{array}{c} b_{1j} \\ b_{2j} \\ \dots \\ b_{pj} \end{array}\right]\ \ =\ \ 
+   \sum_{k=1}^p\,a_{ik}\,b_{kj}\,,\qquad
+   \begin{array}{l} i\,=\,1,2,\ldots,m\,; \\ j\,=\,1,2,\ldots,n. \end{array}
 
-| W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
-| można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
-|
-| **Poeksperymentuj z Sage:**     
-| W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
-| Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
+Macierze :math:`\ \boldsymbol{A}\boldsymbol{B}\ \ \text{i}\ \ \boldsymbol{W}\ `
+mają te same rozmiary (:math:`m\,` wierszy i :math:`\,n\,` kolumn), :math:`\\`
+a ich odpowiednie elementy są sobie równe:
 
-.. sagecellserver::
+.. math::
+   
+   (\boldsymbol{A}\boldsymbol{B})_{ij}\ =\ \sum_{k=1}^p\,a_{ik}\,b_{kj}\ =\ 
+   w_{ij}\ =\ (\boldsymbol{W})_{ij},
+   \qquad
+   i=1,2,\dots,m;\ \ j=1,2,\dots,n.
 
-   A  = random_matrix(QQ,2,2)
-   B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
-   B2 = block_matrix([[A],[identity_matrix(2)]])
+Oznacza to równość samych macierzy:
+:math:`\qquad\boldsymbol{A}\boldsymbol{B}\ =\ \boldsymbol{W}\,.`
 
-   html.table([["$B1\ :$","$B2\ :$","","$B1\ \cdot\ B2\ :$"],[B1,B2,"=",B1*B2]])
+Pierwsza macierzowa równość w :eq:`rule_verse` została więc udowodniona.
+
+Dla wykazania drugiej równości w tym wzorze zauważmy, że :math:`\\`
+
+.. math::
+   :nowrap:
+   
+   \begin{eqnarray*}
+   \boldsymbol{W}_i & \ =\  & \left[\ \ \ w_{i1}\quad w_{i2}\quad \ldots\quad w_{in}\ \ \ \right]
+   \\ \\
+   & \ =\ & \left[\quad\sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
+                                     \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,
+                                     \ldots\quad\,
+                                     \sum_{k=1}^p\,a_{ik}\,b_{kn}\ \ \,\right] \\
+   & \ =\  & \ \sum_{k=1}^p\ \ \left[\ \, a_{ik}\,b_{k1}\quad
+                               a_{ik}\,b_{k2}\quad 
+                               \ldots\quad 
+                               a_{ik}\,b_{kn}\ \, \right] \\
+   & \ =\  & \ \sum_{k=1}^p\ \ a_{ik}\ \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right] \\
+   & \ =\  & \ \sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,\qquad\quad i=1,2,\dots,m.
+   \end{eqnarray*}
+
+   \;
+
+.. .. math::
+   :nowrap:
+   
+   \begin{eqnarray*}
+   \boldsymbol{W}_i & \ =\  & \left[\ \ \ \:\sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
+                                     \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,
+                                     \ldots\quad\,
+                                     \sum_{k=1}^p\,a_{ik}\,b_{kn}\ \ \,\right] \\
+   & \ =\  & \ \sum_{k=1}^p\ \left[\ \, a_{ik}\,b_{k1}\quad
+                               a_{ik}\,b_{k2}\quad 
+                               \ldots\quad 
+                               a_{ik}\,b_{kn}\ \, \right] \\
+   & \ =\  & \ \sum_{k=1}^p\ a_{ik}\ 
+   \left[\ \,b_{k1}\quad b_{k2}\quad \ldots\quad b_{kn}\ \,\right] \\
+   & \ =\  & \ \sum_{k=1}^p\ \ a_{ik}\ \boldsymbol{B}_k \,,\qquad\quad i=1,2,\dots,m.
+   \end{eqnarray*}
+
+
+
 
 
 

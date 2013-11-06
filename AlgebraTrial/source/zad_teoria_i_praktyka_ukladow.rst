@@ -1,7 +1,9 @@
-.. -*- coding: utf-8 -*-
+
+Zadania
+-------
 
 Układy równań w praktyce
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.**
 Używając tylko metod Sage'a dla operacji elementarnych na wierszach:
