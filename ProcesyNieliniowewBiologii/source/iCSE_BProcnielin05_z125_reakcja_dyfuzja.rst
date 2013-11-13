@@ -67,7 +67,7 @@ Rozwiązaniem 2\-wymiarowego równania dyfuzji jest funkcja
 
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: var('x,y,t')
     sage: c(x,y,t)=1/(4*pi*t)*exp(-(x^2+y^2)/(4*t) )
@@ -238,9 +238,9 @@ jest  miarą odległości od początku układu odniesienia.
 Analizę własności :math:`N(r,  t)` można łatwo przeprowadzić korzystając z możliwości Sage.  Są one przedstawione graficznie poniżej.
 
 
-.. code-block:: python
+.. sagecellserver::
 
-    sage: g(x,t) = (1/(4*pi*t))*exp(t-x^2/(4*t))   
+    sage: g(x,t) = (1/(4*pi*t))*exp(-x^2/(4*t))   
     sage: @interact 
     sage: def _(t=slider(0.1,5,0.01)):
     ...       pr0 = plot( g(x,0.1),(x,0,10),color='black' ) 
@@ -536,7 +536,7 @@ gdzie stała :math:`A\gt 0` określa początkowy profil koncentracji.
 
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: A=1                                              ## określa początkowy profil koncentracji 
     sage: b=5/sqrt(6)                                      ## prędkość frontu falowego
@@ -579,7 +579,7 @@ gdzie :math:`L` jest dyskretnym operatorem Laplace'a.
 Ponieważ część nieliniowa jest lokalna (nie zawiera pochodnych), to warunki brzegowe są zawarte w operatorze :math:`L`.
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: import numpy as np 
     sage: Dyf = 1.0
@@ -618,7 +618,9 @@ Ponieważ część nieliniowa jest lokalna (nie zawiera pochodnych), to warunki 
 
 .. end of output
 
-.. code-block:: python
+
+
+.. sagecellserver::
 
     sage: import numpy as np 
     sage: Dyf = 1.0
