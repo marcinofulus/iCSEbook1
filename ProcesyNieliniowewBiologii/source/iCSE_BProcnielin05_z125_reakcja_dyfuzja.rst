@@ -240,7 +240,7 @@ Analizę własności :math:`N(r,  t)` można łatwo przeprowadzić korzystając 
 
 .. sagecellserver::
 
-    sage: g(x,t) = (1/(4*pi*t))*exp(-x^2/(4*t))   
+    sage: g(x,t) = (1/(4*pi*t))*exp(t-x^2/(4*t))   
     sage: @interact 
     sage: def _(t=slider(0.1,5,0.01)):
     ...       pr0 = plot( g(x,0.1),(x,0,10),color='black' ) 
