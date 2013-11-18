@@ -986,3 +986,4 @@ END
        point(sol[-1],color='blue', size=15)+point(sol2[-1],color='blue', size=15,figsize=15)
 
 
+
