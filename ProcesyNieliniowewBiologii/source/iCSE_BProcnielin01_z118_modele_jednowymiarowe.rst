@@ -334,7 +334,9 @@ Sprawdź,  czy model Malthusa opisuje powyższy wzrost kolonii bakterii.  Oceń 
 Model Verhulsta
 ~~~~~~~~~~~~~~~
 
-Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i pomijamy procesy śmierci, tzn. b=0. Wówczas populacja wzrasta w tempie wykładniczym:
+Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i
+pomijamy procesy śmierci, tzn. b=0. Wówczas populacja wzrasta w tempie
+wykładniczym:
 
 
 .. MATH::
@@ -342,10 +344,32 @@ Załóżmy, że w modelu Malthusa uwzględniamy tylko procesy urodzin i pomijamy
      N(t)= N_0 e^{at}
 
 
-co ilustruje powyższy rysunek dla przypadku k>0. Tak szybkie tempo wzrostu może być obserwowane dla pewnych układów tylko w niewielkim przedziale czasu.    W ogólności zbyt  szybkie tempo wzrostu populacji spowodowałoby zachwianie równowagi w przyrodzie. Na przykład w roku 1859 farmer Thomas Austin wypuścił w  swoich włościach w Australii 24 króliki europejskie, licząc na to, że będzie mógł  oddawać się przyjemnościom polowania. Inni farmerzy podchwycili pomysł i  rzeczywiście - polować mogli wkrótce do woli. W roku 1869 królików w  Australii było już tyle, że odstrzeliwano ich dwa miliony rocznie, bez  żadnych widocznych ubytków w liczebności populacji. Króliki zdewastowały przyrodę Australii. Pożerały roślinność, przez co  wymarło wiele gatunków australijskich ssaków. Udało się je wytępić  dopiero w latach pięćdziesiątych ostatniego stulecia, sprowadzając na  wyspę chorobę: myksomatozę. Wirus w ciągu dwóch lat zabił pół miliarda z  sześciuset milionów królików. Pozostałe króliki były na chorobę odporne  i ich liczebność znowu zaczęła wzrastać, dlatego w latach  dziewięćdziesiątych ludzie pognębili je kolejną plagą, zwaną chińskim  pomorem królików.
+co ilustruje powyższy rysunek dla przypadku k>0. Tak szybkie tempo
+wzrostu może być obserwowane dla pewnych układów tylko w niewielkim
+przedziale czasu.  W ogólności zbyt szybkie tempo wzrostu populacji
+spowodowałoby zachwianie równowagi w przyrodzie. Na przykład w roku
+1859 farmer Thomas Austin wypuścił w swoich włościach w Australii 24
+króliki europejskie, licząc na to, że będzie mógł oddawać się
+przyjemnościom polowania. Inni farmerzy podchwycili pomysł i
+rzeczywiście - polować mogli wkrótce do woli. W roku 1869 królików w
+Australii było już tyle, że odstrzeliwano ich dwa miliony rocznie, bez
+żadnych widocznych ubytków w liczebności populacji. Króliki
+zdewastowały przyrodę Australii. Pożerały roślinność, przez co wymarło
+wiele gatunków australijskich ssaków. Udało się je wytępić dopiero w
+latach pięćdziesiątych ostatniego stulecia, sprowadzając na wyspę
+chorobę: myksomatozę. Wirus w ciągu dwóch lat zabił pół miliarda z
+sześciuset milionów królików. Pozostałe króliki były na chorobę
+odporne i ich liczebność znowu zaczęła wzrastać, dlatego w latach
+dziewięćdziesiątych ludzie pognębili je kolejną plagą, zwaną chińskim
+pomorem królików.
 
 
-Z reguły nadmierny rozrost populacji na  *ograniczonym*  terenie powoduje trudny dostęp do pożywienia i tempo wzrostu populacji zaczyna spowalniać.  Model uwzględniający ten efekt ograniczonego dostępu do pożywienia został po raz pierwszy zaproponowany przez Verhulsta w roku 1838.  W modelu tym tempo wzrostu  :math:`a` nie jest stałe, ale zależy od stanu populacji:
+Z reguły nadmierny rozrost populacji na *ograniczonym* terenie
+powoduje trudny dostęp do pożywienia i tempo wzrostu populacji zaczyna
+spowalniać.  Model uwzględniający ten efekt ograniczonego dostępu do
+pożywienia został po raz pierwszy zaproponowany przez Verhulsta w
+roku 1838.  W modelu tym tempo wzrostu :math:`a` nie jest stałe, ale
+zależy od stanu populacji:
 
 
 .. MATH::
@@ -361,7 +385,10 @@ i równanie ewolucji przyjmuje postać:
     \frac{dN}{dt} = a(N) \; N, \quad N(0)=N_0
 
 
-Zależność  funkcyjna :math:`a(N)` od :math:`N` powinna mieć następującą własność: jeżeli populacja wzrasta, tempo wzrostu powinno maleć. Oczywiście jest wiele funkcji o tej własności: to są funkcje malejące. Verhulst zaproponował taką oto zależność:
+Zależność funkcyjna :math:`a(N)` od :math:`N` powinna mieć następującą
+własność: jeżeli populacja wzrasta, tempo wzrostu powinno
+maleć. Oczywiście jest wiele funkcji o tej własności: to są funkcje
+malejące. Verhulst zaproponował taką oto zależność:
 
 
 .. MATH::
@@ -369,10 +396,21 @@ Zależność  funkcyjna :math:`a(N)` od :math:`N` powinna mieć następującą w
      a(N)= r \left[1- \frac{N}{K}\right]
 
 
-gdzie :math:`r \gt 0` jest parametrem o podobnej interpretacji jak parametr :math:`a` w modelu Malthusa (charakteryzuje tempo wzrostu) oraz stała :math:`K \gt 0` charakteryzuje zasoby pożywienia i czasami nazywa się pojemnością środowiska. Zauważmy, że stała :math:`K` pojawia się w ilorazie :math:`N/K` i jest charakterystyczną liczbą osobników :math:`K=N_c` w populacji.  Jeżeli :math:`N \gt  K` to :math:`a(N) \lt 0`  i populacja maleje. Z kolei jeżeli :math:`N \lt K` to :math:`a(N) \gt 0` i populacja rozrasta się.
+gdzie :math:`r \gt 0` jest parametrem o podobnej interpretacji jak
+parametr :math:`a` w modelu Malthusa (charakteryzuje tempo wzrostu)
+oraz stała :math:`K \gt 0` charakteryzuje zasoby pożywienia i czasami
+nazywa się pojemnością środowiska. Zauważmy, że stała :math:`K`
+pojawia się w ilorazie :math:`N/K` i jest charakterystyczną liczbą
+osobników :math:`K=N_c` w populacji.  Jeżeli :math:`N \gt K` to
+:math:`a(N) \lt 0` i populacja maleje. Z kolei jeżeli :math:`N \lt K`
+to :math:`a(N) \gt 0` i populacja rozrasta się.
 
 
-Jak zmiana K wpływa na tempo wzrostu populacji? Jeżeli K rośnie to N/K maleje. Z kolei to powoduje,  że 1\-N/K rośnie,  czyli a(N) rośnie. Oznacza to, że tempo wzrostu rośnie i populacja rozrasta się szybciej. Stąd wniosek:  **Wzrost parametru K powoduje szybsze tempo wzrostu populacji.**
+Jak zmiana K wpływa na tempo wzrostu populacji? Jeżeli K rośnie to N/K
+maleje. Z kolei to powoduje, że 1\-N/K rośnie, czyli a(N)
+rośnie. Oznacza to, że tempo wzrostu rośnie i populacja rozrasta się
+szybciej. Stąd wniosek: **Wzrost parametru K powoduje szybsze tempo
+wzrostu populacji.**
 
 
 Z powyższych rozważań otrzymujemy równanie ewolucji w postaci równania Verhulsta:
@@ -383,7 +421,11 @@ Z powyższych rozważań otrzymujemy równanie ewolucji w postaci równania Verh
     \frac{dN}{dt} = r \left[1- \frac{N}{K}\right]  N, \quad \quad N(0)=N_0
 
 
-Równanie to zawiera 2 parametry: r oraz K. Natomiast istotne, jakościowe a nie ilościowe własności układu nie zależą od tych parametrów. Aby  pokazać od ilu parametrów zależą własności układu, należy przekształcić równanie Verhulsta do postaci bezwymiarowej. W tym celu zdefiniujemy względną liczbę osobników w populacji
+Równanie to zawiera 2 parametry: r oraz K. Natomiast istotne,
+jakościowe a nie ilościowe własności układu nie zależą od tych
+parametrów. Aby pokazać od ilu parametrów zależą własności układu,
+należy przekształcić równanie Verhulsta do postaci bezwymiarowej. W
+tym celu zdefiniujemy względną liczbę osobników w populacji
 
 
 .. MATH::
@@ -486,6 +528,26 @@ Na wykresie pokazano 3 charakterystyczne krzywe w zależności od warunku począ
 W przypadku  (A), krzywa ma kształt zdeformowanej litery S i dlatego nazywana jest czasami funkcją sigmoidalną (z j. ang. sigmoid function), popularna w zagadnieniach sztucznej inteligencji i sieciach neuronowych.
 
 
+.. admonition:: **Poeksperymentuj z Sage**!
+
+   Rozwiązanie rówania Velhulsta można otrzymać stosując system
+   algebry komputerowej. Sage ma trochę problemów z uzyskaniem postaci
+   jawnej rozwiązania (tzn. :math:`x(t)=...`), ale pomaga wykonanie
+   radykalnego uproszczenia - `full_simplify()` na równaniu. 
+
+.. sagecellserver::
+
+    integrate(1/(x*(x-1)),x).show()
+    
+    var('t x0')
+    x = function('x',t)
+    sol = desolve(diff(x,t) == x*(1-x),x,ics=[0,x0],ivar=t)
+    show(sol)
+    print "postać jawna:"
+    show( sol.full_simplify().solve(x) ) 
+
+
+
 **Ewolucja czasowa populacji w modelu Verhulsta dla różnych warunków początkowych**
 
 
@@ -504,10 +566,7 @@ W przypadku  (A), krzywa ma kształt zdeformowanej litery S i dlatego nazywana j
 .. image:: iCSE_BProcnielin01_z118_modele_jednowymiarowe_media/cell_8_sage0.png
     :align: center
 
-
 .. end of output
-
-
 
 
 
@@ -520,7 +579,14 @@ Uogólnienia modelu Verhulsta
 **(A) Model z funkcją Hilla (model Ludwiga)**
 
 
-W modelu Verhulsta   uwzględnia się pośrednio naturalny proces śmierci poprzez wartości parametru :math:`r \gt 0`. Ale jest to sytuacja, gdy w modelu Malthusa :math:`a \gt b`, czyli tempo urodzin jest większe od tempa śmierci. Model ten można uogólnić na przypadek obecności drapieżników, które zjadają osobników rozważanej populacji. Ponieważ w procesie tym liczba osobników maleje wskutek śmierci spowodowanej przez drapieżników, to w równaniu Verhulsta odzwierciedla to wyraz ujemny :math:`F(N)`:
+W modelu Verhulsta uwzględnia się pośrednio naturalny proces śmierci
+poprzez wartości parametru :math:`r \gt 0`. Ale jest to sytuacja, gdy
+w modelu Malthusa :math:`a \gt b`, czyli tempo urodzin jest większe od
+tempa śmierci. Model ten można uogólnić na przypadek obecności
+drapieżników, które zjadają osobników rozważanej populacji. Ponieważ w
+procesie tym liczba osobników maleje wskutek śmierci spowodowanej
+przez drapieżników, to w równaniu Verhulsta odzwierciedla to wyraz
+ujemny :math:`F(N)`:
 
 
 .. MATH::
@@ -528,16 +594,26 @@ W modelu Verhulsta   uwzględnia się pośrednio naturalny proces śmierci poprz
     \frac{dN}{dt} = r \left[1- \frac{N}{K}\right]  N -F(N), \quad \quad N(0)=N_0
 
 
-Funkcja :math:`F(N)` opisująca malenie populacji wskutek istnienia drapieżników powinna spełniać następujące warunki:
+Funkcja :math:`F(N)` opisująca malenie populacji wskutek istnienia
+drapieżników powinna spełniać następujące warunki:
 
 
-(i) :math:`F(N=0)=0` - oznacza to tyle, że drapieżnik nie ma co zjadać gdy populacja jest zerowa, N=0.
+(i) :math:`F(N=0)=0` - oznacza to tyle, że drapieżnik nie ma co zjadać
+    gdy populacja jest zerowa, N=0.
 
 
-(ii) dla dużych wartości N, funkcja :math:`F(N)` powinna się nasycać, to znaczy dążyć do stałej wartości gdy :math:`N\to \infty`. Oznacza to tyle, że drapieżnik może zjeść pewną maksymalną ale skończoną liczbę ofiar.
+(ii) dla dużych wartości N, funkcja :math:`F(N)` powinna się nasycać,
+     to znaczy dążyć do stałej wartości gdy :math:`N\to
+     \infty`. Oznacza to tyle, że drapieżnik może zjeść pewną
+     maksymalną ale skończoną liczbę ofiar.
 
 
-Gdy populacja jest zbyt mała,   drapieżnik woli zmienić teren i poszukać populację o większej liczbie osobników. W modelowaniu stosuje się funkcję Hilla, znaną z kinetyki reakcji chemicznych w procesie transkrypcji (proces syntezy RNA na matrycy DNA przez różne polimerazy RNA, czyli przepisywanie informacji zawartej w DNA na RNA). Ma ona postać:
+Gdy populacja jest zbyt mała, drapieżnik woli zmienić teren i poszukać
+populację o większej liczbie osobników. W modelowaniu stosuje się
+funkcję Hilla, znaną z kinetyki reakcji chemicznych w procesie
+transkrypcji (proces syntezy RNA na matrycy DNA przez różne polimerazy
+RNA, czyli przepisywanie informacji zawartej w DNA na RNA). Ma ona
+postać:
 
 
 .. MATH::
@@ -545,7 +621,12 @@ Gdy populacja jest zbyt mała,   drapieżnik woli zmienić teren i poszukać pop
     F(N)= F_n(N)= \frac {BN^n}{A^n + N^n}, \quad n\gt 0
 
 
-Poniżej pokazujemy jej kształt dla 3 wartości wykładnika :math:`n=2, 4, 6.` Przypadek :math:`n=2` był zastosowany do opisu populacji motyli z rodziny zwójkowatych (Choristoneura occidentalis), które należą do największych szkodników lasów amerykańskich i kanadyjskich.  Model ten, czasami nazywany modelem Ludwiga ,   sformułowany jest przez równanie:
+Poniżej pokazujemy jej kształt dla 3 wartości wykładnika :math:`n=2,
+4, 6.` Przypadek :math:`n=2` był zastosowany do opisu populacji motyli
+z rodziny zwójkowatych (Choristoneura occidentalis), które należą do
+największych szkodników lasów amerykańskich i kanadyjskich.  Model
+ten, czasami nazywany modelem Ludwiga , sformułowany jest przez
+równanie:
 
 
 .. MATH::
@@ -553,7 +634,15 @@ Poniżej pokazujemy jej kształt dla 3 wartości wykładnika :math:`n=2, 4, 6.` 
     \frac{dN}{dt} = r  \left[1- \frac{N}{K}\right] \, N -  \frac {BN^2}{A^2 + N^2}, \quad n \gt 0
 
 
-Powyższe równanie i jego modyfikacje był i jest stosowany do opisu różnorakich procesów: populacji motyli zjadanych przez ptaki, kinetyki reakcji chemicznych, rozwoju komórek nowotworowych, itp. Model ten wykazuje interesujące własności: mogą istnieć 3 stany stacjonarne, ale możliwe są także 2 stany stacjonarne i wreszcie może istnieć tylko 1 stan stacjonarny.  Pojawiają się bifurkacje klina i  nieciągłe przejścia fazowe. Dokładna analiza tego modelu jest przedstawiona na stronie internetowej   iCSE:     Przykład użycia metod iCSE: Zagadnienie wzrostu komórki rakowej (https://sage2.icse.us.edu.pl/home/pub/184/)
+Powyższe równanie i jego modyfikacje był i jest stosowany do opisu
+różnorakich procesów: populacji motyli zjadanych przez ptaki, kinetyki
+reakcji chemicznych, rozwoju komórek nowotworowych, itp. Model ten
+wykazuje interesujące własności: mogą istnieć 3 stany stacjonarne, ale
+możliwe są także 2 stany stacjonarne i wreszcie może istnieć tylko 1
+stan stacjonarny.  Pojawiają się bifurkacje klina i nieciągłe
+przejścia fazowe. Dokładna analiza tego modelu jest przedstawiona na
+stronie internetowej iCSE: Przykład użycia metod iCSE: Zagadnienie
+wzrostu komórki rakowej (https://sage2.icse.us.edu.pl/home/pub/184/)
 
 
 
@@ -601,10 +690,27 @@ Powyższe równanie i jego modyfikacje był i jest stosowany do opisu różnorak
 **(B) Model opisujący efekt Alleego**
 
 
-W 1931 r. W.C. Allee sformułował koncepcję wskazującą na istnienie drugiego stabilnego  stanu  stacjonarnego, różnego od stanu stacjonarnego N=K w modelu Verhulsta.  Allee wykazał, że przy niskich liczebnościach  i zagęszczeniach  spada przyrost populacji.   Mniejsze populacje są bardziej podatne na wymieranie (trudności w  znalezieniu partnera, zmniejszona zdolność do grupowej obrony przed  drapieżnikami, obniżona wydajność żerowania w grupie). Zgodnie z modelem Verhulsta wzrost populacji  jest hamowany tym silniej im bardziej populacja zbliża  się do  stanu stacjonarnego  N=K . Allee wykazał, ze istnieje  drugi punkt stacjonarny, który populacja osiąga podczas spadku liczebności. Populacje, w których obserwujemy taki efekt, zmniejszają swoją liczebność, jeśli spadnie ona poniżej pewnego progu. Obecnie  efekt Alleego oznacza każdy mechanizm, który prowadzi do  zależności między liczbą i/lub zagęszczeniem osobników w populacji a średnim dostosowaniem osobnika.  Dobrym przykładem jest losowy rozkład płci, który w małej populacji może prowadzić do zmniejszenia średniego dostosowania poprzez mniejsze szanse na trafienie partnera.
+W 1931 r. W.C. Allee sformułował koncepcję wskazującą na istnienie
+drugiego stabilnego stanu stacjonarnego, różnego od stanu
+stacjonarnego N=K w modelu Verhulsta.  Allee wykazał, że przy niskich
+liczebnościach i zagęszczeniach spada przyrost populacji.  Mniejsze
+populacje są bardziej podatne na wymieranie (trudności w znalezieniu
+partnera, zmniejszona zdolność do grupowej obrony przed drapieżnikami,
+obniżona wydajność żerowania w grupie). Zgodnie z modelem Verhulsta
+wzrost populacji jest hamowany tym silniej im bardziej populacja
+zbliża się do stanu stacjonarnego N=K . Allee wykazał, ze istnieje
+drugi punkt stacjonarny, który populacja osiąga podczas spadku
+liczebności. Populacje, w których obserwujemy taki efekt, zmniejszają
+swoją liczebność, jeśli spadnie ona poniżej pewnego progu. Obecnie
+efekt Alleego oznacza każdy mechanizm, który prowadzi do zależności
+między liczbą i/lub zagęszczeniem osobników w populacji a średnim
+dostosowaniem osobnika.  Dobrym przykładem jest losowy rozkład płci,
+który w małej populacji może prowadzić do zmniejszenia średniego
+dostosowania poprzez mniejsze szanse na trafienie partnera.
 
 
-Przykładem modelu uwzgledniajacego efekt Alleego jest zmodyfikowane równanie Verhulsta:
+Przykładem modelu uwzgledniajacego efekt Alleego jest zmodyfikowane
+równanie Verhulsta:
 
 
 .. MATH::

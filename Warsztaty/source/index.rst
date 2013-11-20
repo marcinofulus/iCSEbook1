@@ -7,31 +7,56 @@
 Warsztaty iCSE
 ==============
 
-Tematyka warsztatów:
-
-1) Sage
-#) Demokracja
-#) playoffy
-#) Paradox Monty-Hall
-#) MT Paczka falowa: MMK_Fale - czy maja w LO fale plaską? - Odp - mają bez rozszerzeia
-#) MT Równanie logistyczne i chaos.
-   Zob:  malala_sage_presentation_final
-#) WINDA!!!
-#) MT IFS 
-#) MK sieci spinowe???
-#) MK ruchy Browna a bładzenie przypadkowe!
-#) ARMATA
-
 .. toctree::
    :maxdepth: 1
 
    wstep
-   Warsztat 1<iCSE_1>
-   Warsztat 2<iCSE_2>
-   Rzut ukośny numeryczna analiza równań ruchu (rozszerzona fizyka) <rzut_ukosny>
-   Akcelerometr <akcelerometr>
-   Teoria Chaosu <teoria_chaosu>
 
 
 
+Matematyka w domu w i zagrodzie
+===============================
 
+Czy dwie pół-główki to cała główka?  
+
+.. toctree::
+   :maxdepth: 1
+
+
+   iCSE_1_Wprowadzenie_CubeProject
+   iCSE_2_Demokracja_CubeProject
+   iCSE_3_Playoffs_CubeProject
+   iCSE_4_MontyHall_CubeProject
+
+
+Dynamika w windzie i nie tylko...
+=================================
+
+Wytrzel z armaty bez obaw o skutki!
+
+.. toctree::
+   :maxdepth: 1
+
+   (w opracownaiu) Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
+   (w opracownaiu) Akcelerometr w domu  <akcelerometr>
+
+
+
+Chaotyczne opowieści
+====================
+
+Poeksperymantuj z układami chaotycznymi!
+
+.. toctree::
+   :maxdepth: 1
+
+   Teoria Chaosu - Motyl Lorenza <motyl_lorenza>
+   Teoria Chaosu - Równanie Logistyczne <rownanie_logistyczne>
+
+
+
+Jaka jest długość brzegu Anglii?
+================================
+
+(w opracowaniu) Próby pomiaru długości brzegu Anglii doprowadziły do
+wniosku, że wielkość ta nie istnieje....
