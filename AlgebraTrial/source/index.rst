@@ -76,7 +76,9 @@ Wyznaczniki
 
 .. toctree::
    
-   wyznacznik
+   wyznacznik_definicja_i_wlasnosci
+   wyznacznik_rozwiniecie_permutacyjne
+   wyznacznik_praktyczne_wyliczanie
    wyznacznik_zastosowania
 
 Teoria i praktyka układów równań liniowych
@@ -92,6 +94,16 @@ Teoria i praktyka układów równań liniowych
    przyklad_ze_statyki
    zad_teoria_i_praktyka_ukladow
 
+Przekształcenia liniowe
+=======================
+
+| *Operator liniowy. Jądro i obraz operatora.*
+| *Macierzowa reprezentacja operatora liniowego.*
+
+.. toctree::
+   
+   przeksztalcenia_liniowe
+
 Przestrzenie unitarne
 =====================
 
@@ -101,17 +113,7 @@ Przestrzenie unitarne
 | *Ortogonalność. Dopełnienie ortogonalne.*
 | *Baza ortogonalna i ortonormalna. Procedura Grama-Schmidta.*
 | *Macierze hermitowskie i unitarne.*
-
-Przekształcenia liniowe
-=======================
-
-| *Operator liniowy. Jądro i obraz operatora.*
-| *Macierzowa reprezentacja operatora liniowego.*
 | *Operatory hermitowskie i unitarne.*
-
-.. toctree::
-   
-   przeksztalcenia_liniowe
 
 Wartości i wektory własne
 =========================
@@ -128,7 +130,8 @@ Dowody wybranych twierdzeń
 ==========================
 
 .. toctree::
-   
+
+   dow_wstep   
    dow_operacje_na_macierzach
 
 Dodatek 2
