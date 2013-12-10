@@ -3,13 +3,14 @@ Wyznaczenie macierzy odwrotnej metodą eliminacji
 ------------------------------------------------
 
 Niech 
-:math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\,,\,\boldsymbol{B}=[b_{ij}]_{n\times n}\in M_n(K)\,.`
-Będziemy nazywać *agregatem* macierz :math:`\ [\,\boldsymbol{A},\boldsymbol{B}\,]\,,\ `
+:math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\,,\,
+\boldsymbol{B}=[\,b_{ij}\,]_{n\times n}\in M_n(K)\,.`
+Będziemy nazywać *agregatem* macierz :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{B}\,]\,,\ `
 otrzymaną przez dołączenie do macierzy :math:`\ \boldsymbol{A}\,` macierzy :math:`\,\boldsymbol{B}\,:`
 
 .. math::
    
-   \left[\,\boldsymbol{A},\boldsymbol{B}\,\right]\ \,:\,=\ \,
+   \left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\ \,:\,=\ \,
    \left[\begin{array}{cccccc}
       a_{11} & \ldots & a_{1n} & b_{11} & \ldots & b_{1n} \\
       a_{21} & \ldots & a_{2n} & b_{21} & \ldots & b_{2n} \\
@@ -22,14 +23,14 @@ otrzymaną przez dołączenie do macierzy :math:`\ \boldsymbol{A}\,` macierzy :m
    Zakładamy, jak wyżej, że :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.` 
 
    1. Niech :math:`\ O\ ` będzie operacją elementarną. :math:`\,` 
-      Wtedy :math:`\ O\left[\boldsymbol{A},\boldsymbol{B}\right]\ =\ 
-      \left[\,O\boldsymbol{A},\,O\boldsymbol{B}\,\right]\,.`
+      Wtedy :math:`\ \,O\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\ =\ 
+      \left[\,O\boldsymbol{A}\,|\,O\boldsymbol{B}\,\right]\,.`
    
    2. Niech :math:`\ \boldsymbol{C}\in M_n(K)\,.\ \,` 
-      Wtedy :math:`\ \boldsymbol{C}\left[\boldsymbol{A},\boldsymbol{B}\right]\,=\,
-      \left[\,\boldsymbol{C}\boldsymbol{A},\,\boldsymbol{C}\boldsymbol{B}\,\right]\,.`
+      Wtedy :math:`\ \,\boldsymbol{C}\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\,=\,
+      \left[\;\boldsymbol{C}\boldsymbol{A}\,|\,\boldsymbol{C}\boldsymbol{B}\;\right]\,.`
 
-Dowód punktu 2.
+**Dowód** punktu 2.
 
 Oznaczmy przez :math:`\ \boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_n\ \ ` i
 :math:`\ \ \boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\dots,\,\boldsymbol{B}_n\ \ ` kolumny
@@ -38,10 +39,10 @@ macierzy :math:`\,\boldsymbol{A}\ \ ` i :math:`\ \ \boldsymbol{B}:`
 .. math::
    
    \boldsymbol{A}\ =\ 
-   \left[\;\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_n\;\right]\,,
+   \left[\;\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\;\dots\,|\,\boldsymbol{A}_n\;\right]\,,
    \qquad
    \boldsymbol{B}\ =\ 
-   \left[\;\boldsymbol{B}_1,\,\boldsymbol{B}_2,\,\dots,\,\boldsymbol{B}_n\;\right]\,.
+   \left[\;\boldsymbol{B}_1\,|\;\boldsymbol{B}_2\,|\;\dots\,|\,\boldsymbol{B}_n\;\right]\,.
 
 Wykorzystując kolumnową regułę mnożenia macierzowego można zapisać:
 
@@ -49,33 +50,33 @@ Wykorzystując kolumnową regułę mnożenia macierzowego można zapisać:
    
    \boldsymbol{C}\boldsymbol{A}\ \ =\ \ 
    \boldsymbol{C}\,
-   \left[\;\boldsymbol{A}_1,\,
-           \boldsymbol{A}_2,\,\dots,\,
+   \left[\,\boldsymbol{A}_1\,|\;
+           \boldsymbol{A}_2\,|\;\dots\,|\,
            \boldsymbol{A}_n\;
    \right]\ \ =\ \  
-   \left[\ \boldsymbol{C}\boldsymbol{A}_1,\;
-           \boldsymbol{C}\boldsymbol{A}_2,\;\dots,\;
-           \boldsymbol{C}\boldsymbol{A}_n\ 
+   \left[\ \boldsymbol{C}\boldsymbol{A}_1\,|\;
+           \boldsymbol{C}\boldsymbol{A}_2\,|\;\dots\,|\,
+           \boldsymbol{C}\boldsymbol{A}_n\,
    \right]\,;
 
    \boldsymbol{C}\boldsymbol{B}\ \ =\ \ 
    \boldsymbol{C}\,
-   \left[\;\boldsymbol{B}_1,\,
-           \boldsymbol{B}_2,\,\dots,\,
-           \boldsymbol{B}_n\;
+   \left[\,\boldsymbol{B}_1\,|\;
+           \boldsymbol{B}_2\,|\;\dots\,|\,
+           \boldsymbol{B}_n\,
    \right]\ \ =\ \ 
-   \left[\ \boldsymbol{C}\boldsymbol{B}_1,\;
-           \boldsymbol{C}\boldsymbol{B}_2,\;\dots,\;
-           \boldsymbol{C}\boldsymbol{B}_n\ \right]\,;
+   \left[\ \boldsymbol{C}\boldsymbol{B}_1\,|\;
+           \boldsymbol{C}\boldsymbol{B}_2\,|\;\dots\,|\;
+           \boldsymbol{C}\boldsymbol{B}_n\;\right]\,;
 
-   \boldsymbol{C}\,\left[\,\boldsymbol{A},\boldsymbol{B}\,\right]\ \ =\ \ 
-   \left[\ \boldsymbol{C}\boldsymbol{A}_1,\;
-           \boldsymbol{C}\boldsymbol{A}_2,\;\dots,\;
-           \boldsymbol{C}\boldsymbol{A}_n,\; 
-           \boldsymbol{C}\boldsymbol{B}_1,\;
-           \boldsymbol{C}\boldsymbol{B}_2,\;\dots,\;
-           \boldsymbol{C}\boldsymbol{B}_n\ \right]\ \ =\ \ 
-   \left[\,\boldsymbol{C}\boldsymbol{A},\,\boldsymbol{C}\boldsymbol{B}\,\right]\,. 
+   \boldsymbol{C}\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\ \ =\ \ 
+   \left[\ \boldsymbol{C}\boldsymbol{A}_1\,|\;
+           \boldsymbol{C}\boldsymbol{A}_2\,|\;\dots\,|\,
+           \boldsymbol{C}\boldsymbol{A}_n\;|\  
+           \boldsymbol{C}\boldsymbol{B}_1\,|\;
+           \boldsymbol{C}\boldsymbol{B}_2\,|\;\dots\,|\,
+           \boldsymbol{C}\boldsymbol{B}_n\;\right]\ \ =\ \ 
+   \left[\;\boldsymbol{C}\boldsymbol{A}\;|\;\boldsymbol{C}\boldsymbol{B}\;\right]\,. 
 
    \;
 
@@ -100,23 +101,23 @@ Zauważmy od razu, że wtedy
    \boldsymbol{E}_k\dots\boldsymbol{E}_2\,\boldsymbol{E}_1\ =\ \boldsymbol{A}^{-1}\,.
 
 Zastosujmy teraz operacje :math:`\,O_1\,,O_2,\,\dots,\,O_k\ `
-do agregatu :math:`\,\left[\,\boldsymbol{A},\boldsymbol{I}_n\,\right].\,`
+do agregatu :math:`\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{I}_n\,\right].\,`
 Korzystając z Lematu, Twierdzenia 3. oraz wzorów :eq:`id` i :eq:`rec` otrzymujemy:
 
 .. math::
 
-   O_k\dots O_2\,O_1\ \left[\,\boldsymbol{A},\boldsymbol{I}_n\,\right]\ \,=\ \,
-   \left[\ O_k\dots O_2\,O_1\ \boldsymbol{A},\ \ O_k\dots O_2\,O_1\ \boldsymbol{I}_n\ \right]\ \,=
+   O_k\dots O_2\,O_1\ \left[\,\boldsymbol{A}\,|\,\boldsymbol{I}_n\,\right]\ \,=\ \,
+   \left[\ O_k\dots O_2\,O_1\ \boldsymbol{A}\ |\ O_k\dots O_2\,O_1\ \boldsymbol{I}_n\ \right]\ \,=
 
    =\ \,
    \left[\ \boldsymbol{E}_k\dots
    \boldsymbol{E}_2\,
-   \boldsymbol{E}_1\ \boldsymbol{A},\ \ 
+   \boldsymbol{E}_1\ \boldsymbol{A}\ |\  
    \boldsymbol{E}_k\dots
    \boldsymbol{E}_2\,
    \boldsymbol{E}_1\ \boldsymbol{I}_n\ \right]\ \,=\ \,
-   \left[\ \boldsymbol{I}_n\,,\ \boldsymbol{E}_k\dots\boldsymbol{E}_2\,\boldsymbol{E}_1\ \right]\ =\ 
-   \left[\,\boldsymbol{I}_n\,,\,\boldsymbol{A}^{-1}\,\right]\,.
+   \left[\ \boldsymbol{I}_n\ |\ \boldsymbol{E}_k\dots\boldsymbol{E}_2\,\boldsymbol{E}_1\ \right]\ =\ 
+   \left[\,\boldsymbol{I}_n\;|\;\boldsymbol{A}^{-1}\,\right]\,.
 
 Otrzymany wynik daje praktyczny sposób obliczania macierzy odwrotnej.
 
@@ -124,17 +125,15 @@ Otrzymany wynik daje praktyczny sposób obliczania macierzy odwrotnej.
 
    Niech :math:`\,\boldsymbol{A}\in M_n(K)\,` będzie macierzą odwracalną. :math:`\\`
    Aby znaleźć jej odwrotność, tworzymy agregat 
-   :math:`\,\left[\,\boldsymbol{A},\boldsymbol{I}_n\,\right]\,` 
+   :math:`\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{I}_n\,\right]\,` 
    i wykonujemy na nim operacje elementarne, które przekształcają pierwszą macierz
    do macierzy jednostkowej. :math:`\\`
    Wtedy drugą macierzą agregatu będzie :math:`\,\boldsymbol{A}^{-1}\,.`
 
 **Przykład 1.** :math:`\,` Znaleźć macierz odwrotną do
 :math:`\ \boldsymbol{A}\ =\ \left[\begin{array}{rrrr}
-2 &  0 & -1 & 1 \\
-1 &  1 & -1 & 0 \\
--1 &  0 &  6 & 1 \\
-1 &  0 &  1 & 1 \end{array}\right]\,.` :math:`\\`
+2 &  0 & -1 & 1 \\ 1 &  1 & -1 & 0 \\ -1 &  0 &  6 & 1 \\ 1 &  0 &  1 & 1 
+\end{array}\right]\,.` :math:`\\`
 
 .. .. math::
    
@@ -153,10 +152,10 @@ Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
    ...                  [-1, 0, 6, 1],
    ...                  [ 1, 0, 1, 1]])
 
-   # Utworzenie agregatu [A,I]:
+   # Utworzenie agregatu [A|I]:
    sage: AI = A.augment(identity_matrix(QQ,4))
 
-   # Przekształcenie [A,I] do [I,A^(-1)]:
+   # Przekształcenie [A|I] do [I|A^(-1)]:
    sage: IA_1 = AI.rref()
 
    # Wyodrębnienie drugiej części agregatu (kolumny 4.- 7.):
@@ -184,8 +183,6 @@ b.) :math:`\,` taki sam wynik da metoda ``inverse()`` ?
    sage: A_1*A==identity_matrix(QQ,4), A_1==A.I
 
    (True, True)
-
-
 
 Sage zawiera też bardziej ogólną metodę ``extended_echelon_form()``,
 która dopisuje do zadanej macierzy prostokątnej

@@ -243,7 +243,7 @@ i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że
 * | :math:`\ \text{rz}\boldsymbol{A}\geq 2,\,` bo istnieją niezerowe minory stopnia drugiego
   | :math:`\qquad\qquad\ ` (np. minor wycięty w prawym górnym rogu).
 
-A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0,\,`
+A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0\,,`
 równy różnicy liczby niewiadomych i rzędu macierzy :math:`\,\boldsymbol{A},\,`
 wynosi :math:`\ 5 - 2 = 3.\ `
 Dla określenia przestrzeni :math:`\,S_0\,` wystarczy podać jakąkolwiek jej bazę,
@@ -270,11 +270,13 @@ i :math:`\ \,` stosując kolumnowy zapis macierzy, mamy
 .. math::
 
    \boldsymbol{A}\,\boldsymbol{X}\ \,=\ \,
-   \boldsymbol{A}\ \left(\boldsymbol{X}_1,\boldsymbol{X}_2,\boldsymbol{X}_3\right)\ \,=\ \,
-   \left(\boldsymbol{A}\boldsymbol{X}_1,\,
-   \boldsymbol{A}\boldsymbol{X}_2,\,
-   \boldsymbol{A}\boldsymbol{X}_3\right)\ \,=\ \,
-   \left(\boldsymbol{0},\,\boldsymbol{0},\,\boldsymbol{0}\right)\,,
+   \boldsymbol{A}\ 
+   \left[\,\boldsymbol{X}_1\,|\;\boldsymbol{X}_2\,|\;\boldsymbol{X}_3\,\right]\ \,=\ \,
+   \left[\,
+   \boldsymbol{A}\boldsymbol{X}_1\,|\;
+   \boldsymbol{A}\boldsymbol{X}_2\,|\;
+   \boldsymbol{A}\boldsymbol{X}_3\,\right]\ \,=\ \,
+   \left[\,\boldsymbol{0}\,|\,\boldsymbol{0}\,|\,\boldsymbol{0}\,\right]
 
 skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macierzy:
  
@@ -286,7 +288,7 @@ skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macier
 
 A zatem kolumny :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
 macierzy :math:`\,\boldsymbol{X}\,` spełniają równanie :eq:`13` :math:`\,`
-i :math:`\,` (z założenia o liniowej niezależności) tworzą poszukiwaną bazę przestrzeni :math:`\,S_0.`
+i :math:`\,` (z założonej liniowej niezależności) tworzą poszukiwaną bazę przestrzeni :math:`\,S_0.`
 
 **Wyznaczenie bazy przestrzeni rozwiązań.**
 

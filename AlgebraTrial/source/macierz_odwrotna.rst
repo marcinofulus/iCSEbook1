@@ -71,7 +71,7 @@ Wyjaśnia to
    to :math:`\,\boldsymbol{A}\,` nie ma wierszy składających się z samych zer
    ani kolumn składających się z samych zer.
 
-Dowód.
+**Dowód.**
 
 Gdyby :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}\,` 
 składał się z samych zer, to dla każdej macierzy :math:`\boldsymbol{B}\in M_n(K)\,`

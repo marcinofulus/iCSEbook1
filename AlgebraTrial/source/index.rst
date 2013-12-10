@@ -42,8 +42,9 @@ Algebra macierzy
 
 .. toctree::
 
-   dzialania_na_macierzach
-   macierze_w_sage
+   algebra_macierzy_dzialania
+   algebra_macierzy_wlasnosci_dzialan
+   algebra_macierze_w_sage
    zad_algebra_macierzy
 
 Operacje na macierzach
@@ -97,12 +98,19 @@ Teoria i praktyka układów równań liniowych
 Przekształcenia liniowe
 =======================
 
-| *Operator liniowy. Jądro i obraz operatora.*
-| *Macierzowa reprezentacja operatora liniowego.*
+| *Własności i zastosowania przekształceń liniowych.*
+| *Izomorfizm przestrzeni wektorowych.*
+| *Reprezentacja macierzowa przekształceń liniowych.*
 
 .. toctree::
    
-   przeksztalcenia_liniowe
+   przeksztalcenia_lin_definicje
+   przeksztalcenia_lin_wlasnosci_i_przyklady
+   przeksztalcenia_lin_jadro_i_obraz
+   przeksztalcenia_lin_uklady_rownan
+   przeksztalcenia_lin_macierze
+   przeksztalcenia_lin_operatory
+   przeksztalcenia_lin_zmiana_bazy
 
 Przestrzenie unitarne
 =====================
@@ -134,8 +142,8 @@ Dowody wybranych twierdzeń
    dow_wstep   
    dow_operacje_na_macierzach
 
-Dodatek 2
-=========
+Zadania z Algebry liniowej
+==========================
 
 W tej sekcji znajdują się zadania obowiązujące na zaliczenie i egzamin.
 

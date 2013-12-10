@@ -140,7 +140,7 @@ gdzie :math:`\ \boldsymbol{E}_i' = \boldsymbol{E}_i^{-1}\,,\quad i=1,2,\dots,k\,
    wtedy i tylko wtedy, gdy jest macierzą jednostkową:
    :math:`\ \boldsymbol{C}=\boldsymbol{I}_n\,.`
 
-Dowód.
+**Dowód.**
 
 :math:`\ \Rightarrow\,:\ ` Zakładamy, że kwadratowa macierz :math:`\,\boldsymbol{C}\in M_n(K)\,`
 o zredukowanej postaci schodkowej jest odwracalna. Zgodnie z twierdzeniem 1. 
@@ -164,7 +164,7 @@ Wtedy :math:`\ \boldsymbol{C}\,` jest odwracalna, bo
        jest macierz jednostkowa;
    (3) :math:`\,\boldsymbol{A}\,` jest iloczynem macierzy elementarnych.
 
-Dowód.
+**Dowód.**
 
 Wzory :eq:`AC` stwierdzają, że macierz :math:`\,\boldsymbol{A}\,` jest odwracalna wtedy i tylko wtedy, gdy jej zredukowana postać schodkowa :math:`\ \boldsymbol{C}\,` jest odwracalna.
 Z kolei według twierdzenia 4. macierz :math:`\ \boldsymbol{C}\,` jest odwracalna wtedy i tylko wtedy,

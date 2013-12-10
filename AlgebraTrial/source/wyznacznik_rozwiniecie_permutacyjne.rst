@@ -191,11 +191,11 @@ Zapiszemy dwa ważne twierdzenia, których dowody korzystają z rozwinięcia per
    będą kolumnami macierzy :math:`\ \boldsymbol{C} = \boldsymbol{A}\boldsymbol{B}:`
 
 Niech 
-:math:`\ \boldsymbol{A}\ =\ [\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,
+:math:`\ \boldsymbol{A}\ =\ [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
 \boldsymbol{A}_n\,]\,,\quad
 \boldsymbol{B}\ =\ [b_{ij}]_{n\times n}\,,\quad
 \boldsymbol{A}\boldsymbol{B}\ =\ 
-[\,\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\dots,\,\boldsymbol{C}_n\,]\,.`
+[\,\boldsymbol{C}_1\,|\;\boldsymbol{C}_2\,|\,\dots\,|\,\boldsymbol{C}_n\,]\,.`
 
 Według kolumnowej reguły mnożenia macierzowego, :math:`\,j`-ta kolumna macierzy
 :math:`\boldsymbol{A}\boldsymbol{B}\ ` jest kombinacją liniową kolumn macierzy 
@@ -212,19 +212,19 @@ Wykorzystując liniowość wyznacznika ze względu na każdą kolumnę z osobna 
 .. math::
 
    \det\,(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,
-   \det\,[\,\boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\dots,\,\boldsymbol{C}_n\,]\ \ =
+   \det\,[\,\boldsymbol{C}_1\,|\;\boldsymbol{C}_2\,|\,\dots\,|\,\boldsymbol{C}_n\,]\ \ =
 
    =\ \ 
-   \det\,\left[\ \ \sum_{r\,=\,1}^n\ b_{r1}\,\boldsymbol{A}_r\,,\ \ 
-                   \sum_{s\,=\,1}^n\ b_{s2}\,\boldsymbol{A}_s\,,\ \ 
-                   \ldots,\ \ 
-                   \sum_{t\,=\,1}^n\ b_{tn}\,\boldsymbol{A}_t\ 
+   \det\,\left[\left.\ \   \sum_{r\,=\,1}^n\ \,b_{r1}\,\boldsymbol{A}_r\ \ \right| 
+               \left.\ \   \sum_{s\,=\,1}^n\ \,b_{s2}\,\boldsymbol{A}_s\ \ \right|
+               \ \ \dots\ \ 
+               \left|\ \ \,\sum_{t\,=\,1}^n\ \,b_{tn}\,\boldsymbol{A}_t\ \,\right.
          \right]\ \ =
 
    =\ \ 
    \sum_{r\,=\,1}^n\ \sum_{s\,=\,1}^n\ \ldots\ \sum_{t\,=\,1}^n\ \ 
    b_{r1}\ b_{s2}\ \ldots\ b_{tn}\ 
-   \det\,[\,\boldsymbol{A}_r,\,\boldsymbol{A}_s,\,\ldots,\,\boldsymbol{A}_t\,]\,.
+   \det\,[\,\boldsymbol{A}_r\,|\;\boldsymbol{A}_s\,|\,\dots\,|\,\boldsymbol{A}_t\,]\,.
 
 Na podstawie własności IIIa. wyznacznika stwierdzamy, że różne od zera mogą być tylko te składniki, 
 w których kolumny :math:`\ \boldsymbol{A}_r,\,\boldsymbol{A}_s,\,\ldots,\,\boldsymbol{A}_t\ `
@@ -241,7 +241,7 @@ Korzystając następnie z własności :math:`\,` IIc. :math:`\,` i :math:`\,` wz
    \det\,(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,    
    \sum_{\sigma\,\in\,S_n}\ 
    b_{\sigma(1),1}\ b_{\sigma(2),2}\ \ldots,\ b_{\sigma(n),n}\ 
-   \det\,[\,\boldsymbol{A}_{\sigma(1)},\,\boldsymbol{A}_{\sigma(2)},\,\ldots,\,
+   \det\,[\,\boldsymbol{A}_{\sigma(1)}\,|\;\boldsymbol{A}_{\sigma(2)}\,|\,\ldots\,|\,
    \boldsymbol{A}_{\sigma(n)}\,]\ \ =
    
    =\ \ 

@@ -11,7 +11,7 @@ Badanie liniowej zależności wektorów
    gdy jej kolumny są liniowo zależne. :math:`\\`
 
    Niech :math:`\ \boldsymbol{A}\,=\,
-   [\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_n\,]\,\in\,M_n(K).\ \,` Wtedy
+   [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,\in\,M_n(K).\ \,` Wtedy
 
    .. math::
       
@@ -38,20 +38,20 @@ definicji aksjomatycznej
 .. math::
    
    \det\boldsymbol{A}\ \ =\ \ 
-   \det\,[\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_{n-1},\  
+   \det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_{n-1}\,|\; 
    \lambda_1\,\boldsymbol{A}_1\,+\,\lambda_2\,\boldsymbol{A}_2\,+\,\ldots\,+\,
                         \lambda_{n-1}\,\boldsymbol{A}_{n-1}\,]\ \ =
 
-   =\ \ \lambda_1\,\det\,[\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,
-                          \boldsymbol{A}_{n-1},\,\boldsymbol{A}_1\,]\ \ +
+   =\ \ \lambda_1\,\det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
+                          \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_1\,]\ \ +
 
-   +\ \ \lambda_2\,\det\,[\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,
-                          \boldsymbol{A}_{n-1},\,\boldsymbol{A}_2\,]\ \ +
+   +\ \ \lambda_2\,\det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
+                          \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_2\,]\ \ +
 
    \ldots
 
-   +\ \ \lambda_{n-1}\,\det\,[\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,
-                          \boldsymbol{A}_{n-1},\,\boldsymbol{A}_{n-1}\,]\,.
+   +\ \ \lambda_{n-1}\,\det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
+                          \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_{n-1}\,]\,.
 
 Każdy ze składników w ostatnim wyrażeniu jest proporcjonalny do wyznacznika macierzy o dwóch jednakowych kolumnach. Z własności IIIa. wynika więc, że 
 :math:`\ \det\boldsymbol{A} = 0.` :math:`\\`
@@ -77,8 +77,8 @@ Rozważmy takie przedstawienie dla wektorów bazy kanonicznej
    \leftarrow j\,,\qquad j=1,2,\ldots,n.
 
 Równania :eq:`eqn_ej` stwierdzają, że :math:`\,j`-ta kolumna macierzy jednostkowej
-:math:`\,\boldsymbol{I}_n = [\,\boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\dots,\,\boldsymbol{e}_n\,]\ ` 
-jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}\ `
+:math:`\,\boldsymbol{I}_n = [\,\boldsymbol{e}_1\,|\;\boldsymbol{e}_2\,|\,\dots\,|\,
+\boldsymbol{e}_n\,]\ ` jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}\ `
 o współczynnikach z :math:`\,j`-tej kolumny macierzy :math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}.\ `
 Według kolumnowej reguły mnożenia macierzowego oznacza to, że 
 :math:`\ \boldsymbol{I}_n = \boldsymbol{A}\boldsymbol{B}.\ ` 
@@ -168,7 +168,7 @@ W tym wypadku jest to wyznacznik macierzy trójkątnej:
 
 .. math::
    
-   \det\,[\,\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\ldots,\,\boldsymbol{f}_n\,]\ \ =\ \ 
+   \det\ [\,\boldsymbol{f}_1\,|\;\boldsymbol{f}_2\,|\,\ldots\,|\,\boldsymbol{f}_n\,]\ \ =\ \ 
    \left|
    \begin{array}{ccccc}
      1   &   1   &   1   & \dots &   1   \\
@@ -494,11 +494,13 @@ Metoda ``inverse()`` pakietu Sage zastosowana do ogólnej macierzy kwadratowej z
 .. Sage potrafi podać wzory dla odwrotności macierzy kwadratowej stopnia :math:`\,n=2,3,\ldots\ ` 
    Należy w tym celu użyć metody ``inverse()`` w zastosowaniu do ogólnej macierzy stopnia :math:`\,n.`
 
-**Poeksperymentuj z Sage:**
-
-Poniższy program wyświetla ogólną macierz kwadratową :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\ ` 
-oraz jej odwrotność. W mianownikach elementów macierzy odwrotnej można rozpoznać wyznacznik macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach :math:`\,`
-- :math:`\,` odpowiednie dopełnienia algebraiczne. :math:`\\`
+.. admonition:: Poeksperymentuj z Sage:
+   
+   Poniższy program wyświetla ogólną macierz kwadratową 
+   :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\ ` 
+   oraz jej odwrotność. W mianownikach elementów macierzy odwrotnej można rozpoznać wyznacznik   
+   macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach :math:`\,`
+   - :math:`\,` odpowiednie dopełnienia algebraiczne. :math:`\\`
 
 .. sagecellserver::
    
@@ -608,9 +610,11 @@ Z przyrównania odpowiednich współrzędnych wektorów po obu stronach równoś
 
    .. math::
       
-      D\ \,=\ \,\det\;[\;\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,]\,,
+      D\ \,=\ \,\det\;[\;\boldsymbol{A}_1\,|\,\dots\,|\,
+      \boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,,
       
-      D_j\ =\ \,\det\;[\;\boldsymbol{A}_1,\,\dots,\ \boldsymbol{b},\ \dots,\,\boldsymbol{A}_n\,]\,.
+      D_j\ =\ \,\det\;[\;\boldsymbol{A}_1\,|\,\dots\,|\ 
+      \boldsymbol{b}\,|\ \dots\,|\,\boldsymbol{A}_n\,]\,.
 
 **Przykład.** :math:`\,` 
 Rozwiążemy układ trzech równań o trzech niewiadomych nad ciałem :math:`\,Q:`
@@ -687,14 +691,16 @@ Ostatecznie, :math:`\,` jedynym rozwiązaniem układu równań jest
    x_3\ =\ \textstyle{60\over 60}\ =\ 1\,.
 
 W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej zadanej liczby
-:math:`\,n=2,3,\ldots\ ` równań układu kramerowskiego. Należy w tym celu wywołać metodę ``rref()`` dla sprowadzenia macierzy rozszerzonej :math:`\,\boldsymbol{B}=[\,\boldsymbol{A},\boldsymbol{b}\,]\ ` 
-do zredukowanej postaci schodkowej.
+:math:`\,n=2,3,\ldots\ ` równań układu kramerowskiego. Należy w tym celu wywołać metodę ``rref()`` dla sprowadzenia macierzy rozszerzonej 
+:math:`\,\boldsymbol{B}=[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,]\ ` do zredukowanej postaci schodkowej.
 
-**Poeksperymentuj z Sage:**
-
-Poniższy program dla zadanego :math:`\,n\,` wyświetla macierz :math:`\,\boldsymbol{B}\ ` w jej oryginalnej oraz zredukowanej schodkowej postaci.
-W tym drugim przypadku elementy ostatniej kolumny są wartościami niewiadomych (wartości te są 
-następnie powtórzone w powiększeniu). Można tam rozpoznać w mianownikach wyznacznik :math:`\,D\,` macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach wyznaczniki :math:`\,D_j\,` ze wzorów Cramera.
+.. admonition:: Poeksperymentuj z Sage:
+   
+   Poniższy program dla zadanego :math:`\,n\,` wyświetla macierz :math:`\,\boldsymbol{B}\ ` w jej   
+   oryginalnej oraz zredukowanej schodkowej postaci.
+   W tym drugim przypadku elementy ostatniej kolumny są wartościami niewiadomych (wartości te są 
+   następnie powtórzone w powiększeniu). Można tam rozpoznać w mianownikach wyznacznik :math:`\,D\,` 
+   macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach wyznaczniki :math:`\,D_j\,` ze wzorów Cramera.
 
 .. sagecellserver::
 
@@ -710,7 +716,6 @@ następnie powtórzone w powiększeniu). Można tam rozpoznać w mianownikach wy
    B.subdivide(n,n); B_red.subdivide(n,n)
 
    html.table([[B, '$\\rightarrow$', B_red]])
-
    for i in range(n): show(B_red[i,n])
 
 

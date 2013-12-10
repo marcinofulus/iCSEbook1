@@ -1,6 +1,3 @@
-Zadania z Algebry liniowej
-==========================
-
 
 Układy równań liniowych
 -----------------------

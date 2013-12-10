@@ -62,7 +62,7 @@ Dla układu :eq:`01` definiujemy również :math:`\,` *macierz rozszerzoną* :ma
 
 .. math::
 
-   \boldsymbol{B}\ \,:\,=\ \,[\,\boldsymbol{A},\boldsymbol{b}\;]\ \,
+   \boldsymbol{B}\ \,:\,=\ \,[\,\boldsymbol{A}\,|\,\boldsymbol{b}\;]\ \,
                      =\ \,\left[\begin{array}{ccccc}
                                 a_{11} & a_{12} & \ldots & a_{1n} & b_1    \\
                                 a_{21} & a_{22} & \ldots & a_{2n} & b_2    \\
@@ -614,15 +614,15 @@ Rzeczywiście, macierzy rozszerzonej przekształconej do zredukowanej postaci sc
 
 .. math::
 
-   \left(\begin{array}{rrrrr}
+   \left[\begin{array}{rrrrr}
          1 & -1 &  2 & -1 &  1 \\
          2 & -3 & -1 &  1 &  1 \\
          1 &  0 &  7 & -4 &  4
-         \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrr}
+         \end{array}\right]\quad\rightarrow\quad\left[\begin{array}{rrrrr}
                                                       1 & 0 & 7 & -4 & 0 \\
                                                       0 & 1 & 5 & -3 & 0 \\
                                                       0 & 0 & 0 &  0 & 1
-                                                      \end{array}\right)
+                                                      \end{array}\right]
 
 odpowiada teraz (równoważny wyjściowemu) układ równań
 

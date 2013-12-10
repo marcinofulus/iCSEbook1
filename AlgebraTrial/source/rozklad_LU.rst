@@ -229,15 +229,15 @@ Otrzymany rozkład :eq:`A_PLU_ex` jest różny od :eq:`A_LU_ex`, chociaż obydwa
 Jak widać, rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` w ogólności nie jest jednoznaczny.
 :math:`\\`
 
-**Poeksperymentuj z Sage:**
+.. admonition:: Poeksperymentuj z Sage: :math:`\\`
 
-Poniższy kod generuje przypadkową macierz :math:`\,\boldsymbol{A}\,`
-i zapisuje jej rozkład :math:`\,\boldsymbol{A}=\boldsymbol{P}\boldsymbol{L}\boldsymbol{U}.`
+   Poniższy kod generuje przypadkową macierz :math:`\,\boldsymbol{A}\,`
+   i zapisuje jej rozkład :math:`\,\boldsymbol{A}=\boldsymbol{P}\boldsymbol{L}\boldsymbol{U}.`
 
-* Dopisz wiersz sprawdzający poprawność wyniku.
-* | Zmieniając rozmiary :math:`\,m\ \ \text{i}\ \ n\,` macierzy :math:`\,\boldsymbol{A}\,`
-    otrzymaj 
-  | różne konkretne przykłady omawianej procedury.
+   * Dopisz wiersz sprawdzający poprawność wyniku.
+   * | Zmieniając rozmiary :math:`\,m\ \ \text{i}\ \ n\,` macierzy :math:`\,\boldsymbol{A}\,`
+       otrzymaj 
+     | różne konkretne przykłady omawianej procedury.
 
 .. sagecellserver::
 
@@ -247,6 +247,8 @@ i zapisuje jej rozkład :math:`\,\boldsymbol{A}=\boldsymbol{P}\boldsymbol{L}\bol
                      algorithm='echelonizable')
    (P,L,U) = A.LU()
    html.table([[A, '=', P, L, U]])
+
+:math:`\;`
 
 .. note:: Metoda ``LU()`` działa poprawnie  na pierścieniach dokładnych, np. na ciele liczb wymiernych QQ. W przypadku obliczeń numerycznych należy użyć ciała RDF liczb rzeczywistych o podwójnej precyzji albo ciała CDF liczb zespolonych o podwójnej precyzji.
 

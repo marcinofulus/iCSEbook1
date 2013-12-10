@@ -93,7 +93,7 @@ ma postać kolumnową
 
 .. math::
    
-   \boldsymbol{A}\ =\ [\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_n\,]\,,
+   \boldsymbol{A}\ =\ [\,\boldsymbol{A}_1\,|\,\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,,
    \quad\text{gdzie}\quad
    \boldsymbol{A}_j\ =\ 
    \left[\begin{array}{c}
@@ -107,20 +107,20 @@ na macierz :math:`\ \boldsymbol{A}\ ` określone jest przez
 .. math::
    
    O_\sigma\,\boldsymbol{A}\ \ :\,=\ \ 
-   [\,\boldsymbol{A}_{\sigma(1)},\,\boldsymbol{A}_{\sigma(2)},\,\dots,\,
+   [\;\boldsymbol{A}_{\sigma(1)}\,|\;\boldsymbol{A}_{\sigma(2)}\,|\;\dots\,|\,
    \boldsymbol{A}_{\sigma(n)}\,]\,.
 
 Macierz :math:`\ \boldsymbol{P}_\sigma\ ` permutacji :math:`\ \sigma\in S_n\ `
 jest z definicji wynikiem działania operacji :math:`\ O_\sigma\ ` na macierz jednostkową 
 :math:`\ \boldsymbol{I}_n =
-[\,\boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\dots,\,\boldsymbol{e}_n\,]\ `
+[\;\boldsymbol{e}_1\,|\;\boldsymbol{e}_2\,|\;\dots\,|\,\boldsymbol{e}_n\,]\ `
 (:math:`\boldsymbol{e}_j\ ` jest kolumną zawierającą jedynkę na :math:`\,j`-tej pozycji,
 poza tym zera):
 
 .. math::
    
    \boldsymbol{P}_\sigma\ :\,=\ O_\sigma\,\boldsymbol{I}_n\ =\ 
-   [\,\boldsymbol{e}_{\sigma(1)},\,\boldsymbol{e}_{\sigma(2)},\,\dots,\,
+   [\;\boldsymbol{e}_{\sigma(1)}\,|\;\boldsymbol{e}_{\sigma(2)}\,|\;\dots\,|\,
    \boldsymbol{e}_{\sigma(n)}]\,.
 
 **Zadanie 1.** :math:`\,`
@@ -171,10 +171,10 @@ Wyliczanie macierzy odwrotnej metodą eliminacji
 Poniższy program generuje odwracalne macierze :math:`\,\boldsymbol{A}\,` 
 zadanego stopnia :math:`\,n\,` nad ciałem liczb wymiernych :math:`\,Q.\ `
 
-Dla :math:`\,n = 2, 3\,` wykonaj odręcznie wszystkie przekształcenia elementarne,
+Dla :math:`\,n = 2,\ 3\,` wykonaj odręcznie wszystkie przekształcenia elementarne,
 które dla zadanej macierzy :math:`\,\boldsymbol{A}\ `
-przeprowadzają agregat :math:`\ [\,\boldsymbol{A},\boldsymbol{I}\,]\ `
-do postaci :math:`\ [\,\boldsymbol{I},\boldsymbol{A}^{-1}\,].\ `
+przeprowadzają agregat :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{I}\,]\ `
+do postaci :math:`\ [\,\boldsymbol{I}\,|\,\boldsymbol{A}^{-1}\,].\ `
 Porównaj swój wynik z wynikiem komputerowym.
 
 .. sagecellserver::
@@ -191,13 +191,13 @@ Porównaj swój wynik z wynikiem komputerowym.
   
    @interact
    
-   def _(h=('Krok:', ["Agregat [A,I]", "Agregat [I,A_1]", "Sprawdzenie"])):
+   def _(h=('Krok:', ["Agregat [A| I ]", "Agregat [ I |A_1]", "Sprawdzenie"])):
 
-       if h=="Agregat [A,I]": 
-           html.table([["", "", "B = [A,I]$\;$ jest rozszerzeniem A :"], 
+       if h=="Agregat [A| I ]": 
+           html.table([["", "", "B = [A| I ]$\;$ jest rozszerzeniem A :"], 
                        ["B", '=', B]])
 
-       elif h=="Agregat [I,A_1]": 
+       elif h=="Agregat [ I |A_1]": 
            html.table([["", "", "Zredukowana postać schodkowa B:"], 
                        ["B.rref()", '=', R]])
 

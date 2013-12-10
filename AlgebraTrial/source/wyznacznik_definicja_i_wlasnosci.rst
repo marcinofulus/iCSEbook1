@@ -9,7 +9,7 @@ stopnia :math:`\,n:`
 .. math::
    
    M_n(K)\ni\boldsymbol{A}\ =\ [a_{ij}]_{n\times n}\ =\ 
-   \left[\,\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\,\right]\,,\quad
+   \left[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,\right]\,,\quad
    \text{gdzie}\quad
    \boldsymbol{A}_j\ =\ 
    \left[\begin{array}{c}
@@ -23,20 +23,21 @@ stopnia :math:`\,n:`
    spełniającą  następujące warunki :math:`\,` 
    (:math:`j\;-` dowolny numer kolumny, :math:`\ \lambda\in K`) : :math:`\\`
 
-   1. :math:`\det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j+\boldsymbol{A}'_j,\,\dots,\,
+   1. :math:`\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j+\boldsymbol{A}'_j\,|\,\dots\,|\,
       \boldsymbol{A}_n\,]\ \ =\ \ \\
-      \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,]\ +\  
-      \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}'_j,\,\dots,\,\boldsymbol{A}_n\,]\,;\\`
+      \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ +\  
+      \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'_j\,|\,\dots\,|\,
+      \boldsymbol{A}_n\,]\,;\\`
       
-   2. :math:`\det\ [\,\boldsymbol{A}_1,\,\dots,\,
-      \lambda\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,]\ \ =\ \ 
-      \lambda\,\cdot\,\det\ [\,\boldsymbol{A}_1,\,\dots,\,
-      \boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,]\,;\\`
+   2. :math:`\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,
+      \lambda\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =\ \ 
+      \lambda\,\cdot\,\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,
+      \boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,;\\`
 
    3. :math:`\boldsymbol{A}_j\ =\ \boldsymbol{A}_{j+1}
       \quad\Rightarrow\quad
-      \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\boldsymbol{A}_{j+1},\,
-      \dots,\,\boldsymbol{A}_n\,]\ =\ 0\,;\\`
+      \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\boldsymbol{A}_{j+1}\,|\,
+      \dots\,|\,\boldsymbol{A}_n\,]\ =\ 0\,;\\`
 
    4. :math:`\det\ \boldsymbol{I}_n\ =\ 1\,,\qquad
       \boldsymbol{I}_n\ -\ \text{macierz jednostkowa.}`
@@ -105,13 +106,11 @@ Bezpośrednio z definicji wynikają dalsze własności wyznacznika. :math:`\\`
    składa się z samych zer, :math:`\,` to :math:`\ \det\boldsymbol{A}=0.`
 
 **Dowód.** :math:`\,` Niech 
-:math:`\ d\,:\,=\,\det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,].`
-:math:`\\`
-Jeżeli dla pewnego :math:`\ j\in \{1,2,\ldots,n\}\ ` zachodzi  
-:math:`\ \boldsymbol{A}_j=\boldsymbol{0},\ \,` 
-to :math:`\ \boldsymbol{A}_j = \boldsymbol{A}_j + \boldsymbol{A}_j\,.\ `
-Z postulatu 1. wynika wtedy, że :math:`\ \,d = d + d,\ \,` 
-czyli :math:`\ \,d = 2d,\ \,` skąd :math:`\ \,d = 0.`
+:math:`\ \ d\,:\,=\,\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,
+\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,,\quad j\in\{1,2,\ldots,n\}\,.\ \ \\`
+Jeżeli :math:`\ \boldsymbol{A}_j=\boldsymbol{0},\ \,` 
+to :math:`\ \boldsymbol{A}_j=0\cdot\boldsymbol{A}_j\,.\ `
+Z postulatu 2. wynika wtedy, że :math:`\ \,d = 0\cdot d = 0\,.\\` 
 
 .. admonition:: Własność :math:`\,` IIa. :math:`\,`
 
@@ -122,33 +121,33 @@ Na podstawie postulatów :math:`\,` 1. :math:`\,` i :math:`\,` 3. :math:`\,`  mo
 
 .. math::
    
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}' + \boldsymbol{A}'',\,
-   \boldsymbol{A}' + \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\ \ =
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}' + \boldsymbol{A}''\,|\,
+   \boldsymbol{A}' + \boldsymbol{A}''\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =
 
    =\ \ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,
-   \boldsymbol{A}',\,\dots,\,\boldsymbol{A}_n\,]\ +\ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,
-   \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\ \ +
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,
+   \boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ +\ 
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,
+   \boldsymbol{A}''\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ +
 
    \ \ +\ \ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}'',\,
-   \boldsymbol{A}',\,\dots,\,\boldsymbol{A}_n\,]\ +\ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}'',\,
-   \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\ \ =
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}''\,|\,
+   \boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ +\ 
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}''\,|\,
+   \boldsymbol{A}''\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =
 
    =\ \ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,
-   \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\ +\ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}'',\,
-   \boldsymbol{A}',\,\dots,\,\boldsymbol{A}_n\,]\ \ =\ \ 0\,.
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,
+   \boldsymbol{A}''\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ +\ 
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}''\,|\,
+   \boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =\ \ 0\,.
 
 .. math::
 
-   \text{A zatem}\qquad\det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}'',\,
-   \boldsymbol{A}',\,\dots,\,\boldsymbol{A}_n\,]\ \ =\ \ -\ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,
-   \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\,.
+   \text{A zatem}\qquad\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}''\,|\,
+   \boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =\ \ -\ 
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,
+   \boldsymbol{A}''\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,.
 
 .. :math:`\ \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}' + \boldsymbol{A}'',\,
    \boldsymbol{A}' + \boldsymbol{A}'',\,\dots,\,\boldsymbol{A}_n\,]\ \ =`
@@ -188,10 +187,11 @@ Na podstawie postulatów :math:`\,` 1. :math:`\,` i :math:`\,` 3. :math:`\,`  mo
    .. math::
    
       \det\ [\,
-      \boldsymbol{A}_{\sigma(1)},\,\boldsymbol{A}_{\sigma(2)},\,\dots,\,\boldsymbol{A}_{\sigma(n)}\,]
+      \boldsymbol{A}_{\sigma(1)}\,|\;\boldsymbol{A}_{\sigma(2)}\,|\,\dots\,|\,
+      \boldsymbol{A}_{\sigma(n)}\,]
       \ \ =\ \ 
       \text{sgn}\,\sigma\,\cdot\,
-      \det\ [\,\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\dots,\,\boldsymbol{A}_n\,]\,,
+      \det\ [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,,
 
 **Dowód.** :math:`\,` Przejście od wyjściowego układu kolumn do układu określonego 
 przez permutację :math:`\,\sigma\ ` wymaga wykonania parzystej 
@@ -209,8 +209,9 @@ zmienia znak wyznacznika.
    to jej wyznacznik znika.
 
 **Dowód.** :math:`\,` Niech 
-:math:`\ d\,:\,=\,\det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_k,\,
-\dots,\,\boldsymbol{A}_n\,].`
+:math:`\ d\,:\,=\,\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,
+\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_k\,|\,
+\dots\,|\,\boldsymbol{A}_n\,]\,,\quad j<k\in\{1,2,\dots,n\}\,.`
 
 Jeżeli :math:`\ \boldsymbol{A}_j = \boldsymbol{A}_k\,,\ `
 to na podstawie własności IIb. mamy :math:`\ \,d = -\ d,\ \,` skąd :math:`\ \,d = 0.`
@@ -226,10 +227,10 @@ własności :math:`\,` IIIa. :math:`\,` wynika, :math:`\,` że dla :math:`\,\lam
 
 .. math::
    
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,\dots,\,\lambda\,\boldsymbol{A}',\,
-   \dots,\,\boldsymbol{A}_n\,]\ \ =\ \ 
-   \lambda\,\cdot\,\det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}',\,\dots,\,\boldsymbol{A}',\,
-   \dots,\,\boldsymbol{A}_n\,]\ =\ 0\,.
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,\dots\,|\,
+   \lambda\,\boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =\ \ 
+   \lambda\,\cdot\,\det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}'\,|\,\dots\,|\,
+   \boldsymbol{A}'\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ =\ 0\,.
 
 :math:`\;`
    
@@ -241,19 +242,19 @@ własności :math:`\,` IIIa. :math:`\,` wynika, :math:`\,` że dla :math:`\,\lam
 
 .. math::
    
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,
-   \boldsymbol{A}_k + \lambda\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_n\,]\ \ =
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\dots\,|\,
+   \boldsymbol{A}_k + \lambda\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_n\,]\ \ =
 
    =\ \ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_k,\,
-   \dots,\,\boldsymbol{A}_n\,]\ +\ 
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_k\,|\,
+   \dots\,|\,\boldsymbol{A}_n\,]\ +\ 
    \lambda\ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_j,\,
-   \dots,\,\boldsymbol{A}_n\,]\ \ =
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,
+   \dots\,|\,\boldsymbol{A}_n\,]\ \ =
 
    =\ \ 
-   \det\ [\,\boldsymbol{A}_1,\,\dots,\,\boldsymbol{A}_j,\,\dots,\,\boldsymbol{A}_k,\,
-   \dots,\,\boldsymbol{A}_n\,]\,.
+   \det\ [\,\boldsymbol{A}_1\,|\,\dots\,|\,\boldsymbol{A}_j\,|\,\dots\,|\,\boldsymbol{A}_k\,|\,
+   \dots\,|\,\boldsymbol{A}_n\,]\,.
 
    
 

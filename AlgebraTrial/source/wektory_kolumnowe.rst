@@ -105,10 +105,11 @@ nazywa się *izomorfizmem* grup (wektory geometryczne również tworzą grupę p
 W analogiczny sposób określa się izomorfizm innych, 
 bardziej zaawansowanych struktur algebraicznych.
 
-**Poeksperymentuj z Sage:** :math:`\\`
-Dla danych wartości :math:`\ x_1, x_2\ ` 
-otrzymasz geometryczny obraz :math:`\ \vec{v}\ `
-wektora :math:`\ \,\boldsymbol{x} = \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right]`.
+.. admonition:: Poeksperymentuj z Sage: 
+
+   Dla danych wartości :math:`\ x_1, x_2\ ` 
+   otrzymasz geometryczny obraz :math:`\ \vec{v}\ `
+   wektora :math:`\ \,\boldsymbol{x} = \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right]`.
 
 .. sagecellserver::
 

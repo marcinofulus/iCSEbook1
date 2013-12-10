@@ -162,7 +162,7 @@ Warunek konieczny i wystarczający dla istnienia jakichkolwiek rozwiązań ukła
       :label: 07
       
       \text{rz}\,\boldsymbol{A}\,=\,\text{rz}\,\boldsymbol{B}\,,\qquad
-      \text{gdzie}\quad\boldsymbol{B}\,=\,[\,\boldsymbol{A},\boldsymbol{b}\,].
+      \text{gdzie}\quad\boldsymbol{B}\,=\,[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,].
 
 Dla układu jednorodnego :eq:`06` warunek :eq:`07` jest zawsze spełniony,
 bo dopisanie kolumny zerowej nie zmienia rzędu macierzy.

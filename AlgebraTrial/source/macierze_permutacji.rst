@@ -131,8 +131,8 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
    Wynika to stąd, że każdą permutację :math:`\,\sigma\in S_m\,` można zapisać jako złożenie
    pewnej liczby transpozycji, którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
-2. Macierze permutacji są *ortogonalne*:
-   :math:`\quad\boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^T\ = 
+2. Macierze permutacji są :math:`\,` *ortogonalne*:
+   :math:`\quad\boldsymbol{P}_\sigma^{\,T}\,\boldsymbol{P}_\sigma\ = 
    \ \boldsymbol{I}_m\,,\quad\sigma\in S_m\,.`
 
 3. Iloczyn dwóch macierzy permutacji jest macierzą permutacji, przy czym
