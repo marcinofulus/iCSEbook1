@@ -117,6 +117,24 @@ plt6 = arrow((0,0,0),v1, color='red')          +\
 
 figlst.append([plt6,"Rys_6"])
 
+### Rysunek 7. Schemat injekcji przestrzeni V w przestrzeń W. ###
+
+vs = [(0,i) for i in range(-2,3)]
+ws = [(2,i) for i in range(-2,4)]
+pts0 = points(vs,color='red',pointsize=21,zorder=5)
+pts2 = points(ws,color='red',pointsize=21,zorder=5)
+plt7 = pts0+pts2
+for i in range(5): plt7 += line([vs[i],ws[i]])
+txt0 = text("$\\theta_V$",(-0.40,0),color='black',fontsize=17)
+txt2 = text("$\\theta_W$",(+2.45,0),color='black',fontsize=17)
+txt_F = text("$F\,$:",(-0.75,-3),color='black',fontsize=16)
+txt_V = text("$V$",(0,-3),color='black',fontsize=16) 
+arrow = text("$\\longrightarrow$",(1,-3),color='black',fontsize=17)
+txt_W = text("$W$",(2,-3),color='black',fontsize=16)
+plt7 += txt0+txt2+txt_F+txt_V+arrow+txt_W
+show(plt7,aspect_ratio=0.75,axes=False,figsize=6,xmin=-1)
+figlst.append([plt7,"Rys_7"])
+
 for [p,n] in figlst:
     #p.save('%s.jpg'%n)
     #p.save('%s.png'%n)

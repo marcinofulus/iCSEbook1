@@ -31,7 +31,7 @@ Wprowadzenie do układów równań liniowych
    wektory_kolumnowe
    geometria_ukladow_rownan_stat
    eliminacja_dla_rownan
-   zad_wprowadzenie_do_ukladow
+   wprowadzenie_do_ukladow_zadania
 
 Algebra macierzy
 ================
@@ -45,7 +45,7 @@ Algebra macierzy
    algebra_macierzy_dzialania
    algebra_macierzy_wlasnosci_dzialan
    algebra_macierze_w_sage
-   zad_algebra_macierzy
+   algebra_macierzy_zadania
 
 Operacje na macierzach
 ======================
@@ -66,7 +66,7 @@ Operacje na macierzach
    macierze_permutacji
    macierze_trojkatne
    rozklad_LU
-   zad_operacje_na_macierzach
+   operacje_na_macierzach_zadania
 
 Wyznaczniki
 ===========
@@ -93,7 +93,7 @@ Teoria i praktyka układów równań liniowych
    teoria_ukladow_rownan
    przyklad_z_dyskusja
    przyklad_ze_statyki
-   zad_teoria_i_praktyka_ukladow
+   teoria_i_praktyka_ukladow_zadania
 
 Przekształcenia liniowe
 =======================
@@ -111,17 +111,24 @@ Przekształcenia liniowe
    przeksztalcenia_lin_macierze
    przeksztalcenia_lin_operatory
    przeksztalcenia_lin_zmiana_bazy
+   przeksztalcenia_lin_zadania
 
 Przestrzenie unitarne
 =====================
 
-| *Iloczyn skalarny w przestrzeni rzeczywistej i zespolonej.*
+| *Iloczyn skalarny w przestrzeni zespolonej i rzeczywistej.*
 | *Definicja i przykłady przestrzeni unitarnych.*
 | *Nierówność Schwarza i jej konkretne realizacje.*
 | *Ortogonalność. Dopełnienie ortogonalne.*
 | *Baza ortogonalna i ortonormalna. Procedura Grama-Schmidta.*
 | *Macierze hermitowskie i unitarne.*
 | *Operatory hermitowskie i unitarne.*
+
+.. toctree::
+   
+   p_unitarne_iloczyn_skalarny
+   p_unitarne_norma
+   p_unitarne_ortogonalnosc
 
 Wartości i wektory własne
 =========================
@@ -139,8 +146,10 @@ Dowody wybranych twierdzeń
 
 .. toctree::
 
-   dow_wstep   
-   dow_operacje_na_macierzach
+   dowody_wstep   
+   dowody_operacje_na_macierzach
+   dowody_przeksztalcenia_lin
+   dowody_p_unitarne
 
 Zadania z Algebry liniowej
 ==========================

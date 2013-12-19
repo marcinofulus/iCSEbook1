@@ -893,30 +893,49 @@ spełnia warunek :math:`\,T^2=I,\ ` gdzie :math:`\,I\ ` jest przekształceniem i
    \begin{array}{l} Tv_1=v_3 \\ Tv_2=v_2 \\ Tv_3=v_1 \end{array}
    \qquad\Rightarrow\qquad
    \begin{array}{l}
-   T^2\,v_1=\,Tv_3=\,v_1=\,Iv_1 \\ T^2\,v_2=\,Tv_2=\,v_2=\,Iv_2 \\ T^2\,v_3=\,Tv_1=\,v_3=\,Iv_3
+   T^2\,v_1=\,Tv_3=\,v_1=\,I\,v_1 \\ T^2\,v_2=\,Tv_2=\,v_2=\,I\,v_2 \\ T^2\,v_3=\,Tv_1=\,v_3=\,I\,v_3
    \end{array}
 
-Z multiplikatywności macierzowej reprezentacji operatorów liniowych wynika, że analogiczną własność ma macierz przejścia: :math:`\ \boldsymbol{S}^2\ =\ \boldsymbol{I}_3.\ \,` 
-A zatem :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
+Z multiplikatywności macierzowej reprezentacji operatorów liniowych wynika, że analogiczną własność ma macierz przejścia: :math:`\ \boldsymbol{S}^2\ =\ \boldsymbol{I}_3,\ \,` 
+skąd :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
 
-Ostatecznie, podstawiając wyznaczone macierze do wzoru :eq:`F_prim_bis`, otrzymujemy ponownie
+.. Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`.
+
+.. code-block:: python
+
+   sage: F = matrix(QQ,[[3, -2, -1],
+   ...                  [2,  1, -3],
+   ...                  [1,  3,  2]])
+
+   sage: S = matrix(QQ,[[0,  0,  1],
+   ...                  [0,  1,  0],
+   ...                  [1,  0,  0]])
+
+   sage: F_1 = S*F*S
+   
+   sage: html.table([[S, '*', F, '*', S, '=', F_1]])
 
 .. math::
    
-   \boldsymbol{F}'\ =\ 
-   \left[\begin{array}{ccc} 0 & 0 & 1 \\ 
+   \left(\begin{array}{ccc} 0 & 0 & 1 \\ 
                             0 & 1 & 0 \\ 
-                            1 & 0 & 0 \end{array}\right]
-   \left[\begin{array}{rrr}
-         3 & -2 & -1 \\
-         2 &  1 & -3 \\
-         1 &  3 &  2 \end{array}\right]
-   \left[\begin{array}{ccc} 0 & 0 & 1 \\ 
+                            1 & 0 & 0 \end{array}\right)
+   \ \ast\ 
+   \left(\begin{array}{rrr} 3 & -2 & -1 \\
+                            2 &  1 & -3 \\
+                            1 &  3 &  2 \end{array}\right)
+   \ \ast\ 
+   \left(\begin{array}{ccc} 0 & 0 & 1 \\ 
                             0 & 1 & 0 \\ 
-                            1 & 0 & 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr}
+                            1 & 0 & 0 \end{array}\right)
+   \ =\ 
+   \left(\begin{array}{rrr}
           2 &  3 & 1 \\
          -3 &  1 & 2 \\
-         -1 & -2 & 3 \end{array}\right]\,.
+         -1 & -2 & 3 \end{array}\right)\,.
+
+
+
+
 
 
