@@ -1,0 +1,23 @@
+
+To co mamy:
+
+klasyfikacja: A. informacja kwantowa
+              B. optyka kwantowa
+              C. dekoherencja ogólnie, dynamika kwantowa 
+
+1. z286 dav.ipynb  : wpływ dekoherencji typu Daviesa na qubity: A 
+2. z291 osylatory_nieliniowe.ipynb: B   
+3. z287 discord.ipynb: kwantowy dyskord: A    
+4. z292 gazeau.ipynb: stany koherentne Gazeau-Klaudera: B             
+5. z288 telep.ipynb: teleportacja + dekoherencja: A  
+6. z293 dw_interf.ipynb: dzielniki wiązki i interferometry: B
+7. z289 kanaly_kwantowe.ipynb: kanały kwantowe: A
+8. z294 master_optyka.ipynb: dekoherencja w optyce kwantowej, równania Master: B
+9. z290 mix_ent.ipynb: splatanie stanów mieszanych: A
+10.z296 neutrina_osc.ipynb: Neutrina : cząstki elementarne !!!
+11.z295  koty_schrodingera.ipynb algebra CAR: czyli operatory fermionowe, nie ma ich w QuTipie: in progress :)  
+
+
+
+
+  
