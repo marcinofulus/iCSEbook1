@@ -227,9 +227,9 @@ Analiza równań różniczkowych zwyczajnych
    i numeryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z40>`__
 -  `Stany stacjonarne oraz ich stabilność. Klasyfikacja punktów
    osoblicwych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z41>`__
--  `Diagramy bifurkacyjne dla równań różniczkowych - algorytm konstrukcji<https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z42>`__
+-  `Diagramy bifurkacyjne dla równań różniczkowych i algorytmy ich konstrukcji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z42>`__
 -  `Praktyczy przewodnik po metodach analizy równań różniczkowych
-   zwyczajnych z Sage. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z88>`__
+   zwyczajnych w Sage. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z88>`__
 
 Astronomia
 ----------
@@ -352,8 +352,6 @@ Analiza czynników głównych, algorytm PCA.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `PCA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom01_z72>`__
--  `Analiza czynników głównych, algorytm PCA
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom01_z107>`__
 
 Wieloparametrowa kalibracja sygnałów NIR z zastosowaniem metody PCR.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -369,16 +367,12 @@ Zastosowania iteracyjnej metody najmniejszych kwadratów w chemii.
 
 -  `Zastosowania iteracyjnej metody najmniejszych kwadratów w
    chemii. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom05_z70>`__
--  `Zastosowania iteracyjnej metody najmniejszych kwadratów w chemii
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom05_z109>`__
 
 Analiza wariancji metodą ANOVA.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Analiza wariancji metodą
    ANOVA. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom06_z71>`__
--  `Analiza wariancji metodą ANOVA
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom06_z108>`__
 
 Elastomechanika
 ---------------
@@ -386,31 +380,22 @@ Elastomechanika
 Ruch drgający w ośrodkach sprężystych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Drgania i fale
-   mechaniczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z184>`__
--  `PF\_wyznaczanie przyśpieszenia ziemskiego - wahadło matematyczne,
-   różnicowe i
-   fizyczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z212>`__
--  `PF\_Wahadło matematyczne i
-   rewersyjne. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z213>`__
--  `PF\_Wyznaczanie modułu sztywności metodą
-   dynamiczną <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z221>`__
+- `Drgania i fale mechaniczne  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z184>`__
+- `Wyznaczanie przyśpieszenia ziemskiego - wahadło matematyczne, różnicowe i fizyczne  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z212>`__
+- `Wahadło matematyczne i rewersyjne. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z213>`__
+- `Wyznaczanie modułu sztywności metodą dynamiczną  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech01_z221>`__
 
 Sztywność i wytrzymałość ośrodków elastycznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie drgań obciążonej
-   sprężyny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech02_z215>`__
--  `PF\_Zderzenia sprężyste i
-   niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech02_z216>`__
+- `Badanie drgań obciążonej sprężyny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech02_z215>`__
+- `Zderzenia sprężyste i niesprężyste  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastmech02_z216>`__
 
 Moduł Younga
 ~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie prędkości dźwięku i modułu Younga za pomocą rury
-   Kundta <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastomech03_z217>`__
--  `PF\_Wyznaczanie modułu Younga metodą ugięcia
-   belki. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastomech03_z220>`__
+-  `Wyznaczanie prędkości dźwięku i modułu Younga za pomocą rury  Kundta <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastomech03_z217>`__
+-  `Wyznaczanie modułu Younga metodą ugięcia  belki. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElastomech03_z220>`__
 
 Elektrodynamika klasyczna
 -------------------------
@@ -418,25 +403,32 @@ Elektrodynamika klasyczna
 Transformacja Lorenza.
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Uzupełnić - Łobejko and co.!
+
 Fale elektromagnetyczne, superpozycja.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
-   fizycznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
--  `Dipol Hertza,pola elektromagnetyczne wokół dipola,
-   promieniowanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z146>`__
+- `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
+  fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
+
+.. -  `Dipol Hertza,pola elektromagnetyczne wokół dipola,
+.. promieniowanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z146>`__
 
 Szczególna Teoria Względności: zastosowanie techniki ray tracing.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Elektrodyn
-   03 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas03_z5>`__
+!PDF file
+
+-  `Szczególna Teoria Względności: zastosowanie
+   techniki ”ray tracing” <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas03_z5>`__
+
+
 
 Ogólna Teoria Względności: soczewkowanie grawitacyjne.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Ogólna Teoria
-   Względności <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas04_z152>`__
+- `Ogólna Teoria Względności
+  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas04_z152>`__
 
 Równanie Poissona
 ~~~~~~~~~~~~~~~~~
@@ -456,32 +448,35 @@ Elektryczność i magnetyzm
 Natężenie pola elektrycznego.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Pole pochodzące od rozkładu ładunku, dipol, kwadrupol, analogie z
-   funkcjami 1/zn, wykresy potencjału i
-   pola <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag01_z67>`__
--  `Pole pochodzące od ładunku poruszającego się ruchem jednostajnie
-   liniowym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag01_z68>`__
+-  `Pole pochodzące od rozkładu ładunków punktowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag01_z67>`__
+
+.. -  `Pole pochodzące od ładunku poruszającego się ruchem jednostajnie
+.. liniowym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag01_z68>`__
 
 Ładunek w polu elektrycznym.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie pojemności kondensatora z krzywej
+-  `Wyznaczanie pojemności kondensatora z krzywej
    rozładowania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z190>`__
--  `PF\_Wyznaczanie współczynnika samoindukcji i pojemności za pomocą
+-  `Wyznaczanie współczynnika samoindukcji i pojemności za pomocą
    obwodów prądu
    zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z191>`__
 
 Siła Lorenza.
 ~~~~~~~~~~~~~
 
--  `Spektrometr masowy
-   -symulacje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag03_z27>`__
+.. image:: figs/rel_czastka_w_polu.png
+   :alt: Propagacja implulsu w równaniu falowym
+   :align: right
+   :height: 160
+
+
+-  `Symulacja spektrometru masowego. 
+   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag03_z27>`__
+
 -  `Relatywistyczna cząstka w polu
    elektromagnetycznym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag03_z39>`__
--  `Aktualizacja materiałów
-   z39 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag03_z102>`__
--  `Aktualizacja materiałów
-   z27 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag03_z103>`__
+
 
 Prawo Ohma i Kirchoffa - symulacje obwodów elektrycznych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -848,6 +843,11 @@ Rozwiązywanie równania splotowego
 
 Równania różniczkowe cząstkowe:Laplace'a, falowe, Fokkera-Plancka.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: figs/polsin.gif
+   :alt: Propagacja implulsu w równaniu falowym
+   :align: right
+..   :height: 160
 
 -  `Równania różniczkowe cząstkowe - wybrane
    zagadnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem03_z241>`__
