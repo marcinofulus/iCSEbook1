@@ -1,11 +1,5 @@
 .. sectnum::
 
-
-Jak korzystać z materiałów?
-
-ekub, sws, visual, interakty w sage, ipython
-
-
 Algebra liniowa
 ---------------
 
@@ -135,11 +129,9 @@ Rozkłady macierzy LU,RU, SVD.
 
 -  `Postać schodkowa macierzy, przekształcenia elementarne i rozkład
    LU <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z47>`__
--  `Rozkład
-   QR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z48>`__
--  `SVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z49>`__
--  `Aktualizacja materiałów - rozkłady LU, RU i
-   SVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z84>`__
+-  `Rozkład QR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z48>`__
+-  `Rozkład SVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z49>`__
+-  `Zastosowania rozkładu  SVD w kompresji obrazu. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z84>`__
 
 Zastosowania algebry liniowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -427,11 +419,28 @@ Szczególna Teoria Względności: zastosowanie techniki ray tracing.
 Ogólna Teoria Względności: soczewkowanie grawitacyjne.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: figs/otw.jpg
+   :alt: Stożki światła dla metryki Schwarzschilda
+   :align: right
+   :height: 160
+
 - `Ogólna Teoria Względności
   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas04_z152>`__
 
 Równanie Poissona
 ~~~~~~~~~~~~~~~~~
+
+.. image:: figs/poisson.png
+   :alt: Numeryczne rozwiązanie dwuwymiarowego równania Poissona
+   :align: right
+   :height: 160
+
+Materiał ten zawiera opracowanie numerycznego podejścia do
+rozwiązywania równania Poissona metodą różnic skończonych. Krok po
+kroku zaprezentowano sposób konstrukcji od jedno-, dwu- i
+trójwymiarowego dyskretnego operatora Laplace'a oraz jego wydajną
+reprezentację na macierzach rzadkich wykorzystując do tego bibliotekę
+:code:`scipy.sparse`.
 
 -  `Numeryczne analiza równania
    Poissona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas05_z254>`__
@@ -483,103 +492,139 @@ Prawo Ohma i Kirchoffa - symulacje obwodów elektrycznych.
 
 -  `Rozwiązywanie złożonych obwodów jako grafów
    ukierunkowanych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z69>`__
--  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
-   Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
+.. -  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
+..    Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
 
 Obwody prądu zmiennego.
 ~~~~~~~~~~~~~~~~~~~~~~~
 
--  `El mag
-   05 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
+.. image:: figs/RLC.png
+   :alt: Numeryczne rozwiązanie dwuwymiarowego równania Poissona
+   :align: right
+   :height: 160
+
+Analiza własności obwodów prądu zmiennego z zastosowaniem aparatu
+algebry komputerowej i metod numerycznych do rozwiązywania równań
+różniczkowych 
+
+-  `Obwody prądu zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
+
 
 Pomiary i symulacje komputerowe wiekości elektrycznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie oporu elektrycznego za pomocą mierników
-   prądu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z173>`__
--  `PF\_Cechowanie watomierza i licznika energii
-   elektrycznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z176>`__
--  `PF\_Wyznaczanie oporu elektrycznego metodą mostka
-   Wheatstone'a <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z211>`__
+-  `Wyznaczanie oporu elektrycznego za pomocą mierników prądu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z173>`__
+-  `Cechowanie watomierza i licznika energii elektrycznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z176>`__
+-  `Wyznaczanie oporu elektrycznego metodą mostka Wheatstone'a <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z211>`__
 
 Doświadczalne badanie obwodów prądu zmiennego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Pomiar napięcia i prądu w obwodzie
-   RC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z194>`__
--  `PF\_Badanie rezonansu
-   elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z195>`__
+-  `Pomiar napięcia i prądu w obwodzie  RC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z194>`__
+-  `Badanie rezonansu elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z195>`__
 
 Eksperymentalne badanie siły Lorenza
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie wartości stosunku
-   e/m <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z196>`__
--  `PF\_Oscyloskop
-   katodowy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z197>`__
--  `PF\_Siła działająca na przewodnik z prądem w polu
-   magnetycznym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z198>`__
+-  `Wyznaczanie wartości stosunku e/m <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z196>`__
+-  `Oscyloskop katodowy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z197>`__
+-  `Siła działająca na przewodnik z prądem w polu magnetycznym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z198>`__
 
 Siła elektromotoryczna
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie siły elektromotorycznej i oporu wewnętrznego
-   ogniwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z172>`__
--  `PF\_Pomiar SEM fotoogniw za pomocą kompensatora prądu
-   stałego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z177>`__
--  `PF\_Indukcja
-   elektromagnetyczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z179>`__
+-  `Wyznaczanie siły elektromotorycznej i oporu wewnętrznego ogniwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z172>`__
+-  `Pomiar SEM fotoogniw za pomocą kompensatora prądu stałego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z177>`__
+-  `Indukcja elektromagnetyczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z179>`__
 
 Pojemność kondensatora
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie pojemności kondensatora oraz stałej dielektrycznej
-   metodą
-   mostkową <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z174>`__
--  `PF\_Drgania
-   relaksacyjne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z175>`__
+-  `Wyznaczanie pojemności kondensatora oraz stałej dielektrycznej metodą  mostkową <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z174>`__
+-  `Drgania relaksacyjne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z175>`__
 
 Badanie\_wektorowego\_dodawania\_napiecia
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie wektorowego dodawania napięć zmiennych w obwodzie
-   RLC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag11_z193>`__
+-  `Badanie wektorowego dodawania napięć zmiennych w obwodzie RLC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag11_z193>`__
 
 Pole elektryczne
 ~~~~~~~~~~~~~~~~
 
--  `Pole
-   elektryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag12_z251>`__
+.. image:: figs/linie_pola.png
+   :alt: Numeryczne rozwiązanie dwuwymiarowego równania Poissona
+   :align: right
+   :height: 160
+
+Analiza i wizualizacja pola elektrycznego pochodzącego od ładunków
+punktowych. Nacisk został położony na wykorzystanie algebry
+komputerowej do prostej automatyzacji algorytmicznej otrzymywania
+formuł i wizualizacji. W przypadku ciągłego rozkładu ładunku została
+zastosowana algebra komputerowa do otrzymania klasycznych wzorów. 
+
+-  `Pole elektryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag12_z251>`__
 
 Potencjal elektryczny
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: figs/Psi_dysk.png
+   :alt: Potencjał od naładowanego dysku
+   :align: right
+   :width: 360
+..   :height: 160
+
+
+Analiza i wizualizacja powierzchni ekwipotencjalnych pochodzących od
+ładunków punktowych . Nacisk został położony na wykorzystanie algebry
+komputerowej do wyprowadzania wzorów i wizualizacji. Klasyczne formuły
+na potencjał pochodzący od pewnych symetrycznych ciągłych rozkładów
+ładunków zostały wyprowadzone stosując CAS.
+
 -  `Potencjal
    elektryczny <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag13_z252>`__
+
 
 Energia układów ładunków
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Energia uładu
-   ładunków <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag14_z253>`__
+.. image:: figs/uklad_ladunkow.jpg
+   :alt: Układ ładunków
+   :align: right
+   :height: 160
+
+Obliczanie energii skończonych i nieskończonych układów ładunków z
+zastosowaniem zarówno metod algebry komputerowej jak i podejsciem
+algorytmicznym. Wykorzystano możliwości Sage do alternatywnego
+rozwiązywania szeregu klasycznych zadań.
+
+-  `Energia uładu ładunków <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag14_z253>`__
 
 Eksperymentalne badanie pola elektrycznego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie rozkładu pola
-   elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag15_z192>`__
+-  `Badanie rozkładu pola elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag15_z192>`__
 
 Ładunek i materia: oddziaływania ładunek-sieć.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Oddziaływanie ładunku z modelem sieci
-   krystalicznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag16_z316>`__
+Zastosowanie metod komputerowych do analizy i wizualizacji układów
+ładunek-sieć krystaliczna. Pomimo swojej prostoty, własności takiego
+układu są trudne do przedstawienia analitycznego a zastosowanie
+komputera powoduje przeniesienie środka ciężkości analizy na własności
+fizyczne.
+
+-  `Oddziaływanie ładunku z modelem sieci krystalicznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag16_z316>`__
 
 Ładunek i materia: oddziaływania dipol-sieć dipoli.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Oddziaływanie dipola z modelem sieci
-   krystalicznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag17_z317>`__
+Zastosowanie metod komputerowych do analizy i wizualizacji dipola
+oddziaływującego z siecią ładunków bądź dipoli. Sage okazuje się jest
+idealnym narzędziem do pokazania, własności takiego układu w sposób
+ścisły, ale bez żmudnych rachunków.
+
+- `Oddziaływanie dipola z modelem sieci krystalicznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag17_z317>`__
+
 
 Komunikacja z przyrządami pomiarowymi
 -------------------------------------
@@ -587,23 +632,65 @@ Komunikacja z przyrządami pomiarowymi
 Standardy interfejsów szeregowych RS-232, 422, 485, USB i IEEE-488.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Przykłady współczesnych interfejsów szeregowych.  Zalety i wady
+transmisji szeregowej.  Połączenia syncho- i asynchroniczne.
+Połączenia bezkolizyjne i kolizyjne wraz z przykładową kontrolą
+przepływu.  Architektura Master-Slave.  Warstwa fizyczna - połączenia
+wielo- i jednoprzewodowe.  Sygnały różnicowe jako metoda usuwania
+szumów.  Struktura znaku i parametry transmisji w interfejsie RS-232.
+Znaczenie kodów ASCII w transmisji szeregowej.  Transmisja przy użyciu
+ramek.  Proste metody korekcji błędów.
+
 -  `Wprowadzenie do standardów transmisji
    szeregowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar01_z305>`__
 
 Tworzenie oprogramowania do komunikacji szeregowej w języku C.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Oprogramowanie przykładowego mikrokontrolera w języku
-   C <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar02_z306>`__
+Realizacja prostego urządzenia pomiarowego w oparciu o powszechnie
+dostępne i tanie mikrokontrolery.  Przykład oparty będzie na odczycie
+temperatury z termometru wbudowanego w miktrokontroler TI MSP430.
+Przygotowanie kodu obejmuje określenie optymalnych parametrów
+transmisji oraz ustawień miktrokontrolera.  W szczególności ćwiczenie
+obejmie obliczanie dzielników zegara potrzebnych do uzyskania danej
+szybkości transmisji oraz tworzenia przykładowych ramek wraz z sumami
+kontrolnymi.  Kod w języku C prezentował będzie część transmisyjną
+oprogramowania w 3 różnych wersjach:
+
+a) wersji opartej na porcie ogólnego przeznaczenia i liczniku, bez użycia przerwań,
+b) wersji opartej na porcie ogólnego przeznaczenia, w której czas odmierzany jest przy użyciu przerwania,
+c) w wersji używającej wbudowanego w układ modułu UART.
+
+
+-  `Oprogramowanie przykładowego mikrokontrolera w języku C <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar02_z306>`__
 
 Komunikacja szeregowa w języku Python.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Moduł w miarę możliwości może być realizowany poprzez arkusz SAGE pod
+warunkiem, że student może go uruchomić lokalnie.  Program domyślnie
+napisany będzie w Python 2.6 - 2.7 z podkreśleniem różnić w zapisie
+ciągów pomiędzy Pythonem2 a Py3k.  Moduł zawiera:
+
+1) Identyfikację portów szeregowych w systemach Linux i Windows,
+2) opis i konfiguracje modułu serial,
+3) przygotowanie ramki transmisyjnej wraz z sumą kontrolną,
+4) prostą kontrolę przepływu opartą na metodzie poll
+5) różnice między typami str, bytes, unicode, bytearray
 
 -  `Program komunikacji szeregowej w języku
    Python <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar03_z307>`__
 
 Komunikacja z podstawowymi przyrządami pomiarowymi.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+W module opisane będą przykładowe programy napisane w różnych językach
+programowania Python (Linux, Windows), Visual Basic .Net lub C#
+(Windows) służące do komunikacji z:
+
+a) multimetrem HP (Agilent)
+b) kontrolerem temperatury Lakeshore 340/330
+c) przystawkami temperaturowymi
 
 -  `Przykładowe programy
    komunikacyjne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar04_z308>`__
@@ -614,11 +701,34 @@ Matematyczne metody biofizyki
 Układy dynamiczne w biofizyce.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Struktura modeli dynamiki
-   populacyjnej. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem01_z116>`__
+.. image:: figs/verhulst.png
+   :alt: Kilka rozwiązań modelu Verhulsta
+   :align: right
+   :height: 160
+
+Wstęp do metody budowania modeli z zakresu dynamiki populacyjnej na
+prostych przykładach: procesów urodzin, śmierci i migracji.
+
+-  `Struktura modeli dynamiki  populacyjnej. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem01_z116>`__
+
 
 Fraktale, algorytmy otrzymywania, własności.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: figs/paproc.png
+   :alt: Kilka rozwiązań modelu Verhulsta
+   :align: right
+   :height: 160
+
+Podstawowe definicje (wymiar podobieństwa, wymiar
+Hausdorffa). Przekształcenia
+afiniczne. Samo-niezmienniczość. Konstrukcja zbioru Cantora
+(algorytmy, wizualizacja).
+
+Podstawowe fraktale: dywan i trójkąt Sierpińskiego, krzywa Kocha,
+krzywa Peano, krzywa C Levy'ego, smok Heighwaya, paproć Barnsleya,
+zbiór Julii, zbiór Mandelbrota. IFS, wizualizacje, obliczanie wymiaru
+fraktalnego. Zadania.
 
 -  `Fraktale -
    wstęp. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem02_z115>`__
@@ -628,8 +738,18 @@ Fraktale, algorytmy otrzymywania, własności.
 Równanie dyfuzji: numeryczne metody rozwiązywania.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: figs/spiral.gif
+   :alt: Rozwiązanie układu Bielousowa-Żabotyńskiego
+   :align: right
+   :height: 160
+
+Przedstawione są schematy całkowanie równań parabolicznych równań
+różniczkowych typu dyfuzji i reakcji z dyfuzją (RDS). Nacisk położony
+jest na zrozumienie podstaw algorytmu oraz na prostą i efektywną
+implementację w środowisku python. 
+
 -  `Numeryczne rozwiązywanie równań
-   dyfuzji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem03_z123>`__
+   dyfuzji i reakcji z dyfuzją  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem03_z123>`__
 
 Mechanika klasyczna
 -------------------
@@ -637,33 +757,42 @@ Mechanika klasyczna
 Kinematyka punktu materialnego, analiza i wizualizacja rozwiązań równań ruchu.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Mechanika
-   01 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas01_z3>`__
+Prosty przykład komputerowej obróbki realnych danych pochodzących z
+akcelerometra wbudowanego w telefon komórkowy.
+
+-  `Kinematyka - numeryczna analiza danych z akcelerometru <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas01_z3>`__
+
 
 Dynamika punktu materialnego.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Mechanika
-   02 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas02_z4>`__
--  `PF\_Spadek swobodny w warunkach
-   rzeczywistych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas02_z121>`__
+Rozwiązywanie probemów i zadań z mechaniki z użyciem systemu algebry komputerowej.
+
+-  `Dynamika i statyka <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas02_z4>`__
+-  `Spadek swobodny w warunkach rzeczywistych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas02_z121>`__
 
 Ruch układów punktów materialnych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Środek masy układu punktów
-   materialnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z13>`__
--  `Zagadnienie dwóch
-   ciał. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z54>`__
--  `Układy fizyczne z
-   więzami <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z74>`__
--  `Aktualizacja
-   z13 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z100>`__
--  `Aktualizacja
-   z54 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z101>`__
+Analiza ruchu układów punktów materialnych z użyciem systemu algebry komputerowej.
+
+-  `Środek masy układu punktów materialnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z100>`__
+-  `Zagadnienie dwóch ciał. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z54>`__
+-  `Układy fizyczne z więzami <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z74>`__
 
 Drgania - numeryczne rozwiązania równań ruchu.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: figs/oscylatory.gif
+   :alt: Rozwiązanie numeryczne układu Fermiego-Pasty-Ulama
+   :align: right
+..   :height: 160
+
+Zbiór problemów obejmujących liniowe i nieliniowe drgania w układach
+jednowymiarowych i wielowymiarowych. Klasyczne zagadnienia drgań
+normalych czy liniowej sieci oscylatorów zostały poszerzone o
+wnikliwą analizę trudnego zagadnienia - problemu Fermiego-Pasty-Ulama.
+
 
 -  `Granica małych drgań w układzie
    jednowymiarowym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas04_z56>`__
@@ -673,11 +802,21 @@ Drgania - numeryczne rozwiązania równań ruchu.
    oscylatory <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas04_z58>`__
 -  `Problem
    Fermiego-Pasty-Ulama <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas04_z59>`__
--  `Aktualizacja - drgania harmoniczne i
-   anharmoniczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas04_z104>`__
+
 
 Rozwiązywanie równań ruchu z więzami
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: figs/rownanie.png
+   :alt: Rozwiązanie numeryczne układu Fermiego-Pasty-Ulama
+   :align: right
+   :width: 280
+
+Zastosowanie systemu algebry komputerowej do problemów
+wykorzystujących zasadę dAleberta. Materiał zawiera metodologię pracy
+wykorzystującą częściową automatyzacje generacji równań ruchu, tak by
+z jednej strony uniknąć powtarzania niepotrzebnych definicji a z
+drugiej strony cały kod był w dydaktyczny sposób podany dla czytelnika.
 
 -  `Zasada dAlemberta z systemem algebry
    komputerowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas05_z222>`__
@@ -685,72 +824,128 @@ Rozwiązywanie równań ruchu z więzami
 Chaos deterministyczny - wprowadzenie.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: figs/logistyczne.png
+   :alt: Diagram difurkacyjny równania logistycznego
+   :align: right
+   :height: 240
+
+
+Chaos deterministyczny jest zjawiskiem, które jest badane przede
+wszystkim metodami komputerowymi, co powoduje, że brak go w
+klasycznych podręcznikach. Poniższe materiały prezentują analizę
+komputerową tego zjawiska.
+
 -  `Klasyczne układy chaotyczne - równanie logistyczne i układ
    Lorenza <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas06_z60>`__
--  `Teoria układów
-   chaotycznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas06_z61>`__
--  `Chaos u układzie nieliniowego oscylatora z siłą
-   napędzającą <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas06_z62>`__
--  `Wykładniki Lapunova - przyklady
-   numeryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas06_z63>`__
+
+-  Chaos u układzie nieliniowego oscylatora z siłą
+   napędzającą: 
+
+     - `Symulacja online - przejście do chaosu <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Chaos/>`__
+     - `Symulacja online - czułość na warunki początkowe <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Chaos2/>`__
+
+-  `Wykładniki Lapunova <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas06_z63>`__
 
 Modelowanie realistycznych układów mechnicznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/phugoid.gif
+   :align: right
+   :figwidth: 450px
+   
+   Tor lotu szybowca z "zablokowanym drążkiem" 
+   w zależności od prędkości początkowej.
+
+
+Modelowanie różnych układów fizycznych wymagające zastosowania metod
+numerycznych. Klasycznym podejsciem było omijanie tego typu probemów,
+z powodu ograniczonych możliwości analizy bez zastosowania metod
+komputerowych. Mając do dypozycji potężne narzędzie w postaci Sage z
+wszystkimi wbudowanymi metodami numerycznymi możemy analizować
+realistyczne problemy.
+
+
 -  `Realistyczne modelowanie rzuty ukosnego (armata,
    L/D(Re)) <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z18>`__
+
 -  `Realistyczne modelowanie tarcia nieliniowego (problem
    froterki) <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z19>`__
--  `Dynamika lotu
-   samolotu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z64>`__
--  `Modelowanie
-   żaglowania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z65>`__
--  `Praktyczne metody całkowania układów z
+
+-  Dynamika lotu   samolotu - fugoida
+
+   - `Materiał w Sage<https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z64>`__
+   - `Symulacja online <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Phugoid>`__
+-  `Modelowanie żaglówki <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z65>`__
+
+
+.. bylo cos zrobione - calkowanie krok po kroku... -  `Praktyczne metody całkowania układów z
    więzami <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z66>`__
 
 Własności akustyczne materii
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Rezonans
+-  `Rezonans
    akustyczny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas08_z206>`__
--  `PF\_Wyznaczanie prędkości dźwięku w
+-  `Wyznaczanie prędkości dźwięku w
    powietrzu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas08_z207>`__
 
 Eksperymentalne badanie dynamiki bryły sztywnej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie gęstości za pomocą
+-  `Wyznaczanie gęstości za pomocą
    piknometru <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas09_z205>`__
--  `PF\_Wyznaczanie momentu
+-  `Wyznaczanie momentu
    bezwładności. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas09_z208>`__
--  `PF\_Ruch precesyjny
+-  `Ruch precesyjny
    żyroskopu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas09_z209>`__
 
 Eksperymentalne badania ruchu obrotowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Dynamika ruchu
+-  `Dynamika ruchu
    obrotowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas10_z182>`__
--  `PF\_Ruch w polu
+-  `Ruch w polu
    centralnym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas10_z183>`__
 
 Zderzenia sprężyste i niesprężyste
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Stół powietrzny - zderzenia sprężyste i
+-  `Stół powietrzny - zderzenia sprężyste i
    niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z181>`__
--  `PF\_Dynamika\_ruchu\_postępowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z202>`__
+-  `Dynamika\_ruchu\_postępowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z202>`__
 -  `Zderzenia sprężyste i
    niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z285>`__
 
 Oscylator harmoniczny
 ~~~~~~~~~~~~~~~~~~~~~
 
--  `Ocsylator
-   harmoniczny <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas12_z236>`__
+
+
+.. figure:: figs/rezonans.png
+   :align: right
+   :width: 350px
+   :figwidth: 350px
+
+   Zjawisko rezonansu
+
+Klasyczny oscylator harmoniczny jest jednym z najczęściej stosowanych
+modeli w fizyce. Przedstawiamy sposób otrzymania znanych wzorów
+wykorzystując w pełni system algebry komputerowej zawarty w Sage. Przy
+okazji pokazujemy pułapki, w które można wpaść nieumiejętnie
+wykorzystując narzędzia komputerowe.
+
+
+-  `Oscylator harmoniczny z Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas12_z236>`__
+
+- `Symulacja online: wahadło matematyczne i oscylator harmoniczny <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Wahadlo/>`__
+- `Symulacja online: wahadło matematyczne tłumione <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Wahadlo2/>`__
+
 
 Numeryczna analiza układów mechanicznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Modelowanie różnych układów fizycznych wymagające zastosowania metod
+numerycznych. 
 
 -  `Roller
    Coaster <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas13_z246>`__
@@ -764,27 +959,34 @@ Numeryczna analiza układów mechanicznych
 Teoria bryły sztywnej
 ~~~~~~~~~~~~~~~~~~~~~
 
--  `Bryła
-   sztywna. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas14_z276>`__
--  `PF\_Równowaga\_statyczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas14_z304>`__
+| *Położenie bryły sztywnej. Kąty Eulera. Prędkośc i przyspieszenie.*
+| *Moment pędu. Moment bezwładności i tensor momentu bezwładności.*
+
+-  `Bryła sztywna. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas14_z276>`__
+-  `Równowaga\_statyczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas14_z304>`__
 
 Doświadczalne badanie drgań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie ruchu wahadeł
+Połączenie symulacji z eksperymentem:
+
+a) pomiar rezonansu i dudnień układu dwóch wahadeł.
+b) Symulacja w sage - analiza równań różniczkowych, rozwiązanie dla układu pomiarowego.
+
+-  `Badanie ruchu wahadeł
    sprzężonych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas15_z214>`__
+
+
 
 Mechanika kwantowa
 ------------------
 
-Zagadnienie brzegowe, funkcje własne operatorów hermitowskich.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Patologie mechaniki kwantowej: potencjał typu
-   1/x^2 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant01_z243>`__
 
-Równanie Schrodingera: funkcja falowa - pakiety falowe, propagacja pakietu falowego, przejscie przez bariere, tunelowanie
+Równanie Schrodingera 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Numeryczna analiza równania ruchu w mechanice kwantowej na wybranych przykładach: funkcja falowa - pakiety falowe, propagacja pakietu falowego, przejscie przez bariere, tunelowanie.
 
 -  `Numeryczne rozwiązywanie równania
    Schrodingera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant02_z244>`__
@@ -799,38 +1001,74 @@ Cząstka w studni potencjału, przypadek jedno i dwuwymiarowy.
 -  `Numeryczna analiza zagadnienia cząstki w studni
    potencjału <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant04_z140>`__
 
-Gry kwantowe
-~~~~~~~~~~~~
 
-Oscylator harmoniczny.
-~~~~~~~~~~~~~~~~~~~~~~
+Kwantowy oscylator harmoniczny
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/Qoscylator.png
+   :align: right
+   :width: 300px
+   :figwidth: 300px
+
+   Funkcje własne oscylatra kwantowego.
+
+
+Cząstka kwantowa w jednowymiarowym potencjale typu :math:`~x^2` zwany
+kwantowym oscylatorem harmonicznym. W tym materiale zostały opracowane
+wizualizacje funkcji własnych oscylatora harmonicznego. Pomimo, że
+dysponujemy dokładnymi rozwiązaniami algebraicznymi, to prezentujemy
+porównanie z precyzyjną i wydajna numeryką. Ponadto rozwiązane jest
+też czasowe równania Schrodingera i została wykonana wizualiacja
+ewolucji funkcji falowej. Pokazano też ewolucję stanów Glaubera.
 
 -  `Oscylator
    Harmoniczny <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant06_z134>`__
 
-Atom wodoru, wizualizacja przestrzenna funkcji falowych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+   Atom wodoru, wizualizacja przestrzenna funkcji falowych.
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `atom wodoru w ujęciu funkcjonału gęstości
-   łądunkowej. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant07_z153>`__
+   -  `atom wodoru w ujęciu funkcjonału gęstości
+      łądunkowej. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant07_z153>`__
+
 
 Alternatywne metody rozwiązywania równania Schrodingera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Ilustracja rozwiązania równania Schrodingera jako zagadnienia początkowego
+
 -  `Numeryczne rozwiązanie równania Schrodingera metodami Eulera i
    Numerova <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant08_z315>`__
+
+
 
 Kwantowe układy otwarte
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+Układ kwantowy oddziałujący z otoczeniem - modele.  Otwarte układy
+dwu-poziomowe.  Dyfyzja kwantowa. Dekoherencja: dysypacja i defazing.
+
 -  `Kwantowe układy
    otwarte <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKwant09_z264>`__
+
+
 
 Metody matematyczne fizyki
 --------------------------
 
 Operatory różniczkowe dla pól skalarnych i wektorowych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/flux.png
+   :align: right
+   :width: 250px
+   :figwidth: 250px
+
+   Strumień przez zamknięty kontur.
+
+Kompleksowa analiza własności operatorów różniczkowych z zastosowanie algebry komputerowej.
+
+
 
 -  `Własności operatorów
    różniczkowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235>`__
