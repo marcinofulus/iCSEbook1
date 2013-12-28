@@ -285,86 +285,7 @@ Przełożyć!
 
 
 
-Chemia teoretyczna
-------------------
 
-Konstrukcja orbitali atomowych i molekularnych w oparciu o funkcje bazowe typu Gaussa.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Konstrukcja orbitali atomowych i molekularnych w oparciu o funkcjie
-   bazowe typu
-   Gaussa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor01_z20>`__
-
-
-Struktura atomów wieloelektronowych w ujęciu prostych metod obliczeniowych chemii kwantowej; termy atomowe.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Struktura atomów wieloelektronowych w ujęciu prostych metod
-   obliczeniowych chemii kwantowej; termy
-   atomowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor02_z21>`__
-
-Wyznaczanie krzywych energii potencjalnej dla wybranych cząsteczek dwuatomowych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Wyznaczanie krzywych energii potencjalnej dla wybranych cząsteczek
-   dwuatomowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor03_z22>`__
-
-
-Symulacja widm elektronowych w zakresie UV/VIS z użyciem metod funkcjonałów gęstości dla cząsteczek organicznych i nieorganicznych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Symulacja widm elektronowych w zakresie UV/VIS z użyciem metod
-   funkcjonałów gęstości dla cząsteczek organicznych i
-   nieorganicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor04_z23>`__
-
-
-Optymalizacja geometrii i wyznaczanie własności molekularnych dużych molekuł z zastosowaniem metody DFT.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Optymalizacja geometrii i wyznaczanie własności molekularnych dużych
-   molekuł z zastosowaniem metody DFT <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor05_z24>`__
-
-Oddziaływania międzycząsteczkowe na gruncie chemii kwantowej.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Oddziaływania międzycząsteczkowe na gruncie chemii
-   kwantowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor06_z25>`__
-
-Postulaty mechaniki kwantowej
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Postulaty mechaniki
-   kwantowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor07_z26>`__
-
-
-Chemometria
------------
-
-Analiza czynników głównych, algorytm PCA.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `PCA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom01_z72>`__
-
-Wieloparametrowa kalibracja sygnałów NIR z zastosowaniem metody PCR.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Konstrukcja modeli dyskryminacyjnych - dyskryminacyjny wariant algorytmu PCR.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Konstrukcja modelu klasyfikacyjnego z użyciem metody SIMCA.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Zastosowania iteracyjnej metody najmniejszych kwadratów w chemii.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Zastosowania iteracyjnej metody najmniejszych kwadratów w
-   chemii. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom05_z70>`__
-
-Analiza wariancji metodą ANOVA.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Analiza wariancji metodą
-   ANOVA. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom06_z71>`__
 
 Elastomechanika
 ---------------
@@ -492,6 +413,7 @@ Prawo Ohma i Kirchoffa - symulacje obwodów elektrycznych.
 
 -  `Rozwiązywanie złożonych obwodów jako grafów
    ukierunkowanych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z69>`__
+
 .. -  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
 ..    Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
 
@@ -607,6 +529,14 @@ Eksperymentalne badanie pola elektrycznego
 Ładunek i materia: oddziaływania ładunek-sieć.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. figure:: figs/iCSE_FElekmag16_z316_ladunak_siec.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+   Układ ładunek - sieć
+
 Zastosowanie metod komputerowych do analizy i wizualizacji układów
 ładunek-sieć krystaliczna. Pomimo swojej prostoty, własności takiego
 układu są trudne do przedstawienia analitycznego a zastosowanie
@@ -617,6 +547,13 @@ fizyczne.
 
 Ładunek i materia: oddziaływania dipol-sieć dipoli.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/iCSE_FElekmag17_z317_ladunak_dipol.png
+   :align: right
+   :figwidth: 230px
+   :width: 260px
+
+   Układ ładunek - dipol
 
 Zastosowanie metod komputerowych do analizy i wizualizacji dipola
 oddziaływującego z siecią ładunków bądź dipoli. Sage okazuje się jest
@@ -1056,6 +993,27 @@ dwu-poziomowe.  Dyfyzja kwantowa. Dekoherencja: dysypacja i defazing.
 Metody matematyczne fizyki
 --------------------------
 
+Pola skalarne i wektorowe
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/isosurfaces.png
+   :align: right
+   :width: 250px
+   :figwidth: 250px
+
+   Powierzchnie stałego pola.
+
+Materiały analizujące własności pół skalarnych i wektorowych oraz ich wizualizacje komputerowe:
+
+
+- Wstęp do metod wizualizacji pól wektorowych na płaszczyźnie i w przestrzeni: `wizualizacja pól <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235_wizualizacja_pol>`__. 
+
+- Własności pola wektorowego o współczynnikach  liniowo zależących od współrzędnych: `pole liniowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235_pole_liniowe>`__. 
+
+- Numeryczne obliczanie całek krzywoliniowych: `całki krzywoliniowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235_num_calki>`__.  
+
+
+
 Operatory różniczkowe dla pól skalarnych i wektorowych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1066,21 +1024,33 @@ Operatory różniczkowe dla pól skalarnych i wektorowych.
 
    Strumień przez zamknięty kontur.
 
-Kompleksowa analiza własności operatorów różniczkowych z zastosowanie algebry komputerowej.
+Materiały analizujące własności operatorów różniczkowych z zastosowaniem algebry komputerowej i wizualizacji komputerowej:
 
 
+-  Wyprowadzenie wzorów na dywergencję i rotację pola we współrzędnych kartezjąńskich oraz podstawowe własno`Własności tych operatorów `operatory różniczkowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235_operatory_rozniczkowe>`__
+-  Operatowy różniczkowe we współrzędnych krzywoliniowych - podejście wykorzystujące współczynniki Lame'go oraz algebrę komputerową:`Lame <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235_OP_Lame>`_
 
--  `Własności operatorów
-   różniczkowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem01_z235>`__
 
 Rozwiązywanie równania splotowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Opracowana została procedura rozwiązywania równania splotowego, która
+ma szczególne znaczenie dla analizy sygnałow pochodzacych z metod
+spektroskopowych i dyfrakcyjnych.
+
+
 -  `Rozwiązanie równania
    splotowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem02_z265>`__
 
-Równania różniczkowe cząstkowe:Laplace'a, falowe, Fokkera-Plancka.
+
+Równania różniczkowe cząstkowe: Laplace'a, falowe, Fokkera-Plancka.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wstęp do równań różniczkowych cząstkowych spotykanych w fizyce. Metody
+rozwiązywania równań rózniczkowych cząstkowych: metoda rozdzielenia
+zmiennych; metoda transformacji Fouriera. Funkcje Greena i
+propagatory. Do każdego z równań dodany jest podstawowy algorytm
+numerycznu umożliwiający interaktywne badanie właności rozwiązań.
 
 .. image:: figs/polsin.gif
    :alt: Propagacja implulsu w równaniu falowym
@@ -1090,26 +1060,27 @@ Równania różniczkowe cząstkowe:Laplace'a, falowe, Fokkera-Plancka.
 -  `Równania różniczkowe cząstkowe - wybrane
    zagadnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem03_z241>`__
 
-Transformacja Fouriera, FFT.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. @MK  - dokończyc, moze dodac przyklad równania Laplace'a z CFD? FFT, rozdzielanie zmiennych- moze CAS?
 
--  `Analiza
-   furierowska <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04_z242>`__
 
 Wielomiany ortogonalne
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/H6.png
+   :align: right
+   :width: 220px
+   :figwidth: 220px
+
+   Wielomian Hermite'a :math:`H_6(x)`.
+
+Podstawowe własności wielomianów ortogonalnych. Wizualizacje oraz
+algorytmy liczące wielomiany ortogonalne.
+
+
 -  `Wielomiany ortogonalne, własności i
    zastosowania. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem05_z297>`__
 
-Metody spektralne: różniczkowanie wielomianów Chebyschewa,
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Zagadnienie brzegowe.
-~~~~~~~~~~~~~~~~~~~~~
-
-Metoda elementów skończonych i różnic skończonych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Metody statystyczne
 -------------------
@@ -1117,47 +1088,106 @@ Metody statystyczne
 Rachunek błędów.
 ~~~~~~~~~~~~~~~~
 
--  `Rachunek
-   błędów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat01_z53>`__
--  `Aktualizacja materiałów Rachunek
-   błędów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat01_z91>`__
+.. figure:: figs/bledy.png
+   :align: right
+   :width: 300px
+   :figwidth: 300px
+
+   Pomiar wielkości fizycznej.
+
+Podstawowy rachunku błędów opracowane z Sage.
+
+-  `Rachunek   błędów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat01_z53>`__
+
 
 Podstawowe parametry rozkładu zmiennej losowej.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Podstawowe parametry rozkładu zmiennej
-   losowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat02_z75>`__
--  `Aktualizacja materiałów Podstawowe parametry rozkładu zmiennej
-   losowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat02_z92>`__
+Opracowanie interaktywnych wizualizacji oraz praktycznych zadań
+wykorzystujących system komputerowy Sage w celu nabycia doświadczenia
+we elementarnych własnościach zmiennych losowych.
+
+-  `Podstawowe parametry rozkładu zmiennej losowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat02_z75>`__
+
 
 Rozkłady prawdopodobieństwa.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Rozkłady
-   prawdopodobieństwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat03_z76>`__
--  `Aktualizacja Materiałów Rozkłady
-   prawdopodobieństwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat03_z93>`__
+.. figure:: figs/histogram.png
+   :align: right
+   :width: 200px
+   :figwidth: 200px
+
+   Histogram danych o rozkładzie normalnym.
+
+
+Praktyczne zadania dla studentów oraz interaktywne materiały
+wizualizacyjne mające na celu nabycie przez studenta intuicji w
+posługiwaniu się pojęciem rozkładu prawdopodobieństwa. Automatyczna
+generacja danych losowych do zbadania przez studenta.
+
+-  `Rozkłady prawdopodobieństwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat03_z76>`__
+-  `Rozkład  normalny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat05_z132>`__
+
 
 Generatory zmiennych losowych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Generowanie liczb losowych o zadanym
-   rozkładzie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat04_z130>`__
--  `Generatory zmiennych
-   losowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat04_z131>`__
+.. figure:: figs/odrzucanie.png
+   :align: right
+   :width: 200px
+   :figwidth: 200px
+
+   Metoda odrzucania.
+
+
+-  `Generatory zmiennych   losowych: <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat04_z131>`__
+
+   - Budowa podstawowego generatora programowego - Liniowego generatora kongruencyjnego, jego własności.
+   - Rejestr przesuwający z liniowym sprzężeniem zwrotnym.
+   - Generatory w Sage.
+
+- `Generowanie liczb losowych o zadanym  rozkładzie: <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat04_z130>`__
+
+  - Histogram.
+  - Metoda inwersyjna
+  - Metoda odrzucania
+  - Generowanie liczb losowych z rozkładem normalnym.
+
+
+
+
 
 Analiza błędów eksperymentalnych w praktyce
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Rozkład
-   normalny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat05_z132>`__
--  `PF\_Opracowanie wyników pomiarów w
+Ilustrowana przykładami instrukcja przeprowadzenia analizy błędów
+pomiarowych z wykorzystaniem wbudowanych mechanizmów Sage. Procedura
+opracowana pod kątem studentów wykonujących ćwiczenia w ramach
+pracowni fizycznych opracowywujących wyniki pomiarów w Sage.
+
+-  `Opracowanie wyników pomiarów w
    sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat05_z218>`__
--  `PF\_Analiza błędów eksperymentalnych w
-   sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat05_z219>`__
+-  `Analiza błędów eksperymentalnych w
+   Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat05_z219>`__
 
 Wstęp do analiz statystycznych w środowisku R
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/Rplot.png
+   :align: right
+   :width: 200px
+   :figwidth: 200px
+
+   Wykres z R w systemie Sage.
+
+
+Wprowadzenie do środowiska R. Parametryczne i nieparametryczne
+statystyki opisowe, podstawowe testy statystyczne, modele regresji
+liniowej. 
+
+Opracowanie wykorzystuje system notatnika w Sage z funkcjonalnością
+interpretera języka R.
 
 -  `Wstęp do analiz statystycznych w środowisku
    R <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MStat06_z151>`__
@@ -1168,11 +1198,22 @@ Mikrokontrolery
 Programowanie mikrokontrolera ARM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Sposoby programowania układu z mikroprocesorem CortexM4f, mającym
+szerokie zastosowania w automatyce. Przedstawione zostaną metody
+kompilacji i wgrywania kodu do układu.
+
+
 -  `Programowanie układu STM32f4 -
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro01_z266>`__
 
 Systemy czasu rzeczywistego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Omówienie podstawowych własności i możliwości systemów czasu
+rzeczywistego (RTOS): zarządzanie czasem procesora, wątki,
+przerwania. Charakterystyka systemu ChibiOS i jego przykładowe
+zastosowania.
+
 
 -  `ChibiOS/RT jako przykład otwartego systemu czasu
    rzeczywistego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro02_z267>`__
@@ -1180,13 +1221,31 @@ Systemy czasu rzeczywistego
 Interfejsy czujników cyfrowych w systemach wbudowanych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Interfejsu 1-wire, płytka Arduino Mini Pro z procesorem
+ATMega 328. Omówiony zostanie sposób podłączenia czujnika temperatury
+DS18B20 (1-wire) oraz komunikacja między układem STM32f4 i Arduino
+poprzez port szeregowy.  
+
 -  `Arduino Mini Pro jako interfejs do obsługi czujnika
    temperatury <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro03_z268>`__
+
+
+Sposób podłączenia i obsługi czujnika ciśnienia Honeywell MLH010BGT14A
+do Arduino Mini Pro. Arduino pełni funkcję interfejsu komunikacyjnego
+dla układu STM32f4 - Discovery.
+
+
 -  `Arduino Mini Pro jako interfejs do obsługi czujnika
    ciśnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro03_z269>`__
 
 Przetwornik analogowo-cyfrowy w systemach wbudowanych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Przedstawione zostaną informacje na temat przetworników ADC. Pokażemy
+sposób zbierania i wizualizacja danych z przetwornika w pakiecie
+Sage. Omówiony zostanie wpływ częstotliwości próbkowania na możliwości
+układu pomiarowego.
+
 
 -  `Obsługa przetowrnika analogowo- cyfrowego w STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro04_z270>`__
@@ -1194,11 +1253,21 @@ Przetwornik analogowo-cyfrowy w systemach wbudowanych
 Przetwarzanie sygnału na systemach wbudowanych: filtry FIR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Przedstawione zostaną podstawowe informacje na temat filtrów FIR i
+IIR. Pokażemy obróbkę sygnału za pomocą filtru pracującego na układzie
+STM32f4. Wizualizacja wyników filtracji zostanie wykonana w SAGE.
+
+
 -  `Implementacja filtru dolnoprzepustowego na układzie STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro05_z271>`__
 
 Zautomatyzowany pomiar i analiza temperatury z zastosowaniem systemów wbudowanych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pokażemy praktyczne zastosowanie mikrokontrolera typu ARM do zbierania
+i przetwarzania danych z termometru cyfrowego DS18B20. Omówimy import
+danych z czujnika do Sage.
+
 
 -  `Obsługa sensora temperatury w STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro06_z272>`__
@@ -1206,11 +1275,22 @@ Zautomatyzowany pomiar i analiza temperatury z zastosowaniem systemów wbudowany
 Pomiar ciśnienia na systemach wbudowanych i zastosowania.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Pokażemy praktyczne zastosowanie mikrokontrolera typu ARM do zbierania
+i przetwarzania danych z czujnika ciśnienia Honeywell
+MLH010BGT14A. Pokazane i omówione zostanie cechowanie czujnika.
+
+
 -  `Obsługa czujnika ciśnienia w STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro07_z273>`__
 
 Elementy cyfrowego przwtwarzania sygnału
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Przedstawione zostaną podstawowe pojęcia związane z cyfrowym
+przetwarzaniem sygnału: alogrytmy DFT i FFT, filtry cyfrowe
+FIR. Zaprezentowane zostanie wykorzystanie Sage do realizacji filtru
+FIR.
+
 
 -  `Wybrane zagadnienia DSP: filtracja
    sygnału <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro08_z274>`__
@@ -1218,69 +1298,24 @@ Elementy cyfrowego przwtwarzania sygnału
 Obsługa na systemie wbudowanym akcelerometru.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Wykorzystanie ChibiOS/RT do obsługi akcelerometru LIS3DSH/LIS302DL i
+transferu danych przez złącze USB. Do zbierania danych i ich
+wizualizacji zostanie wykorzystany pakiet Sage.
+
 -  `Obsługa akcelerometru w układzie STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro09_z275>`__
 
 Programowanie obiektowe Arduino.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Opracownie praktycznego wstępu do programowania obiektowego systemu
+klasy Arduino z wykorzystaniem peryferiów zawierający sensory i
+aktuatory.
+
 -  `Programowanie obiektowe Arduino z wykorzystaniem modułów Tinker
    Kit. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro10_z309>`__
 
-Modelowanie molekularne
------------------------
 
-Standardy wymiany informacji strukturalnych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Standardy wymiany informacji
-   strukturalnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z33>`__
--  `Standardy wymiany informacji strukturalnej
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z106>`__
-
-Notacja liniowa, kody SMILES/SMARTS.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Notacja liniowa, kody
-   SMILES/SMARTS <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z34>`__
--  `Notacja liniowa, kody SMILES/SMARTS
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z110>`__
-
-Eksploracja baz danych.
-~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Eksploracja baz
-   danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z35>`__
--  `Eksploracja baz danych
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z111>`__
-
-Generowanie struktur 2D/3D.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Generowanie struktur
-   2D/3D <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek04_z262>`__
-
-Deskryptory molekularne.
-~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Deskryptory
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z36>`__
--  `Deskryptory molekularne
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z112>`__
-
-Analiza SAR/QSAR.
-~~~~~~~~~~~~~~~~~
-
--  `Analiza
-   SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
--  `Analiza SAR/QSAR
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z113>`__
-
-Dokowanie molekularne.
-~~~~~~~~~~~~~~~~~~~~~~
-
--  `Dokowanie
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
 
 Nanotechnologia
 ---------------
@@ -1288,11 +1323,20 @@ Nanotechnologia
 Grafen
 ~~~~~~
 
+Sieć rzeczywista i odwrotna grafenu. Pierwsza strefa Brilluoina,
+punkty symetrii. Analityczne i numeryczne wylicznenie relacji
+dyspersyjnej. Opis równaniem Diraca. Gęstość stanów.
+
 -  `Podstawowe własności elektroniczne
    grafenu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_NanoTechn01_z261>`__
 
 Studnie potencjału w nanotechnologii
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+- gaz 2-wymiarowy
+- kwantowe druty
+- kwantowe kropki
 
 -  `studnie potencjalu w
    nanotechnologii <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_NanoTechn02_z160>`__
@@ -1300,8 +1344,10 @@ Studnie potencjału w nanotechnologii
 Prądy trwale w nanoskopowych pierścieniach
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Prądy trwałe w nanoskopowych
-   pierścieniach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_NanoTechn03_z299>`__
+Analiza numeryczna zjawisk równowagowych prądów trwałych w
+pierścieniach nanoskopowych w stałym polu magnetycznym.
+
+-  `Prądy trwałe w nanoskopowych pierścieniach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_NanoTechn03_z299>`__
 
 Numeryczna dynamika płynów
 --------------------------
@@ -1309,11 +1355,37 @@ Numeryczna dynamika płynów
 Elementy składowe równań dynamiki płynów - równanie adwekcji i dyfuzji
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Równanie adwekcji i
-   dyfuzji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow02_z281>`__
+.. figure:: figs/nieliniowa_konwekcja.png
+   :align: right
+   :width: 300px
+   :figwidth: 300px
+
+   Propagacja warunku początkowego w równaniu nieliniowej adwekcji.
+
+
+Wstęp do równania Naviera Stokesa. Opracowanie krok po kroku, metod
+rozwiązywania numerycznego prostych algorytmów dla równań zawierającyc
+istotne elementy równań przepływów - równań adwekcji liniowej i
+nieliniowej oraz równania dyfuzji.
+
+-  `Równanie adwekcji i dyfuzji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow02_z281>`__
+
 
 Elementy składowe równań dynamiki płynów - równanie Poissona i Naviera-Stokesa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/cavity1.png
+   :align: right
+   :width: 200px
+   :figwidth: 200px
+
+   Przepływ w zagłębieniu.
+
+
+Implementacja rozwiązywania równania Poissona, jako niezbędnego etapu
+całkowania równań Naviera-Stokesa. Opracowanie konstrukcji schematu
+rozwiązywania równania NS na przykładzie prostego układu
+dwuwymiarowego.
 
 -  `Równanie Poissona i algorytm całkowania równania
    Naviera-Stokesa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow03_z282>`__
@@ -1321,28 +1393,38 @@ Elementy składowe równań dynamiki płynów - równanie Poissona i Naviera-Sto
 Metoda Siatkowa Boltzmanna - wstęp praktyczny
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Wstęp do metody
-   LBM <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow05_z283>`__
+-  `Wstęp do metody  LBM <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow05_z283>`__
 
 Klasyczne problemy dynamiki cieczy rozwiązywane na GPU metodą LBM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Klesyczne problemy dynamiki
+-  `Klasyczne problemy dynamiki
    cieczy. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow06_z284>`__
 
 Współczynnik lepkości cieczy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie współczynnika lepkości cieczy metodą
+Prawo Stokesa i jego ograniczenia; numeryczna analiza ruchu; pomiar
+czasu spadania kul w rzeczywistej cieczy
+
+Opory przepływu cieczy rzeczywistej; wzór Poiseuille’a; wyznaczanie
+współczynnika lepkości na podstawie ilości cieczy przepływającej przez
+kapilarę w funkcji czasu; porównanie wydajności przepływu bez
+uwzględnienia i z uwzględnieniem tarcia wewnętrznego cieczy w
+kapilarze
+
+Prawo Stokesa; teoretyczne uzasadnienie zależności współczynnika
+lepkości od temperatury; pomiar czasu spadania kul w cieczy
+
+
+-  `Wyznaczanie współczynnika lepkości cieczy metodą
    Stokesa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow07_z199>`__
--  `PF\_Wyznaczanie współczynnika lepkości cieczy metodą
+-  `Wyznaczanie współczynnika lepkości cieczy metodą
    wypływu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow07_z200>`__
--  `PF\_Wyznaczanie temperaturowej zależności współczynnika lepkości
+-  `Wyznaczanie temperaturowej zależności współczynnika lepkości
    cieczy za pomocą wiskozymetru
    Höpplera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FDynplynow07_z201>`__
 
-PRAC
-~~~~
 
 Optyka i budowa materii
 -----------------------
@@ -1350,19 +1432,19 @@ Optyka i budowa materii
 Optyka geometryczna
 ~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie polaryzacji
+-  `Badanie polaryzacji
    światła <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka01_z164>`__
--  `PF\_Wyznaczanie ogniskowej soczewek
+-  `Wyznaczanie ogniskowej soczewek
    cienkich <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka01_z165>`__
--  `PF\_Badanie wad
+-  `Badanie wad
    soczewek <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka01_z166>`__
 
 Optyka falowa: dyfrakcja interferencja.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie długości fali światła za pomocą siatki
+-  `Wyznaczanie długości fali światła za pomocą siatki
    dyfrakcyjnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka02_z167>`__
--  `PF\_Interferencja światła - pierścienie
+-  `Interferencja światła - pierścienie
    Newtona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka02_z170>`__
 
 Optyka kwantowa układów nieliniowych
@@ -1398,10 +1480,10 @@ Koty Schrodingera
 Załamanie i polaryzacja światła
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Wyznaczanie współczynnika załamania światła w szkle metodą kąta
+-  `Wyznaczanie współczynnika załamania światła w szkle metodą kąta
    najmniejszego
    odchylenia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z180>`__
--  `PF\_Badanie\_skręcenia\_płaszczyzny\_polaryzacji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z210>`__
+-  `Badanie\_skręcenia\_płaszczyzny\_polaryzacji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z210>`__
 
 Procesy nieliniowe w układach biologicznych/Dynamika Populacyjna
 ----------------------------------------------------------------
@@ -1545,11 +1627,12 @@ Wstęp do Matlab/Octave (lub alternatywnie Python+numpy+matplotlib).
 -  `Aktualizacja - Sage jako graficzny
    kalkulator <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf01_z105>`__
 
-Octave (Python) jako kalkulator.
+Sage jako kalkulator.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `TI
-   02 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf02_z11>`__
+Podstawowe sposoby wykorzystania pakietu Sage.
+
+-  `Sage jako kalkulator <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf02_z11>`__
 
 Instrukcje sterujące i funkcje,listy, krotki, słowniki, pętle for i while, istrukcja if, operatory warunkowe, funkcje (def, lambda), wyrażenia symboliczne, wyrażenia listowe.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1559,8 +1642,8 @@ Instrukcje sterujące i funkcje,listy, krotki, słowniki, pętle for i while, is
 -  `Aktualizacja materiałów Instrukcje sterujące i
    funkcje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf03_z94>`__
 
-Wizualizacja danych: wykresy dwui trójwymiarowe.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wizualizacja danych: wykresy dwu i trójwymiarowe.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Wizualizacja
    danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf04_z78>`__
@@ -1624,9 +1707,9 @@ Kondensacje Bosego-Einsteina
 Eksperymentalne badanie przejść fazowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Pomiar zależności temperatury wrzenia wody od
+-  `Pomiar zależności temperatury wrzenia wody od
    ciśnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody06_z203>`__
--  `PF\_Wyznaczanie napięcia powierzchniowego cieczy metodą rurek
+-  `Wyznaczanie napięcia powierzchniowego cieczy metodą rurek
    włoskowatych i metodą rozrywania warstwy
    powierzchniowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody06_z204>`__
 
@@ -1802,13 +1885,13 @@ Badanie przejść fazowych prostych układów metodą dynamiki molekularnej
 Spektroskopia molekularna.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Badanie widm optycznych przy pomocy
+-  `Badanie widm optycznych przy pomocy
    spektroskopu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek04_z168>`__
 
 Lasery.
 ~~~~~~~
 
--  `PF\_Badanie gęstości zapisu informacji na płytach CD i
+-  `Badanie gęstości zapisu informacji na płytach CD i
    DVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek05_z169>`__
 
 Wstęp do fizyki cząstek elementarnych
@@ -1847,27 +1930,27 @@ Sieci krystaliczne, sieć odwrotna.
 Ciepło właściwe.
 ~~~~~~~~~~~~~~~~
 
--  `PF\_Pomiar ciepła właściwego powietrza metodą rozładowania
+-  `Pomiar ciepła właściwego powietrza metodą rozładowania
    kondensatora <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond03_z187>`__
--  `PF\_Wyznaczanie ciepła właściwego metodą
+-  `Wyznaczanie ciepła właściwego metodą
    ostygania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond03_z188>`__
 
 Półprzewodniki.
 ~~~~~~~~~~~~~~~
 
--  `PF\_Badanie zależności temperaturowej oporu elektrycznego metali i
+-  `Badanie zależności temperaturowej oporu elektrycznego metali i
    półprzewodników <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond04_z171>`__
--  `PF\_Wyznaczanie charakterystyk
+-  `Wyznaczanie charakterystyk
    fotoelementów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond04_z178>`__
 
 Fonony w sieci jedno- i dwuatomowej.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `PF\_Pomiar przewodności cieplnej
+-  `Pomiar przewodności cieplnej
    izolatorów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond05_z185>`__
--  `PF\_Wyznaczanie współczynnika rozszerzalności liniowej ciał
+-  `Wyznaczanie współczynnika rozszerzalności liniowej ciał
    stałych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond05_z186>`__
--  `PF\_Pomiar przewodnictwa cieplnego metalu dla długiego
+-  `Pomiar przewodnictwa cieplnego metalu dla długiego
    pręta <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond05_z189>`__
 
 Poziomy energetyczne i gęstość stanów dla elektronów swobodnych.
@@ -1878,8 +1961,146 @@ Poziomy energetyczne i gęstość stanów dla elektronów swobodnych.
 -  `poziomy energetyczne i gestosc stanow dla elektronow
    swobodnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_z149>`__
 
---------------
 
-Loga EU
+Chemia teoretyczna
+------------------
+
+Konstrukcja orbitali atomowych i molekularnych w oparciu o funkcje bazowe typu Gaussa.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Konstrukcja orbitali atomowych i molekularnych w oparciu o funkcjie
+   bazowe typu
+   Gaussa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor01_z20>`__
+
+
+Struktura atomów wieloelektronowych w ujęciu prostych metod obliczeniowych chemii kwantowej; termy atomowe.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Struktura atomów wieloelektronowych w ujęciu prostych metod
+   obliczeniowych chemii kwantowej; termy
+   atomowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor02_z21>`__
+
+Wyznaczanie krzywych energii potencjalnej dla wybranych cząsteczek dwuatomowych.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Wyznaczanie krzywych energii potencjalnej dla wybranych cząsteczek
+   dwuatomowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor03_z22>`__
+
+
+Symulacja widm elektronowych w zakresie UV/VIS z użyciem metod funkcjonałów gęstości dla cząsteczek organicznych i nieorganicznych.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Symulacja widm elektronowych w zakresie UV/VIS z użyciem metod
+   funkcjonałów gęstości dla cząsteczek organicznych i
+   nieorganicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor04_z23>`__
+
+
+Optymalizacja geometrii i wyznaczanie własności molekularnych dużych molekuł z zastosowaniem metody DFT.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Optymalizacja geometrii i wyznaczanie własności molekularnych dużych
+   molekuł z zastosowaniem metody DFT <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor05_z24>`__
+
+Oddziaływania międzycząsteczkowe na gruncie chemii kwantowej.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Oddziaływania międzycząsteczkowe na gruncie chemii
+   kwantowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor06_z25>`__
+
+Postulaty mechaniki kwantowej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Postulaty mechaniki
+   kwantowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemteor07_z26>`__
+
+
+Chemometria
+-----------
+
+Analiza czynników głównych, algorytm PCA.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `PCA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom01_z72>`__
+
+Wieloparametrowa kalibracja sygnałów NIR z zastosowaniem metody PCR.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Konstrukcja modeli dyskryminacyjnych - dyskryminacyjny wariant algorytmu PCR.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Konstrukcja modelu klasyfikacyjnego z użyciem metody SIMCA.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zastosowania iteracyjnej metody najmniejszych kwadratów w chemii.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Zastosowania iteracyjnej metody najmniejszych kwadratów w
+   chemii. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom05_z70>`__
+
+Analiza wariancji metodą ANOVA.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Analiza wariancji metodą
+   ANOVA. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom06_z71>`__
+
+
+
+Modelowanie molekularne
+-----------------------
+
+Standardy wymiany informacji strukturalnych.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Standardy wymiany informacji
+   strukturalnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z33>`__
+-  `Standardy wymiany informacji strukturalnej
+   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z106>`__
+
+Notacja liniowa, kody SMILES/SMARTS.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Notacja liniowa, kody
+   SMILES/SMARTS <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z34>`__
+-  `Notacja liniowa, kody SMILES/SMARTS
+   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z110>`__
+
+Eksploracja baz danych.
+~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Eksploracja baz
+   danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z35>`__
+-  `Eksploracja baz danych
+   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z111>`__
+
+Generowanie struktur 2D/3D.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Generowanie struktur
+   2D/3D <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek04_z262>`__
+
+Deskryptory molekularne.
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Deskryptory
+   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z36>`__
+-  `Deskryptory molekularne
+   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z112>`__
+
+Analiza SAR/QSAR.
+~~~~~~~~~~~~~~~~~
+
+-  `Analiza
+   SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
+-  `Analiza SAR/QSAR
+   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z113>`__
+
+Dokowanie molekularne.
+~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Dokowanie
+   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
+
+
+
 
 © iCSE 2013
