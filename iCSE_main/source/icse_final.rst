@@ -1580,14 +1580,8 @@ Python - programowanie zorientowane obiektowo
 -  `Python - programowanie zorientowane
    obiektowo <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow07_z302>`__
 
-TO CHANGE Metaprogramowanie - generacja kodu w czasie rzeczywistym.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Systemy algebry komputerowej: CAS.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TO CHANGE Zagadnienia wydajności obliczeniowej: równoległość i optymalizacja.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Programowanie równoległe
 ------------------------
@@ -1634,7 +1628,7 @@ Podstawowe sposoby wykorzystania pakietu Sage.
 
 -  `Sage jako kalkulator <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf02_z11>`__
 
-Instrukcje sterujące i funkcje,listy, krotki, słowniki, pętle for i while, istrukcja if, operatory warunkowe, funkcje (def, lambda), wyrażenia symboliczne, wyrażenia listowe.
+Instrukcje sterujące i funkcje, listy, krotki, słowniki, pętle for i while, istrukcja if, operatory warunkowe, funkcje (def, lambda), wyrażenia symboliczne, wyrażenia listowe.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Instrukcje sterujące i
