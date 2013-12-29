@@ -282,14 +282,13 @@ Motory molekularne – wstęp do analizy ich działania w oparciu o strukturę m
    :width: 250px
 
    Ruch we fluktuującym potencjale okresowym o złamanej symetrii jest
-   archetypem w modelowaniu motorów molekuparnych.
+   archetypem w modelowaniu motorów molekularnych.
 
 Opis motorów molekularnych. Motory biologiczne w komórkach. Skale
 wielkości fizycznych w komórce bilogicznej. Mechaniczne modele motorów
 molekularnych.
 
--  `Motory
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z258>`__
+-  `Motory molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z258>`__
 
 
 Modelowanie wzrostu guza nowotworowego
@@ -303,7 +302,8 @@ Modelowanie wzrostu guza nowotworowego
    Ewolucja czasową zmiany liczby komórek nowotworowych dla róznych
    warunków początkowych.
 
-Jedna z najprostszych metod modelowania wzrostu komórek nowotworowych uwzględniajaca dwa elementy: 
+Jedna z najprostszych metod modelowania wzrostu komórek nowotworowych
+uwzględniajaca dwa elementy:
 
 -  proces wzrostu komórek nowotworowych  - analogicznie do modelu Verhulsta; 
 -  proces śmierci komórek nowotworowych przez czynniki zewnętrzne np. system immunologiczny.
@@ -707,8 +707,8 @@ fraktalnego. Zadania.
 -  `Fraktale -
    przykłady. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BMetmatem02_z117>`__
 
-Równanie dyfuzji: numeryczne metody rozwiązywania.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Równanie dyfuzji i reakcji z dyfuzją: numeryczne metody rozwiązywania.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: figs/spiral.gif
    :alt: Rozwiązanie układu Bielousowa-Żabotyńskiego
@@ -796,8 +796,8 @@ drugiej strony cały kod był w dydaktyczny sposób podany dla czytelnika.
 Chaos deterministyczny - wprowadzenie.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: figs/logistyczne.png
-   :alt: Diagram difurkacyjny równania logistycznego
+.. image:: figs/Lorenz.png
+   :alt: Chaotyczna trajektoria w układzie Lorenza
    :align: right
    :height: 240
 
@@ -1522,48 +1522,147 @@ Załamanie i polaryzacja światła
 Procesy nieliniowe w układach biologicznych/Dynamika Populacyjna
 ----------------------------------------------------------------
 
-Jednowymiarowe modele ciągłe dynamiki populacyjnej: ofiary-drapieżnika; modele z opóźnieniem.
+Jednowymiarowe modele ciągłe dynamiki populacyjnej.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Modele
-   jednowymiarowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin01_z118>`__
+.. figure:: figs/malthus.jpg
+   :align: right
+   :figwidth: 250px
+   :width: 190px
+
+   Thomas Robert Malthus (1766-1834)
+
+Modele jednowymiarowe:: ofiary-drapieżnika, model Malthusa, Verhulsta
+oraz z drapieżcą:
+
+- `Notatnik Sage  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin01_z118>`__
+- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin01_z118_modele_jednowymiarowe.html>`__
+
 
 Modele oddziałujących populacji: układ Lotki-Volterry.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Modele ofiara-drapieżca: Lotki-Volterry oraz
-   Maya <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin02_z119>`__
+.. figure:: figs/lotka_volterra.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Populacja drapieżników i ofiar w czasie.
+
+*... w modelu tym rozważamy 2 populacje: "ofiary" i "drapieżniki".
+"ofiary" mogą rozmnażać się i umierać śmiercią naturalaną. Ponadto
+"ofiary" giną śmiercią tragiczną zjadane przez "drapieżników", które
+to rozmnażają się i umierają śmiercią naturalną (niestety) ...*
+
+Modele ofiara-drapieżca: Lotki-Volterry oraz Maya:
+
+- `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin02_z119>`__
+- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin02_z119_ofiara_drapiezca.html>`__
+
 
 Modele dyskretne dynamiki populacyjnej: chaos deterministyczny.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Model
-   logistyczny <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin03_z120>`__
+.. figure:: figs/logistyczne.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
 
-Kinetyka reakcji chemicznych, oscylacje chemiczne.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Diagram difurkacyjny równania logistycznego
 
--  `Kinetyka Reakcji
-   Chemicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin04_z122>`__
+*Równanie logistyczne jest to wersja dyskretna modelu Verhulsta. Ma ono
+jednak radykalnie inne i o wiele ciekawsze własności! Skąd wynika
+wersja dyskretna? Pytanie jest typu: co było pierwsze: jajko czy kura?*
+
+-  `Model logistyczny <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin03_z120>`__
+
+.. gdzie jest rozdział? 
+
+Kinetyka reakcji chemicznych 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/enzym.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Rozwiązanie kinetyki reakcji enzymatycznej
+
+Kinetyka zajmuje się przewidywaniem zmian stężeń substratów i
+produktów reakcji chemicznych w czasie, Równanie kinetyczne to
+zazwyczaj równanie różniczkowe opisujące zmiany stężenia molowego
+reagentów w czasie zachodzenia reakcji chemicznej. W tym materiale
+będziemy badań takie równania, w tym słynny model reakcji
+enzymatycznek Michaelisa-Menten.
+
+Kinetyka Reakcji Chemicznych:
+
+- `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin04_z122>`__
+- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin04_z122_kinetyka_chemiczna.html>`__
+
 
 Równania reakcji z dyfuzją. Fale biologiczne. Modele ekspansji i inwazji gatunków.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Modele Reakcji z
-   Dyfuzją <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin05_z125>`__
+.. figure:: figs/fisher_kologomorow.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Rozwiązanie równania Fishera-Kologomorowa w 1d
+
+Uwzględnienie zjawisk związanych z przestrzennymi zmianami modeluje
+się z pomocą równań różniczkowych cząstkowych (występują pochodne ze
+względu na zmienne przestrzenne). Poniższy materiał przybliży nam
+sposób takiego modelowania.  
+
+Modele Reakcji z Dyfuzją:
+
+- `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin05_z125>`__
+- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin05_z125_reakcja_dyfuzja.html>`__
 
 Modele epidemii; model Kermacha-McKendricka.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Modele
-   epidemii <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin06_z155>`__
+.. figure:: figs/epidemia2d_random_media.gif
+   :align: right
+   :figwidth: 250px
+   :width: 250px
 
+   Model Kermacka-McKendricka w przestrzeni dwuwymiarowej w losowym ośrodku.
+
+Opis czasowego rozchodzenia się infekcji w populacji na przykładzie
+modelu Kermacka-McKendricka. Rozszerzenie modelu na przestrzenne
+rozchodzenie się epidemii.
+
+Modele epidemii:
+
+-  `Notatnik Sage  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin06_z155>`__
+-  `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin06_z155_modele_epidemii.html>`__
 
 Reakcje Biełousowa-Żabotyńskiego.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Reakcja
-   Biełousowa-Żabotynskiego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin08_z161>`__
+.. figure:: figs/oregonator_excitable.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Portret fazowy Oregonatora w reżimie "wzbudliwym", który prowadzi o
+   rozwiązań typu spirale jeśli reakcja będzie w przestrzeli
+   limitowana dyfuzją.
+
+
+
+Analiza uproszczonego modelu - tzw. Oregonatora, reakcji
+Biełousowa-Żabotynskiego. Portret fazowy, analiza rozwiązań,
+pojawienie się cykli granicznych. Badanie tworzenia się struktur
+przestrzennych w reakcji BZ z dyfuzją w dwóch wymiarach.
+
+Reakcja  Biełousowa-Żabotynskiego: 
+
+-  `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin08_z161>`__
+-  `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin08_z161_BZ.html>`__
 
 
 Programowanie
@@ -1572,11 +1671,13 @@ Programowanie
 C/C++ w obliczeniach naukowych: "C for python users"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `C/C++ w obliczeniach naukowych:
-   wstęp <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow01_z129>`__
+Opracowanie stanowi "primer" programowania w języku C/C++ w
+zastosowaniach naukowych, dla osób posiadających podstawy
+programowania w języku Python.
 
-C/C++ korzystanie z istniejących bibliotek i gotowych hierarchii objektów.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `C/C++ w obliczeniach naukowych dla znających Python
+   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow01_z129>`__
+
 
 Python w obliczeniach naukowych (wykorzystanie bibliotek numpy i scipy).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
