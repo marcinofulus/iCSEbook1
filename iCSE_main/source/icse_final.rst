@@ -223,26 +223,15 @@ Analiza równań różniczkowych zwyczajnych
 -  `Praktyczy przewodnik po metodach analizy równań różniczkowych
    zwyczajnych w Sage. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z88>`__
 
-Astronomia
-----------
-
-Prawa Keplera.
-~~~~~~~~~~~~~~
-
-Fizyka gwiazd
-~~~~~~~~~~~~~
-
-Astronomia obserwacyjna.
-~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Wyznaczanie odległości
-   astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
 
 Biofizyczne aspekty wzrostu i rozwoju roślin
 --------------------------------------------
 
 Modelowanie wzrostu roślin.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Oscylacyjny model wzrostu łagiewek pyłkowych, propozycja rozwiązania w
+oparciu o mechanizm geometrycznej frustracji symetrii.
 
 -  `Oscylacyjny model wzrostu łagiewek
    pyłkowych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin01_z314>`__
@@ -251,10 +240,17 @@ Modelowanie wzrostu roślin.
 Zagadnienia proliferacji komórek, wzrost organów roślinnych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Zastosowanie tensora wzrostu do modelowania wzrostu liścia arabidopsis
+i anizotropii wzrostu w dwóch wymiarach.
+
 -  `Modelowanie wzrostu liścia w dwóch wymiarach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin03_z311>`__
 
 Kwasowa teoria wzrostu, rola białek (ekspansyny) we wzroście roślin.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Szczególne rozwiązania równania Ortegi dla regularnego wzrostu komórki
+roślinnej dla modelu interkalacji polimerów w ścianę komórkową oraz
+aktywności ekspansyny.
 
 -  `Szczególne rozwiązania równania Ortegi dla regularnego wzrostu
    komórki roślinnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin04_z313>`__
@@ -263,26 +259,65 @@ Kwasowa teoria wzrostu, rola białek (ekspansyny) we wzroście roślin.
 Biofizyka tkanek. Molekularne procesy zachodzące w tkankach
 -----------------------------------------------------------
 
-Podstawowe modele wzrostu populacji komórkowych. 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Transmisje impulsów nerwowych: Model Hodgkina-Huxleya.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| *Model Malthusa, model ciągły i dyskretny, model logistyczny.*
+.. figure:: figs/HH.png
+   :align: right
+   :figwidth: 350px
+   :width: 350px
 
-Przełozyć!
+   Wynik symulacji model Hodgkina-Huxleya.
+
+-  `Transmisje impulsów nerwowych: model
+   Hodgkina-Huuxleya <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin07_z133>`__
+
+
+Motory molekularne – wstęp do analizy ich działania w oparciu o strukturę molekuł.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/ratchet_model.svg
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Ruch we fluktuującym potencjale okresowym o złamanej symetrii jest
+   archetypem w modelowaniu motorów molekuparnych.
+
+Opis motorów molekularnych. Motory biologiczne w komórkach. Skale
+wielkości fizycznych w komórce bilogicznej. Mechaniczne modele motorów
+molekularnych.
+
+-  `Motory
+   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z258>`__
 
 
 Modelowanie wzrostu guza nowotworowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-https://sage2.icse.us.edu.pl/home/pub/486/
+.. figure:: figs/guz.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+   Ewolucja czasową zmiany liczby komórek nowotworowych dla róznych
+   warunków początkowych.
+
+Jedna z najprostszych metod modelowania wzrostu komórek nowotworowych uwzględniajaca dwa elementy: 
+
+-  proces wzrostu komórek nowotworowych  - analogicznie do modelu Verhulsta; 
+-  proces śmierci komórek nowotworowych przez czynniki zewnętrzne np. system immunologiczny.
+
+
+- `Wzrost guza nowotworowego <https://sage2.icse.us.edu.pl/home/pub/486/>`__
 
 
 
-Modelowanie kinetyki zachodzenia reakcji w komórkach (Michaelis-Menten).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Struktury aminokwasów, białek, DNA, RNA.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Przełożyć!
-
+-  `Wykorzystanie dostępnych baz danych
+   genów. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek03_z298>`__
 
 
 
@@ -1451,38 +1486,37 @@ Optyka kwantowa układów nieliniowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Kwantowe oscylatory
-   nieliniowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka03_z291>`__
+   nieliniowe <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/osylatory_nieliniowe.ipynb>`__
 
 Optyka kwantowa - stany ściśnione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Stany koherentne
-   Gazeau-Klaudera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka04_z292>`__
+   Gazeau-Klaudera <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/gazeau.ipynb>`__
 
 Dekoherencja w optyce
 ~~~~~~~~~~~~~~~~~~~~~
 
 -  `Kwantowooptyczne równania
-   Master <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka05_z294>`__
+   Master <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/master_optyka.ipynb?create=1>`__
 
 Dzielniki wiązki i inteferometry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Kwantowy opis dzielników wiązki i
-   interferometru <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka06_z293>`__
+-  `Kwantowy opis dzielników wiązki i interferometru <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/dw_interf.ipynb?create=1>`__
 
 Koty Schrodingera
 ~~~~~~~~~~~~~~~~~
 
 -  `Optyczne realizacje stanów kotów
-   Schrodingera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka07_z295>`__
+   Schrodingera <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/koty_schrodingera.ipynb?create=1>`__
 
 Załamanie i polaryzacja światła
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Wyznaczanie współczynnika załamania światła w szkle metodą kąta
-   najmniejszego
-   odchylenia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z180>`__
+   najmniejszego odchylenia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z180>`__
+
 -  `Badanie\_skręcenia\_płaszczyzny\_polaryzacji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z210>`__
 
 Procesy nieliniowe w układach biologicznych/Dynamika Populacyjna
@@ -1524,11 +1558,6 @@ Modele epidemii; model Kermacha-McKendricka.
 -  `Modele
    epidemii <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin06_z155>`__
 
-Transmisje impulsów nerwowych: Model Hodgkina-Huxleya.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Transmisje impulsów nerwowych: model
-   Hodgkina-Huuxleya <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin07_z133>`__
 
 Reakcje Biełousowa-Żabotyńskiego.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1536,8 +1565,6 @@ Reakcje Biełousowa-Żabotyńskiego.
 -  `Reakcja
    Biełousowa-Żabotynskiego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin08_z161>`__
 
-CHANGE: Proste modele strukturalne. Modele generacyjne i z czasem ciagłym.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Programowanie
 -------------
@@ -1766,6 +1793,22 @@ Bramki kwantowe
 -  `bramki
    kwantowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant07_z158>`__
 
+Astronomia
+----------
+
+Prawa Keplera.
+~~~~~~~~~~~~~~
+
+Fizyka gwiazd
+~~~~~~~~~~~~~
+
+Astronomia obserwacyjna.
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `Wyznaczanie odległości
+   astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
+
+
 Wstęp do astrofizyki
 --------------------
 
@@ -1825,35 +1868,7 @@ Mikrosoczewkowanie
 -  `Mikrosoczewkowanie
    grawitacjyne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz07_z226>`__
 
-Wstęp do biofizyki molekularnej
--------------------------------
 
-Obliczenia struktury i własności molekuł umieszczonych w zewnętrznym polu elektrycznym.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Modelowanie molekuł leków – analiza ich aktywności w oparciu o własności rozkładu. gęstości elektronowej i potencjału elektrostatycznego.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Struktury aminokwasów, białek, DNA, RNA.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Wykorzystanie dostępnych baz danych
-   gennów. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek03_z298>`__
-
-Motory molekularne – wstęp do analizy ich działania w oparciu o strukturę molekuł.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Motory
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z258>`__
-
-Przekaz sygnałów w komórkach nerwowych - numeryczna analiza równań Hodgkina-Huxley'a.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sieci neuronowe i podstawy ich modelowania.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Obrazowanie komputerowe propagacji fal akustycznych w ośrodkach jednorodnych i niejednorodnych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wstęp do fizyki atomowej i molekularnej
 ---------------------------------------
