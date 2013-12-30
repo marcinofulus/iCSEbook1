@@ -359,8 +359,8 @@ Fale elektromagnetyczne, superpozycja.
 - `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
   fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
 
-.. -  `Dipol Hertza,pola elektromagnetyczne wokół dipola,
-.. promieniowanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z146>`__
+- `Dipol Hertza,pola elektromagnetyczne wokół dipola,
+  promieniowanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z146>`__
 
 Szczególna Teoria Względności: zastosowanie techniki ray tracing.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,8 +449,8 @@ Prawo Ohma i Kirchoffa - symulacje obwodów elektrycznych.
 -  `Rozwiązywanie złożonych obwodów jako grafów
    ukierunkowanych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z69>`__
 
-.. -  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
-..    Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
+-  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
+    Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
 
 Obwody prądu zmiennego.
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -554,12 +554,21 @@ zastosowaniem zarówno metod algebry komputerowej jak i podejsciem
 algorytmicznym. Wykorzystano możliwości Sage do alternatywnego
 rozwiązywania szeregu klasycznych zadań.
 
--  `Energia uładu ładunków <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag14_z253>`__
+-  `Energia układu ładunków <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag14_z253>`__
 
 Eksperymentalne badanie pola elektrycznego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Badanie rozkładu pola elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag15_z192>`__
+
+
+Pole Magnetyczne 
+~~~~~~~~~~~~~~~~
+
+- Pole magnetyczne pochodzące od poruszających się ładunków, pętla przewodnika, solnenoid. 
+- Indukcja elektromagnetyczna, dokłane obliczanie strumienia pochodzącego od układu dipoli magnetycznych.
+
+.. MMK: DODAC MATERIAL!
 
 Ładunek i materia: oddziaływania ładunek-sieć.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -585,7 +594,7 @@ fizyczne.
 
 .. figure:: figs/iCSE_FElekmag17_z317_ladunak_dipol.png
    :align: right
-   :figwidth: 230px
+   :figwidth: 260px
    :width: 260px
 
    Układ ładunek - dipol
@@ -1078,7 +1087,7 @@ spektroskopowych i dyfrakcyjnych.
    splotowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem02_z265>`__
 
 
-Równania różniczkowe cząstkowe: Laplace'a, falowe, Fokkera-Plancka.
+Równania różniczkowe cząstkowe: Laplace'a, falowe, Fokkera-Plancka
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wstęp do równań różniczkowych cząstkowych spotykanych w fizyce. Metody
@@ -1675,8 +1684,8 @@ Opracowanie stanowi "primer" programowania w języku C/C++ w
 zastosowaniach naukowych, dla osób posiadających podstawy
 programowania w języku Python.
 
-- `C/C++ w obliczeniach naukowych dla znających Python
-   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow01_z129>`__
+- `C/C++ w obliczeniach naukowych dla znających Python <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow01_z129>`__
+
 
 
 Python w obliczeniach naukowych (wykorzystanie bibliotek numpy i scipy).
@@ -1744,10 +1753,7 @@ Technologia informacyjna
 Wstęp do Matlab/Octave (lub alternatywnie Python+numpy+matplotlib).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `TI
-   01 <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf01_z6>`__
--  `Aktualizacja - Sage jako graficzny
-   kalkulator <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf01_z105>`__
+-  `Wstęp do korzystania z systemu Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf01_z6>`__
 
 Sage jako kalkulator.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1756,8 +1762,12 @@ Podstawowe sposoby wykorzystania pakietu Sage.
 
 -  `Sage jako kalkulator <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf02_z11>`__
 
-Instrukcje sterujące i funkcje, listy, krotki, słowniki, pętle for i while, istrukcja if, operatory warunkowe, funkcje (def, lambda), wyrażenia symboliczne, wyrażenia listowe.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Elementy programowania w Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Instrukcje sterujące i funkcje, listy, krotki, słowniki, pętle for i
+while, istrukcja if, operatory warunkowe, funkcje (def, lambda),
+wyrażenia symboliczne, wyrażenia listowe.*
 
 -  `Instrukcje sterujące i
    funkcje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf03_z77>`__
@@ -2070,6 +2080,8 @@ Poziomy energetyczne i gęstość stanów dla elektronów swobodnych.
    kohezja <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_z147>`__
 -  `poziomy energetyczne i gestosc stanow dla elektronow
    swobodnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_z149>`__
+- `równanie Dysona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_rownanie_Dysona>`__
+- `gestosc stanow dla elektronow w 1,2,3d <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_DOS>`__
 
 
 Chemia teoretyczna
