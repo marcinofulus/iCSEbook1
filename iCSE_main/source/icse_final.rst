@@ -33,7 +33,7 @@ Wprowadzenie do układów równań liniowych
 | *Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań.*
 | *Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne.*
 
-- `rozdział  <http://visual.icse.us.edu.pl/LA/#wprowadzenie-do-ukladow-rownan-liniowych>`__
+- `rozdział w książce  <http://visual.icse.us.edu.pl/LA/#wprowadzenie-do-ukladow-rownan-liniowych>`__
 -  `Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg01_z12>`__
 
 Algebra macierzy
@@ -43,7 +43,7 @@ Algebra macierzy
 | *Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.*
 | *Praktyczne operacje na wektorach i macierzach w systemie Sage.*
 
-- `rozdział  <http://visual.icse.us.edu.pl/LA/#algebra-macierzy>`__
+- `rozdział w książce  <http://visual.icse.us.edu.pl/LA/#algebra-macierzy>`__
 
 - `Wyznaczanie rzędu macierzy - automatycznie generowane zadanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg02_z82>`__
 
@@ -57,7 +57,7 @@ Operacje na macierzach
 | *Algorytm praktycznego obliczania macierzy odwrotnej.*
 | *Rozkład LU i jego zastosowania.*
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#operacje-na-macierzach>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#operacje-na-macierzach>`__
 - `Macierze i operacje na macierzach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg02_z44>`__
 
 Wyznaczniki
@@ -67,7 +67,7 @@ Wyznaczniki
 | *Rozwinięcie Laplace'a jako praktyczna metoda obliczania wyznacznika.*
 | *Własności i zastosowania wyznaczników.*
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#wyznaczniki>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#wyznaczniki>`__
 
 - `Obliczanie, własności i interpretacja geometryczna wyznacznika macierzy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg02_z38>`__
 
@@ -75,7 +75,7 @@ Wyznaczniki
 Teoria i praktyka układów równań liniowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#teoria-i-praktyka-ukladow-rownan-liniowych>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#teoria-i-praktyka-ukladow-rownan-liniowych>`__
 
 .. | *Zarys teorii układów równań liniowych.*
    | *Rozwiązywanie układów równań w systemie Sage.*
@@ -90,7 +90,7 @@ Przekształcenia liniowe
 | *Izomorfizm przestrzeni wektorowych.*
 | *Reprezentacja macierzowa przekształceń liniowych.*
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#przeksztalcenia-liniowe>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#przeksztalcenia-liniowe>`__
 - `Przekształcenia liniowe, jądro i obraz, interpretacja   geometryczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg02_z43>`__
 
 
@@ -105,7 +105,7 @@ Przestrzenie unitarne
 | *Macierze hermitowskie i unitarne.*
 | *Operatory hermitowskie i unitarne.*
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#przestrzenie-unitarne>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#przestrzenie-unitarne>`__
 
 
 Wartości i wektory własne
@@ -116,7 +116,7 @@ Wartości i wektory własne
 | *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
 | *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
 
-- `rozdział    <http://visual.icse.us.edu.pl/LA/#wartosci-i-wektory-wlasne>`__
+- `rozdział w książce    <http://visual.icse.us.edu.pl/LA/#wartosci-i-wektory-wlasne>`__
 
 -  `Wartości własne, wyznaczanie i  interpretetacja <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg05_z45>`__
 
@@ -218,42 +218,12 @@ Analiza równań różniczkowych zwyczajnych
 -  `Rozwiązywanie równań różnicznowych zwyczajnych, metody algebraiczne
    i numeryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z40>`__
 -  `Stany stacjonarne oraz ich stabilność. Klasyfikacja punktów
-   osoblicwych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z41>`__
+   osobliwych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z41>`__
 -  `Diagramy bifurkacyjne dla równań różniczkowych i algorytmy ich konstrukcji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z42>`__
 -  `Praktyczy przewodnik po metodach analizy równań różniczkowych
    zwyczajnych w Sage. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z88>`__
 
 
-Biofizyczne aspekty wzrostu i rozwoju roślin
---------------------------------------------
-
-Modelowanie wzrostu roślin.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Oscylacyjny model wzrostu łagiewek pyłkowych, propozycja rozwiązania w
-oparciu o mechanizm geometrycznej frustracji symetrii.
-
--  `Oscylacyjny model wzrostu łagiewek
-   pyłkowych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin01_z314>`__
-
-
-Zagadnienia proliferacji komórek, wzrost organów roślinnych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Zastosowanie tensora wzrostu do modelowania wzrostu liścia arabidopsis
-i anizotropii wzrostu w dwóch wymiarach.
-
--  `Modelowanie wzrostu liścia w dwóch wymiarach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin03_z311>`__
-
-Kwasowa teoria wzrostu, rola białek (ekspansyny) we wzroście roślin.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Szczególne rozwiązania równania Ortegi dla regularnego wzrostu komórki
-roślinnej dla modelu interkalacji polimerów w ścianę komórkową oraz
-aktywności ekspansyny.
-
--  `Szczególne rozwiązania równania Ortegi dla regularnego wzrostu
-   komórki roślinnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin04_z313>`__
 
 
 Biofizyka tkanek. Molekularne procesy zachodzące w tkankach
@@ -351,13 +321,15 @@ Elektrodynamika klasyczna
 Transformacja Lorenza.
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Uzupełnić - Łobejko and co.!
+.. MMK Uzupełnić - Łobejko and co.! 
+
+- `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
+  fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
+
 
 Fale elektromagnetyczne, superpozycja.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
-  fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
 
 - `Dipol Hertza,pola elektromagnetyczne wokół dipola,
   promieniowanie <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z146>`__
@@ -365,7 +337,7 @@ Fale elektromagnetyczne, superpozycja.
 Szczególna Teoria Względności: zastosowanie techniki ray tracing.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!PDF file
+.. MMK PDF file
 
 -  `Szczególna Teoria Względności: zastosowanie
    techniki ”ray tracing” <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas03_z5>`__
@@ -418,14 +390,6 @@ Natężenie pola elektrycznego.
 .. -  `Pole pochodzące od ładunku poruszającego się ruchem jednostajnie
 .. liniowym <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag01_z68>`__
 
-Ładunek w polu elektrycznym.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Wyznaczanie pojemności kondensatora z krzywej
-   rozładowania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z190>`__
--  `Wyznaczanie współczynnika samoindukcji i pojemności za pomocą
-   obwodów prądu
-   zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z191>`__
 
 Siła Lorenza.
 ~~~~~~~~~~~~~
@@ -449,14 +413,13 @@ Prawo Ohma i Kirchoffa - symulacje obwodów elektrycznych.
 -  `Rozwiązywanie złożonych obwodów jako grafów
    ukierunkowanych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z69>`__
 
--  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.
-    Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
+-  `Liniowe obwody elektryczne (sieci) DC, Tw. Thevenina i Tw.  Nortona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag04_z154>`__
 
-Obwody prądu zmiennego.
-~~~~~~~~~~~~~~~~~~~~~~~
+Obwody prądu zmiennego
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: figs/RLC.png
-   :alt: Numeryczne rozwiązanie dwuwymiarowego równania Poissona
+   :alt: RLC
    :align: right
    :height: 160
 
@@ -470,18 +433,65 @@ różniczkowych
 Pomiary i symulacje komputerowe wiekości elektrycznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Wyznaczanie oporu elektrycznego za pomocą analogowych mierników prądu
+Układy do poprawnego mierzenia napięcia i natężenia prądu za pomocą
+mierników. Cechowanie watomierza i licznika energii elektrycznej
+Praca i moc prądu elektrycznego, watomierz i licznik energii elektrycznej
+
 -  `Wyznaczanie oporu elektrycznego za pomocą mierników prądu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z173>`__
 -  `Cechowanie watomierza i licznika energii elektrycznej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z176>`__
 -  `Wyznaczanie oporu elektrycznego metodą mostka Wheatstone'a <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag06_z211>`__
 
-Doświadczalne badanie obwodów prądu zmiennego
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Doświadczalne badanie własności obwodów prądu zmiennego
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/7.2.1.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+   Krzywa rozładowania.
+
+Wyznaczanie pojemności kondensatora z krzywej rozładowania Rozwiązanie
+równania różniczkowego opisującego charakterystykę rozładowania
+kondensatora przez opór i wykorzystanie rozwiązania do doświadczalnego
+wyznaczenia pojemności kondensatora
+
+-  `Wyznaczanie pojemności kondensatora z krzywej
+   rozładowania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z190>`__
+
+
+Wyznaczanie współczynnika samoindukcji i pojemności za pomocą obwodów
+prądu zmiennego Prądy zmienne sinusoidalne, przesunięcie fazowe,
+zawada, opór omowy, opór indukcyjny i pojemnościowy, współczynnik
+samoindukcji
+
+
+-  `Wyznaczanie współczynnika samoindukcji i pojemności za pomocą
+   obwodów prądu
+   zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z191>`__
+
+Pomiar napięcia i prądu w obwodzie RC
+Obwód RC, charakterystyka ładowania i rozładowania kodensatora
+
 
 -  `Pomiar napięcia i prądu w obwodzie  RC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z194>`__
+
+Badanie obwodów rezonansowych RLC
+Szeregowe i równoległe obwody RLC, rezonans w obwodach RLC
+
 -  `Badanie rezonansu elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag07_z195>`__
+
 
 Eksperymentalne badanie siły Lorenza
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wyznaczanie wartości stosunku e/m. Ruch elektronu w polu elektrycznym i
+magnetycznym, siła Lorentza. Siła działająca na przewodnik z prądem w
+polu elektrycznym Siła Lorentza, waga prądowa.
+
 
 -  `Wyznaczanie wartości stosunku e/m <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z196>`__
 -  `Oscyloskop katodowy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag08_z197>`__
@@ -490,6 +500,24 @@ Eksperymentalne badanie siły Lorenza
 Siła elektromotoryczna
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/7.9.3.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+
+Wyznaczanie siły elektromotorycznej i oporu wewnętrznego ogniwa Drugie
+prawo Kirchhoffa, siła elektromotoryczna, opór wewnętrzny,
+charakterystyka prądowo-napięciowa.
+
+Pomiar SEM fotoogniw za pomocą kompensatora prądu stałego Zjawisko
+fotowoltaiczne, siła elektromotoryczna ogniwa fotowoltaicznego,
+sprawność konwersji energii słonecznej na elektryczną.
+
+Indukcja elektromagnetyczna Zjawisko indukcji elektromagnetycznej,
+prawo Faradaya, siła elektromotoryczna, samoindukcja.
+
+
 -  `Wyznaczanie siły elektromotorycznej i oporu wewnętrznego ogniwa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z172>`__
 -  `Pomiar SEM fotoogniw za pomocą kompensatora prądu stałego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z177>`__
 -  `Indukcja elektromagnetyczna <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag09_z179>`__
@@ -497,11 +525,25 @@ Siła elektromotoryczna
 Pojemność kondensatora
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/7.10.1.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+Wyznaczanie pojemności kondensatora oraz stałej dielektrycznej metodą mostkową
+Obwody prądu zmiennego, pojemność kondensatora, stała dielektryczna.
+
+Drgania relaksacyjne Obwody RLC, drgania relaksacyjne w obwodach RLC.
+
+
 -  `Wyznaczanie pojemności kondensatora oraz stałej dielektrycznej metodą  mostkową <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z174>`__
 -  `Drgania relaksacyjne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag10_z175>`__
 
 Badanie\_wektorowego\_dodawania\_napiecia
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Badanie wektorowego dodawania napięć zmiennych w obwodzie RLC
+Obwody RLC, wektorowe dodawanie napięć
 
 -  `Badanie wektorowego dodawania napięć zmiennych w obwodzie RLC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag11_z193>`__
 
@@ -559,6 +601,9 @@ rozwiązywania szeregu klasycznych zadań.
 Eksperymentalne badanie pola elektrycznego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Badanie rozkładu pola elektrycznego Natężenie pola elektrycznego,
+potencjał pola elektrycznego, powierzchnie ekwipotencjalne
+
 -  `Badanie rozkładu pola elektrycznego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag15_z192>`__
 
 
@@ -610,23 +655,38 @@ idealnym narzędziem do pokazania, własności takiego układu w sposób
 Komunikacja z przyrządami pomiarowymi
 -------------------------------------
 
-Standardy interfejsów szeregowych RS-232, 422, 485, USB i IEEE-488.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Standardy interfejsów szeregowych RS-232, 422, 485, USB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Przykłady współczesnych interfejsów szeregowych.  Zalety i wady
-transmisji szeregowej.  Połączenia syncho- i asynchroniczne.
-Połączenia bezkolizyjne i kolizyjne wraz z przykładową kontrolą
-przepływu.  Architektura Master-Slave.  Warstwa fizyczna - połączenia
-wielo- i jednoprzewodowe.  Sygnały różnicowe jako metoda usuwania
-szumów.  Struktura znaku i parametry transmisji w interfejsie RS-232.
-Znaczenie kodów ASCII w transmisji szeregowej.  Transmisja przy użyciu
-ramek.  Proste metody korekcji błędów.
+.. figure:: figs/FPomiar01.png
+   :align: right
+   :figwidth: 260px
+   :width: 260px
+
+   Schemat pełnego przewodu połączeniowego typu Nullmodem
+
+
+Przykłady współczesnych interfejsów szeregowych. Zalety i wady
+transmisji szeregowej. Połączenia syncho- i asynchroniczne. Połączenia
+bezkolizyjne i kolizyjne wraz z przykładową kontrolą
+przepływu. Sygnały różnicowe jako metoda usuwania szumów. Struktura
+znaku i parametry transmisji w interfejsie RS-232. Znaczenie kodów
+ASCII w transmisji szeregowej. Transmisja przy użyciu ramek. Proste
+metody korekcji błędów.
 
 -  `Wprowadzenie do standardów transmisji
    szeregowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FPomiar01_z305>`__
 
+
 Tworzenie oprogramowania do komunikacji szeregowej w języku C.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/FPomiar02.jpg
+   :align: right
+   :figwidth: 220px
+   :width: 220px
+
+   Oprogramowanie portu szeregowego na przykładzie mikroprocesora MSP-430
 
 Realizacja prostego urządzenia pomiarowego w oparciu o powszechnie
 dostępne i tanie mikrokontrolery.  Przykład oparty będzie na odczycie
@@ -648,13 +708,20 @@ c) w wersji używającej wbudowanego w układ modułu UART.
 Komunikacja szeregowa w języku Python.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/FPomiar03.png
+   :align: right
+   :figwidth: 230px
+   :width: 230px
+
+   Komunikacja szeregowa w Pythonie - prosta, łatwa i przyjemna
+
 Moduł w miarę możliwości może być realizowany poprzez arkusz SAGE pod
 warunkiem, że student może go uruchomić lokalnie.  Program domyślnie
 napisany będzie w Python 2.6 - 2.7 z podkreśleniem różnić w zapisie
 ciągów pomiędzy Pythonem2 a Py3k.  Moduł zawiera:
 
 1) Identyfikację portów szeregowych w systemach Linux i Windows,
-2) opis i konfiguracje modułu serial,
+2) opis i konfiguracje modułu serial (pyserial),
 3) przygotowanie ramki transmisyjnej wraz z sumą kontrolną,
 4) prostą kontrolę przepływu opartą na metodzie poll
 5) różnice między typami str, bytes, unicode, bytearray
@@ -664,6 +731,14 @@ ciągów pomiędzy Pythonem2 a Py3k.  Moduł zawiera:
 
 Komunikacja z podstawowymi przyrządami pomiarowymi.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/FPomiar04.png
+   :align: right
+   :figwidth: 260px
+   :width: 260px
+
+   Przykładowy pomiar oporu elektrycznego nadprzewodnika :math:`Fe_{1.1}Te_{0.9}S_{0.1}`
+   wykonany przy użyciu Lakeshore 340 i HP34401A.
 
 W module opisane będą przykładowe programy napisane w różnych językach
 programowania Python (Linux, Windows), Visual Basic .Net lub C#
@@ -793,7 +868,7 @@ Rozwiązywanie równań ruchu z więzami
    :align: right
    :width: 280
 
-Zastosowanie systemu algebry komputerowej do problemów
+Zastosowanie systemu algebry komputerowej (CAS) do problemów
 wykorzystujących zasadę dAleberta. Materiał zawiera metodologię pracy
 wykorzystującą częściową automatyzacje generacji równań ruchu, tak by
 z jednej strony uniknąć powtarzania niepotrzebnych definicji a z
@@ -801,6 +876,15 @@ drugiej strony cały kod był w dydaktyczny sposób podany dla czytelnika.
 
 -  `Zasada dAlemberta z systemem algebry
    komputerowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas05_z222>`__
+
+-  `Zadania wykorzystujące zasadę d'Alemberta,
+   rozwiązanie z wykorzystaniem CAS i zanalizowane metodami
+   numerycznymi.
+   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=MMK_dAlembert>`__
+
+-  `Zadania wykorzystujące równania Lagrange'a rozwiązanie z wykorzystaniem CAS.
+   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=MMK_Lagrange>`__
+
 
 Chaos deterministyczny - wprowadzenie.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -846,16 +930,16 @@ wszystkimi wbudowanymi metodami numerycznymi możemy analizować
 realistyczne problemy.
 
 
--  `Realistyczne modelowanie rzuty ukosnego (armata,
-   L/D(Re)) <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z18>`__
+-  `Realistyczne modelowanie rzuty ukosnego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z18>`__
 
 -  `Realistyczne modelowanie tarcia nieliniowego (problem
    froterki) <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z19>`__
 
--  Dynamika lotu   samolotu - fugoida
+-  Mechanika lotu samolotu  - fugoida jako model o trzech stopniach swobody:
 
-   - `Materiał w Sage<https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z64>`__
+   - `Materiał w Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z64>`__
    - `Symulacja online <http://visual.icse.us.edu.pl/wizualizacje/mechanika-teoretyczna/zobacz/Phugoid>`__
+
 -  `Modelowanie żaglówki <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas07_z65>`__
 
 
@@ -865,6 +949,9 @@ realistyczne problemy.
 Własności akustyczne materii
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Rezonans akustyczny
+Fala dźwiękowa, powstawanie fal stojących, rezonans akustyczny.
+
 -  `Rezonans
    akustyczny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas08_z206>`__
 -  `Wyznaczanie prędkości dźwięku w
@@ -872,6 +959,11 @@ Własności akustyczne materii
 
 Eksperymentalne badanie dynamiki bryły sztywnej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wyznaczanie gęstości za pomocą piknometru Gęstość, siła wyporu, prawo
+Archimedesa.  Wyznaczanie momentu bezwładności.  Dynamika bryły
+sztywnej, wahadło torsyjne, moment bezwładności. Dynamika ruchu obrotowego
+Moment siły, moment pędu, moment bezwładności
 
 -  `Wyznaczanie gęstości za pomocą
    piknometru <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas09_z205>`__
@@ -883,6 +975,9 @@ Eksperymentalne badanie dynamiki bryły sztywnej
 Eksperymentalne badania ruchu obrotowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Ruch w polu centralnym Opis ruchu ciał w polu centralnym, w przypadku
+sił przyciągających i odpychających.
+
 -  `Dynamika ruchu
    obrotowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas10_z182>`__
 -  `Ruch w polu
@@ -891,16 +986,27 @@ Eksperymentalne badania ruchu obrotowego
 Zderzenia sprężyste i niesprężyste
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Stół powietrzny - zderzenia sprężyste i
-   niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z181>`__
--  `Dynamika\_ruchu\_postępowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z202>`__
--  `Zderzenia sprężyste i
-   niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z285>`__
+.. figure:: figs/10.11.1.png
+   :align: right
+   :width: 350px
+   :figwidth: 350px
+
+   Zderzenia
+
+Stół powietrzny - zderzenia sprężyste i niesprężyste. Zasada
+zachowania pędu i zasada zachowania energii, zderzenia sprężyste
+centralne i niecentralne. Dynamika ruchu postępowego Zasady dynamiki
+Newtona, stół powietrzny
+
+
+- `Stół powietrzny - zderzenia sprężyste i niesprężyste
+  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z181>`__
+- `Dynamika\_ruchu\_postępowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z202>`__
+- `Zderzenia sprężyste i
+  niesprężyste <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMKlas11_z285>`__
 
 Oscylator harmoniczny
 ~~~~~~~~~~~~~~~~~~~~~
-
-
 
 .. figure:: figs/rezonans.png
    :align: right
@@ -924,6 +1030,15 @@ wykorzystując narzędzia komputerowe.
 
 Numeryczna analiza układów mechanicznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Rollercoaster_dragon_khan_universal_port_aventura_spain.jpg/800px-Rollercoaster_dragon_khan_universal_port_aventura_spain.jpg
+   :align: right
+   :figwidth: 400px
+   :width: 400px
+
+   Wielokrotne pętle w hiszpańskim  "Dragon Khan" w  Salou (źródło: Wikipedia)
+
+
 
 Modelowanie różnych układów fizycznych wymagające zastosowania metod
 numerycznych. 
@@ -965,22 +1080,21 @@ Mechanika kwantowa
 
 
 Równanie Schrodingera 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
-Numeryczna analiza równania ruchu w mechanice kwantowej na wybranych przykładach: funkcja falowa - pakiety falowe, propagacja pakietu falowego, przejscie przez bariere, tunelowanie.
+.. figure:: figs/schrodinger2d.png
+   :align: right
+   :figwidth: 250px
+
+   Funkcje własne cząstki w pudle potencjału..
+
+Numeryczna analiza równania ruchu w mechanice kwantowej na wybranych
+przykładach: funkcja falowa - pakiety falowe, propagacja pakietu
+falowego, przejscie przez bariere, tunelowanie.
 
 -  `Numeryczne rozwiązywanie równania
-   Schrodingera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant02_z244>`__
--  `Studnia i bariera potencjału w mechanice
-   kwantowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant02_z245>`__
+   Schrodingera <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=MMK_QM>`__
 
-Cząstka w studni potencjału, przypadek jedno i dwuwymiarowy.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Cząstka w studni
-   potencjału <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant04_z138>`__
--  `Numeryczna analiza zagadnienia cząstki w studni
-   potencjału <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMkwant04_z140>`__
 
 
 Kwantowy oscylator harmoniczny
@@ -1087,6 +1201,7 @@ spektroskopowych i dyfrakcyjnych.
    splotowego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem02_z265>`__
 
 
+
 Równania różniczkowe cząstkowe: Laplace'a, falowe, Fokkera-Plancka
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1105,6 +1220,15 @@ numerycznu umożliwiający interaktywne badanie właności rozwiązań.
    zagadnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem03_z241>`__
 
 .. @MK  - dokończyc, moze dodac przyklad równania Laplace'a z CFD? FFT, rozdzielanie zmiennych- moze CAS?
+
+
+Fale w fizyce
+~~~~~~~~~~~~~
+
+*Zjawiska falowe są wszechobecne  czego przykładem są fale elektromagnetyczne,   fale dźwiękowe (akustyczne) i  fale sprężyste (mechaniczne). Można powiedzieć, że nasze otoczenie wypełnione jest falami. Fale są wykorzystywane gdy słuchamy radia, oglądamy telewizję, dzwonimy telefonami komórkowymi do znajomych,  używamy bezprzewodowego internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania urządzeń telewizyjnych.*
+
+-  `Fale <://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04>`__
+
 
 
 Wielomiany ortogonalne
@@ -1349,8 +1473,8 @@ wizualizacji zostanie wykorzystany pakiet Sage.
 -  `Obsługa akcelerometru w układzie STM32f4
    Discovery <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Mikro09_z275>`__
 
-Programowanie obiektowe Arduino.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arduino.
+~~~~~~~~
 
 Opracownie praktycznego wstępu do programowania obiektowego systemu
 klasy Arduino z wykorzystaniem peryferiów zawierający sensory i
@@ -1393,8 +1517,8 @@ pierścieniach nanoskopowych w stałym polu magnetycznym.
 
 -  `Prądy trwałe w nanoskopowych pierścieniach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_NanoTechn03_z299>`__
 
-Numeryczna dynamika płynów
---------------------------
+Mechanika płynów metody eksperymantalne i obliczeniowe
+------------------------------------------------------
 
 Elementy składowe równań dynamiki płynów - równanie adwekcji i dyfuzji
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1523,13 +1647,28 @@ Koty Schrodingera
 Załamanie i polaryzacja światła
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/17.8.2.png
+   :align: right
+   :width: 300px
+   :figwidth: 300px
+
+   Polarymetr.
+
+
+Wyznaczanie współczynnika załamania światła w szkle metodą kąta
+najmniejszego odchylenia Zasada Fermata, załamanie światła, prawo
+Snelliusa. Badanie skręcenia płaszczyzny polaryzacji Polaryzacja
+światła, substancje aktywne optycznie, skręcenie płaszczyzny
+polaryzacji.
+
+
 -  `Wyznaczanie współczynnika załamania światła w szkle metodą kąta
    najmniejszego odchylenia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z180>`__
 
 -  `Badanie\_skręcenia\_płaszczyzny\_polaryzacji <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FOptyka08_z210>`__
 
-Procesy nieliniowe w układach biologicznych/Dynamika Populacyjna
-----------------------------------------------------------------
+Procesy nieliniowe w układach biologicznych
+-------------------------------------------
 
 Jednowymiarowe modele ciągłe dynamiki populacyjnej.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1545,7 +1684,7 @@ Modele jednowymiarowe:: ofiary-drapieżnika, model Malthusa, Verhulsta
 oraz z drapieżcą:
 
 - `Notatnik Sage  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin01_z118>`__
-- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin01_z118_modele_jednowymiarowe.html>`__
+- `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin01_z118_modele_jednowymiarowe.html>`__
 
 
 Modele oddziałujących populacji: układ Lotki-Volterry.
@@ -1566,7 +1705,7 @@ to rozmnażają się i umierają śmiercią naturalną (niestety) ...*
 Modele ofiara-drapieżca: Lotki-Volterry oraz Maya:
 
 - `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin02_z119>`__
-- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin02_z119_ofiara_drapiezca.html>`__
+- `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin02_z119_ofiara_drapiezca.html>`__
 
 
 Modele dyskretne dynamiki populacyjnej: chaos deterministyczny.
@@ -1607,7 +1746,7 @@ enzymatycznek Michaelisa-Menten.
 Kinetyka Reakcji Chemicznych:
 
 - `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin04_z122>`__
-- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin04_z122_kinetyka_chemiczna.html>`__
+- `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin04_z122_kinetyka_chemiczna.html>`__
 
 
 Równania reakcji z dyfuzją. Fale biologiczne. Modele ekspansji i inwazji gatunków.
@@ -1628,7 +1767,7 @@ sposób takiego modelowania.
 Modele Reakcji z Dyfuzją:
 
 - `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin05_z125>`__
-- `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin05_z125_reakcja_dyfuzja.html>`__
+- `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin05_z125_reakcja_dyfuzja.html>`__
 
 Modele epidemii; model Kermacha-McKendricka.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1647,7 +1786,7 @@ rozchodzenie się epidemii.
 Modele epidemii:
 
 -  `Notatnik Sage  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin06_z155>`__
--  `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin06_z155_modele_epidemii.html>`__
+-  `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin06_z155_modele_epidemii.html>`__
 
 Reakcje Biełousowa-Żabotyńskiego.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1671,7 +1810,7 @@ przestrzennych w reakcji BZ z dyfuzją w dwóch wymiarach.
 Reakcja  Biełousowa-Żabotynskiego: 
 
 -  `Notatnik Sage <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BProcnielin08_z161>`__
--  `rozdział <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin08_z161_BZ.html>`__
+-  `rozdział w książce <http://visual.icse.us.edu.pl/PNB/iCSE_BProcnielin08_z161_BZ.html>`__
 
 
 Programowanie
@@ -1691,8 +1830,10 @@ programowania w języku Python.
 Python w obliczeniach naukowych (wykorzystanie bibliotek numpy i scipy).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Python w obliczeniach naukowych (biblioteki numpy i
-   scipy) <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow03_z301>`__
+Python w obliczeniach naukowych (biblioteki numpy i scipy)
+Wykorzystanie języka Python do obliczeń naukowych i inżynierskich
+
+-  `Python w obliczeniach naukowych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow03_z301>`__
 
 IPython jako interaktywne środowisko programistyczne
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1702,17 +1843,34 @@ IPython jako interaktywne środowisko programistyczne
 Wykorzystanie narzędzi wizualizacyjnych klasy matplotlib.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Wykorzystanie narzędzi wizualizacyjnych klasy
-   matplotlib <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow05_z128>`__
+Wykorzystanie narzędzi wizualizacyjnych klasy matplotlib Wizualizacja
+wyników pomiarów przeprowadzanych w ramach pracowni fizycznej za
+pomocą biblioteki Matplotlib/
+
+-  `Wykorzystanie narzędzi matplotlib <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow05_z128>`__
 
 Wizualizacja danych przestrzennych: VTK, Vpython.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/19.5.1.png
+   :align: right
+   :figwidth: 250px
+   :width: 250px
+
+   Grafika w OpenGL utworzona z Vpython-em.
+
+Wizualizacja danych przestrzennych: Vpython Primer wykorzystania
+biblioteki Vpython do wizualizacji danych przestrzennyc w dydaktyce
+fizyki.
+
 
 -  `Wizualizacja danych przestrzennych:
    Vpython <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow06_z127>`__
 
 Python - programowanie zorientowane obiektowo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wstęp do programowania zorientowanego obiektowo z wykorzystaniem języka Python.
 
 -  `Python - programowanie zorientowane
    obiektowo <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgramow07_z302>`__
@@ -1771,8 +1929,7 @@ wyrażenia symboliczne, wyrażenia listowe.*
 
 -  `Instrukcje sterujące i
    funkcje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf03_z77>`__
--  `Aktualizacja materiałów Instrukcje sterujące i
-   funkcje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf03_z94>`__
+
 
 Wizualizacja danych: wykresy dwu i trójwymiarowe.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1781,24 +1938,21 @@ Wizualizacja danych: wykresy dwu i trójwymiarowe.
    danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf04_z78>`__
 -  `Krzywoliniowe układy
    współrzędnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf04_z79>`__
--  `Aktualizacja materiałów Wizualizacja danych: wykresy dwu- i
-   trójwymiarowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf04_z95>`__
+
 
 Zastosowanie algebry komputerowej (CAS) w naukach ścisłych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Zastosowanie algebry komputerowej (CAS) w naukach
    ścisłych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf05_z80>`__
--  `Aktualizacja materiałów Zastosowanie CAS w naukach
-   ścisłych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf05_z96>`__
+
 
 Wektoryzacja obliczeń: pakiet numpy.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Wektoryzacja obliczeń: pakiet
    numpy. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf06_z81>`__
--  `Aktualizacja materiałów: wektoryzacja obliczeń, pakiet
-   numpy. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ITechninf06_z97>`__
+
 
 Termodynamika i fizyka statystyczna
 -----------------------------------
@@ -1838,6 +1992,18 @@ Kondensacje Bosego-Einsteina
 
 Eksperymentalne badanie przejść fazowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/22.6.2.png
+   :align: right
+   :figwidth: 200px
+   :width: 200px
+
+
+Pomiar zależności temperatury wrzenia wody od ciśnienia Zależność
+ciśnienia pary nasyconej od temperatury, wzór Clausiusa-Clapeyrona.
+Wyznaczanie napięcia powierzchniowego cieczy metodą rurek włoskowatych
+i metodą rozrywania warstwy powierzchniowej Siły międzycząsteczkowe,
+napięcie powierzchniowe.
 
 -  `Pomiar zależności temperatury wrzenia wody od
    ciśnienia <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody06_z203>`__
@@ -1907,14 +2073,18 @@ Bramki kwantowe
 Astronomia
 ----------
 
-Prawa Keplera.
-~~~~~~~~~~~~~~
+Prawa Keplera
+~~~~~~~~~~~~~
+
+Prawa Keplera
 
 Fizyka gwiazd
 ~~~~~~~~~~~~~
 
-Astronomia obserwacyjna.
-~~~~~~~~~~~~~~~~~~~~~~~~
+Fizyka gwiazd
+
+Astronomia obserwacyjna
+~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Wyznaczanie odległości
    astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
@@ -1987,17 +2157,37 @@ Wstęp do fizyki atomowej i molekularnej
 Atomistyczne symulacje komputerowe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Podstawy teoretyczne symulacji dynamiki molekularnej Modelowanie
+oddziaływań, energia potencjalna układu, algorytmy całkowania równań
+ruchu, energia kinetyczna i temperatura, zagadnienia związane z
+praktyczną implementacją algorytmu dynamiki molekularnej.
+
+
 -  `Podstawy teoretyczne symulacji dynamiki
    molekularnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek01_z255>`__
 
 Symulacje komputerowe z wykorzystaniem NAMD i VMD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Symulacje komputerowe z wykorzystaniem NAMD i VMD
+Praktyczne aspekty konfiguracji i zarządzania symulacją dynamiki molekularnej z wykorzystaniem oprogramowania NAMD i VMD
+
 -  `Symulacje komputerowe z wykorzystaniem NAMD i
    VMD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek02_z256>`__
 
 Badanie przejść fazowych prostych układów metodą dynamiki molekularnej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/26.3.1.png
+   :align: right
+   :figwidth: 200px
+   :width: 200px
+
+Badanie przejść fazowych prostych układów metodą dynamiki molekularnej
+Modelowanie oddziaływań, periodyczne warunki brzegowe, algorytm
+dynamiki molekularnej, temperatura i termostat, ciśnienie i barostat,
+badanie przejścia fazowego ciecz - ciało stałe prostego układu
+atomistycznego
 
 -  `Badanie przejść fazowych prostych układów metodą dynamiki
    molekularnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek03_z257>`__
@@ -2017,14 +2207,16 @@ Lasery.
 Wstęp do fizyki cząstek elementarnych
 -------------------------------------
 
-Metody Monte Carlo w fizyce cząstek elementarnych+ Generatory symulacji cząstek w fizyce akceleratorów.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozpraszanie Bhabhy
 ~~~~~~~~~~~~~~~~~~~
 
+Rozpraszanie Bhabhy
+
+
 Zastosowana systemów algebry komputerowej w obliczeniach teoretycznych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wstęp do obliczeń symbolicznych w Fizyce Wysokich Energii z wykorzystaniem narzędzia FORM
 
 Oscylacje neutrin
 ~~~~~~~~~~~~~~~~~
@@ -2038,17 +2230,32 @@ Wstęp do fizyki fazy skondensowanej
 Modelowanie oddziaływań w ciele stałym za pomocą potencjału ABOP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/26.1.1.png
+   :align: right
+   :figwidth: 200px
+   :width: 200px
+
+
+Modelowanie oddziaływań w ciele stałym za pomocą potencjału ABOP.
+Wykorzystanie potencjału typu ABOP do modelowania oddziaływań w ciele
+stałym, atomistyczne symulacje komputerowe.
+
+
 -  `Modelowanie oddziaływań w ciele stałym za pomocą potencjału
    ABOP <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond01_z300>`__
 
 Sieci krystaliczne, sieć odwrotna.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `sieci krystaliczne i odwrotne dla
+-  `Sieci krystaliczne i odwrotne dla
    2d <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond02_z150>`__
 
 Ciepło właściwe.
 ~~~~~~~~~~~~~~~~
+
+Pomiar ciepła właściwego powietrza metodą rozładowania kondensatora.
+Energia zgromadzona w naładowanym kondensatorze, ciepło właściwe powietrza.
+
 
 -  `Pomiar ciepła właściwego powietrza metodą rozładowania
    kondensatora <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond03_z187>`__
@@ -2058,6 +2265,7 @@ Ciepło właściwe.
 Półprzewodniki.
 ~~~~~~~~~~~~~~~
 
+
 -  `Badanie zależności temperaturowej oporu elektrycznego metali i
    półprzewodników <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond04_z171>`__
 -  `Wyznaczanie charakterystyk
@@ -2065,6 +2273,15 @@ Półprzewodniki.
 
 Fonony w sieci jedno- i dwuatomowej.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pomiar przewodności cieplnej izolatorów.  Charakterystyka transportu
+ciepła w izolatorach. Wyznaczanie współczynnika rozszerzalności
+liniowej ciał stałych. Charakterystyka rozszerzalności liniowej ciał
+stałych, współczynnik rozszerzalności liniowej.  Pomiar przewodnictwa
+cieplnego metalu dla długiego pręta Przewodnictwo cieplne ciał
+stałych, transport ciepła wzdłuż pręta.
+
+
 
 -  `Pomiar przewodności cieplnej
    izolatorów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond05_z185>`__
@@ -2082,6 +2299,37 @@ Poziomy energetyczne i gęstość stanów dla elektronów swobodnych.
    swobodnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_z149>`__
 - `równanie Dysona <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_rownanie_Dysona>`__
 - `gestosc stanow dla elektronow w 1,2,3d <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FFazyskond06_DOS>`__
+
+Biofizyczne aspekty wzrostu i rozwoju roślin
+--------------------------------------------
+
+Modelowanie wzrostu roślin.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Oscylacyjny model wzrostu łagiewek pyłkowych, propozycja rozwiązania w
+oparciu o mechanizm geometrycznej frustracji symetrii.
+
+-  `Oscylacyjny model wzrostu łagiewek
+   pyłkowych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin01_z314>`__
+
+
+Zagadnienia proliferacji komórek, wzrost organów roślinnych.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zastosowanie tensora wzrostu do modelowania wzrostu liścia arabidopsis
+i anizotropii wzrostu w dwóch wymiarach.
+
+-  `Modelowanie wzrostu liścia w dwóch wymiarach <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin03_z311>`__
+
+Kwasowa teoria wzrostu, rola białek (ekspansyny) we wzroście roślin.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Szczególne rozwiązania równania Ortegi dla regularnego wzrostu komórki
+roślinnej dla modelu interkalacji polimerów w ścianę komórkową oraz
+aktywności ekspansyny.
+
+-  `Szczególne rozwiązania równania Ortegi dla regularnego wzrostu
+   komórki roślinnej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWzrostroslin04_z313>`__
 
 
 Chemia teoretyczna
@@ -2144,14 +2392,10 @@ Analiza czynników głównych, algorytm PCA.
 
 -  `PCA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom01_z72>`__
 
-Wieloparametrowa kalibracja sygnałów NIR z zastosowaniem metody PCR.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wieloparametrowa kalibracja sygnałów NIR z zastosowaniem metody PCR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Konstrukcja modeli dyskryminacyjnych - dyskryminacyjny wariant algorytmu PCR.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Konstrukcja modelu klasyfikacyjnego z użyciem metody SIMCA.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-  `Wieloparametrowa kalibracja NIR z PCR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Chemom02_z71_Wieloparametrowa_Kalibracja_PCR>`__
 
 Zastosowania iteracyjnej metody najmniejszych kwadratów w chemii.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2175,24 +2419,21 @@ Standardy wymiany informacji strukturalnych.
 
 -  `Standardy wymiany informacji
    strukturalnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z33>`__
--  `Standardy wymiany informacji strukturalnej
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z106>`__
+
 
 Notacja liniowa, kody SMILES/SMARTS.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Notacja liniowa, kody
    SMILES/SMARTS <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z34>`__
--  `Notacja liniowa, kody SMILES/SMARTS
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z110>`__
+
 
 Eksploracja baz danych.
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Eksploracja baz
    danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z35>`__
--  `Eksploracja baz danych
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z111>`__
+
 
 Generowanie struktur 2D/3D.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2205,16 +2446,14 @@ Deskryptory molekularne.
 
 -  `Deskryptory
    molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z36>`__
--  `Deskryptory molekularne
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z112>`__
+
 
 Analiza SAR/QSAR.
 ~~~~~~~~~~~~~~~~~
 
 -  `Analiza
    SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
--  `Analiza SAR/QSAR
-   AKTUALIZACJA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z113>`__
+
 
 Dokowanie molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~
