@@ -459,6 +459,8 @@ równania różniczkowego opisującego charakterystykę rozładowania
 kondensatora przez opór i wykorzystanie rozwiązania do doświadczalnego
 wyznaczenia pojemności kondensatora
 
+
+
 -  `Wyznaczanie pojemności kondensatora z krzywej
    rozładowania <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag02_z190>`__
 
@@ -2029,13 +2031,12 @@ Wstep do informatyki kwantowej
 Kwantowa Teleportacja
 ~~~~~~~~~~~~~~~~~~~~~
 
--  `Kwantowa
-   teleportacja <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant01_z288>`__
+-  `Kwantowa teleportacja <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/telep.ipynb>`__
 
 Stany splątane
 ~~~~~~~~~~~~~~
 
--  `stany separowalne i
+-  `Stany separowalne i
    splatane <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant02_z135>`__
 -  `Qubit - uklad 2
    stanowy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant02_z136>`__
@@ -2044,31 +2045,29 @@ Dynamik kwantowa: dekoherencja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Wpływ dekoherencji typu Daviesa na
-   qubity <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant03_z286>`__
+   qubity <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/dav.ipynb>`__
 
 Kwantowe korelacje qubitów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Niezgodność
-   kwantowa <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant04_z287>`__
-
+-  `Niezgodność kwantowa <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/discord.ipynb>`__
 Kwantowe Systemy Otwarte: kanały kwantowe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Kanały
-   kwantowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant05_z289>`__
+-  `Kanały kwantowe <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/kanaly_kwantowe.ipynb>`__
+
 
 Splątanie kwantowe a dekoherencja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Splątanie stanów
-   mieszanych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwan06_z290>`__
+   mieszanych <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/mix_ent.ipynb>`__
 
 Bramki kwantowe
 ~~~~~~~~~~~~~~~
 
--  `bramki
-   kwantowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant07_z158>`__
+-  `Bramki kwantowe <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_InfKwant07_z158>`__
+
 
 Astronomia
 ----------
@@ -2222,7 +2221,7 @@ Oscylacje neutrin
 ~~~~~~~~~~~~~~~~~
 
 -  `Dysypatywne oscylacje
-   neutrin <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem04_z296>`__
+   neutrin <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/neutrina_osc.ipynb>`__
 
 Wstęp do fizyki fazy skondensowanej
 -----------------------------------
