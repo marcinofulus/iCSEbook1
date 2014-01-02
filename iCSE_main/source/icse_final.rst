@@ -9,6 +9,13 @@ Algebra liniowa
 Liczby zespolone (interpretacja geometryczna).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/zespolony.png
+   :align: right
+   :figwidth: 200px
+   :height: 161px
+
+   Interpretacja geometryczna pierwiastka licznby zespolonej.
+
 | *Zastosowania systemu algebry komputerowej oraz wizualizacji do liczb zespolonych.* 
 
 - `Liczby zespolone  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg03_z7>`__
@@ -242,7 +249,7 @@ Pierwiastki wielomianów i zera funkcji.
    :figwidth: 450px
    :height: 120px
 
-   Intrygujące własności metody Newtona dla funkcjie :math:`f(x)=x^3-2x-2.`
+   Zaskakujące własności metody Newtona dla funkcjie :math:`f(x)=x^3-2x-2.`
 
 -  `Obliczanie zer
    wielomianów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat04_z28>`__
@@ -1968,26 +1975,34 @@ Programowanie równoległe
 Praktyczny wstęp do programowania na GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Wstęp do
-   CUDA. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgrownol01_z277>`__
+-  `Wstęp do  CUDA. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Hello_word_pycuda.ipynb?create=1>`__
+
 
 Przegląd klasycznych algorytmów zimplementówanych na CUDA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Klasycznych algorytmów zimplementówanych na
-   CUDA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgrownol02_z278>`__
+-  `Sampling funkcji jednej i dwóch zmiennych: wykorzystanie struktur organizacji wątków. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_map2d.ipynb?create=1>`__
+
+-  `Proste Monte-Carlo i map reduce. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Pi_on_pyCUDA.ipynb?create=1>`__
+
+-  `FFT na CUDA- wykorzystanie Wstęp do  CUDA. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_scikits.cuda.ipynb?create=1>`__
+
+
+    
 
 Równania różniczkowe zwyczajne i stochastyczne GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Równania różniczkowe zwyczajne i stochastyczne na
-   CUDA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgrownol03_z279>`__
+
+-  `Stochastyczne równania różniczkowe na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Rownanie_Logistyczne.ipynb?create=1>`__
+
+-  `Stochastyczne równania różniczkowe na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_SDE.ipynb?create=1>`__
+
 
 Metody implementacji rówań różniczkowych cząstkowych na GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Równania różniczkowe cząstkowe na
-   CUDA <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_IProgrownol04_z280>`__
+-  `Równania różniczkowe cząstkowe na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_PDE.ipynb>`__
 
 Technologia informacyjna
 ------------------------
