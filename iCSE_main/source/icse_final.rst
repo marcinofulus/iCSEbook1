@@ -835,7 +835,8 @@ Ruch układów punktów materialnych.
 Analiza ruchu układów punktów materialnych z użyciem systemu algebry komputerowej.
 
 -  `Środek masy układu punktów materialnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z100>`__
--  `Zagadnienie dwóch ciał. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z54>`__
+-  `Zagadnienie dwóch ciał <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z54>`__
+
 -  `Układy fizyczne z więzami <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMklas03_z74>`__
 
 Drgania - numeryczne rozwiązania równań ruchu.
@@ -2047,6 +2048,7 @@ Kwantowe korelacje qubitów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Niezgodność kwantowa <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/discord.ipynb>`__
+
 Kwantowe Systemy Otwarte: kanały kwantowe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -2091,19 +2093,40 @@ Wstęp do astrofizyki
 Problem N-ciał oddziałujących grawitacyjnie (Newtonowsko) - symulacje numeryczne w tym mógłby być też problem ruchu cząstek próbnych i fotonów w metryce Schwarzschilda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Model symulacji
-   N-ciałowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz01_z231>`__
--  `Cząstki próbne i fotony w metryce
-   Schwarzschilda <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz01_z232>`__
+.. figure:: figs/nbody.png
+   :align: right
+   :figwidth: 320px
+   :height: 160px
 
-Ograniczony problem 3-ciał
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Symulacja dynamiki N=1500 ciał oddziałujących grawitacyjnie w 2
+   wymiarach, po lewej  stan początkowy a po prawej po 100 krokach.
 
--  `Ograniczony problem 3
-   ciał <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz02_z230>`__
+
+-  `Model symulacji  N-ciałowej <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz01_z231>`__
+-  `Cząstki próbne i fotony w metryce  Schwarzschilda <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz01_z232>`__
+
+Ograniczony problem trzech ciał
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/3cial_pot.png
+   :align: right
+   :figwidth: 320px
+   :height: 160px
+
+   Potencjał efektywny Jacobiego w ograniczonym problemie 3-ciał.
+
+-  `Ograniczony problem trzech ciał <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz02_z230>`__
 
 Modele rozkładu masy w galaktykach
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/galaktyki_spiralne.png
+   :align: right
+   :figwidth: 509px
+   :height: 200px
+
+   Galaktyka spiralna widziana z boku - zdjęcie z Teleskopu Hubble'a
+   oraz matematyczny model dysku Miyamoto.
 
 -  `Efektywne modele
    galaktyk <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz03_z227>`__
@@ -2113,6 +2136,16 @@ Modele rozkładu masy w galaktykach
 Soczewki grawitacyjne punktowe i rozciągłe, kaustyki i powstawanie wielokrotnych obrazów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/Profile.png
+   :align: right
+   :figwidth: 323
+   :height: 250px
+
+(rys.) Soczewka grawitacyjna LRG 3-757 (tzw. Horseshoe Einstein Ring). Kąt
+ugięcia światła przy różnych profilach radialnych zrzutowanego
+rozkładu masy soczewki.
+
+
 -  `Teoria soczewkowania
    grawitacyjnego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz05_z224>`__
 -  `Rozciągłe soczewki
@@ -2120,6 +2153,15 @@ Soczewki grawitacyjne punktowe i rozciągłe, kaustyki i powstawanie wielokrotny
 
 Modele kosmologiczne jako układy dynamiczne - metoda portretów fazowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/3cases.png
+   :align: right
+   :figwidth: 612
+   :height: 160px
+
+Portrety fazowe dynamiki płaskich modeli kosmologicznych
+Friedmana-Robertsona-Walkera dla róźnych wartości stałej
+kosmologicznej.
 
 -  `Dwu-wymiarowe układy dynamiczne i ich portrety
    fazowe. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz08_z233>`__
@@ -2129,17 +2171,42 @@ Modele kosmologiczne jako układy dynamiczne - metoda portretów fazowych
 Problem 2 ciał
 ~~~~~~~~~~~~~~
 
--  `Zadannienie dwóch
-   ciał <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz04_z259>`__
+.. figure:: figs/V_eff.png
+   :align: right
+   :figwidth: 336
+   :height: 250px
+
+Potencjał efektywny w newtonowskim problemie 2 ciał.
+
+-  `Zagadnienie dwóch ciał <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz04_z259>`__
 
 Krzywe rotacji i problem ciemnej materii
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: figs/NGC7331.png
+   :align: right
+   :figwidth: 336
+   :height: 300px
+
+Problem płaskich krzywych rotacji - standardowym oczekiwaniem byłby
+ich spadek z odległością od centrum galaktyki. Krzywa rotacji
+galaktyki NGC 7331 - na podstawie danych obserwacyjnych.
 
 -  `Krzywe rotacji i problem ciemnej
    materii <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz06_z229>`__
 
 Mikrosoczewkowanie
 ~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/Light_curve.png
+   :align: right
+   :figwidth: 507
+   :height: 250px
+
+Teoretycznie przewidywane krzywe blasku mikrosoczewkowania
+grawitacyjnego oraz obserwowane zjawisko mikrosoczewkowania
+OGLE-2005-BLG-015.
 
 -  `Mikrosoczewkowanie
    grawitacjyne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz07_z226>`__
@@ -2193,11 +2260,12 @@ Spektroskopia molekularna.
 -  `Badanie widm optycznych przy pomocy
    spektroskopu <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek04_z168>`__
 
+
 Lasery.
 ~~~~~~~
 
--  `Badanie gęstości zapisu informacji na płytach CD i
-   DVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek05_z169>`__
+-  `Badanie gęstości zapisu informacji na płytach CD i  DVD <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAtommolek05_z169>`__
+
 
 Wstęp do fizyki cząstek elementarnych
 -------------------------------------
