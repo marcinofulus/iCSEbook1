@@ -29,6 +29,13 @@ Interaktywne materiały:
 Wprowadzenie do układów równań liniowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/geom_ukl.jpg
+   :align: right
+   :figwidth: 240px
+   :height: 190px
+
+   Interpretacja geometryczna układu trzech równań liniowych.
+
 | *Przestrzeń wektorów kolumnowych nad ciałem* :math:`\,K.`
 | *Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań.*
 | *Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne.*
@@ -38,6 +45,13 @@ Wprowadzenie do układów równań liniowych
 
 Algebra macierzy
 ~~~~~~~~~~~~~~~~
+
+.. figure:: figs/macierz.png
+   :align: right
+   :figwidth: 240px
+   :height: 190px
+
+   Struktura pewnej macierzy :math:`25\times25`.
 
 | *Wprowadzenie macierzy jako prostokątnej tablicy elementów z pewnego ciała.*
 | *Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.*
@@ -63,6 +77,13 @@ Operacje na macierzach
 Wyznaczniki
 ~~~~~~~~~~~
 
+.. figure:: figs/wyznacznik.png
+   :align: right
+   :figwidth: 240px
+   :height: 190px
+
+   Geometryczna interpretacja wyznacznika.
+
 | *Aksjomatyczna definicja wyznacznika. Rozwinięcie permutacyjne.*
 | *Rozwinięcie Laplace'a jako praktyczna metoda obliczania wyznacznika.*
 | *Własności i zastosowania wyznaczników.*
@@ -84,6 +105,12 @@ Teoria i praktyka układów równań liniowych
 Przekształcenia liniowe
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/przeksztalcenie_liniowe.png
+   :align: right
+   :figwidth: 440px
+   :height: 190px
+
+   Geometryczna interpretacja przekształcenia liniowego.
 
 
 | *Własności i zastosowania przekształceń liniowych.*
@@ -127,6 +154,13 @@ Wartości i wektory własne
 Rozkłady macierzy LU,RU, SVD.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/svd_kompresja.gif
+   :align: right
+   :figwidth: 240px
+   :height: 177px
+
+   Kompresja obrazu z wykorzystaniem rozkładu SVD
+
 -  `Postać schodkowa macierzy, przekształcenia elementarne i rozkład
    LU <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z47>`__
 -  `Rozkład QR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAlg08_z48>`__
@@ -150,6 +184,14 @@ Analiza matematyczna
 Funkcje jednej zmiennej
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/funkcja.png
+   :align: right
+   :figwidth: 250px
+   :height: 160px
+
+   Wykres parametryczny intrygującej krzywej.
+
+
 | *Wizualizacja przebiegu zmienności funkcji jednej i wielu zmiennych.*
 | *Krzywe parametryczne.*
 
@@ -160,13 +202,29 @@ Funkcje jednej zmiennej
 Elementy geometrii różniczkowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/tor_krzywizna.png
+   :align: right
+   :figwidth: 350px
+   :height: 160px
+
+   Wektor styczny i promień krzywizny.
+
+
 -  `Analiza  wektorowa. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat02_z15>`__
--  `Krzywe parametryczne,wektor  styczny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat02_z16>`__
+-  `Krzywe parametryczne, wektor styczny. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat02_z16>`__
 -  `Operatory różniczkowe w krzywoliniowych ukłach współrzędnych. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat02_z17>`__
 -  `Tor ruchu po krzywej - zastosowanie  geometrii  różniczkowej do kinematyki. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat02_z86>`__
 
 Transforma Fouriera
 ~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/fft.png
+   :align: right
+   :figwidth: 250px
+   :height: 160px
+
+   Transformata Fouriera.
+
 
 | *Dyskretna transformata Fouriera.*
 | *Związek DFT z transformatą ciągłą.*
@@ -178,6 +236,13 @@ Transforma Fouriera
 
 Pierwiastki wielomianów i zera funkcji.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/newton.png
+   :align: right
+   :figwidth: 450px
+   :height: 120px
+
+   Intrygujące własności metody Newtona dla funkcjie :math:`f(x)=x^3-2x-2.`
 
 -  `Obliczanie zer
    wielomianów <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat04_z28>`__
@@ -198,6 +263,14 @@ Pochodna funkcji jednej zmiennej; algorytmy obliczające pochodną numerycznie.
 Definicja całki oznaczonej, metody numeryczne obliczania całki oznaczonej,w tym metoda prostokątów oraz metoda trapezów.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. figure:: figs/calka.png
+   :align: right
+   :figwidth: 250px
+   :height: 160px
+
+   Ilustracja sumy Riemana
+
 -  `Rachunek całkowy  funkcji jednej zmiennej: teoria wizualizacja i zadania. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat06_z8>`__
 
 
@@ -214,6 +287,14 @@ Funkcje wielu zmiennych: całki wielokrotne, krzywoliniowe, rachunek różniczko
 
 Analiza równań różniczkowych zwyczajnych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: figs/ode.png
+   :align: right
+   :figwidth: 250px
+   :width: 200px
+
+   Punkt stacjonarny dla równania różniczkowego.
 
 -  `Rozwiązywanie równań różnicznowych zwyczajnych, metody algebraiczne
    i numeryczne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_MAmat10_z40>`__
