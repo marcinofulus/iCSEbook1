@@ -1965,20 +1965,16 @@ Gaz idealny i rzeczywisty, symulacje.
 -  `Gaz idealny i rzeczywisty,
    symulacje <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody01_z126>`__
 
-Fluktuacje termiczne; ruchy Browna, dyfuzja.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fluktuacje termiczne i ruchy Browna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  `Ruchy
    Browna. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody02_z162>`__
+
+Zjawisko  dyfuzji
+~~~~~~~~~~~~~~~~~
+
 -  `Dyfuzja. <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody02_z163>`__
-
-Metody Monte-Carlo w fizyce statystycznej
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  `Próbkowanie proste w metodach Monte
-   Carlo <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody03_z144>`__
--  `Próbkowanie istotne w metodach Monte
-   Carlo <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FTermody03_z145>`__
 
 Gazy sieciowe i model Isinga.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
