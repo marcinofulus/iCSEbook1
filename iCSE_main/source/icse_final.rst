@@ -1983,7 +1983,7 @@ Przegląd klasycznych algorytmów zimplementówanych na CUDA
 
 -  `Sampling funkcji jednej i dwóch zmiennych: wykorzystanie struktur organizacji wątków. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_map2d.ipynb?create=1>`__
 
--  `Proste Monte-Carlo i map reduce. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Pi_on_pyCUDA.ipynb?create=1>`__
+-  `Proste Monte-Carlo i operacja równoleglej redukcji. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Pi_on_pyCUDA.ipynb?create=1>`__
 
 -  `FFT na CUDA- wykorzystanie Wstęp do  CUDA. <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_scikits.cuda.ipynb?create=1>`__
 
@@ -1994,7 +1994,7 @@ Równania różniczkowe zwyczajne i stochastyczne GPU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
--  `Stochastyczne równania różniczkowe na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Rownanie_Logistyczne.ipynb?create=1>`__
+-  `Równanie Logistyczne  na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_Rownanie_Logistyczne.ipynb?create=1>`__
 
 -  `Stochastyczne równania różniczkowe na  CUDA <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_cfd/iCSE_PR_SDE.ipynb?create=1>`__
 
