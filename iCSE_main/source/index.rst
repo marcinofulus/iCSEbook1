@@ -86,7 +86,7 @@ wykonany na nim kod programu znajdującego się w polu tekstowym:
 .. sagecellserver::
 
     @interact
-    def rozwiniecie_okregu(n=slider(range(1,10)+range(10,100,10),default=3),x0=slider(srange(0,1,0.01),default=0)):
+    def rozwiniecie_okregu(n=slider(range(1,10)+range(10,40,10),default=3),x0=slider(srange(0,1,0.01),default=0)):
         f = sqrt(1-x^2)
         pol=f.taylor(x,x0,n)
         plt1=complex_plot(  abs(f)-1 ,(-2,2),(-2,2),plot_points=100,figsize=3)

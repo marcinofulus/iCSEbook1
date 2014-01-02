@@ -258,7 +258,7 @@ Opis motorów molekularnych. Motory biologiczne w komórkach. Skale
 wielkości fizycznych w komórce bilogicznej. Mechaniczne modele motorów
 molekularnych.
 
--  `Motory molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z258>`__
+-  `Motory molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_BWstepmolek04_z141>`__
 
 
 Modelowanie wzrostu guza nowotworowego
