@@ -2169,7 +2169,16 @@ Astronomia
 Prawa Keplera
 ~~~~~~~~~~~~~
 
-Prawa Keplera
+
+- `Rzut w polu grawitacyjnym planety <http://visual.icse.us.edu.pl/wizualizacje/astronomia/zobacz/RzutPoleGrawitacyjne/>`__
+
+- Ruch w układzie Ziemia-Księżyc:
+
+  - `przypadek I <http://visual.icse.us.edu.pl/wizualizacje/astronomia/zobacz/UkladZiemiaKsiezyc1/>`__
+  - `przypadek II <http://visual.icse.us.edu.pl/wizualizacje/astronomia/zobacz/UkladZiemiaKsiezyc2/>`__
+
+ 
+
 
 Fizyka gwiazd
 ~~~~~~~~~~~~~
@@ -2304,9 +2313,13 @@ Teoretycznie przewidywane krzywe blasku mikrosoczewkowania
 grawitacyjnego oraz obserwowane zjawisko mikrosoczewkowania
 OGLE-2005-BLG-015.
 
--  `Mikrosoczewkowanie
-   grawitacjyne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz07_z226>`__
+-  `Mikrosoczewkowanie grawitacyjne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FAstrofiz07_z226>`__
 
+|  
+|
+|
+|
+|
 
 
 Wstęp do fizyki atomowej i molekularnej
@@ -2370,12 +2383,18 @@ Wstęp do fizyki cząstek elementarnych
 Rozpraszanie Bhabhy
 ~~~~~~~~~~~~~~~~~~~
 
-Rozpraszanie Bhabhy
+
+- `Rozpraszanie Bhabhy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem02_rozpraszanie_Bhabhy>`__
+
+
 
 
 Zastosowana systemów algebry komputerowej w obliczeniach teoretycznych.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Wstęp do obliczeń symbolicznych w Fizyce Wysokich Energii z wykorzystaniem narzędzia FORM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+
+ 
+- `Wstęp do obliczeń symbolicznych w Fizyce Wysokich Energii z wykorzystaniem narzędzia FORM <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem03_obliczenia_symboliczne_czastki>`__
+
 
 Oscylacje neutrin
 ~~~~~~~~~~~~~~~~~
