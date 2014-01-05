@@ -179,8 +179,19 @@ Kwestię istnienia rozwiązań niezerowych wyjaśnia
    :math:`\ \ \text{rz}\boldsymbol{A}\,<\,n\,.`
 
 W szczególności rozwiązania niezerowe istnieją, 
-gdy liczba równań jest mniejsza od liczby niewiadomych,
-czyli gdy :math:`\,m < n.` :math:`\\`
+gdy liczba równań jest mniejsza od liczby niewiadomych, czyli gdy :math:`\,m<n.`
+
+Rozważmy ważny przypadek :math:`\ \,m=n.\ \,` 
+Wówczas warunek :math:`\ \,\text{rz}\boldsymbol{A}<n\ \,`
+jest spełniony wtedy i tylko wtedy, :math:`\,` gdy :math:`\ \det\boldsymbol{A}=0.\ \,` 
+Stąd, a także ze wzorów Cramera wynika
+
+.. admonition:: Twierdzenie 1a.
+   
+   Jednorodny układ równań o kwadratowej macierzy :math:`\,\boldsymbol{A}\,`
+   ma rozwiązania niezerowe wtedy i tylko wtedy, :math:`\,` gdy :math:`\ \det\boldsymbol{A}=0.`
+
+:math:`\;`
 
 Wprowadźmy oznaczenia :math:`\ S\ \,` i :math:`\ \,S_0\ `
 dla zbiorów rozwiązań układów :math:`\,` :eq:`05` :math:`\ ` i :math:`\ \,` :eq:`06` : 
@@ -195,8 +206,18 @@ dla zbiorów rozwiązań układów :math:`\,` :eq:`05` :math:`\ ` i :math:`\ \,`
 Z własności mnożenia macierzowego wynika, że jeżeli dwa rozwiązania,
 :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,` należą do zbioru :math:`\,S_0,\,`
 to należy doń również dowolna ich kombinacja liniowa
-:math:`\,a_1\boldsymbol{X}_1+a_2\boldsymbol{X}_2,\ \,a_1,a_2\in K.`
-Oznacza to, że :math:`\,S_0\,` jest przestrzenią wektorową.
+:math:`\,a_1\boldsymbol{X}_1+a_2\boldsymbol{X}_2,\ \,a_1,a_2\in K:`
+
+.. math::
+   
+   \boldsymbol{A}\boldsymbol{X}_1=\boldsymbol{A}\boldsymbol{X}_2=\boldsymbol{0}
+   \qquad\Rightarrow\qquad
+   \boldsymbol{A}\ (a_1\boldsymbol{X}_1+\,a_2\boldsymbol{X}_2)\ =\ 
+   a_1\,\boldsymbol{A}\boldsymbol{X}_1\,+\ a_2\,\boldsymbol{A}\boldsymbol{X}_2\ =\ 
+   \boldsymbol{0}\,.
+
+Oznacza to, że zbiór :math:`\,S_0\,` jest podprzestrzenią przestrzeni :math:`\,K^n\,.\ `
+Dokładniej charakteryzuje go
 
 .. **Twierdzenie 2.** :math:`\\`
 
@@ -215,17 +236,18 @@ Warto tu podkreślić, że zbiór :math:`\,S\,` rozwiązań układu niejednorodn
 
 Gdy :math:`\,\text{rz}\boldsymbol{A} = n,\,` to :math:`\,\text{dim}\,S_0 = 0,\,`
 czyli przestrzeń :math:`\,S_0\,` redukuje się do zbioru jednoelementowego,
-zawierającego tylko wektor zerowy. Wynika stąd kolejny
+zawierającego tylko wektor zerowy. Oznacza to, że (zgodnie z Twierdzeniem 1.) 
+układ równań ma tylko rozwiązanie  zerowe.
 
 .. **Wniosek.** :math:`\,`
 
-.. admonition:: Wniosek. :math:`\,`
+.. .. admonition:: Wniosek. :math:`\,`
 
    Rozwiązanie zerowe jest jedynym rozwiązaniem jednorodnego układu równań :eq:`06`
    wtedy i tylko wtedy, gdy rząd macierzy współczynników
    równa się liczbie niewiadomych: :math:`\ \ \text{rz}\boldsymbol{A} = n\,.\ \,`
    
-Wniosek ten wynika też bezpośrednio z Twierdzenia 1. :math:`\\`
+.. Wniosek ten wynika też bezpośrednio z Twierdzenia 1. :math:`\\`
 
 Związek pomiędzy zbiorami rozwiązań :math:`\ S\ \,` i :math:`\ \,S_0\ `
 zdefiniowanymi w równaniu :eq:`08` przedstawia
@@ -260,7 +282,7 @@ stowarzyszonego z nim układu jednorodnego.
    wtedy i tylko wtedy, gdy rząd macierzy współczynników
    równa się liczbie niewiadomych: :math:`\ \text{rz}\boldsymbol{A} = n\,.\ `
 
-Jest to konsekwencja poprzedniego wniosku z Twierdzenia 2. :math:`\\`
+.. Jest to konsekwencja poprzedniego wniosku z Twierdzenia 2. :math:`\\`
 
 Tak więc, przynajmniej w zasadzie, aby rozwiązać układ niejednorodny,
 wystarczy znaleźć (np. odgadnąć) jakieś jego szczególne rozwiązanie

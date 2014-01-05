@@ -67,23 +67,27 @@ Ostatni wynik, wyrażający normę przez iloczyn skalarny, można uogólnić i z
    .. math::
       :label: norm
       
-      f(x)\ =\ \sqrt{\,(x,x)}\ ,\qquad x\in V\,.
+      f(x)\ =\ \sqrt{\,\langle x,x\rangle}\ ,\qquad x\in V\,.
 
 **Dowód** polega na sprawdzeniu, że funkcja :eq:`norm` spełnia postulaty w definicji normy. :math:`\\`
 W oparciu o definicję iloczynu skalarnego stwierdzamy, że 
 
 1. :math:`\ f(x)\ \geq 0\qquad\land\qquad[\,f(x)\,=\,0\quad\Leftrightarrow\quad x=\theta\,]\,;`
  
-2. :math:`\ f(\alpha\,x)\ \,=\ \,\sqrt{\,(\alpha\,x,\,\alpha\,x)}\ \,=\ \,
-   \sqrt{\,\alpha^*\,\alpha\,(x,x)}\ \,=\ \,\sqrt{\,|\alpha|^2\,(x,x)}\ \ =\ \  
+2. :math:`\ f(\alpha\,x)\ \,=\ \,\sqrt{\,\langle\alpha\,x,\,\alpha\,x\rangle}\ \,=\ \,
+   \sqrt{\,\alpha^*\,\alpha\,\langle x,x\rangle}\ \,=\ \,
+   \sqrt{\,|\alpha|^2\,\langle x,x\rangle}\ \ =\ \  
    |\alpha|\ \,f(x)\,;`
    
-3. | :math:`\ [\,f(x+y)\,]^2\ \ =\ \ (x+y,\,x+y)\ \ =`
-   |  :math:`=\ \ (x,x)\,+\,(x,y)\,+\,(y,x)\,+\,(y,y)\ \ =\ \ 
-      (x,x)\,+\,(x,y)\,+\,(x,y)^*+\,(y,y)\ \ =`
-   |  :math:`=\ \ (x,x)\,+\,2\;\text{re}\,(x,y)\,+\,(y,y)\ \ \leq\ \ 
-      (x,x)\,+\,2\ |(x,y)|\,+\,(y,y)\ \ \leq`
-   |  :math:`\leq\ \ (x,x)\,+\,2\,\sqrt{(x,x)\,(y,y)}\,+\,(y,y)\ \ =\ \ 
+3. | :math:`\ [\,f(x+y)\,]^2\ \ =\ \ \langle\,x+y,\,x+y\,\rangle\ \ =`
+   |  :math:`=\ \ \langle x,x\rangle\,+\,\langle x,y\rangle\,+\,\langle y,x\rangle\,+\,
+      \langle y,y\rangle\ \ =\ \ 
+      \langle x,x\rangle\,+\,\langle x,y\rangle\,+\,\langle x,y\rangle^*+\,\langle y,y\rangle\ \ =`
+   |  :math:`=\ \ \langle x,x\rangle\,+\,2\;\text{re}\,\langle x,y\rangle\,+\,
+      \langle y,y\rangle\ \ \leq\ \ 
+      \langle x,x\rangle\,+\,2\ |\langle x,y\rangle|\,+\,\langle y,y\rangle\ \ \leq`
+   |  :math:`\leq\ \ \langle x,x\rangle\,+\,2\,\sqrt{\langle x,x\rangle\,\langle y,y\rangle}\,+\,
+      \langle y,y\rangle\ \ =\ \ 
       [\,f(x)\,]^2\,+\,2\,f(x)\,f(y)\,+\,[\,f(y)\,]^2\ \ =`
    | :math:`\ =\ \ [\,f(x)+f(y)\,]^2\,;`
    |
@@ -97,15 +101,16 @@ W punkcie 3. zostały wykorzystane związki
    
    z+z^*=\,2\ \text{re}\,z\,,\quad \text{re}\,z\,\leq |z|\,,\qquad z\in C
     
-oraz nierówność Schwarza :math:`\ \ |(x,y)|\ \leq\ \sqrt{(x,x)(y,y)}\,.`
+oraz nierówność Schwarza 
+:math:`\ \ |\langle x,y\rangle|\ \leq\ \sqrt{\langle x,x\rangle\langle y,y\rangle}\,.`
 
 Na podstawie Twierdzenia 2. każdą przestrzeń unitarną (euklidesową) :math:`\,V\,` 
-można unormować przyjmując :math:`\ \|x\|\,=\,\sqrt{(x,x)}\,,\ \ x\in V.\ `
+można unormować przyjmując :math:`\ \|x\|\,=\,\sqrt{\langle x,x\rangle}\,,\ \ x\in V.\ `
 Wtedy nierówność Schwarza zapiszemy jako
 
 .. math::
    
-   |(x,y)|\ \ \leq\ \ \|x\|\,\|y\|\,,\qquad x,y\in V\,.
+   |\langle x,y\rangle|\ \ \leq\ \ \|x\|\,\|y\|\,,\qquad x,y\in V\,.
 
 W przestrzeni :math:`\,V\,` mogą jednak istnieć też inne normy, 
 np. w przestrzeni :math:`\,C^n\ ` normą wektora 
@@ -113,7 +118,8 @@ np. w przestrzeni :math:`\,C^n\ ` normą wektora
 :math:`\ x\ =\ 
 \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\quad`
 może być 
-:math:`\quad\|x\|\ =\ \sqrt{(x,x)}\ =\ \sqrt{\,|\alpha_1|^2+|\alpha_2|^2+\ldots+|\alpha_n|^2\,}\,,`
+:math:`\quad\|x\|\ =\ \sqrt{\langle x,x\rangle}\ =\ 
+\sqrt{\,|\alpha_1|^2+|\alpha_2|^2+\ldots+|\alpha_n|^2\,}\,,`
 
 ale również :math:`\quad\|x\|\ =\ |\alpha_1|+|\alpha_2|+\ldots+|\alpha_n|\,.`
 

@@ -129,6 +129,10 @@ Przestrzenie unitarne
    p_unitarne_iloczyn_skalarny
    p_unitarne_norma
    p_unitarne_ortogonalnosc
+   p_unitarne_Gram-Schmidt_QR
+   p_unitarne_macierze_hermit_i_unit
+   p_unitarne_Sage
+   p_unitarne_zadania
 
 Wartości i wektory własne
 =========================

@@ -124,8 +124,9 @@ to mówimy o pierścieniu z jednością.
   | zerem jest funkcja :math:`\ \,\theta(x)=0,\ \,` 
     a jednością funkcja :math:`\ e(x)=1,\ \ x\in [\,0,\,1\,]\,.`
 
-| Nieprzemienny pierścień z jednością tworzą macierze kwadratowe stopnia :math:`\,n\,`
-| ze względu na dodawanie i mnożenie macierzowe.
+Nieprzemienny pierścień z jednością tworzą macierze kwadratowe stopnia :math:`\,n\,`
+nad pierścieniem z jednością (na przykład macierze rzeczywiste albo zespolone)
+ze względu na dodawanie i mnożenie macierzowe.
 
 
 **Ciało** :math:`\ \,\mathbb{K}\ \,` (ang.: field) :math:`\,` podobnie jak pierścień
@@ -252,7 +253,88 @@ który będzie w dalszym ciągu stosowany:
    \alpha\cdot v\,+\,\alpha\cdot w\quad\rightarrow\quad
    \alpha\,v\,+\,\alpha\,w\,.
 
-|
+.. Algebra liniowa obejmuje teorię przestrzeni wektorowych i jej zastosowania, 
+   np. rozwiązywanie układów równań liniowych. 
+   Klasyczna algebra liniowa jest teorią przestrzeni wektorowych i ich odwzorowań.
+
+Przestrzeń wektorowa nad ciałem :math:`\,R\ ` albo :math:`\,C\ `
+jest podstawowym obiektem klasycznej algebry liniowej.
+System algebry komputerowej Sage bazuje jednak na bardziej ogólnym pojęciu modułu nad pierścieniem.
+
+| **Lewostronny moduł nad pierścieniem** :math:`\,P\ ` jest strukturą
+  :math:`\ \ \mathbb{M}\,=\,(\,M,\,\oplus\,;\ \,P,\,+\,,\,\cdot\ \,;\ \;\boxdot\,)\,,\ `
+| gdzie 
+  :math:`\quad\oplus:\ M\times M\rightarrow M\,;
+  \quad +\ ,\ \cdot\,:\ P\times P\rightarrow P\,;
+  \quad\boxdot\,:\ P\times M\rightarrow M\,,`
+| w której są spełnione następujące warunki:
+
+1. :math:`\ (M,\,\oplus\,)\ \ ` jest grupą przemienną (jest to *grupa addytywna modułu*);
+
+2. :math:`\ (P,\,+\,,\,\cdot\,)\ \ ` jest pierścieniem z jednością;
+
+3. | :math:`\ (a + b)\,\boxdot\,m \ \,=\ \,
+     (a\,\boxdot\,m)\,\oplus\,(b\,\boxdot\,m)\,,`
+   | :math:`\ \ a\,\boxdot\,(m_1\,\oplus\,m_2) \ \,=\ \,
+     (a\,\boxdot\,m_1)\ \oplus\ (a\,\boxdot\,m_2)\,;`
+
+4. :math:`\ \ a\,\boxdot\,(b\,\boxdot\,m) \ \,=\ \,(a\cdot b)\,\boxdot\,m\,;`
+
+5. :math:`\ \ 1\ \boxdot\ m \ \,=\ \,m\,;\qquad\quad 
+   a,b\in P\,,\quad m,m_1,m_2\in M.`
+
+Lewostronny moduł :math:`\,M\ ` nad pierścieniem :math:`\,P\ `
+(krótko: lewostronny :math:`\,P`-moduł) jest więc grupą przemienną,
+której elementy można mnożyć przez skalary z pierścienia :math:`\,P\,,\ `
+przy czym spełnione są warunki rozdzielności i łączności :math:`\,` 3. - 5.
+
+Definicję prawostronnego :math:`\,P`-modułu otrzymamy zastępując postulat 4. przez
+
+4. :math:`\ \ a\,\boxdot\,(b\,\boxdot\,m) \ \,=\ \,(b\cdot a)\,\boxdot\,m\,;\qquad 
+   a,b\in P\,,\quad m\in M.`
+
+Wtedy bardziej naturalny będzie zmieniony zapis: :math:`\quad\boxdot\,:\ M\times P\rightarrow M\,,`
+
+3. | :math:`\ m\,\boxdot\,(a + b)\ \,=\ \,
+     (m\,\boxdot\,a)\,\oplus\,(m\,\boxdot\,b)\,,`
+   | :math:`\ \ (m_1\,\oplus\,m_2)\,\boxdot\,a \ \,=\ \,
+     (m_1\,\boxdot\,a)\ \oplus\ (m_2\,\boxdot\,a)\,;`
+
+4. :math:`\ \ (m\,\boxdot\,a)\,\boxdot\,b \ \,=\ \,m\,\boxdot\,(a\cdot b)\,;`
+
+5. :math:`\ \ m\ \boxdot\ 1 \ \,=\ \,m\,;\qquad\quad 
+   a,b\in P\,,\quad m,m_1,m_2\in M.`
+
+Jeżeli pierścień :math:`\,P\ ` jest przemienny, znika różnica pomiędzy 
+lewostronnym i prawostronnym :math:`\,P`-modułem, 
+a jeśli :math:`\,P\ ` jest ciałem, :math:`\,P`-moduł staje się przestrzenią wektorową
+nad tym ciałem.
+
+Przykłady.
+
+0. Pierścień :math:`\,P\ ` jest (lewo- i prawostronnym) modułem nad sobą samym.
+
+1. Rozważmy zbiór :math:`\,P^n\ \,n`-elementowych ciągów o wyrazach 
+   z pierścienia :math:`\,P,\ ` zapisanych kolumnowo. Przy naturalnie określonych działaniach
+   dodawania i mnożenia przez :math:`\\` skalary z :math:`\,P\ ` zbiór ten jest grupą przemienną
+   i jednocześnie (lewo- i prawostronnym) :math:`\,P`-modułem.
+   Ważnym przykładem jest moduł :math:`\,Z^n\,,\ ` złożony z :math:`\,n`-elementowych kolumn
+   o wyrazach całkowitych. Gdy :math:`\,P\ ` jest ciałem: :math:`\,P=K,\ ` otrzymujemy
+   przestrzeń :math:`\,K^n.`
+
+2. Na tej samej zasadzie zbiór :math:`\,M_{m\times n}(P)\ ` macierzy prostokątnych 
+   o elementach z pierścienia :math:`\,P\ ` jest (lewo- i prawostronnym) :math:`\,P`-modułem.
+   W szczególności może to być moduł :math:`\,M_{m\times n}(Z)\ ` macierzy o elementach całkowitych.
+
+3. Zbiór :math:`\,M_n(P)\ ` macierzy kwadratowych stopnia :math:`\,n\ ` nad pierścieniem 
+   :math:`\,P\ ` jest pierścieniem z jednością ze względu na dodawanie i mnożenie macierzowe.
+   Mnożenie z lewej strony kolumn ze zbioru :math:`\,P^n\ ` przez macierze z pierścienia
+   :math:`\,M_n(P)\ ` jest działaniem w zbiorze :math:`\,P^n,\ `
+   spełniającym warunki 3.-5. definicji modułu. Wobec tego :math:`\,P^n\ ` jest modułem
+   (wyłącznie lewostronnym) nad pierścieniem :math:`\,M_n(P).`
+
+4. Każda grupa przemienna jest modułem nad pierścieniem liczb całkowitych :math:`\,Z.\ ` 
+
 | **Algebra nad ciałem** :math:`\,K\ ` jest strukturą 
   :math:`\ \ \mathbb{A}\,=\,(\,A,\,\oplus,\,\odot\,;\ \,K,\,+\ ,\,\cdot\ \,;\ \boxdot\,)\,,\ `
 | gdzie 

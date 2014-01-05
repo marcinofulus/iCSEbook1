@@ -7,15 +7,16 @@ Iloczyn skalarny
    | Niech będzie dana zespolona przestrzeń wektorowa :math:`\,V(C).\ `
    | *Iloczyn skalarny* jest odwzorowaniem :math:`\,f:\ V\times V\rightarrow C\ `
      spełniającym warunki 
-   | (z oznaczenia :math:`\,f(x,y)=(x,y),\ \ x,y\in V`) :
+   | (z oznaczenia :math:`\,f(x,y)=\langle x,y\rangle,\ \ x,y\in V`) :
 
-   1. :math:`\,(y,x)\,=\,(x,y)^*\,,`
+   1. :math:`\,\langle y,x\rangle\,=\,\langle x,y\rangle^*\,,`
 
-   2. :math:`\,(x,y_1+y_2)\,=\,(x,y_1)\,+\,(x,y_2)\,,`
+   2. :math:`\,\langle\,x,\,y_1+y_2\,\rangle\,=\,\langle x,y_1\rangle\,+\,\langle x,y_2\rangle\,,`
 
-   3. :math:`\,(x,\,\alpha\,y)\,=\,\alpha\,(x,y)\,,\quad\alpha\in C\,,`
+   3. :math:`\,\langle x,\,\alpha\,y\rangle\,=\,\alpha\,\langle x,y\rangle\,,\quad\alpha\in C\,,`
 
-   4. :math:`\,(x,x)\geq 0\quad\land\quad [\,(x,x)=0\ \ \Leftrightarrow\ \ x=\theta\,]\,.`
+   4. :math:`\,\langle x,x\rangle\geq 0\quad\land\quad
+      [\,\langle x,x\rangle=0\ \ \Leftrightarrow\ \ x=\theta\,]\,.`
 
 **Uwagi i komentarze.**
 
@@ -24,9 +25,9 @@ Iloczyn skalarny
 
 * Warunek 1. stwierdza, że przestawienie czynników jest równoważne
   sprzężeniu zespolonemu iloczynu skalarnego.
-  Przyjmując :math:`\ y=x\ ` otrzymujemy: :math:`\ (x,x)=(x,x)^*\,,\ `
+  Przyjmując :math:`\ y=x\ ` otrzymujemy: :math:`\ \langle x,x\rangle=\langle x,x\rangle^*\,,\ `
   co oznacza, że kwadrat skalarny jest liczbą rzeczywistą. Dzięki temu ma sens warunek 4.,
-  w którym dodatkowo żąda się, żeby :math:`\ (x,x)\geq 0.` 
+  w którym dodatkowo żąda się, żeby :math:`\ \langle x,x\rangle\geq 0.` 
 
 * Warunki 2. i :math:`\,` 3. stwierdzają odpowiednio addytywność i jednorodność 
   iloczynu skalarnego ze względu na *drugi* czynnik wektorowy.
@@ -39,25 +40,31 @@ Bezpośrednio z definicji wynikają dalsze własności iloczynu skalarnego:
 
 .. math::
    
-   (x_1+x_2,y)\,=\,(y,x_1+x_2)^*=\,[\,(y,x_1)+(y,x_2)\,]^*=\,
-   (y,x_1)^*+\,(y,x_2)^*=\,(x_1,y)\,+\,(x_2,y)\,;
+   \langle x_1+x_2,y\rangle\,=\,\langle y,x_1+x_2\rangle^*=\,
+   [\,\langle y,x_1\rangle+\langle y,x_2\rangle\,]^*=\,
+   \langle y,x_1\rangle^*+\,\langle y,x_2\rangle^*=\,\langle x_1,y\rangle\,+\,\langle x_2,y\rangle\,;
 
-   (\alpha\,x,y)\,=\,(y,\alpha\,x)^*=\,[\,\alpha\,(y,x)\,]^*=\,\alpha^*(y,x)^*=\,\alpha^*(x,y)\,.
+   \langle\alpha\,x,y\rangle\,=\,\langle y,\alpha\,x\rangle^*=\,[\,\alpha\,\langle y,x\rangle\,]^*=
+   \,\alpha^*\langle y,x\rangle^*=\,\alpha^*\langle x,y\rangle\,.
 
 A zatem iloczyn skalarny jest liniowy względem drugiego czynnika wektorowego
 i antyliniowy względem pierwszego:
 
 .. math::
    
-   (x,\,\alpha_1\,y_1\,+\,\alpha_2\,y_2)\ =\ \alpha_1\ (x,y_1)\,+\,\alpha_2\ (x,y_2)\,,
+   \langle\,x,\ \alpha_1\,y_1\,+\,\alpha_2\,y_2\,\rangle\ =\ 
+   \alpha_1\ \langle x,y_1\rangle\,+\,\alpha_2\ \langle x,y_2\rangle\,,
 
-   (\alpha_1\,x_1\,+\,\alpha_2\,x_2,y)\ =\ \alpha_1^*\ (x_1,y)\,+\,\alpha_2^*\,(x_2,y)\,,
+   \langle\,\alpha_1\,x_1\,+\,\alpha_2\,x_2,\,y\,\rangle\ =\ 
+   \alpha_1^*\ \langle x_1,y\rangle\,+\,\alpha_2^*\,\langle x_2,y\rangle\,,
 
 gdzie :math:`\ \,\alpha_1,\alpha_2\in C,\ \ x,\,x_1,x_2,\ y,\,y_1,y_2\in V\,.`
 
-Definicja iloczynu skalarnego w podręcznikach matematycznych różni się od podanej tutaj 
-w punkcie 3., który przyjmuje postać: :math:`\,(\alpha\,x,y)=\alpha\,(x,y)\,,\ \ \alpha\in C.\ `
-Wtedy iloczyn skalarny jest liniowy względem pierwszego i antyliniowy względem drugiego czynnika. W zastosowaniach fizycznych, a zwłaszcza w mechanice kwantowej, bardziej odpowiednia jest definicja przyjęta w tym skrypcie.
+Definicja iloczynu skalarnego w podręcznikach matematycznych 
+może różnić się od podanej tutaj w punkcie 3., który zapisywany jest w postaci: 
+:math:`\,(\alpha\,x,y)=\alpha\,(x,y)\,,\ \ \alpha\in C.\ `
+Wtedy iloczyn skalarny jest liniowy względem pierwszego i antyliniowy względem drugiego czynnika. 
+W zastosowaniach fizycznych, a zwłaszcza w mechanice kwantowej, bardziej odpowiednia jest definicja przyjęta w tym skrypcie.
 
 Łatwo można udowodnić następujące 
 
@@ -68,10 +75,10 @@ Wtedy iloczyn skalarny jest liniowy względem pierwszego i antyliniowy względem
    .. math::
       :label: zero
       
-      (\,x=\theta\quad\lor\quad y=\theta\,)\qquad\Rightarrow\qquad (x,y)\,=\,0\,.
+      (\,x=\theta\quad\lor\quad y=\theta\,)\qquad\Rightarrow\qquad \langle x,y\rangle\,=\,0\,.
 
 Rzeczywiście, :math:`\,` jeżeli np. :math:`\ y=\theta,\ \ \text{to}\ \ y=0\cdot y\ \,` 
-oraz :math:`\ \,(x,y)=(x,\,0\cdot y)=0\cdot (x,y)\,=\,0.`
+oraz :math:`\ \,\langle x,y\rangle=\langle x,\,0\cdot y\rangle=0\cdot\langle x,y\rangle\,=\,0.`
 
 .. admonition:: Uwaga:
    
@@ -80,10 +87,11 @@ oraz :math:`\ \,(x,y)=(x,\,0\cdot y)=0\cdot (x,y)\,=\,0.`
    (mówimy wtedy o wektorach *ortogonalnych*).
 
 Iloczyn skalarny określony w rzeczywistej przestrzeni wektorowej :math:`\,V(R)\ `
-jest odwzorowaniem :math:`\,f:\ V\times V\rightarrow R,\ ` spełniającym warunki 1.- 4.
-Postulat 1. staje się wtedy warunkiem przemienności: :math:`\ (y,x)=(x,y),\ \ x,y\in V,\ `
-przez co iloczyn skalarny jest liniowy ze względu na każdy czynnik wektorowy
-z osobna (można go wtedy zdefiniować jako istotnie dodatnio określony rzeczywisty symetryczny funkcjonał dwuliniowy).
+jest odwzorowaniem :math:`\,f:\ V\times V\rightarrow R\,,\ ` spełniającym warunki 1.- 4.
+Postulat 1. staje się wtedy warunkiem przemienności: 
+:math:`\ \langle y,x\rangle=\langle x,y\rangle,\ \ x,y\in V,\ `
+przez co iloczyn skalarny jest liniowy ze względu na każdy czynnik wektorowy z osobna 
+(można go wtedy zdefiniować jako istotnie dodatnio określony rzeczywisty symetryczny funkcjonał dwuliniowy).
 
 .. admonition:: Definicja.
    
@@ -104,24 +112,29 @@ z osobna (można go wtedy zdefiniować jako istotnie dodatnio określony rzeczyw
    \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in C\ \right\}\,.
 
 Dla wektorów :math:`\quad 
-x\,=\,\left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
-y\,=\,\left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
+\boldsymbol{x}\,=\,
+\left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
+\boldsymbol{y}\,=\,
+\left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
 iloczyn skalarny wyraża się wzorem
 
 .. math::
    
-   (x,y)\,=\,\sum_{i\,=\,1}^n\ \alpha_i^*\,\beta_i
+   \langle\boldsymbol{x},\boldsymbol{y}\rangle\,=\,\sum_{i\,=\,1}^n\ \alpha_i^*\,\beta_i
         \,=\;\alpha_1^*\,\beta_1\,+\;\alpha_2^*\,\beta_2\,+\;\dots\;+\;\alpha_n^*\,\beta_n
         \,=\;[\,\alpha_1^*,\,\alpha_2^*,\,\dots,\,\alpha_n^*\,]\ 
         \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\,.
 
-Na przykład dla :math:`\ \ x\,=\,\left[\begin{array}{c} 1+i \\ -2 \\ 4\,i \end{array}\right]\,,\ \ 
-y\,=\,\left[\begin{array}{c} -i \\ -1+2\,i \\ 0 \end{array}\right]\ \in\ C^3\quad` 
+Na przykład dla :math:`\ \ \boldsymbol{x}\,=\,
+\left[\begin{array}{c} 1+i \\ -2 \\ 4\,i \end{array}\right]\,,\ \ 
+\boldsymbol{y}\,=\,
+\left[\begin{array}{c} -i \\ -1+2\,i \\ 0 \end{array}\right]\ \in\ C^3\quad` 
 iloczyn skalarny wynosi
 
 .. math::
    
-   (x,y)\ =\ (1-i)\,(-i)\,+\,(-2)\,(-1+2\,i)\,+\,(-4\,i)\,0\ =\ -i-1+2-4\,i\ =\ 1-5\,i\,.
+   \langle\boldsymbol{x},\boldsymbol{y}\rangle\ =\ 
+   (1-i)\,(-i)\,+\,(-2)\,(-1+2\,i)\,+\,(-4\,i)\,0\ =\ -i-1+2-4\,i\ =\ 1-5\,i\,.
 
 2.) Przykładem przestrzeni euklidesowej jest zbiór :math:`\,n`-elementowych wektorów kolumnowych
 
@@ -132,16 +145,18 @@ iloczyn skalarny wynosi
    \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in R\ \right\}\,.
              
 Dla wektorów :math:`\quad 
-x\,=\,\left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
-y\,=\,\left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
+\boldsymbol{x}\,=\,
+\left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
+\boldsymbol{y}\,=\,
+\left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
 iloczyn skalarny dany jest przez
 
 .. math::
    
-   (x,y)\,=\,\sum_{i\,=\,1}^n\ \alpha_i\,\beta_i
-        \,=\;\alpha_1\,\beta_1\,+\;\alpha_2\,\beta_2\,+\;\dots\;+\;\alpha_n\,\beta_n
-        \,=\;[\,\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\,]\ 
-        \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\,.
+   \langle\boldsymbol{x},\boldsymbol{y}\rangle\,=\,\sum_{i\,=\,1}^n\ \alpha_i\,\beta_i
+   \,=\;\alpha_1\,\beta_1\,+\;\alpha_2\,\beta_2\,+\;\dots\;+\;\alpha_n\,\beta_n
+   \,=\;[\,\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\,]\ 
+   \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\,.
 
 3.) W mechanice kwantowej ma zastosowanie unitarna przestrzeń :math:`\,L^2\ `
 złożona z funkcji zespolonych określonych na osi rzeczywistej, całkowalnych w kwadracie modułu:
@@ -152,7 +167,7 @@ złożona z funkcji zespolonych określonych na osi rzeczywistej, całkowalnych 
    \int_{-\infty}^{+\infty}\ |\,\varphi(x)\,|^2\,<\,\infty\ \right\}\,.
 
 Dla :math:`\quad\varphi,\,\psi\in L^2\quad` iloczyn skalarny ma postać 
-:math:`\quad (\varphi,\psi)\ =\ 
+:math:`\quad \langle\varphi,\psi\rangle\ =\ 
 \displaystyle\int_{-\infty}^{+\infty}\ [\,\varphi(x)\,]^*\,\psi(x)\ dx\,.`
 
 4.) Przestrzenią euklidesową jest (dwu- albo trójwymiarowa) przestrzeń wektorów geometrycznych
@@ -176,7 +191,8 @@ są jednak ważne również w przestrzeniach euklidesowych.
    .. math::
       :label: Schwarz
       
-      |\,(x,y)\,|^2\ \ \leq\ \ (x,x)\,(y,y)\,,\qquad x,y\in V(C)\,.
+      |\,\langle x,y\rangle\,|^2\ \ \leq\ \ 
+      \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(C)\,.
 
 **Dowód.** :math:`\,` Gdy :math:`\,y=\theta,\ \,` słaba nierówność :eq:`Schwarz` realizuje się jako równość: :math:`\,0\,\leq 0\,.`
 
@@ -185,26 +201,32 @@ Wtedy, :math:`\,` dla dowolnego :math:`\,\alpha\in C:`
 
 .. math::
    
-   (x-\alpha\,y,\;x-\alpha\,y)\ \ \geq\ \ 0\,,
+   \langle\,x-\alpha\,y,\;x-\alpha\,y\,\rangle\ \ \geq\ \ 0\,,
 
-   (x,x)\ -\ (x,\,\alpha\,y)\ -\ (\alpha\,y,\,x)\ +\ (\alpha\,y,\,\alpha\,y)\ \ \geq\ \ 0\,,
+   \langle x,x\rangle\ -\ \langle x,\,\alpha\,y\rangle\ -\ 
+   \langle\alpha\,y,\,x\rangle\ +\ \langle\alpha\,y,\,\alpha\,y\rangle\ \ \geq\ \ 0\,,
 
-   (x,x)\ -\ \alpha\,(x,y)\ -\ \alpha^*\,(x,y)^*\ +\ \alpha^*\alpha\ (y,y)\ \ \geq\ \ 0\,.
+   \langle x,x\rangle\ -\ \alpha\,\langle x,y\rangle\ -\ 
+   \alpha^*\,\langle x,y\rangle^*\ +\ \alpha^*\alpha\ \langle y,y\rangle\ \ \geq\ \ 0\,.
 
-Podstawiamy teraz :math:`\ \ \alpha\ =\ \displaystyle\frac{(x,y)^*}{(y,y)}\,:`
-
-.. math::
-   
-   (x,x)\ -\ \frac{(x,y)^*}{(y,y)}\ (x,y)\ -\ \frac{(x,y)}{(y,y)}\ (x,y)^*\ +\ \,
-   \frac{(x,y)}{(y,y)}\ \frac{(x,y)^*}{(y,y)}\ (y,y)\ \ \geq\ \ 0\,.
-
-Mnożąc obie strony nierówności przez :math:`\ \;(y,y)>0\ \;` otrzymujemy
+Podstawiamy teraz :math:`\ \ \alpha\ =\ 
+\displaystyle\frac{\langle x,y\rangle^*}{\langle y,y\rangle}\,:`
 
 .. math::
    
-   (x,x)\,(y,y)\ -\ |\,(x,y)\,|^2\ -\ |\,(x,y)\,|^2\ +\ \,|\,(x,y)\,|^2\ \ \geq\ \ 0\,,
+   \langle x,x\rangle\ -\ \frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ \langle x,y\rangle\ -\ 
+   \frac{\langle x,y\rangle}{\langle y,y\rangle}\ \langle x,y\rangle^*\ +\ \,
+   \frac{\langle x,y\rangle}{\langle y,y\rangle}\ \frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ 
+   \langle y,y\rangle\ \ \geq\ \ 0\,.
 
-   (x,x)\,(y,y)\ \ \geq\ \ |\,(x,y)\,|^2\,.
+Mnożąc obie strony nierówności przez :math:`\ \;\langle y,y\rangle>0\ \;` otrzymujemy
+
+.. math::
+   
+   \langle x,x\rangle\,\langle y,y\rangle\ -\ |\,\langle x,y\rangle\,|^2\ -\ 
+   |\,\langle x,y\rangle\,|^2\ +\ \,|\,\langle x,y\rangle\,|^2\ \ \geq\ \ 0\,,
+
+   \langle x,x\rangle\,\langle y,y\rangle\ \ \geq\ \ |\,\langle x,y\rangle\,|^2\,.
 
 Można udowodnić, że nierówność :eq:`Schwarz` przechodzi w równość wtedy i tylko wtedy,
 gdy wektory :math:`\,x,y\ ` są liniowo zależne. W przestrzeni euklidesowej nierówność 
@@ -213,7 +235,7 @@ redukuje się do
 .. math::
    :label: Schwarz_real
    
-   (x,y)^2\ \ \leq\ \ (x,x)\,(y,y)\,,\qquad x,y\in V(R)\,.   
+   \langle x,y\rangle^2\ \ \leq\ \ \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(R)\,.   
 
 **Przykłady.**
 

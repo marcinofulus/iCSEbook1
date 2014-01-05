@@ -250,10 +250,10 @@ jej elementów diagonalnych:
 
 .. math::
    
-   \text{Tr}\,\boldsymbol{A}\ \,:\,=\ \,\sum_{i\,=\,1}^n\ a_{ii}\,.
+   \text{tr}\,\boldsymbol{A}\ \,:\,=\ \,\sum_{i\,=\,1}^n\ a_{ii}\,.
 
 Z własności działań na macierzach wynika, że odwzorowanie
-:math:`\ \text{Tr}:\,M_n(K)\rightarrow K\ \,` jest funkcjonałem liniowym
+:math:`\ \text{tr}:\,M_n(K)\rightarrow K\ \,` jest funkcjonałem liniowym
 określonym na algebrze macierzy kwadratowych stopnia :math:`\,n\,` nad ciałem :math:`\,K.`
 
 **Przykład 7.** :math:`\,` Niech :math:`\,\mathcal{C}_{[\,0,1\,]}^{\,\infty}\ ` oznacza 

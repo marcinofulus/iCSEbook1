@@ -8,14 +8,15 @@ Przestrzenie unitarne
    
    .. math::
       
-      |\,(x,y)\,|^2\ \ \leq\ \ (x,x)\,(y,y)\,,\qquad x,y\in V(C)\,,
+      |\,\langle x,y\rangle\,|^2\ \ \leq\ \ 
+      \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(C)\,,
    
    przechodzi w równość wtedy i tylko wtedy, :math:`\,`
    gdy wektory :math:`\,x,y\ ` są liniowo zależne:
    
    .. math::
    
-      |\,(x,y)\,|^2\ \,=\ \,(x,x)\,(y,y)
+      |\,\langle x,y\rangle\,|^2\ \,=\ \,\langle x,x\rangle\,\langle y,y\rangle
       \qquad\Leftrightarrow\qquad
       (x,y)\ \ -\ \ \text{układ liniowo zależny}\,.
 
@@ -31,18 +32,20 @@ dla dowolnego :math:`\,\alpha\in C:`
    
    x-\alpha\,y\ \,=\ \,1\cdot x\,-\,\alpha\cdot y\ \neq\ \theta\,,
 
-   (x-\alpha\,y,\,x-\alpha\,y)\ >\ 0\,.
+   \langle\,x-\alpha\,y,\,x-\alpha\,y\,\rangle\ >\ 0\,.
 
 .. Korzystając, jak w ogólnym dowodzie nierówności Schwarza, z własności iloczynu skalarnego
-   i podstawiając :math:`\ \ \alpha\ =\ \displaystyle\frac{(x,y)^*}{(y,y)}\,,\ `
+   i podstawiając 
+   :math:`\ \ \alpha\ =\ \displaystyle\frac{(x,y)^*}{(y,y)}\,,\ `
    dochodzimy do ostrej nierówności
 
-Podstawiając, jak w dowodzie nierówności Schwarza,
-:math:`\ \,\alpha\ =\ \displaystyle\frac{(x,y)^*}{(y,y)}\ ,\ ` otrzymujemy
+Podstawiając, jak w dowodzie nierówności Schwarza:
+:math:`\ \,\alpha\ =\ 
+\displaystyle\frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ ,\ ` otrzymujemy
 
 .. math::
    
-   (x,x)\,(y,y)\ \ >\ \ |\,(x,y)\,|^2\,.
+   \langle x,x\rangle\,\langle y,y\rangle\ \ >\ \ |\,\langle x,y\rangle\,|^2\,.
 
 Pokazaliśmy więc, że
 
@@ -50,13 +53,13 @@ Pokazaliśmy więc, że
    
    x,y\ \ \text{są liniowo niezależne}
    \qquad\Rightarrow\qquad
-   |\,(x,y)\,|^2\ \ \neq\ \ (x,x)\,(y,y)\,,
+   |\,\langle x,y\rangle\,|^2\ \ \neq\ \ \langle x,x\rangle\,\langle y,y\rangle\,,
 
 co przez kontrapozycję jest równoważne implikacji
 
 .. math::
    
-   |\,(x,y)\,|^2\ \ =\ \ (x,x)\,(y,y)
+   |\,\langle x,y\rangle\,|^2\ \ =\ \ \langle x,x\rangle\,\langle y,y\rangle
    \qquad\Rightarrow\qquad
    x,y\ \ \text{są liniowo zależne}\,.
 
@@ -69,11 +72,13 @@ W pierwszym przypadku
 .. math::
    
    \begin{array}{l}
-   |\,(x,y)\,|^2\ \,=\ \,|\,(x,\,\alpha\,x)\,|^2\ \,=\ \,
-   |\,\alpha\,(x,x)\,|^2\ \,=\ \,|\alpha|^2\ (x,x)^2\,,
+   |\,\langle x,y\rangle\,|^2\ \,=\ \,|\,\langle x,\,\alpha\,x\rangle\,|^2\ \,=\ \,
+   |\,\alpha\,\langle x,x\rangle\,|^2\ \,=\ \,|\alpha|^2\ \langle x,x\rangle^2\,,
    \\
-   (x,x)\,(y,y)\ \,=\ \,(x,x)\,(\alpha\,x,\,\alpha\,x)\ \,=\ \,
-   (x,x)\ \alpha^*\alpha\,(x,x)\ \,=\ \,|\alpha|^2\ (x,x)^2\,.
+   \langle x,x\rangle\,\langle y,y\rangle\ \,=\ \,
+   \langle x,x\rangle\,\langle\alpha\,x,\,\alpha\,x\rangle\ \,=\ \,
+   \langle x,x\rangle\ \alpha^*\alpha\,\langle x,x\rangle\ \,=\ \,
+   |\alpha|^2\ \langle x,x\rangle^2\,.
    \end{array}
 
 W drugim przypadku
@@ -81,14 +86,18 @@ W drugim przypadku
 .. math::
    
    \begin{array}{l}
-   |\,(x,y)\,|^2\ \,=\ \,|\,(\alpha\,y,\,y)\,|^2\ \,=\ \,
-   |\,\alpha^*\,(y,y)\,|^2\ \,=\ \,|\alpha|^2\ (y,y)^2\,,
+   |\,\langle x,y\rangle\,|^2\ \,=\ \,
+   |\,\langle\alpha\,y,\,y\rangle\,|^2\ \,=\ \,
+   |\,\alpha^*\,\langle y,y\rangle\,|^2\ \,=\ \,|\alpha|^2\ \langle y,y\rangle^2\,,
    \\
-   (x,x)\,(y,y)\ \,=\ \,(\alpha\,y,\,\alpha\,y)\,(y,y)\ \,=\ \,
-   \alpha^*\alpha\ (y,y)\ (y,y)\,=\ \,|\alpha|^2\ (y,y)^2\,.
+   \langle x,x\rangle\,\langle y,y\rangle\ \,=\ \,
+   \langle\alpha\,y,\,\alpha\,y\rangle\,\langle y,y\rangle\ \,=\ \,
+   \alpha^*\alpha\ \langle y,y\rangle\ \langle y,y\rangle\,=\ \,
+   |\alpha|^2\ \langle y,y\rangle^2\,.
    \end{array}
 
-W obydwu sytuacjach :math:`\ \ |\,(x,y)\,|^2\ \,=\ \,(x,x)\,(y,y)\,.`
+W obydwu sytuacjach 
+:math:`\ \ |\,\langle x,y\rangle\,|^2\ \,=\ \,\langle x,x\rangle\,\langle y,y\rangle\,.`
 
 W ten sposób stwierdziliśmy, że
 
@@ -96,7 +105,7 @@ W ten sposób stwierdziliśmy, że
    
    x,y\ \ \text{są liniowo zależne}
    \qquad\Rightarrow\qquad
-   |\,(x,y)\,|^2\ \ =\ \ (x,x)\,(y,y)\,.
+   |\,\langle x,y\rangle\,|^2\ \ =\ \ \langle x,x\rangle\,\langle y,y\rangle\,.
    
 
 
