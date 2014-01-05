@@ -154,7 +154,7 @@ W SAGE można bardzo łatwo otrzymać postać analityczną rozwiązania równani
 
 .. MATH::
 
-    c*e^{(k*t)}
+    c e^{(kt)}
 
 
 .. end of output
@@ -168,11 +168,6 @@ W SAGE można bardzo łatwo otrzymać postać analityczną rozwiązania równani
     sage: var('N1,N2,N3')
     sage: T = srange(0,3,0.01)
     sage: sol=desolve_odeint( vector([-N1, 0, 0.5*N3]), [5,5,5],T,[N1,N2,N3])## rozwiązania dla różnych wartości k=-1, 0, 0.5
-
-
-.. end of output
-
-.. code-block:: python
 
     sage: line( zip ( T,sol[:,0]) ,figsize=(5, 3),legend_label="k=-1") +\
     ...    line( zip ( T,sol[:,1]) ,color='red',legend_label="k=0")+\
@@ -253,7 +248,7 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
 
     sage: var('x a b')
     sage: model(x) = a * exp(b * x )
-    sage: fit = find_fit (zip(t,X), model, solution_dict=True,initial_guess=(.1,.1)) # initial_guess  ustala punkt startowy w iteracjach procedury nieliniowej optymalizacji
+    sage: fit = find_fit (zip(t,X), model, solution_dict=True,initial_guess=(.1,.1)) 
     sage: fit
 
 
@@ -261,8 +256,9 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
 
     \{b: 0.032184803220426876, a: 0.021538179879268291\}
 
-
 .. end of output
+
+Parametr :code:`initial_guess`  ustala punkt startowy dla rozpoczęcia iteracji procedury nieliniowej optymalizacji.
 
 .. code-block:: python
 
@@ -295,15 +291,15 @@ Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę
 .. end of output
 
 
-Ostatnia liczba to wartość k obliczona z danych dla wzrostu bakterii. Jest on bardzo bliska wartości b obliczonej z dopasowania danych do krzywej eksponencjalnej: :math:`n(t) = a \mbox{exp}(a t)`. Stała :math:`a` też jest bliska wartości 0.22 z danych.
+Ostatnia liczba to wartość $k$ obliczona z danych dla wzrostu
+bakterii. Jest on bardzo bliska wartości b obliczonej z dopasowania
+danych do krzywej eksponencjalnej: :math:`n(t) = a \exp(a t)`. Stała
+:math:`a` też jest bliska wartości 0.22 z danych.
 
 
 
 
 **ZADANIE:** W modelu Malthusa występują 2 parametry: a i b. W  rozwiązaniu pojawia się tylko różnica a\-b. Przeprowadzić dyskusję  dotyczącą bezwymiarowej postaci równania Malthusa. Ile istotnych  parametrów zawiera model Malthusa?
-
-
-****
 
 
 **ZADANIE:**   W roku 1960 liczba ludności wynosiła 3 mld. W roku  1970 \- 3.7 mld ludzi.  Zakładając, że zmiana populacji następuje zgodnie   z powyższym modelem Malthusa, oblicz  liczbę ludności w roku 1980.  Porównaj wynik modelu ze stanem faktycznym (skorzystaj z  danych  demograficznych zamieszczonych na stronie internetowej).
@@ -328,7 +324,8 @@ Ostatnia liczba to wartość k obliczona z danych dla wzrostu bakterii. Jest on 
 
 Vibrio natrigens
 
-Sprawdź,  czy model Malthusa opisuje powyższy wzrost kolonii bakterii.  Oceń rzetelność tego modelu.
+Sprawdź, czy model Malthusa opisuje powyższy wzrost kolonii bakterii.
+Oceń rzetelność tego modelu.
 
 
 Model Verhulsta
