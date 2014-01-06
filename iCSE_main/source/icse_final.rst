@@ -409,10 +409,35 @@ Elektrodynamika klasyczna
 Transformacja Lorenza.
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. MMK Uzupełnić - Łobejko and co.! 
+.. figure:: figs/transform_lorentza_350px.png
+   :align: right
+   :figwidth: 350px
+   :width: 350px
 
-- `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
-  fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
+   Geometryczne przedstawienie transformacji Lorentza
+
+Transformacje Lorentza przedstawione zostały w wyjątkowo prosty
+sposób, bazujący na szkolnych przekształceniach
+geometrycznych. Wykorzystując interaktywne możliwości sage'a, szybko
+znajdziemy długość i czas w układzie poruszającym się i bez problemu
+stwierdzimy niezmienniczość interwału zdarzeń w przestrzeni
+Minkowskiego.
+
+ - `Geometryczne przedstawienie transformacji Lorentza  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_Geom_Trans_Lorentza>`__
+
+
+
+Na przykładzie dwóch rakiet poruszających się w przeciwne strony,
+rozważamy słynny paradoks stodoły i drabiny, będący pozorną
+konsekwencją szczególnej teorii względności. Czy w jednym układzie
+odniesienia pocisk trafia w rakietę, a w drugim już nie? Do poprawnej
+konkluzji dochodzimy rozważając szczegółowo linie świata
+poszczególnych zdarzeń i ich odległości czasoprzestrzenne.
+
+ - `Geometryczne przedstawienie transformacji Lorentza  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_Wzglednosc_rownoczesnosci>`__
+
+
+ - `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
 
 
 Fale elektromagnetyczne, superpozycja.
@@ -517,6 +542,15 @@ różniczkowych
 
 -  `Obwody prądu zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
 
+
+Metoda potencjałów węzłowych (ang. node method), czyli jak w prosty
+sposób analizować układy elektryczne, śledząc napięcie i natężenie
+prądu w węzłach obwodów. Wykorzystując tę metodę zapiszemy równania
+różniczkowe dla obwodów RC, RL oraz RLC i wykonamy symulację przebiegu
+natężenia oraz napięcia prądu w tych obwodach. Na koniec
+przedyskutujemy również zjawisko rezonansu w układzie RLC.
+
+-  `MPW w obwodach RLC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
 
 Pomiary i symulacje komputerowe wiekości elektrycznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2183,13 +2217,23 @@ Prawa Keplera
 Fizyka gwiazd
 ~~~~~~~~~~~~~
 
-Fizyka gwiazd
+.. figure:: figs/radiancja.png
+   :align: right
+   :figwidth: 320px
+   :height: 220px
+
+   Radiancja spektralna gwiazd.
+
+Kiedy oglądamy nocne niebo, wszystkie gwiazdy wydają się nam po prostu białe. Jeśli jednak spojrzymy na niebo przez lornetkę lub teleskop, zaobserwujemy coś zupełnie nieoczekiwanego - różnice w kolorach i odcieniach gwiazd. Na pytania dotyczące typów widmowych gwiazd odpowiemy analizując prawo Wiena oraz rozkład Plancka promieniowania ciała doskonale czarnego.
+
+-  `Typy widmowe gwiazd <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro_Typy_widmowe_gwiazd>`__
+
+
 
 Astronomia obserwacyjna
 ~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Wyznaczanie odległości
-   astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
+-  `Wyznaczanie odległości  astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
 
 
 Wstęp do astrofizyki
@@ -2383,6 +2427,8 @@ Wstęp do fizyki cząstek elementarnych
 Rozpraszanie Bhabhy
 ~~~~~~~~~~~~~~~~~~~
 
+Jednym z ważniejszych procesów w Fizyce Wysokich Energii jest
+rozpraszanie elektron pozyton, tzw. rozpraszanie Bhabhy.
 
 - `Rozpraszanie Bhabhy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem02_rozpraszanie_Bhabhy>`__
 
@@ -2399,8 +2445,19 @@ Zastosowana systemów algebry komputerowej w obliczeniach teoretycznych.
 Oscylacje neutrin
 ~~~~~~~~~~~~~~~~~
 
--  `Dysypatywne oscylacje
-   neutrin <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/neutrina_osc.ipynb>`__
+
+
+W połowie lat 60. XX wieku w wyniku licznych eksperymentów okazało
+się, że do Ziemi dociera o wiele mniej neutrin słonecznych niż
+przewidziano w obliczeniach teoretycznych. Problem ten ostatecznie
+rozwiązano dopiero w 2002 roku, a jego zaskakujące konsekwencje
+świadczące o oscylacji neutrin doprowadziły do nowych odkryć w fizyce
+cząstek elementarnych.
+
+- `Problem neutrin słonecznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem04_Problem_neutrin_slonecznych>`__
+
+-  `Dysypatywne oscylacje  neutrin <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/neutrina_osc.ipynb>`__
+
 
 Wstęp do fizyki fazy skondensowanej
 -----------------------------------
