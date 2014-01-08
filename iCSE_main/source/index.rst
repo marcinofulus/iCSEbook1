@@ -77,7 +77,6 @@ strony instalacyjnej pakietu
 
 Interaktywne książki, korzystający z systemu `Sagecell
 <https://github.com/sagemath/sagecell>`__, umożliwiają korzystanie z
-
 systemu Sage z poziomu przeglądarki, bez uprzedniej rejestracji czy
 logowania, tak jak w tym przykładzie. Wystarczy nacisnąć przyciska
 "Wykonaj" i zostanie uruchomiony system Sage na jednym z serwerów i
@@ -89,8 +88,8 @@ wykonany na nim kod programu znajdującego się w polu tekstowym:
     def rozwiniecie_okregu(n=slider(range(1,10)+range(10,40,10),default=3),x0=slider(srange(0,1,0.01),default=0)):
         f = sqrt(1-x^2)
         pol=f.taylor(x,x0,n)
-        plt1=complex_plot(  abs(f)-1 ,(-2,2),(-2,2),plot_points=100,figsize=3)
-        plt2=complex_plot(abs(pol)-1 ,(-2,2),(-2,2),plot_points=100,figsize=3)
+        plt1=complex_plot(  abs(f)-1 ,(-2,2),(-2,2),plot_points=100,figsize=2.5)
+        plt2=complex_plot(abs(pol)-1 ,(-2,2),(-2,2),plot_points=100,figsize=2.5)
         circ=circle((x0,0),1-x0,zorder=10,color='yellow')
         pkt=point([(x0,0)],zorder=10,color='yellow',size=20)
 

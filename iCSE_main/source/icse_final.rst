@@ -489,8 +489,7 @@ reprezentację na macierzach rzadkich wykorzystując do tego bibliotekę
 Dipole i multipole
 ~~~~~~~~~~~~~~~~~~
 
--  `Dipole i
-   multipole <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas06_z310>`__
+-  `Dipole i multipole <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas06_z310>`__
 
 Elektryczność i magnetyzm
 -------------------------
@@ -1350,9 +1349,15 @@ numerycznu umożliwiający interaktywne badanie właności rozwiązań.
 Fale w fizyce
 ~~~~~~~~~~~~~
 
-*Zjawiska falowe są wszechobecne  czego przykładem są fale elektromagnetyczne,   fale dźwiękowe (akustyczne) i  fale sprężyste (mechaniczne). Można powiedzieć, że nasze otoczenie wypełnione jest falami. Fale są wykorzystywane gdy słuchamy radia, oglądamy telewizję, dzwonimy telefonami komórkowymi do znajomych,  używamy bezprzewodowego internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania urządzeń telewizyjnych.*
+*Zjawiska falowe są wszechobecne czego przykładem są fale
+elektromagnetyczne, fale dźwiękowe (akustyczne) i fale sprężyste
+(mechaniczne). Można powiedzieć, że nasze otoczenie wypełnione jest
+falami. Fale są wykorzystywane gdy słuchamy radia, oglądamy telewizję,
+dzwonimy telefonami komórkowymi do znajomych, używamy bezprzewodowego
+internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania
+urządzeń telewizyjnych.*
 
--  `Fale <://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04>`__
+-  `Fale <http://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04_z318>`__
 
 
 
@@ -2203,6 +2208,7 @@ Astronomia
 Prawa Keplera
 ~~~~~~~~~~~~~
 
+- `Prawa Keplera  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro02_prawa_keplera>`__
 
 - `Rzut w polu grawitacyjnym planety <http://visual.icse.us.edu.pl/wizualizacje/astronomia/zobacz/RzutPoleGrawitacyjne/>`__
 
