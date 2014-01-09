@@ -1357,7 +1357,7 @@ dzwonimy telefonami komórkowymi do znajomych, używamy bezprzewodowego
 internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania
 urządzeń telewizyjnych.*
 
--  `Fale <http://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04_z318>`__
+-  `Fale <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04_z318>`__
 
 
 
