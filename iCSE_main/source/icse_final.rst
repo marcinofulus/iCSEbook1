@@ -2685,22 +2685,19 @@ Generowanie struktur 2D/3D.
 Deskryptory molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Deskryptory
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z36>`__
+-  `Deskryptory  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05>`__
 
 
 Analiza SAR/QSAR.
 ~~~~~~~~~~~~~~~~~
 
--  `Analiza
-   SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
+-  `Analiza    SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
 
 
 Dokowanie molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  `Dokowanie
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
+-  `Dokowanie  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
 
 
 
