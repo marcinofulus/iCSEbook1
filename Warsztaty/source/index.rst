@@ -32,7 +32,7 @@ Czy dwie pół-główki to cała główka?
 Dynamika w windzie i nie tylko...
 =================================
 
-Wytrzel z armaty bez obaw o skutki!
+Wystrzel z armaty bez obaw o skutki!
 
 .. toctree::
    :maxdepth: 1
@@ -45,7 +45,7 @@ Wytrzel z armaty bez obaw o skutki!
 Chaotyczne opowieści
 ====================
 
-Poeksperymantuj z układami chaotycznymi!
+Poeksperymentuj z układami chaotycznymi!
 
 .. toctree::
    :maxdepth: 1
