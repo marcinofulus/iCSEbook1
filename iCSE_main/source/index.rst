@@ -17,7 +17,7 @@ Prawie 50 pracowników Wydziału aktywnie odpowiedziało na to pytanie
 opracowywując materiały dydaktyczne wykorzystujące komputer jako aktywne
 narzędzie w ramach tematyki, którą zwykli wykładać w sposób tradycyjny.
 
-Podczas letniego staży do pracy nad materiałami dydaktycznymi zgłosiło 
+Podczas letniego stażu do pracy nad materiałami dydaktycznymi zgłosiło 
 się 29 studentów, którzy w ramach poszerzania swoich umiejętności rozwiązywali 
 klasyczne zagadnienia naukowe również przy pomocy metod algebry numerycznej.
 
