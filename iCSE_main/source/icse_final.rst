@@ -2658,12 +2658,24 @@ Modelowanie molekularne
 Standardy wymiany informacji strukturalnych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_01_z33.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Standardy wymiany informacji
    strukturalnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z33>`__
 
 
 Notacja liniowa, kody SMILES/SMARTS.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/VisAbs_ChMmolek_02_z34.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
 
 -  `Notacja liniowa, kody
    SMILES/SMARTS <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z34>`__
@@ -2672,6 +2684,12 @@ Notacja liniowa, kody SMILES/SMARTS.
 Eksploracja baz danych.
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_03_z35.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Eksploracja baz
    danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z35>`__
 
@@ -2679,11 +2697,24 @@ Eksploracja baz danych.
 Generowanie struktur 2D/3D.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_04_z262.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Generowanie struktur
    2D/3D <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek04_z262>`__
 
 Deskryptory molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/VisAbs_ChMmolek_05_z36.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 
 -  `Deskryptory  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05>`__
 
@@ -2691,11 +2722,24 @@ Deskryptory molekularne.
 Analiza SAR/QSAR.
 ~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_06_z37.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Analiza    SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
 
 
 Dokowanie molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/VisAbs_ChMmolek_07_z263.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 
 -  `Dokowanie  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
 
