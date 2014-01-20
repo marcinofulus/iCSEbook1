@@ -409,10 +409,35 @@ Elektrodynamika klasyczna
 Transformacja Lorenza.
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. MMK Uzupełnić - Łobejko and co.! 
+.. figure:: figs/transform_lorentza_350px.png
+   :align: right
+   :figwidth: 350px
+   :width: 350px
 
-- `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk
-  fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
+   Geometryczne przedstawienie transformacji Lorentza
+
+Transformacje Lorentza przedstawione zostały w wyjątkowo prosty
+sposób, bazujący na szkolnych przekształceniach
+geometrycznych. Wykorzystując interaktywne możliwości sage'a, szybko
+znajdziemy długość i czas w układzie poruszającym się i bez problemu
+stwierdzimy niezmienniczość interwału zdarzeń w przestrzeni
+Minkowskiego.
+
+ - `Geometryczne przedstawienie transformacji Lorentza  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_Geom_Trans_Lorentza>`__
+
+
+
+Na przykładzie dwóch rakiet poruszających się w przeciwne strony,
+rozważamy słynny paradoks stodoły i drabiny, będący pozorną
+konsekwencją szczególnej teorii względności. Czy w jednym układzie
+odniesienia pocisk trafia w rakietę, a w drugim już nie? Do poprawnej
+konkluzji dochodzimy rozważając szczegółowo linie świata
+poszczególnych zdarzeń i ich odległości czasoprzestrzenne.
+
+ - `Geometryczne przedstawienie transformacji Lorentza  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_Wzglednosc_rownoczesnosci>`__
+
+
+ - `Niezmienniki relatywistyczne i ich wykorzystanie w opisie zjawisk fizycznych   <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas02_z73>`__
 
 
 Fale elektromagnetyczne, superpozycja.
@@ -464,8 +489,7 @@ reprezentację na macierzach rzadkich wykorzystując do tego bibliotekę
 Dipole i multipole
 ~~~~~~~~~~~~~~~~~~
 
--  `Dipole i
-   multipole <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas06_z310>`__
+-  `Dipole i multipole <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FEklas06_z310>`__
 
 Elektryczność i magnetyzm
 -------------------------
@@ -517,6 +541,15 @@ różniczkowych
 
 -  `Obwody prądu zmiennego <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
 
+
+Metoda potencjałów węzłowych (ang. node method), czyli jak w prosty
+sposób analizować układy elektryczne, śledząc napięcie i natężenie
+prądu w węzłach obwodów. Wykorzystując tę metodę zapiszemy równania
+różniczkowe dla obwodów RC, RL oraz RLC i wykonamy symulację przebiegu
+natężenia oraz napięcia prądu w tych obwodach. Na koniec
+przedyskutujemy również zjawisko rezonansu w układzie RLC.
+
+-  `MPW w obwodach RLC <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FElekmag05_z10>`__
 
 Pomiary i symulacje komputerowe wiekości elektrycznych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1316,9 +1349,15 @@ numerycznu umożliwiający interaktywne badanie właności rozwiązań.
 Fale w fizyce
 ~~~~~~~~~~~~~
 
-*Zjawiska falowe są wszechobecne  czego przykładem są fale elektromagnetyczne,   fale dźwiękowe (akustyczne) i  fale sprężyste (mechaniczne). Można powiedzieć, że nasze otoczenie wypełnione jest falami. Fale są wykorzystywane gdy słuchamy radia, oglądamy telewizję, dzwonimy telefonami komórkowymi do znajomych,  używamy bezprzewodowego internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania urządzeń telewizyjnych.*
+*Zjawiska falowe są wszechobecne czego przykładem są fale
+elektromagnetyczne, fale dźwiękowe (akustyczne) i fale sprężyste
+(mechaniczne). Można powiedzieć, że nasze otoczenie wypełnione jest
+falami. Fale są wykorzystywane gdy słuchamy radia, oglądamy telewizję,
+dzwonimy telefonami komórkowymi do znajomych, używamy bezprzewodowego
+internetu, używamy "pilotów" do zamykania bram, włączania i wyłączania
+urządzeń telewizyjnych.*
 
--  `Fale <://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04>`__
+-  `Fale <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FMatem04_z318>`__
 
 
 
@@ -2169,6 +2208,7 @@ Astronomia
 Prawa Keplera
 ~~~~~~~~~~~~~
 
+- `Prawa Keplera  <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro02_prawa_keplera>`__
 
 - `Rzut w polu grawitacyjnym planety <http://visual.icse.us.edu.pl/wizualizacje/astronomia/zobacz/RzutPoleGrawitacyjne/>`__
 
@@ -2183,13 +2223,23 @@ Prawa Keplera
 Fizyka gwiazd
 ~~~~~~~~~~~~~
 
-Fizyka gwiazd
+.. figure:: figs/radiancja.png
+   :align: right
+   :figwidth: 320px
+   :height: 220px
+
+   Radiancja spektralna gwiazd.
+
+Kiedy oglądamy nocne niebo, wszystkie gwiazdy wydają się nam po prostu białe. Jeśli jednak spojrzymy na niebo przez lornetkę lub teleskop, zaobserwujemy coś zupełnie nieoczekiwanego - różnice w kolorach i odcieniach gwiazd. Na pytania dotyczące typów widmowych gwiazd odpowiemy analizując prawo Wiena oraz rozkład Plancka promieniowania ciała doskonale czarnego.
+
+-  `Typy widmowe gwiazd <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro_Typy_widmowe_gwiazd>`__
+
+
 
 Astronomia obserwacyjna
 ~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Wyznaczanie odległości
-   astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
+-  `Wyznaczanie odległości  astronomicznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_Astro04_z260>`__
 
 
 Wstęp do astrofizyki
@@ -2383,6 +2433,8 @@ Wstęp do fizyki cząstek elementarnych
 Rozpraszanie Bhabhy
 ~~~~~~~~~~~~~~~~~~~
 
+Jednym z ważniejszych procesów w Fizyce Wysokich Energii jest
+rozpraszanie elektron pozyton, tzw. rozpraszanie Bhabhy.
 
 - `Rozpraszanie Bhabhy <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem02_rozpraszanie_Bhabhy>`__
 
@@ -2399,8 +2451,19 @@ Zastosowana systemów algebry komputerowej w obliczeniach teoretycznych.
 Oscylacje neutrin
 ~~~~~~~~~~~~~~~~~
 
--  `Dysypatywne oscylacje
-   neutrin <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/neutrina_osc.ipynb>`__
+
+
+W połowie lat 60. XX wieku w wyniku licznych eksperymentów okazało
+się, że do Ziemi dociera o wiele mniej neutrin słonecznych niż
+przewidziano w obliczeniach teoretycznych. Problem ten ostatecznie
+rozwiązano dopiero w 2002 roku, a jego zaskakujące konsekwencje
+świadczące o oscylacji neutrin doprowadziły do nowych odkryć w fizyce
+cząstek elementarnych.
+
+- `Problem neutrin słonecznych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_FCzastelem04_Problem_neutrin_slonecznych>`__
+
+-  `Dysypatywne oscylacje  neutrin <http://nbviewer.ipython.org/github/marcinofulus/iCSEbook1/blob/master/ipython_qutip/neutrina_osc.ipynb>`__
+
 
 Wstęp do fizyki fazy skondensowanej
 -----------------------------------
@@ -2595,12 +2658,24 @@ Modelowanie molekularne
 Standardy wymiany informacji strukturalnych.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_01_z33.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Standardy wymiany informacji
    strukturalnych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek01_z33>`__
 
 
 Notacja liniowa, kody SMILES/SMARTS.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: figs/VisAbs_ChMmolek_02_z34.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
 
 -  `Notacja liniowa, kody
    SMILES/SMARTS <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek02_z34>`__
@@ -2609,6 +2684,12 @@ Notacja liniowa, kody SMILES/SMARTS.
 Eksploracja baz danych.
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_03_z35.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Eksploracja baz
    danych <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek03_z35>`__
 
@@ -2616,28 +2697,51 @@ Eksploracja baz danych.
 Generowanie struktur 2D/3D.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: figs/VisAbs_ChMmolek_04_z262.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
 -  `Generowanie struktur
    2D/3D <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek04_z262>`__
 
 Deskryptory molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Deskryptory
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05_z36>`__
+.. figure:: figs/VisAbs_ChMmolek_05_z36.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
+
+-  `Deskryptory  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek05>`__
 
 
 Analiza SAR/QSAR.
 ~~~~~~~~~~~~~~~~~
 
--  `Analiza
-   SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
+.. figure:: figs/VisAbs_ChMmolek_06_z37.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
+-  `Analiza    SAR/QSAR <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek06_z37>`__
 
 
 Dokowanie molekularne.
 ~~~~~~~~~~~~~~~~~~~~~~
 
--  `Dokowanie
-   molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
+.. figure:: figs/VisAbs_ChMmolek_07_z263.png
+   :align: right
+   :figwidth: 300px
+   :width: 300px
+
+
+
+-  `Dokowanie  molekularne <https://sage2.icse.us.edu.pl/pub/?typ=pub&search=iCSE_ChMmolek07_z263>`__
 
 
 
