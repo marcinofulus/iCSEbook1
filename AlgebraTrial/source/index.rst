@@ -113,6 +113,17 @@ Przekształcenia liniowe
    przeksztalcenia_lin_zmiana_bazy
    przeksztalcenia_lin_zadania
 
+Wartości i wektory własne
+=========================
+
+| *Definicja problemu własnego operatora liniowego.*
+| *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
+| *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
+
+.. toctree::
+   
+   zagadnienie_wlasne
+
 Przestrzenie unitarne
 =====================
 
@@ -132,18 +143,9 @@ Przestrzenie unitarne
    p_unitarne_Gram-Schmidt_QR
    p_unitarne_macierze_hermit_i_unit
    p_unitarne_Sage
+   p_unitarne_operatory_hermit_i_unit
+   p_unitarne_operatory_normalne
    p_unitarne_zadania
-
-Wartości i wektory własne
-=========================
-
-| *Definicja problemu własnego operatora liniowego.*
-| *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
-| *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
-
-.. toctree::
-   
-   zagadnienie_wlasne
 
 Dowody wybranych twierdzeń
 ==========================

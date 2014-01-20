@@ -323,17 +323,19 @@ Macierze unitarne
 
 .. admonition:: Definicja.
    
-   Macierz :math:`\ \boldsymbol{B}\,=\,[\,\boldsymbol{b}_1\,|\,\boldsymbol{b}_2\,|\,\dots\,|\,
-   \boldsymbol{b}_n\,]\,=\,[\,\beta_{ij}\,]_{n\times n}\in M_n(C)\ \,` jest :math:`\,`  
-   *unitarna*, :math:`\,` gdy 
+   Macierz :math:`\ \boldsymbol{B}\in M_n(C)\ \,` jest :math:`\,` *unitarna*, :math:`\,` gdy
+   iloczyn sprzężenia hermitowskiego :math:`\\`
+   macierzy :math:`\boldsymbol{B}\ ` 
+   i :math:`\,` samej macierzy :math:`\boldsymbol{B}\ ` równa się macierzy jednostkowej:
+ 
+
+   .. \,=\,[\,\boldsymbol{b}_1\,|\,\boldsymbol{b}_2\,|\,\dots\,|\,
+      \boldsymbol{b}_n\,]\,=\,[\,\beta_{ij}\,]_{n\times n}
    
    .. math::
       :label: unitary
       
-      \boldsymbol{B}^+\boldsymbol{B}\,=\,\boldsymbol{I}_n
-
-   (iloczyn sprzężenia hermitowskiego macierzy :math:`\boldsymbol{B}\ ` 
-   i :math:`\,` samej macierzy :math:`\boldsymbol{B}\ ` równa się macierzy jednostkowej).
+      \boldsymbol{B}^+\boldsymbol{B}\,=\,\boldsymbol{I}_n\,.
 
 :math:`\;`
 
@@ -414,21 +416,7 @@ Macierze unitarne
       (a także wiersze) :math:`\,` 
       tworzą w przestrzeni :math:`\,C^n\ ` układ ortonormalny.
 
-4. Wyznacznik unitarnej macierzy :math:`\,\boldsymbol{B}\ ` jest liczbą zespoloną o module 1:
-   :math:`\ \,|\det\boldsymbol{B}\,|=1\,.`
-
-   Istotnie, przyrównując do siebie wyznaczniki obu stron równości :eq:`unitary` otrzymujemy
-   
-   .. math::
-      
-      \det\,(\boldsymbol{B}^+\boldsymbol{B})=   
-      \det\boldsymbol{B}^+\cdot\,\det\boldsymbol{B}=
-      (\det\boldsymbol{B})^*\cdot\,\det\boldsymbol{B}=
-      |\det\boldsymbol{B}\,|^2\quad=\quad
-      \det\boldsymbol{I}_n=1\,.
-
-
-5. Unitarna macierz :math:`\,\boldsymbol{B}\in M_n(C)\ ` zachowuje 
+4. Unitarna macierz :math:`\,\boldsymbol{B}\in M_n(C)\ ` zachowuje 
    iloczyn skalarny w przestrzeni :math:`\,C^n:`
    
    .. math::
@@ -467,6 +455,19 @@ Macierze unitarne
    Ostatnia własność pozwala interpretować operację pomnożenia (z lewej strony)
    wektora :math:`\,\boldsymbol{x}\in C^n\ ` przez unitarną macierz :math:`\,\boldsymbol{B}\ `
    jako uogólniony obrót tego wektora.
+
+5. Wyznacznik unitarnej macierzy :math:`\,\boldsymbol{B}\ ` jest liczbą zespoloną o module 1:
+   :math:`\ \,|\det\boldsymbol{B}\,|=1\,.`
+
+   Istotnie, przyrównując do siebie wyznaczniki obu stron równości :eq:`unitary` otrzymujemy
+   
+   .. math::
+      
+      \det\,(\boldsymbol{B}^+\boldsymbol{B})=   
+      \det\boldsymbol{B}^+\cdot\,\det\boldsymbol{B}=
+      (\det\boldsymbol{B})^*\cdot\,\det\boldsymbol{B}=
+      |\det\boldsymbol{B}\,|^2\quad=\quad
+      \det\boldsymbol{I}_n=1\,.
 
 6. Dla unitarnej macierzy :math:`\,\boldsymbol{B}\in M_n(C)\ `
    pierwiastki wielomianu charakterystycznego 

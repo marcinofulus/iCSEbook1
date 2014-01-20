@@ -371,7 +371,7 @@ Następujące metody testują określone własności macierzy, a mianowicie:
 
 **Przykład.**
 
-:math:`\;`
+.. :math:`\;`
 
 .. code-block:: python
    
