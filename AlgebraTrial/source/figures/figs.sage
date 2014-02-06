@@ -135,6 +135,33 @@ plt7 += txt0+txt2+txt_F+txt_V+arrow+txt_W
 show(plt7,aspect_ratio=0.75,axes=False,figsize=6,xmin=-1)
 figlst.append([plt7,"Rys_7"])
 
+### Rysunek 8. Dwie ortonormalne bazy w przestrzeni wektorów na płaszczyźnie. ###
+
+e1 = vector([1,0]); e2 = vector([0,1])
+f1 = 1/sqrt(2)*(e1-e2); f2 = 1/sqrt(2)*(e1+e2)
+
+P0 = point((0,0), color='white', faceted=True, size=20, zorder=8)
+
+plt = arrow((0,0),e1,color='green',zorder=5) +\
+      arrow((0,0),e2,color='green',zorder=5) +\
+      arrow((0,0),f1,color='red',  zorder=5) +\
+      arrow((0,0),f2,color='red',  zorder=5)
+            
+txt_e1 = text('$\\vec{e}_1$',(0.9,0.15),color='black', fontsize=18)
+txt_e2 = text('$\\vec{e}_2$',(0.15,0.9),color='black', fontsize=18)
+
+txt_f1 = text('$\\vec{f}_1$',(0.8,-0.65),color='black', fontsize=18)
+txt_f2 = text('$\\vec{f}_2$',(0.8,+0.65),color='black', fontsize=18)
+
+plt8 = P0 + plt + txt_e1+txt_e2 + txt_f1+txt_f2
+            
+show(plt8, aspect_ratio=1, axes_labels=['x','y'], figsize=7, 
+          ticks=[[0.5,1.0,1.5],[-0.5,0.5,1.0]],
+          xmin=-0.25, xmax=1.5, ymin=-0.75, ymax=1.25)
+
+figlst.append([plt8,"Rys_8"])
+
+
 for [p,n] in figlst:
     #p.save('%s.jpg'%n)
     #p.save('%s.png'%n)

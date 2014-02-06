@@ -28,10 +28,10 @@ Wprowadzenie do układów równań liniowych
 
 .. toctree::
 
-   wektory_kolumnowe
-   geometria_ukladow_rownan_stat
-   eliminacja_dla_rownan
-   wprowadzenie_do_ukladow_zadania
+   wprowadzenie_wektory_kolumnowe
+   wprowadzenie_geometria_ukladow_stat
+   wprowadzenie_eliminacja_dla_rownan
+   wprowadzenie_zadania
 
 Algebra macierzy
 ================
@@ -116,12 +116,14 @@ Przekształcenia liniowe
 Wartości i wektory własne
 =========================
 
-| *Definicja problemu własnego operatora liniowego.*
+
 | *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
-| *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
+| *Diagonalizacja macierzy*
 
 .. toctree::
-   
+
+   problem_wlasny_definicja
+   problem_wlasny_przyklady
    zagadnienie_wlasne
 
 Przestrzenie unitarne
@@ -155,6 +157,7 @@ Dowody wybranych twierdzeń
    dowody_wstep   
    dowody_operacje_na_macierzach
    dowody_przeksztalcenia_lin
+   dowody_problem_wlasny
    dowody_p_unitarne
 
 Zadania z Algebry liniowej
