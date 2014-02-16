@@ -17,7 +17,8 @@ są liniowo niezależne.
 **Dowód** :math:`\,` (indukcja względem :math:`\,k`).
 
 I. :math:`\ k=2.\ \ ` Niech :math:`\quad
-   Fv_1=\lambda_1\,v_1\,,\quad Fv_2=\lambda_2\,v_2\,,\quad v_1,v_2\in V\!\smallsetminus\!\theta\,.`
+   Fv_1=\lambda_1\,v_1\,,\quad Fv_2=\lambda_2\,v_2\,,\quad 
+   v_1,v_2\in V\!\smallsetminus\!\{\theta\}\,.`
 
    Przypuśćmy, że :math:`\ v_1,\,v_2\ ` są liniowo zależne,
    tzn. że istnieje nietrywialna kombinacja liniowa tych wektorów równa wektorowi zerowemu:
@@ -176,7 +177,7 @@ gdzie :math:`\ \ V=V(K)\,,\ \ \dim V=n\,,\ \ ` oraz :math:`\,` że
  
 .. math::
 
-   Fv_i=\lambda_i\,v_i\,,\ \ v_i\in V\!\smallsetminus\theta\,,\ \ \lambda_i\in K\,,\ \  
+   Fv_i=\lambda_i\,v_i\,,\ \ v_i\in V\!\smallsetminus\!\{\theta\}\,,\ \ \lambda_i\in K\,,\ \  
    \text{przy czym}\ \ \lambda_i\neq\lambda_j\ \ \text{dla}\ \ i\neq j,\quad i,j=1,2,\ldots,n.
 
 Aby udowodnić liniową niezależność układu wektorów :math:`\ (v_1,v_2,\ldots,v_n)\ `

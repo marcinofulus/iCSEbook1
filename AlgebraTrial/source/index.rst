@@ -116,7 +116,6 @@ Przekształcenia liniowe
 Wartości i wektory własne
 =========================
 
-
 | *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
 | *Diagonalizacja macierzy*
 
@@ -124,7 +123,7 @@ Wartości i wektory własne
 
    problem_wlasny_definicja
    problem_wlasny_przyklady
-   zagadnienie_wlasne
+   problem_wlasny_rownania_rozniczkowe
 
 Przestrzenie unitarne
 =====================

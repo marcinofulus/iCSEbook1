@@ -41,7 +41,7 @@ gdy :math:`\ F(\vec{r})\parallel\vec{r}\ `
        plt = P0 + arrow((0,0),a1*e1+a2*e2, color='green', 
                         legend_label=' $\\ \\ \\vec{r}$', zorder=5) +\
                   arrow((0,0),(2*a1+a2)*e1+(a1+2*a2)*e2, 
-                        color='red', legend_label=' $F(\\vec{r})$')
+                        color='red', legend_label=' $F(\\vec{r})$', zorder=5)
    
        for l in range(1+3*(not mod(k-3,6))): L.append(plt)
    
