@@ -243,7 +243,7 @@ i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że
 * | :math:`\ \text{rz}\boldsymbol{A}\geq 2,\,` bo istnieją niezerowe minory stopnia drugiego
   | :math:`\qquad\qquad\ ` (np. minor wycięty w prawym górnym rogu).
 
-A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0,\,`
+A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0\,,`
 równy różnicy liczby niewiadomych i rzędu macierzy :math:`\,\boldsymbol{A},\,`
 wynosi :math:`\ 5 - 2 = 3.\ `
 Dla określenia przestrzeni :math:`\,S_0\,` wystarczy podać jakąkolwiek jej bazę,
@@ -270,11 +270,13 @@ i :math:`\ \,` stosując kolumnowy zapis macierzy, mamy
 .. math::
 
    \boldsymbol{A}\,\boldsymbol{X}\ \,=\ \,
-   \boldsymbol{A}\ \left(\boldsymbol{X}_1,\boldsymbol{X}_2,\boldsymbol{X}_3\right)\ \,=\ \,
-   \left(\boldsymbol{A}\boldsymbol{X}_1,\,
-   \boldsymbol{A}\boldsymbol{X}_2,\,
-   \boldsymbol{A}\boldsymbol{X}_3\right)\ \,=\ \,
-   \left(\boldsymbol{0},\,\boldsymbol{0},\,\boldsymbol{0}\right)\,,
+   \boldsymbol{A}\ 
+   \left[\,\boldsymbol{X}_1\,|\;\boldsymbol{X}_2\,|\;\boldsymbol{X}_3\,\right]\ \,=\ \,
+   \left[\,
+   \boldsymbol{A}\boldsymbol{X}_1\,|\;
+   \boldsymbol{A}\boldsymbol{X}_2\,|\;
+   \boldsymbol{A}\boldsymbol{X}_3\,\right]\ \,=\ \,
+   \left[\,\boldsymbol{0}\,|\,\boldsymbol{0}\,|\,\boldsymbol{0}\,\right]
 
 skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macierzy:
  
@@ -286,7 +288,7 @@ skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macier
 
 A zatem kolumny :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
 macierzy :math:`\,\boldsymbol{X}\,` spełniają równanie :eq:`13` :math:`\,`
-i :math:`\,` (z założenia o liniowej niezależności) tworzą poszukiwaną bazę przestrzeni :math:`\,S_0.`
+i :math:`\,` (z założonej liniowej niezależności) tworzą poszukiwaną bazę przestrzeni :math:`\,S_0.`
 
 **Wyznaczenie bazy przestrzeni rozwiązań.**
 
@@ -514,14 +516,19 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [0 0 0]
       [0 0 0]
 
-:math:`\\`
-Na uwagę zasługuje użycie metod ``with_swapped_columns()`` i ``with_swapped_rows()``
-zamiast ``swap_columns()`` i ``swap_rows()`` w punktach 2. i 5. :math:`\ `
-Rzecz w tym, że ``swap_columns()`` i ``swap_rows()`` wykonują operacje bezpośrednio
-na oryginalnej macierzy, nie zwracając żadnej wartości (inaczej: zwracając obiekt pusty).
-Natomiast ``with_swapped_columns()`` i ``with_swapped_rows()``
-zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
-zachowując niezmieniony oryginał. :math:`\\` 
+.. important:: W odróżnieniu od metod ``swap_columns()`` i :math:`\,` ``swap_rows()``, :math:`\\`
+   które wykonują operacje bezpośrednio na oryginalnej macierzy, 
+   użyte tutaj metody ``with_swapped_columns()`` i ``with_swapped_rows()`` 
+   zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
+   zachowując przy tym niezmieniony oryginał.  
+
+.. Na uwagę zasługuje użycie metod ``with_swapped_columns()`` oraz ``with_swapped_rows()`` 
+   zamiast ``swap_columns()`` oraz ``swap_rows()`` w punktach 2. i :math:`\,` 5. :math:`\ `
+   Rzecz w tym, że ``swap_columns()`` i ``swap_rows()`` wykonują operacje bezpośrednio
+   na oryginalnej macierzy, nie zwracając żadnej wartości (inaczej: zwracając obiekt pusty).
+   Natomiast ``with_swapped_columns()`` i ``with_swapped_rows()``
+   zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
+   zachowując przy tym niezmieniony oryginał. :math:`\\` 
 
 Łącząc wszystkie operacje otrzymamy wynik :eq:`20`:
 
@@ -546,13 +553,11 @@ zachowując niezmieniony oryginał. :math:`\\`
         cmpnt % ('u', X[0,2], X[1,2], X[2,2], X[3,2], X[4,2]) + '$\\,,$ ' +\
         '$\\qquad s,t,u \\in Q.$')
 
-:math:`\;`
-
 Trzeba jednak zaznaczyć, że przedstawiony w tej sekcji sposób rozwiązania układu :eq:`13`,
 chociaż pouczający, nie jest metodą uniwersalną: okazał się skuteczny tylko dzięki
 specyficznej budowie macierzy współczynników :math:`\,\boldsymbol{A},\,`
 prowadzącej do postaci blokowej :eq:`16`. Podstawowym postępowaniem jest opisana wcześniej
-metoda bezpośrednia bądź metoda eliminacji. :math:`\\`
+metoda bezpośrednia bądź metoda eliminacji. 
 
 | **Ćwiczenie.**
 | Sprawdź odręcznym rachunkiem, 

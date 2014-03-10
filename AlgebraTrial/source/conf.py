@@ -35,9 +35,8 @@ PygmentsBridge.latex_formatter = CustomLatexFormatter
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = [ 'sphinx.ext.todo', 'sphinx.ext.coverage',
+extensions = ['sphinx.ext.todo', 'sphinx.ext.coverage',
 'sphinx.ext.mathjax', 'icsecontrib.sagecellserver']
-
 #'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx',
 #'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 
 
@@ -193,7 +192,8 @@ latex_elements = {
 	'pointsize': '12pt',
 
 # Additional stuff for the LaTeX preamble.
-	'preamble': '\usepackage{amsmath,amssymb}\n' + '\usepackage{babel}\n' + '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n',
+	'preamble': '\usepackage{amsmath,amssymb}\n' + '\usepackage{babel}\n' + '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'
+	+ u'\hyphenation{zde-fi-nio-wa-na prze-mien-ną}',
 	'babel': '',
 }
 

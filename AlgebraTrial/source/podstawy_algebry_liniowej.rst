@@ -26,12 +26,12 @@ w odpowiedniej grupie addytywnej:
 Proste twierdzenia
 ~~~~~~~~~~~~~~~~~~
 
-1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu,
+1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu; :math:`\\`
 pomnożenie wektora zerowego przez dowolną liczbę daje w wyniku wektor zerowy:
 
 .. math::
    
-   0\cdot v\,=\,\theta\,,\quad\alpha\cdot\theta\,=\,\theta\,.
+   0\cdot v\,=\,\theta\,;\quad\alpha\cdot\theta\,=\,\theta\,.
    
 Dowód. Z rozdzielności mnożenia wektorów przez skalary względem dodawania mamy:
 
@@ -256,11 +256,11 @@ Liniowa zależność i niezależność wektorów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mówimy, że układ wektorów :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo zależny*
-(lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\,` są :math:`\,` *liniowo zależne*), :math:`\,`
+(lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo zależne*), :math:`\,`
 gdy istnieje nietrywialna kombinacja liniowa tych wektorów równa wektorowi zerowemu :math:`\,\theta.`
 
-Układ :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo niezależny*
-(wektory :math:`\,x_1,x_2,\ldots,x_r\,` są :math:`\,` *liniowo niezależne*),
+Układ :math:`\ (x_1,x_2,\ldots,x_r)\ ` jest *liniowo niezależny*
+(wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo niezależne*),
 gdy nie jest on liniowo zależny, czyli gdy każda nietrywialna kombinacja liniowa tych wektorów 
 jest różna od wektora zerowego.
 
@@ -297,7 +297,7 @@ liniowo przez wektory pozostałe, :math:`\,` czyli gdy dla pewnego wskaźnika
 
 Uwaga: :math:`\ ` co najmniej jeden, to znaczy niekoniecznie każdy.
 
-Dowód.
+**Dowód.**
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo zależne:
 
@@ -305,7 +305,7 @@ Dowód.
    
    \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\,,
 
-przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika :math:`\,i\in\{\,1,2,\ldots,r\,\}\,.`
+przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika :math:`\ i\in\{\,1,2,\ldots,r\,\}\,.`
 
 Po przeniesieniu na prawą stronę wszystkich składników z wyjątkiem :math:`\,i`-tego otrzymujemy
 
@@ -361,8 +361,8 @@ Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wte
 
    4. | Kolejność wektorów nie ma wpływu na ich liniową zależność albo niezależność.
 
-| Łatwo można uzasadnić następujące użyteczne stwierdzenia
-| (l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
+Łatwo można uzasadnić następujące użyteczne stwierdzenia :math:`\\`
+(l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
 
 1. | Układ :math:`\,(x),\,` składający się z jednego wektora, jest l.z. wtedy
      i tylko wtedy, gdy :math:`\,x = \theta\,.`
@@ -375,7 +375,6 @@ Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wte
    | Wniosek: :math:`\ ` Układ l.n. nie zawiera wektora zerowego 
      ani wektorów identycznych lub proporcjonalnych.
 4. | Kolejność wektorów nie ma wpływu na ich liniową zależność albo niezależność.
-   |
 
 **Przykład 0.** :math:`\ `
 Rozważmy przestrzeń :math:`\,C(R)\,` liczb zespolonych nad ciałem liczb rzeczywistych.
@@ -467,7 +466,7 @@ na ogół różne współrzędne.
 wtedy i tylko wtedy, gdy :math:`\,\mathcal{B}\,` jest liniowo niezależnym układem generatorów 
 tej przestrzeni.
 
-Dowód. :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
+**Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że układ :math:`\,\mathcal{B}\,`
 jest bazą przestrzeni :math:`\,V.`
@@ -524,15 +523,15 @@ Twierdzenie 2. podaje warunek konieczny i wystarczający dla bazy,
 mogłoby zatem być alternatywną definicją tego pojęcia.
 Możliwe jest jeszcze inne podejście, oparte na podanej niżej definicji i twierdzeniu 3.
 
-| Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
-  *maksymalnym liniowo niezależnym układem*, gdy nie można do niego dołączyć
-  żadnego wektora tak, aby powstały układ był liniowo niezależny.
+Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
+*maksymalnym liniowo niezależnym układem*, gdy nie można do niego dołączyć
+żadnego wektora tak, aby powstały układ był liniowo niezależny.
 
 **Twierdzenie 3.** :math:`\,` Układ :math:`\,\mathcal{B}\,` 
 wektorów przestrzeni :math:`\,V\,` jest bazą tej przestrzeni
 wtedy i tylko wtedy, :math:`\,` gdy jest on maksymalnym liniowo niezależnym układem.
 
-Dowód. :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
+**Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
 :math:`\Rightarrow\,:\ ` Zakładamy, że układ :math:`\,\mathcal{B}\,`
 jest bazą przestrzeni :math:`\,V.`
@@ -574,16 +573,25 @@ A zatem :math:`\ \alpha_0\neq 0.\ \,` W tej sytuacji równanie :eq:`presume` mo�
 gdzie :math:`\ \,\beta_i\,=\,-\,\alpha_0^{-1}\,\alpha_i\ \,` dla :math:`\ i\,=\,1,\ldots,n\,.\ `
 Warunek ten, spełniony dla każdego :math:`\,v\in V,\ ` oznacza 
 że :math:`\,\mathcal{B}\ ` jest liniowo niezależnym układem generatorów 
-przestrzeni :math:`\,V,\ ` czyli bazą :math:`\,V.`
+przestrzeni :math:`\,V,\ ` czyli bazą :math:`\,V.` :math:`\\`
 
-| **Uwagi i komentarze.**
-|
-| Każda baza przestrzeni wektorowej jest układem liniowo niezależnym.
-| Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą:
-| żaden układ liniowo zależny nie jest bazą.
-| Jednak sama liniowa niezależność nie jest warunkiem wystarczającym.
-| Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele,
-| aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
+.. | **Uwagi i komentarze.**
+   |
+   | Każda baza przestrzeni wektorowej jest układem liniowo niezależnym.
+   | Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą:
+   | żaden układ liniowo zależny nie jest bazą.
+   | Jednak sama liniowa niezależność nie jest warunkiem wystarczającym.
+   | Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele,
+   | aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
+
+**Uwagi i komentarze.**
+
+Każda baza przestrzeni wektorowej jest układem liniowo niezależnym. :math:`\\`
+Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą: :math:`\\`
+żaden układ liniowo zależny nie jest bazą. :math:`\\`
+Jednak sama liniowa niezależność nie jest warunkiem wystarczającym. :math:`\\`
+Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele, :math:`\\`
+aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
 
 Wymiar przestrzeni wektorowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

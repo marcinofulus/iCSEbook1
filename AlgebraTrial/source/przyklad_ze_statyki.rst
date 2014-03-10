@@ -143,10 +143,9 @@ warto wyświetlić obraz graficzny wyniku przy pomocy funkcji ``list_plot()``:
 Jak widać, odchylenia od pierwotnych położeń są największe w środku łańcucha
 i maleją symetrycznie w kierunku jego krańców.
 
-| **Ćwiczenie.** 
-| Wykorzystując powyższy program, znajdź liczbowe rozwiązanie układu :eq:`24`.
+**Ćwiczenie.** :math:`\\`
+Wykorzystując powyższy program, znajdź liczbowe rozwiązanie układu :eq:`24`.
 
-:math:`\\ \\`
 
 
 

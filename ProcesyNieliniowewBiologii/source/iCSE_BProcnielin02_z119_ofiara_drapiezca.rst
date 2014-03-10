@@ -7,10 +7,19 @@ Modele oddziałujących populacji: ofiara \- drapieżca
 Model Lotki\-Volterry
 ---------------------
 
-W modelu tym rozważamy 2 populacje: populacja zwana "ofiary" i populacja zwana "drapieżniki" lub drapieżcy. Osobniki jednej  z nich ("ofiary") są (niestety) zjadane przez osobniki drugiej  populacji ("drapieżniki").  "Ofiary" mogą rozmnażać się i umierać śmiercią naturalaną. Ponadto "ofiary" giną śmiercią tragiczną zjadane przez "drapieżników", które to rozmnażają się i umierają śmiercią naturalną (niestety).
+W modelu tym rozważamy 2 populacje: populacja zwana "ofiary" i
+populacja zwana "drapieżniki" lub drapieżcy. Osobniki jednej z nich
+("ofiary") są (niestety) zjadane przez osobniki drugiej populacji
+("drapieżniki").  "Ofiary" mogą rozmnażać się i umierać śmiercią
+naturalaną. Ponadto "ofiary" giną śmiercią tragiczną zjadane przez
+"drapieżników", które to rozmnażają się i umierają śmiercią naturalną
+(niestety).
 
 
-Populacja ofiar opisana jest funkcją :math:`N=N(t)`, natomiast populacja drapieżników opisana jest funkcją :math:`P=P(t)`. Podobnie jak w modelu Malthusa, tempo zmian w populacji ofiar i drapieżników jest wynikiem urodzin i śmierci w populacji:
+Populacja ofiar opisana jest funkcją :math:`N=N(t)`, natomiast
+populacja drapieżników opisana jest funkcją :math:`P=P(t)`. Podobnie
+jak w modelu Malthusa, tempo zmian w populacji ofiar i drapieżników
+jest wynikiem urodzin i śmierci w populacji:
 
 
 .. MATH::
@@ -23,10 +32,15 @@ Populacja ofiar opisana jest funkcją :math:`N=N(t)`, natomiast populacja drapie
     \frac{dP}{dt} = c P - e P
 
 
-gdzie parametr :math:`a` charakteryzuje tempo urodzin ofiar, :math:`b` charakteryzuje tempo śmierci  ofiar,  :math:`c` charakteryzuje tempo urodzin drapieżników i :math:`e` charakteryzuje tempo śmierci drapieżników.
+gdzie parametr :math:`a` charakteryzuje tempo urodzin ofiar, :math:`b`
+charakteryzuje tempo śmierci ofiar, :math:`c` charakteryzuje tempo
+urodzin drapieżników i :math:`e` charakteryzuje tempo śmierci
+drapieżników.
 
 
-Zakładamy, że tempo śmierci ofiar :math:`b` zależy od populacji drapieżników: im więcej jest drapieżników :math:`P`, tym większe jest tempo śmierci ofiar.  W prostym opisie oznacza to, że
+Zakładamy, że tempo śmierci ofiar :math:`b` zależy od populacji
+drapieżników: im więcej jest drapieżników :math:`P`, tym większe jest
+tempo śmierci ofiar.  W prostym opisie oznacza to, że
 
 
 .. MATH::
@@ -34,7 +48,11 @@ Zakładamy, że tempo śmierci ofiar :math:`b` zależy od populacji drapieżnik�
     b \to  b_0 P
 
 
-gdzie :math:`b_0\gt 0` jest parametrem. Podobnie założymy,  że tempo urodzin drapieżników :math:`c` zależy od populacji ofiar: im więcej jest ofiar :math:`N`, tym większe jest tempo urodzin drapieżników (im więcej jest pożywienia tym szybciej rozrasta się populacja). Oznacza to, że
+gdzie :math:`b_0\gt 0` jest parametrem. Podobnie założymy, że tempo
+urodzin drapieżników :math:`c` zależy od populacji ofiar: im więcej
+jest ofiar :math:`N`, tym większe jest tempo urodzin drapieżników (im
+więcej jest pożywienia tym szybciej rozrasta się populacja). Oznacza
+to, że
 
 
 .. MATH::
@@ -55,7 +73,16 @@ gdzie :math:`c_0 \gt 0`.  Przy takich założeniach model Malthusa zmienia się 
     \frac{dP}{dt} = c_0 N P - e P
 
 
-Wszystkie parametry są dodatnie. Model ten wprowadził w 1926 r. V. Volterra do opisu populacji ryb. Natomiast w 1920 r. A. J. Lotka otrzymał podobne równania do opisu kinetyki autokatalizy (patrz wykład o kinetyce reakcji chemicznych). Stąd model ten nazywa się modelem Lotki\-Volterry. W modelu tym pojawiają się 4 parametry. Jak to często bywa, własności tego typu modeli zależą od mniejszej ilości parametrów. Metodą na eliminację niektórych parametrów jest wprowadzenie wielkości bezwymiarowych lub wielkości przeskalowanych. W powyższym przypadku wprowadzimy następujące przeskalowane i bezwymiarowe wielkości:
+Wszystkie parametry są dodatnie. Model ten wprowadził w
+1926 r. V. Volterra do opisu populacji ryb. Natomiast w
+1920 r. A. J. Lotka otrzymał podobne równania do opisu kinetyki
+autokatalizy (patrz wykład o kinetyce reakcji chemicznych). Stąd model
+ten nazywa się modelem Lotki\-Volterry. W modelu tym pojawiają się 4
+parametry. Jak to często bywa, własności tego typu modeli zależą od
+mniejszej ilości parametrów. Metodą na eliminację niektórych
+parametrów jest wprowadzenie wielkości bezwymiarowych lub wielkości
+przeskalowanych. W powyższym przypadku wprowadzimy następujące
+przeskalowane i bezwymiarowe wielkości:
 
 
 :math:`x=\frac{c_0}{d} N, \quad y =\frac{b_0}{a} P`
@@ -76,7 +103,13 @@ Po wstawieniu tych wielkości do równań Lotki\-Volterry otrzymamy układ równ
 :math:`\dot y = \alpha (xy-y)`
 
 
-w którym pojawia się tylko jeden  parametr :math:`\alpha  = \frac{d}{r} \gt 0`,  który opisuje stosunek tempa śmierci drapieżników :math:`d` do tempa urodzin ofiar :math:`r`.  Tak więc procedura przeskalowania równań pozwoliła wyeliminować nieistotne parametry. Jedynym istotnym parametrem jest tylko jeden parametr, a mianowicie :math:`\alpha`.  Własności rozwiązań w modelu Lotki-Volterry zależą tylko od tego parametru i od warunków początkowych :math:`x(0)` i :math:`y(0)`.
+w którym pojawia się tylko jeden parametr :math:`\alpha = \frac{d}{r}
+\gt 0`, który opisuje stosunek tempa śmierci drapieżników :math:`d` do
+tempa urodzin ofiar :math:`r`.  Tak więc procedura przeskalowania
+równań pozwoliła wyeliminować nieistotne parametry. Jedynym istotnym
+parametrem jest tylko jeden parametr, a mianowicie :math:`\alpha`.
+Własności rozwiązań w modelu Lotki-Volterry zależą tylko od tego
+parametru i od warunków początkowych :math:`x(0)` i :math:`y(0)`.
 
 
 **STANY STACJONARNE**
@@ -122,10 +155,21 @@ w punktach stacjonarnych:
 2. Wyznaczamy wartości własne macierzy Jacobiego :math:`|J-\lambda I|=0`:
 
 
-(a)    dla :math:`(0, 0)` otrzymujemy: :math:`\lambda_{01} = 1, \quad \lambda_{02} =- \alpha`. Więc rozwiązanie to nie jest asymptotycznie stabilne, ponieważ jedna z wartości własnych jest dodatnia, tzn. :math:`\lambda_{01} \gt  0`. Dowolnie małe zaburzenie tego stanu spowoduje ucieczkę układu z tego stanu.
+(a) dla :math:`(0, 0)` otrzymujemy: :math:`\lambda_{01} = 1, \quad
+       \lambda_{02} =- \alpha`. Więc rozwiązanie to nie jest
+       asymptotycznie stabilne, ponieważ jedna z wartości własnych
+       jest dodatnia, tzn. :math:`\lambda_{01} \gt 0`. Dowolnie małe
+       zaburzenie tego stanu spowoduje ucieczkę układu z tego stanu.
 
 
-(b)    dla :math:`(1, 1)` otrzymujemy: :math:`\lambda_{11} = i \sqrt{\alpha}, \quad \lambda_{12} = -i\sqrt{\alpha}`.  Ponieważ wartości własne są urojone, to rozwiązanie  jest stabilne, lecz nie jest asymptotycznie stabilne. Dowolnie małe zaburzenie tego stanu spowoduje powstanie stanu, który cały czas będzie w otoczeniu tego stanu :math:`(1, 1)`, ale do niego nie dąży. W pobliżu tego stany, trajektorie są periodyczne i krzywe fazowe powinny być zamknięte.
+(b) dla :math:`(1, 1)` otrzymujemy: :math:`\lambda_{11} = i
+       \sqrt{\alpha}, \quad \lambda_{12} = -i\sqrt{\alpha}`.  Ponieważ
+       wartości własne są urojone, to rozwiązanie jest stabilne, lecz
+       nie jest asymptotycznie stabilne. Dowolnie małe zaburzenie tego
+       stanu spowoduje powstanie stanu, który cały czas będzie w
+       otoczeniu tego stanu :math:`(1, 1)`, ale do niego nie dąży. W
+       pobliżu tego stany, trajektorie są periodyczne i krzywe fazowe
+       powinny być zamknięte.
 
 
 Znajdziemy teraz postać  krzywych fazowych. W tym celu podzielimy obustronnie przeskalowane równania Lotki\-Volterry:
@@ -305,7 +349,7 @@ w którym procesy rozmnażania i śmierci  są modelowane w najprostszy sposób.
 
 .. MATH::
 
-    a=r\left(1-\frac{N}{K}\right), \quad \quad b=b_0 \,\frac{N}{D+N} \;P
+    a=r\left(1-\frac{N}{K}\right), \quad \quad bN = b_0 \,\frac{N}{D+N} \;P
 
 
 (B) w części dla populacji drapieżników uwzględniamy  model Verhulsta
@@ -321,7 +365,7 @@ Dlatego w drugim równaniu otrzymamy
 
 .. MATH::
 
-    c P - e P  = c_0 \left(1-\frac{P}{K_0} \right)\;P - e P = (c_0 - e) P - c_0 \frac{P}{K_0} = s \left(1- \frac{P}{K_1} \right)
+    c P - e P  = c_0 \left(1-\frac{P}{K_0} \right)\;P - e P = (c_0 - e) P - c_0 \frac{P^2}{K_0} = s P \left(1- \frac{P}{K_1} \right)
 
 
 Zakładamy, że :math:`s=c_0-e \gt  0`.  Przeskalowana stała :math:`K_1 = K_0 (1-e/c_0).`
@@ -675,7 +719,7 @@ Ponieważ :math:`x_1` zależy od 2 parametrów :math:`\alpha` i :math:`d`, prawa
 
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: var('a,d,b,x,y,t')
     sage: ode_lotka=[x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)];
@@ -700,7 +744,7 @@ Ponieważ :math:`x_1` zależy od 2 parametrów :math:`\alpha` i :math:`d`, prawa
     ...       #plt2a = implicit_plot(ode_lotka_num[0],(x,-0.10,2),(y,-0.10,2),color='green')
     ...       plt2a = plot(solve(ode_lotka_num[0],y)[0].rhs(),(x,-0.10,2),ymin=-0.10,ymax=2,color='green')
     ...       show(ode_lotka_num)
-    ...       plt2b = implicit_plot(ode_lotka_num[1],(x,-0.10,2),(y,-.010,2),color='blue')
+    ...       plt2b = implicit_plot(ode_lotka_num[1],(x,-0.10,2),(y,-.010,2),color='blue',xmin=-0.03)
     ...       
     ...       T = srange(0,123,0.1)
     ...       sol1=desolve_odeint(vector(ode_lotka_num), [0.82,0.85], T, [x,y])
