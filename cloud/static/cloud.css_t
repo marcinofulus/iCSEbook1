@@ -739,6 +739,7 @@ dt:target,
      * basic admonition styling - adds colored bg & icons
      *------------------------------------*/
 
+/*
      div.admonition, p.deprecated
      {
         background: #E7F0FE;
@@ -750,6 +751,19 @@ dt:target,
         -webkit-border-radius: 0 .7em 0 .7em;
         -moz-border-radius: 0 .7em 0 .7em;
     }
+*/
+     div.admonition, p.deprecated
+     {
+        background: #E7F0FE;
+        border: 2px solid #93b7ec;
+        border-width: 2px 2px 2px 15px;
+        margin: 1em 0;
+        padding: 1em;
+        border-radius: .5em .5em .5em .5em;
+        -webkit-border-radius: .5em .5em .5em .5em;
+        -moz-border-radius: .5em .5em .5em .5em;
+    }
+
 
     div.note, div.seealso, div.warning, div.admonition-todo, p.deprecated, div.caution
     {
@@ -816,9 +830,9 @@ dt:target,
     }
 
     /* next few rules merge the title into the first paragraph */
-    p.admonition-title { display: inline; margin-right: 0; }
-    p.admonition-title + p { display: inline; }
-    p.admonition-title:after { content: ":"; }
+    p.admonition-title { /* display: inline; */ margin-right: 0; }
+    p.admonition-title + p { /* display: inline; */ }
+    /* p.admonition-title:after { content: ":"; } */
     p.admonition-title + ul { margin-top: 0; }
 
     /* don't indent admonitions inside definitions */

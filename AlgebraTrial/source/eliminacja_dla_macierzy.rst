@@ -25,7 +25,7 @@ Dla układu :math:`\,m\,` równań o :math:`\,n\,` niewiadomych:
 gdzie współczynniki :math:`\,a_{ij}\,` 
 oraz wolne wyrazy :math:`\,b_i\ \ (i=1,2,\ldots,m;\ j=1,2,\ldots,n)\,`
 należą do pewnego ciała :math:`\,K,\,`
-definiujemy *macierz współczynników* :math:`\,\boldsymbol{A},\ `
+definiujemy :math:`\,` *macierz współczynników* :math:`\,\boldsymbol{A},\ \ `
 *kolumnę wolnych wyrazów* :math:`\,\boldsymbol{b}\ \,` i :math:`\ `
 *kolumnę niewiadomych* :math:`\,\boldsymbol{x}:`
 
@@ -39,8 +39,6 @@ definiujemy *macierz współczynników* :math:`\,\boldsymbol{A},\ `
                         \end{array}\right]\,,\qquad
    \boldsymbol{b}\,=\,\left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{m} \end{array}\right]\,,\qquad
    \boldsymbol{x}\,=\,\left[\begin{array}{c} x_{1} \\ x_{2} \\ \ldots \\ x_{n} \end{array}\right]\,.
-
-:math:`\;`
 
 Układ :eq:`01` można wtedy zapisać zwięźle jako
 
@@ -56,21 +54,21 @@ układ równań jest *jednorodny*. Jednorodny układ równań
 
    \boldsymbol{A}\,\boldsymbol{x}\ =\ \boldsymbol{0}
 
-jest *stowarzyszony* z niejednorodnym układem :eq:`02`.
+jest :math:`\,` *stowarzyszony* :math:`\,` z niejednorodnym układem :eq:`02`.
 
-Dwa układy równań są *równoważne*, gdy mają ten sam zbiór rozwiązań. :math:`\\`
+Dwa układy równań są :math:`\,` *równoważne*, :math:`\,` gdy mają ten sam zbiór rozwiązań. :math:`\\`
 
-Dla układu :eq:`01` definiujemy również *macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
+Dla układu :eq:`01` definiujemy również :math:`\,` *macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
 
 .. math::
 
-   \boldsymbol{B}\  =\ (\boldsymbol{A},\boldsymbol{b})\ 
-                    =\  \left[\begin{array}{ccccc}
-                           a_{11} & a_{12} & \ldots & a_{1n} & b_1    \\
-                           a_{21} & a_{22} & \ldots & a_{2n} & b_2    \\
-                           \ldots & \ldots & \ldots & \ldots & \ldots \\
-                           a_{m1} & a_{m2} & \ldots & a_{mn} & b_m
-                        \end{array}\right]\,.
+   \boldsymbol{B}\ \,:\,=\ \,[\,\boldsymbol{A}\,|\,\boldsymbol{b}\;]\ \,
+                     =\ \,\left[\begin{array}{ccccc}
+                                a_{11} & a_{12} & \ldots & a_{1n} & b_1    \\
+                                a_{21} & a_{22} & \ldots & a_{2n} & b_2    \\
+                                \ldots & \ldots & \ldots & \ldots & \ldots \\
+                                a_{m1} & a_{m2} & \ldots & a_{mn} & b_m
+                          \end{array}\right]\,.
 
 Podanie macierzy :math:`\ \boldsymbol{B}\,`
 określa całkowicie układ równań :eq:`01`,
@@ -616,15 +614,15 @@ Rzeczywiście, macierzy rozszerzonej przekształconej do zredukowanej postaci sc
 
 .. math::
 
-   \left(\begin{array}{rrrrr}
+   \left[\begin{array}{rrrrr}
          1 & -1 &  2 & -1 &  1 \\
          2 & -3 & -1 &  1 &  1 \\
          1 &  0 &  7 & -4 &  4
-         \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrr}
+         \end{array}\right]\quad\rightarrow\quad\left[\begin{array}{rrrrr}
                                                       1 & 0 & 7 & -4 & 0 \\
                                                       0 & 1 & 5 & -3 & 0 \\
                                                       0 & 0 & 0 &  0 & 1
-                                                      \end{array}\right)
+                                                      \end{array}\right]
 
 odpowiada teraz (równoważny wyjściowemu) układ równań
 

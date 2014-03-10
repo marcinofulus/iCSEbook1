@@ -23,16 +23,17 @@ Podręcznik użytkownika
    iCSE_ITechninf03_z77_listy_funkcje
 
 
-Rozwiązania zadań
------------------
+..
+   Rozwiązania zadań
+   -----------------
 
-.. toctree::
-   :maxdepth: 1
+   .. toctree::
+      :maxdepth: 1
 
-   iCSE_ITechninf01_z6_ROZWIAZANIA_ZADAN
-   iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN
-   iCSE_ITechninf02_z11_ROZWIAZANIA_ZADAN
-   iCSE_ITechninf03_z77_typy_zlozone_i_petle_ROZWIAZANIA_ZADAN
-   iCSE_ITechninf03_z77_ROZWIAZANIA_ZADAN
-   iCSE_ITechninf03_z77_listy_funkcje_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf01_z6_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf04_z78_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf02_z11_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf03_z77_typy_zlozone_i_petle_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf03_z77_ROZWIAZANIA_ZADAN
+      iCSE_ITechninf03_z77_listy_funkcje_ROZWIAZANIA_ZADAN
 

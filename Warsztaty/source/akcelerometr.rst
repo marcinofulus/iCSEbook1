@@ -1,10 +1,5 @@
 .. -*- coding: utf-8 -*-
 
-
-
-
-
-
 Kinematyka
 ---------- 
 
@@ -14,7 +9,10 @@ Pociąg przebył drogę ze stacji :math:`A` do :math:`B` w ciagu
 stacjami wynosi :math:`10`km."
 
 
-Dana jest  droga przebyta w czasie, a chcemy policzyć prędkość i przyśpieszenie. Zadanie to nie wykracza poza materiał ze szkoły średniej. Przypuśćmy jednak, że mamy dane wiecej niż szkolne dwa punkty pomiaru :math:`A` i :math:`B`:
+Dana jest droga przebyta w czasie, a chcemy policzyć prędkość i
+przyśpieszenie. Zadanie to nie wykracza poza materiał ze szkoły
+średniej. Przypuśćmy jednak, że mamy dane wiecej niż szkolne dwa
+punkty pomiaru :math:`A` i :math:`B`:
 
 
 .. code-block:: python

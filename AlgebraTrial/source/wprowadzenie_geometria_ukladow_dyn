@@ -1,0 +1,517 @@
+.. -*- coding: utf-8 -*-
+
+Geometria układów równań liniowych
+----------------------------------
+
+Badane w tym rozdziale układy dwóch albo trzech równań liniowych
+mają przejrzystą interpretację geometryczną:
+odpowiadają im określone sytuacje na płaszczyźnie albo w trójwymiarowej przestrzeni.
+Przeprowadzona dyskusja pozwala wyrobić intuicję, pomocną przy ana-lizie większych układów równań,
+których obrazem są obiekty geometryczne w przestrzeniach wielowymiarowych.
+
+Obraz wierszowy
+~~~~~~~~~~~~~~~
+
+Rozważmy układ dwóch równań liniowych:
+
+.. math::
+   :nowrap:
+   
+   \begin{alignat*}{3}
+   2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
+   \end{alignat*}
+   
+Rozwiązaniem są liczby :math:`\ x_1=2\ \; \text{i} \ \; x_2=3\,,\:` 
+co łatwo sprawdzić ręcznie lub komputerowo:
+
+.. sagecellserver::
+
+   var('x1 x2')
+   
+   eq1 = 2*x1-x2==1
+   eq2 = x1+x2==5
+
+   show(solve([eq1,eq2],[x1,x2]))
+   
+| Każde z równań przedstawia prostą na płaszczyźnie :math:`(x_1,x_2).`   
+  Obrazem rozwiązania układu jest punkt leżący na obydwu prostych jednocześnie,
+  czyli punkt przecięcia się tych dwóch prostych (o ile proste się przecinają):
+
+.. figure:: figures/Rys_0.png
+   :align: center
+
+
+| W ogólności mogą wystąpić następujące sytuacje:
+|
+| a.) :math:`\ ` proste przecinają się w jednym punkcie,
+| b.) :math:`\ ` proste pokrywają się (są identyczne),
+| c.) :math:`\ ` proste są równoległe (ale różne).
+|
+| Wtedy odpowiednio układ dwóch równań:
+|
+| a.) :math:`\ ` ma dokładnie jedno rozwiązanie (układ oznaczony),
+| b.) :math:`\ ` ma nieskończenie wiele rozwiązań (układ nieoznaczony),
+| c.) :math:`\ ` nie ma żadnych rozwiązań (układ sprzeczny).
+
+Obraz kolumnowy
+~~~~~~~~~~~~~~~
+ 
+Rozważany układ równań
+
+.. math::
+   :nowrap:
+   
+   \begin{alignat*}{3}
+   2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
+   \end{alignat*}
+
+można przepisać przy użyciu działań na wektorach kolumnowych w postaci
+
+.. math::
+   
+   \left[\begin{array}{r} 2x_1 \\ x_1 \end{array}\right]\ +\   
+   \left[ \begin{array}{r} -x_2 \\ x_2 \end{array}\right] \ =\  
+   \left[\begin{array}{r} 1 \\ 5 \end{array}\right]\,.
+
+Odwołując się do definicji iloczynu wektora kolumnowego przez liczbę, otrzymujemy
+
+.. math::
+
+   x_1\ \left[\begin{array}{r} 2 \\ 1 \end{array}\right] \ + \ 
+   x_2\ \left[\begin{array}{r} -1 \\ 1 \end{array}\right] \ = \ 
+   \left[\begin{array}{r} 1 \\ 5 \end{array}\right]\,.
+
+| Sens takiego zapisu jest następujący: :math:`\;` dla jakich współczynników 
+  :math:`\;x_{1},\,x_{2}\ \;` kombinacja
+|
+| liniowa wektorów :math:`\ \ \boldsymbol{v}_1=\left[\begin{array}{r} 2 \\ 1 \end{array}\right]
+  \ \ \,\text{i}\quad\boldsymbol{v}_2=\left[\begin{array}{r} -1 \\ 1 \end{array}\right]\ \,`
+  równa się wektorowi 
+  :math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `?
+|
+
+.. sidebar:: Kombinacja liniowa.
+
+   | Kombinacja liniowa :math:`\ \,\boldsymbol{w}\ \,` wektorów
+     :math:`\ \,\boldsymbol{v}_1\ \ \text{i}\ \ \,\boldsymbol{v}_2\ `
+   | o współczynnikach liczbowych :math:`\ \,x_1\ \ \text{i}\ \ \, x_2\,` 
+   | jest z definicji ich :math:`\ ` "sumą ważoną" :math:`\ ` postaci
+   |
+   | :math:`\qquad\qquad\boldsymbol{w}\ =\ x_1\,\boldsymbol{v}_1 + x_2\,\boldsymbol{v}_2\,.`
+   |
+
+|
+| **Poeksperymentuj z Sage!**
+|
+| W poniższym programie wektory kolumnowe 
+  :math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
+| są reprezentowane przez wektory geometryczne 
+  :math:`\;\vec{v}_1,\,\vec{v}_2\ \ \,\text{i}\ \ \,\vec{w}.`
+|
+| Operując suwakami, dobierz wartości współczynników :math:`\ x_1\ \ \text{i}\ \ \,x_2\ \,`
+| tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;` 
+  (oznaczony kolorem szarym) pokrył się z wektorem :math:`\,\vec{w}`.
+
+.. sagecellserver::
+
+   v1 = vector([2,1]); v2 = vector([-1,1]); w = vector([1,5])
+
+   @interact
+
+   def _(x1=('$$x_1:$$', slider(0,3,1/2, default=3)),
+         x2=('$$x_2:$$', slider(0,3,1/2, default=2))):
+
+       plt = arrow((0,0),v1,color='red',
+                   legend_label=' $v_1$', zorder=5) +\
+             arrow((0,0),v2,color='green',
+                   legend_label=' $v_2$', zorder=5) +\
+             arrow((0,0),w,color='black',
+                   legend_label=' $w$',   zorder=5) +\
+             arrow((0,0),x1*v1,color='gray',
+                   width=1,arrowsize=3) +\
+             arrow((0,0),x2*v2,color='gray',
+                   width=1,arrowsize=3) +\
+             arrow((0,0),x1*v1+x2*v2,
+                   color='gray',width=1.75,arrowsize=3) +\
+             line([x1*v1,x2*v2+x1*v1],color='black',
+                  linestyle='dashed',thickness=0.5) +\
+             line([x2*v2,x2*v2+x1*v1],color='black',
+                  linestyle='dashed',thickness=0.5) +\
+             point((0,0),color='white',
+                   faceted=True,size=18,zorder=7)
+
+       plt.set_axes_range(-3,7,-1,6)   
+    
+       if x1*v1+x2*v2==w: html("SUKCES!!!")
+       plt.show(aspect_ratio=1,ticks=[1,1],figsize=5)
+
+:math:`\ `
+
+:math:`\ `
+
+W ogólności, układ równań liniowych jest całkowicie określony 
+przez zadanie macierzy współczynników :math:`\,\boldsymbol{A}\ \ `
+i :math:`\ ` kolumny wolnych wyrazów :math:`\,\boldsymbol{w}.\ \,` 
+W tym wypadku są to:
+
+.. math::
+
+   \boldsymbol{A}\ =\ \left[\begin{array}{rr} 2 & -1 \\ 1 & 1 \end{array}\right]\,,\qquad
+   \boldsymbol{w}\ =\ \left[\begin{array}{c} 1 \\ 5 \end{array}\right]\,.
+
+Obraz wierszowy układu równań otrzymamy, odczytując wiersze (czyli poziome rzędy) 
+macierzy :math:`\,\boldsymbol{A},\ ` a obraz kolumnowy :math:`\ -\ ` odczytując kolumny
+(pionowe rzędy) tej macierzy.
+
+:math:`\ `
+
+Rozważmy teraz układ trzech równań o trzech niewiadomych:
+
+.. math::
+   :nowrap:
+
+   \begin{alignat*}{4}
+   2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
+      x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
+      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 
+   \end{alignat*}
+
+Ma on rozwiązanie w punkcie 
+:math:`\ \ x_1 = -\frac{1}{4},\ \ x_2 = \frac{3}{4},\ \ x_3 = \frac{3}{4}\,.`
+
+
+W trójwymiarowej przestrzeni współrzędnych :math:`\ x_1,\,x_2,\,x_3\ ` równanie liniowe przedstawia płaszczyznę. W obrazie wierszowym rozwiązanie układu równań jest więc wyznaczone przez miejsce geometryczne przecięcia się trzech płaszczyzn.
+
+Płaszczyzny odpowiadające kolejnym równaniom układu są oznaczone kolorem 
+czerwonym, zielonym i niebieskim. W tym wypadku istnieje dokładnie jeden punkt wspólny tych płaszczyzn (kolor biały):
+
+.. figure:: figures/Rys_10.jpg
+   :align: center
+
+
+W obrazie kolumnowym rozwiązanie układu równań sprowadza się do wyznaczenia współczynników
+:math:`\ x_1,\,x_2,\,x_3\ \,` kombinacji liniowej wektorów kolumnowych 
+:math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\boldsymbol{v}_3\,,\ `
+która równałaby się wektorowi :math:`\,\boldsymbol{w}:` 
+
+.. math::
+   :label: col
+   
+   x_1\,\boldsymbol{v}_1\,+\,x_2\,\boldsymbol{v}_2\,+\,x_3\,\boldsymbol{v}_3\ =\ \boldsymbol{w}\,.
+
+Tutaj :math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\boldsymbol{v}_3\ `
+są kolumnami macierzy współczynników :math:`\ \boldsymbol{A},\ \,`
+podczas gdy :math:`\,\boldsymbol{w}\,` jest kolumną wolnych wyrazów:
+
+.. math::
+
+   \boldsymbol{A}\ =\ (\boldsymbol{v}_1,\boldsymbol{v}_2,\boldsymbol{v}_3)
+                 \ =\ \left[\begin{array}{rrr}
+                            2 &  1 & 1 \\
+                            1 & -1 & 0 \\
+                            1 &  1 & 2
+                            \end{array}\right]\,,\qquad     
+   \boldsymbol{w}\ =\ \left[\begin{array}{r} 1 \\ -1 \\ 2 \end{array}\right]\,.
+
+Przejście do postaci kolumnowej :eq:`col` układu trzech równań (o współczynnikach całkowitych)
+można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column()``
+(wykonanie kodu definiującego funkcję nie wyprowadzi na razie żadnego wyniku):
+
+.. sagecellserver::
+
+   def verse3colmn(Eqns):
+
+       var('x1 x2 x3')
+    
+       L = [vector([eq.lhs().coeff(x)
+            for eq in Eqns])
+            for x in [x1,x2,x3]]
+       
+       b = vector([eq.rhs() for eq in Eqns])
+       L.append(b)
+       
+       clmn = '$\\left[\\begin{array}{r} %d \\\ %d \\\ %d \\end{array}\\right]$'
+       comp = '$x_%i$' + clmn
+   
+       html(comp % (1, L[0][0],L[0][1],L[0][2]) + ' $+$ ' +\
+            comp % (2, L[1][0],L[1][1],L[1][2]) + ' $+$ ' +\
+            comp % (3, L[2][0],L[2][1],L[2][2]) + ' $=$ ' +\
+            clmn %    (L[3][0],L[3][1],L[3][2]))
+            
+       return
+
+Aby wywołać funkcję, trzeba utworzyć listę równań :math:`\ ` ``Eqns`` :math:`\ ` 
+i podać ją jako argument:
+
+.. sagecellserver::
+
+   var('x1 x2 x3')
+
+   eq1 = 2*x1+1*x2+1*x3== 1
+   eq2 = 1*x1-1*x2+0*x3==-1
+   eq3 = 1*x1+1*x2+2*x3== 2
+
+   Eqns = [eq1,eq2,eq3]
+   
+   try: verse3colmn(Eqns)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
+
+:math:`\ `
+
+Tak jak w poprzednim przykładzie z układem dwóch równań o dwóch niewiadomych,
+obraz wierszowy układu równań można odczytać z postaci macierzy 
+:math:`\,\boldsymbol{A}\ \,` i :math:`\ ` kolumny :math:`\ \boldsymbol{w}:\ `
+ich kolejne wiersze określają równania płaszczyzn, 
+odpowiadających równaniom układu.
+
+:math:`\ `
+
+Poniższy program przedstawia obraz kolumnowy tego układu równań.
+
+Wektory geometryczne :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3,\ `
+odpowiadające wektorom kolumnowym
+:math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\boldsymbol{v}_3\,,\ `
+są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim, 
+:math:`\,` wektor :math:`\,\vec{w}\;` jest szary.
+
+**Poeksperymentuj z Sage!**
+
+Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+
+.. sagecellserver::
+
+   var('x1 x2 x3')
+
+   eq1 = 2*x1+1*x2+1*x3 == 1
+   eq2 = 1*x1-1*x2+0*x3 ==-1
+   eq3 = 1*x1+1*x2+2*x3 == 2
+
+   [v1,v2,v3] = [vector([eq.lhs().coeff(x)
+                 for eq in [eq1,eq2,eq3]])
+                 for x in [x1,x2,x3]]
+              
+   w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+
+   plt = arrow((0,0,0),v1, color='red')       +\
+         arrow((0,0,0),v2, color='limegreen') +\
+         arrow((0,0,0),v3, color='blue')      +\
+         arrow((0,0,0), w, color='darkgrey')
+      
+   show(plt)
+
+Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` nie są komplanarne 
+(nie leżą w jednej płaszczyźnie). 
+Można pokazać ogólnie, że wtedy i tylko wtedy układ równań ma dokładnie jedno rozwiązanie.
+
+Układ nieoznaczony: nieskończenie wiele rozwiązań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Weźmy układ równań:
+
+.. math::
+   :nowrap:
+
+   \begin{alignat*}{4}
+   2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
+   4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 2 \\
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3
+   \end{alignat*}
+
+Stosując procedurę ``solve()`` otrzymujemy rozwiązanie zależne od zmiennej :math:`\,r_1,\,`  
+która może przyjmować dowolne wartości: 
+
+.. sagecellserver::
+
+   var('x1 x2 x3')
+
+   eq1 = 2*x1+1*x2+1*x3==1
+   eq2 = 4*x1+2*x2+2*x3==2
+   eq3 = 1*x1+1*x2+2*x3==3
+
+   show(solve([eq1,eq2,eq3],[x1,x2,x3]))
+
+Oznacza to, że układ równań jest spełniony przez nieskończenie wiele trójek liczb.
+
+Taka sytuacja wystąpi zawsze wtedy, gdy jedno z równań jest kombinacją liniową pozostałych.
+Równanie takie wynika z równań pozostałych, odrzucenie go nie zmienia więc zbioru rozwiązań.
+W tym wypadku drugie równanie jest po prostu podwojonym równaniem pierwszym,
+mamy więc faktycznie układ dwóch niezależnych równań o trzech niewiadomych.
+
+Podany niżej kod wyświetla wierszową i kolumnową interpretację geometryczną tego układu.
+
+:math:`\ `
+
+**Poeksperymentuj z Sage!**
+
+Używając myszy, otrzymany obraz można powiększać, obracać i oglądać z różnej perspektywy.
+
+:math:`\ `
+   
+.. sagecellserver::
+
+   var('x1 x2 x3 r')
+
+   eq1 = 2*x1+1*x2+1*x3==1
+   eq2 = 4*x1+2*x2+2*x3==2
+   eq3 = 1*x1+1*x2+2*x3==3
+
+   p1 = implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5),
+                        color='red')
+
+   p2 = implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5),
+                        color='green', opacity=0.87)
+
+   p3 = implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5),
+                        color='blue')
+
+   ln = parametric_plot([r-2, -3*r+5, r], (r, 0, 3.3),
+                        color='white', thickness=5)
+
+   plot1 = p1+p2+p3+ln
+
+   [v1,v2,v3] = [vector([eq.lhs().coeff(x)
+                 for eq in [eq1,eq2,eq3]])
+                 for x in [x1,x2,x3]]
+              
+   w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+
+   plot2 = arrow((0,0,0),v1, color='red')       +\
+           arrow((0,0,0),v2, color='limegreen') +\
+           arrow((0,0,0),v3, color='blue')      +\
+           arrow((0,0,0), w, color='darkgrey')
+
+   show(plot1)
+
+Płaszczyzny, przedstawiające dwa pierwsze równania (oznaczone kolorem czerwonym i zielonym)
+są identyczne i pokrywają się. Trzecia płaszczyzna (niebieska), odpowiadająca trzeciemu równaniu, 
+przecina się z nimi wzdłuż linii prostej (białej). Linia ta przedstawia zbiór rozwiązań układu,
+składający się z nieskończenie wielu punktów.
+
+:math:`\ `
+
+.. sagecellserver::
+
+   try: show(plot2)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
+
+Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` 
+(oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim)
+leżą w jednej płaszczyźnie, a wektor :math:`\ \vec{w}\,` (szary), 
+reprezentujący prawą stronę układu równań, 
+też należy do tej płaszczyzny. W tej sytuacji nieskończenie wiele kombinacji liniowych wektorów
+:math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` może równać się wektorowi :math:`\ \vec{w}.`
+
+:math:`\ `
+
+**Dygresja o nieoznaczonych układach równań.**
+
+Wyobraźmy sobie, że rozwiązujemy układ równań (niekoniecznie
+liniowych) w Sage za pomocą ``solve()`` i jako odpowiedź dostajemy
+wyrażenia zależne od parametrów ``r1,r2,...`` (ich nazwy mogą być nieprzewidywalne).
+Jeśli chcemy wykorzystać te parametry np. do narysowania rozwiązań, 
+to przed ich użyciem trzeba zadeklarować zmienne, które im odpowiadają.
+
+W podanym przykładzie występuje trywialny nieoznaczony układ dwóch równań o dwóch niewiadomych,
+którego rozwiązanie zależy od jednego parametru. Zastosowana procedura pozwala
+wykreślić zbiór rozwiązań, odpowiadający zadanemu przedziałowi zmienności parametru.
+Zachęcamy do analizy kodu i zapoznania się z użytymi zaawansowanymi narzędziami systemu Sage.
+
+:math:`\ `
+
+.. sagecellserver::
+
+   var('x1 x2')
+   
+   # Nieoznaczony układ równań:
+   Eqns = [  x1 +   x2 == 1,
+           2*x1 + 2*x2 == 2]
+   
+   s = solve(Eqns,[x1,x2])
+   print s[0] # rozwiązanie układu
+   
+   # Wyłuskanie wszystkich parametrów od których zależy rozwiązanie:
+   lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
+   for x in [x1,x2]: lvar.remove(x)
+   for rvar in lvar: var(rvar)
+   print lvar # lista parametrów jako zmiennych
+
+   # Wykres zbioru rozwiązań dla parametru w zadanym przedziale:
+   pts = [map(lambda w: w.rhs().subs(lvar[0]==p), s[0]) for p in srange(-1,1,0.1)]
+   line(pts, axes_labels=['x1','x2'], color='green', figsize=5)
+
+Układ sprzeczny: brak rozwiązań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
+
+.. math::
+   :nowrap:
+
+   \begin{alignat*}{4}
+   2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 0 \\
+   4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 5 \\
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1
+   \end{alignat*}
+
+Układ ten nie ma rozwiązań:
+
+.. sagecellserver::
+
+   var('x1 x2 x3')
+
+   eq1 = 2*x1+1*x2+1*x3==0
+   eq2 = 4*x1+2*x2+2*x3==5
+   eq3 = 1*x1+1*x2+2*x3==1
+
+   show(solve([eq1,eq2,eq3],[x1,x2,x3]))
+
+Wzajemna sprzeczność pierwszych dwóch równań jest oczywista:
+lewa strona drugiego równania jest podwojoną lewą stroną pierwszego równania, 
+powinna więc być równa 0, a nie 5.
+
+Zobaczmy, co to oznacza w interpretacji wierszowej i kolumnowej:
+
+.. sagecellserver::
+
+   var('x1 x2 x3')
+
+   eq1 = 2*x1+1*x2+1*x3==0
+   eq2 = 4*x1+2*x2+2*x3==5
+   eq3 = 1*x1+1*x2+2*x3==1
+
+   p1 = implicit_plot3d(eq1,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='red')
+   p2 = implicit_plot3d(eq2,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='green')
+   p3 = implicit_plot3d(eq3,(x1,-5,5),(x2,-5,5),(x3,-5,5), color='blue')
+
+   plot3 = p1+p2+p3
+
+   [v1,v2,v3] = [vector([eq.lhs().coeff(x)
+                 for eq in [eq1,eq2,eq3]])
+                 for x in [x1,x2,x3]]
+              
+   w = vector([eq.rhs() for eq in [eq1,eq2,eq3]])
+
+   plot4 = arrow((0,0,0),v1, color='red')       +\
+           arrow((0,0,0),v2, color='limegreen') +\
+           arrow((0,0,0),v3, color='blue')      +\
+           arrow((0,0,0), w, color='darkgrey')
+
+   show(plot3)
+
+Płaszczyzny, odpowiadajace pierwszym dwóm równaniom układu (czerwona i zielona) są równoległe, ale nie pokrywają się. W tej sytuacji nie ma punktów wspólnych dla wszystkich trzech płaszczyzn.
+
+.. sagecellserver::
+
+   try: show(plot4)
+   except NameError: html("Wykonaj kod w poprzedniej komórce!")
+
+Tutaj wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` leżą na tej samej płaszczyźnie.
+W odróżnieniu jednak od poprzedniego przypadku z nieskończoną ilością rozwiązań,
+wektor :math:`\ \vec{w}\,` nie jest z nimi komplanarny, przez co nie może być ich kombinacją liniową
+(każda kombinacja liniowa wektorów :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` leży w ich płaszczyźnie).
+
+
+
+

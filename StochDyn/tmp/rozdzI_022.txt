@@ -1,0 +1,231 @@
+Dynamiczne układy zachowawcze i dysypatywne
+
+ 
+
+Układy zachowawcze 
+
+Niektóre układy równań różniczkowych mają specyficzną strukturę i ukryte własności. Przykłady z fizyki mają taką specyficzną strukturę. Rozpatrzmy równanie Newtona dla cząstki o jednym stopniu swobody w postaci:
+
+$$m\ddot x = F(x) = -\frac{dV(x)}{dx} = - V'(x)$$
+
+gdzie siła $F(x)$ jest potencjalna, tzn.  istnieje taka funkcja $V(x)$, że $F(x) = -V'(x)$.  Oznaczenie $V'(x)$ jest pochodną funkcji $V(x)$ względem zmiennej $x$. Funkcja  $V(x)$ nazywa się energią potencjalną, ale my będziemy pisali krótko - potencjał. Jeżeli znamy siłę $F(x)$ to potencjał można znależć obliczając całkę: 
+
+$$V(x) = - \int_a^{\,x}  F(y) dy$$
+
+gdzie $a$ jest dowolną liczbą wybieraną tak jak nam wygodnie. Np. możemy wybrać tak, aby w pewnym punkcie potencjał był zerowy lub nieskończony.
+
+Równanie Newtona jest równaniem 2-go rzędu, autonomicznym.   Zapiszemy je w postaci
+
+$$\dot x = v, \quad \quad x(0)=x_0$$ $$m\dot v = F(x) = -V'(x),  \quad \quad v(0)=v_0$$
+
+Z tego wynika, że przestrzeń fazowa układu jest 2-wymiarowa $\{x, v\}$. W tej przestrzeni fazowej może analizować krzywe fazowe. Można zauważyć, że położenie $x(t)$ oraz prędkość $v(t)$ icząstki zmieniają się w czasie zgodnie z równaniem Newtona, to istnieje pewna funkcja (kombinacja) tych 2 funkcji $x(t)$ oraz $v(t)$, która nie zmienia się w czasie:
+
+$$E[x(t), v(t)] = \frac{1}{2} m v^2(t) + V(x(t)) = \frac{1}{2} m v^2(0) + V(x(0)) = E[x(0), v(0)]$$
+
+Wielkość $E$ nazywa się  w fizyce całkowitą energią układu i składa się z 2 części: energii kinetycznej cząstki $E_k=mv^2/2$ oraz energii potencjalnej  cząstki $E_p = V(x)$. Jeżeli $E$ nie zmienia się w czasie, to znaczy że jest to funkcja stała ze względu na czas i pochodna wzgledem czasu powinna być zero. Sprawdźmy to:
+
+$$\frac{dE}{dt} = \frac{d}{dt}  E[x(t), v(t)] = \frac{\partial E}{\partial x}  \frac{dx}{dt} + \frac{\partial E}{\partial v}  \frac{dv}{dt} =  V'(x)  \dot x +  mv \dot v = -F(x) v + v F(x)$$
+
+gdzie skorzystaliśmy ze związku pomiędzy siłą i energią potencjalną oraz z równania Newtona.
+
+Ponieważ $E$ nie zmienia się w czasie, to mówimy że jest to stała ruchu lub całka ruchu, lub całka pierwsza układu (ostatnie nazwy wydają  się być dziwaczne, bo w wyrażeniu dla $E$ nie widać żadnej całki).  Istnienie stałych czy też całek ruchu ułatwia analizę układów. Pokażemy to na przykładzie oscylatora harmonicznego  dla którego postać siły jest dobrze znana:
+
+$$F(x) = - k x = - m\omega^2 x, \quad \quad \quad V(x) = \frac{1}{2} k  x^2  = \frac{1}{2} m\omega^2 x^2, \quad \quad \omega^2 = \frac{k}{m}$$
+
+Prawo zachowania energii mówi, że
+
+$$E = \frac{1}{2} m v^2(t) + \frac{1}{2} k x^2(t) = const. = \frac{1}{2} m v^2(0) + \frac{1}{2} k x^2(0)$$
+
+Ponieważ ta wielkość jest niezmienna w czasie, to określa równanie krzywej fazowej na płaszczyźnie $XY$. Łatwo zauważyć, że powyższe równanie w zmiennych
+
+$\{x, y=v\}$ ma postać
+
+$$ m y^2 +  k x^2 =  2E $$
+
+Jest to równanie elipsy:
+
+$$\frac{x^2}{(2E/k)} + \frac{y^2}{(2E/m)} = 1$$
+
+o osiach $a=2E/k$ oraz $b=2E/m$. Narysujmy sobie takę elipsę dla, powiedzmy, $E = 2, k = 0.2$ oraz $m=1$. Wiadomo, że każdy wie jak taka elipsa będzie wyglądać, ale zrobimy to bardziej po to, żeby wyrobić sobie naturalną umiejętność używania programów typu Sage do wizualizacji i interpretacji wyników.
+
+SAGECELL
+
+Elipsa jest krzywą zamkniętą, więc ruch jest periodyczny. Można sobie wyobrażać, że ruch cząstki w potencjale $V(x)$ jest  podobny do  ruchu cząstki we wnętrzu połówki sfery (w czasze). Nie jest to prawdą, ale takie wyobrażenie wyrabia w nas intuicję o własnościach ruchu. Poniżej przedstawiamy krok po kroku co zrobić, aby narysować krzywe fazowe układu.
+
+Rysujemy wykres przedstawiający potencjal $V(x)$
+Poniżej tego wykresu, z osią pionową ustawioną jak w wykresie dla potencjału, rysujemy 2 symetryczne krzywe zadane przez prawo zachowania energii$$\frac{1}{2}m v^2 + V(x) = E \quad \quad \quad \mbox{czyli stąd wynika że } \quad \quad \quad v = \pm \sqrt{\frac{2}{m}[(E-V(x)]}$$ Te dwie krzywe $v=v(x, E)$ są krzywymi fazowymi.
+Cząstka porusza się w prawo gdy prędkość jest dodatnia $v>0$ (zielona krzywa) i w lewo gdy prędkość jest ujemna $v<0$ (czerwona krzywa). Prędkość jest zero wówczas, gdy $$V(x) = E$$
+Wynika to z prawa zachowania energii (podstaw tam $v=0$). Równanie $V(x) = E$ wyznacza punkty zwrotu $x_i$ : cząstka w tych punktach ma zerową prędkość i zmienia kierunek ruch (zawraca). 
+
+Spróbujemy, krok po kroku zanalizować równanie Newtona aby uzyskać krzywe fazowe.
+
+$$m \ddot{x} = F$$
+
+Jeżeli siła bedzie liniowa $F=-kx$ to dostaniemy wyżej opisane zagadnienie oscylatora harmonicznego. Na początku musimy zadeklarować nazwy zmiennych oraz parametrów użytych w modelu. Pamiętaj - każdorazowo, jeżeli chcesz obliczac coś symbolicznie, trzeba taką linijkę napisać i ją wykonać. W kolejnych linijkach ustalimy parametry układu, zdefiniujemy siły z jakimi mamy do czynienia i obliczymy potencjał (całka z siły brana ze znakiem minus). W następnym kroku, z prawa zachowania energii, obliczymy teraz jak prędkość zależy od położenia (owe krzywe fazowe). 
+
+SAGECELL
+
+Układy potencjalne
+
+Układ o 1 stopniu swobody jest  potencjalny (tzn. istnieje potencjał $V(x)$  pod warunkiem, że siła zależy tylko od położenia cząstki, tzn. $F=F(x)$. Jeżeli siła zależy także od prędkości cząstki, tzn gdy $F=F(x, v)$, nie istnieje potencjał $V$ taki aby $F = -V' = - dV/dx$. Dla układów o wielu stopniach swobody, opisywanych układem równań Newtona
+
+$$m_i \frac{d^2\vec r_i}{dt^2} = \vec F_i(\vec r_1,  \vec r_2, \vec r_3, ..., \vec r_N)$$
+
+dla $N$ cząstek, układ jest potencjalny, gdy istnieje taka funkcja skalarna $V(\vec r_1,  \vec r_2, \vec r_3, ..., \vec r_N)$, że siła działająca na $i$-tą cząstkę jest gradientem potencjału ze znakiem minus. Prościej jest to wyjaśnić na przykładzie 1 cząstki poruszającej się w przestrzeni 3-wymiarowej:
+
+$$m\frac{d^2x}{dt^2} = F_1(x, y, z) = - \frac{\partial}{\partial x} V(x, y, z) $$ $$m\frac{d^2y}{dt^2}   = F_2(x, y, z) = - \frac{\partial}{\partial y} V(x, y, z)  $$ $$m\frac{d^2z}{dt^2} = F_3(x, y, z) = - \frac{\partial}{\partial x} V(x, y, z) $$
+
+W ogólnym przypadku, gdy mamy zadane 3 składowe siły $F_1,  F_2$ oraz $F_3$, nie musi istniej tylko jedna funkcja $V$ taka aby powyższe równania były spełnione. Nasuwa się pytanie, czy istnieje proste kryterium mówiące, że układ jest potencjalny. Jeżeli
+
+$$\vec F = - grad \; V \quad \quad \quad \mbox{to} \quad \quad \quad rot\; \vec F = - rot \;grad \;V  =  - \vec \nabla \times \vec \nabla V \equiv 0 $$
+
+gdzie operator $\vec\nabla$ jest operatorem różniczkowania
+
+$$\vec\nabla = \hat e_x \frac{\partial}{\partial x} + \hat e_y \frac{\partial}{\partial y} + \hat e_y \frac{\partial}{\partial y}$$
+
+Wystarczy zatem sprawdzić, czy rotacja pola sił  $\vec F$  jest 0.
+
+ 
+
+ZADANIE: Sprawdzić, czy  siły $\vec F(x, y, z)$ o składowych
+
+$$ 1.  \quad \quad F_1(x, y,z) = \frac{y}{x^2 + y^2 + z^2},  \quad F_2(x, y,z) = - \frac{x}{x^2 + y^2 + z^2},  \quad F_3(x, y,z) = \frac{z}{x^2 + y^2 + z^2}$$
+
+$$ 2.  \quad \quad F_1(x, y,z) = \frac{x-z}{x^2 + y^2 },  \quad F_2(x, y,z) = x e^{-y^2},  \quad F_3(x, y,z) = z+5$$
+
+$$3. \quad \quad F_1(x, y,z) = 25 x^4 y - 3y^2,  \quad F_2(x, y,z) = 5x^5 -6xy -5,  \quad F_3(x, y,z) =0$$
+
+są potencjalne
+
+ 
+
+Jeżeli układ jest potencjalny to łatwo sprawdzić, podobnie jak wyżej w przypadku układu o 1-stopniu swobody,  że istnieje stała ruchu - całkowita energia układu:
+
+$$E = \sum_i \frac{m\vec v^2}{2} + V(\vec r_1,  \vec r_2, \vec r_3, ..., \vec r_N)  = constant, \quad \quad \quad \frac{dE}{dt} = 0$$
+
+Dlatego  takie pole sił nazywa się zachowawczym polem sił.  Wszystkie siły związane z potencjalnym polem sił są siłami zachowawczymi. Istnieją jednak siły, które nie są siłami potencjalnymi, mimo to pozostają siłami zachowawczymi. Przykładem może być siła Lorentza działająca na naładowaną cząstkę poruszającą się w polu magnetycznym. Nie należy tego mylić z zachowawczymi układami dynamicznymi. Tę kwestię postaramy się teraz wyjaśnić.
+
+Dynamiczne układy zachowawcze i dysypatywne
+
+W teorii układów dynamicznych ważną rolę pełnią dwa pojęcia: zachowawcze układy dynamiczne i dysypatywne układy dynamiczne.  Znowu dla jasności wywodu rozpatrzymy przykład układu o 3-wymiarowej przestrzeni fazowej:
+
+$$\dot x = F_1(x, y, z), \quad x(0) = x_0 $$ $$\dot y = F_2(x, y, z),  \quad x(0) = x_0 $$ $$\dot z = F_3(x, y, z),  \quad x(0) = x_0 $$
+
+Wybieramy w przestrzeni fazowej obszar $D(0)$  o objętości $M(0)$. Zawiera on wszystkie możliwe warunki początkowe
+
+$$\{x_0, y_0, z_0\} \in D(0)$$
+
+Pod wpływem ewolucji każdy punkt $(x_0, y_0, z_0)$  z tego obszaru przejdzie po czasie $t$ do punktu $(x(t),  y(t), z(t))$.  Zbiór tych punktów w chwili $t$ tworzy obszar  $D(t)$  o objętości $M(t)$. Zachodzi pytanie:
+
+$$ \mbox{w jakich przypadkach} \quad M(t) = M(0)$$
+
+Innymi słowy, kiedy układ dynamiczny zachowuje objętość fazową. Zbadamy ten problem. Wprowadzimy nowe oznaczenia, aby ułatwić notację:
+
+$$x_t = x(t), \quad \quad y_t = y(t), \quad \quad z(t) = z_t$$
+
+Objętość fazowa warunków początkowych w chwili $t=0$ wynosi
+
+$$M(0) = \int \int \int_{D(0)}  dx_0 dy_0 dz_0 $$
+
+Objętość fazowa w chwili $t$ wynosi
+
+$$M(t) = \int \int \int_{D(t)}  dx_t dy_t dz_t $$
+
+Ewolucja układu to nic innego jak zamiana zmiennych $(x_0, y_0, z_0) \to (x_t, y_t, z_t)$. Dokonajmy tej zamiany zmiennych w drugiej całce:
+
+$$M(t) = \int \int \int_{D(t)}  dx_t dy_t dz_t   =  \int \int \int_{D(0)}  \frac{\partial (x_t, y_t, z_t)}{\partial (x_0, y_0, z_0)} \; dx_0 dy_0 dz_0  = \int \int \int_{D(0)}   J(t)  dx_0 dy_0 dz_0 \quad \quad \quad (1) $$
+
+gdzie $J$ jest jakobianem transformacji  $(x_t, y_t, z_t) \to (x_0, y_0, z_0)$. Jeżeli objętość fazowa nie zmienia się w czasie (jest funkcją stałą), to jej pochodna
+
+$$\frac{dM(t)}{dt} = \int \int \int_{D(0)}  \frac{ dJ(t)}{dt}  dx_0 dy_0 dz_0  \quad \quad \quad (2) $$
+
+wynosi zero. Jeżeli
+
+$$ \frac{ dJ(t)}{dt} = 0  \quad \quad \quad \mbox{to} \quad \quad \quad \frac{dM(t)}{dt} = 0 \quad \quad \quad \mbox{czyli } \quad \quad \quad M(t)=M(0) $$
+
+Więc rozpoczynamy obliczenia 
+
+$$ \frac{ dJ(t)}{dt} = \frac{d}{dt} \; \frac{\partial (x_t, y_t, z_t)}{\partial (x_0, y_0, z_0)} = \frac{d}{dt}  \begin{bmatrix}\frac{ \partial x_t}{\partial x_0}& \frac{\partial x_t}{\partial y_0}&\frac{ \partial x_t}{\partial z_0}\\ \frac{ \partial y_t}{\partial x_0}&  \frac{ \partial y_t}{\partial y_0} &\frac{ \partial y_t}{\partial z_0} \\ \frac{ \partial z_t}{\partial x_0}& \frac{ \partial z_t}{\partial y_0}&\frac{ \partial z_t}{\partial z_0} \end{bmatrix}$$
+
+Należy powyższy wyznacznik rozwinąć i pamiętać, że rozwiązania równań różniczkowych
+
+$$x_t = x_t(x_0, y_0, z_0), \quad \quad y_t = y_t(x_0, y_0, z_0), \quad \quad z_t = z_t(x_0, y_0, z_0) \quad \quad$$
+
+zależą od warunków początkowych $\{x_0, y_0, z_0\}$.  Po rozwinięciu wyznacznika pojawiają się wyrażenia typu
+
+$$\frac{d}{dt}  \frac{ \partial x_t}{\partial z_0} = \frac{ \partial }{\partial z_0} \frac{dx_t}{dt} = \frac{ \partial }{\partial z_0} \dot x_t = \frac{ \partial }{\partial z_0} F_1(x_t, y_t, z_t) = \frac{ \partial F_1}{\partial x_t}  \frac{ \partial x_t}{\partial z_0} +  \frac{ \partial F_1}{\partial y_t}  \frac{ \partial y_t}{\partial z_0}  +\frac{ \partial F_1}{\partial y_t}  \frac{ \partial y_t}{\partial z_0}  $$
+
+Jak widać, w tym prostym przypadku musimy przeprowadzić uciążliwe rachunki. Znacznie lepiej jest posłużyć się rachunkiem symbolicznym z wykorzystaniem SAGE.
+
+Aby przeprowadzić dowód, najlepiej jest obejść  ograniczenia operacji na wyrazeniach z pochodnymi w Sage.Pochodna wyznacznika jest zrobiona automatycznie, potem jest recznie wykonane podstawienie:
+
+$$ \frac{ \partial }{\partial z_0} \dot x_t = \frac{ \partial F_1}{\partial x_t}  \frac{ \partial x_t}{\partial z_0} +  \frac{ \partial F_1}{\partial y_t}  \frac{ \partial y_t}{\partial z_0}  +\frac{ \partial F_1}{\partial y_t}  \frac{ \partial y_t}{\partial z_0}  $$
+
+SAGECELL
+
+Ostatecznie otrzymamy wyrażenie
+
+$$\frac{dJ(t)}{dt} = J(t) \left[\frac{\partial F_1}{\partial  x_t} + \frac{\partial  F_2}{\partial  y_t} + \frac{\partial F_3}{\partial z_t} \right]  = J(t)\; \mbox{ div} \vec F$$
+
+To, co jest w nawiasie kwadratowym  nazywa się dywergencją pola wektorowego $\vec F$. Wstawiamy to wyrażemie do równania $(2)$ i otrzymamy
+
+$$\frac{dM(t)}{dt} = \int \int \int_{D(0)}  \frac{ dJ(t)}{dt}  dx_0 dy_0 dz_0   = \int \int \int_{D(0)} J(t)\; \mbox{ div} \vec F  dx_0 dy_0 dz_0  =  \int \int \int_{D(t)} \; \mbox{ div} \vec F  dx_t dy_t dz_t \quad \quad \quad (3) $$
+
+gdzie dokonaliśmy odwrotnego przejścia  ( z prawej strony na lewą stronę) jak  w równaniu $(1)$.
+
+Można teraz uogólnić ten wynik na dowolną ilość wymiarów przestrzeni fazowej  dla układu równań
+
+$$\frac{d\vec x}{dt} = \vec F (\vec x), \quad \quad \vec x = [x_1, x_2, x_3, ...., x_n], \quad \quad \vec F = [F_1, F_2, F_3, ..., F_n]$$
+
+i otrzymamy
+
+TWIERDZENIE: Jeżeli dywergencja pola wektorowego $\vec F$  danego równania różniczkowego jest zero,
+
+$$\mbox{ div} \vec F = \sum_i \frac{\partial F_i}{\partial x_i} = 0$$
+
+wówczas objętość fazowa jest zachowana, $M(t) = M(0)$. Takie układy dynamiczne nazywamy zachowawczymi. Jeżeli objętość fazowa maleje w czasie, to układ nazywamy dysypatywnym. Innymi słowy, układ jest dysypatywny gdy objętość $M(t) < M(0)$ dla $t>0$. Oznacza to, że dla układów dysypatywnych
+
+$$\frac{dM(t)}{dt} < 0 $$
+
+Gdyby
+
+$$\mbox{ div} \vec F = C_0 = const. \quad \quad \quad (4) $$
+
+wówczas z równania $(3)$ otrzymujemy prostą relację
+
+$$\frac{dM(t)}{dt} = C_0 M(t)$$
+
+która pozwala rozstrzygnąć czy układ jest dysypatywny.
+
+ 
+
+PRZYKŁAD 1: Oscylator harmoniczny tłumiony
+
+$$\dot x = y = F_1(x, y), \quad \quad x(0) = x_0$$ $$ \dot y = -\gamma y -\omega^2 x = F_2(x, y), \quad \quad y(0) = y_0$$
+
+Łatwo obliczyć dywergencję pola
+
+$$\mbox{ div} \vec F =  \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} = -\gamma <0$$
+
+Równanie $(4)$ przyjmuje postać
+
+$$\frac{dM(t)}{dt} = -\gamma  M(t),  \quad \quad \quad \mbox{ jego rozwiązaniem jest funkcja malejąca } \quad \quad \quad M(t) = M(0) e^{-\gamma t}$$
+
+czyli  objętość fazowa (w tym przypadku powierzchnia fazowa) maleje  w czasie i dlatego jest to dysypatywny układ dynamiczny.
+
+ 
+
+PRZYKŁAD 2: Model Lorenza
+
+$$\dot x = \sigma (y-x) = F_1(x, y,  z), \quad \quad x(0) = x_0$$ $$ \dot y = x(\rho - z) -y = F_2(x, y,  z),  \quad \quad y(0) = y_0$$ $$ \dot z = x y - \beta z = F_3(x, y,  z), , \quad \quad z(0) = z_0$$
+
+gdzie wszystkie parametry są dodatnie: $\sigma, \rho, \beta > 0$. 
+
+ 
+
+Obliczymy  dywergencję 3-wymiarowego pola $\vec F = [F_1, F_2, F_3]$. Proste rachunki pokazują, że
+
+$$\mbox{ div} \vec F =  \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y}   + \frac{\partial F_3}{\partial z}  = -\sigma -1 - \beta <0$$
+
+Objętość fazowa (w tym przypadku faktycznie objętość w 3 wymiarowej przestrzeni) maleje  eksponencjalnie w czasie, podobnie jak w poprzednim przykłĸadzie.  Dlatego też jest to dysypatywny układ dynamiczny.
+ 
