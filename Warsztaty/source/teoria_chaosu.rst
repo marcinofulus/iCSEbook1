@@ -349,7 +349,7 @@ zbadań jak wyglądają trajektorie układu dla parametrów przy których
 nie jest on chaotyczny.
 
 
-*Dalsze eksperymenty komputerowe z układem Lorentza: zadania ze Strogaz-a!*
+*Dalsze eksperymenty komputerowe z układem Lorenza: zadania ze Strogaz-a!*
 
 
 Od układu Lorenza do równania logistycznego
@@ -393,7 +393,7 @@ wynikami. Zakładając ze odstępy pomiędzy kolejnymi punktami czasu w
 tej tabeli są odpowiednio małe, możemy policzyć lokalne maksima dla
 ciągu, zauważając, że punkt :math:`z_i` jest lokalnym maksimum jeżeli
 jego otoczenie jest od niego mniejsze czyli zachodzi
-:math:`z_{i-1}<z_{i}` i :math:`z_{i-1}<z_i`. Oczywiście nie będą to
+:math:`z_{i-1}<z_{i}` i :math:`z_{i+1}<z_i`. Oczywiście nie będą to
 "prawdziwe" maksima funkcji :math:`z(t)` a jedynie ich przybliżenie.
 Jedną z możliwości jest napisanie pętli (zachęcamy do zrobienia tego
 własnoręcznie), która dla każdego punktu z tabeli sprawdziła by czy
