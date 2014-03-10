@@ -229,13 +229,9 @@ można teraz zapisać następująco: :math:`\\`
    \boldsymbol{A}_i\,\boldsymbol{B}\ \ =\ \ 
    \sum_{k=1}^p \,a_{ik}\,\boldsymbol{B}_k\,,\quad i=1,2,\dots, m.
 
-.. Wzory :math:`\,` :eq:`rule_verse_1` :math:`\,` i :math:`\,` :eq:`rule_verse_2` :math:`\,`
-   są odpowiednikami równań :math:`\,` :eq:`rule_col_1` :math:`\,` i :math:`\,` :eq:`rule_col_2`,
-   a wynikająca z nich reguła jest wierszowym odpowiednikiem Reguły 1.: 
-
-Reguła wynikająca ze wzorów 
-:math:`\,` :eq:`rule_verse_1` :math:`\,` i :math:`\,` :eq:`rule_verse_2` :math:`\,`
-jest wierszowym odpowiednikiem Reguły 1.:
+Wzory :math:`\,` :eq:`rule_verse_1` :math:`\,` i :math:`\,` :eq:`rule_verse_2` :math:`\,`
+są odpowiednikami równań :math:`\,` (3.5) :math:`\,` i :math:`\,` (3.6),
+a wynikająca z nich reguła jest wierszowym odpowiednikiem Reguły 1.: 
 
 .. admonition:: Reguła 3. :math:`\,` (wierszowa reguła mnożenia macierzowego) :math:`\\`
 

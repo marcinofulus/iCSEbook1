@@ -14,16 +14,17 @@ Warsztaty iCSE
 
 
 
-Matematyka w domu w i zagrodzie
-===============================
+Matematyka ,,w domu i w zagrodzie"
+==================================
 
-Czy dwie pół-główki to cała główka?  
+Czy dwie pół--główki to cała główka?  
 
 .. toctree::
    :maxdepth: 1
 
 
-   iCSE_1_Wprowadzenie_CubeProject
+   iCSE_1a_Wprowadzenie_CubeProject
+   iCSE_1b_Wprowadzenie_CubeProject
    iCSE_2_Demokracja_CubeProject
    iCSE_3_Playoffs_CubeProject
    iCSE_4_MontyHall_CubeProject
@@ -32,7 +33,7 @@ Czy dwie pół-główki to cała główka?
 Dynamika w windzie i nie tylko...
 =================================
 
-Wystrzel z armaty bez obaw o skutki!
+Wytrzel z armaty bez obaw o skutki!
 
 .. toctree::
    :maxdepth: 1
@@ -45,13 +46,13 @@ Wystrzel z armaty bez obaw o skutki!
 Chaotyczne opowieści
 ====================
 
-Poeksperymentuj z układami chaotycznymi!
+O prostych układach, które wprowadzają niezły chaos. Spróbuj dojść do (uk)ładu z tym chaosem!
 
 .. toctree::
    :maxdepth: 1
 
-   Teoria Chaosu - Motyl Lorenza <motyl_lorenza>
-   Teoria Chaosu - Równanie Logistyczne <rownanie_logistyczne>
+   Teoria chaosu -- motyl Lorenza <motyl_lorenza>
+   Teoria chaosu -- równanie logistyczne <rownanie_logistyczne>
 
 
 
@@ -59,4 +60,4 @@ Jaka jest długość brzegu Anglii?
 ================================
 
 (w opracowaniu) Próby pomiaru długości brzegu Anglii doprowadziły do
-wniosku, że wielkość ta nie istnieje....
+wniosku, że wielkość ta nie istnieje...

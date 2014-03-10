@@ -17,8 +17,8 @@ się jedną z najczęściej cytowanych prac z teoretycznej ekologii.  Co
 wzbudziło tak wielkie zainteresowanie w tej pracy?
 
 May zajmował się zastosowaniem matematyki w ilościowym opisie zjawisk
-ekologicznych. Klasycznym zadaniem w tej dziedzinie jest obliczenie
-populacji pewnego gatunku w czasie znając jego stan liczebny w chwili
+ekologicznych. Klasycznym zadaniem w tej dziedzinie jest obliczenie wielkości 
+populacji pewnego gatunku w czasie, znając jej stan liczebny w chwili
 początkowej. Najprostszym, z punktu widzenia modelowania
 matematycznego, rodzajem ekosystemów wydawały się takie w których
 życie jednego pokolenia populacji trwa jeden sezon. Dobrym przykładem
@@ -46,10 +46,10 @@ gdzie :math:`N_i` to liczebność w i-tym sezonie. Łatwo się przekonać,
 :math:`\alpha<1` to zaniknie oraz dla :math:`\alpha=1` ewolucja nie
 będzie zmieniać stanu liczebnego populacji. Najprostszym rozwinięciem
 tego modelu jest wprowadzenie zależności stałej :math:`\alpha` od
-wielkości populacji. Wyobraźmy sobie populacje szkodników zamkniętym
-ekosystemie. Szkodniki zjadają zboże, którego jest dokładnie ta sama
-ilość do roku. Jeżeli owadów jest mało w porównaniu do ilości
-pożywienia to mogą rozmnażać się z pełną siła rozrodczą - na przykład
+wielkości populacji. Wyobraźmy sobie populacje szkodników w zamkniętym
+ekosystemie. Szkodniki zjadają zboże, którego jest dokładnie taka sama
+ilość co roku. Jeżeli owadów jest mało w porównaniu do ilości
+pożywienia, to mogą rozmnażać się z pełną siła rozrodczą - na przykład
 w następnym sezonie będzie ich cztery razy więcej niż w
 poprzednim. Jednak w miarę wzrostu liczebności szkodników, pożywienia
 nie będzie wystarczać i siła rozrodcza będzie maleć. W krytycznym
@@ -86,14 +86,14 @@ jest proporcjonalne do liczebności populacji w i-tym sezonie.
 .. note:: 
 
    Jeśli populacja ma liczebność równą jeden, to nie dożywa do
-   następnego pokoleniu. Tak samo było by w przypadku gdy jest większa
+   następnego pokolenia. Tak samo byłoby w przypadku gdy jest większa
    od jednego, dlatego wystarczy się ograniczyć do
    :math:`x_i\in(0,1)`. Z tego samego powodu nie rozważamy parametru
    :math:`a>4` - bowiem :math:`a<=4` odwzorowanie logistyczne
    przeprowadza zawsze odcinek (0,1) w odcinek (0,1).
 
 
-Mogło by się wydawać, że tak prosty model będzie dawał proste
+Mogłoby się wydawać, że tak prosty model będzie dawał proste
 wyniki. Spróbujmy sami!
 
 Rozważmy model :eq:`logistic` dla parametru :math:`a=0.5`, startując z
@@ -158,7 +158,7 @@ charakterystyczne dla chaosu deterministycznego.
 Zbadajmy to! Na początek ustalmy wartość parametru na :math:`a = 3.2`
 i przyjrzyjmy się ewolucji. Zaskoczeniem może być fakt, że tym razem
 populacja nie osiąga jednej wartości, ale dwie, które występują
-kolejno po sobie do drugi sezon.  Przyjrzyjmy się bliżej temu
+kolejno po sobie co drugi sezon.  Przyjrzyjmy się bliżej temu
 zjawisku. Po pierwsze jeżeli ciąg kolejnych wartości :math:`x_i` dąży
 do pewnej granicy, to możemy napisać dokładny warunek na jej wartość
 :math:`x_g`. Musi bowiem zachodzić :math:`x_g=f(x_g)`. Jeżeli taki
@@ -186,11 +186,11 @@ wraz z tymże parametrem to mówimy, że następuje bifurkacja. W punkcie
 rozwiązania ma dwa. Jednak zauważmy jeszcze jedno ciekawe zjawisko. Z
 dowolnego warunku początkowego dla :math:`a<1` zawsze otrzymywaliśmy
 malejący ciąg populacji, który wydawał się być przyciągany do jedynego
-w tym obszarze punktu stałego - do zera. Taki punkt do którego układ
-jest przyciągany zwany jest też attraktorem układu. Dla :math:`a>1`
+w tym obszarze punktu stałego - do zera. Taki punkt, do którego układ
+jest przyciągany zwany jest też atraktorem układu. Dla :math:`a>1`
 mamy dwa punkty stałe. Okazuje się, że w tym obszarze startując z
 dowolnego punktu z wyjątkiem :math:`x=0` zawsze będziemy dążyć do
-drugiego rozwiązania, który jest attraktorem!  Oznacza to, że jeżeli
+drugiego rozwiązania, który jest atraktorem!  Oznacza to, że jeżeli
 rozwiązanie :math:`x=0` zaburzymy dowolnie małą liczbą
 np. :math:`x=0.0001` to i tak po kilkunastu iteracjach populacja
 będzie dążyła do :math:`x_g=1-\frac{1}{a}` (Poeksperymentujmy!).
@@ -221,7 +221,7 @@ pomiędzy dwoma wartościami, to mówimy, że dla :math:`a=3.2` układ ma
 punkt okresowy z okresem 2. Właściwie to możemy tylko przypuszczać, że
 tak jest bo wynika to tylko z zabaw podczas których liczba iteracji
 była skończona. Możemy jednak w tym przypadku pokazać to
-dokładnie. Jeżeli populacja do drugi sezon przechodzi w tą samą to
+dokładnie. Jeżeli populacja co drugi sezon przechodzi w tą samą to
 możemy rozważyć odwzorowanie :math:`g(x)=f(f(x))`, które przeprowadza
 układ o dwa sezony do przodu. W taki przypadku powinniśmy punkt stały
 dla :math:`g` odpowiada punktowi okresowemu o okresie 2 dla
@@ -271,7 +271,7 @@ pierwiastki wielomianu kończą się w przypadku ogólnym na stopniu
 cztery. Oczywiście można zastosować metody przybliżone, lub metodę
 graficzną. Jednak okazuje się, że całkiem niezłym sposobem na poznanie
 struktury cykli układu jest po prostu jego symulacja na tyle długa by
-układ zdążył dojść wystarczająco blisko do attraktora. Zanim użyjemy
+układ zdążył dojść wystarczająco blisko do atraktora. Zanim użyjemy
 tego sposobu, zapoznajmy się z metodą graficzną - jak mawiano,
 ilustracja jest warta tysiąca słów.
 
@@ -284,17 +284,17 @@ wykresy "pajęczynowe" (z ang. cobweb plot), znane także jako wykresy
 Verhulsta. Spróbujemy samodzielnie skonstruować taki wykres. Na osiach
 będą umieszczone wartości populacji w kolejnych iteracjach:
 :math:`x_i,x_{i+1}`, zakresy obu osi będą więc :math:`0..1`. Zaczynamy
-od narysowania prostej :math:`x_{i+1}=x_i`, będącą przekątną wykresu,
+od narysowania prostej :math:`x_{i+1}=x_i`, będącej przekątną wykresu,
 a następnie wykresu zależności :math:`x_{i+1}=f(x_i)`, dla pewnego
 ustalonego parametru :math:`a`. Chcemy przedstawić trajektorię
 ewolucji pewnego stanu początkowego :math:`x_0`. Procedura rysowania
 składa się z czterech etapów:
 
-#) Znajdujemy punkt przecięcia się pionowej prostej przechodzącej
+#) Znajdujemy punkt przecięcia pionowej prostej przechodzącej
     przez punkt :math:`(x_0,0)` z wykresem funkcji :math:`f`, czyli:
     :math:`x_0, f(x_0)`
 
-#) Łączymy ten punkt poziomą linią z przekątną, tzn z punktem
+#) Łączymy ten punkt poziomą linią z przekątną, tzn. z punktem
    :math:`f(x_0), f(x_0)`.
 
 #) Linią pionową łączymy powyższy punkt z wykresem funkcji :math:`f`,
@@ -349,15 +349,15 @@ obszarze parametru :math:`1<a<3` parabola ma niezerowy punkt
 przecięcia się z przekątną. Zwiększanie parametru powyżej :math:`a=2`
 powoduje, że ewolucja coraz wolniej dąży do punktu stałego, a gdy się
 zbliżymy do trzech np. :math:`a=2.9` układ wykonuje wiele oscylacji
-zanim znajdzie się w otoczeniu attraktora. Wygląda to tak jakby
-attraktor coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
+zanim znajdzie się w otoczeniu atraktora. Wygląda to tak jakby
+atraktor coraz słabiej przyciągał. Jeżeli zwiększymy parametr niewiele
 powyżej trójki np.: :math:`a=3.5` to otrzymujemy rozwiązanie, które
 jest zamkniętą krzywą owijającą się jeden raz wokół niestabilnego
 punktu stałego, co odpowiada rozwiązaniu o okresie 2. Dla
 :math:`a=3.5` krzywa owija się już dwa razy. Odpowiada to rozwiązaniu
 o okresie 4, co sugeruje, że układ pomiędzy wartościami parametru
 :math:`a=3.2` a :math:`a=3.5` przeszedł kolejną bifurkację! Ustalmy
-teraz parametr na jest największą wartość :math:`a=4.0`. Zachowanie
+teraz parametr na największą wartość :math:`a=4.0`. Zachowanie
 się układu jest w pełni chaotyczne i nie wskazuje na obecność
 cykli. Możemy zwiększyć ilość iteracji lub zmienić punkt
 początkowy. Za każdym razem otrzymamy niepowtarzającą się trajektorię. 
@@ -368,7 +368,7 @@ Czułość na warunki początkowe
 
 Rozwiązanie jest czułe na warunki początkowe. Możemy się o tym
 przekonać, obliczając ciąg :math:`x_i` dla dwóch mało róźniących się
-warunków poczkątkowych:
+warunków początkowych:
 
 
 .. sagecellserver::
@@ -461,10 +461,10 @@ obliczeń. Spróbujmy "ostrożnie" z nastepującymi wartościami:
 
 
 Taki wykres nazywa się diagramem bifurkacyjnym. Nazwa pochodzi od
-faktu, że przedstawia od bifurkacje układu przy zmianie parametru a.
+faktu, że przedstawia on bifurkacje układu przy zmianie parametru a.
 Porównajmy otrzymany diagram, z wykresem punktów stałych
-:math:`x=f(x)` oraz :math:`x=f(f(x))`, który otrzmymaliśmy
-poprzednio. Nalepiej przeprowadzić porównaie, umieszczając oba wykresy
+:math:`x=f(x)` oraz :math:`x=f(f(x))`, który otrzymaliśmy
+poprzednio. Nalepiej przeprowadzić porównanie, umieszczając oba wykresy
 jeden na drugim:
 
 .. sagecellserver::
@@ -484,7 +484,7 @@ jeden na drugim:
 Widzimy, że taki prosty algorytm umożliwił poznanie struktury punktów
 stałych mapy logistycznej. Jedynie stabilne punkty stałe są widoczne
 na takim wykresie. Wykonując wiele iteracji, zbliżamy się do
-tzw. attraktora układu. Czasem jest on jednym punktem, a czasem ma
+tzw. atraktora układu. Czasem jest on jednym punktem, a czasem ma
 bardzo skomplikaowaną budowę.
 
 

@@ -225,5 +225,5 @@ i zintegrowała klasy i stanowiła świetny materiał do wyjaśnienia zasad ekpe
 
 Wiele osob podjęło również próby zweryfikowania poprawności rozwiązania przez symulację komputerową a nasza symulacja wpisuje się dokładnie w to podejście.
 
-Podsmowując, jeśli ktoś Wam cytuje ,,złotą radę", że ,,pierwsza myśl jest zawsze najlepsza", to 
+Podsumowując, jeśli ktoś Wam cytuje ,,złotą radę", że ,,pierwsza myśl jest zawsze najlepsza", to 
 przykład paradoksu Monty Halla pokazuje, że to nieprawda, bo intuicja może być bardzo myląca, więc trzeba z nią uważać!  	

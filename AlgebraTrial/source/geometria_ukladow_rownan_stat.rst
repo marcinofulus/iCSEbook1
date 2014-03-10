@@ -108,7 +108,7 @@ Sens takiego zapisu jest następujący: :math:`\;` dla jakich współczynników
 liniowa wektorów :math:`\ \ \boldsymbol{v}_1=\left[\begin{array}{r} 2 \\ 1 \end{array}\right]
 \ \ \,\text{i}\quad\boldsymbol{v}_2=\left[\begin{array}{r} -1 \\ 1 \end{array}\right]\ \,`
 równa się wektorowi 
-:math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `?
+:math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `? :math:`\\ \\`
 
 .. .. sidebar:: Kombinacja liniowa.
 
@@ -120,15 +120,15 @@ równa się wektorowi
    | :math:`\qquad\qquad\boldsymbol{w}\ =\ x_1\,\boldsymbol{v}_1 + x_2\,\boldsymbol{v}_2\,.`
    |
 
-**Poeksperymentuj z Sage!**
-
-W poniższym programie wektory kolumnowe 
-:math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
-są reprezentowane przez wektory geometryczne 
-:math:`\;\vec{v}_1,\,\vec{v}_2\ \ \,\text{i}\ \ \,\vec{w}.\ `
-Operując suwakami, dobierz wartości współczynników :math:`\ x_1\ \ \text{i}\ \ \,x_2\ \,`
-tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;` 
-(oznaczony kolorem szarym) pokrył się z wektorem :math:`\,\vec{w}`.
+.. admonition:: Poeksperymentuj z Sage:
+   
+   W poniższym programie wektory kolumnowe 
+   :math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
+   są reprezentowane przez wektory geometryczne 
+   :math:`\;\vec{v}_1,\,\vec{v}_2\ \ \,\text{i}\ \ \,\vec{w}.\ `
+   Operując suwakami, dobierz wartości współczynników :math:`\ x_1\ \ \text{i}\ \ \,x_2\ \,`
+   tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;` 
+   (oznaczony kolorem szarym) pokrył się z wektorem :math:`\,\vec{w}`.
 
 .. sagecellserver::
 
@@ -139,18 +139,12 @@ tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;`
    def _(x1=('$$x_1:$$', slider(0,3,1/2, default=3)),
          x2=('$$x_2:$$', slider(0,3,1/2, default=2))):
 
-       plt = arrow((0,0),v1,color='red',
-                   legend_label=' $v_1$', zorder=5) +\
-             arrow((0,0),v2,color='green',
-                   legend_label=' $v_2$', zorder=5) +\
-             arrow((0,0),w,color='black',
-                   legend_label=' $w$',   zorder=5) +\
-             arrow((0,0),x1*v1,color='gray',
-                   width=1,arrowsize=3) +\
-             arrow((0,0),x2*v2,color='gray',
-                   width=1,arrowsize=3) +\
-             arrow((0,0),x1*v1+x2*v2,
-                   color='gray',width=1.75,arrowsize=3) +\
+       plt = arrow((0,0),v1,color='red',legend_label=' $v_1$', zorder=5) +\
+             arrow((0,0),v2,color='green',legend_label=' $v_2$', zorder=5) +\
+             arrow((0,0),w,color='black',legend_label=' $w$',   zorder=5) +\
+             arrow((0,0),x1*v1,color='gray',width=1,arrowsize=3) +\
+             arrow((0,0),x2*v2,color='gray',width=1,arrowsize=3) +\
+             arrow((0,0),x1*v1+x2*v2,color='gray',width=1.75,arrowsize=3) +\
              line([x1*v1,x2*v2+x1*v1],color='black',
                   linestyle='dashed',thickness=0.5) +\
              line([x2*v2,x2*v2+x1*v1],color='black',

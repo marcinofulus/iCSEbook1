@@ -21,7 +21,7 @@ nieliniowego zjawiska jakim jest pogoda. Na marginesie, ówczesny stan
 wiedzy i stosowane podejście było do złudzenia po podobne do
 dzisiejszych prób modelowania dynamiki rynków finansowych. W każdym
 razie Lorenz rozpoczął poszukiwania modeli opartych na leżących u
-podstaw meteorologii zjawisk fizycznych. Skoncentrował się na
+podstaw meteorologii zjawiskach fizycznych. Skoncentrował się na
 stworzeniu uproszczonego modelu konwekcji energii cieplnej w
 atmosferze - jednego z podstawowych zjawisk fizycznych w meteorologii.
 
@@ -58,7 +58,7 @@ dwunastu zmiennych, który ostatecznie został uproszczony do trzech.
 
 Publikując ten wynik, Lorenz mógł nie spodziewać się dwóch rzeczy. Po
 pierwsze, okazało się, że jego model nie miał większego praktycznego
-wpływu na meteorologię (w kraju, oznaczało by to, że projekt nie
+wpływu na meteorologię (w kraju, oznaczałoby to, że projekt nie
 zostałby rozliczony ;). Dzisiejsze podejście do prognozowania jest
 oparte na modelach zawierających miliardy zmiennych, które są
 rozwiązywane na największych dostępnych komputerach i nie wydaje się
@@ -139,7 +139,7 @@ Układ Lorenza
    czasie. Funkcje dwóch zmiennych :math:`f` i :math:`g` są
    dane. Układ taki, zwany też układem dynamicznym ma bardzo prostą
    interpretacje. Lewe strony opisują nam szybkość zmiany wielkości w
-   czasie - jeśli :math:`x` było by położeniem to
+   czasie - jeśli :math:`x` byłoby położeniem to
    :math:`\frac{dx}{dt}` prędkością pewnego ciała. Prawe strony mówią
    nam jak szybkości zmian poszczególnych zmiennych zależą od stanu w
    którym znajduję się układ.  Prostym przykładem jest równanie
@@ -241,7 +241,7 @@ jest to, że dwie krzywe fazowe się nie przecinają - jest to skutek
 twierdzenia o jednoznaczności rozwiązań układu równań
 różniczkowych. Intuicyjnie oznacza to, że przyszłość jest
 jednoznacznie określona przez stan w pewnej chwili czasu. Jeśli krzywe
-fazowe przecinały by się to jeśli wybralibyśmy punkt przecięcia jako
+fazowe przecinałyby się to jeśli wybralibyśmy punkt przecięcia jako
 stan początkowy to układ "nie wiedział" na którą gałąź ma się udać. 
 
 Wróćmy jeszcze do naszego wykresu. Jeżeli nasz komputer jest
@@ -257,7 +257,7 @@ Zanim przejdziemy do badania jego własności, musimy dowiedzieć się co
 to jest atraktor. Pewne układy dynamiczne opisywane równaniami
 różniczkowymi (należy do ich model Lorenza), mają taką własność, że
 wszystkie rozwiązania dążą do jednego (lub wielu) rozwiązania
-granicznego. Takie rozwiązanie do którego inne dążą właśnie nazwana
+granicznego. Takie rozwiązanie do którego inne dążą właśnie nazwano
 atraktorem (z pewnością od angielskiego słowa attract -
 przyciągać). Aby lepiej zrozumieć tą koncepcję rozważmy następujący
 przykład. Rozważmy równanie, mogące modelować rozpad radioaktywny:
@@ -282,15 +282,15 @@ dwuwymiarowych może być też krzywą zamkniętą, zwaną cyklem
 granicznym. Najbardziej fascynująca jest jednak możliwość, która
 pojawia się dla układów trój- lub więcej wymiarowych. Atraktor może
 przyjmować formę zbioru z wymiarem ułamkowym i mieć strukturę
-fraktalną. Taki atraktor jest zwany "dziwnym atraktorem" i attraktor
-Lorenzta jest właśnie jego przykładem.
+fraktalną. Taki atraktor jest zwany "dziwnym atraktorem" i atraktor
+Lorenza jest właśnie jego przykładem.
 
 Czas w którym dowolne rozwiązanie układu Lorenza zbliży się do
 atraktora Lorenza na odległość, która jest poniżej grubości linii go
 przedstawiającej dla wybranych przez nas parametrów -  jest
 rzędu 10. Dlatego, odcinając pierwsze kilkadziesiąt jednostek czasu
 wykres trajektorii fazowej praktycznie jest obrazem punktów leżących
-na atrraktorze Lorenza. Ponieważ ma on naturę fraktalną nie można do
+na atraktorze Lorenza. Ponieważ ma on naturę fraktalną nie można do
 "dokładnie" narysować, ale można pokazać jego przybliżenie w pewnej
 skali, w naszym przypadku tę skalę wyznacza właśnie grubość linii. 
 
@@ -342,11 +342,11 @@ W powyższym kodzie można próbować zmniejszać różnicę między warunkami
 początkowymi np. dla drugiego układu kładąc :math:`y(0)=1.001` lub
 :math:`y(0)=1.0001` a następnie obserwować w jakim momencie
 rozwiązania zaczynają się różnić od siebie. Warto też spróbować
-zbadań jak wyglądają trajektorie układu dla parametrów przy których
+zbadać jak wyglądają trajektorie układu dla parametrów, przy których
 nie jest on chaotyczny.
 
 
-*Dalsze eksperymenty komputerowe z układem Lorentza: zadania ze Strogaz-a!*
+*Dalsze eksperymenty komputerowe z układem Lorenza: zadania ze Strogaz-a!*
 
 
 Od układu Lorenza do równania logistycznego
@@ -370,8 +370,8 @@ liczbę :math:`z_i`, ale ewolucja w czasie jest dokonywana w sposób
 skokowy, za pomocą przekształcenia :math:`z_{i+1}=F(z_i)`. Taki układ
 dynamiczny ze skokową ewolucją w czasie nazywa się właśnie dyskretnym
 układem dynamicznym. Można się też spotkać z określeniem "system
-funkcji iterowanych" ( z ang. iterated function system, IFS). Układy
-te stanowią są znaną już dziś z zaskakująco skomplikowanego
+funkcji iterowanych" (z ang. iterated function system, IFS). Układy
+te są dziś znane z zaskakująco skomplikowanego
 zachowania, pomimo swojej prostoty. W dalszej części przejdziemy do
 analizy fascynujących własności tych układów. Zanim jednak to zrobimy,
 spróbujmy samodzielnie odtworzyć wynik Edwarda Lorenza.
@@ -390,10 +390,10 @@ wynikami. Zakładając ze odstępy pomiędzy kolejnymi punktami czasu w
 tej tabeli są odpowiednio małe, możemy policzyć lokalne maksima dla
 ciągu, zauważając, że punkt :math:`z_i` jest lokalnym maksimum jeżeli
 jego otoczenie jest od niego mniejsze czyli zachodzi
-:math:`z_{i-1}<z_{i}` i :math:`z_{i-1}<z_i`. Oczywiście nie będą to
+:math:`z_{i-1}<z_{i}` i :math:`z_{i+1}<z_i`. Oczywiście nie będą to
 "prawdziwe" maksima funkcji :math:`z(t)` a jedynie ich przybliżenie.
 Jedną z możliwości jest napisanie pętli (zachęcamy do zrobienia tego
-własnoręcznie), która dla każdego punktu z tabeli sprawdziła by czy
+własnoręcznie), która dla każdego punktu z tabeli sprawdziłaby czy
 zachodzą powyższe warunki i jeśli tak, to zapisałaby punkt na listę
 maksimów. Mając jednak do dyspozycji "oręż" w postaci biblioteki
 **numpy** możemy zrobić to w praktycznie jednej linii kodu. Oznaczając

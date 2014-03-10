@@ -278,41 +278,7 @@ Dodatkowo umawiamy się, że jeśli :math:`\ \sigma\in S_1\ ` (wtedy :math:`\,\s
 Permutacja :math:`\ \sigma\in S_n\ ` jest *parzysta*, gdy :math:`\,\text{sgn}\,\sigma = +1\,,\ `
 oraz jest *nieparzysta*, gdy :math:`\,\text{sgn}\,\sigma = -1\,.`
 
-Na tej zasadzie permutacja w równaniu :eq:`ex` jest nieparzysta. 
-
-**Twierdzenie.** :math:`\\`
-W grupie :math:`\,S_n\ ` jest tyle samo permutacji parzystych, co nieparzystych :math:`\,(n>1).\\`
-
-Rozkład permutacji na iloczyn transpozycji można posunąć dalej, wykorzystując
-
-**Twierdzenie.** :math:`\\`
-Każda transpozycja jest iloczynem nieparzystej ilości liczb sąsiednich.
-
-**Dowód.** :math:`\,` Niech :math:`\,i<j.\ ` Teza wynika z równości
-
-.. math::
-   
-   \begin{array}{ccc}
-   (i,j) & = & (i,i+1)\,(i+1,i+2)\,\dots\,(j-2,j-1)\,\circ \\
-         &   & \circ\,(j-1,j)\,\circ                       \\
-         &   & \circ\,(j-1,j-2)\,\dots\,\,(i+2,i+1)\,(i+1,i)\,,
-   \end{array}
-
-w której po prawej stronie występuje :math:`\,2(j-i-1)+1=2(j-i)-1\ ` czynników, będących transpozycjami liczb sąsiednich. 
-Równość tę można sprawdzić bezpośrednio, porównując obrazy wszystkich liczb 
-:math:`\,k\in\{1,2,\dots,n\}\ ` przy zastosowaniu permutacji po lewej i prawej stronie.
-
-**Przykład.**
-
-.. math::
-   
-   (1,4)\ =\ (1,2)\,(2,3)\,(3,4)\,(3,2)\,(2,1)\ =\ (1,2)\,(2,3)\,(3,4)\,(2,3)\,(1,2)\,.
-
-**Wniosek.** :math:`\\` 
-Każdą permutację :math:`\,\sigma\in S_n\,,\ \,\text{gdzie}\ \ n>1,\ `
-można zapisać w postaci iloczynu transpozycji liczb sąsiednich.
-
-
+Na tej zasadzie permutacja w równaniu :eq:`ex` jest nieparzysta.
 
 
 

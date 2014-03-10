@@ -28,10 +28,10 @@ Wprowadzenie do układów równań liniowych
 
 .. toctree::
 
-   wprowadzenie_wektory_kolumnowe
-   wprowadzenie_geometria_ukladow_stat
-   wprowadzenie_eliminacja_dla_rownan
-   wprowadzenie_zadania
+   wektory_kolumnowe
+   geometria_ukladow_rownan_stat
+   eliminacja_dla_rownan
+   zad_wprowadzenie_do_ukladow
 
 Algebra macierzy
 ================
@@ -45,7 +45,7 @@ Algebra macierzy
    algebra_macierzy_dzialania
    algebra_macierzy_wlasnosci_dzialan
    algebra_macierze_w_sage
-   algebra_macierzy_zadania
+   zad_algebra_macierzy
 
 Operacje na macierzach
 ======================
@@ -66,7 +66,7 @@ Operacje na macierzach
    macierze_permutacji
    macierze_trojkatne
    rozklad_LU
-   operacje_na_macierzach_zadania
+   zad_operacje_na_macierzach
 
 Wyznaczniki
 ===========
@@ -93,7 +93,7 @@ Teoria i praktyka układów równań liniowych
    teoria_ukladow_rownan
    przyklad_z_dyskusja
    przyklad_ze_statyki
-   teoria_i_praktyka_ukladow_zadania
+   zad_teoria_i_praktyka_ukladow
 
 Przekształcenia liniowe
 =======================
@@ -111,24 +111,11 @@ Przekształcenia liniowe
    przeksztalcenia_lin_macierze
    przeksztalcenia_lin_operatory
    przeksztalcenia_lin_zmiana_bazy
-   przeksztalcenia_lin_zadania
-
-Wartości i wektory własne
-=========================
-
-| *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
-| *Diagonalizacja macierzy*
-
-.. toctree::
-
-   problem_wlasny_definicja
-   problem_wlasny_przyklady
-   problem_wlasny_rownania_rozniczkowe
 
 Przestrzenie unitarne
 =====================
 
-| *Iloczyn skalarny w przestrzeni zespolonej i rzeczywistej.*
+| *Iloczyn skalarny w przestrzeni rzeczywistej i zespolonej.*
 | *Definicja i przykłady przestrzeni unitarnych.*
 | *Nierówność Schwarza i jej konkretne realizacje.*
 | *Ortogonalność. Dopełnienie ortogonalne.*
@@ -136,28 +123,24 @@ Przestrzenie unitarne
 | *Macierze hermitowskie i unitarne.*
 | *Operatory hermitowskie i unitarne.*
 
+Wartości i wektory własne
+=========================
+
+| *Definicja problemu własnego operatora liniowego.*
+| *Rozwiązanie problemu własnego w przestrzeniach skończenie wymiarowych.*
+| *Wartości i wektory własne operatorów hermitowskich i unitarnych.*
+
 .. toctree::
    
-   p_unitarne_iloczyn_skalarny
-   p_unitarne_norma
-   p_unitarne_ortogonalnosc
-   p_unitarne_Gram-Schmidt_QR
-   p_unitarne_macierze_hermit_i_unit
-   p_unitarne_Sage
-   p_unitarne_operatory_hermit_i_unit
-   p_unitarne_operatory_normalne
-   p_unitarne_zadania
+   zagadnienie_wlasne
 
 Dowody wybranych twierdzeń
 ==========================
 
 .. toctree::
 
-   dowody_wstep   
-   dowody_operacje_na_macierzach
-   dowody_przeksztalcenia_lin
-   dowody_problem_wlasny
-   dowody_p_unitarne
+   dow_wstep   
+   dow_operacje_na_macierzach
 
 Zadania z Algebry liniowej
 ==========================
