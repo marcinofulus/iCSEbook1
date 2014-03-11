@@ -7,10 +7,23 @@
 Warsztaty iCSE
 ==============
 
+Przedstawione materiały wykorzystują Otwarty system Sage. Wszystkich
+chcących zgłębić tajniki posługiwania się tym programem, zapraszamy do
+lektury książki "Matematyka łatwiejsza niż myślisz" dostępnej w
+formacie PDF na stronie projektu iCSE. 
+
+
+
+.. figure:: figs/ebook_s.jpg
+   :align: center
+
+   `http://icse.us.edu.pl/e-book/ <http://icse.us.edu.pl/e-book>`__   
+
+
 .. toctree::
    :maxdepth: 1
 
-   wstep
+   Nauka z komputerem - dlaczego? <wstep>
 
 
 
