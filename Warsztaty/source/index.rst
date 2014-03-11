@@ -7,10 +7,11 @@
 Warsztaty iCSE
 ==============
 
-Przedstawione materiały wykorzystują Otwarty system Sage. Wszystkich
-chcących zgłębić tajniki posługiwania się tym programem, zapraszamy do
-lektury książki "Matematyka łatwiejsza niż myślisz" dostępnej w
-formacie PDF na stronie projektu iCSE. 
+Przedstawione materiały wykorzystują Otwarty system Sage. W pierwszym
+warsztacie z tego cyklu znajduje się, krótkie wprowadzenie do
+Sage. Wszystkich chcących zgłębić tajniki posługiwania się tym
+programem, zapraszamy do lektury książki "Matematyka łatwiejsza niż
+myślisz" dostępnej w formacie PDF na stronie projektu iCSE.
 
 
 
