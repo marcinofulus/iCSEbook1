@@ -48,14 +48,36 @@ Czy dwie pół--główki to cała główka?
 Dynamika w windzie i nie tylko...
 =================================
 
-Wytrzel z armaty bez obaw o skutki!
+Wystrzel z armaty bez obaw o skutki!
 
 .. toctree::
    :maxdepth: 1
 
-   (w opracownaiu) Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
-   (w opracownaiu) Akcelerometr w domu  <akcelerometr>
+   Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
+   Akcelerometr w domu  <akcelerometr>
 
+
+GPS dla fizyka
+==============
+
+
+.. toctree::
+   :maxdepth: 1
+
+   gps
+
+
+Muzyka funkcji
+==============
+
+
+.. toctree::
+   :maxdepth: 1
+
+   gramy_funkcje
+
+   
+   
 
 
 Chaotyczne opowieści
@@ -66,8 +88,21 @@ O prostych układach, które wprowadzają niezły chaos. Spróbuj dojść do (uk
 .. toctree::
    :maxdepth: 1
 
-   Teoria chaosu -- motyl Lorenza <motyl_lorenza>
-   Teoria chaosu -- równanie logistyczne <rownanie_logistyczne>
+   Motyl Lorenza <motyl_lorenza>
+   Od  motyla Lorenza do równania logistycznego <motyl_lorenza_II>
+   Równanie logistyczne <rownanie_logistyczne>
+   Równanie logistyczne: diagramy pajęczynowe i bifurkacyjne <rownanie_logistyczne_II>
+
+
+
+Młody Technik - artykuły
+========================
+
+ - Proste modele ze złożonym zachowaniem czyli o chaosie ( :download:`pdf <MT_logistyczne/proste_a_zlozone.pdf>` )
+ - Rzut ukośny, czyli o prawie Newtona i równaniach różniczkowych ( :download:`pdf <MT_armata_ode/armata_ode.pdf>` )
+
+ - Modelowanie papierowego samolocika
+
 
 
 

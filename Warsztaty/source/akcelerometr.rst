@@ -4,9 +4,9 @@ Kinematyka
 ---------- 
 
 
-Pociąg przebył drogę ze stacji :math:`A` do :math:`B` w ciagu
+Pociąg przebył drogę ze stacji :math:`A` do :math:`B` w ciągu
 :math:`10` minut, oblicz średnią prędkość jeśli odległość miedzy
-stacjami wynosi :math:`10`km."
+stacjami wynosi :math:`10` km."
 
 
 Dana jest droga przebyta w czasie, a chcemy policzyć prędkość i
@@ -49,29 +49,37 @@ Oblicznamy z drogi przędkośc korzystając ze wzoru na prędkość średnią:
 
 .. end of output
 
-Co nam daje algorytmiczne zautomatywowanie powyższych rachunków?
+Co nam daje algorytmiczne zautomatyzowanie powyższych rachunków?
 
 
-Zyskiem jest możliwość przetworzenia dowolnej ilości danych. Jednym z fascynujących przykładów jest próba wykorzystania nowoczesnego telefonu jaqko źródła danych. Tak zwane smartfony maja wiele czujników \- między innymi akcelerometr. Weźmy realne dane z pomiaru akcelerometrem z telefonu komórkowego, który leżał na podłodze windy. Doświadczenie to może wykonać każdy student.
+Zyskiem jest możliwość przetworzenia dowolnej ilości danych. Jednym z
+fascynujących przykładów jest próba wykorzystania nowoczesnego
+telefonu jako źródła danych. Tak zwane smartfony maja wiele czujników
+\- między innymi akcelerometr. Weźmy realne dane z pomiaru
+akcelerometrem z telefonu komórkowego, który leżał na podłodze
+windy. Doświadczenie to może wykonać każdy student.
 
 
 Pytanie brzmi: na jaką wysokośc wjechała winda?
 
 
-.. code-block:: python
+.. sagecellserver:: 
 
-    sage: import csv 
-    sage: import numpy as np 
-    sage: data = csv.reader(open(DATA+'sensorlog_2011082200122729_acc.csv'), delimiter=';')
-    sage: waveII=np.array([ [int(row[0])]+map(float,row[1:]) for row in data])
-
+    import urllib2
+    import numpy as np 
+    file = "https://dl.dropboxusercontent.com/u/11718006/sensorlog_2011082200122729_acc.csv"
+    data = urllib2.urlopen(file) 
+    waveII = np.loadtxt(data, delimiter=";")
 
 .. end of output
 
-Analizę danych można przeprowadzić korzystając z samodzielnie napisanego, kilkulinijkowego skryptu, który wykorzystując technikę interact umożliwi w wygodny sposób wybranie właściwego podzbioru danych.
+Analizę danych można przeprowadzić korzystając z samodzielnie
+napisanego, kilkulinijkowego skryptu, który wykorzystując technikę
+interact umożliwi w wygodny sposób wybranie właściwego podzbioru
+danych.
 
 
-.. code-block:: python
+.. sagecellserver::
 
     sage: N=waveII.shape[0]
     sage: @interact
@@ -111,15 +119,10 @@ Mając wybrane zakresy dokonujemy  przeliczeń:
     sage: p1 = list_plot(zip(t-t[0],a),plotjoined=True,gridlines=True,fontsize=14,axes_labels=['$t$','$a_z$'],figsize=[5,2] )
     sage: p2 = list_plot(zip(t-t[0],vc),plotjoined=True,gridlines=True,fontsize=14,axes_labels=['$t$','$v_z$'],figsize=[5,2]) 
     sage: p3 = list_plot(zip(t-t[0],xc),plotjoined=True,gridlines=True,fontsize=14,axes_labels=['$t$','$z$'],figsize=[5,2]) 
-    sage: print "Przyśpieszenie"
+
     sage: show(p1)
-    sage: print "Prędkość"
     sage: show(p2)
-    sage: print "Droga"
     sage: show(p3)
-    Przyśpieszenie
-    Prędkość
-    Droga
 
 .. image:: Warsztaty_akcelerometr_media/cell_18_sage0.png
     :align: center
@@ -135,6 +138,6 @@ Mając wybrane zakresy dokonujemy  przeliczeń:
 
 .. end of output
 
-Z ostatniego rysunku widać odpowiedź: winda zjechała w dół na ok. :math:`10`m.
+Z ostatniego rysunku widać odpowiedź: winda zjechała w dół na ok. :math:`10` m.
 
 
