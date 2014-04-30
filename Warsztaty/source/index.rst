@@ -57,12 +57,24 @@ Wystrzel z armaty bez obaw o skutki!
    Akcelerometr w domu  <akcelerometr>
 
 
+Sage w fizyce i nie tylko
+=========================
+
+
+.. toctree::
+   :maxdepth: 1
+
+   sagewfizyce
+
+
+
 GPS dla fizyka
 ==============
 
 
 .. toctree::
    :maxdepth: 1
+
 
    gps
 
@@ -75,6 +87,16 @@ Muzyka funkcji
    :maxdepth: 1
 
    gramy_funkcje
+
+
+Matematyka w biologii!
+======================
+
+
+.. toctree::
+   :maxdepth: 1
+
+   dynamika_populacyjna
 
    
    
