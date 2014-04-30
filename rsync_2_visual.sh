@@ -22,6 +22,11 @@ make html
 cd ..
 rsync -avz  ./Warsztaty/build/html/* visual.icse.us.edu.pl:www/visual/Warsztaty/
 
+cd SagewFizyce
+make html
+cd ..
+rsync -avz  ./SagewFizyce/build/html/* visual.icse.us.edu.pl:www/visual/SagewFizyce/
+
 
 # rsync -avz  ./SagewFizyce/build/html/* visual.icse.us.edu.pl:www/visual/SagewFizyce/
 # rsync -avz  ./MechanikaStosowana/build/html/* visual.icse.us.edu.pl:www/visual/MS/
