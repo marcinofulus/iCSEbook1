@@ -1,6 +1,6 @@
 
-Ortogonalizacja Grama-Schmidta
-------------------------------
+Ortogonalizacja Grama-Schmidta. Rozkład QR
+------------------------------------------
 
 .. admonition:: Twierdzenie 4.
    
@@ -30,14 +30,14 @@ przyjmujemy w następującej postaci:
 v_2\,-\ \displaystyle\frac{\langle\,y_1,v_2\rangle}{\|y_1\|^2}\ \ y_1\ =\ 
 v_2-\,\langle\,u_1,v_2\rangle\ u_1\,,\qquad u_2\,=\,\displaystyle\frac{y_2}{\|y_2\|}\ ,`
 
-gdzie :math:`\ \alpha_1\ ` jest wyznaczone z warunku :math:`\ \langle\,y_1,y_2\rangle=0\,;`
+gdzie :math:`\ \alpha_1\ ` zostało wyznaczone z warunku :math:`\ \langle\,y_1,y_2\rangle=0\,;`
 
 :math:`\triangleright\quad y_3\,=\,\beta_1\,y_1+\,\beta_2\,y_2+\,v_3\ =\ 
 v_3\,-\ \displaystyle\frac{\langle y_1,v_3\rangle}{\|y_1\|^2}\ \ y_1\,-\ 
 \displaystyle\frac{\langle y_2,v_3\rangle}{\|y_2\|^2}\ \ y_2\ =\ 
 v_3\,-\,\langle u_1,v_3\rangle\ u_1 - \langle u_2,v_3\rangle\ u_2\,,`
 
-gdzie :math:`\ \beta_1,\,\beta_2\ ` są wyznaczone z warunków 
+gdzie :math:`\ \beta_1,\,\beta_2\ ` zostały wyznaczone z warunków 
 :math:`\,\langle\,y_1,y_3\rangle = \langle\,y_2,y_3\rangle = 0\,;\qquad
 u_3\,=\,\displaystyle\frac{y_3}{\|y_3\|}\,;`
 
@@ -283,7 +283,7 @@ Wektory baz :math:`\,\mathcal{P}\ \,\text{i}\ \ \mathcal{Q}\ ` są związane rel
 Celem będzie przedstawienie macierzy :math:`\ \boldsymbol{A}\ `  
 w postaci iloczynu ortogonalnej macierzy :math:`\\ \boldsymbol{Q}\,=\,
 [\,\boldsymbol{u}_1\,|\,\boldsymbol{u}_2\,|\,\dots\,|\,\boldsymbol{u}_n\,]\ \,`
-i :math:`\,` pewnej górnej (prawej) macierzy trójkątnej :math:`\ \boldsymbol{R} :
+i :math:`\,` pewnej górnej (czyli prawej) macierzy trójkątnej :math:`\ \boldsymbol{R} :
 \ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,.`
 
 .. W :math:`\,j`-tym kroku procedury Grama-Schmidta zastosowanej do bazy :math:`\,\mathcal{B}\ \,`
@@ -357,7 +357,7 @@ Związki te można zapisać przy użyciu (górnej trójkątnej) macierzy
    \sum_{i\,=\,1}^n\ \rho_{ij}\;\boldsymbol{u}_i\,,\qquad j=1,2,\dots,n.
 
 Ostatnia równość stwierdza, że :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ `
-jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{Q}\ ` o współczynnikach 
+jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{Q},\ ` o współczynnikach 
 z :math:`\,j`-tej kolumny macierzy :math:`\,\boldsymbol{R}.\ `
 Według kolumnowej reguły mnożenia macierzowego oznacza to zależność
 :math:`\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,,\ ` jaką właśnie należało wyprowadzić.
@@ -431,7 +431,7 @@ Dla przykładu przeprowadzimy rozkład QR dla macierzy
     1 & -7 &  -8
    \end{array}\right]\,.
 
-Ortogonalizacja Grama-Schmidta, zastosowana do układu kolumn macierzy :math:`\,\boldsymbol{A},\ `
+Ortogonalizacja Grama-Schmidta zastosowana do układu kolumn macierzy :math:`\,\boldsymbol{A}\ `
 da macierz :math:`\,\boldsymbol{P}\ ` o kolumnach tworzących układ ortogonalny oraz docelową
 ortogonalną macierz :math:`\,\boldsymbol{Q}.\ \\`
 Znając :math:`\,\boldsymbol{Q},\ ` macierz :math:`\,\boldsymbol{R}\ `

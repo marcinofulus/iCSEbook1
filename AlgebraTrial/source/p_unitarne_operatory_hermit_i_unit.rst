@@ -38,7 +38,7 @@ Jeżeli :math:`\ y = \theta\,,\ ` to z własności iloczynu skalarnego
       \qquad\Leftrightarrow\qquad y_1 = y_2\,.
 
 Istotnie, warunek 
-:math:`\ \langle x,y_1\rangle = \langle x,y_2\rangle \quad\text{dla wszystkich}\quad x\in V\ `
+:math:`\ \langle x,y_1\rangle = \langle x,y_2\rangle\ \ \,\text{dla wszystkich}\quad x\in V\ `
 oznacza, że
 
 .. math::
@@ -49,7 +49,8 @@ oznacza, że
    \;
 
 W następnym lemacie występuje
-*operator zerowy* :math:`\ 0\,,\ ` określony przez: :math:`\ \ 0(v)=\theta\,,\ \ v\in V. \\` 
+*operator zerowy* :math:`\ \mathcal{O}\,,\ ` 
+określony przez: :math:`\ \ \mathcal{O}(v)=\theta\,,\ \ v\in V. \\` 
 
 .. admonition:: Lemat 1.
    
@@ -60,21 +61,21 @@ W następnym lemacie występuje
    .. math::
       
       \langle\,x,Fy\,\rangle\,=\,0 \quad\text{dla wszystkich}\quad x,y\in V
-      \qquad\Leftrightarrow\qquad F=0\,.
+      \qquad\Leftrightarrow\qquad F=\mathcal{O}\,.
 
 **Dowód.**
 
 :math:`\ \Rightarrow\ :\ ` 
-Jeżeli :math:`\ \ \langle x,Fy\rangle = 0 \ \ \text{dla wszystkich}\ \ x,y\in V\,,\ `
+Jeżeli :math:`\ \ \langle x,Fy\rangle = 0 \ \ \,\text{dla wszystkich}\ \ x,y\in V\,,\ `
 to kładąc :math:`\ x=Fy\ ` otrzymujemy:
  
  :math:`\ \langle Fy,Fy\rangle = 0\ \,`  
  czyli :math:`\ \,Fy=\theta\ \,` dla każdego :math:`\ y\in V\,,\ \,` 
- a to oznacza, że :math:`\ \,F=0\,.` 
+ a to oznacza, że :math:`\ \,F=\mathcal{O}\,.` 
 
 :math:`\ \Leftarrow\ :\ `
-Jeżeli :math:`\ \,F=0\,,\ ` to dla dowolnych :math:`\ x,y\in V:\ \ 
-\langle x,Fy\rangle = \langle x,0\,y\rangle = \langle x,\theta\rangle = 0\,.`
+Jeżeli :math:`\ \,F=\mathcal{O}\,,\ ` to dla dowolnych :math:`\ x,y\in V:\ \ 
+\langle x,Fy\rangle = \langle x,\mathcal{O}y\rangle = \langle x,\theta\rangle = 0\,.`
 
 .. admonition:: Wniosek.
    
@@ -94,7 +95,7 @@ Rzeczywiście, warunek :math:`\ \langle\,x,Fy\,\rangle\,=\,\langle\,x,Gy\,\rangl
 
 .. math::
    
-   \langle\,x,(F-G)\,y\,\rangle\,=\,0\,,\quad x,y\in V\qquad\Leftrightarrow\qquad F-G=0
+   \langle\,x,(F-G)\,y\,\rangle\,=\,0\,,\quad x,y\in V\qquad\Leftrightarrow\qquad F-G=\mathcal{O}
    \qquad\Leftrightarrow\qquad F=G\,.   
 
 .. :math:`\ \langle\,x,(F-G)\,y\,\rangle\,=\,0\,,\quad x,y\in V\qquad\Leftrightarrow\qquad F-G=0
@@ -106,7 +107,7 @@ Sprzężenie hermitowskie operatora liniowego
 
 .. admonition:: Definicja.
    
-   *Sprzężeniem hermitowskim* operatora liniowego :math:`\ F\in\,\text{End}(V)` :math:`\\`
+   *Sprzężeniem hermitowskim* :math:`\,` operatora liniowego :math:`\ F\in\,\text{End}(V)` :math:`\\`
    jest operator liniowy :math:`\ F^+\in\,\text{End}(V)\ ` spełniający warunek
    
    .. math::
@@ -142,12 +143,13 @@ Na odwrót, z :eq:`F_plus_1` wynika :eq:`F_plus_0`. Można więc zapisać
       \end{array}      
       \qquad\text{dla wszystkich}\quad x,y\in V\,.
    
-Wyjaśnimy teraz następujące kwestie, związane z tak sformułowaną definicją:
+Wyjaśnimy teraz następujące kwestie związane z tak sformułowaną definicją:
 
-1. czy wzory :eq:`F_plus_2` faktycznie określają operator :math:`\,F^+\ ` w tym sensie, 
-   że można efektywnie wyznaczyć obraz :math:`\,F^+y\ ` dowolnego wektora :math:`\,y\in V\,?`
+1. czy wzory :eq:`F_plus_2` określają operator :math:`\,F^+\ ` w tym sensie, 
+   że przy danym operatorze :math:`F\,` można efektywnie wyznaczyć 
+   obraz :math:`\,F^+y\ ` dowolnego wektora :math:`\,y\in V\,?`
 
-2. czy operator :math:`\,F^+\ ` jest liniowy?
+2. czy faktycznie operator :math:`\,F^+\ ` jest liniowy?
 
 3. czy operator :math:`\,F^+\ ` jest określony jednoznacznie?
 
@@ -217,8 +219,8 @@ Kwestię istnienia i jednoznaczności operatora :math:`\,F^+\ ` wyjaśnia niezal
       M_{\mathcal{B}}(\widetilde{F})\,=\,[\,M_{\mathcal{B}}(F)\,]^+\,,
       \qquad F,\,\widetilde{F}\,\in\,\text{End}(V)\,.
 
-**Dowód.** :math:`\,` Niech
-:math:`\ \ M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,\varphi_{ij}\,]_{n\times n}\,,\ \ 
+**Dowód.** :math:`\,` Niech :math:`\ \ \mathcal{B}=(u_1,u_2,\ldots,u_n),\ \ 
+M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,\varphi_{ij}\,]_{n\times n}\,,\ \ 
 M_{\mathcal{B}}(\widetilde{F})=\widetilde{\boldsymbol{F}}=
 [\,\widetilde{\varphi}_{ij}\,]_{n\times n}\,.`
    
@@ -288,12 +290,14 @@ y=\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,.\ ` Wtedy
    \ \ \langle\,Fx,y\,\rangle\,.
    \end{array}
 
-Tezę twierdzenia 8. można powtórzyć bardziej konkretnie jako
+Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, można zapisać
+
+.. Tezę twierdzenia 8. można powtórzyć bardziej konkretnie jako
 
 .. admonition:: Wniosek.
    
    Sprzężenie hermitowskie operatora liniowego :math:`\,F\ ` jest równoważne sprzężeniu :math:`\\` 
-   hermitowskiemu macierzy tego operatora w dowolnej ortonormalnej bazie :math:`\,\mathcal{B}:`
+   hermitowskiemu macierzy tego operatora w każdej ortonormalnej bazie :math:`\,\mathcal{B}:`
 
    .. math::
       :label: M_B_F_plus
@@ -431,8 +435,9 @@ Z wniosku do Twierdzenia 8. wynika bezpośrednio
 .. admonition:: Twierdzenie 9.
    
    Operator liniowy :math:`\,F\in\text{End}(V)\ ` jest hermitowski 
-   wtedy i tylko wtedy, :math:`\\`
-   gdy jego macierz w dowolnej bazie ortonormalnej jest hermitowska :
+   wtedy i tylko wtedy, 
+   gdy jego macierz w każdej ortonormalnej bazie :math:`\,\mathcal{B}\ ` przestrzeni :math:`\ V\ `
+   jest hermitowska:
 
    .. math::
       
@@ -474,7 +479,8 @@ Niech będzie dany operator hermitowski :math:`\,F\in\text{End}(V).\ ` Wtedy: :m
 2. Wartości własne operatora :math:`\,F\ ` są rzeczywiste.
    
    **Dowód.** :math:`\,` 
-   Niech :math:`\quad Fv\,=\,\lambda\,v\,,\quad\theta\neq v\in V,\quad\lambda\in C\,.\ \ ` 
+   Niech :math:`\quad Fv\,=\,\lambda\,v\,,\quad v\in V\!\smallsetminus\!\{\theta\},\quad
+   \lambda\in C\,.\ \ ` 
    Wzór :eq:`x_F_x` daje:
    
    .. math::
@@ -546,7 +552,7 @@ Operatory unitarne są ściśle związane z macierzami unitarnymi. Zachodzi mian
    
    Operator liniowy :math:`\ U\ ` określony na :math:`\,n`-wymiarowej 
    przestrzeni unitarnej :math:`\,V\ ` jest unitarny wtedy i tylko wtedy, 
-   gdy jego macierz w ortonormalnej bazie :math:`\ \mathcal{B}\ ` jest unitarna:
+   gdy jego macierz w każdej ortonormalnej bazie :math:`\ \mathcal{B}\ ` jest unitarna:
    
    .. math::
       
@@ -589,7 +595,7 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
       
       UU^+\ =\ \left(U^+\right)^+\,U^+\ =\ I\,,
 
-   która z kolei oznacza, że jeśli :math:`\ U\ ` jest operatorem unitarnym, 
+   która oznacza, że jeśli :math:`\ U\ ` jest operatorem unitarnym, 
    to unitarny jest również :math:`\\`
    operator sprzężony :math:`\ U^+\ ` 
    i :math:`\,` operator odwrotny :math:`\ U^{-1}\,.`
@@ -637,7 +643,7 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
       \|\,Ux\,\|\ =\ \|x\|\,,\qquad x\in V\,,
 
    bo :math:`\quad\|\,Ux\,\|^{\,2}\ =\ \langle\,Ux,Ux\,\rangle\ =\ \langle\,U^+U\,x,\,x\,\rangle\ =\ 
-   \langle x,y\rangle\,.`
+   \langle x,x\rangle\,.`
 
    Zachowanie normy (uogólnionej długości) wektora przy działaniu operatora :math:`\ U\ ` 
    pozwala interpretować to działanie jako operację uogólnionego obrotu
@@ -675,7 +681,8 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
    v_1,v_2\in V\!\smallsetminus\!\{\theta\}\,,\quad\lambda_1\neq\lambda_2\,.`
 
    Wiemy już, że :math:`\quad|\lambda_1|=|\lambda_2|=1\,,\quad`
-   skąd :math:`\quad|\lambda_1|^2=\lambda_1^*\,\lambda_1=1\,,\quad\lambda_1^*=1/\lambda_1\,.`
+   skąd :math:`\quad|\lambda_1|^2=\lambda_1^*\,\lambda_1=1\,,\quad\lambda_1^*=1/\lambda_1\,.\ `
+   Stąd
 
    .. .. math::
       
@@ -689,7 +696,7 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
    :math:`\langle v_1,v_2\rangle\ =\ \langle\,Uv_1,\,Uv_2\,\rangle\ =\ 
    \langle\,\lambda_1\,v_1,\,\lambda_2\,v_2\,\rangle\ =\ 
    \lambda_1^*\;\lambda_2\ \langle v_1,v_2\rangle\ =\ 
-   \displaystyle\frac{\lambda_2}{\lambda_1}\ \ \langle v_1,v_2\rangle\,.`
+   \displaystyle\frac{\lambda_2}{\lambda_1}\ \ \langle v_1,v_2\rangle\,,`
 
    :math:`\left(\,1\ -\ \displaystyle\frac{\lambda_2}{\lambda_1}\;\right)\ 
    \langle v_1,v_2\rangle\ =\ 0\,,\quad\text{więc}\ \ \text{jeśli}\quad\lambda_1\neq\lambda_2\,,

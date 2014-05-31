@@ -12,7 +12,7 @@ Ponieważ zdefiniowaliśmy trzy rodzaje operacji elementarnych :math:`\ (i,j=0,1
 #. :math:`\ O_3(i,j,a):\ ` dodanie do :math:`\,i`-tego wiersza :math:`\,j`-tego wiersza 
    pomnożonego przez liczbę :math:`\,a\,,`
 
-to istnieją trzy rodzaje macierzy elementarnych 
+to istnieją trzy rodzaje macierzy elementarnych: 
 
 #. | :math:`\ \boldsymbol{E}_1(i,j)\,` powstaje przez zamianę miejscami
      :math:`\,i`-tego oraz :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{I}_m:`
@@ -23,8 +23,8 @@ to istnieją trzy rodzaje macierzy elementarnych
    | :math:`\ \boldsymbol{E}_2(i,a)\,=\,O_2(i,a)\ \boldsymbol{I}_m\,,`
 
 #. | :math:`\ \boldsymbol{E}_3(i,j,a)\,` powstaje przez dodanie do :math:`\,i`-tego wiersza
-     macierzy :math:`\,\boldsymbol{I}_m\,` wiersza :math:`\,j`-tego, który został pomnożony  
-     przez :math:`\,a:\ \ \boldsymbol{E}_3(i,j,a)\,=\,O_3(i,j,a)\ \boldsymbol{I}_m\,.`
+     macierzy :math:`\,\boldsymbol{I}_m\,` wiersza :math:`\,j`-tego pomnożonego przez 
+     :math:`\,a:\ \ \boldsymbol{E}_3(i,j,a)\,=\,O_3(i,j,a)\ \boldsymbol{I}_m\,.`
 
 Przykłady macierzy elementarnych dla :math:`\,K=Q,\ m=3:`
 
@@ -112,7 +112,7 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
                                                                     4 & 12 & 0 & -8
                                                                    \end{array}\right)
 
-Przypuśćmy, że przekształcenie macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,`
+Przypuśćmy teraz, że przekształcenie macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,`
 do zredukowanej postaci schodkowej :math:`\,\boldsymbol{C}\,` polega na kolejnym wykonaniu 
 operacji elementarnych :math:`\,O_1\,,O_2,\,\dots,\,O_k:`
 
@@ -157,7 +157,7 @@ Wtedy :math:`\ \boldsymbol{C}\,` jest odwracalna, bo
 
 .. admonition:: Twierdzenie 5. :math:`\,`
 
-   Jeżeli :math:`\ \boldsymbol{A}\in M_n(K)\,,\ ` to następujące warunki są równoważne:
+   Niech :math:`\ \boldsymbol{A}\in M_n(K)\,.\ ` Następujące warunki są równoważne:
 
    (1) :math:`\,\boldsymbol{A}\,` jest macierzą odwracalną;
    (2) :math:`\,` zredukowaną postacią schodkową macierzy :math:`\boldsymbol{A}\,` 

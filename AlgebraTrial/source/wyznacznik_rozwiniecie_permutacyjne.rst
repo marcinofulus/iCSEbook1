@@ -368,26 +368,52 @@ Wykorzystując równania
    :nowrap:
    
    \begin{eqnarray*}
+   \det\boldsymbol{A}^T\  
+   & = & 
+   \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{\,\sigma(1),\,1}^T\ \,a_{\,\sigma(2),\,2}^T\ \,\ldots\ \,a_{\,\sigma(n),\,n}^T \ \ = \\
+   & = & 
+   \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{\,1,\,\sigma(1)}\ \,a_{\,2,\,\sigma(2)}\ \,\ldots\ \,a_{\,n,\,\sigma(n)} \ \ = \\
+   & = & 
+   \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
+   a_{\,1,\,\sigma^{-1}(1)}\ \,a_{\,2,\,\sigma^{-1}(2)}\ \,\ldots\ \,a_{\,n,\,\sigma^{-1}(n)}\ \ = \\
+   & = & 
+   \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
+   a_{\,\sigma(1),\,\sigma^{-1}[\sigma(1)]}\ \,a_{\,\sigma(2),\,\sigma^{-1}[\sigma(2)]}\ \,\ldots\ \,
+   a_{\,\sigma(n),\,\sigma^{-1}[\sigma(n)]} \ \ = \\
+   & = & 
+   \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{\,\sigma(1),1}\ \,a_{\,\sigma(2),2}\ \,\ldots\ \,a_{\,\sigma(n),n} \ \ = \\
+   & = &
+   \ \det\boldsymbol{A}\;.
+   \end{eqnarray*}
+
+.. .. math::
+   
+   \begin{array}{ccl}
    \det\boldsymbol{A}^T 
    & = & 
-   \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
-   a_{\sigma(1),1}^T\ a_{\sigma(2),2}^T\ \ldots\ a_{\sigma(n),n}^T \\
+   \ \displaystyle\sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{\sigma(1),1}^T\ a_{\sigma(2),2}^T\ \ldots\ a_{\sigma(n),n}^T\ \ = \\
    & = & 
-   \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
-   a_{1,\,\sigma(1)}\ a_{2,\,\sigma(2)}\ \ldots\ a_{n,\,\sigma(n)} \\
+   \ \displaystyle\sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{1,\,\sigma(1)}\ a_{2,\,\sigma(2)}\ \ldots\ a_{n,\,\sigma(n)}\ \ = \\
    & = & 
-   \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
-   a_{1,\,\sigma^{-1}(1)}\ a_{2,\,\sigma^{-1}(2)}\ \ldots\ a_{n,\,\sigma^{-1}(n)} \\
+   \ \displaystyle\sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
+   a_{1,\,\sigma^{-1}(1)}\ a_{2,\,\sigma^{-1}(2)}\ \ldots\ a_{n,\,\sigma^{-1}(n)}\ \ = \\
    & = & 
-   \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
+   \ \displaystyle\sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
    a_{\sigma(1),\,\sigma^{-1}[\sigma(1)]}\ a_{\sigma(2),\,\sigma^{-1}[\sigma(2)]}\ \ldots\ 
-   a_{\sigma(n),\,\sigma^{-1}[\sigma(n)]} \\
+   a_{\sigma(n),\,\sigma^{-1}[\sigma(n)]}\ \ = \\
    & = & 
-   \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
-   a_{\sigma(1),1}\ a_{\sigma(2),2}\ \ldots\ a_{\sigma(n),n} \\
+   \ \displaystyle\sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
+   a_{\sigma(1),1}\ a_{\sigma(2),2}\ \ldots\ a_{\sigma(n),n}\ \ = \\
    & = &
-   \det\boldsymbol{A}\;.
-   \end{eqnarray*}
+   \ \ \det\boldsymbol{A}\;.
+   \end{array}
+
+   
 
 
 

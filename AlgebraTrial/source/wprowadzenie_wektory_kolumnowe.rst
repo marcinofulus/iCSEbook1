@@ -100,16 +100,17 @@ jeżeli
 to :math:`\qquad\ \boldsymbol{x}+\boldsymbol{y}\ \,\simeq\ \,\vec{v}+\vec{w}\qquad`
 oraz :math:`\qquad c\ \boldsymbol{x}\ \simeq\ c\ \vec{v}\,,\quad c\in R.`
 
-Odpowiedniość, która w tym sensie zachowuje działania w zbiorach,
-nazywa się *izomorfizmem* grup (wektory geometryczne również tworzą grupę przemienną).
-W analogiczny sposób określa się izomorfizm innych, 
-bardziej zaawansowanych struktur algebraicznych.
+Wzajemnie jednoznaczna odpowiedniość, która w tym sensie zachowuje działania w grupach
+(wektory geometryczne również tworzą grupę przemienną), nazywa się *izomorfizmem* grup.
+Analogicznie określa się izomorfizm bardziej zaawansowanych struktur algebraicznych. :math:`\\`
 
 .. admonition:: Poeksperymentuj z Sage: 
 
    Dla danych wartości :math:`\ x_1, x_2\ ` 
    otrzymasz geometryczny obraz :math:`\ \vec{v}\ `
    wektora :math:`\ \,\boldsymbol{x} = \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right]`.
+
+:math:`\;`
 
 .. sagecellserver::
 
@@ -137,19 +138,13 @@ bardziej zaawansowanych struktur algebraicznych.
              point((0,0), color='white',
                    faceted=True, size=18, zorder=9)
           
-       # version for the sagecellserver:
-       html("$\\qquad\\qquad\\quad\\vec{v}\,=\,\
-       x_1\,\\vec{e}_1+x_2\,\\vec{e}_2\\\$")
-       # version for the Sage notebook:
-       #html("$\qquad\qquad\quad\\vec{v}\,=\,\
-       #x_1\,\\vec{e}_1+x_2\,\\vec{e}_2\\$")
+       html("$\\qquad\\qquad\\qquad\\qquad\\vec{v}\\,=\\,\
+       x_1\\,\\vec{e}_1+x_2\\,\\vec{e}_2$"); print ''
        plt.set_axes_range(-3,5,-2,3)
        plt.show(aspect_ratio=1, axes_labels=['x','y'],
-                ticks=[1,1], figsize=5)
+             ticks=[1,1], figsize=7)
 
-Uwaga: przy uruchamianiu programu w notebooku Sage'a trzeba wymienić
-wskazane dwa wiersze w ostatnim fragmencie kodu.
-
+:math:`\;`
 
 
 

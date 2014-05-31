@@ -2,7 +2,7 @@
 Definicje i terminologia
 ------------------------
 
-Zaczniemy od najbardziej ogólnej definicji pojęcia homomorfizmu.
+Zaczniemy od najbardziej ogólnej definicji homomorfizmu.
 
 Niech będzie dany zbiór :math:`\,A\ ` z działaniem :math:`\ \bot\ \,` 
 oraz zbiór :math:`\ A'\ ` z działaniem :math:`\,\circ\,.`
@@ -21,9 +21,10 @@ równa się złożeniu ich obrazów:
 
 .. Bijektywny (czyli wzajemnie jednoznaczny) homomorfizm nazywa się *izomorfizmem*.
 
-Jeżeli w zbiorach określone są dwa (lub więcej) działania wewnętrzne, 
+Jeżeli w zbiorach określonych jest więcej działań wewnętrznych, 
 to warunek :eq:`hom` powinien być spełniony dla każdej pary odpowiednich działań.
-W ten sposób definiuje się homomorfizm oraz izomorfizm grup, pierścieni i ciał.
+W ten sposób definiuje się homomorfizm oraz izomorfizm (czyli bijektywny homomorfizm) 
+grup, pierścieni i ciał.
 
 W przestrzeni wektorowej i algebrze oprócz działań wewnętrznych występuje działanie zewnętrzne:
 mnożenie wektorów przez liczby. Odpowiednia definicja brzmi następująco:
@@ -117,7 +118,7 @@ Również przez bezpośrednie sprawdzenie dowodzi się
 
 W oparciu o kryterium dla podprzestrzeni można więc sformułować
 
-.. admonition:: Twierdzenie :math:`\,` 1. :math:`\\`
+.. admonition:: Twierdzenie 1. :math:`\\`
    
    Niech :math:`\ V\ \,\text{i}\ \ W\ ` będą przestrzeniami wektorowymi nad ciałem :math:`\,K.\ `
    Wtedy zbiór :math:`\text{Hom}(V,W)\ ` przekształceń liniowych przestrzeni
@@ -167,7 +168,7 @@ oznaczoną tutaj symbolem :math:`\ \circ` :
 
 Przez sprawdzenie postulatów w definicji algebry można łatwo udowodnić
 
-.. admonition:: Twierdzenie :math:`\,` 2.
+.. admonition:: Twierdzenie 2.  :math:`\\`
    
    Dla przestrzeni :math:`\ V(K)\ ` zbiór :math:`\ \text{End}(V)\ ` z działaniami dodawania,
    mnożenia    przez liczby z :math:`\ K\ ` i składania jest nieprzemienną algebrą 
@@ -188,9 +189,8 @@ Jeżeli :math:`\ V\ ` jest przestrzenią wektorową nad ciałem :math:`\ K,\ `
 to przekształcenie liniowe :math:`\ f:\ V\rightarrow K,\ ` gdzie ciało 
 :math:`\ K\equiv K^1\ ` jest traktowane jako 1-wymiarowa przestrzeń nad :math:`\,K,\ ` 
 nazywa się :math:`\,` *funkcjonałem liniowym*. 
-Zbiór :math:`\,V^\ast\ ` funkcjonałów liniowych określonych na przestrzeni :math:`\,V\,`    
-jest :math:`\,` *przestrzenią sprzężoną* :math:`\,` (*dualną*) :math:`\,` 
-do :math:`\,V:\ \ V^\ast :\,=\ \text{Hom}(V,K)\,.`
+Zbiór :math:`\ V^\ast :\,=\ \text{Hom}(V,K)\ ` funkcjonałów liniowych określonych na przestrzeni :math:`\, V\,` jest :math:`\,` *przestrzenią sprzężoną* :math:`\,` (*dualną*) :math:`\,` 
+do :math:`\,V.`
 
 
 

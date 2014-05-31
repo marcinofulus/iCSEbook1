@@ -115,12 +115,14 @@ Przykład macierzy w wierszowej postaci schodkowej (zaznaczone elementy wiodące
 
 .. math::
    
-   \left[\begin{array}{rrrrr}
-      \boxed{2} & -1 & 0 & 5 &  4 \\
-      0 & \boxed{5} & 3 & 1 & -1 \\
-      0 &  0 & 0 & \boxed{1} &  8 \\
-      0 &  0 & 0 & 0 &  \boxed{7}
-   \end{array}\right]\,.
+   \left[
+   \begin{array}{rrrrr}
+   \boxed{2} &       -1  & 0 &        5  &        4 \\
+          0  & \boxed{5} & 3 &        1  &       -1 \\
+          0  &        0  & 0 & \boxed{1} &        8 \\
+          0  &        0  & 0 &        0  & \boxed{7}
+   \end{array}
+   \right]\,.
 
    \;
 
@@ -133,12 +135,14 @@ Przykład zredukowanej wierszowej postaci schodkowej (zaznaczone jedynki wiodąc
 
 .. math::
    
-   \left[\begin{array}{rrrrr}
-      \boxed{1} & 0         & 6 & 0         &  2 \\
-      0         & \boxed{1} & 3 & 0         & -1 \\
-      0         & 0         & 0 & \boxed{1} &  4 \\
-      0         & 0         & 0 & 0         &  0
-   \end{array}\right]\,.
+   \left[
+   \begin{array}{rrrrr}
+   \boxed{1} &        0  & 6 &        0  &  2 \\
+          0  & \boxed{1} & 3 &        0  & -1 \\
+          0  &        0  & 0 & \boxed{1} &  4 \\
+          0  &        0  & 0 &        0  &  0
+   \end{array}
+   \right]\,.
    
    \;
 
@@ -376,7 +380,7 @@ Operacje elementarne na wierszach :math:`\,r0,\,r1,\,r2\,` macierzy :math:`\,\bo
       \end{array}\right]\,. &   
    \end{array}
 
-Program, wykonujący krok po kroku te operacje, przedstawia się następująco: :math:`\\`
+Program, wykonujący krok po kroku te operacje, przedstawia się następująco:
 
 .. code-block:: python
 
@@ -398,14 +402,16 @@ Program, wykonujący krok po kroku te operacje, przedstawia się następująco: 
    sage: B.swap_rows(0,1)               # przestaw wiersz pierwszy z drugim
    sage: B.swap_rows(1,2)               # przestaw wiersz drugi z trzecim 
                                         
-   sage: B.add_multiple_of_row(2,1,11)  # do trzeciego wiersza dodaj drugi pomnożony przez 11
+   sage: B.add_multiple_of_row(2,1,11)  # do trzeciego wiersza dodaj drugi 
+                                        # pomnożony przez 11
                                         
    sage: B.rescale_row(2,-1/10)         # trzeci wiersz podziel przez -10
                                         
    sage: B.add_multiple_of_row(0,2,1)   # do pierwszego wiersza dodaj trzeci
    sage: B.add_multiple_of_row(1,2,1)   # do drugiego wiersza dodaj trzeci
                                         
-   sage: B.add_multiple_of_row(0,1,-5)  # od pierwszego wiersza odejmij drugi pomnożony przez 5
+   sage: B.add_multiple_of_row(0,1,-5)  # od pierwszego wiersza odejmij drugi 
+                                        # pomnożony przez 5
 
    sage: B                              # pokaż przekształconą macierz B
 

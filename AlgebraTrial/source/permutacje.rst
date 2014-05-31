@@ -219,12 +219,12 @@ Cykl :math:`\,k`-wyrazowy można zapisać w postaci iloczynu :math:`\ k-1\ ` tra
 
 Dwa cykle, :math:`\ \rho=(a_1,a_2,\dots,a_k),\ \sigma=(b_1,b_2,\dots,b_l)\in S_n\,,\ `
 są *rozłączne*, gdy odpowiadające im podzbiory 
-:math:`\ Y_{\rho}=\{a_1,a_2,\dots,a_k\},\ Y_{\sigma}=\{b_1,b_2,\dots,b_l\}\ `
+:math:`\ Y_{\rho}=\{a_1,a_2,\dots,a_k\},` :math:`\ Y_{\sigma}=\{b_1,b_2,\dots,b_l\}\ `
 są rozłączne: :math:`\ Y_{\rho}\cap Y_{\sigma}=\emptyset\,.\ \,`
 Dla przykładu, w grupie :math:`\ S_7\ ` cykle :math:`\ (3,6,2)\ \ \text{i}\ \ (1,7,4,5)\ `
 są rozłączne, a cykle :math:`\ (4,2,5,1)\ \ \text{i}\ \ (3,1,6,2)\ ` nie są rozłączne.
 Zauważmy, że jeżeli cykle :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` są rozłączne, 
-to ich iloczyn jest przemienny: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
+to w iloczynie są przemienne: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
 
 **Twierdzenie.** :math:`\\`
 Każda permutacja jest cyklem albo może być przedstawiona w postaci iloczynu cykli rozłącznych.
@@ -239,7 +239,7 @@ Przykład:
 **Wniosek.** :math:`\\`
 Każdą permutację :math:`\ \sigma\in S_n,\ ` gdzie :math:`\ n\geq 2,\ `
 można przedstawić w postaci iloczynu transpozycji (przedstawienie takie nie jest jednoznaczne).
-:math:`\,` Przykład:
+Przykład:
 
 .. math::
    :label: ex
@@ -286,7 +286,7 @@ W grupie :math:`\,S_n\ ` jest tyle samo permutacji parzystych, co nieparzystych 
 Rozkład permutacji na iloczyn transpozycji można posunąć dalej, wykorzystując
 
 **Twierdzenie.** :math:`\\`
-Każda transpozycja jest iloczynem nieparzystej ilości liczb sąsiednich.
+Każda transpozycja jest iloczynem nieparzystej ilości transpozycji liczb sąsiednich.
 
 **Dowód.** :math:`\,` Niech :math:`\,i<j.\ ` Teza wynika z równości
 
@@ -308,9 +308,9 @@ Równość tę można sprawdzić bezpośrednio, porównując obrazy wszystkich l
    
    (1,4)\ =\ (1,2)\,(2,3)\,(3,4)\,(3,2)\,(2,1)\ =\ (1,2)\,(2,3)\,(3,4)\,(2,3)\,(1,2)\,.
 
-**Wniosek.** :math:`\\` 
-Każdą permutację :math:`\,\sigma\in S_n\,,\ \,\text{gdzie}\ \ n>1,\ `
-można zapisać w postaci iloczynu transpozycji liczb sąsiednich.
+**Wniosek.** :math:`\,` 
+Każdą permutację :math:`\,\sigma\in S_n\ ` 
+można zapisać w postaci iloczynu transpozycji liczb sąsiednich :math:`\,(n>1)`.
 
 
 

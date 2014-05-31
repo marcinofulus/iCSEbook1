@@ -7,7 +7,7 @@ Rozwiązania liniowych układów równań
 
 Zajmiemy się liniowym układem równań różniczkowych 1. rzędu o stałych współczynnikach:
 
-.. math::
+.. .. math::
    :label: set_diff
    
    \dot{x}_1\ =\ a_{11}\,x_1\,+\,a_{12}\,x_2\,+\,\ldots\,+\,a_{1n}\,x_n
@@ -17,6 +17,16 @@ Zajmiemy się liniowym układem równań różniczkowych 1. rzędu o stałych ws
    \quad\ \ \ldots\qquad\ldots\qquad\ \ \ldots\qquad\ldots\qquad\ldots\qquad
    
    \dot{x}_n\ =\ a_{n1}\,x_1\,+\,a_{n2}\,x_2\,+\,\ldots\,+\,a_{nn}\,x_n
+
+.. math::
+   :label: set_diff
+   
+   \begin{array}{l}
+   \dot{x}_1\ =\ a_{11}\,x_1\,+\,a_{12}\,x_2\,+\,\ldots\,+\,a_{1n}\,x_n \\
+   \dot{x}_2\ =\ a_{21}\,x_1\,+\,a_{22}\,x_2\,+\,\ldots\,+\,a_{2n}\,x_n \\
+   \ \ldots\qquad\ldots\qquad\ \ \ldots\qquad\ldots\qquad\ldots\qquad \\
+   \dot{x}_n\ =\ a_{n1}\,x_1\,+\,a_{n2}\,x_2\,+\,\ldots\,+\,a_{nn}\,x_n 
+   \end{array}
 
 gdzie :math:`\ \ x_i=x_i(t)\,,\ \ \dot{x}_i\,=\,\frac{d}{dt}\ x_i(t)\,,\ \ 
 a_{ij}\in R\,,\ \ i,j=1,2,\ldots,n.\ `
@@ -83,15 +93,28 @@ wektorem własnym należącym do tej wartości.
 
 Wartości własne :math:`\ \lambda\ ` wyliczamy z równania charakterystycznego
 
-.. math::
+.. .. math::
    :label: char_eqn
    
    \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ =\ 0\,,
 
+.. math::
+   :label: char_eqn
+   
+   \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \ =\ \ 
+   \left|
+   \begin{array}{cccc}
+   \alpha_{11}-\lambda & \alpha_{12} & \dots & \alpha_{1n} \\
+   \alpha_{21} & \alpha_{22}-\lambda & \dots & \alpha_{2n} \\
+   \dots & \dots & \dots & \dots \\
+   \alpha_{n1} & \alpha_{n2} & \dots & \alpha_{nn}-\lambda 
+   \end{array}
+   \right|\ \ =\ \ 0\,.
+
 a odpowiednie wektory własne :math:`\,` - :math:`\,` rozwiązując problem liniowy :eq:`eigen_eqn`
 dla danej wartości :math:`\,\lambda:`
 
-.. math::
+.. .. math::
    :label: hom_set
    
    (a_{11}-\lambda)\ \beta_1\,+\,a_{12}\ \beta_2\,+\,\ldots\,+\,a_{1n}\ \beta_n\ =\ 0
@@ -102,6 +125,16 @@ dla danej wartości :math:`\,\lambda:`
 
    a_{n1}\ \beta_1\,+\,a_{n2}\ \beta_2\,+\,\ldots\,+\,(a_{nn}-\lambda)\ \beta_n\ =\ 0
 
+.. math::
+   :label: hom_set
+   
+   \begin{array}{l}
+   (a_{11}-\lambda)\ \beta_1\,+\,a_{12}\ \beta_2\,+\,\ldots\,+\,a_{1n}\ \beta_n\ =\ 0 \\
+   a_{21}\ \beta_1\,+\,(a_{22}-\lambda)\ \beta_2\,+\,\ldots\,+\,a_{2n}\ \beta_n\ =\ 0 \\
+   \ \ \ldots\qquad\ldots\qquad\ldots\qquad\ldots\qquad\ldots \\
+   a_{n1}\ \beta_1\,+\,a_{n2}\ \beta_2\,+\,\ldots\,+\,(a_{nn}-\lambda)\ \beta_n\ =\ 0
+   \end{array}
+
 Ze względu na jednorodność układu :eq:`set_diff`, a także odpowiadającego mu równania macierzowego
 :eq:`mat_eqn`, każda kombinacja liniowa rozwiązań jest również jego rozwiązaniem.
 Omówimy teraz różne sytuacje, odpowiadające możliwym rozwiązaniom równania charakterystycznego.
@@ -111,7 +144,7 @@ Omówimy teraz różne sytuacje, odpowiadające możliwym rozwiązaniom równani
 **Przypadek 1.** :math:`\,`
  
 Równanie :eq:`char_eqn` ma :math:`\,n\ ` różnych pierwiastków rzeczywistych
-:math:`\,\lambda_1,\,\lambda_2,\,\ldots,\,\lambda_n\,.\ `
+:math:`\ \lambda_1,\,\lambda_2,\,\ldots,\,\lambda_n\,.\ `
 
 Wtedy należące do tych wartości rzeczywiste wektory własne 
 :math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\ldots,\,\boldsymbol{v}_n\,,` :math:`\\`
@@ -216,7 +249,7 @@ które składają się na rozwiązanie ogólne:
 **Przypadek 2.**
 
 Równanie :eq:`char_eqn` ma :math:`\,n\ ` różnych (jednokrotnych) pierwiastków 
-:math:`\,\lambda_1,\,\lambda_2,\,\ldots,\,\lambda_n\,,` :math:`\\`
+:math:`\ \lambda_1,\,\lambda_2,\,\ldots,\,\lambda_n\,,` :math:`\\`
 w tym pierwiastki zespolone nierzeczywiste.
 
 Dyskusja oraz wzory :eq:`spec_sols` i :eq:`gen_sol` 

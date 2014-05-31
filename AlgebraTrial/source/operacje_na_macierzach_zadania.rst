@@ -8,7 +8,7 @@ Operacje i macierze elementarne
 **Zadanie 1.** :math:`\\` 
 Udowodnij, że aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ `  
-wystarczy zastosować ją tylko do pierwszego czynnika iloczynu:
+należy zastosować ją tylko do pierwszego czynnika iloczynu:
 :math:`\ O\,(\boldsymbol{A}\boldsymbol{B}) = (O\boldsymbol{A})\,\boldsymbol{B}.\ `
 
 Mianowicie, jeżeli 
@@ -52,14 +52,14 @@ Pokaż, że:
 
 1. aby wykonać operację permutacji wierszy :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
    :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-   wystarczy zastosować ją tylko do pierwszego czynnika iloczynu;
+   należy zastosować ją tylko do pierwszego czynnika iloczynu;
 
 2. wykonanie operacji permutacji wierszy :math:`\,O_{\sigma}\,` na prostokątnej macierzy 
    :math:`\,\boldsymbol{A}\ ` jest :math:`\\`
    równoważne pomnożeniu (z lewej strony) tej macierzy przez macierz permutacji 
    :math:`\ \boldsymbol{P}_{\sigma}.`
 
-Należy więc udowodnić, że jeżeli 
+Trzeba więc udowodnić, że jeżeli 
 :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ \ 
 \sigma\in S_m,\ \ ` to: 
 
@@ -128,14 +128,14 @@ Pokaż, że:
 
 1. aby wykonać operację permutacji kolumn :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
    :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-   wystarczy zastosować ją tylko do drugiego czynnika iloczynu;
+   należy zastosować ją tylko do drugiego czynnika iloczynu;
 
 2. wykonanie operacji permutacji kolumn :math:`\,O_{\sigma}\,` na prostokątnej macierzy 
    :math:`\,\boldsymbol{A}\ ` jest :math:`\\`
    równoważne pomnożeniu (z prawej strony) tej macierzy przez macierz permutacji 
    :math:`\ \boldsymbol{P}_{\sigma}.`
 
-Należy więc udowodnić, że jeżeli 
+Trzeba więc udowodnić, że jeżeli 
 :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ \ 
 \sigma\in S_n,\ \ ` to: 
 
@@ -164,20 +164,34 @@ kolejność permutacji :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` w :eq:`PP_col` jes
 Oznacza to, że macierze :math:`\ \boldsymbol{P}_\sigma\ ` tworzą 
 :math:`\,` *reprezentację* :math:`\,` grupy permutacji :math:`\ S_n.`
  
-
 Wyliczanie macierzy odwrotnej metodą eliminacji
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+W sekcji 4.5 wynik zestawienia dwóch macierzy kwadratowych stopnia :math:`\,n\,`
+(nazywany tam agregatem) jest jednorodną macierzą prostokątną o :math:`\,n\,` wierszach
+i :math:`\,2n\,` kolumnach. Do utworzenia takiego agregatu używa się metody ``augment()``,
+a szukaną macierz odwrotną wyodrębnia się stosując operację wycinania albo metodę
+``matrix_from_columns()``.
+
+Tutaj zapiszemy równoważną implementację procedury wyznaczania macierzy odwrotnej metodą przekształceń elementarnych.
+
+Zestawienie dwóch macierzy kwadratowych stopnia :math:`\,n\,` będzie teraz macierzą blokową
+(nazywaną dalej 2-blokiem). Taki 2-blok będzie utworzony przy użyciu metody ``block_matrix()``,
+a do wyodrębnienia macierzy odwrotnej posłuży metoda ``subdivision()``.
+
+Metoda ``rref()``, przeprowadzająca macierz prostokątną do zredukowanej postaci schodkowej,
+działa poprawnie w obydwu wersjach.
 
 Poniższy program generuje odwracalne macierze :math:`\,\boldsymbol{A}\,` 
 zadanego stopnia :math:`\,n\,` nad ciałem liczb wymiernych :math:`\,Q.\ `
 
 Dla :math:`\,n = 2,\ 3\,` wykonaj odręcznie wszystkie przekształcenia elementarne,
 które dla zadanej macierzy :math:`\,\boldsymbol{A}\ `
-przeprowadzają agregat :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{I}\,]\ `
+przeprowadzają macierz :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{I}\,]\ `
 do postaci :math:`\ [\,\boldsymbol{I}\,|\,\boldsymbol{A}^{-1}\,].\ `
 Porównaj swój wynik z wynikiem komputerowym.
 
-.. sagecellserver::
+.. .. sagecellserver::
    
    n=3
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
@@ -205,9 +219,54 @@ Porównaj swój wynik z wynikiem komputerowym.
            html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
                        [A, '*', A_1, '=', A*A_1]])
 
+.. sagecellserver::
+
+   n=4
+   A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
+   html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]])
+   
+   print "Rozwiązanie:"
+   
+   B = block_matrix([[A,identity_matrix(n)]])  # rozszerzenie macierzy A
+   R = B.rref()                # zredukowana postać schodkowa macierzy B
+   A_1 = R.subdivision(0,1)    # macierz A^(-1) wyodrębniona z R
+   
+   @interact
+   
+   def _(h=('Krok:',["2-blok (A,I)","2-blok (I,A^(-1))","Sprawdzenie"])):
+    
+       if h=="2-blok (A,I)": 
+           html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
+                       ["B", '=', B]])
+                    
+       elif h=="2-blok (I,A^(-1))": 
+           html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
+                       ["B.rref()", '=', R]])
+                    
+       elif h=="Sprawdzenie":
+           html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
+                       [A, '*', A_1, '=', A*A_1]])
+
 Dla większych wartości :math:`\,n\,` warto porównać wyniki komputerowe
 otrzymane metodą eliminacji oraz przez bezpośrednie użycie metody ``inverse()``
 (w skrócie ``I``).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

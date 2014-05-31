@@ -75,31 +75,8 @@ Zauważmy, że :math:`\\`
 
    \;
 
-.. .. math::
-   
-   Fe_1\ =\ F
-   \left[\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
-   \left[\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{c} 2 \\ 4 \end{array}\right]\,,
-   
-   Fe_2\ =\ F
-   \left[\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
-   \left[\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{r} 1 \\ -2 \end{array}\right]\,,
-
-   Fe_3\ =\ F
-   \left[\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
-   \left[\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right]\ =\ 
-   \left[\begin{array}{r} -1 \\ 4 \end{array}\right]\,.
-
-Jak widać, macierz :math:`\ M(F)\ ` składa się z kolumn, które są obrazami odpowiednich wektorów bazy kanonicznej przestrzeni :math:`\ R^3:\ \ M(F)\ =\ 
-[\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,F\boldsymbol{e}_3\,]\,.`
+Jak widać, macierz :math:`\ M(F)\ ` składa się z kolumn, które są obrazami odpowiednich wektorów bazy kanonicznej przestrzeni :math:`\ R^3:\ ` 
+:math:`\ M(F)\ =\ [\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,F\boldsymbol{e}_3\,]\,.`
 
 .. Uogólnienie tego przykładu opiera się na stwierdzeniu, że każde przekształcenie liniowe 
    przestrzeni :math:`\,K^n\ ` w przestrzeń :math:`\,K^m\ ` ma postać :eq:`ex_0`,
@@ -110,7 +87,7 @@ której :math:`\,j`-ta kolumna jest obrazem :math:`\,j`-tego wektora bazy kanoni
 przestrzeni :math:`\ K^n\,,\ \ j=1,2,\dots,n.\ `
 
 Określone w ten sposób odwzorowanie :math:`\,M\,` przestrzeni :math:`\ \text{Hom}(K^n,K^m)\ `
-w przestrzeń :math:`\ M_{m\times n}(K)\ ` macierzy prostokątnych nad ciałem :math:`\ K\ ` 
+przekształceń liniowych w przestrzeń :math:`\ M_{m\times n}(K)\ ` macierzy prostokątnych 
 można zapisać następująco:
 
 .. math::
@@ -129,8 +106,14 @@ jest bazą kanoniczną przestrzeni :math:`\,K^n.\ ` Wtedy obraz dowolnego wektor
    \boldsymbol{y}\,=\,F(\boldsymbol{x})\quad\Rightarrow\quad \boldsymbol{y}\ =\ 
    M(F)\,\cdot\,\boldsymbol{x}\,,\qquad \boldsymbol{x}\in K^n\,,\ \ \boldsymbol{y}\in K^m\,.
 
-W następnym uogólnieniu pokażemy, :math:`\,` jak przekształceniu liniowemu *dowolnych* 
-skończenie wymiarowych przestrzeni nad ciałem :math:`\,K,\ ` w których wybrano bazy, można przyporządkować macierz o elementach z :math:`\,K.`
+.. W następnym uogólnieniu pokażemy, :math:`\,` jak przekształceniu liniowemu *dowolnych* 
+   skończenie wymiarowych przestrzeni nad ciałem :math:`\,K,\ ` w których wybrano bazy, można
+   przyporządkować macierz o elementach z :math:`\,K.`
+
+W następnym uogólnieniu zdefiniujemy macierz przekształcenia liniowego
+:math:`\ F:V\rightarrow W,\ ` gdzie :math:`\ V\ ` i :math:`\ W\ ` 
+są :math:`\,` *dowolnymi* :math:`\,` skończenie wymiarowymi przestrzeniami wektorowymi 
+nad ciałem :math:`\ K\,,\ ` w każdej z których wybrano bazę.
 
 Definicja macierzy przekształcenia liniowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -350,7 +333,7 @@ w kolumnę współrzędnych tego wektora w bazie :math:`\ \mathcal{B},\ \,`
 a :math:`\,` izomorfizm :math:`\ \,I_{\mathcal{C}}\ ` przekształca wektor :math:`\,w\in W\ `
 w kolumnę współrzędnych tego wektora w bazie :math:`\ \mathcal{C}.\ `
 Macierz przekształcenia liniowego :math:`\ F\in\text{Hom}(V,W)\ `
-w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma w zapisie kolumnowym postać
+w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma teraz w zapisie kolumnowym postać
 
 .. math::
    
@@ -363,7 +346,7 @@ Podstawowe twierdzenia
 
 Sens wprowadzenia macierzowej reprezentacji przekształceń liniowych wyjaśnia
 
-.. admonition:: Twierdzenie :math:`\,` 10. :math:`\\`
+.. admonition:: Twierdzenie 10. :math:`\\`
 
    Niech :math:`\ F\in\text{Hom}(V,W),\ ` gdzie :math:`\,V\ \,\text{i}\ \ W\ `
    są przestrzeniami wektorowymi nad ciałem :math:`\,K\ ` z bazami :math:`\ \mathcal{B}\ \,`
@@ -483,7 +466,7 @@ W dotychczasowych rozważaniach wystąpiły następujące przestrzenie wektorowe
 
 :math:`\;`
 
-.. admonition:: Twierdzenie :math:`\,` 11. :math:`\\`
+.. admonition:: Twierdzenie 11. :math:`\\`
    
    Odwzorowanie
    

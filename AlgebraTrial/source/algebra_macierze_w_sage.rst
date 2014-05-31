@@ -140,7 +140,8 @@ Konstrukcja wektorów i macierzy
 
 W systemie Sage wektory i macierze są obiektami języka Python,
 należącymi do odpowiedniej klasy.
-Obiekty te powołuje się do życia używając konstruktorów ``vector()`` i ``matrix()``. :math:`\\`
+Obiekty te powołuje się do życia używając konstruktorów ``vector()``
+:math:`\ \ \text{i}\ \ ` ``matrix()``. :math:`\\`
 
 W podanych dalej przykładach zastosowana jest standardowa składnia programowania obiektowego:
 jeżeli funkcja ``func()`` jest metodą pewnej klasy, to wynik jej zastosowania do obiektu ``obj``
@@ -814,8 +815,9 @@ mnożenie macierzy przez macierz.
 Mnożenie macierzy blokowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Każdą macierz można podzielić na cztery (lub więcej) prostokątnych
-bloków. Po takim podziale macierz nazywana jest macierzą blokową.
+Każdą macierz o rozmiarach nie mniejszych od 2
+można podzielić na cztery (lub więcej) prostokątnych bloków. 
+Po takim podziale macierz nazywana jest macierzą blokową.
 Zaznaczenie struktury blokowej może uwidocznić regularność,
 występującą wśród elementów macierzy.
 
@@ -869,20 +871,29 @@ Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \bol
        \boldsymbol{D} \boldsymbol{Y}
    \end{array}\right]
 
-| W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
-| można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
-|
-| **Poeksperymentuj z Sage:**     
-| W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
-| Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
+.. | W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
+   | można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
+   |
+   | **Poeksperymentuj z Sage:**     
+   | W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
+   | Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
+
+W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
+można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
+
+.. admonition:: Poeksperymentuj z Sage: 
+
+   W poniższym programie można praktycznie sprawdzić wzór :eq:`blok1`. 
+   Zachęcamy do eksperymentów z innymi postaciami i wielkościami macierzy.
 
 .. sagecellserver::
 
-   A  = random_matrix(QQ,2,2)
+   A  = random_matrix(ZZ,2)
    B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
    B2 = block_matrix([[A],[identity_matrix(2)]])
-
-   html.table([["$B1\ :$","$B2\ :$","","$B1\ \cdot\ B2\ :$"],[B1,B2,"=",B1*B2]])
+   
+   html.table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",
+                "$\\quad B1\ \\ast\ B2$"], [B1,"*",B2,"=",B1*B2]])
 
 
 

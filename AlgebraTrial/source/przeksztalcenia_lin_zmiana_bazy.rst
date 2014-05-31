@@ -19,7 +19,7 @@ przestrzeni wektorowej :math:`\,V\ ` nad ciałem :math:`\,K.`
 
 .. admonition:: Lemat.
    
-   Odwzorowanie :math:`\ T:\,V\rightarrow V,\ ` zadane równaniem 
+   Przekształcenie liniowe :math:`\ T:\,V\rightarrow V,\ ` zadane równaniem 
    
    .. math::
    
@@ -46,7 +46,8 @@ Dla dowolnego wektora :math:`\displaystyle\ \,v=\sum_{i\,=\,1}^n\ a_i\,v_i\,\in\
 Wektor, którego współrzędnymi w bazie :math:`\ \mathcal{B}\ \,` są 
 :math:`\ \,\,a_1,\,a_2,\,\dots,\,a_n\,,\ \,`
 jest przekształcony w wektor o tych samych współrzędnych w bazie :math:`\ \mathcal{B}'.\ `
-Ponieważ, przy ustalonej bazie, przyporządkowanie wektorom współrzędnych jest wzajemnie jednoznaczne,
+Ponieważ, przy ustalonej bazie, przyporządkowanie wektorom układów współrzędnych 
+jest wzajemnie jednoznaczne, 
 przekształcenie :math:`\ T\ ` jest endomorfizmem bijektywnym, czyli automorfizmem.
 
 .. admonition:: Definicja.
@@ -169,11 +170,11 @@ zapiszemy przedstawienie dowolnego wektora :math:`\,v\in V\ ` w starej i nowej b
    :nowrap:
    
    \begin{eqnarray*}
-   \sum_{i\,=\,1}^n\ a_i\:v_i & = & \sum_{j\,=\,1}^n\ a_j'\ v_j' \\
-                              & = & \sum_{j\,=\,1}^n\ a_j'\ \left(\,
-                                    \sum_{i\,=\,1}^n\ s_{ij}\:v_i\right) \\
-                              & = & \sum_{i\,=\,1}^n\ \left(\,
-                                    \sum_{j\,=\,1}^n\ s_{ij}\:a_j'\right)\;v_i\,.
+   \sum_{i\,=\,1}^n\ a_i\:v_i\  & = & \ \sum_{j\,=\,1}^n\ a_j'\ v_j' \ \ = \\
+                                & = & \ \sum_{j\,=\,1}^n\ a_j'\ \left(\,
+                                        \sum_{i\,=\,1}^n\ s_{ij}\:v_i\right) \ \ = \\
+                                & = & \ \sum_{i\,=\,1}^n\ \left(\,
+                                        \sum_{j\,=\,1}^n\ s_{ij}\:a_j'\right)\;v_i\,.
    \end{eqnarray*}
 
 Z jednoznaczności przedstawienia wektora w bazie :math:`\ \mathcal{B}\ ` wynikają związki
@@ -797,6 +798,8 @@ który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu
 
    (5/3, 3, -7/3, -2/3)
 
+:math:`\;`
+
 **Przykład 2.**
 
 W bazie :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ ` przestrzeni wektorowej 
@@ -899,7 +902,7 @@ spełnia warunek :math:`\,T^2=I,\ ` gdzie :math:`\,I\ ` jest przekształceniem i
 Z multiplikatywności macierzowej reprezentacji operatorów liniowych wynika, że analogiczną własność ma macierz przejścia: :math:`\ \boldsymbol{S}^2\ =\ \boldsymbol{I}_3,\ \,` 
 skąd :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
 
-.. Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`.
+Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`. :math:`\\`
 
 .. code-block:: python
 
@@ -933,6 +936,8 @@ skąd :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
           2 &  3 & 1 \\
          -3 &  1 & 2 \\
          -1 & -2 & 3 \end{array}\right)\,.
+   
+:math:`\\`
 
 
 

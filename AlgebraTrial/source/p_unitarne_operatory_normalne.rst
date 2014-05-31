@@ -11,8 +11,8 @@ albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklides
 
 .. admonition:: Definicja.
    
-   Wyrażenie :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` nazywa się *komutatorem* elementów
-   :math:`\,A\ \ \,\text{i}\ \ B\,.`
+   Wyrażenie :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` nazywa się :math:`\,` *komutatorem* :math:`\,`
+   elementów :math:`\,A\ \ \,\text{i}\ \ B\,.`
    
    Jeżeli :math:`\ [\,A,B\,]\,=\,0\,,\ \ \text{czyli}\ \ AB=BA\,,\ \ `
    to mówimy, że elementy :math:`\,A\ \ \,\text{i}\ \ B\ ` *komutują*.
@@ -21,21 +21,22 @@ albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklides
 
 .. math::
 
-   \begin{array}{cc}
+   \begin{array}{cl}
    \left[\,A,A\,\right]\ =\ 0\,, & \\ \\
    \left[\,B,A\,\right]\ =\ -\ \left[\,A,B\,\right]\,, & \\ \\
    \left[\,A_1+A_2\,,\,B\,\right]\ =\ 
    \left[\,A_1\,,B\,\right]\ +\ \left[\,A_2\,,B\,\right]\,, & \\ \\
    \left[\,A,\,B_1+B_2\,\right]\ =\ \left[\,A,B_1\,\right]\ +\ \left[\,A,B_2\,\right]\,, & \\ \\
-   \left[\,\lambda,A\,\right]\ =\ \left[\,A,\lambda\,\right]\ =\ 0\,, & \\ \\
+   \left[\,\lambda,A\,\right]\ =\ \left[\,A,\lambda\,\right]\ =\ 0\,, & 
+   \lambda\equiv\lambda\,I,\ \ I\ \ \text{-}\ \ \text{element jednostkowy,} \\ \\
    \left[\,\lambda\,A,\,B\,\right]\ =\ \left[\,A,\,\lambda\,B\,\right]\ =\ 
-   \lambda\ \left[\,A,B\,\right]\,, & \quad\lambda\ \ \text{-}\ \ \text{czynnik liczbowy}\,.
+   \lambda\ \left[\,A,B\,\right]\,, & \lambda\ \ \text{-}\ \ \text{czynnik liczbowy.}
    \end{array}
 
 Komutator :math:`\ [\,A,B\,]\ ` jest więc wyrażeniem liniowym ze względu na obydwa elementy
-:math:`\,A\ \ \,\text{i}\ \ B\,.`
+:math:`\,A\ \ \,\text{i}\ \ \,B\,.`
 
-Dalsze własności komutatorów złożonych (dowody przez indukcję):
+Stosując zasadę indukcji matematycznej można pokazać, że:
 
 .. math::
 
@@ -62,16 +63,16 @@ W szczególności, dla :math:`\,n=2\ ` otrzymuje się często używane wzory:
    A_1\,\left[\,A_2\,,B\,\right]\ +\ \left[\,A_1\,,B\,\right]\,A_2\,, &
    \end{array}
 
-Gdy :math:`\ [A,B]=c\,I\,,\ c\in C\,,\ \ ` to 
+Gdy :math:`\ [A,B]=\lambda\,I\,,\ \lambda\in R,\,C,\ \ ` to 
 kładąc :math:`\ B_1=\ldots=B_n=B\,,\ \ A_1=\ldots=A_n=A\ ` mamy:
 
-.. :math:`\quad\left[\,A,B^n\,\right]\ =\ ncB^{n-1},\quad
-   \left[\,A^n,B\,\right]\ =\ ncA^{n-1},\qquad n\in N.`
+.. :math:`\quad\left[\,A,B^n\,\right]\ =\ n\,\lambda\,B^{n-1},\quad
+   \left[\,A^n,B\,\right]\ =\ n\,\lambda\,A^{n-1},\qquad n\in N.`
 
 .. math::
    
-   \left[\,A,B^n\right]\ =\ nc\,B^{n-1},\qquad 
-   \left[\,A^n,B\,\right]\ =\ nc\,A^{n-1},\qquad n\in N.
+   \left[\,A,B^n\right]\ =\ n\,\lambda\,B^{n-1},\qquad 
+   \left[\,A^n,B\,\right]\ =\ n\,\lambda\,A^{n-1},\qquad n\in N.
 
 Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` można odnotować dalsze własności 
 :math:`\\`
@@ -91,7 +92,7 @@ Macierze i operatory normalne
    Niech :math:`\ \boldsymbol{A}\in M_n(C)\,,\ F\in\text{End}(V)\,,\ \,\text{gdzie}\ \ V\ `
    - :math:`\,`  przestrzeń unitarna.
 
-   Macierz :math:`\ \boldsymbol{A}\ ` jest *normalna*, 
+   Macierz :math:`\ \boldsymbol{A}\ ` jest *normalna*, :math:`\,` 
    gdy komutuje ze swoim sprzężeniem hermitowskim:
    
    .. math::
@@ -99,7 +100,7 @@ Macierze i operatory normalne
       [\,\boldsymbol{A},\boldsymbol{A}^+\,]\ =\ 0\qquad\text{czyli}\qquad
       \boldsymbol{A}\,\boldsymbol{A}^+\ =\ \boldsymbol{A}^+\boldsymbol{A}\,.
    
-   Operator :math:`\,F\ ` jest *normalny*,
+   Operator :math:`\,F\ ` jest *normalny*, :math:`\,`
    gdy komutuje ze swoim sprzężeniem hermitowskim:
    
    .. math::
@@ -108,7 +109,7 @@ Macierze i operatory normalne
 
 Do macierzy normalnych zaliczają się np. macierze hermitowskie i unitarne,
 ale również rzeczywiste macierze symetryczne, antysymetryczne i ortogonalne.
-Podobnie, normalne są operatory hermitowskie i unitarne.
+Podobnie, normalne są np. operatory hermitowskie i unitarne.
  
 Związek pomiędzy macierzami normalnymi i operatorami normalnymi przedstawia
 
@@ -184,8 +185,11 @@ skąd otrzymujemy równość norm:
    
    \|\,Fx\,\|\ =\ \|\,F^+x\,\|\,,\quad x\in V\,.
 
-Dalej, jeżeli operator :math:`\ F\ ` jest normalny, 
-to również operator :math:`\ F-\lambda\,I\ ` jest normalny:
+Dalej, jeżeli operator :math:`\ F\ ` jest normalny,
+to normalny jest również operator :math:`\ F-\lambda\,I\,,` :math:`\\`
+gdzie :math:`\ \,\lambda\in C,\ \ I\ ` - operator jednostkowy:
+
+.. to również operator :math:`\ F-\lambda\,I\ ` jest normalny:
 
 .. math::
 

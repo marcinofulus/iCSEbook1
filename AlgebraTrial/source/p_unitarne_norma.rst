@@ -72,7 +72,7 @@ Ostatni wynik, wyrażający normę przez iloczyn skalarny, można uogólnić i z
 **Dowód** polega na sprawdzeniu, że funkcja :eq:`norm` spełnia postulaty w definicji normy. :math:`\\`
 W oparciu o definicję iloczynu skalarnego stwierdzamy, że 
 
-1. :math:`\ f(x)\ \geq 0\qquad\land\qquad[\,f(x)\,=\,0\quad\Leftrightarrow\quad x=\theta\,]\,;`
+1. :math:`\ f(x)\ \geq 0\qquad\land\qquad[\ \,f(x)\,=\,0\quad\Leftrightarrow\quad x=\theta\ \,]\,;`
  
 2. :math:`\ f(\alpha\,x)\ \,=\ \,\sqrt{\,\langle\alpha\,x,\,\alpha\,x\rangle}\ \,=\ \,
    \sqrt{\,\alpha^*\,\alpha\,\langle x,x\rangle}\ \,=\ \,

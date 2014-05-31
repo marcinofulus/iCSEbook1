@@ -7,8 +7,9 @@ mnożenie macierzy przez liczbę oraz mnożenie macierzowe, gdzie iloczynem dwó
 o odpowiednio dobranych rozmiarach jest macierz.
 
 Mnożenie macierzowe będzie wprowadzone w dwóch etapach: 
-definicja iloczynu macierzy przez wektor kolumnowy (umożliwiająca zwięzły zapis układu równań)
-będzie następnie uogólniona do mnożenia macierzy przez macierz wielokolumnową.
+definicja iloczynu macierzy przez wektor kolumnowy 
+(umożliwiająca zwięzły zapis układu równań liniowych)
+będzie następnie uogólniona do przypadku mnożenia macierzy przez macierz wielokolumnową.
 
 .. Jeżeli operację mnożenia wektora z lewej strony przez macierz uznać za działanie zewnętrzne
    w zbiorze wektorów, to iloczyn dwóch macierzy kwadratowych tego samego stopnia można zdefiniować
@@ -173,7 +174,7 @@ przez :math:`\,n`-elementowy wektor kolumnowy :math:`\,\boldsymbol{x}\,` definiu
       a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n
    \end{array}\right]
    
-(działanie jest wykonalne tylko wtedy, gdy liczba kolumn macierzy równa się liczbie elementów wektora).
+(działanie jest wykonalne wtedy i tylko wtedy, gdy liczba kolumn macierzy równa się liczbie elementów wektora).
 
 Tak więc pomnożenie :math:`\,n`-elementowego wektora :math:`\,\boldsymbol{x}\,`
 z lewej strony przez macierz :math:`\,\boldsymbol{A}\,` o :math:`\,m\,` wierszach 

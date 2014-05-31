@@ -7,7 +7,7 @@ Problem własny operatora liniowego
    Niech :math:`\,F\ ` będzie operatorem liniowym określonym na przestrzeni wektorowej 
    :math:`\,V(K)\,.\ \,`
    Jeżeli dla pewnego wektora :math:`\,v\in V\!\smallsetminus\!\{\theta\}\ ` 
-   i pewnej liczby :math:`\,\lambda\in K\ ` zachodzi równość
+   i :math:`\,` pewnej liczby :math:`\,\lambda\in K\ ` zachodzi równość
    
    .. math::
       :label: eigen_eq
@@ -15,12 +15,12 @@ Problem własny operatora liniowego
       Fv=\lambda\, v\,,
    
    to :math:`\,\lambda\ ` jest *wartością własną* operatora :math:`\,F,\ `
-   a :math:`\,v\ ` - :math:`\,` *wektorem własnym* operatora :math:`\,F\ `
+   a :math:`\ \,v\,` - :math:`\,` *wektorem własnym* operatora :math:`\,F\ `
    należącym do wartości własnej :math:`\,\lambda\ `
    (wektorem własnym dla wartości :math:`\,\lambda`).
 
-   Wzór :eq:`eigen_eq` przedstawia *równanie własne* (*problem własny*)
-   operatora liniowego :math:`\,F\,.` 
+   Wzór :eq:`eigen_eq` przedstawia :math:`\,` *równanie własne* :math:`\,` (*problem własny*) 
+   :math:`\,` operatora liniowego :math:`\,F\,.` 
 
 **Uwagi i komentarze.**
 
@@ -69,7 +69,7 @@ Równanie własne można przekształcić następująco:
    \begin{eqnarray*}   
    Fv & = & \lambda\,v\,, \\
    I_{\mathcal{B}}\,(Fv) & = & I_{\mathcal{B}}\,(\lambda\,v)\,, \\
-   M_{\mathcal{B}}(F)\ I_{\mathcal{B}}(v) & = & \lambda\ I_{\mathcal{B}}(v)\,; \\ \\
+   M_{\mathcal{B}}(F)\cdot I_{\mathcal{B}}(v) & = & \lambda\cdot I_{\mathcal{B}}(v)\,; \\ \\
    \boldsymbol{A}\,\boldsymbol{x} & = & \lambda\:\boldsymbol{x}\,, \\
    \boldsymbol{A}\,\boldsymbol{x} & = & \lambda\ \boldsymbol{I}_n\,\boldsymbol{x}\,, \\
    (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x} & = & \boldsymbol{0}\,.
@@ -80,10 +80,10 @@ Ostatnie równanie, w którym :math:`\,\boldsymbol{I}_n\,`
 jest macierzą jednostkową stopnia :math:`\,n,\ ` przedstawia jednorodny problem liniowy o macierzy 
 :math:`\ \boldsymbol{A}-\lambda\,\boldsymbol{I}_n\,.\ `
 Z teorii układów równań liniowych wiadomo, że niezerowe rozwiązania :math:`\,\boldsymbol{x}\,`
-(a takie nas interesują) istnieją wtedy i tylko wtedy, gdy
+(a takie nas tutaj interesują) istnieją wtedy i tylko wtedy, gdy
 
 .. math::
-   :label: char_eqn
+   :label: char_eqn_1
    
    \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \ =\ \ 
    \left|
@@ -119,7 +119,7 @@ macierzy operatora :math:`\,F\ ` w pewnej bazie :math:`\,\mathcal{B}\,.`
 
 W różnych bazach operator :math:`\,F\ ` jest jednak reprezentowany przez różne macierze,
 nasuwa się więc pytanie, czy dopuszczalne wartości :math:`\,\lambda\ ` 
-zależą od wybranej bazy. 
+nie zależą od wybranej bazy. 
 
 Okazuje się, że chociaż macierz operatora liniowego zmienia się przy przejściu
 do innej bazy, to wielomian charakterystyczny i jego pierwiastki
@@ -163,11 +163,10 @@ Z dotychczasowych rozważań wynika
 
 .. admonition:: Wniosek.
    
-   Jeżeli :math:`\,V\ ` jest skończenie wymiarową przestrzenią wektorową
-   nad ciałem :math:`\,K,` :math:`\\`
-   to wartości własne operatora liniowego :math:`\,F\in\text{End}(V)\ ` są pierwiastkami :math:`\\`  
-   charakterystycznymi macierzy tego operatora w dowolnej bazie :math:`\,\mathcal{B}\ `
-   przestrzeni :math:`\,V\,.`
+   Jeżeli :math:`\,V\ ` jest skończenie wymiarową przestrzenią wektorową,
+   to wartości własne operatora liniowego :math:`\,F\in\text{End}(V)\ ` 
+   są pierwiastkami charakterystycznymi macierzy tego operatora 
+   w dowolnej bazie przestrzeni :math:`\,V\,.`
 
 Kwestię rozwiązalności problemu własnego porusza 
 
@@ -181,7 +180,7 @@ każdy wielomian dodatniego stopnia o współczynnikach zespolonych
 ma pierwiastek w ciele liczb zespolonych. 
 
 Jeżeli więc :math:`\,K=C\,,\ `
-to równanie charakterystyczne :eq:`char_eqn` ma pierwiastek zespolony :math:`\,\lambda_0\,,\ `
+to równanie charakterystyczne :eq:`char_eqn_1` ma pierwiastek zespolony :math:`\,\lambda_0\,,\ `
 który podstawiony do równania (:math:`\clubsuit`) wyznacza odpowiedni wektor własny
 (faktycznie: co najmniej 1-wymiarową podprzestrzeń wektorów własnych).
 
@@ -207,7 +206,7 @@ ma :math:`\,n\ ` (niekoniecznie różnych) pierwiastków:
 w rozkładzie :eq:`prod` mogą wystąpić trójmiany kwadratowe
 :math:`\,\lambda^2+p\,\lambda+q\ ` z ujemnym wyróżnikiem :math:`\,\Delta`).
 Wykładnik :math:`\,k_i\ ` jest krotnością pierwiastka :math:`\,\lambda_i\ `
-wielomianu :math:`\,w(\lambda)\ ` i jednocześnie *krotnością algebraiczną* 
+wielomianu :math:`\,w(\lambda)\ ` i :math:`\,` jednocześnie *krotnością algebraiczną* 
 wartości własnej :math:`\,\lambda_i\ ` operatora :math:`\,F\,.`
 Natomiast *krotnością geometryczną* (*krotnością zwyrodnienia*) 
 wartości własnej :math:`\,\lambda_i\ ` jest z definicji 
@@ -226,8 +225,8 @@ to dla :math:`\ \ \alpha_1,\alpha_2\in K:`
    \lambda\ (\alpha_1\,v_1+\alpha_2\,v_2)\,.
    \end{array}
 
-Tak więc każda (niezerowa) kombinacja liniowa wektorów własnych, należących do wartości własnej 
-:math:`\,\lambda,\ ` jest również wektorem własnym dla tej samej wartości.
+Tak więc każda (różna od wektora zerowego) kombinacja liniowa wektorów własnych :math:`\\` 
+należących do wartości własnej :math:`\,\lambda\ ` jest również wektorem własnym dla tej samej wartości.
 
 Odwołując się do kryterium dla podprzestrzeni, można zapisać
 
@@ -251,26 +250,14 @@ składa się z trzech etapów:
    przestrzeni :math:`\,V\,.`
 
 1. Wyliczenie wartości własnych :math:`\,\lambda\ ` operatora :math:`\,F\ ` jako pierwiastków 
-   równania charakterystycznego :eq:`char_eqn` i określenie ich krotności algebraicznych.
+   równania charakterystycznego :eq:`char_eqn_1` macierzy :math:`\,\boldsymbol{A}\,`
+   i określenie ich krotności algebraicznych.
 
    .. macierzy :math:`\,\boldsymbol{A}\,.`
 
 2. Podstawienie każdej wartości własnej :math:`\,\lambda\ ` do równania (:math:`\clubsuit`),
    wyliczenie odpowiednich wektorów własnych (wyznaczonych poprzez ich współrzędne 
-   w bazie :math:`\,\mathcal{B}`) i określenie krotności geometrycznych.
-
-.. 2. Podstawienie każdej wyznaczonej w ten sposób wartości własnej :math:`\,\lambda\ `
-   do równania (:math:`\clubsuit`) :math:`\\`
-   i wyliczenie współrzędnych (w bazie :math:`\,\mathcal{B}`) odpowiednich wektorów własnych.
-
-.. 2. Każdą wyznaczoną w ten sposób wartość własną :math:`\,\lambda\ ` 
-   wstawiamy do równania (:math:`\clubsuit`) :math:`\\` 
-   i wyliczamy współrzędne (w bazie :math:`\,\mathcal{B}`) odpowiednich wektorów własnych.
-
-
- 
-
- 
+   w bazie :math:`\,\mathcal{B}`) i określenie jej krotności geometrycznej. 
 
 
 

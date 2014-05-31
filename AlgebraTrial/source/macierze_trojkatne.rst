@@ -4,14 +4,14 @@ Macierze trójkątne
 
 Jeżeli w macierzy :math:`\,\boldsymbol{L}=[l_{ij}]_{n\times n}\in M_n(K)\,`
 wszystkie elementy powyżej głównej przekątnej są równe zeru,
-czyli :math:`\,l_{ij}=0\ \ \text{dla}\ \ i<j,\ \ i,j=1,2,\dots,n\,,\ `
+czyli :math:`\,l_{ij}=0\ ` dla :math:`\ i<j,\ ` :math:`\ i,j=1,2,\dots,n\,,\ `
 to :math:`\,\boldsymbol{L}\,` nazywamy *dolną macierzą trójkątną*.
 
 Odpowiednio, w *górnej macierzy trójkątnej* :math:`\,\boldsymbol{U}=[u_{ij}]_{n\times n}\in M_n(K)\,`
 znikają wszystkie elementy poniżej głównej przekątnej, czyli
 :math:`\,u_{ij}=0\ \ \text{dla}\ \ i>j,\ \ i,j=1,2,\dots,n\,.`
 
-Dla przykładu, przy :math:`\,n=4\,` ogólną postacią tych macierzy jest:
+Dla przykładu, przy :math:`\,n=4\,` ogólna postać tych macierzy jest następująca:
 
 .. math::
    :label: MLU

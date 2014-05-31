@@ -2,11 +2,10 @@
 Przekształcenia liniowe
 -----------------------
 
-Niech :math:`\,V\ ` i :math:`\,W\ ` będą przestrzeniami wektorowymi 
-nad ciałem :math:`\,K,\ \ F\in\text{Hom}(V,W).`
-
-.. admonition:: Twierdzenie 1.
+.. admonition:: Twierdzenie 1. :math:`\\`
    
+   Niech :math:`\,V\ ` i :math:`\,W\ ` będą przestrzeniami wektorowymi 
+   nad ciałem :math:`\,K,\ \ F\in\text{Hom}(V,W).` :math:`\\`
    Przekształcenie :math:`\,F\ ` jest odwzorowaniem injektywnym 
    wtedy i tylko wtedy, gdy 
    
@@ -16,7 +15,8 @@ nad ciałem :math:`\,K,\ \ F\in\text{Hom}(V,W).`
 
 **Dyskusja i dowód.**
 
-Przekształcenie :math:`\;F\;` jest injekcją, gdy różnym argumentom odpowiadają różne obrazy:
+Przekształcenie :math:`\;F\;` jest injekcją, :math:`\,` 
+gdy różnym argumentom odpowiadają różne obrazy:
 
 .. math::
    
@@ -38,8 +38,7 @@ Obraz przestrzeni :math:`\;V\;` przy przekształceniu :math:`\;F\;` może być
 (jak w tym schemacie) właściwym podzbiorem przestrzeni 
 :math:`\;W:\ \ \text{Im}\,F\equiv F(V)\subsetneq W\,,\ `
 ale każdemu elementowi :math:`\;w\in\text{Im}\,F\ ` odpowiada 
-dokładnie jeden element :math:`\;v\in V,\ ` którego :math:`\;w\;` jest obrazem:
-:math:`\;w=F(v).`
+dokładnie jeden element :math:`\;v\in V,\ ` którego :math:`\;w\;` jest obrazem.
 
 .. W szczególności wektor zerowy :math:`\;\theta_W\ ` jest obrazem
    tylko wektora zerowego :math:`\;\theta_V.`
@@ -95,7 +94,7 @@ ale jego obraz przy przekształceniu :math:`\,F:`
    F(\mathcal{U})\,=\,(\,Fu_1,\,Fu_2,\,\dots,\,Fu_k\,)\,=\,
                     (\,\theta_W,\,\theta_W,\,\dots,\,\theta_W)
 
-jest oczywiście liniowo zależny (mówiąc obrazowo, jest maksymalnie liniowo zależny).
+jest oczywiście liniowo zależny (mówiąc obrazowo - jest maksymalnie liniowo zależny).
 
 Jeżeli zatem :math:`\,F\ ` nie jest injekcją, to istnieją układy wektorów, których liniowa niezależność przy przekształceniu :math:`\,F\,` nie jest zachowana. 
 Przeciwstawnie, jeżeli przekształcenie :math:`\,F\,` zachowuje liniową niezależność 

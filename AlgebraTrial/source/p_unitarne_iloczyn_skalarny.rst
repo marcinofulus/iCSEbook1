@@ -16,7 +16,7 @@ Iloczyn skalarny
    3. :math:`\,\langle x,\,\alpha\,y\rangle\,=\,\alpha\,\langle x,y\rangle\,,\quad\alpha\in C\,,`
 
    4. :math:`\,\langle x,x\rangle\geq 0\quad\land\quad
-      [\,\langle x,x\rangle=0\ \ \Leftrightarrow\ \ x=\theta\,]\,.`
+      [\ \,\langle x,x\rangle=0\ \ \Leftrightarrow\ \ x=\theta\ \,]\,.`
 
 **Uwagi i komentarze.**
 
@@ -61,7 +61,7 @@ i antyliniowy względem pierwszego:
 gdzie :math:`\ \,\alpha_1,\alpha_2\in C,\ \ x,\,x_1,x_2,\ y,\,y_1,y_2\in V\,.`
 
 Definicja iloczynu skalarnego w podręcznikach matematycznych 
-może różnić się od podanej tutaj w punkcie 3., który zapisywany jest w postaci: 
+może różnić się od podanej tutaj w punkcie 3., który zapisywany bywa w postaci: 
 :math:`\,(\alpha\,x,y)=\alpha\,(x,y)\,,\ \ \alpha\in C.\ `
 Wtedy iloczyn skalarny jest liniowy względem pierwszego i antyliniowy względem drugiego czynnika. 
 W zastosowaniach fizycznych, a zwłaszcza w mechanice kwantowej, bardziej odpowiednia jest definicja przyjęta w tym skrypcie.
@@ -83,7 +83,7 @@ oraz :math:`\ \,\langle x,y\rangle=\langle x,\,0\cdot y\rangle=0\cdot\langle x,y
 .. admonition:: Uwaga:
    
    Twierdzenie odwrotne do :eq:`zero` nie jest prawdziwe: 
-   iloczyn dwóch niezerowych wektorów może być równy zeru
+   iloczyn skalarny dwóch niezerowych wektorów może być równy zeru
    (mówimy wtedy o wektorach *ortogonalnych*).
 
 Iloczyn skalarny określony w rzeczywistej przestrzeni wektorowej :math:`\,V(R)\ `
@@ -175,8 +175,8 @@ z iloczynem skalarnym danym przez
 :math:`\ \ \vec{a}\cdot\vec{b}\,=\,|\vec{a}|\,|\vec{b}|\,\cos\phi\,,
 \ \ \text{gdzie}\ \ \phi=\angle(\vec{a},\vec{b})\,.`
 
-Biorąc pod uwagę zastosowania, będziemy rozważać przede wszystkim przestrzenie unitarne (czyli zespolone). Wprowadzone pojęcia, własności i twierdzenia (po odpowiednich uproszczeniach) 
-są jednak ważne również w przestrzeniach euklidesowych.
+Biorąc pod uwagę zastosowania, będziemy rozważać przede wszystkim przestrzenie unitarne (czyli zespolone). Wprowadzone pojęcia, własności i twierdzenia są na ogół (choć z wyjątkami) 
+ważne również w przestrzeniach euklidesowych.
 
 .. Podstawową własność iloczynu skalarnego przedstawia
 
@@ -228,9 +228,9 @@ Mnożąc obie strony nierówności przez :math:`\ \;\langle y,y\rangle>0\ \;` ot
 
    \langle x,x\rangle\,\langle y,y\rangle\ \ \geq\ \ |\,\langle x,y\rangle\,|^2\,.
 
-Można udowodnić, że nierówność :eq:`Schwarz` przechodzi w równość wtedy i tylko wtedy,
-gdy wektory :math:`\,x,y\ ` są liniowo zależne. W przestrzeni euklidesowej nierówność 
-redukuje się do
+Można udowodnić, że słaba nierówność :eq:`Schwarz` przechodzi w równość wtedy i tylko wtedy,
+gdy wektory :math:`\,x,y\ ` są liniowo zależne. Dla przestrzeni euklidesowej nierówność 
+przyjmuje postać:
 
 .. math::
    :label: Schwarz_real

@@ -4,7 +4,7 @@ Własności i przykłady
 
 Ważne własności przekształceń liniowych przedstawia
 
-.. .. admonition:: Twierdzenie :math:`\,` 3. 
+.. .. admonition:: Twierdzenie 3. :math:`\\`
 
    Niech :math:`\ V\ \,\text{i}\ \ W\ ` będą przestrzeniami wektorowymi nad ciałem :math:`\,K.\ `   
    Jeżeli odwzorowanie :math:`\ F:\,V\rightarrow W\ ` jest przekształceniem liniowym,  
@@ -14,7 +14,7 @@ Ważne własności przekształceń liniowych przedstawia
       
       F(\theta_V)\ =\ \theta_W\,.
 
-.. admonition:: Twierdzenie :math:`\,` 3. 
+.. admonition:: Twierdzenie 3. 
 
    | Niech :math:`\ V\ \,\text{i}\ \ W\ ` będą przestrzeniami wektorowymi nad ciałem :math:`\,K.\ `   
    | Jeżeli odwzorowanie :math:`\ F:\,V\rightarrow W\ ` jest przekształceniem liniowym, :math:`\,` 
@@ -58,12 +58,12 @@ W związku z tym warto zauważyć, że odwrotność izomorfizmu jest również i
 
 .. Dokładnie formułuje to
 
-.. admonition:: Twierdzenie :math:`\,` 4.
+.. admonition:: Twierdzenie 4.
    
    Niech :math:`\ V\ \,\text{i}\ \;W\ \,` będą przestrzeniami wektorowymi nad ciałem :math:`\,K.`
    Jeżeli przekształcenie liniowe :math:`\ F:\,V\rightarrow W\ ` jest izomorfizmem, 
    to odwzorowanie odwrotne :math:`\ F^{-1}:\ W\rightarrow V\ ` jest też przekształceniem 
-   liniowym, a więc izomorfizmem.
+   liniowym, a więc jest izomorfizmem.
 
 **Dowód.** :math:`\,` Trzeba wykazać addytywność i jednorodność odwzorowania :math:`\,F^{-1}.`
 
@@ -121,7 +121,7 @@ Uzupełnieniem tej uwagi jest
 
 .. Dokładniej ujmuje to
 
-.. admonition:: Twierdzenie :math:`\,` 5. :math:`\\`
+.. admonition:: Twierdzenie 5. :math:`\\`
    
    Niech :math:`\,V\ \,\text{i}\ \;W\ ` będą dwiema przestrzeniami wektorowymi 
    nad ciałem :math:`\,K,\ ` przy czym :math:`\,V\ ` niech będzie 
@@ -179,7 +179,7 @@ a. :math:`\quad F
    x_1 \\ \dots \\ x_m
    \end{array}\right]\,,\qquad (n\geq m).`
 
-   W szczególności, przy :math:`\,m=1,\ \,F\ ` jest funkcjonałem liniowym.  
+   W szczególności, przy :math:`\,m=1\ ` przekształcenie :math:`\ F\ ` jest funkcjonałem liniowym.  
 
 b. :math:`\quad F(\boldsymbol{x})\ =\ \boldsymbol{A}\,\boldsymbol{x}\,,\qquad`
    gdzie :math:`\ \boldsymbol{A}\in M_{m\times n}(K)\ ` jest ustaloną macierzą, 

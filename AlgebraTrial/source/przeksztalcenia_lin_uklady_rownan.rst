@@ -16,7 +16,7 @@ zbioru rozwiązań jednorodnego układu równań liniowych nad ciałem :math:`\,
    \end{array}
 
 Układ ma postać macierzową 
-:math:`\quad\boldsymbol{A}\boldsymbol{X}\,=\,\boldsymbol{\theta}\,,\quad` gdzie 
+:math:`\quad\boldsymbol{A}\boldsymbol{X}\,=\,\boldsymbol{0}\,,\quad` gdzie 
 
 .. math::
 
@@ -29,18 +29,18 @@ Układ ma postać macierzową
                       \right]\,,\quad
    \boldsymbol{X}\ =\ 
    \left[\begin{array}{c} x_1 \\ x_2 \\ \dots \\ x_n \end{array}\right]\,,\quad
-   \boldsymbol{\theta}\ =\ 
+   \boldsymbol{0}\ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ \dots \\ 0 \end{array}\right]\in K^m\,.
 
 Zbiór rozwiązań układu :eq:`set_eqn_0` definiujemy jako
  
 .. math::
    
-   S_0\ :\,=\ \{\,\boldsymbol{X}\in K^n:\ \boldsymbol{A}\boldsymbol{X}=\boldsymbol{\theta}\,\}\,.
+   S_0\ :\,=\ \{\,\boldsymbol{X}\in K^n:\ \boldsymbol{A}\boldsymbol{X}=\boldsymbol{0}\,\}\,.
 
 Oczywiście :math:`\ \,S_0\subset K^n.\ \,` Własności zbioru :math:`\ S_0\ ` opisuje dokładniej
 
-.. admonition:: Twierdzenie :math:`\,` 9. :math:`\\`
+.. admonition:: Twierdzenie 9. :math:`\\`
 
    Zbiór rozwiązań jednorodnego układu równań :eq:`set_eqn_0` 
    jest przestrzenią wektorową nad ciałem :math:`\,K\ ` 
@@ -61,17 +61,17 @@ bo jest domknięty ze względu na dodawanie wektorów i mnożenie ich przez licz
 Rzeczywiście,
 
 jeżeli :math:`\qquad\boldsymbol{X}_1,\,\boldsymbol{X}_2\,\in\,S_0:
-\qquad\boldsymbol{A}\boldsymbol{X}_1=\,\boldsymbol{\theta}\,, 
-\quad\boldsymbol{A}\boldsymbol{X}_2=\,\boldsymbol{\theta}\,,`
+\qquad\boldsymbol{A}\boldsymbol{X}_1=\,\boldsymbol{0}\,, 
+\quad\boldsymbol{A}\boldsymbol{X}_2=\,\boldsymbol{0}\,,`
 
 to
 :math:`\qquad
 \boldsymbol{A}\,(\boldsymbol{X}_1+\boldsymbol{X}_2)\ =\ 
 \boldsymbol{A}\boldsymbol{X}_1+\boldsymbol{A}\boldsymbol{X}_2\ =\ 
-\boldsymbol{\theta}\,,
+\boldsymbol{0}\,,
 \qquad
 \boldsymbol{A}\,(c\,\boldsymbol{X}_1)\ =\ c\,(\boldsymbol{A}\boldsymbol{X}_1)\ =\ 
-\boldsymbol{\theta}\,,`
+\boldsymbol{0}\,,`
 
 czyli :math:`\qquad 
 \boldsymbol{X}_1+\boldsymbol{X}_2\,\in\,S_0\,,\qquad 
@@ -97,12 +97,12 @@ Jako punkt wyjścia do dalszej dyskusji można więc przyjąć układ :math:`\ r
 o :math:`\ n\ ` niewiadomych, :math:`\,` przy czym :math:`\ r\le n.\ `
 W tej sytuacji mogą wystąpić dwa przypadki.
 
-**I.**) :math:`\,` Jeżeli :math:`\ r=n,\ ` mamy układ równań o kwadratowej nieosobliwej macierzy 
+I.) :math:`\,` Jeżeli :math:`\ r=n,\ ` mamy układ równań o kwadratowej nieosobliwej macierzy 
 :math:`\boldsymbol{A}.\ ` Jest to układ kramerowski, który ma jedynie rozwiązanie zerowe:
-:math:`\ S_0=\{\boldsymbol{\theta}\}.\ ` W tym przypadku równanie :eq:`sol_0` jest spełnione:
+:math:`\ S_0=\{\boldsymbol{0}\}.\ ` W tym przypadku równanie :eq:`sol_0` jest spełnione:
 :math:`\ 0=\dim\,S_0=n-r.`
 
-**II.**) :math:`\,` Niech :math:`\ r<n.\ ` Niewiadome o numerach większych od :math:`\ r\ `
+II.) :math:`\,` Niech :math:`\ r<n.\ ` Niewiadome o numerach większych od :math:`\ r\ `
 przyjmujemy za dowolne parametry: :math:`\ x_k\rightarrow s_k,\ k=r+1,\dots,n,\ \,` 
 po czym rozwiązujemy kramerowski układ równań o niewiadomych :math:`\ \,x_1,\,\dots,\,x_r:`
 

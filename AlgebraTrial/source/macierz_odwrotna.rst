@@ -25,7 +25,7 @@ dla dowolnej macierzy :math:`\ \boldsymbol{A}\in M_n(K)\,.`
 
 Stosownie do tego zdefiniujemy macierz odwrotną do danej macierzy kwadratowej. :math:`\\`   
 
-Niech macierz :math:`\,\boldsymbol{A}\in M_n(K).\ `
+Dana macierz :math:`\,\boldsymbol{A}\in M_n(K).\ `
 Jeżeli istnieje macierz :math:`\boldsymbol{B}\in M_n(K)\,` taka, że
 :math:`\,\boldsymbol{A}\boldsymbol{B}=\boldsymbol{B}\boldsymbol{A}=\boldsymbol{I}_n\,,\,`
 gdzie :math:`\,\boldsymbol{I}_n\,` jest macierzą jednostkową stopnia :math:`\,n\,,\,`
@@ -76,23 +76,33 @@ Wyjaśnia to
 Gdyby :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}\,` 
 składał się z samych zer, to dla każdej macierzy :math:`\boldsymbol{B}\in M_n(K)\,`
 :math:`\,i`-ty wiersz iloczynu :math:`\,\boldsymbol{A}\boldsymbol{B}\,`
-zawierałby tylko zera.
+zawierałby tylko zera (wierszowa reguła mnożenia macierzowego).
+
+.. Z wierszowej reguły mnożenia macierzy wynika, że
+   gdy :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}\,` 
+   składa się z samych zer, to dla każdej macierzy :math:`\boldsymbol{B}\in M_n(K)\,`
+   :math:`\,i`-ty wiersz iloczynu :math:`\,\boldsymbol{A}\boldsymbol{B}\,`
+   zawiera tylko zera.
 
 Gdyby :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\,`
 była kolumną zerową, to dla każdej macierzy :math:`\boldsymbol{B}\in M_n(K)\,`
 :math:`\,j`-ta kolumna iloczynu :math:`\,\boldsymbol{B}\boldsymbol{A}\,`
-składałaby się z samych zer.
+składałaby się z samych zer (kolumnowa reguła mnożenia macierzowego).
+
+.. Z kolumnowej reguły mnożenia macierzowego wynika, że 
+   gdy :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\,`
+   jest kolumną zerową, to dla każdej macierzy :math:`\boldsymbol{B}\in M_n(K)\,`
+   :math:`\,j`-ta kolumna iloczynu :math:`\,\boldsymbol{B}\boldsymbol{A}\,`
+   składa się z samych zer.
 
 W obydwu przypadkach nie istniałaby macierz :math:`\,\boldsymbol{B}\in M_n(K),\,` dla której
 :math:`\ \boldsymbol{A}\boldsymbol{B} = \boldsymbol{B}\boldsymbol{A} = \boldsymbol{I}_n\,.` 
 :math:`\\`  
 
-.. **Twierdzenie 2.** :math:`\,`
-
 .. admonition:: Twierdzenie 2. :math:`\,`
 
    Jeżeli macierze :math:`\,\boldsymbol{A},\boldsymbol{B}\in M_n(K)\,` są odwracalne, :math:`\\`
-   to iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\,` też jest odwracalny:
+   to iloczyn :math:`\,\boldsymbol{A}\boldsymbol{B}\,` też jest odwracalny, przy czym
    :math:`\ \ (\boldsymbol{A}\boldsymbol{B})^{-1}\ =\ \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\,.`
 
 .. .. math::
@@ -135,7 +145,7 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
 
    sage: A = matrix([[1,-1,-2],[0, 1, 2],[1,-1,-1]])
    sage: B = A.I
-   sage: html.table([[A, B, '=', A*B]])
+   sage: html.table([[A, '*', B, '=', A*B]])
 
 .. math::
    
@@ -143,15 +153,15 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()`` (
    1 & -1 & -2 \\
    0 &  1 &  2 \\
    1 & -1 & -1
-   \end{array}\right)\quad\left(\begin{array}{rrr}
-                           1 & 1 &  0 \\
-                           2 & 1 & -2 \\
-                          -1 & 0 &  1
-                          \end{array}\right)\quad =\quad\left(\begin{array}{rrr}
-                                                         1 & 0 & 0 \\
-                                                         0 & 1 & 0 \\
-                                                         0 & 0 & 1
-                                                        \end{array}\right)\,.
+   \end{array}\right)\ \ *\ \ \left(\begin{array}{rrr}
+                               1 & 1 &  0 \\
+                               2 & 1 & -2 \\
+                              -1 & 0 &  1
+                              \end{array}\right)\quad =\quad\left(\begin{array}{rrr}
+                                                            1 & 0 & 0 \\
+                                                            0 & 1 & 0 \\
+                                                            0 & 0 & 1
+                                                            \end{array}\right)\,.
 
 
 

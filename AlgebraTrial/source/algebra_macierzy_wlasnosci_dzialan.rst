@@ -31,7 +31,7 @@ Odwołując się do definicji iloczynu macierzowego można udowodnić następuj�
    \qquad\quad
    \boldsymbol{A}\in M_{m\times p}(K),\ \ \boldsymbol{B},\boldsymbol{C}\in M_{p\times n}(K)\,.`
 
-3. Mnożenie przez liczby jest związane z mnożeniem macierzowym następująco:      
+3. Mnożenie macierzy przez liczby wiąże się z mnożeniem macierzowym następująco:      
       
    :math:`\ c\ (\boldsymbol{A} \boldsymbol{B})\ =\ 
    (c \boldsymbol{A})\,\boldsymbol{B}\ =\ 
@@ -168,7 +168,7 @@ Ostatni wzór można przepisać jako
    & z_i\ =\ \displaystyle\sum_{j=1}^n\;c_{ij}\;x_j\,,\quad & \text{gdzie}
    & \quad c_{ij}\ =\ \displaystyle\sum_{k=1}^n\;a_{ik}\;b_{kj}\,, & i,j\,=\,1,2,\ldots,n\,, \\ \\
    \text{czyli} & \boldsymbol{z} = \boldsymbol{C}\,\boldsymbol{x}\,,\quad & \text{gdzie}
-   & \quad\boldsymbol{C}\,=\,\boldsymbol{A}\boldsymbol{B}\,. &
+   & \quad\boldsymbol{C}\,=\,[c_{ij}]_{n\times n}\,. &
    \end{array}
 
 A zatem
@@ -308,7 +308,7 @@ a ich odpowiednie elementy są sobie równe:
 .. math::
    
    (\boldsymbol{A}\boldsymbol{B})_{ij}\ =\ \sum_{k=1}^p\,a_{ik}\,b_{kj}\ =\ 
-   w_{ij}\ =\ (\boldsymbol{W})_{ij},
+   w_{ij}\ =\ (\boldsymbol{W})_{ij}\,,
    \qquad
    i=1,2,\dots,m;\ \ j=1,2,\dots,n.
 
@@ -319,7 +319,7 @@ W ten sposób wzór :math:`\,` :eq:`rule_verse_1` :math:`\,` został udowodniony
 
 Dla wykazania związku :math:`\,` :eq:`rule_verse_2` :math:`\,` zauważmy, że :math:`\\`
 
-.. math::
+.. .. math::
    :nowrap:
    
    \begin{eqnarray*}
@@ -337,4 +337,44 @@ Dla wykazania związku :math:`\,` :eq:`rule_verse_2` :math:`\,` zauważmy, że :
    & \ =\  & \ \sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,\qquad\quad i=1,2,\dots,m.
    \end{eqnarray*}
 
-   \;
+.. math::
+   
+   \begin{array}{ccl}
+   \boldsymbol{W}_i & = & \left[\ \ w_{i1}\quad w_{i2}\quad \ldots\quad w_{in}\ \ \right]\ \ \ = \\ \\
+   & = & \left[\quad\displaystyle\sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
+                                 \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,
+                                 \ldots\quad\,
+                                 \sum_{k=1}^p\,a_{ik}\,b_{kn}\ \ \,\right]\ \ \ = \\ \\
+   & = & \ \displaystyle\sum_{k=1}^p\ \ a_{ik}\ 
+         \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]\ \ \ = \\ \\
+   & = & \ \displaystyle\sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,\qquad\quad i=1,2,\dots,m.
+   \end{array}
+
+   \; 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

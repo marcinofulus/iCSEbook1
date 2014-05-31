@@ -147,10 +147,10 @@ bez obliczania wartości wyznacznika uzasadnić, że
 
 **Rozwiązanie.** :math:`\,`
 
-Operacja elementarna 
+Operacja 
 :math:`\ \,\boldsymbol{C}_4\ =\  
 1000\,\cdot\,\boldsymbol{C}_1\,+\,100\,\cdot\,\boldsymbol{C}_2\,+\,
-10\,\cdot\,\boldsymbol{C}_3\,+\,\boldsymbol{C}_4` :math:`\\`
+10\,\cdot\,\boldsymbol{C}_3\,+\,\boldsymbol{C}_4\ \,` 
 na kolumnach :math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\boldsymbol{C}_3,\,\boldsymbol{C}_4\ ` 
 nie zmienia wartości wyznacznika. W wyniku otrzymujemy:
 
@@ -222,28 +222,29 @@ np. trzeci wiersz oraz drugą i czwartą kolumnę:
          -1 & 3 & 4
          \end{array}
    \right|\ \ =\ \ 
-   3\ 
+   3\ \,
    \left|\begin{array}{rrr}
          -2 & 1 & 1 \\ 
           4 & 2 & 0 \\
          -1 & 1 & 4
          \end{array}
    \right|\ \ =\ \ 
-   6\ 
+   6\ \,
    \left|\begin{array}{rrr}
          -2 & 1 & 1 \\ 
           2 & 1 & 0 \\
          -1 & 1 & 4
          \end{array}
    \right|\ \ =\ \ 
-   6\ (-13)\ \ =\ \ -78\,.
+   6\ \,(-13)\ \ =\ \ -78\,.
 
 .. admonition:: Definicja.
    
    Niech będzie dana kwadratowa macierz 
-   :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{n\times n}\in M_{n}(K).\ `
-   Wybieramy w niej element :math:`\ a_{ij}\ \ \text{i}\ \ ` skreślamy :math:`\,i`-ty wiersz
-   oraz :math:`\,j`-tą kolumnę. Otrzymany w ten sposób minor :math:`\,M_{ij}\,` 
+   :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{n\times n}\in M_{n}(K).` :math:`\\`
+   Wybieramy w niej element :math:`\ a_{ij}\ \ \,\text{i}\ \ ` skreślamy :math:`\,i`-ty wiersz
+   oraz :math:`\,j`-tą kolumnę. :math:`\\`
+   Otrzymany w ten sposób minor :math:`\,M_{ij}\,` 
    stopnia :math:`\ n-1\ ` pomnożony przez :math:`\ (-1)^{i+j}\ ` nazywamy *dopełnieniem
    algebraicznym* :math:`\,` elementu :math:`\ a_{ij}\ ` i :math:`\,` oznaczamy :math:`\ A_{ij}:`
 
@@ -361,14 +362,13 @@ Praktyczne odręczne obliczanie wyznaczników przebiega w dwóch etapach:
          \end{array}
    \right|\,;
 
-Operacje wykonane na wierszach 
-:math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\boldsymbol{R}_3,\,\boldsymbol{R}_4:` :math:`\ \\`
+Operacje na wierszach 
+:math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\boldsymbol{R}_3,\,\boldsymbol{R}_4:`
 :math:`\boldsymbol{R}_2 = \boldsymbol{R}_2 + \boldsymbol{R}_1,\ \ 
 \boldsymbol{R}_3 = \boldsymbol{R}_3 - 2\,\boldsymbol{R}_1,\ \ 
-\boldsymbol{R}_4 = \boldsymbol{R}_4 - \boldsymbol{R}_1\,;`
-
-Rozwinięcie Laplace'a względem trzeciej kolumny. :math:`\\`
-Wyłączenie czynnika :math:`\ ` 3 :math:`\ ` z trzeciej kolumny. :math:`\\`
+\boldsymbol{R}_4 = \boldsymbol{R}_4 - \boldsymbol{R}_1.`
+Rozwinięcie Laplace'a względem trzeciej kolumny.
+Wyłączenie liczby :math:`\ 3\ ` z trzeciej kolumny. :math:`\\`
 
 .. math::
 
@@ -399,11 +399,10 @@ Wyłączenie czynnika :math:`\ ` 3 :math:`\ ` z trzeciej kolumny. :math:`\\`
    \right|\ \ =\ \ -\ 3\,;
 
 Operacje wykonane na kolumnach 
-:math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\boldsymbol{C}_3:` :math:`\ \\`
+:math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\boldsymbol{C}_3:\ ` 
 :math:`\boldsymbol{C}_2 = \boldsymbol{C}_2 - \boldsymbol{C}_1,\ \ 
-\boldsymbol{C}_3 = \boldsymbol{C}_3 - \boldsymbol{C}_1\,.`
-
-Wyłączenie czynnika :math:`\ ` 3 :math:`\ ` z drugiej kolumny. :math:`\\`
+\boldsymbol{C}_3 = \boldsymbol{C}_3 - \boldsymbol{C}_1.\ `
+Wyłączenie czynnika :math:`\ 3\ ` z drugiej kolumny.
 Rozwinięcie Laplace'a względem drugiego wiersza. :math:`\\`
 
 Ostatecznie
@@ -413,9 +412,7 @@ Ostatecznie
 3\ \ \left|\begin{array}{rrr} -1 &  2 &  2 \\ 1 &  1 &  1 \\ 2 & -1 &  0 \end{array}\right|\ \ =\ \ 
 -\ 9\,. \\`
 
-W systemie Sage wyznacznik zadanej macierzy kwadratowej wylicza funkcja (metoda) ``determinant()``,
-w skrócie ``det()``. Użyjemy jej do wyliczenia wyznacznika 4. stopnia z poprzedniego przykładu
-i do sprawdzenia twierdzenia o wyznaczniku macierzy transponowanej:
+W systemie Sage wyznacznik zadanej macierzy kwadratowej można wyliczyć stosując funkcję (metodę) ``determinant()``, w skrócie ``det()``. Użyjemy jej do wyliczenia wyznacznika 4. stopnia z poprzedniego przykładu i do sprawdzenia twierdzenia o wyznaczniku macierzy transponowanej:
 
 .. code-block:: python
    
@@ -424,9 +421,10 @@ i do sprawdzenia twierdzenia o wyznaczniku macierzy transponowanej:
    ...                  [ 5,-9, 2, 7],
    ...                  [ 4,-6, 1, 2]])
 
-   sage: d0 = A.determinant()
-   sage: dt = A.T.det() # skrócone oznaczenia transpozycji i wyznacznika
-   sage: print "det A =", d0; d0==dt
+   sage: det_A  = A.determinant()
+   sage: det_At = A.T.det()     # skrócone oznaczenia transpozycji i wyznacznika
+
+   sage: print "det A =", det_A; det_A==det_At
 
    det A = -9
    True 

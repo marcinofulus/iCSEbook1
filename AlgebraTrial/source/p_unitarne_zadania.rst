@@ -28,7 +28,7 @@ Wiersze macierzy :math:`\,\boldsymbol{G}\ ` tworzą układ ortogonalny
 do układu wierszy macierzy :math:`\boldsymbol{A},\ `
 natomiast dolna trójkątna macierz :math:`\boldsymbol{M}` spełnia warunek
 :math:`\,\boldsymbol{A}=\boldsymbol{M}\boldsymbol{G}\ `
-(w starszej wersji do :math:`\,\boldsymbol{M}\ ` 
+(w starszej wersji pakietu Sage do :math:`\,\boldsymbol{M}\ ` 
 trzeba dodać macierz jednostkową :math:`\,\boldsymbol{I}`).
 
 Jeżeli :math:`\,\boldsymbol{A}\ ` jest macierzą kwadratową stopnia :math:`\,n,\ ` to

@@ -2,9 +2,10 @@
 Wartości i wektory własne
 -------------------------
 
-Udowodnimy, że wektory własne operatora liniowego, należące do różnych wartości własnych,
-są liniowo niezależne.
 *Widmem* operatora liniowego nazywamy zbiór jego wartości własnych.
+Udowodnimy, że wektory własne operatora liniowego należące do różnych wartości własnych
+są liniowo niezależne.
+
 
 .. admonition:: Twierdzenie 1.
    
@@ -247,8 +248,8 @@ Otrzymany układ równości można zapisać w postaci równania macierzowego:
    \end{array}\right]\,.
 
 Gdy wartości własne :math:`\ \lambda_1,\,\lambda_2,\,\dots,\lambda_n\ ` są wszystkie różne,
-to macierz kwadratowa po lewej stronie równania jest nieosobliwa, :math:`\,`
-bo wyznacznik Vandermonde'a
+to macierz kwadratowa po lewej stronie równania jest nieosobliwa, co wynika ze wzoru
+dla wyznacznika Vandermonde'a:
 
 .. math::
    

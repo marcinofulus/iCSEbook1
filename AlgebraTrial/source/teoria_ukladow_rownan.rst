@@ -50,8 +50,7 @@ Rząd macierzy jest więc liczbą jedynek wiodących w jej zredukowanej postaci 
 
 .. admonition:: Twierdzenie. :math:`\,`
 
-   Rząd macierzy :math:`\,\boldsymbol{A}\,` równa się najwyższemu stopniowi
-   jej niezerowych minorów.  
+   Rząd macierzy równa się najwyższemu stopniowi jej niezerowych minorów.  
 
 .. **Definicja.** :math:`\,`
    *Minor stopnia* :math:`\,k\,` macierzy :math:`\,\boldsymbol{A}\,`

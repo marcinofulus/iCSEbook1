@@ -15,7 +15,7 @@ zadajemy operator liniowy :math:`\,F\ ` podając obrazy wektorów bazy :math:`\,
    F\vec{e}_1\,=\,2\,\vec{e}_1+\vec{e}_2\,,\qquad 
    F\vec{e}_2\,=\,\vec{e}_1+2\,\vec{e}_2\,.
 
-Szukamy wektorów :math:`\ \vec{r}\,\in\,V\!\smallsetminus\vec{0}\ ` spełniających równanie
+Szukamy wektorów :math:`\ \vec{r}\,\in\,V\!\smallsetminus\!\{\vec{0}\}\ ` spełniających równanie
 :math:`\,F\vec{r}=\lambda\,\vec{r}\ ` dla pewnego :math:`\ \lambda\in R\,.\ `
 Działając na te wektory, operator :math:`\,F\ ` nie zmienia ich kierunku, chociaż może
 zmienić długość lub zwrot. Pewną orientację w sytuacji daje program, który wyświetla kolejne 
@@ -116,9 +116,9 @@ Wektory własne odpowiadające tej wartości:
 
 tworzą :math:`\,` (wespół z wektorem zerowym :math:`\,\vec{0}`) :math:`\,` 
 1-wymiarową podprzestrzeń :math:`\,V_1\ ` przestrzeni :math:`\,V,` :math:`\\`
-generowaną przez wektor :math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:\ \ V_1=L(\vec{f}_1)\,.`
+generowaną przez wektor :math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:` :math:`\ V_1=L(\vec{f}_1)\,.`
 
-Podstawiając :math:`\ \lambda=\lambda_2=3\ ` w :eq:`2_set`
+Podstawiając :math:`\ \lambda=\lambda_2=3\ ` w :math:`\,` :eq:`2_set` :math:`\,`
 otrzymujemy układ
 :math:`\quad\begin{cases}\ \begin{array}{r}
 -\ \alpha_1+\alpha_2\,=\,0 \\ \alpha_1-\alpha_2\,=\,0
@@ -305,7 +305,7 @@ rzeczywistych kwadratowych macierzy 2. stopnia:
    \end{array}\right]\,,\quad
    \alpha_1,\,\alpha_2,\,\alpha_3,\,\alpha_4\in R\,.
 
-Ze względu na bijektywność i liniowość :math:`\,` operator :math:`\,T\ ` 
+Ze względu na bijektywność i liniowość, :math:`\,` operator :math:`\,T\ ` 
 jest automorfizmem algebry :math:`\,M_2(R).`
 
 Problem własny operatora :math:`\,T\ ` rozwiążemy stosując schemat postępowania

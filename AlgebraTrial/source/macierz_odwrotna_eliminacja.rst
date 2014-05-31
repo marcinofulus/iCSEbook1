@@ -2,10 +2,10 @@
 Wyznaczenie macierzy odwrotnej metodą eliminacji
 ------------------------------------------------
 
-Niech 
+Niech będą dane macierze
 :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\,,\,
 \boldsymbol{B}=[\,b_{ij}\,]_{n\times n}\in M_n(K)\,.`
-Będziemy nazywać *agregatem* macierz :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{B}\,]\,,\ `
+Będziemy nazywać *agregatem* macierz :math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{B}\,]\ `
 otrzymaną przez dołączenie do macierzy :math:`\ \boldsymbol{A}\,` macierzy :math:`\,\boldsymbol{B}\,:`
 
 .. math::
@@ -158,8 +158,8 @@ Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
    # Przekształcenie [A|I] do [I|A^(-1)]:
    sage: IA_1 = AI.rref()
 
-   # Wyodrębnienie drugiej części agregatu (kolumny 4.- 7.):
-   sage: A_1 = IA_1.matrix_from_columns(range(4,8))
+   # Wyodrębnienie drugiej części agregatu (kolumny od 4. do końcowej):
+   sage: A_1 = IA_1[:,4:]
 
    # Pokazanie macierzy odwrotnej: 
    sage: html.table([['$A^{-1}$', '=', A_1]])
@@ -263,7 +263,7 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
    sage: D = AED.matrix_from_columns(range(5,8))
 
    # Iloczyn D*A jest zredukowaną postacią schodkową A:
-   sage: html.table([[D, A, '=', D*A]])
+   sage: html.table([[D, '*', A, '=', D*A]])
 
 .. math::
    
@@ -271,7 +271,7 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
       0 & 0 &  \textstyle{1\over 2} \\
       0 & 1 &  \textstyle{1\over 2} \\
       1 & 0 & -\textstyle{1\over 2}
-   \end{array}\right)\quad
+   \end{array}\right)\ \ *\ \ 
    \left(\begin{array}{rrrrr}
        1 & 0 &  2 & -1 &  2 \\
       -1 & 1 & -2 &  3 & -3 \\

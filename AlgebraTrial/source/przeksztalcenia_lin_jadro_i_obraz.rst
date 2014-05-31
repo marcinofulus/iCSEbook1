@@ -30,7 +30,7 @@ jednoelementowego zbioru zawierającego wektor zerowy przestrzeni
 
 Oczywiście :math:`\,\text{Ker}\,F\subset V,\ \text{Im}\,F\subset W.\ ` :math:`\,` Co więcej, zachodzi
 
-.. admonition:: Twierdzenie :math:`\,` 6. :math:`\\`
+.. admonition:: Twierdzenie 6. :math:`\\`
    
    Jądro przekształcenia liniowego :math:`\,F\in\text{Hom}(V,W)\ `
    jest podprzestrzenią przestrzeni :math:`\,V,\ ` a jego obraz :math:`\ ` - :math:`\ `
@@ -69,7 +69,7 @@ W tej sytuacji mają sens następujące definicje:
    \text{rz}\,F  & :\,= & \dim\,\text{Im}\,F  & \qquad\quad & \text{rząd homomorfizmu}\ F
    \end{array}
 
-.. admonition:: Twierdzenie :math:`\,` 7.
+.. admonition:: Twierdzenie 7.
 
    Jeżeli :math:`\,F\ ` jest przekształceniem liniowym przestrzeni :math:`\,V\ ` 
    w przestrzeń :math:`\,W,\ ` to
@@ -112,7 +112,7 @@ co doprowadzi do tezy :eq:`def_rz`.
 
    .. Korzystając z liniowości przekształcenia :math:`\ F,\ ` z definicji jądra 
       homomorfizmu i z liniowej niezależności wektorów bazy :math:`\,\mathcal{B},\ `
-      otrzymujemy:
+      otrzymujemy dalej:
 
    Na podstawie liniowej niezależności wektorów bazy :math:`\,\mathcal{B}\ ` otrzymujemy:
        
@@ -177,7 +177,7 @@ Ponieważ z oznaczenia :math:`\ \,k=\text{def}\,F,\ \,` to
 Udowodnione właśnie Twierdzenie 7. wykorzystamy w dowodzie kryterium dla izomorfizmu 
 przestrzeni wektorowych o wymiarach skończonych.
 
-.. admonition:: Twierdzenie :math:`\,` 8. :math:`\\`
+.. admonition:: Twierdzenie 8. :math:`\\`
    
    Dwie skończenie wymiarowe przestrzenie wektorowe nad ciałem :math:`\,K\ `
    są izomorficzne wtedy i tylko wtedy, gdy są tego samego wymiaru:
@@ -202,7 +202,7 @@ wobec czego :math:`\ \text{def}\,F=\,\dim\,\text{Ker}\,F=0.`
 Z drugiej strony, :math:`\ F\ ` jest surjekcją: :math:`\ F(V)=\text{Im}\,F=W,\ \,`
 skąd :math:`\ \text{rz}\,F=\dim\,\text{Im}\,F=\,\dim\,W.\ `
 
-Stosując Twierdzenie 7. (wzór :eq:`def_rz`) otrzymujemy:
+Stosując Twierdzenie 7. otrzymujemy:
 
 .. math::
    
@@ -213,16 +213,17 @@ Stosując Twierdzenie 7. (wzór :eq:`def_rz`) otrzymujemy:
 Oznacza to, że każda baza przestrzeni :math:`\,V\ \,\text{i}\ \ W\ ` liczy :math:`\,n\ ` elementów.
 Załóżmy, że układ :math:`\ \mathcal{B}=(v_1,v_2,\,\dots,\,v_n)\ ` jest bazą przestrzeni :math:`\,V,\ `
 a :math:`\ \ \mathcal{C}=(w_1,w_2,\,\dots,\,w_n)\ ` :math:`\,` - :math:`\,` 
-bazą przestrzeni :math:`\,W.\ `
-
-Definiujemy przekształcenie liniowe :math:`\,F:\,V\rightarrow W\ ` 
+bazą przestrzeni :math:`\,W.\ ` 
+Wykorzystując wniosek z Twierdzenia 5. 
+definiujemy przekształcenie liniowe :math:`\,F:\,V\rightarrow W\ ` 
 określając obrazy wektorów bazy :math:`\ \mathcal{B}:`
 
 .. math::
    
    F(v_i)\ :\,=\ w_i\,,\qquad i=1,2,\dots,n.
 
-Wtedy obraz dowolnego wektora :math:`\,v\in V\ ` dany jest przez 
+Wtedy obraz dowolnego wektora :math:`\ \,v = \displaystyle\sum_{i\,=\,1}^n\ a_i\,v_i \in V\ \,` 
+dany jest przez 
 
 .. math::
 
@@ -232,9 +233,10 @@ Wtedy obraz dowolnego wektora :math:`\,v\in V\ ` dany jest przez
 
 Przy przekształceniu :math:`F\,` obrazem wektora przestrzeni :math:`V\,`
 o współrzędnych (w bazie :math:`\mathcal{B}`) :math:`\,a_1,\,a_2,\,\dots,\,a_n\,,\ \,`
-jest wektor przestrzeni :math:`\,W\ ` o tych samych współrzędnych w bazie :math:`\,\mathcal{C}.\ \,`
+jest więc wektor przestrzeni :math:`\,W\ ` o tych samych współrzędnych 
+w bazie :math:`\,\mathcal{C}.`
 
-Ponieważ, przy ustalonej bazie, odpowiedniość pomiędzy wektorami i ich współrzędnymi jest 
+Ponieważ przy ustalonej bazie odpowiedniość pomiędzy wektorami i układami ich współrzędnych jest 
 wzajemnie jednoznaczna, to :math:`\,F\ ` jest bijekcją, a więc izomorfizmem: 
 :math:`\,F\in\text{Izo}\,(V,W).\ ` 
 Skoro zaś :math:`\,\text{Izo}(V,W)\neq\emptyset,\ \ \text{to}\ \ V\simeq W.`

@@ -52,7 +52,7 @@ zdefiniowane są działania dodawania, mnożenia przez liczby z :math:`\,K\ ` i 
 (przy tych działaniach :math:`\,\text{End}(V)\,` jest algebrą nad ciałem :math:`\,K`). :math:`\,`
 Zajmiemy się macierzą złożenia dwóch operatorów liniowych.
 
-.. admonition:: Twierdzenie :math:`\,` 12. :math:`\\`
+.. admonition:: Twierdzenie 12. :math:`\\`
    
    Niech :math:`\,F,\,G\in\text{End}(V),\ ` gdzie :math:`\,V\,` jest skończenie wymiarową
    przestrzenią wektorową z bazą :math:`\,\mathcal{B}.\ `

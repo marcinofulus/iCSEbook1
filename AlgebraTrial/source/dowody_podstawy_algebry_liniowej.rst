@@ -63,27 +63,24 @@ Po rozpisaniu otrzymujemy układ równości
 
 .. math::
    
-   \begin{array}{c}
+   \begin{array}{l}
    a_{11}\ c_1\ +\ \,a_{12}\ c_2\ +\ \,\dots\ \,+\ \,a_{1p}\ c_p\ \,=\ \ 0 \\
    a_{21}\ c_1\ +\ \,a_{22}\ c_2\ +\ \,\dots\ \,+\ \,a_{2p}\ c_p\ \,=\ \ 0 \\
-   \quad\dots\qquad\quad\dots\qquad\dots\qquad\ \dots\qquad\ \dots\quad         \\
+   \ \ \dots\qquad\quad\dots\qquad\,\dots\qquad\ \dots\qquad\ \dots\quad         \\
    a_{n1}\ c_1\ +\ \,a_{n2}\ c_2\ +\ \,\dots\ \,+\ \,a_{np}\ c_p\ \,=\ \ 0
    \end{array}
    \,,
 
 który jest jednorodnym układem :math:`\,n\,` równań liniowych 
 na :math:`\,p\,` niewiadomych :math:`\ c_1,\,c_2,\,\ldots,\,c_p\,,\ `
-przy czym liczba równań :math:`\,n\,` jest mniejsza od liczby niewiadomych :math:`\,p.\ `
-Taki układ równań ma rozwiązania niezerowe.
+gdzie liczba równań jest mniejsza od liczby niewiadomych.
 
+Taki układ ma rozwiązania niezerowe.
 Rzeczywiście, rozwiązanie układu metodą eliminacji Gaussa polega na zastosowaniu operacji elementarnych na wierszach macierzy współczynników w celu doprowadzenia jej do zredukowanej postaci schodkowej.
- 
 Następnie niewiadome, odpowiadające kolumnom bez jedynek wiodących przyjmuje się za dowolne parametry, przez które wyrażają się pozostałe niewiadome (odpowiadające kolumnom z jedynkami wiodącymi).
-
 Liczba parametrów jest różnicą liczby niewiadomych i liczby jedynek wiodących,
-przy czym ta druga liczba (równa skądinąd rzędowi macierzy współczynników) 
+przy czym ta druga liczba (równa rzędowi macierzy współczynników) 
 jest nie większa od liczby równań.
- 
 Jeżeli równań jest mniej niż niewiadomych, to liczba parametrów jest dodatnia, 
 a to właśnie oznacza istnienie rozwiązań niezerowych. :math:`\\`
 
@@ -93,13 +90,13 @@ a to właśnie oznacza istnienie rozwiązań niezerowych. :math:`\\`
    to każda baza tej przestrzeni liczy :math:`\,n\ ` elementów.
 
 Dla dowodu przypuśćmy, że przestrzeń :math:`\,V(K)\,` ma dwie bazy:
-bazę :math:`\ \mathcal{B}_1\ ` o :math:`\,n\,` elementach oraz 
-bazę :math:`\ \mathcal{B}_2\ ` o :math:`\,m\,` elementach.
+bazę :math:`\ \mathcal{B}\ ` o :math:`\,n\,` elementach oraz 
+bazę :math:`\ \mathcal{C}\ ` o :math:`\,m\,` elementach.
 
-Gdyby :math:`\,n>m,\ ` to układ :math:`\ \mathcal{B}_1\ ` byłby liniowo zależny (sprzeczność).
+Gdyby :math:`\,n>m,\ ` to układ :math:`\ \mathcal{B}\ ` byłby liniowo zależny (sprzeczność).
 :math:`\,` A zatem :math:`\ \,n\le m.`
 
-Gdyby :math:`\,m>n,\ ` to układ :math:`\ \mathcal{B}_2\ ` byłby liniowo zależny (sprzeczność).
+Gdyby :math:`\,m>n,\ ` to układ :math:`\ \mathcal{C}\ ` byłby liniowo zależny (sprzeczność).
 :math:`\,` A zatem :math:`\ \,m\le n.`
 
 Tak więc jednocześnie :math:`\ \,n\le m\ \ \text{i}\ \ m\le n,\ \,` skąd :math:`\ \,m=n.` 
@@ -116,6 +113,6 @@ Wniosek 1. pozwala na wprowadzenie pojęcia wymiaru przestrzeni wektorowej jako 
    W przestrzeni :math:`\,n`-wymiarowej każdy liniowo niezależny układ :math:`\,n\,` wektorów jest 
    bazą.
 
-Rzeczywiście, wobec Wniosku 2. taki liniowo niezależny układ :math:`\,n\,` wektorów jest maksymalnym liniowo niezależnym układem, czyli jest bazą.
+Istotnie, wobec Wniosku 2. taki liniowo niezależny układ :math:`\,n\,` wektorów jest maksymalnym liniowo niezależnym układem, czyli jest bazą.
 
 

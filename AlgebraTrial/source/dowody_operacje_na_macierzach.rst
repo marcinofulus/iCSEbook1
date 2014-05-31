@@ -7,8 +7,9 @@ Operacje i macierze elementarne
 
 Aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-wystarczy zastosować ją tylko do pierwszego czynnika iloczynu:
-:math:`\ O(\boldsymbol{A}\boldsymbol{B}) = (O\boldsymbol{A})\,\boldsymbol{B}:`
+należy zastosować ją tylko do pierwszego czynnika iloczynu:
+:math:`\ O(\boldsymbol{A}\boldsymbol{B}) = (O\boldsymbol{A})\,\boldsymbol{B}.\ ` :math:`\\`
+Dokładniej wyraża to
 
 .. admonition:: Lemat. :math:`\,`
    
@@ -142,11 +143,10 @@ przebiega następująco:
    \right]\,\boldsymbol{B}\ \ \ =\ \ \ 
    [\,O_3(i,j,a)\,\boldsymbol{A}\,]\ \boldsymbol{B}\,.
 
-   \;
 
 Wykonanie operacji elementarnej na prostokątnej macierzy 
 :math:`\,\boldsymbol{A}\ ` jest równoważne pomnożeniu (z lewej strony)
-tej macierzy przez odpowiednią macierz elementarną:
+tej macierzy przez odpowiednią macierz elementarną. Zapiszemy to jako
 
 .. admonition:: Twierdzenie. :math:`\,` 
 
@@ -181,7 +181,7 @@ Macierze permutacji
 
 Aby wykonać operację permutacji wierszy :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-wystarczy zastosować ją tylko do pierwszego czynnika iloczynu.
+należy zastosować ją tylko do pierwszego czynnika iloczynu.
 
 Wykonanie operacji permutacji wierszy :math:`\,O_{\sigma}\,` na prostokątnej macierzy 
 :math:`\,\boldsymbol{A}\ ` jest równoważne pomnożeniu (z lewej strony)

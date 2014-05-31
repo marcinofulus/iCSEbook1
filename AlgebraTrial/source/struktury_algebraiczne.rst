@@ -181,13 +181,13 @@ Przykłady ciał:
 * | pierścień :math:`\ \mathbb{Z}_n\ ` reszt modulo :math:`\,n\ ` jest ciałem (skończonym)
   | wtedy i tylko wtedy, gdy :math:`\ n\ ` jest liczbą pierwszą.
   |
-  |
 
-.. note::
+.. admonition:: Uwaga:
 
    | Często grupą (pierścieniem, ciałem) nazywa się sam zbiór :math:`\ G\ (P,\ K),\ ` 
    | o ile są w nim określone działania spełniające odpowiednie postulaty.
 
+:math:`\;`
 
 | **Przestrzeń wektorowa nad ciałem** :math:`\,K\ ` jest strukturą
   :math:`\ \ \mathbb{V}\,=\,(\,V,\,\oplus\,;\ \,K,\,+\,,\,\cdot\ \,;\ \;\boxdot\,)\,,\ `
@@ -532,7 +532,7 @@ spełniony jest warunek:
       
    x_1,x_2\,\in\,B \quad\Rightarrow\quad
    \left(\ 
-   x_1\,x_2\,\in\,B\ \ \wedge\ \ w_1+w_2\,\in B\,\ \ \wedge\ \ \lambda\,x_1\,\in\,B\ 
+   x_1+x_2\,\in\,B\ \ \wedge\ \ x_1\,x_2\,\in B\,\ \ \wedge\ \ \lambda\,x_1\,\in\,B\ 
    \right)\,.
 
 Na tej zasadzie podzbiór :math:`\ D_n(K)\ ` macierzy diagonalnych 

@@ -3,8 +3,7 @@
 Pouczający przykład z dyskusją
 ------------------------------
 
-Zastosujemy omówione w tym rozdziale metody do układu równań 
-nad ciałem :math:`\,Q:`
+Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`\,Q:`
 
 .. math::
    :nowrap:
@@ -86,7 +85,7 @@ pozostałych niewiadomych. Tym szczególnym rozwiązaniem jest
 
    x_1 = x_3 = 2,\quad x_2 = x_4 = x_5 = 0.
 
-Ostatni układ dwóch równań przepisujemy jako
+Otrzymany powyżej układ dwóch równań przepisujemy jako
 
 .. math::
    :nowrap:
@@ -236,7 +235,7 @@ Występujący w tym przykładzie jednorodny układ równań o postaci macierzowe
 można rozwiązać też innym, niestandardowym sposobem.
 
 Przede wszystkim wyznaczymy rząd macierzy :math:`\,\boldsymbol{A}\ \,`
-i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że
+i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że:
 
 * :math:`\ \text{rz}\boldsymbol{A} < 3,\,` bo wiersze są liniowo zależne
   (trzeci jest sumą pierwszych dwóch);
@@ -288,7 +287,8 @@ skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macier
 
 A zatem kolumny :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
 macierzy :math:`\,\boldsymbol{X}\,` spełniają równanie :eq:`13` :math:`\,`
-i :math:`\,` (z założonej liniowej niezależności) tworzą poszukiwaną bazę przestrzeni :math:`\,S_0.`
+i :math:`\,` (z założenia ich liniowej niezależności) tworzą poszukiwaną bazę 
+przestrzeni :math:`\,S_0.`
 
 **Wyznaczenie bazy przestrzeni rozwiązań.**
 
@@ -516,11 +516,12 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [0 0 0]
       [0 0 0]
 
-.. important:: W odróżnieniu od metod ``swap_columns()`` i :math:`\,` ``swap_rows()``, :math:`\\`
+.. admonition:: Uwaga:
+   
+   W odróżnieniu od metod ``swap_columns()`` i :math:`\,` ``swap_rows()``,
    które wykonują operacje bezpośrednio na oryginalnej macierzy, 
    użyte tutaj metody ``with_swapped_columns()`` i ``with_swapped_rows()`` 
-   zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
-   zachowując przy tym niezmieniony oryginał.  
+   zwracają przekształconą macierz zachowując przy tym niezmieniony oryginał.  
 
 .. Na uwagę zasługuje użycie metod ``with_swapped_columns()`` oraz ``with_swapped_rows()`` 
    zamiast ``swap_columns()`` oraz ``swap_rows()`` w punktach 2. i :math:`\,` 5. :math:`\ `

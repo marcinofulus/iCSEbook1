@@ -82,7 +82,7 @@ Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej o
    :label: xTAy
    
    \langle\boldsymbol{x},\boldsymbol{y}\rangle\ \ =\ \ 
-   \boldsymbol{x}^T\boldsymbol{A}\boldsymbol{y}\ \ =\ \ 
+   \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{y}\ \ =\ \ 
    \sum_{i,\,j=1}^n\ a_{ij}\;x_i\,y_j\,,
       
 gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierzą symetryczną i dodatnio określoną:
@@ -92,9 +92,9 @@ gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierz
    
    \boldsymbol{A}^T=\boldsymbol{A}\,,\qquad\
    \left[\ 
-   \boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x}\geq 0
+   \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{x}\geq 0
    \quad\land\quad
-   \left(\ \boldsymbol{x}^T\boldsymbol{A}\boldsymbol{x}=0
+   \left(\ \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{x}=0
    \ \ \Leftrightarrow\ \ 
    \boldsymbol{x}=\boldsymbol{0}\ \right)\ \right]\,,\ \ 
    \boldsymbol{x}\in R^n\,.

@@ -120,7 +120,7 @@ Dla realistycznych wartości:
 :math:`\quad mg = 1 \ \text{N}\,,
 \quad k = 1\ \frac{\text{N}}{\text{cm}}\ =\ 100\ \frac{\text{N}}{\text{m}}\,,\ ` 
 otrzymujemy :math:`\ p\,=\,0.01\ \text{m}\,.\\` 
-Zauważmy, że wynik nie zależy od długości sprężyn :math:`\,d\,.`
+Zauważmy, że we wzorach nie występuje długość sprężyn :math:`\,d\,.`
 
 Narzędzia systemu Sage pozwalają rozwiązać układ :eq:`23` dla dowolnego zadanego :math:`\,n.`
 Przy dużych :math:`\,n,\,` zamiast wykazu wartości odchyleń :math:`\,x_i\,,\,`

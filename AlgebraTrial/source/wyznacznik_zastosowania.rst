@@ -10,8 +10,8 @@ Badanie liniowej zależności wektorów
    Wyznacznik macierzy znika wtedy i tylko wtedy, 
    gdy jej kolumny są liniowo zależne. :math:`\\`
 
-   Niech :math:`\ \boldsymbol{A}\,=\,
-   [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,\in\,M_n(K).\ \,` Wtedy
+   A zatem jeżeli :math:`\ \boldsymbol{A}\,=\,
+   [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,\in\,M_n(K),\ \,` to
 
    .. math::
       
@@ -83,20 +83,15 @@ o współczynnikach z :math:`\,j`-tej kolumny macierzy :math:`\,\boldsymbol{B}=[
 Według kolumnowej reguły mnożenia macierzowego oznacza to, że 
 :math:`\ \boldsymbol{I}_n = \boldsymbol{A}\boldsymbol{B}.\ ` 
 
-A zatem, korzystając z twierdzenia Cauchy'ego o wyznaczniku iloczynu macierzy, mamy
+Korzystając z twierdzenia Cauchy'ego o wyznaczniku iloczynu macierzy, mamy
  
-.. :math:`\ \ \det\boldsymbol{A}\,\cdot\,\det\boldsymbol{B}\ =\ 
-   \det\,(\boldsymbol{A}\boldsymbol{B})\ =\ 
-   \det\boldsymbol{I}_n\ =\ 1,\ \ ` wobec czego
-   :math:`\ \ \det\boldsymbol{A}\ne 0.`
-
 .. math::
 
    \det\boldsymbol{A}\,\cdot\,\det\boldsymbol{B}\ \ =\ \ 
    \det\,(\boldsymbol{A}\boldsymbol{B})\ \ =\ \ 
-   \det\boldsymbol{I}_n\ =\ 1\,,
+   \det\boldsymbol{I}_n\ =\ 1\,.
 
-z czego wynika, że :math:`\ \det\boldsymbol{A}\ne 0,\ \,`
+Stąd :math:`\ \det\boldsymbol{A}\ne 0,\ \,`
 bo gdyby :math:`\ \det\boldsymbol{A} = 0,\ `
 to mielibyśmy :math:`\ \det\boldsymbol{A}\,\cdot\,\det\boldsymbol{B}\,=\,0.` 
 
@@ -109,7 +104,7 @@ Zostało w ten sposób udowodnione, że
    \quad\Rightarrow\quad
    \det\boldsymbol{A}\ne 0\,,
 
-co jest, :math:`\,` przez kontrapozycję, :math:`\,` równoważne stwierdzeniu, :math:`\,` że
+co przez kontrapozycję jest równoważne stwierdzeniu, :math:`\,` że
 
 .. math::
    
@@ -132,12 +127,11 @@ w bazie :math:`\ \mathcal{B}\ \ \ (j=1,2,\ldots,n),\ \,` nazywa się :math:`\,`
 *macierzą przejścia* :math:`\,` od bazy :math:`\,\mathcal{B}\ ` do bazy 
 :math:`\ \mathcal{E}.` :math:`\\`
 
-.. note::
+.. admonition:: Uwaga:
    
-   Twierdzenie 5. można również zapisać w wersji wierszowej: :math:`\\`
-
-   Wyznacznik macierzy znika wtedy i tylko wtedy, 
-   gdy jej wiersze są liniowo zależne.
+   | Twierdzenie 5. można również zapisać w wersji wierszowej:
+   | Wyznacznik macierzy znika wtedy i tylko wtedy, 
+     gdy jej wiersze są liniowo zależne.
 
 :math:`\;`
 
@@ -548,7 +542,7 @@ otrzymamy od razu rozwiązanie:
    \boldsymbol{X}\ =\ \boldsymbol{A}^{-1}\,\boldsymbol{b}\,.
 
 Aby wyprowadzić praktyczne wyrażenia dla poszczególnych niewiadomych,
-wykorzystamy równanie :eq:`rec_mat` dla macierzy odwrotnej:
+wykorzystamy wyrażenie :eq:`rec_mat` dla macierzy odwrotnej:
 
 .. math::
    :nowrap:
@@ -696,8 +690,8 @@ W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej za
 
 .. admonition:: Poeksperymentuj z Sage:
    
-   Poniższy program dla zadanego :math:`\,n\,` wyświetla macierz :math:`\,\boldsymbol{B}\ ` w jej   
-   oryginalnej oraz zredukowanej schodkowej postaci.
+   Poniższy program dla zadanego stopnia :math:`\,n\,` wyświetla macierz :math:`\,\boldsymbol{B}\ ` 
+   w jej oryginalnej oraz zredukowanej schodkowej postaci.
    W tym drugim przypadku elementy ostatniej kolumny są wartościami niewiadomych (wartości te są 
    następnie powtórzone w powiększeniu). Można tam rozpoznać w mianownikach wyznacznik :math:`\,D\,` 
    macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach wyznaczniki :math:`\,D_j\,` ze wzorów Cramera.
@@ -711,12 +705,12 @@ W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej za
 
    b = vector([var('b%d' % j) for j in range(1,n+1)])
 
-   B = A.augment(b)
-   B_red = B.rref().factor()
-   B.subdivide(n,n); B_red.subdivide(n,n)
+   B = A.augment(b); 
+   R = B.rref().factor()
+   B.subdivide(n,n); R.subdivide(n,n)
 
-   html.table([[B, '$\\rightarrow$', B_red]])
-   for i in range(n): show(B_red[i,n])
+   html.table([[B, '$\\rightarrow$', R]])
+   for i in range(n): show(R[i,n])
 
 
 

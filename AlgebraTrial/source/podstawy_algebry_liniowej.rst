@@ -87,7 +87,7 @@ i równa się wektorowi przeciwnemu do iloczynu wektora :math:`\,v\,` przez :mat
    
    (-\alpha)\cdot v\ =\ \alpha\cdot (-v)\ =\,-\,(\alpha\cdot v)\,.
 
-Dowód. Korzystając z poprzedniego twierdzenia (1) można zapisać:
+Dowód. Korzystając z poprzedniego twierdzenia 1.) można zapisać:
 
 .. math::
 
@@ -115,7 +115,7 @@ Wniosek: :math:`\ ` kładąc :math:`\,\alpha = 1\,` otrzymujemy: :math:`\ \ (-1)
    \alpha\cdot v\,-\,\beta\cdot v\,,\quad\alpha\cdot (v-w)\ =\ 
    \alpha\cdot v\,-\,\alpha\cdot w\,.
 
-Dowód. Skorzystamy z definicji odejmowania, z rozdzielności mnożenia wektorów przez skalary względem dodawania oraz z udowodnionego już twierdzenia (2):
+Dowód. Skorzystamy z definicji odejmowania, z rozdzielności mnożenia wektorów przez skalary względem dodawania oraz z udowodnionego już twierdzenia 2.):
 
 .. math::
 
@@ -167,7 +167,7 @@ a jeżeli :math:`\ v\,=\,\theta\,,\ \,`
 to :math:`\ \,\alpha\cdot v\ =\ \alpha\cdot \theta\ =\ \theta\,.`
 
 Stwierdziliśmy w ten sposób, że równoważność :eq:`fourth` jest prawdziwa
-w każdym przypadku, co kończy dowód twierdzenia (4).
+w każdym przypadku, co kończy dowód twierdzenia 4.).
 
 Kombinacje liniowe wektorów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -265,7 +265,7 @@ gdy nie jest on liniowo zależny, czyli gdy każda nietrywialna kombinacja linio
 jest różna od wektora zerowego.
 
 A zatem układ :math:`\,(x_1,x_2,\ldots,x_r)\,` jest liniowo zależny wtedy i tylko wtedy,
-gdy istnieje układ skalarów :math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_r),\,`
+gdy istnieje układ :math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_r)\,` skalarów, 
 z których co najmniej jeden jest różny od zera, taki że
 
 .. math::
@@ -484,8 +484,8 @@ Aby wykazać liniową niezależność układu :math:`\,\mathcal{B}\,,` zauważmy
 
 można zinterpretować jako przedstawienie wektora zerowego w bazie :math:`\,\mathcal{B}.\ `
 Z jednoznaczności tego przedstawienia wynika, że kombinacja trywialna jest jedyną
-kombinacją liniową wektorów układu :math:`\,\mathcal{B}\,,\ ` równą wektorowi :math:`\,\theta\,,\ `
-czyli że :math:`\,\mathcal{B}\,` jest układem liniowo niezależnym. 
+kombinacją liniową wektorów układu :math:`\,\mathcal{B}\,,\ ` równą wektorowi :math:`\,\theta.\ `
+Oznacza to, że :math:`\,\mathcal{B}\,` jest układem liniowo niezależnym. 
 
 :math:`\Leftarrow\,:\ ` Zakładamy, że :math:`\,\mathcal{B}\ `
 jest liniowo niezależnym układem generatorów przestrzeni :math:`\,V.`
@@ -523,9 +523,13 @@ Twierdzenie 2. podaje warunek konieczny i wystarczający dla bazy,
 mogłoby zatem być alternatywną definicją tego pojęcia.
 Możliwe jest jeszcze inne podejście, oparte na podanej niżej definicji i twierdzeniu 3.
 
+.. Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
+   *maksymalnym liniowo niezależnym układem*, gdy nie można do niego dołączyć
+   żadnego wektora tak, aby powstały układ był liniowo niezależny.
+
 Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
-*maksymalnym liniowo niezależnym układem*, gdy nie można do niego dołączyć
-żadnego wektora tak, aby powstały układ był liniowo niezależny.
+*maksymalnym liniowo niezależnym układem*, gdy dołączenie doń 
+jakiegokolwiek wektora z :math:`\,V\,` daje układ liniowo zależny.
 
 **Twierdzenie 3.** :math:`\,` Układ :math:`\,\mathcal{B}\,` 
 wektorów przestrzeni :math:`\,V\,` jest bazą tej przestrzeni
@@ -536,8 +540,13 @@ wtedy i tylko wtedy, :math:`\,` gdy jest on maksymalnym liniowo niezależnym uk�
 :math:`\Rightarrow\,:\ ` Zakładamy, że układ :math:`\,\mathcal{B}\,`
 jest bazą przestrzeni :math:`\,V.`
 
-Wtedy dla każdego wektora :math:`\,v\in V\,` zachodzi rozkład :eq:`baza`,
-co oznacza, że dla każdego wektora :math:`\,v\in V\,`
+.. Wtedy dla każdego wektora :math:`\,v\in V\,` zachodzi rozkład :eq:`baza`,
+   co oznacza, że dla każdego wektora :math:`\,v\in V\,`
+   układ :math:`\,(v,v_1,v_2,\ldots,v_n)\,` jest liniowo zależny.
+
+Wtedy :math:`\,\mathcal{B}\,` jest układem liniowo niezależnym, 
+a dla każdego wektora :math:`\,v\in V\,` zachodzi rozkład :eq:`baza`.
+Oznacza to, że dla każdego wektora :math:`\,v\in V\,`
 układ :math:`\,(v,v_1,v_2,\ldots,v_n)\,` jest liniowo zależny.
 A zatem :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,`
 jest maksymalnym liniowo niezależnym układem.
@@ -588,7 +597,7 @@ przestrzeni :math:`\,V,\ ` czyli bazą :math:`\,V.` :math:`\\`
 
 Każda baza przestrzeni wektorowej jest układem liniowo niezależnym. :math:`\\`
 Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą: :math:`\\`
-żaden układ liniowo zależny nie jest bazą. :math:`\\`
+żaden układ liniowo zależny nie może być bazą. :math:`\\`
 Jednak sama liniowa niezależność nie jest warunkiem wystarczającym. :math:`\\`
 Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele, :math:`\\`
 aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.

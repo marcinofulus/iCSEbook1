@@ -176,9 +176,8 @@ Polecenie ``SymmetricGroup(n)`` konstruuje grupę permutacji zbioru
    (1,3)(2,4), (1,3,2,4), (1,4,3,2), (1,4,2), (1,4,3), (1,4), (1,4,2,3),
    (1,4)(2,3)]
 
-Metoda ``matrix()`` zastosowana do elementu grupy permutacji daje macierz permutacji.
-Tutaj znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4,\,` która 
-zapisie dwuwierszowym ma postać
+Metoda ``matrix()`` zastosowana do elementu grupy permutacji daje macierz tego elementu.
+Dla przykładu znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4\,:`
 
 .. math::
    

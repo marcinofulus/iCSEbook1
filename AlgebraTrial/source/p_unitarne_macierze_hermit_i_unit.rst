@@ -10,7 +10,7 @@ Sprzężenie hermitowskie macierzy
    *Sprzężeniem hermitowskim* prostokątnej zespolonej macierzy 
    :math:`\ \boldsymbol{A}\,=\,[\,\alpha_{ij}]_{m\times n}\ `
    jest macierz :math:`\ \boldsymbol{A}^+=\,[\,\alpha_{ij}^+\,]_{n\times m}\,,\ \,`
-   gdzie :math:`\ \alpha_{ij}^+\,:\,=\,\alpha_{ji}^*,\ \ i=1,2,\dots,n,\ \ j=1,2,\dots,m\,.`
+   gdzie :math:`\ \alpha_{ij}^+\,:\,=\,\alpha_{ji}^*\,,\ ` :math:`i=1,2,\dots,n,\ \ j=1,2,\dots,m\,.`
    
    Operacja sprzężenia hermitowskiego jest zatem złożeniem transponowania macierzy :math:`\\`
    i sprzężenia zespolonego jej elementów (dwie ostatnie operacje są przemienne):
@@ -21,6 +21,11 @@ Sprzężenie hermitowskie macierzy
       \boldsymbol{A}^+\,:\,=\ (\boldsymbol{A}^T)^*\,=\ (\boldsymbol{A}^*)^T\,.
 
 Nazwa pochodzi od nazwiska francuskiego matematyka Charlesa Hermite'a (1822-1901).
+
+W analogii do sprzężenia zespolonego, termin "sprzężenie hermitowskie" będzie oznaczać również operację, której wynikiem jest sprzężenie hermitowskie macierzy..
+
+.. W dalszym ciągu termin "sprzężenie hermitowskie" będzie oznaczać (zależnie do kontekstu)
+   operację    sprzężenia bądź jej wynik.
 
 **Przykład.**
 
@@ -76,7 +81,7 @@ Nazwa pochodzi od nazwiska francuskiego matematyka Charlesa Hermite'a (1822-1901
       \alpha_1,\alpha_2\in C\,,\ \ \boldsymbol{A}_1,\boldsymbol{A}_2\in M_{m\times n}(C)\,.
 
 Dla rzeczywistej macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(R)\ `
-operacja sprzężenia hermitowskiego sprowadza się do transpozycji: 
+sprzężenie hermitowskie sprowadza się do transpozycji: 
 :math:`\,\boldsymbol{A}^+\,=\ \boldsymbol{A}^T\,.`
 
 W przestrzeni :math:`\,C^n\ ` iloczyn skalarny wektorów :math:`\ \  
@@ -145,21 +150,22 @@ Podstawiając za
    \langle\,\boldsymbol{e}_i,\boldsymbol{B}\boldsymbol{e}_j\rangle\ =\ 
    \langle\,\boldsymbol{A}\boldsymbol{e}_i,\boldsymbol{e}_j\,\rangle\ =\ 
    \langle\,\boldsymbol{e}_j,\boldsymbol{A}\boldsymbol{e}_i\rangle^*\ =\ 
-   (\boldsymbol{e}_j^+\boldsymbol{A}\;\boldsymbol{e}_i)^*\,=\ \alpha_{ji}^*\,,
+   (\boldsymbol{e}_j^+\boldsymbol{A}\;\boldsymbol{e}_i)^*\,=\ \alpha_{ji}^*\,=\ 
+   \alpha_{ij}^+\,,
 
 co oznacza równość macierzową :math:`\ \boldsymbol{B}=\boldsymbol{A}^+\,.`
 
 Warunek :eq:`x_A_y` można więc przyjąć jako równoważną definicję sprzężenia hermitowskiego
-:math:`\ \boldsymbol{A}^+\ ` *kwadratowej* macierzy :math:`\,\boldsymbol{A}.\ `
-Jak zobaczymy dalej, w analogiczny sposób definiuje się sprzężenie hermitowskie operatora liniowego.
+:math:`\ \boldsymbol{A}^+\,` *kwadratowej* macierzy :math:`\,\boldsymbol{A}.\ `
+Jak zobaczymy dalej, w taki właśnie sposób definiuje się sprzężenie hermitowskie operatora liniowego.
 
 .. Tutaj raczej przyjęliśmy bardziej ogólne określenie :eq:`A_plus`, natomiast warunek analogiczny
    do :eq:`x_A_y` pojawi się w definicji sprzężenia hermitowskiego operatora liniowego.
 
 .. admonition:: Twierdzenie 6.
    
-   Wyznacznik sprzężenia hermitowskiego macierzy równa się sprzężeniu zespolonemu 
-   jej wyznacznika:
+   Wyznacznik sprzężenia hermitowskiego zespolonej macierzy kwadratowej 
+   równa się sprzężeniu zespolonemu jej wyznacznika:
    
    .. math::
       
@@ -183,7 +189,7 @@ Macierze hermitowskie
 .. admonition:: Definicja.
 
    Macierz :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\in M_n(C)\ `
-   nazywa się *macierzą hermitowską*, gdy równa się swojemu sprzężeniu hermitowskiemu:
+   nazywa się *macierzą hermitowską*, :math:`\,` gdy równa się swojemu sprzężeniu hermitowskiemu:
    
    .. math::
       :label: A_hermit
@@ -202,7 +208,7 @@ Macierze hermitowskie
 
 Przytoczone poniżej własności polegają na tym,  
 że pewna wielkość związana z (zespoloną) :math:`\,` macierzą hermitowską jest rzeczywista. 
-Gdy trzeba pokazać, że dana liczba zespolona jest faktycznie liczbą rzeczywistą,
+Gdy trzeba pokazać, że dana liczba zespolona jest liczbą rzeczywistą,
 przydatny jest następujący 
 
 **Lemat.** :math:`\,` Niech :math:`\,z\in C.\ \,` 
@@ -215,9 +221,9 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
 **Własności** macierzy hermitowskich.
 
 1. Diagonalne elementy macierzy hermitowskiej są liczbami rzeczywistymi. :math:`\\`
-   Zapisując warunek :eq:`A_hermit` dla :math:`\,i=j\ ` otrzymujemy:
-   :math:`\ \alpha_{ii}=\alpha_{ii}^*\,,\ \ i=1,2,\dots,n\,,\ ` :math:`\\`
-   co oznacza, że :math:`\,\alpha_{ii}\in R\,,\ \ i=1,2,\dots,n\,.`
+   Istotnie, zapisując warunek :eq:`A_hermit` dla :math:`\,i=j\ ` otrzymujemy
+   :math:`\ \alpha_{ii}=\alpha_{ii}^*\,,\ ` :math:`\\`
+   co oznacza, że :math:`\ \alpha_{ii}\in R\,,\ \ i=1,2,\dots,n\,.`
    
 
 2. Ślad i wyznacznik macierzy hermitowskiej są rzeczywiste:
@@ -366,7 +372,7 @@ Macierze unitarne
       \boldsymbol{B}^+\boldsymbol{B}\,=\,\boldsymbol{B}\boldsymbol{B}^+\,=\,\boldsymbol{I}_n\,.
 
 1. Warunek :math:`\ \boldsymbol{B}\boldsymbol{B}^+=\boldsymbol{I}_n\ ` można przepisać jako
-   :math:`\ (\boldsymbol{B}^+)^+\boldsymbol{B}^+=\boldsymbol{I}_n\,,\ ` z czego wynika,
+   :math:`\ (\boldsymbol{B}^+)^+\boldsymbol{B}^+=\boldsymbol{I}_n\ ` co oznacza,
    że jeśli :math:`\ \boldsymbol{B}\in M_n(C)\ ` jest macierzą unitarną, to unitarna
    jest również macierz sprzężona :math:`\ \boldsymbol{B}^+\ ` oraz macierz odwrotna
    :math:`\ \boldsymbol{B}^{-1}\,.`

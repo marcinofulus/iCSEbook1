@@ -9,7 +9,7 @@ Przestrzenie unitarne
    .. math::
       
       |\,\langle x,y\rangle\,|^2\ \ \leq\ \ 
-      \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(C)\,,
+      \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V\,,
    
    przechodzi w równość wtedy i tylko wtedy, :math:`\,`
    gdy wektory :math:`\,x,y\ ` są liniowo zależne:
@@ -65,7 +65,8 @@ co przez kontrapozycję jest równoważne implikacji
 
 :math:`\ \Leftarrow\,:\ ` Zakładamy, że wektory :math:`\,x,y\ ` są liniowo zależne. 
 
-Wtedy :math:`\ \,y=\alpha\,x\ \ \text{lub}\ \ \,x=\alpha\,y\ \,` dla pewnego :math:`\ \alpha\in C.`
+Wtedy :math:`\ \,y=\alpha\,x\ \ \text{lub}\ \ \,x=\beta\,y\ \,` dla pewnych 
+:math:`\ \alpha,\beta\in C.`
 
 W pierwszym przypadku
 
@@ -87,13 +88,13 @@ W drugim przypadku
    
    \begin{array}{l}
    |\,\langle x,y\rangle\,|^2\ \,=\ \,
-   |\,\langle\alpha\,y,\,y\rangle\,|^2\ \,=\ \,
-   |\,\alpha^*\,\langle y,y\rangle\,|^2\ \,=\ \,|\alpha|^2\ \langle y,y\rangle^2\,,
+   |\,\langle\beta\,y,\,y\rangle\,|^2\ \,=\ \,
+   |\,\beta^*\,\langle y,y\rangle\,|^2\ \,=\ \,|\beta|^2\ \langle y,y\rangle^2\,,
    \\
    \langle x,x\rangle\,\langle y,y\rangle\ \,=\ \,
-   \langle\alpha\,y,\,\alpha\,y\rangle\,\langle y,y\rangle\ \,=\ \,
-   \alpha^*\alpha\ \langle y,y\rangle\ \langle y,y\rangle\,=\ \,
-   |\alpha|^2\ \langle y,y\rangle^2\,.
+   \langle\beta\,y,\,\beta\,y\rangle\,\langle y,y\rangle\ \,=\ \,
+   \beta^*\beta\ \langle y,y\rangle\ \langle y,y\rangle\,=\ \,
+   |\beta|^2\ \langle y,y\rangle^2\,.
    \end{array}
 
 W obydwu sytuacjach 
@@ -109,12 +110,13 @@ W ten sposób stwierdziliśmy, że
    
    \;
 
-Lemat 1. przedstawia warunki konieczne i wystarczające dla *operatora zerowego*, :math:`\\`
-zdefiniowanego przez warunek
+Lemat 1. przedstawia warunki konieczne i wystarczające 
+dla *operatora zerowego* :math:`\,\mathcal{O},` :math:`\\` 
+zdefiniowanego przez warunek :math:`\ \mathcal{O}\,x=\theta.`
 
-.. math::
+.. .. math::
    
-   F\ =\ 0\qquad\Leftrightarrow\qquad Fx=\theta\quad\text{dla wszystkich}\ \ x\in V . 
+   F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad Fx=\theta\quad\text{dla wszystkich}\ \ x\in V . 
    
 .. admonition:: Lemat 1. :math:`\\`
    
@@ -125,7 +127,7 @@ zdefiniowanego przez warunek
       
       .. math::
          
-         F\ =\ 0\qquad\Leftrightarrow\qquad
+         F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
          \langle\,x,Fy\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x,y\in V\,.
 
    1. Jeżeli :math:`\ F\ ` jest operatorem samosprzężonym: :math:`\ F^+=\,F\,,\ ` :math:`\\`
@@ -133,21 +135,21 @@ zdefiniowanego przez warunek
       
       .. math::
          
-         F\ =\ 0\qquad\Leftrightarrow\qquad
+         F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
          \langle\,x,Fx\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V\,.
 
    2. Jeżeli :math:`\ F\ ` jest określony na przestrzeni unitarnej :math:`\,V(C)\,,\ ` to
       
       .. math::
          
-         F\ =\ 0\qquad\Leftrightarrow\qquad
+         F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
          \langle\,x,Fx\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V\,.
 
 **Dowód.**
 
-0. :math:`\Rightarrow\ :\ ` Jeżeli :math:`\ F=0\,,\ \,` to
+0. :math:`\Rightarrow\ :\ ` Jeżeli :math:`\ F=\mathcal{O}\,,\ \,` to
    :math:`\ \,\langle\,x,Fy\,\rangle\,=\,
-   \langle\,x,0\,y\,\rangle\,=\,
+   \langle\,x,\mathcal{O}\,y\,\rangle\,=\,
    \langle\,x,\theta\,\rangle\,=\,0\,.`
    
    :math:`\Leftarrow\ :\ ` 
@@ -155,7 +157,7 @@ zdefiniowanego przez warunek
 
    Kładąc :math:`\ x=Fy\ ` mamy :math:`\ \langle\,Fy,Fy\,\rangle=0\,,\ `
    czyli :math:`\ Fy=\theta\quad\text{dla wszystkich}\ \ y\in V,\ \\` 
-   co oznacza, że :math:`\ F=0\,.`
+   co oznacza, że :math:`\ F=\mathcal{O}\,.`
 
 1. :math:`\Rightarrow\ :\ ` Dowód jak w punkcie 0.
 
@@ -186,7 +188,8 @@ zdefiniowanego przez warunek
 
    Podstawienie :eq:`y_F_x` do :eq:`x_F_y` daje równości
    :math:`\ \langle\,x,Fy\,\rangle=0\,,\ \ x,y\in V\,,\\`
-   które, :math:`\,` na podstawie punktu 0., :math:`\,` są równoważne warunkowi :math:`\ F=0.\\`
+   które, :math:`\,` na podstawie punktu 0., :math:`\,` są równoważne warunkowi 
+   :math:`\ F=\mathcal{O}.\\`
 
 2. :math:`\Rightarrow\ :\ ` Dowód jak w punkcie 0.
 
@@ -213,7 +216,7 @@ zdefiniowanego przez warunek
    
    Dodając stronami dwie ostatnie równości stwierdzamy, że
    :math:`\ \langle\,x,Fy\,\rangle=0\,,\ \ x,y\in V\,,\ ` 
-   skąd :math:`\,F=0.\,` 
+   skąd :math:`\,F=\mathcal{O}.\,` 
    W zespolonej przestrzeni :math:`V\,` założenie samosprzężoności (hermitowskości)
    operatora :math:`\ F\ ` nie było potrzebne. :math:`\\`
 
@@ -236,7 +239,7 @@ Rzeczywiście, z warunku :math:`\ \ \langle\,x,Fx\,\rangle=\langle\,x,G\,x\,\ran
 \ \ \text{dla wszystkich}\ \ x\in V\ \ ` wynika, że :math:`\\ \\` 
 :math:`\ \ \langle\,x,(F-G)\,x\,\rangle\,=\,0\,,\ \ x\in V\,,\ ` przy czym, w przypadku 1.:
 :math:`\ \ (F-G)^+=F^+-G^+=F-G\,.\\ \\` 
-Stąd :math:`\ \ F-G=0\,,\ \ ` czyli :math:`\ \ F=G.`
+Stąd :math:`\ \ F-G=\mathcal{O}\,,\ \ ` czyli :math:`\ \ F=G.`
 
 Zapiszemy teraz i udowodnimy ważne kryterium hermitowskości operatora liniowego:
 

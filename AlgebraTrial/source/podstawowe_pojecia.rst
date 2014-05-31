@@ -122,9 +122,9 @@ Odwzorowanie :math:`\ f: X\to Y\ ` jest:
   | Wtedy każdemu elementowi :math:`\,y\in Y\ ` 
     odpowiada *co najmniej jeden* element :math:`\,x\in X.`
 
-* | *injekcją* :math:`\,` (odwzorowaniem różnowartościowym), :math:`\,` gdy różnym argumentom
-    odpowiadają różne obrazy: 
-    :math:`\quad x_1\neq x_2\ \Rightarrow\ f(x_1)\neq f(x_2),\quad x_1,x_2\in X\,.`
+* | *injekcją* :math:`\,` (odwzorowaniem różnowartościowym), :math:`\,` gdy 
+    :math:`\ \ x_1\neq x_2\ \Rightarrow\ f(x_1)\neq f(x_2)\ `
+  | (czyli gdy różnym argumentom :math:`\ x_1,x_2\in X\ ` odpowiadają różne obrazy).
   | Wtedy każdemu elementowi :math:`\,y\in Y\ ` 
     odpowiada *co najwyżej jeden* element :math:`\,x\in X.`
 

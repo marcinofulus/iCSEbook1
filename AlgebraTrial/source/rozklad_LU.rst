@@ -197,7 +197,7 @@ Zastosujmy metodę ``LU()`` do macierzy :math:`\,\boldsymbol{A}\,` z przykładu:
    sage: A = matrix(QQ, [[2,1,1], [4,-6,0],[-2,7,2]])
    sage: (P,L,U) = A.LU()
    sage: print A==P*L*U
-   sage: html.table([[A, '=', P, L, U]])
+   sage: html.table([[A, '=', P, '*', L, '*', U]])
    
    True
 
@@ -213,12 +213,12 @@ Zastosujmy metodę ``LU()`` do macierzy :math:`\,\boldsymbol{A}\,` z przykładu:
        0 & 1 & 0 \\
        1 & 0 & 0 \\
        0 & 0 & 1
-   \end{array}\right)\  \
+   \end{array}\right)\ *\ 
    \left(\begin{array}{rrr}
        1 & 0 & 0 \\
        \textstyle{1\over 2} & 1 & 0 \\
       -\textstyle{1\over 2} & 1 & 1
-   \end{array}\right)\ \ 
+   \end{array}\right)\ *\  
    \left(\begin{array}{rrr}
       4 & -6 & 0 \\
       0 &  4 & 1 \\
@@ -250,7 +250,11 @@ Jak widać, rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` w ogólności nie 
 
 :math:`\;`
 
-.. note:: Metoda ``LU()`` działa poprawnie  na pierścieniach dokładnych, np. na ciele liczb wymiernych QQ. W przypadku obliczeń numerycznych należy użyć ciała RDF liczb rzeczywistych o podwójnej precyzji albo ciała CDF liczb zespolonych o podwójnej precyzji.
+.. admonition:: Uwaga:
+
+   Metoda ``LU()`` działa poprawnie  na pierścieniach dokładnych, np. na ciele liczb wymiernych QQ. 
+   Przy obliczeniach numerycznych należy użyć ciała RDF albo CDF 
+   liczb rzeczywistych albo zespolonych o podwójnej precyzji.
 
 Zastosowania rozkładu LU
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -388,8 +392,7 @@ w postaci kolumnowej:
    \qquad
    \boldsymbol{I}_n\ =\ \left(\boldsymbol{e}_1,\ \boldsymbol{e}_2,\ \dots,\ \boldsymbol{e}_n\right)
 
-i odwołując się do definicji mnożenia macierzowego, otrzymujemy :math:`\,n\,`
-układów równań, każdy o :math:`\,n\,` niewiadomych:
+i odwołując się do definicji (a dokładnie: do kolumnowej reguły) mnożenia macierzowego, otrzymujemy :math:`\,n\,` układów równań, każdy o :math:`\,n\,` niewiadomych:
 
 .. math::
    

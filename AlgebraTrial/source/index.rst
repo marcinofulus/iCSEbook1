@@ -10,9 +10,10 @@ Wykłady z Algebry Liniowej
 Wstęp
 =====
 
+
 .. toctree::
 
-   Uwagi techniczne (tylko do użytku wewnętrznego) <uwagi_techniczne>
+   uwagi_techniczne
    podstawowe_pojecia
    struktury_algebraiczne
    podstawy_algebry_liniowej
@@ -153,7 +154,7 @@ Dowody wybranych twierdzeń
 
 .. toctree::
 
-   dowody_wstep   
+   dowody_podstawy_algebry_liniowej   
    dowody_operacje_na_macierzach
    dowody_przeksztalcenia_lin
    dowody_problem_wlasny

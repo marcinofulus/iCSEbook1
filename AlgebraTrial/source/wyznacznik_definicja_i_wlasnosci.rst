@@ -236,7 +236,8 @@ własności :math:`\,` IIIa. :math:`\,` wynika, :math:`\,` że dla :math:`\,\lam
    
 .. admonition:: Własność :math:`\,` IIIc. :math:`\,`
    
-   Dodanie do pewnej kolumny innej kolumny pomnożonej przez dowolną liczbę nie zmienia wyznacznika.
+   Dodanie do pewnej kolumny innej kolumny pomnożonej przez dowolną liczbę 
+   nie zmienia wartości wyznacznika.
 
 **Dowód.** :math:`\,` Własność ta wynika z :math:`\,` 1. :math:`\,` i :math:`\,` 2. :math:`\,` postulatu oraz z udowodnionej już własności IIIb.:
 
