@@ -163,11 +163,12 @@ Dowody wybranych twierdzeń
 Zadania z Algebry liniowej
 ==========================
 
-W tej sekcji znajdują się zadania obowiązujące na zaliczenie i egzamin.
+*W tym rozdziale znajdują się zadania obowiązujące przy zaliczeniu i egzaminie.*
 
 .. toctree::
    
-   zadania_01
+   zadania_1
+   zadania_2
 
 Indices and tables
 ==================
