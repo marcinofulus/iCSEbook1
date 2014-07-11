@@ -160,6 +160,8 @@ otrzymać zależność dorgi od czasu:
 .. end of output
 
 i oglądamy wyniki.
+
+
 .. sagecellserver::
 
     p1 = list_plot(zip(t-t[0],a),plotjoined=True,gridlines=True,fontsize=14,axes_labels=['$t$','$a_z$'],figsize=[5,2] )
@@ -186,6 +188,6 @@ i oglądamy wyniki.
 
    .. end of output
 
-Po wykonaniu powyższego kodu można się przekoań, że  winda zjechała w dół na ok. :math:`10` m.
+Po wykonaniu powyższego kodu można się przekonać, że winda zjechała w dół na ok. :math:`10` m.
 
 
