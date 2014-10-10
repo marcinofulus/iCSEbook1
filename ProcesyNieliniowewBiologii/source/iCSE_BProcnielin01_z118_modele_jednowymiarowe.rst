@@ -214,6 +214,26 @@ W SAGE można bardzo łatwo otrzymać postać analityczną rozwiązania równani
 
 .. end of output
 
+
+**ZADANIE:**   Dane eksperymentalne  dotyczące wzrostu bakterii  *Vibrio natrigens*  są nastepujace (patrz http://mathinsight.org/bacteria_growth_initial_model)
+
+
+    ===========  ================
+     t  (min)       N (gęstość)
+    ===========  ================
+       0                0.022
+      16                0.036
+      32                0.060
+      48                0.101
+      64                0.169
+    ===========  ================
+
+
+Vibrio natrigens
+
+Sprawdź, czy model Malthusa opisuje powyższy wzrost kolonii bakterii.
+Oceń rzetelność tego modelu.
+
 .. code-block:: python
 
     sage: t = [0 , 16 ,  32 , 48 , 64 ]
@@ -241,20 +261,20 @@ Przedstawiamy  dane wzrostu bakterii na  skali logarytmicznej:
 
 .. end of output
 
-Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę dopasowania danych eksperymentalnych do krzywej: :math:`n(t) = a \; e^{ b t}`:
+Z grubsza wygląda to na linię prostą. Aby to sprawdzić,  wykonamy procedurę dopasowania danych eksperymentalnych do krzywej: :math:`n(t) = c \; e^{ k t}`:
 
 
 .. code-block:: python
 
     sage: var('x a b')
-    sage: model(x) = a * exp(b * x )
+    sage: model(x) = c * exp(k * x )
     sage: fit = find_fit (zip(t,X), model, solution_dict=True,initial_guess=(.1,.1)) 
     sage: fit
 
 
 .. MATH::
 
-    \{b: 0.032184803220426876, a: 0.021538179879268291\}
+    \{k: 0.032184803220426876, c: 0.021538179879268291\}
 
 .. end of output
 
@@ -291,10 +311,10 @@ Parametr :code:`initial_guess`  ustala punkt startowy dla rozpoczęcia iteracji 
 .. end of output
 
 
-Ostatnia liczba to wartość $k$ obliczona z danych dla wzrostu
+Ostatnia liczba to wartość :math:`k` obliczona z danych dla wzrostu
 bakterii. Jest on bardzo bliska wartości b obliczonej z dopasowania
-danych do krzywej eksponencjalnej: :math:`n(t) = a \exp(a t)`. Stała
-:math:`a` też jest bliska wartości 0.22 z danych.
+danych do krzywej eksponencjalnej: :math:`n(t) = c \exp(k t)`. Stała
+:math:`c` też jest bliska wartości :math:`0.022` z danych.
 
 
 
@@ -307,25 +327,6 @@ danych do krzywej eksponencjalnej: :math:`n(t) = a \exp(a t)`. Stała
 
 
 
-
-**ZADANIE:**   Dane eksperymentalne  dotyczące wzrostu bakterii  *Vibrio natrigens*  są nastepujace (patrz http://mathinsight.org/bacteria_growth_initial_model)
-
-
-    ===========  ================
-     t  (min)       N (gęstość)
-    ===========  ================
-       0                0.022
-      16                0.036
-      32                0.060
-      48                0.101
-      64                0.169
-    ===========  ================
-
-
-Vibrio natrigens
-
-Sprawdź, czy model Malthusa opisuje powyższy wzrost kolonii bakterii.
-Oceń rzetelność tego modelu.
 
 
 Model Verhulsta
