@@ -27,6 +27,20 @@ myślisz" dostępnej w formacie PDF na stronie projektu iCSE.
    Nauka z komputerem - dlaczego? <wstep>
 
 
+Warsztaty z konferencji iCSE4schools
+====================================
+
+
+.. toctree::
+   :maxdepth: 1
+
+
+   Parrondos_paradox
+
+
+
+
+
 
 Matematyka ,,w domu i w zagrodzie"
 ==================================
