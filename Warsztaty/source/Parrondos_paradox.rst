@@ -284,7 +284,7 @@ more readable. Also adding some documentation is always a good idea.
   Function names can be used like variables. Below we will define
   functions called :code:`game_a` and :code:`game_b`. It therefore
   makes sense to define a tuple
-  (:code:`game_a`,:code:`game_b`,:code:`game_a`,:code:`game_b`)
+  (:code:`game_a`, :code:`game_b`, :code:`game_a`, :code:`game_b`)
   indicating which games should be played in turn. Addressing the
   tuple is done by appending :code:`[]`, where has to be replaced by
   an expression determining the index. Note that the first entry is
