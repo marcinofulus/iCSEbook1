@@ -3,16 +3,27 @@
 
 .. **0:08\-0:20**
 
-
 Parrondo's paradox
 ==================
 
-Literature:
+.. admonition:: Abstract
 
+  Parrondo's paradox is a combination of games which behaves quite
+  counterintuively. Beyond its curious behavior, it provides a simple
+  illustration of a physical system, the so-called flashing ratchet.
+  After giving some background information on Parrondo's paradox, we
+  will explore several approaches to a numerical implementation. An
+  object-oriented approach will finally allow us to study in some
+  detail various aspects of Parrondo's paradox. Readers less
+  interested in the programming aspects can skip that part and after
+  having read the introduction can go directly to the last section.
 
+  Literature:
 
-- `J. M. R. Parrondo and Luis Dinís, Contemp. Phys.  45 , 147 (2004) <http://dx.doi.org/10.1080/00107510310001644836>`_ 
-- `Parrondo's paradox − Wikipedia, The Free Encyclopedia <http://en.wikipedia.org/wiki/Parrondo%27s_paradox>`_ 
+  - `J. M. R. Parrondo and Luis Dinís, Contemp. Phys. 45, 147 (2004)
+    <http://dx.doi.org/10.1080/00107510310001644836>`_ 
+  - `Parrondo's paradox – Wikipedia, The Free Encyclopedia
+    <http://en.wikipedia.org/wiki/Parrondo%27s_paradox>`_ 
 
 
 
@@ -21,8 +32,6 @@ Literature:
    .. raw:: html
 
        <iframe width="420" height="280" src="https://www.youtube.com/embed/TQ31Md9KPRM?start=8&end=585&version=3&loop=1&controls=2" frameborder="0" allowfullscreen></iframe>
-
-
 
 In Parrondo's paradoxon, a flashing ratchet is simulated by two games
 representing the situations with the potential switched on and off. In
@@ -62,7 +71,7 @@ not only broaden but also move to the left in the course of time.
 
 
 A specific type of a Brownian ratchet is the so\-called *flashing
-ratchet* , where during certain periods of time a sawtooth potential
+ratchet*, where during certain periods of time a sawtooth potential
 (see figure below) is switched on. If the sawtooth potential is
 permanently switched on, the diffusive motion will not have a
 preferential direction. If the potential is tilted to the left,
@@ -117,19 +126,21 @@ looses otherwise.
 .. sagecellserver::
 
    for n in range(10):
-       print 20*random()-10
+       print random()
 
 
 .. end of output
 
-**Note on Python:** Indentation is used as a syntax markup. As long as
- the code is indented relative to the for :code:`loop` statement (first line
- above), the code is repeated within the loop. Once the indented block
- terminates, Python knows that the following code is no longer part of
- the loop. The same indentation concept holds for example for :code:`if/else`
- constructs and function and class definitions, all of which we will
- encounter below. Indentation needs to be consistent. Make it a rule
- to always indent by 4 spaces per indentation level.
+.. admonition:: Note on Python 
+
+  Indentation is used as a syntax markup. As long as the code is indented
+  relative to the for :code:`loop` statement (first line above), the code is
+  repeated within the loop. Once the indented block terminates, Python knows
+  that the following code is no longer part of the loop. The same indentation
+  concept holds for example for :code:`if/else` constructs and function and
+  class definitions, all of which we will encounter below. Indentation needs to
+  be consistent. Make it a rule to always indent by 4 spaces per indentation
+  level.
 
 
 .. **18:00\-19:50**
@@ -157,7 +168,7 @@ Game A
 
 
 We win if the random number is below :math:`0.5-\epsilon`, otherwise
-we loose. For ε>0, we have to face it: We will loose in the long
+we loose. For :math:`\epsilon>0`, we have to face it: We will loose in the long
 run. For our numerical runs, let us use :math:`\epsilon=0.005`.
 
 
@@ -168,7 +179,7 @@ changes are important.
 .. admonition:: Hint 
 
   In the following, the arrow <\-\-\- indicates that you should insert
-  some code. It is always preceded by a # which indicates a comment in
+  some code. It is always preceded by a :code:`#` which indicates a comment in
   Python. You will need a for loop and a branch, both of which we have
   already briefly seen above.
 
@@ -176,14 +187,18 @@ changes are important.
 .. sagecellserver::
 
     sage: # <--- define the parameters needed for this game
+
     sage: # evolution is a list of the amount of money we possess
     sage: # after each game
     sage: evolution = [capital]  # <--- have you defined capital?
+
     sage: # <--- implement a loop in which game A is played several
     sage: #      times, change the variable capital appropriately
+
     sage: # the following line is needed to append the new value
     sage: # to the list:
     ...       evolution.append(capital)
+
     sage: # the following line displays the data
     sage: list_plot(evolution, pointsize=1)
 
@@ -204,17 +219,17 @@ game is played.
 
 
 
-#. Our capital is a multiple of  *m* :  
+#. Our capital is a multiple of :math:`m`:  
    We win only if the random number is below :math:`\frac{1}{10}-\epsilon`. Otherwise we loose. A pretty bad situation…
 
-#. Our capital is not a multiple of  *m* :  
+#. Our capital is not a multiple of :math:`m`:  
 
   We win if the random number is below :math:`\frac{3}{4}-\epsilon`. Otherwise we loose. This sounds extremely good…
 
 
 But: For :math:`\epsilon>0`, we still loose in the long run.
 
-*m*  is an integer which we choose to be 3 in the following.
+:math:`m` is an integer which we choose to be 3 in the following.
 
 
 .. sagecellserver::
@@ -222,12 +237,14 @@ But: For :math:`\epsilon>0`, we still loose in the long run.
     sage: # <--- define the required parameters
     sage: #      eps is already known from above and does not need
     sage: #      to be defined again
+
     sage: evolution = [capital]
+
     sage: # <--- You will need to write a for loop and nested branches
     sage: #      1. Is our capital a multiple of m?
     sage: #      2. Is the random number below the threshold or above?
     sage: #      Remember to indent appropriately.
-    ...       
+
     sage: list_plot(evolution, pointsize=1)
 
 
@@ -242,9 +259,11 @@ We now play a series of games alternating between two games A and two games B in
 
 What do you expect? Will we loose again?
 
+.. admonition:: Hint 
 
-**A hint:**  One way to decide which game to play is by using the number of the game and determining the rest resulting from a division by 4. This is done in Python by means of the modulo operator  %
- . See also the following example:
+  One way to decide which game to play is by using the number of the game and determining the rest resulting
+  from a division by 4. This is done in Python by means of the modulo operator :code:`%`. See also the following
+  example:
 
 
 .. sagecellserver::
@@ -261,8 +280,9 @@ But now it's your turn. Use the techniques learned above to implement a AABB seq
 
     sage: capital = 0
     sage: evolution = [capital]
+
     sage: # <--- supply the code for the AABB sequence
-    ...       
+
     sage: list_plot(evolution, pointsize=1)
 
 
@@ -281,50 +301,48 @@ more readable. Also adding some documentation is always a good idea.
 
 .. admonition:: Hint  
 
-  Function names can be used like variables. Below we will define
-  functions called :code:`game_a` and :code:`game_b`. It therefore
-  makes sense to define a tuple
-  (:code:`game_a`, :code:`game_b`, :code:`game_a`, :code:`game_b`)
-  indicating which games should be played in turn. Addressing the
-  tuple is done by appending :code:`[]`, where has to be replaced by
-  an expression determining the index. Note that the first entry is
-  accessed by index 0, not 1! Since an element of our specific tuple
-  is a function name, it can be called like any other function by
-  appending arguments in parentheses.
+  Function names can be used like variables. Below we will define functions
+  called :code:`game_a` and :code:`game_b`. It therefore makes sense to define
+  a tuple (:code:`game_a`, :code:`game_b`, :code:`game_a`, :code:`game_b`)
+  indicating which games should be played in turn. Addressing the tuple is done
+  by appending :code:`[`\ *index*:code:`]`, where *index* has to be replaced by
+  an expression determining the index. Note that the first entry is accessed by
+  index 0, not 1! Since an element of our specific tuple is a function name, it
+  can be called like any other function by appending arguments in parentheses.
 
 
 .. sagecellserver::
 
     sage: def singlegame(threshold):
     ...       '''return the change in capital in a single game
-    ...       
+
     ...          The game is won if the drawn random number is smaller
     ...          than the threshold. It is lost otherwise.
-    ...          
+
     ...       '''
     ...       if random() < threshold:
     ...           return 1
     ...       else:
     ...           return -1
-    ...           
+
     sage: def game_a(capital):
     ...       '''return the new capital after a single game A
-    ...       
+
     ...          A global variable EPS is expected to be defined in order
     ...          to determine the winning threshold.
-    ...          
+
     ...       '''
     sage: # <--- use the function singlegame to determine the new capital
     sage: #      and return it
     sage: #      Don't be surprised: This is really only a one-liner.
-    ...       
+
     sage: def game_b(capital):
     ...       '''return the new capital after a single game B
-    ...       
+
     ...          Global variables EPS and M are expected to be defined in
     ...          order to determine the winning threshold and the branch
     ...          of the game to be used.
-    ...          
+
     ...       '''
     sage: # <--- proceed as in game_b. However, a one-liner will not be
     sage: #      enough here, because the winning threshold depends on the
@@ -332,18 +350,18 @@ more readable. Also adding some documentation is always a good idea.
     ...           
     sage: def play_games(gametype, ngames):
     ...       '''return the evolution of the capital for a series of games
-    ...       
+
     ...          gametype - a tuple containing the names of the game to be
     ...                     played in a sequence
     ...          ngames   - the number of games to be played 
-    ...      
+
     ...       '''
     sage: # <--- define initial values as needed
     ...       period = len(gametype) # Here, we determine the number of games
     ...                              # contained in the list of games
-    ...                              
+
     sage: # <--- generate the list of capital after each game and return it
-    ...       
+
     sage: # We define global variables with capital letters to make the more
     sage: # visible. Generally, it is a good idea to avoid global variables.
     sage: # One way to do so it by using an object oriented approach (see
@@ -351,6 +369,7 @@ more readable. Also adding some documentation is always a good idea.
     sage: EPS = 0.005
     sage: M = 3
     sage: ngames = 100000
+
     sage: # The following code generates a graph where game A corresponds
     sage: # to the blue line, game B to the green line, and the sequence
     sage: # of games AABB to the red line.
@@ -368,13 +387,12 @@ more readable. Also adding some documentation is always a good idea.
 
 .. admonition:: Hint
   
-   The docstrings which we have included in our function definitions
- can be utilized by means of the help method. Try for example :code:`help(play_games)`.
+  The docstrings which we have included in our function definitions can be
+  utilized by means of the help method. Try for example :code:`help(play_games)`.
 
 
 Object oriented approach
 ------------------------ 
-
 
 The object oriented approach presents a few advantages in our
 case. New sequences of games A and B can be defined in a simple
@@ -382,7 +400,7 @@ way. An instance of a game also remembers the capital whereas the
 local variable capital used in the functions above is forgotten after
 the function has been executed. You can run several instances of a
 game in parallel, each having automatically its own capital and game
-parameters ε and *m* .
+parameters :math:`\epsilon` and :math:`m`.
 
 
 .. sagecellserver::
@@ -392,83 +410,86 @@ parameters ε and *m* .
     ...       '''The Game class knows how to throw dice and how to play a series
     ...          of games. However, there is no definition of a single game. This
     ...          class should be used as a generic parent class for specific games.
-    ...       
+
     ...       '''
     ...       def __init__(self, capital=0):
     ...           self.capital = capital
-    ...           
+
     ...       def throw_dice(self, threshold):
     ...           if random() < threshold:
     ...               self.capital = self.capital+1
     ...           else:
     ...               self.capital = self.capital-1
-    ...               
+
     ...       def play(self):
     ...           raise NotImplementedError
-    ...               
+
     ...       def play_series(self, repetitions):
     ...           evolution = [self.capital]
     ...           for r in range(repetitions):
     ...               self.play()
     ...               evolution.append(self.capital)
     ...           return evolution
-    ...           
+
     sage: class ParrondoGame(Game):
     ...       '''This class provides games A and B of Parrondo's paradoxon.
-    ...       
+
     ...       '''
     ...       def __init__(self, epsilon=0.005, m=3, **kwargs):
     ...           self.epsilon = epsilon
     ...           self.m = m
     ...           Game.__init__(self, **kwargs)
+
     ...       def play_a(self):
     ...           self.throw_dice(0.5-self.epsilon)
-    ...           
+
     ...       def play_b(self):
     ...           if self.capital % self.m:
     ...               self.throw_dice(0.75-self.epsilon)
     ...           else:
     ...               self.throw_dice(0.10-self.epsilon)
-    ...               
+
     sage: class GameA(ParrondoGame):
     ...       '''Game A of Parrondo's paradoxon
-    ...       
+
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
+
     ...       def play(self):
     ...           self.play_a()
-    ...           
+
     sage: class GameB(ParrondoGame):
     ...       '''Game B of Parrondo's paradoxon
-    ...       
+
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
+
     ...       def play(self):
     ...           self.play_b()
-    ...               
+
     sage: class GameAABB(ParrondoGame):
     ...       '''Sequence of games AABB of Parrondo's paraodxon
-    ...       
+
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
     ...           self.gametype = itertools.cycle((
     ...                               self.play_a, self.play_a,
     ...                               self.play_b, self.play_b))
-    ...           
+
     ...       def play(self):
     ...           game = self.gametype.next()
     ...           game()
-    ...           
+
     sage: class GameABRandom(ParrondoGame):
     ...       '''Random sequence of games A and B of Parrondo's paradoxon
-    ...       
+
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
-    ...           
+
     ...       def play(self):
     ...           game = choice((self.play_a, self.play_b))
     ...           game()
@@ -497,7 +518,7 @@ Suggestions for further numerical experiments
 
 - What happens if the number of A and B games is changed in the sequence? 
 - What happens for random switching between games A and B? 
-- What happens when parameters like :math:`\epsilon` and  *m* are changed? 
+- What happens when parameters like :math:`\epsilon` and  :math:`m` are changed? 
 
 
 
