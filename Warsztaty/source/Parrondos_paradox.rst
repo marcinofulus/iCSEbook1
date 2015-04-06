@@ -33,7 +33,7 @@ Parrondo's paradox
 
        <iframe width="420" height="280" src="https://www.youtube.com/embed/TQ31Md9KPRM?start=8&end=585&version=3&loop=1&controls=2" frameborder="0" allowfullscreen></iframe>
 
-In Parrondo's paradoxon, a flashing ratchet is simulated by two games
+In Parrondo's paradox, a flashing ratchet is simulated by two games
 representing the situations with the potential switched on and off. In
 both cases, the player will loose on average, thereby mimicking a
 tilted potential with an average motion to the left as explained
@@ -146,7 +146,9 @@ looses otherwise.
 .. **18:00\-19:50**
 
 
-Let us now toss some coins in a fair game. 
+Let us now toss some coins in a fair game. Since the outcomes are random,
+you should not expect to win in exactly half of the cases even though this
+may happen. For comparison, you might try the same game with a real coin.
 
 
 .. sagecellserver::
@@ -166,47 +168,44 @@ Let us now toss some coins in a fair game.
 Game A
 ------ 
 
+Now we take a look at the individual games which are part of Parrondo's
+paradox and start with game A. The rule is simple: We win if the random
+number is below :math:`0.5-\epsilon`, otherwise we loose. For
+:math:`\epsilon>0`, we have to face it: We will loose in the long run. For
+our numerical runs, let us use :math:`\epsilon=0.005`.
 
-We win if the random number is below :math:`0.5-\epsilon`, otherwise
-we loose. For :math:`\epsilon>0`, we have to face it: We will loose in the long
-run. For our numerical runs, let us use :math:`\epsilon=0.005`.
+We are not interested in the absolute amount of money which we have after
+a certain number of games. Only changes are important, how much money have
+we won or lost? Therefore, it is fine to start without any money at the
+beginning.
 
-
-It does not matter that we do not have any money a the beginning. Only
-changes are important.
-
-
-.. admonition:: Hint 
-
-  In the following, the arrow <\-\-\- indicates that you should insert
-  some code. It is always preceded by a :code:`#` which indicates a comment in
-  Python. You will need a for loop and a branch, both of which we have
-  already briefly seen above.
+Running the following code several times, you will notice that in some
+cases you are lucky and win money for some time. However, if you continue
+to play, you will end up loosing money. In order to show this, we have to
+play the game often. Setting the number of games to 100000, the code will
+run for a couple of seconds. You can try a different number of games by
+changing the value of :code:`ngames`, but if :code:`ngames` is too large,
+the code might need a long time to terminate.
 
 
 .. sagecellserver::
 
-    sage: # <--- define the parameters needed for this game
+    sage: eps = 0.005
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-    sage: # evolution is a list of the amount of money we possess
-    sage: # after each game
-    sage: evolution = [capital]  # <--- have you defined capital?
+    sage: for ngame in range(ngames):
+    ...       if random() < 0.5-eps:
+    ...           money = money+1
+    ...       else:
+    ...           money = money-1
+    ...       evolution.append(money)
 
-    sage: # <--- implement a loop in which game A is played several
-    sage: #      times, change the variable capital appropriately
-
-    sage: # the following line is needed to append the new value
-    sage: # to the list:
-    ...       evolution.append(capital)
-
-    sage: # the following line displays the data
     sage: list_plot(evolution, pointsize=1)
 
 
 .. end of output
-
-
-**The rest of the worksheet was covered individually in the working groups.**
 
 
 Game B
@@ -215,82 +214,103 @@ Game B
 
 The rules of the second game are slightly more complicated because
 they depend on the amount of money in our possession at the time the
-game is played.
+game is played. There are two rules:
+
+#. Our money is not a multiple of :math:`m`:
+   We win if the random number is below :math:`\frac{3}{4}-\epsilon`.
+   Otherwise we loose. This sounds extremely good…
+#. Our money is a multiple of :math:`m`:
+   We win only if the random number is below :math:`\frac{1}{10}-\epsilon`.
+   Otherwise we loose. A pretty bad situation…
 
 
-
-#. Our capital is a multiple of :math:`m`:  
-   We win only if the random number is below :math:`\frac{1}{10}-\epsilon`. Otherwise we loose. A pretty bad situation…
-
-#. Our capital is not a multiple of :math:`m`:  
-
-  We win if the random number is below :math:`\frac{3}{4}-\epsilon`. Otherwise we loose. This sounds extremely good…
-
-
-But: For :math:`\epsilon>0`, we still loose in the long run.
+But: For :math:`\epsilon>0`, we still loose in the long run. While this
+statement can be rigorously proven, we will simply try it out numerically.
 
 :math:`m` is an integer which we choose to be 3 in the following.
 
-
 .. sagecellserver::
 
-    sage: # <--- define the required parameters
-    sage: #      eps is already known from above and does not need
-    sage: #      to be defined again
+    sage: eps = 0.005
+    sage: m = 3
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-    sage: evolution = [capital]
-
-    sage: # <--- You will need to write a for loop and nested branches
-    sage: #      1. Is our capital a multiple of m?
-    sage: #      2. Is the random number below the threshold or above?
-    sage: #      Remember to indent appropriately.
+    sage: for ngame in range(ngames):
+    ...        if money % m:
+    ...            if random() < 0.75-eps:
+    ...                money = money+1
+    ...            else:
+    ...                money = money-1
+    ...        else:
+    ...            if random() < 0.1-eps:
+    ...                money = money+1
+    ...            else:
+    ...                money = money-1
+    ...        evolution.append(money)
 
     sage: list_plot(evolution, pointsize=1)
 
-
 .. end of output
+
+.. admonition:: Note on Python 
+
+   The character :code:`%` represents the modulo operator. In the previous
+   code the :code:`if`-branch is chosen if :code:`money` is not divisible by
+   :code:`m` without rest while the :code:`else`-branch is chosen if
+   the division is possible without rest.
+
 
 Combining two loosing games
 --------------------------- 
 
+We now play a series of games alternating between two games A and
+two games B in a row: A\-A\-B\-B\-A\-A\-B\-B\-…
 
-We now play a series of games alternating between two games A and two games B in a row: A\-A\-B\-B\-A\-A\-B\-B\-…
-
-
-What do you expect? Will we loose again?
-
-.. admonition:: Hint 
-
-  One way to decide which game to play is by using the number of the game and determining the rest resulting
-  from a division by 4. This is done in Python by means of the modulo operator :code:`%`. See also the following
-  example:
-
+What do you expect? Will we loose again? Let's try it out.
 
 .. sagecellserver::
 
-    sage: 6 % 4
+    sage: eps = 0.005
+    sage: m = 3
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-
-.. end of output
-
-But now it's your turn. Use the techniques learned above to implement a AABB sequence of games and to display the result.
-
-
-.. sagecellserver::
-
-    sage: capital = 0
-    sage: evolution = [capital]
-
-    sage: # <--- supply the code for the AABB sequence
+    sage: for ngame in range(ngames):
+    ...       if ngame % 4 < 2:      
+    ...           # game A
+    ...           if random() < 0.5-eps:
+    ...               money = money+1
+    ...           else:
+    ...               money = money-1
+    ...       else:
+    ...           # game B
+    ...           if money % m:
+    ...               if random() < 0.75-eps:
+    ...                   money = money+1
+    ...               else:
+    ...                   money = money-1
+    ...           else:
+    ...               if random() < 0.1-eps:
+    ...                   money = money+1
+    ...               else:
+    ...                   money = money-1
+    ...       evolution.append(money)
 
     sage: list_plot(evolution, pointsize=1)
 
 
 .. end of output
 
+
+Unless you have been extremely unlucky, the combination of two loosing
+game should yield a winning situation.
+
+
 Refactoring
 ----------- 
-
 
 We have been repeating code. That is not a good idea. Let us follow the DRY principle: Don't Repeat Yourself.
 
@@ -432,7 +452,7 @@ parameters :math:`\epsilon` and :math:`m`.
     ...           return evolution
 
     sage: class ParrondoGame(Game):
-    ...       '''This class provides games A and B of Parrondo's paradoxon.
+    ...       '''This class provides games A and B of Parrondo's paradox.
 
     ...       '''
     ...       def __init__(self, epsilon=0.005, m=3, **kwargs):
@@ -450,7 +470,7 @@ parameters :math:`\epsilon` and :math:`m`.
     ...               self.toss_coin(0.10-self.epsilon)
 
     sage: class GameA(ParrondoGame):
-    ...       '''Game A of Parrondo's paradoxon
+    ...       '''Game A of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
@@ -460,7 +480,7 @@ parameters :math:`\epsilon` and :math:`m`.
     ...           self.play_a()
 
     sage: class GameB(ParrondoGame):
-    ...       '''Game B of Parrondo's paradoxon
+    ...       '''Game B of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
@@ -484,7 +504,7 @@ parameters :math:`\epsilon` and :math:`m`.
     ...           game()
 
     sage: class GameABRandom(ParrondoGame):
-    ...       '''Random sequence of games A and B of Parrondo's paradoxon
+    ...       '''Random sequence of games A and B of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
