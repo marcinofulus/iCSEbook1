@@ -46,7 +46,7 @@ games.
 
 
 Parrondo's paradox serves as an illustration of Brownian ratchets by
-means of appropriately combining two games where throwing dice
+means of appropriately combining two games where tossing a coin
 represents the random Brownian motion.
 
 
@@ -93,8 +93,8 @@ observe an average motion to the right.
 .. **12:34\-14:30**
 
 
-Throwing dice
-------------- 
+Tossing a coin
+--------------
 
 
 .. sidebar:: Let's play a game!
@@ -146,7 +146,7 @@ looses otherwise.
 .. **18:00\-19:50**
 
 
-Let us now throw some dice in a fair game.
+Let us now toss some coins in a fair game. 
 
 
 .. sagecellserver::
@@ -407,7 +407,7 @@ parameters :math:`\epsilon` and :math:`m`.
 
     sage: import itertools
     sage: class Game(object):
-    ...       '''The Game class knows how to throw dice and how to play a series
+    ...       '''The Game class knows how to toss a coin and how to play a series
     ...          of games. However, there is no definition of a single game. This
     ...          class should be used as a generic parent class for specific games.
 
@@ -415,7 +415,7 @@ parameters :math:`\epsilon` and :math:`m`.
     ...       def __init__(self, capital=0):
     ...           self.capital = capital
 
-    ...       def throw_dice(self, threshold):
+    ...       def toss_coin(self, threshold):
     ...           if random() < threshold:
     ...               self.capital = self.capital+1
     ...           else:
@@ -441,13 +441,13 @@ parameters :math:`\epsilon` and :math:`m`.
     ...           Game.__init__(self, **kwargs)
 
     ...       def play_a(self):
-    ...           self.throw_dice(0.5-self.epsilon)
+    ...           self.toss_coin(0.5-self.epsilon)
 
     ...       def play_b(self):
     ...           if self.capital % self.m:
-    ...               self.throw_dice(0.75-self.epsilon)
+    ...               self.toss_coin(0.75-self.epsilon)
     ...           else:
-    ...               self.throw_dice(0.10-self.epsilon)
+    ...               self.toss_coin(0.10-self.epsilon)
 
     sage: class GameA(ParrondoGame):
     ...       '''Game A of Parrondo's paradoxon
