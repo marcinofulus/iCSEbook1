@@ -33,7 +33,7 @@ Parrondo's paradox
 
        <iframe width="420" height="280" src="https://www.youtube.com/embed/TQ31Md9KPRM?start=8&end=585&version=3&loop=1&controls=2" frameborder="0" allowfullscreen></iframe>
 
-In Parrondo's paradoxon, a flashing ratchet is simulated by two games
+In Parrondo's paradox, a flashing ratchet is simulated by two games
 representing the situations with the potential switched on and off. In
 both cases, the player will loose on average, thereby mimicking a
 tilted potential with an average motion to the left as explained
@@ -46,7 +46,7 @@ games.
 
 
 Parrondo's paradox serves as an illustration of Brownian ratchets by
-means of appropriately combining two games where throwing dice
+means of appropriately combining two games where tossing a coin
 represents the random Brownian motion.
 
 
@@ -93,8 +93,8 @@ observe an average motion to the right.
 .. **12:34\-14:30**
 
 
-Throwing dice
-------------- 
+Tossing a coin
+--------------
 
 
 .. sidebar:: Let's play a game!
@@ -146,7 +146,9 @@ looses otherwise.
 .. **18:00\-19:50**
 
 
-Let us now throw some dice in a fair game.
+Let us now toss some coins in a fair game. Since the outcomes are random,
+you should not expect to win in exactly half of the cases even though this
+may happen. For comparison, you might try the same game with a real coin.
 
 
 .. sagecellserver::
@@ -166,47 +168,44 @@ Let us now throw some dice in a fair game.
 Game A
 ------ 
 
+Now we take a look at the individual games which are part of Parrondo's
+paradox and start with game A. The rule is simple: We win if the random
+number is below :math:`0.5-\epsilon`, otherwise we loose. For
+:math:`\epsilon>0`, we have to face it: We will loose in the long run. For
+our numerical runs, let us use :math:`\epsilon=0.005`.
 
-We win if the random number is below :math:`0.5-\epsilon`, otherwise
-we loose. For :math:`\epsilon>0`, we have to face it: We will loose in the long
-run. For our numerical runs, let us use :math:`\epsilon=0.005`.
+We are not interested in the absolute amount of money which we have after
+a certain number of games. Only changes are important, how much money have
+we won or lost? Therefore, it is fine to start without any money at the
+beginning.
 
-
-It does not matter that we do not have any money a the beginning. Only
-changes are important.
-
-
-.. admonition:: Hint 
-
-  In the following, the arrow <\-\-\- indicates that you should insert
-  some code. It is always preceded by a :code:`#` which indicates a comment in
-  Python. You will need a for loop and a branch, both of which we have
-  already briefly seen above.
+Running the following code several times, you will notice that in some
+cases you are lucky and win money for some time. However, if you continue
+to play, you will end up loosing money. In order to show this, we have to
+play the game often. Setting the number of games to 100000, the code will
+run for a couple of seconds. You can try a different number of games by
+changing the value of :code:`ngames`, but if :code:`ngames` is too large,
+the code might need a long time to terminate.
 
 
 .. sagecellserver::
 
-    sage: # <--- define the parameters needed for this game
+    sage: eps = 0.005
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-    sage: # evolution is a list of the amount of money we possess
-    sage: # after each game
-    sage: evolution = [capital]  # <--- have you defined capital?
+    sage: for ngame in range(ngames):
+    ...       if random() < 0.5-eps:
+    ...           money = money+1
+    ...       else:
+    ...           money = money-1
+    ...       evolution.append(money)
 
-    sage: # <--- implement a loop in which game A is played several
-    sage: #      times, change the variable capital appropriately
-
-    sage: # the following line is needed to append the new value
-    sage: # to the list:
-    ...       evolution.append(capital)
-
-    sage: # the following line displays the data
     sage: list_plot(evolution, pointsize=1)
 
 
 .. end of output
-
-
-**The rest of the worksheet was covered individually in the working groups.**
 
 
 Game B
@@ -215,224 +214,173 @@ Game B
 
 The rules of the second game are slightly more complicated because
 they depend on the amount of money in our possession at the time the
-game is played.
+game is played. There are two rules:
+
+#. Our money is not a multiple of :math:`m`:
+   We win if the random number is below :math:`\frac{3}{4}-\epsilon`.
+   Otherwise we loose. This sounds extremely good…
+#. Our money is a multiple of :math:`m`:
+   We win only if the random number is below :math:`\frac{1}{10}-\epsilon`.
+   Otherwise we loose. A pretty bad situation…
 
 
-
-#. Our capital is a multiple of :math:`m`:  
-   We win only if the random number is below :math:`\frac{1}{10}-\epsilon`. Otherwise we loose. A pretty bad situation…
-
-#. Our capital is not a multiple of :math:`m`:  
-
-  We win if the random number is below :math:`\frac{3}{4}-\epsilon`. Otherwise we loose. This sounds extremely good…
-
-
-But: For :math:`\epsilon>0`, we still loose in the long run.
+But: For :math:`\epsilon>0`, we still loose in the long run. While this
+statement can be rigorously proven, we will simply try it out numerically.
 
 :math:`m` is an integer which we choose to be 3 in the following.
 
-
 .. sagecellserver::
 
-    sage: # <--- define the required parameters
-    sage: #      eps is already known from above and does not need
-    sage: #      to be defined again
+    sage: eps = 0.005
+    sage: m = 3
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-    sage: evolution = [capital]
-
-    sage: # <--- You will need to write a for loop and nested branches
-    sage: #      1. Is our capital a multiple of m?
-    sage: #      2. Is the random number below the threshold or above?
-    sage: #      Remember to indent appropriately.
+    sage: for ngame in range(ngames):
+    ...        if money % m:
+    ...            if random() < 0.75-eps:
+    ...                money = money+1
+    ...            else:
+    ...                money = money-1
+    ...        else:
+    ...            if random() < 0.1-eps:
+    ...                money = money+1
+    ...            else:
+    ...                money = money-1
+    ...        evolution.append(money)
 
     sage: list_plot(evolution, pointsize=1)
 
-
 .. end of output
+
+.. admonition:: Note on Python 
+
+   The character :code:`%` represents the modulo operator. In the previous
+   code the :code:`if`-branch is chosen if :code:`money` is not divisible by
+   :code:`m` without rest while the :code:`else`-branch is chosen if
+   the division is possible without rest.
+
 
 Combining two loosing games
 --------------------------- 
 
+We now play a series of games alternating between two games A and
+two games B in a row: A\-A\-B\-B\-A\-A\-B\-B\-…
 
-We now play a series of games alternating between two games A and two games B in a row: A\-A\-B\-B\-A\-A\-B\-B\-…
-
-
-What do you expect? Will we loose again?
-
-.. admonition:: Hint 
-
-  One way to decide which game to play is by using the number of the game and determining the rest resulting
-  from a division by 4. This is done in Python by means of the modulo operator :code:`%`. See also the following
-  example:
-
+What do you expect? Will we loose again? Let's try it out.
 
 .. sagecellserver::
 
-    sage: 6 % 4
+    sage: eps = 0.005
+    sage: m = 3
+    sage: ngames = 100000
+    sage: money = 0
+    sage: evolution = [money]
 
-
-.. end of output
-
-But now it's your turn. Use the techniques learned above to implement a AABB sequence of games and to display the result.
-
-
-.. sagecellserver::
-
-    sage: capital = 0
-    sage: evolution = [capital]
-
-    sage: # <--- supply the code for the AABB sequence
+    sage: for ngame in range(ngames):
+    ...       if ngame % 4 < 2:      
+    ...           # game A
+    ...           if random() < 0.5-eps:
+    ...               money = money+1
+    ...           else:
+    ...               money = money-1
+    ...       else:
+    ...           # game B
+    ...           if money % m:
+    ...               if random() < 0.75-eps:
+    ...                   money = money+1
+    ...               else:
+    ...                   money = money-1
+    ...           else:
+    ...               if random() < 0.1-eps:
+    ...                   money = money+1
+    ...               else:
+    ...                   money = money-1
+    ...       evolution.append(money)
 
     sage: list_plot(evolution, pointsize=1)
 
 
 .. end of output
 
-Refactoring
------------ 
+
+Unless you have been extremely unlucky, the combination of two loosing
+game should yield a winning situation.
 
 
-We have been repeating code. That is not a good idea. Let us follow the DRY principle: Don't Repeat Yourself.
-
-
-We implement some functions to make life easier and to make the code
-more readable. Also adding some documentation is always a good idea.
-
-
-.. admonition:: Hint  
-
-  Function names can be used like variables. Below we will define functions
-  called :code:`game_a` and :code:`game_b`. It therefore makes sense to define
-  a tuple (:code:`game_a`, :code:`game_b`, :code:`game_a`, :code:`game_b`)
-  indicating which games should be played in turn. Addressing the tuple is done
-  by appending :code:`[`\ *index*:code:`]`, where *index* has to be replaced by
-  an expression determining the index. Note that the first entry is accessed by
-  index 0, not 1! Since an element of our specific tuple is a function name, it
-  can be called like any other function by appending arguments in parentheses.
-
-
-.. sagecellserver::
-
-    sage: def singlegame(threshold):
-    ...       '''return the change in capital in a single game
-
-    ...          The game is won if the drawn random number is smaller
-    ...          than the threshold. It is lost otherwise.
-
-    ...       '''
-    ...       if random() < threshold:
-    ...           return 1
-    ...       else:
-    ...           return -1
-
-    sage: def game_a(capital):
-    ...       '''return the new capital after a single game A
-
-    ...          A global variable EPS is expected to be defined in order
-    ...          to determine the winning threshold.
-
-    ...       '''
-    sage: # <--- use the function singlegame to determine the new capital
-    sage: #      and return it
-    sage: #      Don't be surprised: This is really only a one-liner.
-
-    sage: def game_b(capital):
-    ...       '''return the new capital after a single game B
-
-    ...          Global variables EPS and M are expected to be defined in
-    ...          order to determine the winning threshold and the branch
-    ...          of the game to be used.
-
-    ...       '''
-    sage: # <--- proceed as in game_b. However, a one-liner will not be
-    sage: #      enough here, because the winning threshold depends on the
-    sage: #      capital.
-    ...           
-    sage: def play_games(gametype, ngames):
-    ...       '''return the evolution of the capital for a series of games
-
-    ...          gametype - a tuple containing the names of the game to be
-    ...                     played in a sequence
-    ...          ngames   - the number of games to be played 
-
-    ...       '''
-    sage: # <--- define initial values as needed
-    ...       period = len(gametype) # Here, we determine the number of games
-    ...                              # contained in the list of games
-
-    sage: # <--- generate the list of capital after each game and return it
-
-    sage: # We define global variables with capital letters to make the more
-    sage: # visible. Generally, it is a good idea to avoid global variables.
-    sage: # One way to do so it by using an object oriented approach (see
-    sage: # below)
-    sage: EPS = 0.005
-    sage: M = 3
-    sage: ngames = 100000
-
-    sage: # The following code generates a graph where game A corresponds
-    sage: # to the blue line, game B to the green line, and the sequence
-    sage: # of games AABB to the red line.
-    sage: G = Graphics()
-    sage: for gamelist, color in (((game_a,), 'blue'),
-    ...                           ((game_b,), 'green'),
-    ...                           ((game_a, game_a, game_b, game_b), 'red')):
-    ...       G = G+list_plot(play_games(gamelist, ngames),
-    ...                       color=color, pointsize=1)
-    sage: G.show()
-
-
-.. end of output
-
-
-.. admonition:: Hint
-  
-  The docstrings which we have included in our function definitions can be
-  utilized by means of the help method. Try for example :code:`help(play_games)`.
-
-
-Object oriented approach
+Object-oriented approach
 ------------------------ 
 
-The object oriented approach presents a few advantages in our
-case. New sequences of games A and B can be defined in a simple
-way. An instance of a game also remembers the capital whereas the
-local variable capital used in the functions above is forgotten after
-the function has been executed. You can run several instances of a
-game in parallel, each having automatically its own capital and game
-parameters :math:`\epsilon` and :math:`m`.
+By putting together the codes from games A and B, we ended up with code
+which is not optimal in two respects. Chaining the :code:`if/else`
+constructs results in not very readable code. Furthermore, we have
+repeated three times the code for tossing a coin. The three code segments
+only differ by the winning threshold. Instead of repeating code, it is
+better to follow the DRY principle: Don't Repeat Yourself.
 
+.. admonition:: Important hint
+
+   In the following we will present an object-oriented approach to 
+   Parrondo's paradox which will facilitate our further analysis of the
+   paradox. Feel free to skip this section if you are not interested in
+   the details of the code but *be sure to execute the code cells* so that
+   the various classes and their methods are available later on. 
+   Executing cells in this section will not yield any visible results.
+
+The object-oriented approach will present a few advantages for exploring
+Parrondo's paradox. New sequences of games A and B can be defined in a
+simple way. An instance of a game remembers the parameters :math:`\epsilon`
+and :math:`m` for which it was defined as well as the money in our
+possession during the game. Several instances of games can be played in
+parallel, each instance having automatically its own money and game
+parameters.
+
+The class :class:`Game` defined in the following code knows how to toss
+a coin and to determine a win or loss as a function of the winning threshold.
+It also knows how to perform a series of plays. However, a single play
+has to be defined by classes derived from :class:`Game`. 
 
 .. sagecellserver::
 
-    sage: import itertools
     sage: class Game(object):
-    ...       '''The Game class knows how to throw dice and how to play a series
+    ...       '''The Game class knows how to toss a coin and how to play a series
     ...          of games. However, there is no definition of a single game. This
     ...          class should be used as a generic parent class for specific games.
 
     ...       '''
-    ...       def __init__(self, capital=0):
-    ...           self.capital = capital
+    ...       def __init__(self, money=0):
+    ...           self.money = money
 
-    ...       def throw_dice(self, threshold):
+    ...       def toss_coin(self, threshold):
     ...           if random() < threshold:
-    ...               self.capital = self.capital+1
+    ...               self.money = self.money+1
     ...           else:
-    ...               self.capital = self.capital-1
+    ...               self.money = self.money-1
 
     ...       def play(self):
     ...           raise NotImplementedError
 
     ...       def play_series(self, repetitions):
-    ...           evolution = [self.capital]
+    ...           evolution = [self.money]
     ...           for r in range(repetitions):
     ...               self.play()
-    ...               evolution.append(self.capital)
+    ...               evolution.append(self.money)
     ...           return evolution
 
+.. end of output
+
+The class :class:`ParrondoGame` is derived from the parent class
+:class:`Game` and defines the games A and B. However, it only serves
+as a parent class for the classes defined below which are actually able
+to do the playing. The class :class:`ParrondoGame` defines the values used
+above for the parameters :math:`\epsilon` and :math:`m` as default values.
+These values need to be specified only if other values are desired.
+
+.. sagecellserver::
+
     sage: class ParrondoGame(Game):
-    ...       '''This class provides games A and B of Parrondo's paradoxon.
+    ...       '''This class provides games A and B of Parrondo's paradox.
 
     ...       '''
     ...       def __init__(self, epsilon=0.005, m=3, **kwargs):
@@ -441,33 +389,60 @@ parameters :math:`\epsilon` and :math:`m`.
     ...           Game.__init__(self, **kwargs)
 
     ...       def play_a(self):
-    ...           self.throw_dice(0.5-self.epsilon)
+    ...           self.toss_coin(0.5-self.epsilon)
 
     ...       def play_b(self):
-    ...           if self.capital % self.m:
-    ...               self.throw_dice(0.75-self.epsilon)
+    ...           if self.money % self.m:
+    ...               self.toss_coin(0.75-self.epsilon)
     ...           else:
-    ...               self.throw_dice(0.10-self.epsilon)
+    ...               self.toss_coin(0.10-self.epsilon)
+
+.. end of output
+
+The class :class:`GameA` plays game A of Parrondo's paradox.
+
+.. sagecellserver::
 
     sage: class GameA(ParrondoGame):
-    ...       '''Game A of Parrondo's paradoxon
+    ...       '''Game A of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
+
+    ...       def __repr__(self):
+    ...           return 'game A'
 
     ...       def play(self):
     ...           self.play_a()
 
+.. end of output
+
+Correspondingly, the class :class:`GameB` plays game B of Parrondo's paradox.
+
+.. sagecellserver::
+
     sage: class GameB(ParrondoGame):
-    ...       '''Game B of Parrondo's paradoxon
+    ...       '''Game B of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
 
+    ...       def __repr__(self):
+    ...           return 'game B'
+
     ...       def play(self):
     ...           self.play_b()
+
+.. end of output
+
+The class :class:`GameAABB` plays a the sequence of two games A and two
+games B as specified above for Parrondo's paradox.
+
+.. sagecellserver::
+
+    sage: import itertools
 
     sage: class GameAABB(ParrondoGame):
     ...       '''Sequence of games AABB of Parrondo's paraodxon
@@ -479,35 +454,88 @@ parameters :math:`\epsilon` and :math:`m`.
     ...                               self.play_a, self.play_a,
     ...                               self.play_b, self.play_b))
 
+    ...       def __repr__(self):
+    ...           return u'game sequence A-A-B-B'
+
     ...       def play(self):
     ...           game = self.gametype.next()
     ...           game()
 
+.. end of output
+
+For comparison, we also define a class :class:`GameABRandom` which chooses
+at random between games A and B.
+
+.. sagecellserver::
+
     sage: class GameABRandom(ParrondoGame):
-    ...       '''Random sequence of games A and B of Parrondo's paradoxon
+    ...       '''Random sequence of games A and B of Parrondo's paradox
 
     ...       '''
     ...       def __init__(self, **kwargs):
     ...           ParrondoGame.__init__(self, **kwargs)
 
+    ...       def __repr__(self):
+    ...           return u'random sequence of games A and B'
+
     ...       def play(self):
     ...           game = choice((self.play_a, self.play_b))
     ...           game()
 
+.. end of output
+
+The preceding two classes can be used as templates for the definition of
+other sequences of games A and B.
+
+Exploring Parrondo's paradox
+----------------------------
+
+Let us first repeat our numerical experiments carried out at the beginning,
+but now by using the object-oriented code.
+
+.. sagecellserver::
+
+    sage: games = [(GameA(), 'blue'),
+    ...            (GameB(), 'green'),
+    ...            (GameAABB(), 'red')]
+    sage: plots = [list_plot(game.play_series(30000), pointsize=1, color=color) for game, color in games]
+    sage: show(sum(plots))
 
 .. end of output
 
-Single realizations of a game can be treacherous. Here we evaluate the average and standard deviation for a number of realizations of a game.
+If everything works as expected, the blue and green curves corresponding to
+game A and B, respectively, should end up at a negative value while the red
+curve corresponding to a games A-A-B-B-… should end up at a positive value.
 
+However, single realizations of a game can be treacherous as you might have
+seen already above by running the simulations several times. Therefore, we
+now evaluate the average and standard deviation for 50 realizations of a game
+where the coin is tossed only 10000 times.
 
 .. sagecellserver::
 
     sage: ngames = 10000
     sage: nrealizations = 50
-    sage: results = [GameA().play_series(ngames)[-1] for n in range(nrealizations)]
-    sage: print 'average capital:    %8.2f' % N(mean(results))
-    sage: print 'standard deviation: %8.2f' % N(std(results))
+    sage: for game in (GameA, GameB, GameAABB):
+    ...       results = [game().play_series(ngames)[-1] for n in range(nrealizations)]
+    ...       print game()
+    ...       print '   average money:      %8.2f' % N(mean(results))
+    ...       print '   standard deviation: %8.2f' % N(std(results))
 
+.. end of output
+
+Do the averages come out with the expected sign?
+
+
+**Histogram seems to require at least Sage 6.5**
+
+.. sagecellserver::
+
+    sage: from sage.plot.histogram import Histogram
+    sage: ngames = 10000
+    sage: nrealizations = 200
+    sage: results = [GameA().play_series(ngames)[-1] for n in range(nrealizations)]
+    sage: Histogram(results)
 
 .. end of output
 
