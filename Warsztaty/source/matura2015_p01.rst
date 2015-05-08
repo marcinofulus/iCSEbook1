@@ -64,3 +64,14 @@ odpowiedź od systemu:
    var('x,y,m')
    solve( [x-y==3,2*x+0.5*y==4],[x,y])
 
+
+
+Zadanie 7
+---------
+
+Równanie też rozwiązujemy natychmiast:
+
+.. sagecellserver::
+
+   var('x')
+   solve( (x-1)/(x+1)==x-1,x)
