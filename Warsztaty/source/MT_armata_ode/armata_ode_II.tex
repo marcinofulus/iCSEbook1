@@ -120,7 +120,7 @@ Newtona w kierunkach $x$ i $y$ jako:
 \end{eqnarray}
 
 Takie równania znane są w granicy gdy $\Delta t\to 0$ jako równania
-różniczkowe. Granica ta oznacza, że wyrażenia typu $ frac{ \Delta
+różniczkowe. Granica ta oznacza, że wyrażenia typu $ \frac{ \Delta
   x}{\Delta t}$, określane przez matematyków jako ilorazy różnicowe,
 przechodzą w pochodne po czasie funkcji położenia czy
 prędkości. Intuicyjnie, możemy zrozumieć tą granicę jeśli sobie
@@ -172,16 +172,25 @@ znana z rozważań lotu pocisku przez powietrze. Wiemy, że działa ona w
 kierunku przeciwnym do wektora prędkości. Druga siła jest siłą
 działającą w kierunku prostopadłym do wektora prędkości i jest zwana
 siłą nośną. Mechanika lotu podaje empiryczne wzory pozwalające
-obliczyć te siły dla dobrze opływanych objektów. Oba wzory zakładają
-kwadratową zależność od prędkości. Ponadto dla pewnej klasy dobrze
-opływanych objektów - tzw. skrzydeł, siły te zależą od kątą natarcia -
-czyli ustawienie skrzydła względem wektora prędkości oraz oczywiście
-od gęstości powietrza i rozmmiaru. Oznacza to, że jeśli mamy dane
-skrzydło i dany kąt natarcia to mamy dwa efektywne współczynniki,
-które pozwalają wyliczyć obie siły. Za chwilę skorzystamy z tego faktu.
+obliczyć te siły dla dobrze opływanych objektów, do których zaliczaja
+się skrzydło samolotu. Oba wzory, zarówno na siłę nośną i opór,
+zakładają kwadratową zależność od prędkości.
+
+Łatwo można sobie wyobrazić, że na skrzydło ustawione równolegle do
+napływającego powietrza będzie działała niewielka siła oporu a siła
+nośna będzie bliska zeru. Jeśli skrzydło przekręcimy o np. 5 stopni,
+to siła nośna znacznie wzrośnie. Siła oporu też wzrośnie, ale mniej
+radykalnie niż siła nośna. Zjawisko to można zaobserwować wychylając
+dłoń z jadącego samochodu i obracając ją o niewielki kąt.
+
+Prawa mechaniki lotu określają, współczynniki siły nośnej i oporu oraz
+ich zależność od kątą natarcia - czyli ustawienia skrzydła względem
+napływających strug powietrza. Oznacza to, że jeśli mamy dany rozmiar
+i kształt skrzydła to dla każdego kąta natarcia oraz prędkości możemy
+wyliczyć obie siły. Za chwilę skorzystamy z tego faktu.
 
 Wyobraźmy teraz sobie szybowiec, a papierowy samolocik jest właśnie
-szybowcem, lecący z pewną prędkością chwilową. Po pierwsze zakładamy,
+szybowcem, lecący z pewną prędkością. Po pierwsze zakładamy,
 że nie wykonujemy zakrętów. Dopuszczamy tylko nurkowanie i wznoszenie
 się. W pewnym przybliżenu można traktować szybowiec jako skrzydło,
 które ma pewną siłę nośną i siłę oporu oraz ogon. Zadaniem ogona jest
@@ -213,7 +222,22 @@ odpowiednio, oporu i nośnej. W takim przypadku możemy sie pokusić o
 zmodyfikowanie, naszego programu do obliczania trajektorii rzutu
 ukośnego tak by opisywał on zachowanie się naszego szybowca.
 
-Ponieważ siły aerodynamiczne działają w kierunkach prostopadłcyh Układ współrzędnych
+Ponieważ siły aerodynamiczne działają w kierunkach prostopadłych i
+równoległych do kierunku ruchu to musimy przeprowadzić sztuczkę
+zamiany układu współrzędnych. Postąpimy tak: znamy wektor prędkości
+samolotu. Dzieląc go przez jego długośc możemy otrzymać wersor (wektor
+jednostkowy) w kierunku ruchu $\vec e_v$. 
+
+Siły aerodynamiczne: oporu $F_D$ i nośna $F_L$ dane są:
+
+\begin{eqnarray}
+F_D = - C_D v^2  \vec e_v \\
+F_L = C_L v^2 {\vec e_v}_{prost}
+
+\end{eqnarray}
+
+Zauważmy, że łatwo możemy otrzymać wersor prędkości - wys
+
 
 
 
