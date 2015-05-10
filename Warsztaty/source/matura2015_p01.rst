@@ -12,6 +12,9 @@ z nim poradzi. Wpisujemy i od razu mamy wynik:
    solve([-4<=x-1,x-1<=4],x)
 
 
+... ale czy nie jest on bardziej skomplikowany od zadania? 
+
+
 .. admonition:: :code:`==` czy :code:`=`?
 
    We wszystkich językach programowania mamy dwa różne znaki
