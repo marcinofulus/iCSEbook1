@@ -25,9 +25,7 @@ Po co się męczyć - niech "pomyśli" komputer!
 
 .. toctree::
    :maxdepth: 2
+   :glob:
 
-   matura2015_p01
-   matura2015_p02
-..   matura2015_p03
-..   matura2015_p04
+   matura2015_p*
 

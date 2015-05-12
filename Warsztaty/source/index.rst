@@ -25,6 +25,7 @@ myślisz" dostępnej w formacie PDF na stronie projektu iCSE.
    :maxdepth: 1
 
    Nauka z komputerem - dlaczego? <wstep>
+   matura
 
 
 Warsztaty z konferencji iCSE4schools
