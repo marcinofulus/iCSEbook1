@@ -28,7 +28,7 @@ Ponieważ may do sprawdzenia tylko cztery możliwości można też pokusić się
    var('x,y,m')
    rownanie = y == (m-1)*x+3
    @interact
-    def rysuj(m_=[1,2,-1,0]):
+   def rysuj(m_=[1,2,-1,0]):
         p = point((5,-2),size=20,color='red')
         p+=implicit_plot(rownanie.subs({m:m_}),(x,-10,10),(y,-10,10))
         p.show(figsize=4,aspect_ratio=1) 

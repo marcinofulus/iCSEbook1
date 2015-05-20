@@ -1,7 +1,7 @@
 Zadanie 4
 ---------
 
-Cz równość 
+Czy równość 
 
 .. math::
 

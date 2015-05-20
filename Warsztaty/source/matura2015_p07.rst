@@ -20,12 +20,12 @@ lewej strony powyższej równości:
 
 .. admonition:: Po co tyle dodatkowych parametrów?
 
-   Spróbuj do porzedniej komórki wpisać "surową" komendę: 
+   Spróbuj do poprzedniej komórki wpisać "surową" komendę: 
 
-                :code:`plot([(x-1)/(x+1),x-1],(x,-2,2)`
+                :code:`plot([(x-1)/(x+1),x-1],(x,-2,2))`
 
    Co się stało z wykresem? Okazuje się, że mamy osobliwość, która
-   nieco szkodzi automatycznemu sklowaniu osi. Dlatego najlepiej
+   nieco szkodzi automatycznemu skalowaniu osi. Dlatego najlepiej
    będzie ręcznie ustawić zakres wartości rzędnych. Dodatkowo warto
    zasugerować Sage'owi żeby wykrył osobliwości i je nam pokazał
    rysując pionowe asymptoty.
