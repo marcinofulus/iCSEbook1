@@ -30,8 +30,8 @@ możemy też pokusić się o sprawdzenie każdej z opowiedzi:
 .. admonition:: Jak to działa?
 
    Funkcja `bool` próbuje, używając systemu algebry komputerowej
-   sprawdzić algebraiczną poprawność równania, dla każdej z odpowiedzi
-   z testu.
+   sprawdzić algebraiczną poprawność równania. Pętla `for` zapewnia
+   sprawdzenie dla każdej odpowiedzi z testu.
 
 Możemy się posłużyć też przybliżeniem arytmetycznym wyrażeń po lewej i
 prawej stronie równości. Nie jest to dokładny wynik w sensie
