@@ -1,13 +1,13 @@
 Zadanie 4
 ---------
 
-Równość 
+Cz równość 
 
 .. math::
 
    -\frac{m}{\sqrt{5} - 5} = \frac{\sqrt{5} + 1}{5}  
 
-zachodzi dla:  m=5, m=4, m=1, m = −5.
+zachodzi dla:  :math:`m=5`, :math:`m=4`, :math:`m=1`, czy może :math:`m = -5`?
 
 
 System algebry komputerowej z chęcią rozwiąże również i taką równość:
@@ -18,6 +18,27 @@ System algebry komputerowej z chęcią rozwiąże również i taką równość:
    solve( m/(5-sqrt(5))==(5+sqrt(5))/5,m)
 
 
+.. admonition:: Jak to działa: :code:`solve`?
+
+   Funkcja `solve` jest bardzo potężnym narzędziem! Umożliwia ono nam
+   algebraiczne rozwiązywanie równiań i układów równań. W powyższym
+   przypadku zadziałało ono "magicznie" i otrzymaliśmy wynik. Nie
+   zawsze jednak wynik jest możliwy do otrzymania, a czasem jest
+   bardzo skomplikowany. Spróbuj sam, rozwiąż na przykład: :math:`a
+   x^2+b x + c ==0`. 
+    
+   .. code-block:: python
+                   
+       var('a,b,c,x')
+       show( solve(a*x^2+b*x+c==0,x) )
+
+
+                   
+   Zastąp wyraz z najwyższą potęgą :math:`x` przez :math:`a
+   x^3`, :math:`a x^4`,... Czy komputer znajdzie odpowiedź dla dowolnie
+   dużej potęgi? Ograniczenia narzucone są przez `Teorię Galois
+   <http://pl.wikipedia.org/wiki/Teoria_Galois>`_ .
+ 
 Zadanie daje nam jednak zbiór czterech wartości m do sprawdzenia, więc
 możemy też pokusić się o sprawdzenie każdej z opowiedzi:
 
@@ -27,7 +48,7 @@ możemy też pokusić się o sprawdzenie każdej z opowiedzi:
        print  bool(m/(5-sqrt(5))==(5+sqrt(5))/5)
 
 
-.. admonition:: Jak to działa?
+.. admonition:: Jak to działa: :code:`bool`?
 
    Funkcja `bool` próbuje, używając systemu algebry komputerowej
    sprawdzić algebraiczną poprawność równania. Pętla `for` zapewnia
