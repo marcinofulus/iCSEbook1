@@ -15,6 +15,19 @@ z nim poradzi. Wpisujemy i od razu mamy wynik:
 ... ale czy nie jest on bardziej skomplikowany od zadania? 
 
 
+Możemy przekonać Sage to narysowania obszaru w którym :math:`x`
+spełniają warunek z zadania. Zastosujemy, znacznie ogólniejszą,
+procedurę :code:`region_plot`:
+
+
+.. sagecellserver::
+
+   var('x,y')
+   region_plot([-4<=x-1,x-1<=4],(x,-10,10),(y,-1,1) )
+
+
+
+
 .. admonition:: :code:`==` czy :code:`=`?
 
    We wszystkich językach programowania mamy dwa różne znaki
