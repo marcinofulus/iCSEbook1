@@ -1,4 +1,4 @@
-Zadanie 5 : Jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
+Zadanie 5 - jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
 --------------------------------------------------------------------------------------------
 
 Pytanie jest o liczbę rozwiązań układu równań. Ponownie możemy uzyskać
