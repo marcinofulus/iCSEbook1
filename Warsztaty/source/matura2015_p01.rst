@@ -1,6 +1,6 @@
 
-Zadanie 1
----------
+Zadanie 1 - o graficznym i algebraicznym rozwiązywaniu nierówności
+------------------------------------------------------------------
 
 Mamy rozwiązań nierówność: :math:`-4\le x-1\le4`. Jest to dość proste
 zadanie, ale możemy zobaczyć czy system algebry komputerowej też sobie

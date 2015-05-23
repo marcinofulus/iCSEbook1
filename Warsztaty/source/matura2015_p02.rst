@@ -1,5 +1,5 @@
-Zadanie 2
----------
+Zadanie 2 - o logarytmach i upraszczaniu
+----------------------------------------
 
 Dane są liczby: :math:`a= \frac{1}{27}`,
 :math:`b=\log_{\frac{1}{4}}\left(64\right)`,

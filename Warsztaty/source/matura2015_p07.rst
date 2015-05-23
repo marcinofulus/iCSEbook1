@@ -1,5 +1,5 @@
-Zadanie 7
----------
+Zadanie 7 - o tym jak nakłonić funkcję :code:`plot` do współpracy
+-----------------------------------------------------------
 
 Równanie :math:`\frac{x-1}{x+1}==x-1` aż się prosi by je  rozwiązać  za
 pomocą algebry komputerowej. Rzeczywiście, wynik otrzymujemy natychmiast:

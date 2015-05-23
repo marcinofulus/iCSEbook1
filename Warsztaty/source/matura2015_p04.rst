@@ -1,7 +1,8 @@
-Zadanie 4
----------
+Zadanie 4 - o tym jak :code:`solve` wykona pracę za nas i kiedy nas zawiedzie
+-----------------------------------------------------------------------------
 
-Czy równość 
+
+Czy równość: 
 
 .. math::
 

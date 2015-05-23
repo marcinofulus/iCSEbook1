@@ -1,5 +1,5 @@
-Zadanie 9
----------
+Zadanie 9 - o tym jak technologia :code:`@interact` pomoże rozwiązać równanie z parametrem
+------------------------------------------------------------------------------------------
 
 Na wykresie funkcji liniowej określonej wzorem :math:`f(x)=(m-1)x +3`
 leży punkt :math:`S = (5,-2)`. Zatem:
@@ -20,7 +20,8 @@ Korzystając z algebry komputerowej wynik otrzymujemy natychmiast:
    show(rownanie.subs({x:5,y:-2}).solve(m))
 
 
-Ponieważ may do sprawdzenia tylko cztery możliwości można też pokusić się o narysowanie graficznej reprezentacji w każdym z przypadków:
+Ponieważ mamy do sprawdzenia tylko cztery możliwości można też pokusić
+się o narysowanie graficznej reprezentacji w każdym z przypadków:
 
 
 .. sagecellserver::

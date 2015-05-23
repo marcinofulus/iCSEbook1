@@ -1,5 +1,5 @@
-Zadanie 10
-----------
+Zadanie 10 - o konstrukcji złożonych poleceń z pomocą metod
+-----------------------------------------------------------
 
 Funkcja funkcja liniowa określona wzorem :math:`f(x)=2 x +b` ma takie
 samo miejsce zerowe, jakie ma funkcja liniowa :math:`g(x) = -3x +

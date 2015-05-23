@@ -1,7 +1,8 @@
-Zadanie 11
-----------
+Zadanie 11 - pojedynek  funkcji kwadratowej z :code:`solve`
+-----------------------------------------------------------
 
-Funkcja kwadratowa  określona wzorem :math:`f(x)=x^2 + x + c`. Jeżeli  :math:`f(3) = 4` to:
+Funkcja kwadratowa określona wzorem :math:`f(x)=x^2 + x + c`. Jeżeli
+:math:`f(3) = 4` to:
  
 A. :math:`f(1)=-6`
 #. :math:`f(1)=0`

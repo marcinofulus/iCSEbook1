@@ -1,12 +1,20 @@
-Zadanie 12
-----------
+Zadanie 12 - o brutalnej metodzie i pętli :code:`for` przyrządzonej na dwa sposoby
+----------------------------------------------------------------------------------
 
 Ile liczb całkowitych spełnia nierówność :math:`\frac{2}{7}<\frac{x}{14}<\frac{4}{3}`?
 
-Zadanie może się wydawać zbyt łatwym by traktować je komputerem, ale możemy je wykorzystać by poćwiczyć sobie pętlę :code:`for`.
+Zadanie może się wydawać zbyt łatwym by traktować je komputerem, ale
+możemy je wykorzystać by poćwiczyć sobie pętlę :code:`for`.
 
 
-I tak możemy sprawdzić (dla pewności) wszystkie liczby z przedziłu :math:`x\in(-1000,1000)` wykorzystując system Sage, a właściwie sam  język Python: 
+I tak możemy sprawdzić (dla pewności) wszystkie liczby z przedziłu
+:math:`x\in(-1000,1000)` wykorzystując system Sage, a właściwie sam
+język Python. Takie podejście czasem jest zwane metodą *brute force* -
+czyli brutalną `zob. link <http://en.wikipedia.org/wiki/Proof_by_exhaustion>`_ . Zmuszamy bowiem
+komputer do brutalnie dużego wysiłku - przynajmniej w stosunku to
+złożoności postawionego problemu.
+
+Uczyńmy to więc:
 
 .. sagecellserver::
 
