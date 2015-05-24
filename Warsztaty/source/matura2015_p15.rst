@@ -45,7 +45,10 @@ pomoże to w tym przypadku na otrzymanie rozwiązanie, ale zasugeruje,
  
    Czasem chcemy podstawić - bez ręcznego przepisywania wyrażenia -
    wartość rozwiązania po lewej stronie równości np. do innego
-   wyrażenie. W Sage służy do tego celu metoda :code:`.rhs()`, która
-   zwraca prawą strone wyrażenia zawierającego logiczne
-   (matematycznie) równa się :code:`==`. Na przykład
-   :code:`(a==1).rhs()`, zwróci 1.
+   wyrażenie. W Sage służy do tego celu metoda :code:`.rhs()` (z
+   ang. *right hand side*), która zwraca prawą strone wyrażenia
+   zawierającego logiczne (matematycznie) równa się :code:`==`. Na
+   przykład :code:`(a==1).rhs()`, zwróci 1.
+
+   Istnieje też metoda :code:`.lhs()` (z ang. *left hand side*), która
+   zwraca lewą stronę wyrażenia.

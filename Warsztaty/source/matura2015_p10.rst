@@ -1,13 +1,13 @@
 Zadanie 10 - o konstrukcji złożonych poleceń z pomocą metod
 -----------------------------------------------------------
 
-Funkcja funkcja liniowa określona wzorem :math:`f(x)=2 x +b` ma takie
-samo miejsce zerowe, jakie ma funkcja liniowa :math:`g(x) = -3x +
-4`. Stąd wynika, że
+Funkcja liniowa określona wzorem :math:`f(x)=2 x +b` ma takie samo
+miejsce zerowe, jakie ma funkcja liniowa :math:`g(x) = -3x + 4`. Stąd
+wynika, że
  
 A. :math:`b=4`
 #. :math:`b=-\frac{3}{2}`
-#. :math:`b=-\frac{3}{8}`
+#. :math:`b=-\frac{8}{3}`
 #. :math:`b=\frac{3}{4}`
 
 
@@ -22,9 +22,12 @@ otrzymać wynik:
    f.subs(solve(g,x)[0]).solve(b)[0].show()
 
 
-Co oznacza wyrażenie  :code:`f.subs(solve(g,x)[0]).solve(b)[0].show()`? W bezpośrednim przekładzie z Pythona na Polski:
+Co oznacza wyrażenie :code:`f.subs(solve(g,x)[0]).solve(b)[0].show()`?
+W bezpośrednim przekładzie z Pythona na Polski:
 
-*Podstaw do wyrażenia :code:`f` pierwsze rozwiązanie równania :math:`g(x)=0`, rozwiąż ze względu na :math:`b` i pokaż ładnie  na ekranie pierwsze rozwiązanie.*
+  Podstaw do wyrażenia :code:`f` pierwsze rozwiązanie równania
+  :math:`g(x)=0`, rozwiąż ze względu na :math:`b` i pokaż ładnie na
+  ekranie pierwsze rozwiązanie.
 
 .. note::
 
@@ -47,18 +50,24 @@ Co oznacza wyrażenie  :code:`f.subs(solve(g,x)[0]).solve(b)[0].show()`? W bezpo
 
 Wypróbuj sam działanie metod. Weż na przykład wyrażenie algebraiczne
 Sage, które jest bardzo złożonym objektem i posiada np. rozmaite
-metody do manipulacji na wyrażeniach. Dla przykładu wypróbuj w kodzie:
+metody do manipulacji na wyrażeniach. Na przykład w komórce:
 
 .. sagecellserver::
 
    var('x,a')
    wyrazenie = (x+a)^2
-      
+   wyrazenie      
+
+dopisz do statniej  liniki:
 
 a. :code:`wyrazenie.show()` - pokaże nam ładną postać matematyczną wzoru.
 #. :code:`wyrazenie.expand()` - rozwinie wzór, spróboj połączyć z
    poprzednim: :code:`wyrażenie.expand().show()`
 #. :code:`wyrazenie.subs(a==2)`
-#. :code:`wyrazenie.expand?`
 
+
+.. note::
+
+   W Sage jest system pomocy, spróbuj napisać :code:`wyrazenie.expand`
+   i nacisnąć klawisz :code:`TAB` (tabulator).
 

@@ -17,6 +17,9 @@ większość zagadnień bez metod komputerowych jest nierozwiązywalna!
 Zadania - poziom podstawowy
 +++++++++++++++++++++++++++
 
+Zadania w orginale: `pdf. <http://s340887347.domenastandartowa.pl/cke/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2015/formula_od_2015/MMA-P1_1P-152.pdf>`_
+
+
 Po co się męczyć - niech "pomyśli" komputer!
 ============================================
 
