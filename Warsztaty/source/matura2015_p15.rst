@@ -14,7 +14,7 @@ Sprawdźmy czy Sage potrafi rozwiązać równanie :math:`\tan(x)=2\sin(x)`?
 
 Otrzymujemy dwa rozwiązania. Które jest poprawne? Zauważmy, że mamy
 podany w zadaniu warunek dla kąta, co wyklucza jedno z nich.  W Sage
-możemy spróbowac podać ten warunek używając funkcji :code:`assume`:
+możemy spróbowac podać ten warunek używając funkcji :code:`assume()`:
 
 
 .. sagecellserver::
@@ -25,13 +25,12 @@ możemy spróbowac podać ten warunek używając funkcji :code:`assume`:
    print cos(solve(tan(x)==2*sin(x),x)[0].rhs())
 
 Warto też przyjrzeć się wykresom lewej i prowej strony równania. Nie
-pomoże to w tym przypadku na otrzymanie rozwiązanie, ale zasugeruje,
-że rozwiązanie instnieje i pokaże mniej więcej jego wartość:
+pomoże to w tym przypadku  otrzymać rozwiązanie, ale zasugeruje,
+że rozwiązanie istnieje i pokaże mniej więcej jego wartość:
 
 .. sagecellserver::
 
    p = plot([tan(x),2*sin(x)],(x,0,pi),ymax=5,ymin=-5,detect_poles='show',figsize=3)
-   p += plot(cos(x),(x,0,pi/2),color='red')
    p.show()
 
 
