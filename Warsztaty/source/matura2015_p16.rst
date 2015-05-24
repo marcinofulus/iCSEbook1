@@ -1,5 +1,5 @@
-Zadanie 16 - o kątach okręgu rysowaniu
---------------------------------------
+Zadanie 16 - o kątach i rysowaniu 
+---------------------------------
 
 .. image:: matura2015/matura2015_p16.png
    :align: center
@@ -7,7 +7,7 @@ Zadanie 16 - o kątach okręgu rysowaniu
 
 Wiemy, że kąt wpisany jest dokładnie dwa razy mniejszy od środkowego
 więc zadanie sprowadza się do rozwiązania równania: :math:`2 x = x +
-20`?
+20`, gdzie :math:`x` oznacza wartość kąta wpisanego:
 
 .. sagecellserver::
 
