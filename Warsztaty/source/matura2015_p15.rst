@@ -22,7 +22,7 @@ możemy spróbowac podać ten warunek używając funkcji :code:`assume()`:
    var('x')
    assume(x>0)
    assume(x<pi)
-   print cos(solve(tan(x)==2*sin(x),x)[0].rhs())
+   show( cos(solve(tan(x)==2*sin(x),x)[0].rhs()) ) 
 
 Warto też przyjrzeć się wykresom lewej i prowej strony równania. Nie
 pomoże to w tym przypadku  otrzymać rozwiązanie, ale zasugeruje,
