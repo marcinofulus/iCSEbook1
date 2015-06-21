@@ -5,22 +5,20 @@ Zadanie 18 i 19 - o prostopadłości i równoległości prostych
    :align: center
 
 
-Krótko:
+Sa to dwa bardzo podobne zadania dotyczą one wzajemnego położenia
+prostych na płaszczyżnie. Postąpimy w następujący sposób. Narysujemy
+sobie każdą z odpowiedzi i spróbujemy wizualnie sprawdzić czy jest
+poprawnym rozwiązaniem. Z drugiej strony, wypiszemy jawnie postać
+prostych i spróbujemy "odgadnąć" regułę.
+
+.. admonition:: aspect_ratio
+
+   Będziemy używać funkcji :code:`implicit_plot` z opcją
+   :code:`acpect_ratio=1`. W innym przypadku kąty na rysunkach nie
+   odpowiadały by faktycznym!
 
 
-.. sagecellserver::
-
-    var('x,y,m')
-    rownanie1 = y==2*m*x-m^2-1
-    rownanie2 = y==4*m^2*x+m^2+1
-    @interact
-    def _(m_=[2,1,1/2,-1/2]):
-        p = implicit_plot(rownanie1.subs({m:m_}),(x,-15,15),(y,-15,15),color='red')
-        p+=implicit_plot(rownanie2.subs({m:m_}),(x,-15,15),(y,-15,15))
-        show([rownanie1.subs({m:m_}),rownanie2.subs({m:m_})])
-        p.show(figsize=4,aspect_ratio=1)
-
-
+Zadanie 18:
 
 .. sagecellserver::
 
@@ -35,5 +33,21 @@ Krótko:
         p.show(figsize=4,aspect_ratio=1)
 
 
+Zadanie 19:
 
-I mamy nasze rozwiązania!
+.. sagecellserver::
+
+    var('x,y,m')
+    rownanie1 = y==2*m*x-m^2-1
+    rownanie2 = y==4*m^2*x+m^2+1
+    @interact
+    def _(m_=[2,1,1/2,-1/2]):
+        p = implicit_plot(rownanie1.subs({m:m_}),(x,-15,15),(y,-15,15),color='red')
+        p+=implicit_plot(rownanie2.subs({m:m_}),(x,-15,15),(y,-15,15))
+        show([rownanie1.subs({m:m_}),rownanie2.subs({m:m_})])
+        p.show(figsize=4,aspect_ratio=1)
+
+
+Czy z wykonująć powyższy kod możemy sformułować stwierdzenie na temat
+prostopodłości i równoległości prostych?
+
