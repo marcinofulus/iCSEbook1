@@ -126,7 +126,7 @@ F(x\_i, v\_i, t\_i)/m$. 2. Compute the new velocity: $ v\_{i+1} = v\_i +
 a\_i:raw-latex:`\Delta `t$. 3. Compute the new position: $ r\_{i+1} =
 r\_i + v\_i:raw-latex:`\Delta `t$.
 
-.. sagecellserver:: python
+.. code:: python
 
     for i in range(N):
     	a[i] = F(r[i], v[i], t[i])/m
@@ -143,7 +143,7 @@ We also need various bookeeping code
 
 Here we define the arrays we will be using
 
-.. sagecellserver:: python
+.. code:: python
 
     # Import various functions meant for numerical science
     import numpy as np 
@@ -170,7 +170,7 @@ Here we define the arrays we will be using
 Here we define physical constants for our system and define the function
 that describes the forces
 
-.. sagecellserver:: python
+.. code:: python
 
     m = 5.5 # mass, kg
     g = 9.81 # acceleration of gravity, m/s^2
@@ -189,7 +189,7 @@ through the air
 As soon as we have solved the equations of motion, we can plot the
 result
 
-.. sagecellserver:: python
+.. code:: python
 
     # Solving equations of motion iteratively
     for i in range(N):
