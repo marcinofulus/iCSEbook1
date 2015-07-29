@@ -31,6 +31,7 @@ rzeczywistych:
 
 .. sagecellserver::
 
+   var('x')
    solve([2/7<x/14,x/14<4/3],x)
 
 
