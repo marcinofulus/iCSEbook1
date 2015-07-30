@@ -1,6 +1,6 @@
 
 Workshop: Projectile Motion
-===========================
++++++++++++++++++++++++++++
 
 An introduction to computing trajectories
 -----------------------------------------
@@ -11,14 +11,14 @@ For this to be possible, the computations must 1. Relate to well-known
 problems 2. Must be shown to be a powerful tool 3. Understable. Students
 should write their own code
 
-The goal is to find the velocity and position of an object as functions of time: $:raw-latex:`\vec{v}`(t), :raw-latex:`\vec{r}`(t) $
-====================================================================================================================================
+The goal is to find the velocity and position of an object as functions of time: :math:`\vec{v}(t)`, :math:`\vec{r}(t)` 
+=======================================================================================================================
 
 |cannonball| Equations of motion:
 
 .. math::  \frac{d \vec{r}}{d t} = \vec{v}(t), \qquad \frac{d \vec{v}}{d t} = \vec{a}(t)
 
-.. |cannonball| image:: figs\cannonball.svg
+.. image:: figs/cannonball.svg
 
 Newtons 2. law of motion:
 
@@ -26,7 +26,7 @@ Newtons 2. law of motion:
 
 |cannonballforces|
 
-.. |cannonballforces| image:: figs\cannonballforces.svg
+.. |cannonballforces| image:: figs/cannonballforces.svg
 
 .. math::  \vec{F}(r,v,t) = m\vec{a}(r,v,t).
 
@@ -61,7 +61,7 @@ We can solve the equations of motion by stepping forward in time
 If :math:`a(t)` and :math:`v(t)` are known, we can calculate
 :math:`v(t+\Delta t)` |plot of eulers method|
 
-.. |plot of eulers method| image:: figs\eulers0.svg
+.. |plot of eulers method| image:: figs/eulers0.svg
 
 Our functions are no longer continuous, they have become discretized
 ====================================================================
@@ -84,7 +84,7 @@ Introduce the shorthand
    r(t_i) & \equiv r_i \\
    \end{align*}
 
-.. figure:: figs\time_discretization.svg
+.. figure:: figs/time_discretization.svg
    :alt: time discretization
 
    time discretization
@@ -222,7 +222,7 @@ result
 .. image:: output_30_0.png
 
 
-.. figure:: figs\plot_cannonball1.svg
+.. figure:: figs/plot_cannonball1.svg
    :alt: plot\_cannonball1
 
    plot\_cannonball1
@@ -232,10 +232,12 @@ Numerical Experimentation
 
 Altering parameters let’s us immediately see the consequences
 
-|plot\_cannonball2| |plot\_cannonball3|
+|plot_cannonball2| |plot_cannonball3|
 
-.. |plot\_cannonball2| image:: figs\plot_cannonball2.svg
-.. |plot\_cannonball3| image:: figs\plot_cannonball3.svg
+.. |plot_cannonball2| image:: figs/plot_cannonball2.svg
+.. |plot_cannonball3| image:: figs/plot_cannonball3.svg
+
+
 
 Students can use numerical experimentation to build intuition and knowledge
 ===========================================================================
@@ -250,12 +252,14 @@ Students can use numerical experimentation to build intuition and knowledge
 Examples of possible projects
 =============================
 
-You will have a chance to look at some of these today ##Catapults and
-cannons and sports such as baseball \* Easy to compare with experimental
-data, either before or after simulation. \* Can look into studies of air
-drag, Reynolds number etc. |cannonball|
+You will have a chance to look at some of these today 
 
-.. |cannonball| image:: figs\cannonball.svg
+Catapults and cannons and sports such as baseball 
+* Easy to compare with experimental data, either before or after simulation. 
+* Can look into studies of air drag, Reynolds number etc. |cannonball|
+
+.. |cannonball| image:: figs/cannonball.svg
+
 
 Skydiving and bungeejumping
 ===========================
@@ -269,15 +273,18 @@ Skydiving and bungeejumping
 Pendulum and angular motion
 ===========================
 
-|pendulum| \* Can solve pendulum also for large angles! \* Energy can be
-plotted as functions of time \* Can also simulate double pendulum and
-chaotic systems
+|pendulum| 
 
-.. |pendulum| image:: figs\pendulum.svg
+* Can solve pendulum also for large angles! 
+* Energy can beplotted as functions of time 
+* Can also simulate double pendulum and chaotic systems
+
+.. |pendulum| image:: figs/pendulum.svg
+
 
 Modelling the solar system
 ==========================
 
- \* Students can gather real data of planetary orbits from NASA webpages
-\* Can combine numerical simulation with better graphics
+* Students can gather real data of planetary orbits from NASA webpages
+* Can combine numerical simulation with better graphics
 

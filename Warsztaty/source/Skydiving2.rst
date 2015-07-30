@@ -1,6 +1,6 @@
 
 Skydiving - part 2
-==================
+++++++++++++++++++
 
 In part 1 we created a program to solve the equations of motion for
 skydiving. We began with Newtons 2nd law, and we looked at the forces
@@ -24,15 +24,21 @@ parachute deploys and the effect it has on the g-forces.
 In part 1, we began by finding the following expression for the
 acceleration of a skydiver:
 
-.. math:: a(v) = g - \frac{1}{2}C\rho A v^2.
+.. math:: 
+
+   a(v) = g - \frac{1}{2}C\rho A v^2.
+
 
 Then we used the equations of motion for constant acceleration
 
-.. math:: v = v_0 + a t,
+.. math:: 
 
- to take short steps in time of length :math:`\Delta t`, which gave us
+   v = v_0 + a t
 
-.. raw:: latex
+
+to take short steps in time of length :math:`\Delta t`, which gave us
+
+.. math::
 
    \begin{align*}
    v_1 &= v_0 + a(v_0)\Delta t \\  
@@ -41,6 +47,8 @@ Then we used the equations of motion for constant acceleration
    &\vdots \\
    v_{i+1} &= v_i + a(v_i)\Delta t.
    \end{align*}
+
+
 
 But there is a corresponding equation for constant acceleration which we
 can use to find the position:
@@ -78,10 +86,12 @@ cord is 20 meters long, so our jumper jumps from a point 20 meters above
 the the point of equilibrium, that is at :math:`x_0 = 20`\ m. Let us add
 a river 60 meters below the bridge.
 
-.. figure:: figs\Bungee_bridge.svg
+.. figure:: figs/Bungee_bridge.svg
    :alt: bungee jumper illustration
 
    bungee jumper illustration
+
+
 
 We can tell that if the jumpers position is above the point of
 equilibrium, then the cord will not be stretched, and it will not act on

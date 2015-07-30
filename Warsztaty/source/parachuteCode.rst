@@ -1,3 +1,6 @@
+Parachute - code
+++++++++++++++++
+
 
 .. sagecellserver:: python
 
@@ -20,12 +23,15 @@
     dt = 0.01
     T = 180
     n = int(T/dt)
+
 .. sagecellserver:: python
 
     t = zeros(n+1)
     v = zeros(n+1)
     x = zeros(n+1)
     gforces = zeros(n+1)
+
+
 .. sagecellserver:: python
 
     # Simulating the first 60 seconds
@@ -53,6 +59,7 @@
         v[i+1] = v[i] + a(v[i])*dt
         x[i+1] = x[i] + v[i]*dt + 0.5*a(v[i])*dt**2
         gforces[i] = 1 - a(v[i])/g
+
 .. sagecellserver:: python
 
     %matplotlib inline

@@ -1,9 +1,10 @@
 
 Introduction to programming with Python
-=======================================
++++++++++++++++++++++++++++++++++++++++
 
 What is computer programming?
 =============================
+
 
 Programming is simply to create computer programs. We are surrounded by
 computer programs (or software) everywhere. For instance Microsoft Word,

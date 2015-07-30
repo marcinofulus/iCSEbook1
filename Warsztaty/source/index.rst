@@ -39,6 +39,25 @@ Warsztaty z konferencji iCSE4schools
    Parrondos_paradox
 
 
+iCSE4schools
+============
+
+There are some materials from Oslo teaching experiences.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   basicProgramming
+   basicProgrammingExpanded                         
+   parachuteCode                                    
+   bungeeCode                                       
+   Skydiving1                                       
+   Skydiving2                                       
+   ProjectileMotion                                 
+   Battleship
+
+
 
 
 

@@ -1,6 +1,6 @@
 
 Battleship!
-===========
++++++++++++
 
 A lot of these exercises are pulled from Code Academy, and so you can
 also solve them there by following this link and finding the right
@@ -21,7 +21,7 @@ where they have shot the other player. The picture below show an example
 of the game board. The white pins signify missed shots, while the red
 pins signify hits.
 
-.. figure:: figs\battleship-board-game.jpg
+.. figure:: figs/battleship-board-game.jpg
    :alt: battleship board
 
    battleship board
@@ -46,93 +46,18 @@ represents the ocean, and we want it to be a grid so that we can guess a
 square by giving the x and y coordinates. Let us create a 5x5 board. If
 we were to draw it by hand, it would look something like this:
 
-.. raw:: html
 
-   <table style="width:20%;line-height:2em">
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-    <td style="text-align:center">O</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
++-+-+-+-+-+
+|0|0|0|0|0|
++-+-+-+-+-+
+|0|0|0|0|0|
++-+-+-+-+-+
+|0|0|0|0|0|
++-+-+-+-+-+
+|0|0|0|0|0|
++-+-+-+-+-+
+|0|0|0|0|0|
++-+-+-+-+-+
 
 You can create a board like this on your computer by using a list of
 lists. We create a list consisting of 5 elements, where each element is

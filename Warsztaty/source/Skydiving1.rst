@@ -1,6 +1,8 @@
 
 Skydiving - part 1
-==================
+++++++++++++++++++
+
+
 
 We will now begin to look at how the velocity of a skydiver changes over
 time. We will find mathematical equations based on our physical
@@ -222,140 +224,37 @@ parameters based on what kind of simulation we want to run, but we
 generally consider them to be known. In our simulation we want to use
 the following parameters
 
-.. raw:: html
 
-   <table style="width:30%">
++--------------+-----------------------------+
+| Free fall    |                             |
+|              |                             |
++--------------+-----------------------------+
+| :math:`m`    |  :math:`90kg`               |
++--------------+-----------------------------+
+| :math:`g`    |  :math:`9.81\frac{m}{s^2}`  |
++--------------+-----------------------------+
+| :math:`\rho` |  :math:`1\frac{kg}{m^3}`    |
++--------------+-----------------------------+
+| :math:`C_p`  |  :math:`1.4`                |
++--------------+-----------------------------+
+| :math:`A_p`  |  :math:`0.7 m^2`            |
++--------------+-----------------------------+
 
-.. raw:: html
 
-   <tr>
 
-::
 
-    <td colspan="2">Free fall</td>
++--------------------+-----------------------------+
+| Under parachute    |                             |
+|                    |                             |
++--------------------+-----------------------------+
+| :math:`C_p`        |  :math:`1.8`                |
++--------------------+-----------------------------+
+| :math:`A_p`        |  :math:`44 m^2`             |
++--------------------+-----------------------------+
 
-.. raw:: html
 
-   </tr>
 
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$m$</td>
-    <td>90 kg</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$g$</td>
-    <td>9.81 m/s$^2$</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$\rho$</td>
-    <td>1 kg/m$^3$</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$C$</td>
-    <td>1.4</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$A$</td>
-    <td>0.7 m$^2$</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
-
-.. raw:: html
-
-   <table style="width:30%">
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td colspan="2">Under parachute</td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$C_{\rm p}$</td>
-    <td>1.8</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td>$A_{\rm p}$</td>
-    <td>44 m$^2$</td> 
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   </table>
+(**Hint:** name the variable :math:`\verb+dt+` in your program)
 
 Writing the code
 ================
@@ -369,9 +268,9 @@ you are going to write
    :math:`v_0`
 3. Define the acceleration as a function of the velocity. **Hint:**
    :math:`\verb+Def a(V)+`. and remember to return something.
-4. Define $:raw-latex:`\Delta `t = 0.01 $ (**Hint:** name the variable
-   :math:`\verb+dt+` in your program) :math:`T = 60` and
-   :math:`n = T/dt`
+4. Define :math:`\Delta t = 0.01` (**Hint:** name the variable
+   :math:`\verb+dt+` in your program) :math:`T = 60` and :math:`n =
+   T/dt`
 5. Declare two arrays, one for the velocity :math:`v` and one for the
    time :math:`t`. We want the arrays to be empty and have room for
    :math:`\verb!n+1!` elements, so use the :math:`\verb+zeros+` command.
