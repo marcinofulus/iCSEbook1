@@ -50,7 +50,7 @@ learned by playing Lightbot are the same. Below is an illustration of
 the workflow we use when we are programming. Do you see how similar the
 different steps are to the steps you performed when you played Lightbot?
 
-.. figure:: figs/programmering_en.svg
+.. figure:: programmering_en.svg
    :alt: Alt text
 
    Alt text
@@ -983,7 +983,7 @@ the names and how many characters each name has:
 The code is executed for every name in the list, i.e., since the list
 has 5 elements the code is executed 5 times.
 
-.. figure:: figs/for_loop.svg
+.. figure:: figs\for_loop.svg
    :alt: for loop diagram
 
    for loop diagram
@@ -1111,7 +1111,7 @@ less-than-or-equal (:math:`\verb+<=+`). To see if something is
 :math:`\verb+True+` or :math:`\verb+False+`, you can simply print the
 condition to the screen
 
-.. figure:: figs/if_else.svg
+.. figure:: figs\if_else.svg
    :alt: if else diagrams
 
    if else diagrams
@@ -1164,7 +1164,7 @@ because it also checks a condition. The difference between the two is
 that a :math:`\verb+while+` loop will repeat everything in the block
 over and over again as long as the condition remains true
 
-.. figure:: figs/while_loop.svg
+.. figure:: figs\while_loop.svg
    :alt: while loop
 
    while loop
@@ -1328,7 +1328,7 @@ The simplest way to think about a function is to look at it like a
 machine that takes some input, like a number, and returns some output
 based on the input.
 
-.. figure:: figs/function_blackbox.svg
+.. figure:: figs\function_blackbox.svg
    :alt: function blackbox
 
    function blackbox
