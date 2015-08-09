@@ -50,7 +50,7 @@ learned by playing Lightbot are the same. Below is an illustration of
 the workflow we use when we are programming. Do you see how similar the
 different steps are to the steps you performed when you played Lightbot?
 
-.. figure:: programmering_en.svg
+.. figure:: figs/programmering_en.svg
    :alt: Alt text
 
    Alt text
@@ -110,7 +110,7 @@ Our first program consists of just one line:
     
 
 When we run the code, "Hello world!" is printed to the screen. This is
-because we used the key word :math:`\texttt{print}`, which tells the
+because we used the keyword :math:`\texttt{print}`, which tells the
 computer to write what follows to the screen. Notice that we use quotes
 at the beginning and end of "Hello world". This is done so that the
 computer can distinguish text from code. To make it easier for the
@@ -983,7 +983,7 @@ the names and how many characters each name has:
 The code is executed for every name in the list, i.e., since the list
 has 5 elements the code is executed 5 times.
 
-.. figure:: figs\for_loop.svg
+.. figure:: figs/for_loop.svg
    :alt: for loop diagram
 
    for loop diagram
@@ -1103,6 +1103,7 @@ to write a message if the number equals 0, and do nothing otherwise.
 
     if number == 0:
     	print "The number equals zero!"
+
 You can use if tests to check other things than equality. Some other
 useful operators are greater-than (:math:`\verb+>+`), less-than
 (:math:`\verb+<+`), greater-than-or-equal (:math:`\verb+>=+`), and
@@ -1110,7 +1111,7 @@ less-than-or-equal (:math:`\verb+<=+`). To see if something is
 :math:`\verb+True+` or :math:`\verb+False+`, you can simply print the
 condition to the screen
 
-.. figure:: figs\if_else.svg
+.. figure:: figs/if_else.svg
    :alt: if else diagrams
 
    if else diagrams
@@ -1163,7 +1164,7 @@ because it also checks a condition. The difference between the two is
 that a :math:`\verb+while+` loop will repeat everything in the block
 over and over again as long as the condition remains true
 
-.. figure:: figs\while_loop.svg
+.. figure:: figs/while_loop.svg
    :alt: while loop
 
    while loop
@@ -1327,7 +1328,7 @@ The simplest way to think about a function is to look at it like a
 machine that takes some input, like a number, and returns some output
 based on the input.
 
-.. figure:: figs\function_blackbox.svg
+.. figure:: figs/function_blackbox.svg
    :alt: function blackbox
 
    function blackbox
