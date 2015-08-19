@@ -38,7 +38,7 @@ Komputer? Sam? Już panu tłumaczyłem, że on jest głupi. (Stanisław Lem)
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    matura2015_r*

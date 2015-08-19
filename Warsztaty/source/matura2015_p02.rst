@@ -15,7 +15,7 @@ Wystarczy poprosić system algebry komputerowej i od razu mamy wynik:
     a = 1/27
     b = log(64,base=1/4)
     c = log(27,base=1/3)
-    (a*b*c).radical_simplify()
+    (a*b*c).canonicalize_radical()
 
 .. admonition:: Jak to działa?
 
@@ -32,8 +32,6 @@ Wystarczy poprosić system algebry komputerowej i od razu mamy wynik:
 
   Zauważmy, że końcowe wyrażenie to nie jest automatycznie
   uproszczone, jeżeli nie nakłonimy naszego systemu do tego metodą
-  `.radical_simplify`. Sprawdź to sam, usuwając tą metodę w pierwszej
-  komórce
+  `.canonicalize_radical()`. Sprawdź to sam, usuwając tą metodę w
+  pierwszej komórce
 
-
-!
