@@ -13,7 +13,8 @@ Presented here materials use free open-source mathematics sotfware SageMath.
 
    Parrondos_paradox
    basicProgramming
-   Expanded version of programming <basicProgrammingExpanded>                Skydiving1                                       
+   Expanded version of programming <basicProgrammingExpanded>
+   Skydiving1                                       
    parachuteCode                                    
    Skydiving2                                       
    bungeeCode

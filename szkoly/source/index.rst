@@ -1,6 +1,6 @@
-==============
-Warsztaty iCSE
-==============
+=======================
+Sage i Python dla szkól
+=======================
 
 Przedstawione materiały wykorzystują Otwarty system Sage. W pierwszym
 warsztacie z tego cyklu znajduje się, krótkie wprowadzenie do
@@ -30,6 +30,11 @@ Matematyka ,,w domu i w zagrodzie"
 
 Czy dwie pół--główki to cała główka?  
 
+* Materiały z warsztatów prowadzonych w szkołach w latach 2012-13 w
+  ramach projektu iCSE przez dra. Michała Trzęsioka. Jeden z tych
+  warsztatów pt. "Demokracja - co dwie głowy to nie jedna", jest
+  dostępny w formie filmu na `YouTube
+  <https://youtu.be/X0JX6Ug4cV8?list=PLsfG71XutI3L6ulPjIoUjRyl-7-ZbEQed>`_.
 
 .. toctree::
    :maxdepth: 1
@@ -42,67 +47,12 @@ Czy dwie pół--główki to cała główka?
    iCSE_4_MontyHall_CubeProject
 
 
-Dynamika w windzie i nie tylko...
-=================================
-
-Wystrzel z armaty bez obaw o skutki!
-
-.. toctree::
-   :maxdepth: 1
-
-   Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
-   Akcelerometr w domu  <akcelerometr>
-
-
-Sage w fizyce i nie tylko
-=========================
-
-
-.. toctree::
-   :maxdepth: 1
-
-   sagewfizyce
-
-
-
-GPS dla fizyka
-==============
-
-
-.. toctree::
-   :maxdepth: 1
-
-
-   gps
-
-
-Muzyka funkcji
-==============
-
-
-.. toctree::
-   :maxdepth: 1
-
-   gramy_funkcje
-
-
-Matematyka w biologii!
-======================
-
-
-.. toctree::
-   :maxdepth: 1
-
-   dynamika_populacyjna
-
-   
-   
-
 
 Chaotyczne opowieści
 ====================
 
-O prostych układach, które wprowadzają niezły chaos. Spróbuj dojść do (uk)ładu z tym chaosem!
+O prostych układach, które wprowadzają niezły chaos. Spróbuj dojść do
+(uk)ładu z tym chaosem!
 
 .. toctree::
    :maxdepth: 1
@@ -114,22 +64,30 @@ O prostych układach, które wprowadzają niezły chaos. Spróbuj dojść do (uk
 
 
 
-Młody Technik - artykuły
-========================
+Fizyka z Sage
+=============
 
- - Proste modele ze złożonym zachowaniem czyli o chaosie ( :download:`pdf <MT_logistyczne/proste_a_zlozone.pdf>` )
- - Rzut ukośny, czyli o prawie Newtona i równaniach różniczkowych ( :download:`pdf <MT_armata_ode/armata_ode.pdf>` )
+Wystrzel z armaty bez obaw o skutki, posłuchaj funkcji sinus zamiast
+rysować jej wykres!
 
- - Modelowanie papierowego samolocika
+.. toctree::
+   :maxdepth: 1
+
+   Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
+   Akcelerometr w domu  <akcelerometr>
+   gramy_funkcje
+
+Krótki kurs Sage
+================
+
+
+.. toctree::
+   :maxdepth: 1
+
+   sagewfizyce
 
 
 
-
-Jaka jest długość brzegu Anglii?
-================================
-
-(w opracowaniu) Próby pomiaru długości brzegu Anglii doprowadziły do
-wniosku, że wielkość ta nie istnieje...
 
 
 

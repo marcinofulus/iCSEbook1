@@ -62,14 +62,13 @@ Parachute - code
 
 .. sagecellserver:: python
 
-    %matplotlib inline
     plot(t,v)
     xlabel('t')
     ylabel('v(t)')
     grid()
+    savefig('1.png')
+    html("<img src='cell://1.png' />")
 
-
-.. image:: output_7_0.png
 
 
 .. sagecellserver:: python
@@ -78,11 +77,8 @@ Parachute - code
     xlabel('t')
     ylabel('gforces')
     grid()
-    show()
-
-
-.. image:: output_8_0.png
-
+    savefig('2.png')
+    html("<img src='cell://2.png' />")
 
 .. sagecellserver:: python
 
@@ -90,9 +86,5 @@ Parachute - code
     xlabel('t')
     ylabel('x')
     grid()
-    show()
-
-
-.. image:: output_9_0.png
-
-
+    savefig('3.png')
+    html("<img src='cell://3.png' />")
