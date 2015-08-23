@@ -1,0 +1,6 @@
+\usepackage{mathtools}  
+\mathtoolsset{showonlyrefs}  
+
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{eqnarray}

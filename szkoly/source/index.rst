@@ -130,3 +130,7 @@ Jaka jest długość brzegu Anglii?
 
 (w opracowaniu) Próby pomiaru długości brzegu Anglii doprowadziły do
 wniosku, że wielkość ta nie istnieje...
+
+
+
+
