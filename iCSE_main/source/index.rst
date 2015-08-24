@@ -97,8 +97,10 @@ wykonany na nim kod programu znajdującego się w polu tekstowym:
         dot = point((x0,f(x=x0)),pointsize=80,color='red',figsize=3,aspect_ratio=1)
         pt = plot(pol, -1.2, 1.2, linestyle='--', color='red', thickness=2,ymin=-.2,ymax=1.2)
 
-        html.table([[plt1+pkt,plt2+circ+pkt,p+dot+pt]])
-
+        # html.table([[plt1+pkt,plt2+circ+pkt,p+dot+pt]])
+        show(plt1+pkt)
+        show(plt2+circ+pkt)
+        show(p+dot+pt)
 
 .. end of output
 
