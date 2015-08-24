@@ -141,15 +141,14 @@ czasie:
 
 .. sagecellserver::
 
-   s = solve(map(SR,B),map(SR,vP) ,solution_dict=True)[0]
-   print    (sqrt((x0-x2)^2+(y0-y2)^2).subs(s).canonicalize_radical()   
+   sol = solve(map(SR,B),map(SR,vP) ,solution_dict=True)[0]
+   print ((x2-x0)^2+(y2-y0)^2).subs(sol).canonicalize_radical()
 
+   pkts = [vector((vars()['x%d'%i].subs(sol),vars()['y%d'%i].subs(sol))) for i in range(4)]
+   plt = circle( (0,0), r.subs(sol))
+   plt += point( [(vars()['x%d'%i].subs(sol),vars()['y%d'%i].subs(sol)) for i in range(4)],color='red' ,size=30)
 
-
-
-   pkts = [vector((x1,y1)),vector((x2,y2)), vector((x3,y3)), vector((x0,y0)) ]
-
-
-   pkts[1].subs(s),r.subs(s)
-
-
+   plt += sum([ line( [(0,0), 1/2*(pkts[i]+pkts[(i+1)%4])],color='brown') for i in range(4)] )
+   plt += sum([ line( [pkts[i],pkts[(i+1)%4]],color='gray') for i in range(4)] )
+   plt += line( [pkts[0],pkts[2]],color='green',thickness=2) 
+   plt
