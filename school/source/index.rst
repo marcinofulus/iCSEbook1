@@ -3,7 +3,8 @@ Computer in Science Education - teaching materials
 ==================================================
 
 
-Presented here materials use free open-source mathematics sotfware SageMath.
+The material presented here uses the free open-source mathematics software
+SageMath.
 
 
 
@@ -20,6 +21,7 @@ Presented here materials use free open-source mathematics sotfware SageMath.
    bungeeCode
    ProjectileMotion                                 
    Battleship
+   abitur/Abitur_2015_TeilA_CAS_de
 
 
 
