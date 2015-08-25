@@ -419,7 +419,7 @@ Aufgabe 1
 Die Gerade g verläuft durch die Punkte A(0|1|2) und B(2|5|6).
 
 a) Zeigen Sie, dass die Punkte A und B den Abstand 6 haben. Die Punkte C und D
-   liegen auf und haben von A jeweils den Abstand 12. Bestimmen Sie die
+   liegen auf g und haben von A jeweils den Abstand 12. Bestimmen Sie die
    Koordinaten von C und D.
 
 .. admonition:: Lösung
