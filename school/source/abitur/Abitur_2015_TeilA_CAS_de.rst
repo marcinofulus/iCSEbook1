@@ -97,11 +97,10 @@ b) Die erste Ableitungsfunktion von :math:`h` ist :math:`h'`. Bestimmen Sie den 
   
   .. sagecellserver::
   
-      sage: from sage.symbolic.integration.integral import definite_integral
       sage: h(x) = x^4+x^2+1
       sage: dh(x) = diff(h, x)
       sage: print 'Ableitung von h(x):', dh
-      sage: print 'Wert des bestimmten Integrals:', definite_integral(dh(x), x, 0, 1)
+      sage: print 'Wert des bestimmten Integrals:', integrate(dh(x), x, 0, 1)
   
   .. end of output
   
