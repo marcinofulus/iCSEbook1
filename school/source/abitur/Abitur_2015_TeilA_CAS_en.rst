@@ -97,11 +97,10 @@ b) The first derivative of the function :math:`h` is given by :math:`h'`.
   
   .. sagecellserver::
   
-      sage: from sage.symbolic.integration.integral import definite_integral
       sage: h(x) = x^4+x^2+1
       sage: dh(x) = diff(h, x)
       sage: print 'Derivative of h(x):', dh
-      sage: print 'Value of the definite integral:', definite_integral(dh(x), x, 0, 1)
+      sage: print 'Value of the definite integral:', integrate(dh(x), x, 0, 1)
   
   .. end of output
   
