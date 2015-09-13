@@ -152,8 +152,10 @@ tworzą więc przestrzeń wektorową nad tym ciałem.
 Mnożenie macierzy przez wektor kolumnowy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-Iloczyn macierzy :math:`\,\boldsymbol{A}\,` o :math:`\,m\,` wierszach i :math:`\,n\,` kolumnach
-przez :math:`\,n`-elementowy wektor kolumnowy :math:`\,\boldsymbol{x}\,` definiujemy następująco:
+Iloczyn macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` 
+o :math:`\,m\,` wierszach i :math:`\,n\,` kolumnach
+przez :math:`\,n`-elementowy wektor kolumnowy :math:`\,\boldsymbol{x}\in K^n\,` 
+definiujemy następująco:
 
 .. math::
    :label: prod_col
@@ -258,7 +260,7 @@ Mnożenie macierzy przez macierz
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Przypomnijmy, przy zmienionych oznaczeniach, zapisaną w poprzedniej sekcji definicję :eq:`prod_col`
-mnożenia macierzy prostokątnej przez macierz jednokolumnową. :math:`\\`
+mnożenia macierzy prostokątnej przez wektor, czyli przez macierz jednokolumnową. :math:`\\`
 
 Otóż iloczyn macierzy 
 :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times p}\ \;` i 

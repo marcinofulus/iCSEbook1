@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'AlgebraLiniowa'
+project = u'Algebra Liniowa'
 copyright = u'2013, Marcin Kostur'
 
 # The version info for the project you're documenting, acts as replacement for

@@ -4,7 +4,7 @@ Uwagi techniczne
 ----------------
 
 Komórki Sage'a uruchamiane przyciskiem "Wykonaj" są ze sobą powiązane (linked) w tym sensie,
-że obiekty, wprowadzone w danej komórce są dostępne w komórkach następnych.
+że obiekty wprowadzone w danej komórce są dostępne w komórkach następnych.
 Pozwala to na przykład wywołać funkcję zdefiniowaną w poprzedniej komórce.
 
 Napis "Wykonaj" odróżnia komórki z tą dodatkową funkcjonalnością od komórek standardowych,
@@ -40,6 +40,6 @@ Procedura może być teraz wywołana w następnej komórce:
    try: display_set_of_lin_eqns(n, A, b)
    except NameError: html("Wykonaj kod w poprzedniej komórce!")
 
-To powiązanie komórek ma zastosowanie w sekcji Geometria układów równań liniowych.
+To powiązanie komórek ma zastosowanie np. w sekcji Geometria układów równań liniowych.
 Zdefiniowana jest tam funkcja ``verse3column()``, zapisująca dany układ trzech równań w postaci kolumnowej.
 Funkcja ta jest potem wywołana w następnej komórce dla konkretnych argumentów.

@@ -259,6 +259,7 @@ można skonstruować następująco:
    n = 5
    A = matrix([[(-1)^(i+j) if j>=i else 0 for j in range(n)] 
                                           for i in range(n)])
+
 **Zadanie 9.** :math:`\,` Wyznacz macierz :math:`\ \boldsymbol{X}\ ` z równania:
 
 a.) :math:`\ \ \boldsymbol{X}\,
