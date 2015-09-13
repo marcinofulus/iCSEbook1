@@ -85,25 +85,32 @@ przeskalowanych. W powyższym przypadku wprowadzimy następujące
 przeskalowane i bezwymiarowe wielkości:
 
 
-:math:`x=\frac{c_0}{d} N, \quad y =\frac{b_0}{a} P`
+.. math::
+
+   x=\frac{c_0}{e} N, \quad y =\frac{b_0}{a} P
 
 
 oraz bezwymiarowy czas:
 
 
-:math:`\tau = a t`
+.. math:: 
+
+   \tau = a t
 
 
 Po wstawieniu tych wielkości do równań Lotki\-Volterry otrzymamy układ równań:
 
 
-:math:`\dot x= x- x y`
+.. math:: 
+
+	\dot x= x- x y
+
+.. math:: 
+
+	\dot y = \alpha (xy-y)
 
 
-:math:`\dot y = \alpha (xy-y)`
-
-
-w którym pojawia się tylko jeden parametr :math:`\alpha = \frac{d}{r}
+w którym pojawia się tylko jeden parametr :math:`\alpha = \frac{e}{a}
 \gt 0`, który opisuje stosunek tempa śmierci drapieżników :math:`d` do
 tempa urodzin ofiar :math:`r`.  Tak więc procedura przeskalowania
 równań pozwoliła wyeliminować nieistotne parametry. Jedynym istotnym
@@ -149,27 +156,27 @@ w punktach stacjonarnych:
 
     J_1= J(0, 0) = \begin{bmatrix}1& 0\\ 0& -\alpha \end{bmatrix}, \quad \quad  J_2= J(1, 1) = \begin{bmatrix}0& -1\\ \alpha& 0 \end{bmatrix}
 
-
-\ 
+ 
 
 2. Wyznaczamy wartości własne macierzy Jacobiego :math:`|J-\lambda I|=0`:
 
 
-(a) dla :math:`(0, 0)` otrzymujemy: :math:`\lambda_{01} = 1, \quad
-       \lambda_{02} =- \alpha`. Więc rozwiązanie to nie jest
-       asymptotycznie stabilne, ponieważ jedna z wartości własnych
-       jest dodatnia, tzn. :math:`\lambda_{01} \gt 0`. Dowolnie małe
-       zaburzenie tego stanu spowoduje ucieczkę układu z tego stanu.
+(a) dla :math:`(0, 0)` otrzymujemy: 
+      :math:`\lambda_{01} = 1,\quad \lambda_{02} =- \alpha`. 
+       Więc rozwiązanie to nie jest asymptotycznie stabilne, ponieważ
+       jedna z wartości własnych jest dodatnia,
+       tzn. :math:`\lambda_{01} \gt 0`. Dowolnie małe zaburzenie tego
+       stanu spowoduje ucieczkę układu z tego stanu.
 
 
-(b) dla :math:`(1, 1)` otrzymujemy: :math:`\lambda_{11} = i
-       \sqrt{\alpha}, \quad \lambda_{12} = -i\sqrt{\alpha}`.  Ponieważ
-       wartości własne są urojone, to rozwiązanie jest stabilne, lecz
-       nie jest asymptotycznie stabilne. Dowolnie małe zaburzenie tego
-       stanu spowoduje powstanie stanu, który cały czas będzie w
-       otoczeniu tego stanu :math:`(1, 1)`, ale do niego nie dąży. W
-       pobliżu tego stany, trajektorie są periodyczne i krzywe fazowe
-       powinny być zamknięte.
+(b) dla :math:`(1, 1)` otrzymujemy: 
+       :math:`\lambda_{11} = i \sqrt{\alpha}, \quad \lambda_{12} = -i\sqrt{\alpha}`.  
+       Ponieważ wartości własne są urojone, to rozwiązanie jest
+       stabilne, lecz nie jest asymptotycznie stabilne. Dowolnie małe
+       zaburzenie tego stanu spowoduje powstanie stanu, który cały
+       czas będzie w otoczeniu tego stanu :math:`(1, 1)`, ale do niego
+       nie dąży. W pobliżu tego stany, trajektorie są periodyczne i
+       krzywe fazowe powinny być zamknięte.
 
 
 Znajdziemy teraz postać  krzywych fazowych. W tym celu podzielimy obustronnie przeskalowane równania Lotki\-Volterry:
