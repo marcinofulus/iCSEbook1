@@ -1,6 +1,6 @@
 
-Jądro i obraz przekształcenia liniowego
----------------------------------------
+Kernel, Image and the Rank-Nullity Theorem
+------------------------------------------
 
 Niech :math:`\,V\ \,\text{i}\ \ W\ ` będą przestrzeniami wektorowymi nad ciałem :math:`\,K.`
 

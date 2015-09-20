@@ -1,6 +1,9 @@
 
-Iloczyn skalarny
-----------------
+Inner (Scalar) Product
+----------------------
+
+Axiomatic Definition and its Implementations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    
@@ -181,6 +184,9 @@ ważne również w przestrzeniach euklidesowych.
 .. Podstawową własność iloczynu skalarnego przedstawia
 
 .. odnoszą się jednak również do przestrzeni euklidesowych (rzeczywistych).
+
+The Schwarz Inequality
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Twierdzenie 1. :math:`\,` (nierówność Schwarza)
    

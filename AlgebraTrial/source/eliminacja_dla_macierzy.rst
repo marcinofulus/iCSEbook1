@@ -1,14 +1,14 @@
 .. -*- coding: utf-8 -*-
 
-Metoda eliminacji w ujęciu macierzowym
---------------------------------------
+The Matrix Formulation of the Elimination Method
+------------------------------------------------
 
 Omówiona wcześniej metoda eliminacji wykorzystuje przekształcenia elementarne dla doprowadzenia układu równań liniowych do postaci schodkowej. 
 
 Ten sam efekt można osiągnąć, zastępując operacje elementarne na równaniach odpowiednimi operacjami na wierszach macierzy rozszerzonej, reprezentującej układ równań.
 
-Macierz rozszerzona układu równań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Augmented Matrix of a System of Equations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dla układu :math:`\,m\,` równań o :math:`\,n\,` niewiadomych:
 
@@ -86,8 +86,8 @@ zmieniają na ogół zbiór rozwiązań, a więc nie są dopuszczalne przy rozwi
 Czasem warto jednak zmienić kolejność kolumn macierzy :math:`\,\boldsymbol{A},\,`
 co prowadzi do układu równań różniącego się od wyjściowego jedynie numeracją niewiadomych.
 
-Postać schodkowa macierzy
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Echelon Form of a Matrix
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zaczniemy od kilku definicji.
 
@@ -249,8 +249,8 @@ to przekształcenia można kontynuować aż do zredukowanej postaci schodkowej:
 
    \;
 
-Praktyczna eliminacja w Sage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Practical Elimination in Sage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W systemie Sage istnieją funkcje (dokładnie: metody),
 które wykonują operacje elementarne na macierzach:

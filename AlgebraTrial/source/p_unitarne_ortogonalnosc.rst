@@ -1,6 +1,6 @@
 
-Ortogonalność wektorów
-----------------------
+Orthogonality of Vectors
+------------------------
 
 Przyjmujemy, że :math:`\,V\ ` jest przestrzenią unitarną bądź euklidesową.
 
@@ -10,6 +10,9 @@ Jeżeli iloczyn skalarny wektorów :math:`\,x,y\in V\ ` równa się zeru:
 :math:`\,\langle x,y\rangle=0\,,\ `
 to mówimy, że wektory te są :math:`\,` *ortogonalne*. :math:`\,`
 Ortogonalność jest więc uogólnieniem pojęcia prostopadłości wektorów geometrycznych.
+
+Orthogonal Set of Vectors
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    
@@ -105,8 +108,8 @@ która oznacza liniową niezależność wektorów :math:`\ x_1,\,x_2,\,\dots,\,x
 
    2. układ ortogonalny nie może zawierać więcej niż :math:`\,n\ ` wektorów.
 
-.. Bazy ortonormalne
-   ~~~~~~~~~~~~~~~~~
+Orthonormal Basis
+~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    

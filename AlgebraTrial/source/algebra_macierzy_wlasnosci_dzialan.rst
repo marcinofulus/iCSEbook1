@@ -1,9 +1,9 @@
 
-Własności działań na macierzach
--------------------------------
+Properties of the Matrix Operations
+-----------------------------------
 
-Własności mnożenia macierzowego
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Properties of the Matrix Multiplication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. Opierając się na definicji iloczynu macierzy prostokątnych oraz na wyprowadzonych
    z niej regułach i wzorach można udowodnić następujące własności:
@@ -97,8 +97,8 @@ z jednością.
 .. ze względu na dodawanie macierzy, mnożenie ich przez liczby z :math:`\,K\,`
    i mnożenie macierzowe.
 
-Alternatywna definicja iloczynu macierzy kwadratowych
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Alternative Definition of the Product of Two Square Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pomnożenie :math:`\,n`-elementowego wektora kolumnowego 
 z lewej strony przez macierz kwadratową stopnia :math:`\,n\ ` 
@@ -180,8 +180,8 @@ w sensie definicji iloczynu macierzowego w poprzedniej sekcji.
 .. Wzór :eq:`alt_def` pozwala interpretować iloczyn dwóch macierzy kwadratowych tego samego stopnia 
    jako macierz, odpowiadającą złożeniu dwóch operacji liniowych na wektorach kolumnowych.
 
-Wierszowa reguła mnożenia macierzowego
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Row Rule of Matrix Multiplication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Niech będą dane dwie macierze nad ciałem :math:`\,K,\,` zapisane w postaci wierszowej:
 

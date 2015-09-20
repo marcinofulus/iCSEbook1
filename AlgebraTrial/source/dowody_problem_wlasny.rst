@@ -1,6 +1,6 @@
 
-Wartości i wektory własne
--------------------------
+Eigenvalues and Eigenvectors
+----------------------------
 
 *Widmem* operatora liniowego nazywamy zbiór jego wartości własnych.
 Udowodnimy, że wektory własne operatora liniowego należące do różnych wartości własnych

@@ -1,9 +1,9 @@
 
-Zadania
--------
+Problems
+--------
 
-Operacje i macierze elementarne
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Elementary Operations and Elementary Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\\` 
 Udowodnij, że aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
@@ -44,8 +44,8 @@ gdzie
 Zapisz :math:`\,\boldsymbol{A} = \boldsymbol{I}_m\boldsymbol{A}\ \ ` 
 i :math:`\,` zastosuj twierdzenie z poprzedniego zadania.
 
-Macierze permutacji
-~~~~~~~~~~~~~~~~~~~
+Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\,`
 Pokaż, że:
@@ -82,8 +82,8 @@ Udowodnij, że iloczyn dwóch macierzy permutacji jest macierzą permutacji, prz
    \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
    \qquad\rho,\sigma\in S_m\,.
 
-Macierze permutacji w wersji kolumnowej
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Column Version of Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W tym ujęciu operacja :math:`\,O_\sigma\,` permutuje kolumny (a nie - jak poprzednio - wiersze)
 zadanej macierzy prostokątnej.
@@ -164,8 +164,8 @@ kolejność permutacji :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` w :eq:`PP_col` jes
 Oznacza to, że macierze :math:`\ \boldsymbol{P}_\sigma\ ` tworzą 
 :math:`\,` *reprezentację* :math:`\,` grupy permutacji :math:`\ S_n.`
  
-Wyliczanie macierzy odwrotnej metodą eliminacji
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inversion of a Matrix by Elimination Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W sekcji 4.5 wynik zestawienia dwóch macierzy kwadratowych stopnia :math:`\,n\,`
 (nazywany tam agregatem) jest jednorodną macierzą prostokątną o :math:`\,n\,` wierszach

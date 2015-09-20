@@ -1,6 +1,6 @@
 
-Operatory liniowe
------------------
+Linear Operators
+----------------
 
 Operatorami liniowymi nazywamy endomorfizmy, 
 czyli przekształcenia liniowe przestrzeni wektorowej w siebie.

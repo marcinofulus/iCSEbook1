@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Literatura z zakresu algebry liniowej 
--------------------------------------
+References 
+----------
 
 Najbardziej godnym polecenia podręcznikiem stosowanej algebry liniowej jest książka Gilberta Stranga z MIT [1]_ oraz jej inne wersje [2]_. 
 

@@ -1,6 +1,6 @@
 
-Działania na macierzach
------------------------
+Definitions of Matrix Operations
+--------------------------------
 
 W tej sekcji zdefiniujemy dodawanie macierzy o tych samych rozmiarach, 
 mnożenie macierzy przez liczbę oraz mnożenie macierzowe, gdzie iloczynem dwóch macierzy
@@ -19,8 +19,8 @@ będzie następnie uogólniona do przypadku mnożenia macierzy przez macierz wie
    wektorów, to mnożenie macierzy kwadratowych tego samego stopnia można zdefiniować niezależnie 
    od poprzedniej definicji.
 
-Przestrzeń wektorowa macierzy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Addition and Scalar Multiplication. Vector Space of Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych:
 
@@ -149,8 +149,8 @@ tworzą więc przestrzeń wektorową nad tym ciałem.
 
 .. Zbiór :math:`\,M_{m\times n}(K)\,` jest więc przestrzenią wektorową nad ciałem :math:`\,K.` 
 
-Mnożenie macierzy przez wektor kolumnowy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Multiplication of a Matrix by a Column Vector (Matrix-Vector Product)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Iloczyn macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` 
 o :math:`\,m\,` wierszach i :math:`\,n\,` kolumnach
@@ -256,8 +256,8 @@ Stosując wzór :eq:`prod_col_1`, :math:`\,` otrzymujemy postać kolumnową ukł
    x_1\,\boldsymbol{A}_1 \ +\ x_2\,\boldsymbol{A}_2 \ +\ \ldots \ + \ x_n\,\boldsymbol{A}_n
    \ =\ \boldsymbol{b}\,.
 
-Mnożenie macierzy przez macierz
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Matrix Multiplication (Product of Two Matrices)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Przypomnijmy, przy zmienionych oznaczeniach, zapisaną w poprzedniej sekcji definicję :eq:`prod_col`
 mnożenia macierzy prostokątnej przez wektor, czyli przez macierz jednokolumnową. :math:`\\`

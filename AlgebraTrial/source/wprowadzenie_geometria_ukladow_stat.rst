@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Geometria układów równań liniowych
-----------------------------------
+Geometry of Linear Equations
+----------------------------
 
 Badanym w tej sekcji układom dwóch albo trzech równań liniowych odpowiadają 
 określone sytuacje na płaszczyźnie albo w trójwymiarowej przestrzeni.
@@ -13,10 +13,8 @@ która wespół z kolumną wolnych wyrazów reprezentuje dany układ równań.
 Dyskusja taka pozwoli wyrobić intuicję, pomocną przy analizie większych układów równań,
 których obrazem są obiekty geometryczne w przestrzeniach wielowymiarowych.
 
-
-
-Obraz wierszowy
-~~~~~~~~~~~~~~~
+Row Picture
+~~~~~~~~~~~
 
 Rozważmy układ dwóch równań liniowych:
 
@@ -63,8 +61,8 @@ co łatwo sprawdzić ręcznie lub komputerowo:
 | b.) :math:`\ ` ma nieskończenie wiele rozwiązań (układ nieoznaczony),
 | c.) :math:`\ ` nie ma żadnych rozwiązań (układ sprzeczny).
 
-Obraz kolumnowy
-~~~~~~~~~~~~~~~
+Column Picture
+~~~~~~~~~~~~~~
  
 Rozważany układ równań
 
@@ -173,8 +171,8 @@ macierzy :math:`\,\boldsymbol{A},\ ` a obraz kolumnowy :math:`\ -\ ` odczytując
 
 :math:`\ `
 
-Układ oznaczony: dokładnie jedno rozwiązanie
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Consistent System: a unique solution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy teraz układ trzech równań o trzech niewiadomych:
 
@@ -286,8 +284,8 @@ Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` nie są komplanarne
 
 
 
-Układ nieoznaczony: nieskończenie wiele rozwiązań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Consistent System: infinitely many solutions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zajmiemy się z kolei rozwiązaniami układu równań liniowych
 
@@ -383,8 +381,8 @@ Zachęcamy do analizy kodu i zapoznania się z użytymi zaawansowanymi narzędzi
 
    line(pts, axes_labels=['x1','x2'], color='green', figsize=5)
 
-Układ sprzeczny: brak rozwiązań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inconsistent System: no solution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
 

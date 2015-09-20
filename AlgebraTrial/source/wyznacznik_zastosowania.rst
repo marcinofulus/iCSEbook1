@@ -1,9 +1,9 @@
 
-Zastosowania wyznaczników
--------------------------
+Applications of Determinants
+----------------------------
 
-Badanie liniowej zależności wektorów
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Examination of the Linear Dependence of Vectors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Twierdzenie 5. :math:`\\`
    
@@ -174,8 +174,8 @@ W tym wypadku jest to wyznacznik macierzy trójkątnej:
    \right|
    \ \ =\ \ 1\ne 0\,.
 
-Wyliczanie macierzy odwrotnej
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Calculation of the Inverse of a Matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Twierdzenie 6. :math:`\,` (uogólnione rozwinięcie Laplace'a) :math:`\\`
    
@@ -504,8 +504,8 @@ Metoda ``inverse()`` pakietu Sage zastosowana do ogólnej macierzy kwadratowej z
    show(A)
    show(A.inverse().factor())
 
-Wzory Cramera
-~~~~~~~~~~~~~
+Cramer's Rule to Solve Systems of Linear Equations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem :math:`\,K:`
 

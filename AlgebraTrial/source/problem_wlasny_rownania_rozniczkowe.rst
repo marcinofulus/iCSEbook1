@@ -1,9 +1,6 @@
 
-Problem własny w układach równań różniczkowych
-----------------------------------------------
-
-Rozwiązania liniowych układów równań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Application to Systems of Linear Differential Equations
+-------------------------------------------------------
 
 Zajmiemy się liniowym układem równań różniczkowych 1. rzędu o stałych współczynnikach:
 

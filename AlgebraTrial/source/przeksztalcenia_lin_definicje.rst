@@ -1,6 +1,6 @@
 
-Definicje i terminologia
-------------------------
+Definitions and Terminology
+---------------------------
 
 Zaczniemy od najbardziej ogólnej definicji homomorfizmu.
 
