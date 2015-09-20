@@ -25,7 +25,7 @@ podstawić do wzoru na objętość stoźka i gotowe.
 
 .. note::
 
-   Zauważmy, że musimmy założyć dodatniość :math:`l`, w innym
+   Zauważmy, że musimy założyć dodatniość :math:`l`, w innym
    przypadku wzór nie uprości się. Usuń to założenie (np. wstawiając
    po nim :code:`forget()`) i zobacz jaki otrzymamy wynik. Dlaczego?
    
