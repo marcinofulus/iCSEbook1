@@ -195,7 +195,7 @@ Porównaj swój wynik z wynikiem komputerowym.
    
    n=3
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   html.table([["Znajdź macierz odwrotną do macierzy:", 'A', '=', A]])
+   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
 
    print "Rozwiązanie:"
 
@@ -223,7 +223,7 @@ Porównaj swój wynik z wynikiem komputerowym.
 
    n=4
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]])
+   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
    
    print "Rozwiązanie:"
    
@@ -236,16 +236,16 @@ Porównaj swój wynik z wynikiem komputerowym.
    def _(h=('Krok:',["2-blok (A,I)","2-blok (I,A^(-1))","Sprawdzenie"])):
     
        if h=="2-blok (A,I)": 
-           html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
-                       ["B", '=', B]])
+           pretty_print(html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
+                       ["B", '=', B]]))
                     
        elif h=="2-blok (I,A^(-1))": 
-           html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
-                       ["B.rref()", '=', R]])
+           pretty_print(html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
+                       ["B.rref()", '=', R]]))
                     
        elif h=="Sprawdzenie":
-           html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
-                       [A, '*', A_1, '=', A*A_1]])
+           pretty_print(html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
+                       [A, '*', A_1, '=', A*A_1]]))
 
 Dla większych wartości :math:`\,n\,` warto porównać wyniki komputerowe
 otrzymane metodą eliminacji oraz przez bezpośrednie użycie metody ``inverse()``

@@ -222,7 +222,7 @@ można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column
 
        var('x1 x2 x3')
     
-       L = [vector([eq.lhs().coeff(x) for eq in Eqns]) for x in [x1,x2,x3]]
+       L = [vector([eq.lhs().coefficient(x) for eq in Eqns]) for x in [x1,x2,x3]]
        
        b = vector([eq.rhs() for eq in Eqns])
        L.append(b)
@@ -230,10 +230,10 @@ można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column
        clmn = '$\\left[\\begin{array}{r} %d \\\ %d \\\ %d \\end{array}\\right]$'
        comp = '$x_%i$' + clmn
    
-       html(comp % (1, L[0][0],L[0][1],L[0][2]) + ' $+$ ' +\
+       pretty_print(html(comp % (1, L[0][0],L[0][1],L[0][2]) + ' $+$ ' +\
             comp % (2, L[1][0],L[1][1],L[1][2]) + ' $+$ ' +\
             comp % (3, L[2][0],L[2][1],L[2][2]) + ' $=$ ' +\
-            clmn %    (L[3][0],L[3][1],L[3][2]))            
+            clmn %    (L[3][0],L[3][1],L[3][2])))            
 
 Aby wywołać funkcję, trzeba utworzyć listę równań :math:`\ ` ``Eqns`` :math:`\ ` 
 i podać ją jako argument:
@@ -249,7 +249,7 @@ i podać ją jako argument:
    Eqns = [eq1,eq2,eq3]
    
    try: verse3colmn(Eqns)
-   except NameError: html("Wykonaj kod w poprzedniej komórce!")
+   except NameError: pretty_print(html("Wykonaj kod w poprzedniej komórce!"))
 
 .. figure:: figures/Rys_21.jpg
    :height: 10 cm

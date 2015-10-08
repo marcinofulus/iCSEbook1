@@ -18,15 +18,21 @@ i  kolumnę  wolnych  wyrazów  :math:`\ \boldsymbol{b}:`
 
    def display_set_of_lin_eqns(n, A, b):
 
-       x = vector([var('x%d'%i) for i in range(1,n+1)])
+       X = vector([var('x%d'%i) for i in range(1,n+1)])
 
        t = ["\ " + latex(l) + " & \!\! = & \!\! " +
-       latex(r) for (l,r) in zip(A*x,b)]
+       latex(r) for (l,r) in zip(A*X,b)]
 
-       html("$\\left\{\\begin{array}{rcr} %s \\end{array}\\right.$"
-       % join(t," \\\ "))
+       pretty_print(html("$\\left\{\\begin{array}{rcr} %s \\end{array}\\right.$"
+       % " \\\ ".join(t)))
 
        return
+
+.. Formatowanie w nowym stylu (Python 3) w powyższym programie:
+   
+   X = vector([var('x{0:d}'.format(i)) for i in range(1,n+1)])
+   
+   Analogiczna zmiana w późniejszym poleceniu wydruku nie jest już taka prosta.
 
 Procedura może być teraz wywołana w następnej komórce:
 
@@ -38,7 +44,7 @@ Procedura może być teraz wywołana w następnej komórce:
    b = random_vector(ZZ, n, x=-5, y=6)
    
    try: display_set_of_lin_eqns(n, A, b)
-   except NameError: html("Wykonaj kod w poprzedniej komórce!")
+   except NameError: pretty_print(html("Wykonaj kod w poprzedniej komórce!"))
 
 To powiązanie komórek ma zastosowanie np. w sekcji Geometria układów równań liniowych.
 Zdefiniowana jest tam funkcja ``verse3column()``, zapisująca dany układ trzech równań w postaci kolumnowej.
