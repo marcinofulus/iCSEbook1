@@ -101,6 +101,7 @@ stosując przekształcenie kwadratowe :eq:`logistic` do wartości z
 poprzedniego sezonu, na przykład za pomocą poniższego programu:
 
 .. sagecellserver::
+   :linked: false
 
    a = 0.5 
    x = 0.45
