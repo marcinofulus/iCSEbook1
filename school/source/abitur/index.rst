@@ -70,3 +70,22 @@ Geometry
 
    Problem 1 <en/2015_parallelogramm>
    Problem 2 <en/2015_pyramide>
+Bavarian final secondary-school examinations in mathematics 2014
+================================================================
+
+German version
+--------------
+
+Quelle des Aufgabentexts: `http://www.isb.bayern.de/download/16159/abiturpruefung_mathematik_2015_pruefungsteil_a.pdf>`_
+
+Analysis
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Aufgabe 1 <de2014/2014_extremum>
+   Aufgabe 2 <de2014/2014_stammfunktionen>
+   Aufgabe 3 <de2014/2014_sinusfunktionen>
+   Aufgabe 4 <de2014/2014_beispielfunktionen>
+
