@@ -9,33 +9,64 @@ Bayerisches Abitur in Mathematik 2014
 
 **Lösung**
 
+Wir verschaffen uns mit Sage zunächst einen Überblick über die gegebene Funktion.
+
+.. sagecellserver::
+
+   sage: p = plot(x/ln(x), xmin=0, xmax=10, ymin=-2, ymax=5, color='blue')
+   sage: p.show(figsize=(4, 2.8))
+
+.. end of output
+
 Um den Extrempunkt der Funktion zu finden, müssen wir ihre Ableitung gleich Null setzen.
-Wir bestimmen hierfür die Ableitung :math:`f'(x)=\frac{\ln(x)-1}{\ln(x)^2}`.
-Gleichsetzen mit Null liefert uns das einzige Extremum an der Stelle :math:`x_0=e` mit dem Wert :math:`f(x_0)=e`.
-Um die Art des Extremwerts zu erhalten, können wir die zweite Ableitung der Funktion bestimmen. Hieraus erfahren wir das Krümmungsverhalten
-der Funktion. Wir erhalten :math:`f''(x)=\frac{-\ln(x)+2}{x\ln(x)^3}`
-und daraus :math:`f''(x_0)=1/e>0`. Die Funktion :math:`f(x)` ist also an der Extremstelle :math:`(e|e)`
-linksgekrümmt. Es handelt sich daher um ein Minimum.
+Die Ableitung ergibt sich zu
 
-Wir können denselben Rechenweg mit Sage überprüfen. Wir bestimmen zunächst die Nullstelle der ersten Ableitung unserer Funktion
+.. math::
 
-.. sagecellserver::
+   f'(x)=\frac{\ln(x)-1}{\ln(x)^2}
 
-     sage: g(x)=x/ln(x)
-     sage: dg(x)=diff(g,x)
-     sage: print 'Ableitung von f(x): ', dg
-     sage: solve(dg(x)==0,x)
-     sage: print 'Extremwert an der Stelle: ( e |', g(e), ')' 
-
-.. end of output
-
-Der Extremwert liegt also an der Stelle :math:`(e|e)`. Das Krümmungsverhalten erhalten wir anschließend aus der 
-zweiten Ableitung der Funktion an der Stelle :math:`e`.
+wie man mit Sage leicht überprüft:
 
 .. sagecellserver::
 
-     sage: ddg(x)=diff(dg,x)
-     sage: print 'zweite Ableitung von f(x): ', ddg
-     sage: print 'Wert von f''(e): ', ddg(e)	
+   sage: f(x) = x/ln(x)
+   sage: df(x) = f.derivative(x).log_simplify()
+   sage: print df(x)
 
 .. end of output
+
+Nullsetzen der Ableitung liefert uns den einzigen Extrempunkt an der Stelle
+:math:`x_0=e` mit dem Wert :math:`f(x_0)=e`.
+
+.. sagecellserver::
+
+   sage: x0 = solve(df(x)==0, x)[0].lhs()
+   sage: print 'Extrempunkt an der Stelle (', x0, '|', f(x0), ')'
+
+.. end of output
+
+Um die Art des Extrempunkts zu bestimmen, berechnen wir die zweite Ableitung der
+Funktion :math:`f(x)`
+
+.. math::
+
+   f''(x) = \frac{-\ln(x)+2}{x\ln(x)^3}
+
+und werten diese am Extrempunkt aus
+
+.. math::
+
+   f''(x_0) = \frac{1}{\mathrm{e}} > 0
+
+Dies lässt sich wiederum mit Sage überprüfen:
+
+.. sagecellserver::
+
+   sage: ddf(x) = df.derivative(x).log_simplify()
+   sage: print ddf(x)
+   sage: print ddf(x0)
+
+.. end of output
+
+Bei dem Extrempunkt handelt es sich somit um ein Minimum, wie man auch schon dem
+obigen Funktionsgraphen entnehmen konnte.
