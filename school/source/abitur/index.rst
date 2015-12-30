@@ -84,8 +84,8 @@ Analysis
 .. toctree::
    :maxdepth: 1
 
-   Aufgabe 1 <de2014/2014_extremum>
-   Aufgabe 2 <de2014/2014_stammfunktionen>
-   Aufgabe 3 <de2014/2014_sinusfunktionen>
-   Aufgabe 4 <de2014/2014_beispielfunktionen>
+   Aufgabe 1 <de/2014_extremum>
+   Aufgabe 2 <de/2014_stammfunktionen>
+   Aufgabe 3 <de/2014_sinusfunktionen>
+   Aufgabe 4 <de/2014_beispielfunktionen>
 
