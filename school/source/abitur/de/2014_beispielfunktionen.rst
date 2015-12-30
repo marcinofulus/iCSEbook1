@@ -12,17 +12,17 @@ Bayerisches Abitur in Mathematik 2014
 
 **Lösung zu Teil a**
 
-Soll eine Funktion :math:`g` durch Spiegelung der Funktion :math:`f` an der :math:`y`-Achse entstehen, so muss gelten :math:`g(x)=f(-x)`, in unserem Fall also :math:`g(x)=sin(-x)`. Wegen der Punktsymmetrie der Sinusfunktion zum Ursprung ist :math:`g` von der Form :math:`g(x)=-sin(x)`.
+Soll eine Funktion :math:`g` durch Spiegelung der Funktion :math:`f` an der :math:`y`-Achse entstehen, so muss :math:`g(x)=f(-x)` gelten. In unserem Fall ergibt sich also :math:`g(x)=\sin(-x)`. Wegen der Punktsymmetrie der Sinusfunktion zum Ursprung ist :math:`g` von der Form :math:`g(x)=-\sin(x)`.
 
-Dies können wir leicht mit Hilfe von Sage überprüfen, indem wir uns die Sinusfunktion (grün) und deren Spiegelung (blau) in einen Graph zeichnen lassen.
+Dies können wir leicht mit Hilfe von Sage überprüfen, indem wir uns die Sinusfunktion (blau) und deren Spiegelung (rot) in einen Graph zeichnen lassen.
 
 .. sagecellserver::
 
-     sage: var('x')
      sage: f(x) = sin(x)
      sage: g(x) = -sin(x)
-     sage: p1 = plot(f(x), x, (-2*pi,2*pi), rgbcolor=hue(0.4))     
-     sage: p2 = plot(g(x), x, (-2*pi,2*pi), rgbcolor=hue(0.6))
+     sage: p1 = plot(f(x), x, (-2*pi,2*pi), color='blue')     
+     sage: p2 = plot(g(x), x, (-2*pi,2*pi), color='red')
+     sage: (p1+p2).show(figsize=(4, 2.5))
 
 .. end of output
 
@@ -34,22 +34,27 @@ Wir überprüfen den Wertebereich der Funktion mit Hilfe von Sage:
 
 .. sagecellserver::
 
-     sage: var('x')
      sage: h(x) = sin(x) + 2
-     sage: plot(h(x), x, (-2*pi,2*pi))
+     sage: plot(h(x), x, (-2*pi,2*pi), figsize=(4, 2.5))
 
 .. end of output
 
 **Lösung zu Teil c**
 
-Auch in dieser Teilaufgabe werden wir die periodische Sinusfunktion zur Lösung verwenden. Die Periode der Sinusfunktion, kann durch einen Parameter :math:`a` vor dem Argument der Funktion geändert werden. Unsere Funktion wird daher die Form :math:`k(x)=sin(ax)` haben. Die Periode der normalen Sinusfunktion (:math:`a=1`) beträgt :math:`2\pi`. Wir können die Periode halbieren um die gewünschte Periode zu erhalten, indem wir das Argument zu jedem Zeitpunkt verdoppeln. Wir erhalten also :math:`k(x)=sin(2x)`
+Die Periode der Sinusfunktion kann durch einen Parameter :math:`a` vor dem Argument der 
+Funktion geändert werden. Unsere Funktion wird daher die Form :math:`k(x)=\sin(ax)`
+haben. Für :math:`a=1` ergibt sich die Periode :math:`2\pi`. Die gewünschte Periode ist
+halb so groß, so dass der Parameter :math:`a` verdoppelt werden muss. Somit ergibt sich
+:math:`k(x)=\sin(2x)`.
 
-Wir überprüfen den Wertebereich der Funktion mit Hilfe von Sage:
+Wir überprüfen die Periode der Funktion mit Hilfe von Sage. Dabei wird eine Periode
+der Funktion in rot dargestellt.
 
 .. sagecellserver::
 
-     sage: var('x')
      sage: k(x) = sin(2*x)
-     sage: plot(k(x), x, (-2*pi,2*pi))
+     sage: p1 = plot(k(x), x, (-2*pi, 2*pi), color='blue')
+     sage: p2 = plot(k(x), x, (0, pi), color='red')
+     sage: (p1+p2).show(figsize=(4, 2.5))
 
 .. end of output
