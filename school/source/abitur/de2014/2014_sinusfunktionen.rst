@@ -5,7 +5,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Gegeben sind die in :math:`\mathbb{R}` definierten Funktionen :math:`g_{a,c}: x\mapsto \sin(ax)+c` mit :math:`a,c\in \mathbb{R}^+_0`.
 
-    a) Geben Sie für jede der beiden folgenden Eigenschaften einen möglichen Wert für :math:`a` und einen möglichen Wert für c so an, dass 
+    a) Geben Sie für jede der beiden folgenden Eigenschaften einen möglichen Wert für :math:`a` und einen möglichen Wert für :math:`c` so an, dass 
        die zugehörige Funktion :math:`g_{a,c}` diese Eigenschaft besitzt.
       1) Die Funktion :math:`g_{a,c}` hat die Wertemenge :math:`[0;2]`.
       2) Die Funktion :math:`g_{a,c}` hat im Intervall :math:`[0;\pi]` genau drei Nullstellen.
