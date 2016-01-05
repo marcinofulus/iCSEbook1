@@ -89,4 +89,6 @@ Analysis
    Aufgabe 3 <de2014/2014_sinusfunktionen>
    Aufgabe 4 <de2014/2014_beispielfunktionen>
    Aufgabe 5 <de2014/2014_qualitative_integrale>
+   Aufgabe 6 <de2014/2014_wendepunkte>
+   Aufgabe 7 <de2014/2014_rechteck>
 
