@@ -7,11 +7,11 @@ Bayerisches Abitur in Mathematik 2014
   
   1. Zwei Seiten liegen auf den Koordinatenachsen.
 
-  2. Ein Eckpunkt liegt auf dem Graphen :math:`G_f` der Funktion :math:`f\mapsto -\ln x` mit :math:`0<x<1`.
+  2. Ein Eckpunkt liegt auf dem Graphen :math:`G_f` der Funktion :math:`f : x\mapsto -\ln x` mit :math:`0<x<1`.
 
   Abbildung 1 zeigt ein solches Rechteck.
 
-  Unter den betrachteten Rechtecken gibt es eines mit größtem Flächeninhalt. Berechnen Sie die Seitenlängen des Rechtecks.
+  Unter den betrachteten Rechtecken gibt es eines mit größtem Flächeninhalt. Berechnen Sie die Seitenlängen dieses Rechtecks.
 
   .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a4.png
      :align: center

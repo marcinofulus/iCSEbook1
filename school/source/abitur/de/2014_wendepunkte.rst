@@ -3,7 +3,7 @@ Bayerisches Abitur in Mathematik 2014
 
 .. admonition:: Aufgabe
 
-  Der Graph einer in :math:`\mathbb R` definierten Funktion :math:`g\mapsto g(x)` besitzt für :math:`-5\leq x\leq 5` zwei Wendepunkte.      
+  Der Graph einer in :math:`\mathbb R` definierten Funktion :math:`g : x\mapsto g(x)` besitzt für :math:`-5\leq x\leq 5` zwei Wendepunkte.      
   Entscheiden Sie, welcher der Graphen I, II und III zur zweiten Ableitungsfunktion :math:`g''` von g gehört. Begründen Sie Ihre Entscheidung.
   
   .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a2.png
