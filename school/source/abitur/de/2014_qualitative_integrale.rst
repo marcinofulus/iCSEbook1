@@ -20,11 +20,11 @@ In dieser Aufgabe wollen wir zunächst die Stammfunktion skizzieren, die von der
 
   F(x)=\int\limits_a^x f(x')\mathrm{d}x'
 
-ist. Für :math:`x=a` ist die Stammfunktion also gleich Null. Für :math:`x>a` beginnt die Stammfunktion dann erst stärker, dann immer schwächer
-zu steigen, bis die Nullstelle :math:`x=x_0` von :math:`f` erreicht wird. Anschließend fällt die Stammfunktion erst schwächer dann immer
+ist. Für :math:`x=a` ist die Stammfunktion also gleich Null. Für :math:`x>a` beginnt die Stammfunktion zunächst erst stärker, dann immer schwächer
+zu steigen, bis die Nullstelle :math:`x=x_0` von :math:`f` erreicht wird. Anschließend fällt die Stammfunktion erst schwächer und dann immer
 stärker bis :math:`x=b` erreicht wird.
 
-Um diese Aufgabe mit Hilfe von Sage zu lösen, müssen wir zunächst eine Funktion finden, die der abgebildeten Funktion ähnelt. Dies ist im
+Um diese Aufgabe mit Hilfe von Sage zu behandeln, müssen wir zunächst eine Funktion finden, die der abgebildeten Funktion ähnelt. Dies ist im
 Wesentlichen bei dem so genannten Lennard-Jones-Potential der Fall. Hierbei handelt es sich um eine Funktion, mit der in der Physik die
 Bindungsenergie zwischen manchen Atomen beschrieben werden kann. Eine mögliche Form der Funktion ist 
 
@@ -37,17 +37,19 @@ wir die Funktion noch entsprechend. Für die Auswertung mit Sage verwenden wir d
 
 .. math::
 
-  f(x)=\frac{1}{(x/3+1.5)^{12}}-\frac{1}{(x/3+1.5)^6}. 
+  f(x)=\frac{1}{(x/3+1.5)^{12}}-\frac{1}{(x/3+1.5)^6}-\frac{1}{5}. 
 
 .. sagecellserver::
 
      sage: f(x) = 1/(x/3+1.5)^12-1/(x/3+1.5)^6-0.2
-     sage: plot(f(x), x, (-2,2), ymax=1, figsize=(4, 2.8))
+     sage: plot(f(x), x, (-2, 2), ymax=1, figsize=(4, 2.8))
 
 .. end of output
 
 
-Um den Verlauf der Stammfunktion im Bereich der Nullstelle der Funktion zu ermitteln, bestimmen wir das bestimmte Integral der Funktion von :math:`a` bis :math:`x`, wobei :math:`x` die Werte von :math:`a = -1.8` bis :math:`b = -1,4` durchläuft.
+Um den Verlauf der Stammfunktion im Bereich der Nullstelle der Funktion zu ermitteln,
+ermitteln wir das bestimmte Integral der Funktion von :math:`a` bis :math:`x`, wobei
+:math:`x` die Werte von :math:`a = -1{,}8` bis :math:`b = -1{,}4` durchläuft.
 
 
 .. sagecellserver::
@@ -56,7 +58,7 @@ Um den Verlauf der Stammfunktion im Bereich der Nullstelle der Funktion zu ermit
      sage: b = -1.4
      sage: F(x) = integral(f(x), x)
      sage: sf(x) = F(x) - F(a)
-     sage: plot(sf(x), (a,b), figsize=(4, 2.8))
+     sage: plot(sf(x), (a, b), figsize=(4, 2.8))
 
 .. end of output
 
@@ -81,7 +83,7 @@ Mit Sage gehen wir genauso vor, wie in der vorherigen Teilaufgabe. Wir passen le
      sage: c = -2
      sage: d = 2
      sage: sf(x) = F(x) - F(c)
-     sage: plot(sf(x), (c,d), figsize=(4, 2.8))
+     sage: plot(sf(x), (c, d), figsize=(4, 2.8))
 
 .. end of output
 
