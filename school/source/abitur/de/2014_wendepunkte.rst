@@ -33,8 +33,8 @@ gehören, durch rote Punkte markiert.
 .. sagecellserver::
 
      sage: def wendepunkte(f):
-     sage:    df = f.diff()
-     sage:    return [r[0] for r in f.roots() if r[0] in RR and df(r[0]) !=0]
+     sage:     df = f.diff()
+     sage:     return [r[0] for r in f.roots() if r[0] in RR and df(r[0]) !=0]
 
      sage: dd_i(x) = x^2 - 16
      sage: p = plot(dd_i(x), x, (-6, 6), figsize=(4, 2.8))
