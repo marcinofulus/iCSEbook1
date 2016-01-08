@@ -17,7 +17,7 @@ Here we present a set of problems from Bavarian *Abitur* solved with computer al
 .. toctree::
    :maxdepth: 2
 
-   abitur/index.rst
+   abitur/index
 
 
 Conference 2015, Workshops
@@ -43,9 +43,3 @@ Materials used in  Oslo
    bungeeCode
    ProjectileMotion                                 
    Battleship
-   abitur/index
-
-
-
-
-
