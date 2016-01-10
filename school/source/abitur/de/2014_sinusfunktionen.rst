@@ -17,7 +17,8 @@ Bayerisches Abitur in Mathematik 2014
 Der Parameter :math:`a` der Sinusfunktion gibt die Periode des Sinus vor. Er verändert jedoch nicht den Wertebereich der Funktion.
 Der Parameter :math:`c` hingegen verschiebt den Wertebereich der Funktion um eine Konstante. 
 
-1. Der Wertebereich der Sinusfunktion :math:`\sin(ax)` ist durch [-1;1] gegeben. Eine konstante Verschiebung um :math:`c=1` ändert 
+1. Der Wertebereich der Sinusfunktion :math:`\sin(ax)` ist durch :math:`[-1;1]`
+   gegeben. Eine konstante Verschiebung um :math:`c=1` ändert 
    den Wertebereich wie in der Aufgabenstellung gefordert. Für den Parameter :math:`a` kann ein beliebiger Wert ungleich Null (beispielsweise
    :math:`a=1`) gewählt werden. Dieses Ergebnis überprüfen wir mit Hilfe Sage:
 
@@ -56,7 +57,11 @@ der Kettenregel erhalten wir
    
 Wir bemerken, dass die Ableitung unabhängig von dem Parameter :math:`c` ist. Die Kosinusfunktion hat den Wertebereich :math:`[-1;1]`, wird hier aber zusätzlich durch die Amplitude :math:`a` gestaucht oder gestreckt. Dadurch erhalten wir den Wertebereich :math:`[-a;a]` für die Ableitung.
 
-Mit Sage führen wir die Parameter :math:`a` und :math:`c` zunächst formell als weitere Variablen der Funktion mit, um eine allgemeine Form der Ableitung zu erhalten. Anschließend zeichnen wir die Funktion :math:`g'(x)` für verschiedene Werte des Parameters a. Aus den Graphen lassen sich unterschiedlichen Amplituden und Perioden leicht ablesen.
+Mit Sage führen wir die Parameter :math:`a` und :math:`c` zunächst formell als
+weitere Variablen der Funktion mit, um eine allgemeine Form der Ableitung zu
+erhalten. Anschließend zeichnen wir die Funktion :math:`g_{a,c}'(x)` für
+verschiedene Werte des Parameters a. Aus den Graphen lassen sich
+unterschiedlichen Amplituden und Perioden leicht ablesen.
 
 .. sagecellserver::
 
