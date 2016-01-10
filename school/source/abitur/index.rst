@@ -110,3 +110,4 @@ Analysis
    Problem 4 <en/2014_beispielfunktionen>
    Problem 5 <en/2014_qualitative_integrale>
    Problem 6 <en/2014_wendepunkte>
+   Problem 7 <en/2014_rechteck>
