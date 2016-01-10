@@ -5,7 +5,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Gegeben ist die Funktion :math:`f: x\mapsto \frac{x}{\ln(x)}` 
   mit Definitionsmenge :math:`\mathbb{R}^+\backslash\{1\}`. Bestimmen Sie Lage und Art des
-  Extrempunkts des Graphen von f. 
+  Extrempunkts des Graphen von :math:`f`. 
 
 **Lösung**
 
