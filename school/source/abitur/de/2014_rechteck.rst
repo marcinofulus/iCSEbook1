@@ -37,7 +37,9 @@ wir also ein Extremum von :math:`A(x)`, das durch
   A'(x_0)=-\ln(x_0)-1 = 0 
 
 gegeben ist. Wegen :math:`A''(x)=-1/x <0` ist das Extremum immer ein Maximum. Es
-liegt bei :math:`x_0=1/e` und ergibt eine Fläche von :math:`1/e`.
+liegt bei :math:`x_0=1/\mathrm{e}` mit :math:`f(x_0)=1`. Das zugehörige Rechteck
+hat demnach die Breite :math:`1/\mathrm{e}` und Höhe :math:`1` und schließt 
+eine Fläche von :math:`1/\mathrm{e}` ein.
 
 Auch mit Hilfe von Sage können wir den maximalen Flächeninhalt durch Gleichsetzen der Ableitung mit Null bestimmen.
 
@@ -53,9 +55,9 @@ Auch mit Hilfe von Sage können wir den maximalen Flächeninhalt durch Gleichset
 
 .. end of output
 
-Die folgenden beiden Abbildungen zeigen links das Rechteck unter der Funktion und
-rechts als grünen Punkt die zugehörige Fläche für einen variablen Wert der Breite
-:math:`x_0`.
+Die folgenden beiden Abbildungen zeigen links das Rechteck unter dem Graphen
+:math:`G_f` und rechts als grünen Punkt die zugehörige Fläche für einen
+variablen Wert der Breite :math:`x_0`.
 
 .. sagecellserver::
 
