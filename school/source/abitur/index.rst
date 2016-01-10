@@ -106,3 +106,4 @@ Analysis
 
    Problem 1 <en/2014_extremum>
    Problem 2 <en/2014_stammfunktionen>
+   Problem 3 <en/2014_sinusfunktionen>
