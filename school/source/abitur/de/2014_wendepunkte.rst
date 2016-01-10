@@ -72,8 +72,8 @@ integrieren. In den Graphen sind die Wendepunkte durch rote Punkte markiert.
      sage: d_i(x) = integrate(dd_i(x), x)
      sage: g_i(x) = integrate(d_i(x), x)
      sage: p = plot(g_i(x), x, (-8, 8), figsize=(4, 2.8))
-     sage: tps = point([(x, g_i(x))  for x in wendepunkte(dd_i)], size=30, color='red')
-     sage: show(p+tps)
+     sage: wp = point([(x, g_i(x))  for x in wendepunkte(dd_i)], size=30, color='red')
+     sage: show(p+wp)
 
 .. end of output
 
@@ -83,8 +83,8 @@ integrieren. In den Graphen sind die Wendepunkte durch rote Punkte markiert.
      sage: d_ii(x) = integrate(dd_ii(x), x)
      sage: g_ii(x) = integrate(d_ii(x), x)
      sage: p = plot(g_ii(x), x, (-6, 8), figsize=(4, 2.8))
-     sage: tps = point([(x, g_ii(x))  for x in wendepunkte(dd_ii)], size=30, color='red')
-     sage: show(p+tps)
+     sage: wp = point([(x, g_ii(x))  for x in wendepunkte(dd_ii)], size=30, color='red')
+     sage: show(p+wp)
 
 .. end of output
 
@@ -93,8 +93,8 @@ integrieren. In den Graphen sind die Wendepunkte durch rote Punkte markiert.
      sage: d_iii(x) = integrate(dd_iii(x), x)
      sage: g_iii(x) = integrate(d_iii(x), x)
      sage: p = plot(g_iii(x), x, (-6, 6), figsize=(4, 2.8))
-     sage: tps = point([(x, g_iii(x))  for x in wendepunkte(dd_iii)], size=30, color='red')
-     sage: show(p+tps)
+     sage: wp = point([(x, g_iii(x))  for x in wendepunkte(dd_iii)], size=30, color='red')
+     sage: show(p+wp)
 
 .. end of output
 
