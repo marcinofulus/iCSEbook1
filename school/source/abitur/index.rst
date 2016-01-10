@@ -93,3 +93,15 @@ Analysis
    Aufgabe 6 <de/2014_wendepunkte>
    Aufgabe 7 <de/2014_rechteck>
 
+English version
+---------------
+
+The text of the English version is an unofficial translation.
+
+Analysis
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Problem 1 <en/2014_extremum>
