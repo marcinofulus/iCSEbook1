@@ -3,58 +3,76 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  Gegeben ist die Funtion :math:`g:x\rightarrow\sqrt{3x+9}` mit maximaler
+  Gegeben ist die Funktion :math:`g:x\rightarrow\sqrt{3x+9}` mit maximaler
   Definitionsmenge :math:`D`.
 
-  a) Bestimmen Sie :math:`D` und geben Sie die Nullstellen von :math:`g` an.
-  b) Ermitteln Sie die Gleichung der Tangenten an den Graphen von :math:`g` im Punkt :math:`P(0\vert3)`.
+  a) Bestimmen Sie :math:`D` und geben Sie die Nullstelle von :math:`g` an.
+  b) Ermitteln Sie die Gleichung der Tangente an den Graphen von :math:`g` im Punkt :math:`P(0\vert3)`.
 
-**Lösung zur Teilaufgabe a)**
+**Lösung zu Teil a**
 
 Aus der Forderung :math:`\sqrt{3x+9}=0` ergibt sich durch Auflösen nach
 :math:`x` die Nullstelle :math:`x=-3`.
 
-Die Definitionsmenge folgt aus der Forderung, dass das Argument
-der Wurzel größer oder gleich Null sein muss. Die Gleichung :math:`3x+9`
-wird für Werte  :math:`x<-3` negativ. Für alle anderen Werte von
-:math:`x` ist die Gleichung positiv. Damit ergibt sich die
-Definitionsmenge zu :math:`D=[-3,\infty[`.
-
-Dieses Ergebniss lässt sich leicht mit Sage überprüfen:
+Dieses Ergebnis lässt sich leicht mit Sage überprüfen:
 
 .. sagecellserver::
 
-    sage: x = var('x')
-    sage: solve(sqrt(3x+9)==0,x)
+    sage: g(x) = sqrt(3*x+9)
+    sage: solve(g == 0, x)
 
 .. end of output
 
-**Lösung zur Teilaufgabe b)**
-
-Um die Tangentengleichung an dem Punkt :math:`P(0\vert3)` zu bestimmen
-muss die Ableitung von :math:`g` an diesem Punkt bestimmt werden.
-Diese ergibt sich zu :math:`\frac{\text{d}}{\text{d}x} g(x) = g'(x) =
-\frac{3}{2\sqrt{3x+9}}`. Für :math:`x=0` erhält man  :math:`g'(0)=\frac{1}{2}`.
+Die Definitionsmenge folgt aus der Forderung, dass das Argument der
+Wurzel größer oder gleich Null sein muss. Die ist der Fall wenn
+:math:`3x+9\geq0` oder :math:`x\geq-3`.  Damit ergibt sich die
+Definitionsmenge zu :math:`D=[-3,\infty[`. Dies verdeutlicht der
+folgende Graph der Funktion :math:`g(x)`.
 
 .. sagecellserver::
 
-    sage: x=var('x')
-    sage: dg = derivative(sqrt(x*3+9))
-    sage: print("Ableitung von g(x): " + str(dg))
-    sage: print("Ableitung bei x = 0: " + str(dg.subs(x==0)))
+    sage: plot(g, (-3, 3), figsize=(4, 2.8))
 
 .. end of output
 
-Die Tangente :math:`h` am Punkt :math:`P` ist geben durch: :math:`h(x) = \frac{1}{2} x +3`
+**Lösung zu Teil b**
 
-Dieses Ergebniss lässt ich auch graphisch mittels Sage bestätigen.
-Die Funktion math:`g(x)` ist dabei blau dargestellt, 
-die Tangente math:`h(x)`rot.
+Um die Tangentengleichung am Punkt :math:`P(0\vert3)` zu bestimmen,
+muss die Ableitung von :math:`g` an diesem Punkt berechnet werden.
+Diese ergibt sich zu 
+
+.. math::
+
+  \frac{\text{d}g}{\text{d}x} = g'(x) = \frac{3}{2\sqrt{3x+9}}.
+  
+Damit erhält man :math:`g'(0)=\frac{1}{2}`.
 
 .. sagecellserver::
 
-    sage: x = var('x')
-    sage: plot((sqrt(x*3+9)),(-3,5),color='blue') + plot((1/2)*x + 3,(-3,5),color='red')
+    sage: dg = g.derivative()
+    sage: print "Ableitung von g(x) : ", dg
+    sage: print "Ableitung bei x = 0: ", dg(0)
+
+.. end of output
+
+Wegen :math:`g(0)=3` ist die Tangente :math:`h` am Punkt :math:`P` durch 
+
+.. math::
+
+   h(x) = \frac{1}{2} x +3
+
+gegeben.
+
+Dieses Ergebnis lässt ich auch graphisch mittels Sage bestätigen.
+Die Funktion :math:`g(x)` ist dabei blau dargestellt, 
+die Tangente :math:`h(x)` rot.
+
+.. sagecellserver::
+
+    sage: pg = plot(g, (-3, 5), color='blue')
+    sage: h(x) = x/2+3
+    sage: ph = plot(h, (-3,5), color='red')
+    sage: show(pg+ph, figsize=(4, 2.8))
 
 .. end of output
 
