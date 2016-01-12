@@ -28,7 +28,6 @@ These results can easily be checked with Sage:
 
 .. sagecellserver::
 
-  sage: x = var('x')
   sage: solve((4*x-3)*ln(x^2-5*x+7) == 0, x)
 
 .. end of output
