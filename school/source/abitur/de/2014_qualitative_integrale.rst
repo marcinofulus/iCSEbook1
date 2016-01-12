@@ -73,7 +73,7 @@ In dieser Teilaufgabe betrachten wir eine Stammfunktion, die an der Stelle, an d
 wobei :math:`x=c` die erste Stelle ist, an der :math:`f` dargestellt wird. Unsere Stammfunktion beginnt daher ähnlich zur ersten Teilaufgabe
 zunächst stark zu wachsen. Das Wachstum nimmt dann immer weiter ab, und wechselt nach der Nullstelle von :math:`f` zu einem negativen
 Vorzeichen. Ab hier nimmt die Stammfunktion streng monoton ab und nimmt ab einem bestimmten Zeitpunkt nur noch negative Werte an. Das maximale
-negative Wachstum der Funktion befindet sich an dem Minimum der Funktion :math:`f`. Anschließend fällt die Stammfunktion weniger schnell ab und
+negative Wachstum der Stammfunktion befindet sich an dem Minimum der Funktion :math:`f`. Anschließend fällt die Stammfunktion weniger schnell ab und
 nähert sich am Ende des dargestellten Bereichs einer Gerade mit negativer Steigung.
 
 Mit Sage gehen wir genauso vor, wie in der vorherigen Teilaufgabe. Wir passen lediglich die Stammfunktion und den Darstellungsbereich an.

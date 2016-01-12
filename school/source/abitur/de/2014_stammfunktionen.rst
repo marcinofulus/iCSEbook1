@@ -59,7 +59,7 @@ Die zweite Stammfunktion :math:`G` kann sich nur um eine Konstante von der Stamm
 
 .. end of output
    
-Um die Konstante c zu bestimmen, können wir die Forderung :math:`G(1)=2e` benutzen, womit :math:`c=\mathrm{e}` folgt:
+Um die Konstante :math:`c` zu bestimmen, können wir die Forderung :math:`G(1)=2e` benutzen, womit :math:`c=\mathrm{e}` folgt:
 
 .. sagecellserver::
 

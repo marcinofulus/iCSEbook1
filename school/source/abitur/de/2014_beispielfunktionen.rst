@@ -28,7 +28,11 @@ Dies können wir leicht mit Hilfe von Sage überprüfen, indem wir uns die Sinus
 
 **Lösung zu Teil b**
 
-Auch in dieser Teilaufgabe werden wir die periodische Sinusfunktion zur Lösung verwenden. Der Wertebereich der Sinusfunktion mit Amplitude 1 ist das Intervall :math:`[-1;1]`. Um den gewünschten Wertebereich zu erhalten, können wir die Sinusfunktion jedoch zusammen mit ihrem Wertebereich um die Konstante 2 nach oben verschieben. Wir erhalten also :math:`h(x)=\sin(x)+2`.
+Auch in dieser Teilaufgabe werden wir die periodische Sinusfunktion zur Lösung
+verwenden. Der Wertebereich der Sinusfunktion mit Amplitude :math:`1` ist das
+Intervall :math:`[-1;1]`. Um den gewünschten Wertebereich zu erhalten, können
+wir die Sinusfunktion jedoch zusammen mit ihrem Wertebereich um die Konstante
+:math:`2` nach oben verschieben und erhalten so :math:`h(x)=\sin(x)+2`.
 
 Wir überprüfen den Wertebereich der Funktion mit Hilfe von Sage:
 

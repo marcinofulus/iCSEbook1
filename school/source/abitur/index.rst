@@ -94,10 +94,28 @@ Analysis
    Aufgabe 7 <de/2014_rechteck>
 
 Stochastik
-........
+..........
 
 .. toctree::
    :maxdepth: 1
 
    Aufgabe 1 <de/2014_Urne>
-   
+
+English version
+---------------
+
+The text of the English version is an unofficial translation.
+
+Analysis
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Problem 1 <en/2014_extremum>
+   Problem 2 <en/2014_stammfunktionen>
+   Problem 3 <en/2014_sinusfunktionen>
+   Problem 4 <en/2014_beispielfunktionen>
+   Problem 5 <en/2014_qualitative_integrale>
+   Problem 6 <en/2014_wendepunkte>
+   Problem 7 <en/2014_rechteck>
