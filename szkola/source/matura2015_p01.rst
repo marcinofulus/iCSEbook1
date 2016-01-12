@@ -8,6 +8,7 @@ z nim poradzi. Wpisujemy i od razu mamy wynik:
 
 
 .. sagecellserver::
+   :linked: false
 
    solve([-4<=x-1,x-1<=4],x)
 
@@ -21,6 +22,7 @@ procedurę :code:`region_plot`:
 
 
 .. sagecellserver::
+   :linked: false
 
    var('x,y')
    region_plot([-4<=x-1,x-1<=4],(x,-10,10),(y,-1,1) )

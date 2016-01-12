@@ -70,3 +70,44 @@ Geometry
 
    Problem 1 <en/2015_parallelogramm>
    Problem 2 <en/2015_pyramide>
+
+Bavarian final secondary-school examinations in mathematics 2014
+================================================================
+
+German version
+--------------
+
+Quelle des Aufgabentexts: `http://www.isb.bayern.de/download/14772/abiturpruefung_mathematik_2014_pruefungsteil_a.pdf <http://www.isb.bayern.de/download/14772/abiturpruefung_mathematik_2014_pruefungsteil_a.pdf>`_
+
+Analysis
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Aufgabe 1 <de/2014_extremum>
+   Aufgabe 2 <de/2014_stammfunktionen>
+   Aufgabe 3 <de/2014_sinusfunktionen>
+   Aufgabe 4 <de/2014_beispielfunktionen>
+   Aufgabe 5 <de/2014_qualitative_integrale>
+   Aufgabe 6 <de/2014_wendepunkte>
+   Aufgabe 7 <de/2014_rechteck>
+
+English version
+---------------
+
+The text of the English version is an unofficial translation.
+
+Analysis
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Problem 1 <en/2014_extremum>
+   Problem 2 <en/2014_stammfunktionen>
+   Problem 3 <en/2014_sinusfunktionen>
+   Problem 4 <en/2014_beispielfunktionen>
+   Problem 5 <en/2014_qualitative_integrale>
+   Problem 6 <en/2014_wendepunkte>
+   Problem 7 <en/2014_rechteck>
