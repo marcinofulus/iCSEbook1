@@ -16,7 +16,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   Among the considered rectangles there exist one with the largest area.
   Calculate the side lengths of this rectangle.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a4.png
+  .. image:: ../figs/rechteck.png
      :align: center
 
 

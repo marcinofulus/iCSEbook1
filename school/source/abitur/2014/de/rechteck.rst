@@ -13,7 +13,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Unter den betrachteten Rechtecken gibt es eines mit größtem Flächeninhalt. Berechnen Sie die Seitenlängen dieses Rechtecks.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a4.png
+  .. image:: ../figs/rechteck.png
      :align: center
 
 

@@ -10,7 +10,7 @@ Bavarian final secondary-school examinations in mathematics 2015
      functions is represented by the graph. Argue why the graph cannot represent
      the other two functions.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2015_pruefungsteil_a_1_2_a.png
+  .. image:: ../figs/funktionen.png
      :align: center
 
   b) The first derivative of the function :math:`h` is given by :math:`h'`.

@@ -5,7 +5,7 @@ Bavarian final secondary-school examinations in mathematics 2014
 
   The figure depicts the graph of a function :math:`f`.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a1_analysis_a4.png
+  .. image:: ../figs/qualitative_integrale.png
      :align: center
   
   a) Describe the shape of the graph of an antiderivative of :math:`f` for

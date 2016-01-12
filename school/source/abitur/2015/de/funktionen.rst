@@ -11,7 +11,7 @@ Bayerisches Abitur in Mathematik 2015
      welche Funktion es sich handelt. Begründen Sie, dass der Graph die anderen
      beiden Funktionen nicht darstellt.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2015_pruefungsteil_a_1_2_a.png
+  .. image:: ../figs/funktionen.png
      :align: center
 
   b) Die erste Ableitungsfunktion von :math:`h` ist :math:`h'`. Bestimmen Sie
