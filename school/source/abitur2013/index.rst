@@ -13,6 +13,8 @@ Analysis
    :maxdepth: 1
 
    Aufgabe 1 <de/2013_sqrt>
+   Aufgabe 2 <de/2013_wertemenge>
+   Aufgabe 3 <de/2013_gleichungssystem>
 
 Stochastik
 ..........
