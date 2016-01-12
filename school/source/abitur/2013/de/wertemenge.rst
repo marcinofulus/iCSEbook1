@@ -4,30 +4,41 @@ Bayerisches Abitur in Mathematik 2013
 .. admonition:: Aufgabe
 
   Gegebe Sie jeweils den Term einer in :math:`\mathbb{R}` definierte Funktion
-  an, die die angegebene Wertemene W hat.
+  an, die die angegebene Wertemenge :math:`W` hat.
   
-  a) W = :math:`[2;+\infty[`
-  b) W = :math:`[-2;2]`
+  a) :math:`W=[2;+\infty[`
+  b) :math:`W=[-2;2]`
 
-**Lösung zur Teilaufgabe a)**
+**Lösung zu Teil a**
 
-Als mögliche Lösung ergibt sich hier die Funktion :math:`f(x)=x^2 + 2`.
+Als mögliche Lösung ergibt sich hier die Funktion
 
-**Lösung zur Teilaufgabe b)**
+.. math::
+
+   f(x)=x^2 + 2.
+
+**Lösung zu Teil b**
 
 Ein Beispiel für eine nach oben und unten begrenzte Funktion ist
-:math:`\sin(x)`. Der Sinus hat jedoch die Wertemenge
-W = :math:`[-1;1]`. Um auf die gewünschte Wertemenge zu kommen,
+die Sinusfunktion, die jedoch die Wertemenge :math:`W=[-1;1]`
+besitzt. Um auf die gewünschte Wertemenge zu kommen,
 muss die Funktion noch mit 2 multipliziert werden.
-Als Lösung ergibt sich damit :math:`g(x)=2\sin(x)`
+Als mögliche Lösung ergibt sich damit
 
-Beide Lösungen könne in einem Koordinatensystem durch  Sage
-graphisch dargestellt werden.
+.. math::
+
+   g(x)=2\sin(x).
+
+Beide Lösungen können mit Sage graphisch dargestellt und ihre
+Wertemengen überprüft werden.
 
 .. sagecellserver::
 
-    sage: x = var('x')
-    sage: plot(x**2 + 2,(-3,3),color='blue') + plot(2*sin(x),(-4,4),color='red')
+    sage: f(x) = x**2+2
+    sage: g(x) = 2*sin(x)
+    sage: pf = plot(f, (-3, 3), color='blue')
+    sage: pg = plot(g, (-4, 4), color='red')
+    sage: show(pf+pg, figsize=(4, 2.8))
 
 .. end of output
 
