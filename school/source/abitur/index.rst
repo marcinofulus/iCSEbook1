@@ -93,3 +93,11 @@ Analysis
    Aufgabe 6 <de/2014_wendepunkte>
    Aufgabe 7 <de/2014_rechteck>
 
+Stochastik
+........
+
+.. toctree::
+   :maxdepth: 1
+
+   Aufgabe 1 <de/2014_Urne>
+   
