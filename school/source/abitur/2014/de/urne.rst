@@ -24,7 +24,7 @@ Da es nur zwei verschiedene Farben unter den Kugeln gibt und das Zufallsexperime
 zwei Schritte hat, betrachten wir vier mögliche Abläufe des Experiments, bei denen
 wir die jeweils verschobenen Kugeln und den Endinhalt der Urne A betrachten:
 
-  1. A :math:`\overset{\mathrm{r}{\rightarrow}}` B, A :math:`\underleftarrow{\mathrm{rot}}` B, 
+  1. A :math:`\underrightarrow{\mathrm{rot}}` B, A :math:`\underleftarrow{\mathrm{rot}}` B, 
      :math:`\quad \Rightarrow` A=\{rrwww\}
 
   2. A :math:`\underrightarrow{\mathrm{weiß}}` B, A :math:`\underleftarrow{\mathrm{weiß}}` B, 
@@ -38,19 +38,6 @@ wir die jeweils verschobenen Kugeln und den Endinhalt der Urne A betrachten:
 
 Die ersten beiden Abläufe liefern also das gleiche Ergebnis. Die drei möglichen Endkonfigurationen
 für die Urne A sind somit: A=\{rwwww\}, A=\{rrwww\} und A=\{rrrww\}.
-
-.. sagecellserver::
-
-    sage: p = 0.7
-    sage: rounds = 1000000
-    sage: successes = 0
-    sage: for round in range(rounds):
-    ...       result = [random() < p for _ in range(5)]
-    ...       if sum(result) == 4:
-    ...           successes = successes+1
-    sage: print N(successes/rounds), 5*p^4*(1-p)
-
-.. end of output
 
 **Lösung zu Teil b**
 
@@ -96,16 +83,16 @@ für den Inhalt der Urne A (Teilaufgabe a) überprüfen.
     sage: A = A_original[::]
     sage: B = ['w','w','r','r','r']
     sage: for a_ball in A_original:
-    sage:     A = A_original[::]
-    sage:     A.remove(a_ball)
-    sage:     B.append(a_ball)
-    sage:     for b_ball in B:
-    sage:         A.append(b_ball)
-    sage:         print "A: ", A
-    sage:         whitecountlist[A.count('w')] += 1
-    sage:         totalcount += 1
-    sage:         del A[-1]
-    sage:     B.remove(a_ball)
+    ...       A = A_original[::]
+    ...       A.remove(a_ball)
+    ...       B.append(a_ball)
+    ...       for b_ball in B:
+    ...           A.append(b_ball)
+    ...           print "A: ", A
+    ...           whitecountlist[A.count('w')] += 1
+    ...           totalcount += 1
+    ...           del A[-1]
+    ...       B.remove(a_ball)
     sage: print " p(E) = ", whitecountlist[3]/totalcount, " and p(!E) = ", 1-whitecountlist[3]/totalcount
 
 Eine etwas leichtere Lösung ist es, die Wahrscheinlichkeit für das Ereignis E empirisch zu bestimmen. 
@@ -119,16 +106,16 @@ bestimmten Anzahl an Durchführungen eintritt.
     sage: successcount = 0
     sage: testiterations = 100000
     sage: for i in range(testiterations):
-    sage:     A = ['w','w','w','r','r']
-    sage:     B = ['w','w','r','r','r']
-    sage:     ball = random.choice(A)
-    sage:     A.remove(ball)
-    sage:     B.append(ball)
-    sage:     ball = random.choice(B)
-    sage:     B.remove(ball)
-    sage:     A.append(ball)
-    sage:     if(A.count('w') == 3):
-    sage:         successcount += 1
+    ...       A = ['w','w','w','r','r']
+    ...       B = ['w','w','r','r','r']
+    ...       ball = random.choice(A)
+    ...       A.remove(ball)
+    ...       B.append(ball)
+    ...       ball = random.choice(B)
+    ...       B.remove(ball)
+    ...       A.append(ball)
+    ...       if(A.count('w') == 3):
+    ...           successcount += 1
     sage: print "empiric probability p(E) = ", float(successcount/testiterations), "p(!E) = ", float(1-successcount/testiterations)
 
 
