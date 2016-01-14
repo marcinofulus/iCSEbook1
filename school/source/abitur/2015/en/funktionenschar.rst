@@ -30,7 +30,6 @@ This calculation can be checked by means of Sage:
 
 .. sagecellserver::
 
-    sage: a = var('a')
     sage: f(x, a) = x*exp(a*x)
     sage: df = f.derivative(x)
     sage: print 'Derivative of f:', df

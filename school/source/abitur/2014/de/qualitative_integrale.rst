@@ -5,7 +5,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Die Abbildung zeigt den Graphen einer Funktion :math:`f`.
 
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a1_analysis_a4.png
+  .. image:: ../figs/qualitative_integrale.png
      :align: center
   
   a) Beschreiben Sie für :math:`a\leq x\leq b` den Verlauf des Graphen einer Stammfunktion von :math:`f`.

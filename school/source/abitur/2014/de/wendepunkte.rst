@@ -9,7 +9,7 @@ Bayerisches Abitur in Mathematik 2014
   Ableitungsfunktion :math:`g''` von :math:`g` gehört. Begründen Sie Ihre
   Entscheidung.
   
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a2.png
+  .. image:: ../figs/wendepunkte.png
      :align: center
 
 **Lösung**

@@ -8,7 +8,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   graphs I, II, and III corresponds to the second derivative :math:`g''` of
   :math:`g`. Justify your choice.
   
-  .. image:: ../figs/abiturpruefung_mathematik_cas_2014_pruefungsteil_a2_analysis_a2.png
+  .. image:: ../figs/wendepunkte.png
      :align: center
 
 **Solution**
