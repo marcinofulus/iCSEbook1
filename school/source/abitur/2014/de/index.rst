@@ -21,6 +21,7 @@ Stochastik
 
    Aufgabe 1 <urne>
    Aufgabe 2 <bernoulli>
+   Aufgabe 3 <zufallsgroesse>
   
 
 Geometrie
