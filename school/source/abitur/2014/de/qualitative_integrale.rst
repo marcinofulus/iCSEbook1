@@ -6,7 +6,12 @@ Bayerisches Abitur in Mathematik 2014
   Die Abbildung zeigt den Graphen einer Funktion :math:`f`.
 
   .. image:: ../figs/qualitative_integrale.png
-     :align: centerh
+     :align: center
+  
+  a) Beschreiben Sie für :math:`a\leq x\leq b` den Verlauf des Graphen einer Stammfunktion von :math:`f`.
+
+  b) Skizzieren Sie in der Abbildung den Graphen einer Stammfunktion von :math:`f` im gesamten dargestellten Bereich. 
+
 **Lösung zu Teil a**
 
 In dieser Aufgabe wollen wir zunächst die Stammfunktion skizzieren, die von der Form 
