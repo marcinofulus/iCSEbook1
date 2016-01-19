@@ -20,6 +20,7 @@ Here we present a set of problems from Bavarian *Abitur* solved with computer al
    abitur/index.rst
 
 
+
 Conference 2015, Workshops
 --------------------------
 
@@ -43,9 +44,3 @@ Materials used in  Oslo
    bungeeCode
    ProjectileMotion                                 
    Battleship
-   abitur/index
-
-
-
-
-

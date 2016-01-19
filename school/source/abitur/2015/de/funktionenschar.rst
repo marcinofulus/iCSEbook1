@@ -30,7 +30,6 @@ Diese Rechnung lässt sich mit Sage überprüfen:
 
 .. sagecellserver::
 
-    sage: a = var('a')
     sage: f(x, a) = x*exp(a*x)
     sage: df = f.derivative(x)
     sage: print 'Ableitung von f:', df
