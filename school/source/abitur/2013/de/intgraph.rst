@@ -15,21 +15,22 @@ Bayerisches Abitur in Mathematik 2013
 
 
 **Lösung**
+
 Um diese Aufgabe zu lösen, muss man einen Zusammenhang zwischen Funktion
 und Stammfunktion kennen:
- * Hat die Funktion eine Nullstelle so gibt es hier in der Stammfunktion
-   ein lokales Extremum. Ist die Steigung an dieser Nullstelle negativ so
-   handelt es sich um ein Maximum in der Stammfunktion, bei positiver Steigung
-   um ein Minimum.
+  Hat die Funktion eine Nullstelle mit Vorzeichenwechsel, so gibt es hier in der Stammfunktion
+  ein lokales Extremum. Ist die Steigung der Funkion an dieser Nullstelle negativ so
+  handelt es sich um ein Maximum in der Stammfunktion, bei positiver Steigung
+  um ein Minimum.
 
-Betrachtet man die Funktion in der Aufgabenstellung so erkennt man eine
+Betrachtet man die Funktion in der Aufgabenstellung, so erkennt man eine
 Nullstelle von :math:`f(x)` bei :math:`x_1=0` und bei :math:`x_2\approx 2,25`.
 Im ersten Fall ist die Steigung negativ also ist :math:`F(0)` ein lokales 
 Maximum. An der stelle :math:`x_2` ist die Steigung von :math:`f` positiv.
 :math:`F(x_2)` ist also ein lokales Minimum.
 
-Eine weitere Einschränkung von :math:`F(x)` ergibt sich aus den Integralgrenzen.
-Diese hat als untere Grenze :math:`x_3=1`. Dies bedeutet das :math:`F` hier eine
+Eine weitere Eigenschaft von :math:`F(x)` ergibt sich aus den Integralgrenzen.
+Diese hat als untere Grenze :math:`x_3=1`. Dies bedeutet, dass :math:`F` hier eine
 Nullstelle hat.
 
 Mit Sage lässt sich eine Integration bei bekannter Funktion :math:`g` durchführen.
