@@ -8,6 +8,7 @@ Analysis
    Aufgabe 2 <wertemenge>
    Aufgabe 3 <gleichungssystem>
    Aufgabe 4 <intgraph>
+   Aufgabe 5 <kurvendiskussion>
 
 Stochastik
 ..........
