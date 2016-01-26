@@ -29,3 +29,5 @@ Geometrie
 
 .. toctree::
    :maxdepth: 1
+
+   Aufgabe 1 <prisma>
