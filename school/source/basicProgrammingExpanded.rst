@@ -1,4 +1,3 @@
-
 Introduction to programming with Python
 +++++++++++++++++++++++++++++++++++++++
 
@@ -8,7 +7,7 @@ What is computer programming?
 
 Programming is simply to create computer programs. We are surrounded by
 computer programs (or software) everywhere. For instance Microsoft Word,
-Mozilla Firefox and Photoshop. Or the apps you have installed on your
+Mozilla Firefox and Photoshop, or the apps you have installed on your
 smart phone. These are all examples of programs, but they are very large
 programming projects, and they are the result of multiple people working
 together to create a complete product that can do many things.
@@ -16,11 +15,11 @@ together to create a complete product that can do many things.
 Most programs are not that large, they are small and specialized. The
 reason you might not have heard about these kinds of programs, is that
 they might never have been shared. A lot of programmers write small
-programs for their own use, and then never share them with anybody. Or,
+programs for their own use, and then never share them with anybody. Or
 maybe the programs are just hidden from you. Consider, for example, the
 television you have at home, or your washing machine or your oven. All
 these things have been programmed to perform specialized tasks.
-Thousands of programs exists behind the scenes in your daily life. They
+Thousands of programs exist behind the scenes of your daily life. They
 help make your life easier, and it is exactly the fact that you do not
 have to think about them that makes them so brilliant.
 
@@ -28,18 +27,18 @@ To understand how programming works from a bird eye view you can play a
 game called `Lightbot <http://lightbot.com/hocflash.html>`__.
 
 Below is a screenshot from the game. The goal is to program the little
-robot and make all the blue fields light up. The little icons at the
+robot and make all the blue fields light up. The small icons at the
 bottom of the screen are all the available commands you can use. At the
 right side of the screen, in the box named 'main', is the actual program
 you are creating.
 
 When you are happy with your program, you can run it by pressing the
-green arrow at the top of the screen. You can then watch the robot, to
+green arrow at the top of the screen. You can then watch the robot to
 see if the program does what you wanted. Either the robot succeeds and
 lights all the blue fields (then you have cleared the board), or it
 fails and nothing happens. Then you just press the orange reset button,
-change your code, and try again. The game is pretty self explainatory,
-so make sure you follow the instructions carefully! When programming it
+change your code, and try again. The game is pretty self explanatory,
+just make sure you follow the instructions carefully! When programming it
 is extremely important to be precise.
 
 A computer program is written in a programming language. There are many
@@ -50,15 +49,17 @@ learned by playing Lightbot are the same. Below is an illustration of
 the workflow we use when we are programming. Do you see how similar the
 different steps are to the steps you performed when you played Lightbot?
 
-.. figure:: programmering_en.svg
-   :alt: Alt text
+.. figure:: _images/lightbot1.png
+   :alt: lightbot
 
-   Alt text
 
-Installation (??)
-=================
+Installation
+============
 
-If this is for E+ only maybe something about Sage?
+There are several ways to install Python. We recommend using Anaconda because it includes everything you will need and is easy to use. In this introduction we will be using Python 2.7. You can download Anaconda for Windows/OS X/Linux here: https://www.continuum.io/downloads If you download Python 3.5, be aware that some of the examples we present may have to be modified to work with this version of Python.
+
+When you have successfully installed Anaconda you can make an empty file into which you copy the examples we provide. You can then run the program to see that it gives the expected result. Remember that the file has to be a Python file, which means that it has to end with *.py*.
+
 
 External links
 ==============
@@ -88,7 +89,7 @@ http://www.codecademy.com/tracks/python
 Project Euler
 -------------
 
-If you want a challenge, I recommend Project Euler. Project Euler is a
+If you want a challenge, we recommend Project Euler. Project Euler is a
 website full if mathematical challenges with a twist. The twist is that
 they are meant to be solved with programming. The exercises quickly
 become more difficult as you go, so start at the beginning!
@@ -117,7 +118,7 @@ computer can distinguish text from code. To make it easier for the
 programmer to distinguish between text and code they are shown in
 different colors.
 
-The text "Hello world!" is chosen arbitrarely. Try to change the text
+The text "Hello world!" is chosen arbitrarily. Try to change the text
 between the quotes and see what happens!
 
 Math
@@ -126,7 +127,7 @@ Math
 In Python and most other computer languages the basic mathematical
 operators are written as :math:`+, -, *,` and :math:`/`. In python
 exponentials are expressed by a double asterisk (:math:`*`\ :math:`*`)
-notation. Lets show some examples:
+notation. Let us show some examples:
 
 .. code:: python
 
@@ -146,7 +147,7 @@ notation. Lets show some examples:
     
 
 When we run the code, the results are just as expected apart from the
-division. The reason why 2 divided by 3 is zero will be described in the
+division. The reason why 2 divided by 3 is 0 will be described in the
 section below about types.
 
 We can improve the :math:`\verb+print+` command to make the output is
@@ -214,7 +215,7 @@ What happens when you run the code below?
     
 
 Why is not the result printed to the screen 'Jonas' and '23'? It is
-because Python interprets the code as *textstrings* and not as
+because Python interprets the code as *text strings* and not as
 *variables* when you use quotes.
 
 Note that if you try to create two variables with the same name, the
@@ -268,11 +269,11 @@ To check which type a variable has, we can use the command
     
 
 In this program we first create four variables, then the type of each
-variable is printed. The results show that :math:`\verb+locationy+`\ and
+variable is printed. The results show that :math:`\verb+location+` and
 :math:`\verb+day+` has the type 'str', which is an abbreviation for
-string. The :math:`\verb+variabley+`\ year has the type 'int', which
-means that it is an integer. Finally, :math:`\verb+temperaturey+`\ has
-the type 'float'. Thus python distinguishes between floats and integer.
+string. The :math:`\verb+variable+` year has the type 'int', which
+means that it is an integer. Finally, :math:`\verb+temperature+` has
+the type 'float'. Thus Python distinguishes between floats and integer.
 In the section about mathematical operators we got zero when we divided
 2 by 3. This is because both 2 and 3 have the type 'int' and therefore
 also the result will have the type 'int'. If we use float numbers
@@ -310,8 +311,8 @@ Lists
 
 Until now you have learned that variables has a name, a content, and a
 type. Now it is time to introduce a different type of variables:
-*lists*. What if we want our program to remember the names of all the
-students in a class. We can create one variable for each student, or we
+*lists*. If we want our program to remember the names of all the
+students in a class, we can create one variable for each student, or we
 can create one variable containing all the students. The latter is
 called a list and here is an example:
 
@@ -419,7 +420,7 @@ forgot one of the students in the class, you can add her by typing
 When we add items to a list they always appear at the end.
 
 In some cases it makes sense to create an empty list and then add
-elements afterwards. Here is a list that is initially empty and then
+elements afterwards. Here is a list which is initially empty and then
 filled with numbers
 
 .. code:: python
@@ -470,7 +471,7 @@ we wrote. We have written something that does not make sense. In this
 example the :math:`\verb+print+` command has a spelling error and Python
 does not recognize it.
 
-at the first line, Python attempts to let us know where the error is. It
+In the first line, Python attempts to let us know where the error is. It
 says 'line 1' at the top, which means the error is at line 1 in our
 program. In the example this is obvious, but in a program with several
 hundred lines, it is definitely useful to know which line has an error.
@@ -531,7 +532,7 @@ Let us look at one last error
 We got an :math:`\verb+IndexError+`, and it says 'list index out of
 range'. The goal of the print command is to print the fourth name in the
 list, Marcus. But, we have forgotten that Python starts to count on 0,
-so Marcus has the index 3!. This means that we have attempted to access
+so Marcus has the index 3! This means that we have attempted to access
 a part of the list which does not exist, and therefore we get an 'index
 out of range' error.
 
@@ -551,7 +552,7 @@ we will look at how to combine them. Consider the following program
     Hello Silje ! How are you today?
     
 
-In this example we use the print command to print 3 tings consecutively.
+In this example we use the print command to print 3 things consecutively.
 Observe that everything we print appears on the same line. This is
 because they all belong to the same print command.
 
@@ -605,7 +606,7 @@ Programs that interacts with the user
 =====================================
 
 So far we have created programs that just do something simple and then
-terminates by themself. But most programs you know from real life are
+terminates by themselves. But most programs you know from real life are
 created to interact with the user in some way. So, let us ask the user a
 series of questions. We can do this with the command
 :math:`\verb+raw_input+`. Here is an example:
@@ -639,8 +640,8 @@ should be easy to read for other people. Code is meant to be understood
 by computers, but it is also important that humans understand what the
 code does. This is a popular quote among programmers:
 
-    Programs must be written for people to read, and only incidentally
-    for machines to execute.
+    "Programs must be written for people to read, and only incidentally
+    for machines to execute."
 
 Even if you are certain that you will never share your code with anyone,
 you should try to make it understandable and organized. One reason is
@@ -700,19 +701,13 @@ your program, to explain what your program does.
 
 
 
-.. parsed-literal::
-
-    'This is a comment \nthat covers \nthree lines in total'
-
-
-
 Whitespace
-==========
+----------
 
 Another important part of a programs structure, is what we call
 whitespace. Whitespace is simply explained everything we can see, which
 means spaces, indentation and empty lines. There are some places inside
-the code where you can add extra space, and some places you cant. If you
+the code where you can add extra space, and some places you cannot. If you
 learn where it is okay to add some 'empty space', your program will look
 nicer and more readable.
 
@@ -748,8 +743,8 @@ make your code a lot more readable. Consider the following programs:
     The square root of your number is 2
     
 
-These two programs use exactly the same code, I have just added some
-extra spaces and empty lines to the same program. At least for me, the
+These two programs use exactly the same code, we have just added some
+extra space and empty lines to the same program. The
 second program is a lot easier to read and understand than the first.
 For programs with several hundred lines of code, a bit of space like
 this can make a huge difference in readability.
@@ -781,7 +776,7 @@ instead write
 The star means that we import all functions from a library.
 
 Rolling dice
-============
+------------
 
 Let us see what the function :math:`\verb+randint+` actually does. The
 name is short for random integer, and it returns exactly that, a random
@@ -808,7 +803,7 @@ and 6, and we print the result. If you run the program multiple times,
 you will see that the result is random each time.
 
 We can, of course, give different arguments to :math:`\verb+randint+` to
-simulate lots of different 'dice'
+simulate lots of different 'dice'.
 
 .. code:: python
 
@@ -833,7 +828,7 @@ simulate lots of different 'dice'
 In this program, we use :math:`\verb+randint+` in three different ways.
 
 Some other functions from random are created to be used with lists.
-Shuffle, for example, shuffles the elements in a list.
+:math:`\verb+Shuffle+`, for example, shuffles the elements in a list.
 
 .. code:: python
 
@@ -869,7 +864,7 @@ As an example we can use :math:`\verb+choice+` to simulate a lottery.
 Example: deck of cards.
 =======================
 
-Let us look at how we can use lists and shuffle to create a deck of
+Let us look at how we can use lists and :math:`\verb+shuffle+` to create a deck of
 cards, and then manipulate and use the deck. Let us represent each card
 in a deck of cards by a string of two letters, where the first letter is
 the suit and the second is the symbol. For example six of spade becomes
@@ -901,9 +896,9 @@ towards creating a card game!
 
 Here we had to write out the entire deck manually, but soon we will look
 at commands that makes it possible to save some work and have the deck
-generate it self.
+generate itself.
 
-Let me show you some quick ways to manipulate the deck. If you have a
+Let us show you some quick ways to manipulate the deck. If you have a
 list, you can use :math:`\verb+.pop()+` to remove the last element in
 the list. This represents drawing a card from the deck.
 
@@ -954,7 +949,7 @@ computer.
 For Loops
 =========
 
-A loop is a piece of code which repeat itself. If we want our program to
+A loop is a piece of code which repeats itself. If we want our program to
 perform the same task many times in a row we need a loop. There are to
 types of loops, namely :math:`\texttt{for}`-loops and
 :math:`\texttt{while}`-loops. To begin with, we are only considering
@@ -981,12 +976,10 @@ characters each name has:
     
 
 The code is executed for every name in the list, i.e., since the list
-has 5 elements the code is exectuted 5 times.
+has 5 elements the code is executed 5 times.
 
-.. figure:: figs\for_loop.svg
+.. figure:: _images/for_loop.svg
    :alt: for loop diagram
-
-   for loop diagram
 
 The first line :math:`\texttt{for name in students:}` creates a loop
 over all elements in the list :math:`\texttt{students}`. In each pass of
@@ -1001,7 +994,7 @@ current element. Note that the block must be intended, this is an
 important feature in Python. This might be difficult to remember, but
 you will get used to it.
 
-Here is antother example where we are adding the number from 1 to 10:
+Here is another example where we are adding the numbers from 1 to 10:
 
 .. code:: python
 
@@ -1018,9 +1011,9 @@ Here is antother example where we are adding the number from 1 to 10:
 
 If we want to loop over the numbers 1 to 1000 instead it will take long
 to write down the list of numbers. Fortunately, there is a function
-called :math:`\texttt{range}` in Python, which can do this job for you.
+called :math:`\texttt{range}` in Python which can do this job for you.
 Range takes two arguments (:math:`\texttt{range(start, stop)}`) and
-returns a list of numbers (integers) from start to stop. Here is to
+returns a list of numbers (integers) from start to stop. Here are two
 examples:
 
 .. code:: python
@@ -1036,7 +1029,7 @@ examples:
 
 Note that the last number is not included! We may also add a third
 argument, this argument tells us how large the step between the numbers
-should be. Here is a few examples:
+should be. Here are a few examples:
 
 .. code:: python
 
@@ -1110,10 +1103,9 @@ less-than-equal (:math:`\verb+<=+`). To see if something is
 :math:`\verb+True+` or :math:`\verb+False+`, you can simply print the
 condition to the screen
 
-.. figure:: figs\if_else.svg
-   :alt: if else diagrams
+.. figure:: _images/if_else.svg
+   :alt: if else diagram
 
-   if else diagrams
 
 .. code:: python
 
@@ -1132,7 +1124,7 @@ condition to the screen
 
 Play around, try various combinations, and guess the result!
 
-You can add more conditions with the :math:`\verb+elif+` command
+You can add more conditions with the :math:`\verb+elif+` command.
 
 .. code:: python
 
@@ -1161,17 +1153,16 @@ While loops
 A :math:`\verb+while+` loop is similar to an :math:`\verb+if+` test
 because it also checks a condition. The difference between the two is
 that a :math:`\verb+while+` loop will repeat everything in the block
-over and over again as long as the condition remains true
+over and over again as long as the condition remains true.
 
-.. figure:: figs\while_loop.svg
-   :alt: while loop
+.. figure:: _images/while_loop.svg
+   :alt: while loop diagram
 
-   while loop
 
 Let us look at an example that shows the difference between
 :math:`\verb+if+` and :math:`\verb+while+`. We will create a tiny game
 where you roll a die. If you get six, you win. If not, you loose. First
-we will create this game with an :math:`\verb+if+` test
+we will create this game with an :math:`\verb+if+` test.
 
 .. code:: python
 
@@ -1230,7 +1221,7 @@ means that the code inside the loop will run and print the loser message
 before *rolling the die again*. After the code inside the loop has run,
 the condition is checked again. If we now rolled between 1 and 5, then
 the condition is true again and the loop runs one more time. This
-continues until we finally roll a 6 and win. Here is one result I got
+continues until we finally roll a 6 and win. Here is one result we got
 from running the program.
 
 .. math::
@@ -1241,14 +1232,14 @@ from running the program.
    \texttt{ You rolled a 5, no prize for you this time. } \\
    \texttt{ You rolled a six! Great job! }
 
-As you can see, I first rolled 1, then 4, then 5, then 5 again and
+As you can see, we first rolled 1, then 4, then 5, then 5 again and
 finally 6. Observe that with the :math:`\verb+while+` test we do not
 know how many times we will roll the die, but with the :math:`\verb+if+`
 test we rolled the die just once every time.
 
 Let us take a look at another example. This time we will find the number
 of times we have to double a number before it becomes greater that 1
-million
+million.
 
 .. code:: python
 
@@ -1292,7 +1283,7 @@ allows us to print to the screen how many times the loop has repeated.
 Infinite loops
 ==============
 
-with a :math:`\verb+while+` loop it is simple to create an infinite
+With a :math:`\verb+while+` loop it is simple to create an infinite
 loop. Consider the following example **(Do not run this)**
 
 .. code:: python
@@ -1319,7 +1310,7 @@ Functions
 =========
 
 You may be used to the word 'functions' from mathematics. We will now
-examine how we can define a function in python. In programming, the
+examine how we can define a function in Python. In programming, the
 concept of functions is somewhat broader than in mathematics, but we
 will soon see that they have a lot in common.
 
@@ -1327,10 +1318,8 @@ The simplest way to think about a function is to look at it like a
 machine that takes some input, like a number, and returns some output
 based on the input.
 
-.. figure:: figs\function_blackbox.svg
+.. figure:: _images/function_blackbox.svg
    :alt: function blackbox
-
-   function blackbox
 
 If we for example consider the following mathematical function:
 
@@ -1339,13 +1328,13 @@ If we for example consider the following mathematical function:
 Then for each value of :math:`x` (the input),  we can find the resulting
 value of :math:`f(x)` (the output). So you can view the function
 :math:`f`  as a rule, or a machine, that processes a number given by us.
-We can define this function with python like this:
+We can define this function with Python like this:
 
 .. code:: python
 
     def f(x):
         return x**2 + 3*x + 1    
-:math:`\verb+def+` and :math:`\verb+return+` are python commands, which
+:math:`\verb+def+` and :math:`\verb+return+` are Python commands, which
 we will explain in more detail soon. Let us define a function with the
 name :math:`f` that takes a number :math:`x` and returns the number
 :math:`f(x)`. We can now use the function (also known as 'calling' or
@@ -1364,12 +1353,12 @@ name :math:`f` that takes a number :math:`x` and returns the number
     4
     
 
-As soon as we have defined a function in python, it stays in the memory
+As soon as we have defined a function in Python, it stays in the memory
 until the program terminates. This means that after we have defined a
 function, we can use it as many times as we want. The functions we
 define are actually just like a new type of variable.
 
-A function in python does not need to be mathematical. We can for
+A function in Python does not need to be mathematical. We can for
 example create a function like this:
 
 .. code:: python
@@ -1377,7 +1366,7 @@ example create a function like this:
     def greet(name):
         print "Hello " + name + "!"
 This function takes a name as input, that is, a string, and prints a
-greeting as output. We can call it like this
+greeting as output. We can call it like this:
 
 .. code:: python
 
@@ -1392,12 +1381,12 @@ Notice that this function didn’t use the command :math:`\verb+return+`,
 and when we invoked the function we did not write :math:`\verb+print+`
 before the function call. This is because the function itself prints, we
 defined it to do so. It may be difficult to understand this difference,
-so let us look at some more examples.
+so we will look at some more examples.
 
-We define two functions, :math:`f1` and :math:`f2`. We want both of them
+Let us define two functions, :math:`f1` and :math:`f2`. We want both of them
 to take a number :math:`x` as input, and calculate :math:`2x` (the
 double of :math:`x`). The difference is that we want :math:`f1` to
-return the result, but we want :math:`f2` to print the result to the
+return the result, while we would like :math:`f2` to print the result to the
 screen. So the code is:
 
 .. code:: python
@@ -1413,13 +1402,6 @@ attempt to understand exactly what is happening. First we write
 .. code:: python
 
     f1(2)
-
-
-
-.. parsed-literal::
-
-    4
-
 
 
 This doesn't result in an error message, so it seems okay, but there is
@@ -1457,7 +1439,7 @@ Let us now try to write
 This works perfectly fine, we get the result, directly to the screen. So
 far so good! This is because we call the function :math:`f2`, and
 :math:`f2` prints the number on the screen. But if we instead try to
-store the result in a variable like so
+store the result in a variable like so:
 
 .. code:: python
 
@@ -1472,15 +1454,15 @@ store the result in a variable like so
 
 we get a slightly cryptic result.
 
-To understand what is happing, we first have to interpret the line
+To understand what is happening, we first have to interpret the line
 :math:`\verb!a = f2(3)!`. As we have learned before, a line like this
 means that we calculate the right side and store it in the variable
-:math:`a`. But the right side calls f2 with the number
+:math:`a`. But the right side calls :math:`f2` with the number
 :math:`\verb+x = 3+`, and :math:`f2` does as we defined, and prints the
 result :math:`\verb+2*x = 6+` directly to the screen. Now :math:`f2` is
 done, but it didn't return any value! So when :math:`a` is defined as
 the result, :math:`a` gets the value 'nothing', or :math:`\verb+None+`
-which is what 'nothing' is called in python.
+which is what 'nothing' is called in Python.
 
 Hopefully, you now have some idea what it means that a function returns
 a value with the :math:`\verb+return+` command. Do not panic if you find
@@ -1493,7 +1475,7 @@ Functions with multiple variables
 
 Now that you know how to define functions with one variable, it is super
 simple to define functions with multiple variables. We can create the
-following function
+following function:
 
 .. math:: f(x,y) = 2x^2 + xy + 3,
 
@@ -1513,14 +1495,14 @@ like so
 
 We can even create functions with no arguments at all. This type of
 functions is perhaps more useful when you are programming then when you
-are doing mathematics. Consider this function
+are doing mathematics. Consider this function:
 
 .. code:: python
 
     def greet():
         print "Hey there! I hope you have a great day!"
 Observe that when we invoke a function like this, we still have to use
-parentheses like so
+parentheses like so:
 
 .. code:: python
 
@@ -1532,7 +1514,7 @@ parentheses like so
     
 
 Another thing worth noticing is that many of the commands we have used
-in python so far are defined exactly like we just saw.
+in Python so far are defined exactly like we just saw.
 :math:`\verb+range+` for example, is a function that we call when we
 need to use it. When we write :math:`\verb+range(1,10,2)+`, we call a
 function with three arguments.
@@ -1568,7 +1550,7 @@ the command :math:`\verb+zeros+`:
 
 The variable :math:`x` is now an array with three elements. All the
 elements have the value :math:`0`. This may seem like a strange way to
-do it, but now we can change specific elements by indexing like this
+do it, but now we can change specific elements by indexing like this:
 
 .. code:: python
 
@@ -1585,7 +1567,7 @@ We call this use of square brackets for 'indexing', and we use it to get
 easy access to specific elements from an array or a list. Python counts
 from 0, so :math:`\verb+x[0]+` is the first element, :math:`\verb+x[1]+`
 is the second element, etc. So if we write :math:`\verb+print x+` we get
-the following
+the following:
 
 .. code:: python
 
@@ -1635,7 +1617,7 @@ that we can use arrays to calculate dot products and cross products.
     
 
 Another useful feature of arrays is that we can give them as input to
-functions. Consider for example this function which we looked at before
+functions. Consider for example this function which we looked at before:
 
 .. code:: python
 
@@ -1659,22 +1641,21 @@ containing all the results.
 Plotting
 ========
 
-We will now take a look at plotting in python, which involves creating
+We will now take a look at plotting in Python, which involves creating
 simple figures and graphs. We will plot points in the coordinate system
 that you are used to from mathematics. To plot, we use the function
 :math:`\verb+plot+` from the Pylab package. The :math:`\verb+plot+`
 function takes in two lists, or arrays, of numbers as input. Here is a
-simple example
+simple example:
 
 .. code:: python
 
-    %matplotlib inline
     from pylab import plot
     plot([0,0.5,1], [2,4,6], 'x')
     show()
 
 
-.. image:: output_180_0.png
+.. image:: _images/output_180_0.png
 
 
 As you can see, the program draws the points (0,2), (0.5, 4) and (1,6)
@@ -1688,7 +1669,7 @@ If we have defined a function, for example
 
 .. math:: f(x) = x^2 + 3x + 1,
 
-which we looked at earlier. Then we can write this
+which we looked at earlier. Then we can write this:
 
 .. code:: python
 
@@ -1702,14 +1683,14 @@ which we looked at earlier. Then we can write this
     show()
 
 
-.. image:: output_184_0.png
+.. image:: _images/output_184_0.png
 
 
 Here we create a set of a thousand points, and then we plot them. This
-gives us a nice figure of the function :math:`f(x)`
+gives us a nice figure of the function :math:`f(x)`.
 
 We can also create plots of other known mathematical functions, like
-:math:`sin(x)` and :math:`cos(x)`
+:math:`sin(x)` and :math:`cos(x)`.
 
 .. code:: python
 
@@ -1719,13 +1700,13 @@ We can also create plots of other known mathematical functions, like
     show()
 
 
-.. image:: output_186_0.png
+.. image:: _images/output_186_0.png
 
 
 After we have created the curve with the plot-command, and before we
 call :math:`\verb+show()+`, we can prettify the figure. For example by
 adding labels to the axes with :math:`\verb+xlabel+` and
-:math:`\verb+ylabel+`
+:math:`\verb+ylabel+`.
 
 .. code:: python
 
@@ -1737,7 +1718,7 @@ adding labels to the axes with :math:`\verb+xlabel+` and
     show()
 
 
-.. image:: output_188_0.png
+.. image:: _images/output_188_0.png
 
 
 .. code:: python
@@ -1752,13 +1733,13 @@ adding labels to the axes with :math:`\verb+xlabel+` and
     show()
 
 
-.. image:: output_189_0.png
+.. image:: _images/output_189_0.png
 
 
 Axis takes a list like this:
-:math:`\verb+[xstart, xstop, ystart, ystop]+`
+:math:`\verb+[xstart, xstop, ystart, ystop]+`.
 
-If we want to save the figure, we can do so with :math:`\verb+savefig+`
+If we want to save the figure, we can do so with :math:`\verb+savefig+`.
 
 .. code:: python
 
@@ -1773,15 +1754,14 @@ If we want to save the figure, we can do so with :math:`\verb+savefig+`
     show()
 
 
-.. image:: output_192_0.png
+.. image:: _images/output_192_0.png
 
 
-This creates the images 'figure1.png' and 'figure2.pdf' respectivly.
+This creates the images 'figure1.png' and 'figure2.pdf' respectively.
 
 There are a lot more ways to make your plots look prettier, but let us
 not dive in too deeply for now. We will explore more things you can do
 with plots later, but if you feel impatient, you can take a look at
 `matplotlib.org <matplotlib.org>`__. It is the website for the plotting
-package that pylab uses, and it contains plenty of examples of different
+package that Pylab uses, and it contains plenty of examples of different
 plots you can create.
-

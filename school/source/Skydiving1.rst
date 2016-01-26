@@ -1,8 +1,10 @@
 
 Skydiving - part 1
 ++++++++++++++++++
-
-
+For this project you will need the basics programming skills you 
+learned in the introduction. Don't hesitate to go back to the previous tutorial if
+you have forgotten something, or if you find that there were some things
+you did not quite understand.
 
 We will now begin to look at how the velocity of a skydiver changes over
 time. We will find mathematical equations based on our physical
@@ -15,12 +17,28 @@ A parachuting jump consists mainly of two parts. The first part happens
 before the parachute is deployed, this is commonly known as free-fall.
 Most sport skydivers experience about a minute of free-fall each jump.
 After this, the jumper deploys their parachute which dramatically
-reduces the velocity of the fall. The jumper normally falls between one
-and three more minutes before landing, dependent on the altitude and the
+reduces the velocity of the fall. The jumper normally falls for one
+to three more minutes before landing, depending on the altitude and the
 size of the parachute.
 
+The forces acting on the jumper
+===============================
+
+Newton's second law tells us that the acceleration :math:`a` of an object depends 
+on the mass :math:`m` of the object and the force :math:`F` that is acting upon it:
+
+.. math:: \sum a = F/m,
+
+but you are probably more used to seeing this equation on the following form:
+
+.. math:: \sum F = ma.
+
+This is the most basic form of the equation we will be trying to solve in this 
+tutorial.
+
 In both parts of the jump there are only two forces acting on the
-jumper, gravity and air resistance. That is
+jumper: gravity and air resistance. We split the force :math:`F` into two 
+separate forces: 
 
 .. math:: \sum F = F_G + F_D,
 
@@ -30,7 +48,7 @@ standard acceleration due to gravity is :math:`g`, which we define to be
 :math:`g = 9.81 m/s^2`, then the gravitational force is
 :math:`F_G = mg`.
 
-Furthermore, a skydiver will fall with high velocity so we use quadratic
+Furthermore, a skydiver will fall with high velocity (:math:`v`) so we use quadratic
 air resistance, that is
 
 .. math:: F_D = \frac{1}{2}\rho C A v^2,
@@ -74,17 +92,17 @@ differential equation is also an equation because it contains an
 unknown. The difference is that for a differential equation the unknown
 is no longer a number, but a function.
 
-Newtons 2nd equation is a perfect example of a differential equation,
-which we solve to find either the velocity or the position of an object.
+Newton's second law is a perfect example of a differential equation,
+which we solve to find either the velocity (:math:`v`) or the position (:math:`x`) of an object.
 In this case both the velocity and the position are examples of
 functions because they differ with time: :math:`v(t)`, :math:`x(t)`. A
 differential equation contains the derivative of the function we want,
 which is easier to see if we write the acceleration as the derivative of
-the velocity in newtons second law:
+the velocity in Newton's second law:
 
 .. math:: \sum F = ma = m\frac{d v}{d t}.
 
-Then, the differential equation we are trying to solve can we written as
+Then, the differential equation we are trying to solve can be written as
 
 .. math:: m\frac{d v}{d t} = mg - D v(t)^2.
 
@@ -101,7 +119,7 @@ We want to solve the following differential equation:
 
 and we want to find the velocity :math:`v(t)`, but we cannot do that
 because the acceleration is dependent on the velocity. This is exactly
-why we often ignore air resistance when we solve Newtons 2nd law. A lot
+why we often ignore air resistance when we solve Newton's second law. A lot
 of the time, ignoring air resistance is okay, because the result is more
 or less the same anyway. But in some cases, air resistance makes a big
 difference, and skydiving is one of those cases
@@ -109,8 +127,8 @@ difference, and skydiving is one of those cases
 Solving the unsolvable
 ======================
 
-How do we solve an unsolvable equation with programming? The idea is
-quite simple, but let us try to approach it step by step.
+How do we solve an unsolvable equation with programming? 
+Let us try to approach the problem step by step.
 
 Let us begin by looking at what would have happened if we did ignore air
 resistance. We would have free-fall, i.e.
@@ -121,16 +139,16 @@ And so the acceleration would be constant
 
 .. math::  a = g 
 
-In this case we could easily solve the equations of motion to get
+In this case we could easily solve the differential equations to get the equations of motion: 
 
 .. math:: v(t) = v_0 + at.
 
-And similarly
+and
 
 .. math:: x(t) = x_0 + v_0 t + \frac{1}{2}at^2.
 
 We notice that the velocity keeps growing constantly for ever. This of
-cource, has to be incorrect, because we know that in reality, a skydiver
+course has to be incorrect, because we know that in reality a skydiver
 would quickly hit terminal velocity.
 
 Terminal velocity
@@ -157,7 +175,7 @@ m\ :math:`^2`, :math:`g=9.81` m/s\ :math:`^2`), we get the answer
 
 So the terminal velocity in this case is 153 km/h.
 
-Solving the equations of motion with air resistance.
+Solving the equations of motion with air resistance
 ====================================================
 
 If we now add air resistance again, we know that we cannot use the
@@ -190,13 +208,17 @@ tiny steps in time like this
 
 .. math:: v_{n+1} = v_n + a(t_n)\Delta t.
 
-With this method, we can solve our differential equation step by step
-until we have the entire solution
+Here :math:`n` stands for the :math:`n`-th time step. 
+In other words :math:`v_{n+1}` is the velocity at the 
+time step after the :math:`n`-th time step. From the equation above you 
+can see that the current time step depends on the previous one. 
+With this method, we can solve our differential equation step by step until 
+we have the entire solution.
 
 A more mathematical approach
 ============================
 
-Alternatively, we can look at the definition of the of the derivative
+Alternatively, we can look at the definition of the derivative
 
 .. math:: a(t) = \frac{d v}{d t} = \lim_{\Delta t \to 0} \frac{v(t+\Delta t) - v(t)}{\Delta t}
 
@@ -262,7 +284,7 @@ Writing the code
 We are now ready to get started! This is the template for the program
 you are going to write
 
-1. Import pylab, that is everything we will need.
+1. Import Pylab, that is everything we will need.
 2. Declare all the parameters we need, i.e. :math:`m`, :math:`g`,
    :math:`\rho`, :math:`A`, :math:`C`, :math:`A_{p}`, :math:`C_{\rm p}`,
    :math:`v_0`
@@ -273,14 +295,14 @@ you are going to write
    T/dt`
 5. Declare two arrays, one for the velocity :math:`v` and one for the
    time :math:`t`. We want the arrays to be empty and have room for
-   :math:`\verb!n+1!` elements, so use the :math:`\verb+zeros+` command.
-   Notice that :math:`\verb+v[i]+` in your code corresponds to
-   :math:`v_i`.
-6. Create a :math:`\verb+for+` loop that that iterates over $i =
-   0,1,2,..,n $ (**Hint:** use :math:`\verb+range+`)
-7. Inside the loop, calculate :math:`\verb!v[i+1]!` from
-   :math:`\verb+v[i]+` by using the formula we found earlier. Remember
-   to update the time (**Hint:** :math:`\verb!t[i+1] = t[i] + dt!`).
+   :math:`\verb!N+1!` elements, so use the :math:`\verb+zeros+` command.
+   Notice that :math:`\verb+v[n]+` in your code corresponds to
+   :math:`v_n`.
+6. Create a :math:`\verb+for+` loop that that iterates over :math:`n =
+   0,1,2,..,N` (**Hint:** use :math:`\verb+range+`)
+7. Inside the loop, calculate :math:`\verb!v[n+1]!` from
+   :math:`\verb+v[n]+` by using the formula we found earlier. Remember
+   to update the time (**Hint:** :math:`\verb!t[n+1] = t[n] + dt!`).
 8. Plot the result to see if everything is correct (**Hint:**
    :math:`\verb+plot(t,v)+`).
 
