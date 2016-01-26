@@ -157,7 +157,7 @@ Mit Sage erhält man die zweite Ableitung, sowie die Werte an den Punkten
 
 Die lokale Änderungsrate :math:`m_T` an :math:`x=0` ist die Steigung
 an diesem Punkt. In der vorherigen Teilaufgabe wurde die Ableitung
-bereits berrechnet. Daraus erhalten wir:
+bereits berechnet. Daraus erhalten wir:
 
 .. math::
 
@@ -180,7 +180,7 @@ geteilt durch die Intervalllänge.
 Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0.882 = 88,2\%`
 
 Mit Sage kann leicht eine Funktion erstellt werden, welche für zwei Intervallgrenzen
-die mittlere Steigung berrechnet.
+die mittlere Steigung berechnet.
 
 .. sagecellserver::
 
@@ -324,17 +324,28 @@ Aufgabe 2
 **Lösung zum Teil a**
 
 Die Funktionenschar :math:`g_c` ist im Vergleich zu :math:`f(x)`
-um eine Konstante :math:`c` verschieben. Der Hochpunkt des Graphens
-bleibt dabei jedoch an der selben :math:`x`-Koordinate. Dieser wurde
-für :math:`f(x)` in Aufgabe 1 b) berrechnet (:math:`x=1` und 
-:math:`f(1) = \frac{2}{\sqrt{e}}`).
+um eine Konstante :math:`c` verschoben. Der Hochpunkt des Graphen
+bleibt dabei jedoch an derselben :math:`x`-Koordinate. Dieser wurde
+für :math:`f(x)` in Aufgabe 1 b) berechnet :math:`(x=1` und 
+:math:`f(1) = \frac{2}{\sqrt{e}})`.
 Der :math:`y`-Wert von :math:`g_c` ergibt sich durch einsetzen.
 
 .. math::
 
   g_c(1) = f(1) + c = \frac{2}{\sqrt{e}} + c
 
-Damit sind die Koordinaten des Hochpunktes :math:`(1,\frac{2}{\sqrt{e}} + c)`
+Damit sind die Koordinaten des Hochpunktes :math:`\left(1,\frac{2}{\sqrt{e}} + c\right)`
+
+In Sage lässt sich der Hochpunkt für ein festes :math:`c` numerisch berechnen.
+
+.. sagecellserver::
+
+  sage: c = var('c')
+  sage: gc(c,x) = f(x) + c
+  sage: hy, hx = find_local_maximum(gc(3), -30, 30)
+  sage: print("Der Hochpunkt für c=3 befindet sich am Punkt: (" + str(hx) + "," + str(hy) + ")")
+
+.. end of output
 
 Der Limes von :math:`g_c` für :math:`x\rightarrow + \infty` ist:
 
@@ -346,11 +357,56 @@ Der Limes von :math:`g_c` für :math:`x\rightarrow + \infty` ist:
   + \lim\limits_{x\rightarrow+\infty}(c)
   \overset{\mathrm{1. a}}{=} 0 + c = c
 
-.. Hier wäre in Sage eine betrachtung von gc(Infinity) interresant
+.. Hier wäre in Sage eine Betrachtung von gc(Infinity) interesant.
    Dies ist aber wegen des oben genannten Bugs noch nicht möglich
 
 **Lösung von Teil b**
 
-Damit :math:`g_c` keine Nullstellen hat kann :math:`c=10` gewählt werden.
-Für eine Nullstelle muss :math:`c` gleich dem negativen Wertes des Hochpunktes
-von :math:`f(x)` sein. 
+Damit :math:`g_c` keine Nullstellen hat kann :math:`c=5` gewählt werden.
+Der Graph liegt hierbei immer über :math:`y=0`.
+Für eine Nullstelle muss :math:`c` gleich dem negativen Werte des Hochpunktes
+von :math:`f(x)` sein. Aus Aufgabe 1 b) folgt das :math:`c=-\frac{2}{\sqrt{e}}`
+ist. Eine weitere möglich Lösung ist :math:`c=0`, damit erhalten wir als
+Funktion :math:`f(x)` welche nur im Ursprung eine Nullstelle hat.
+Für zwei Nullstellen muss der Betrag von :math:`c` kleiner als der Hochpunkt,
+sowie ungleich Null sein.
+
+.. In Sage ist es nicht so leicht möglich für c\neq0 Nullstellen zu lösen da dies
+   nur noch numerisch möglich ist. Wenn keine Nullstelle vorhanden ist, wird von
+   find_root eine RuntimeError geworfen. Wenn zwei Nullstellen vorhanden sind, wird
+   nur eine gefunden. Eine möglich Lösung wäre eine Schleife welche für kleine Intervalle
+   nach Nullstellen sucht und am Ende alle Lösungen ausgibt (z.B. :math:`c=1`).
+
+Ein Plot für :math:`c\in\{0,1,5\}` zeigt graphisch Funktionen mit unterschiedlich vielen
+Nullstellen.
+
+.. sagecellserver::
+
+  sage: pg0 = plot(gc(0,x), (-4,4), color='blue')
+  sage: pg1 = plot(gc(1,x), (-4,4), color='red')
+  sage: pg5 = plot(gc(5,x), (-4,4), color='green')
+  sage: show(pg0 + pg1 + pg5, aspect_ratio=1)
+
+.. end of output
+
+**Lösung von Teil c**
+
+Eine Skizze, welche die Formel
+:math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
+visualisiert, lässt sich in Sage leicht erstellen. Das grüne Rechteck hat die
+Fläche :math:`3c`. Die gelbe Fläche ist gleich dem Integral über :math:`f(x)`.
+
+.. sagecellserver::
+
+  sage: c = 1
+  sage: pg = plot(gc(c,x), (0, 3), color='red', fill=c, fillcolor='yellow')
+  sage: pgl = plot(gc(c,x), (-1, 0), color='red')
+  sage: pgr = plot(gc(c,x), (3, 4), color='red')
+  sage: gtext = text(r"$g_1(x)$", (2, c + 0.8), fontsize=14)
+  sage: pc = plot(c,(0,3), color='white', fill=True, fillcolor='lightgreen')
+  sage: ftext = text(r"$\int_0^3 f(x) \mathrm{d}x$",(1, c + 0.5), fontsize=14)
+  sage: ctext = text(r"$c=" + str(c) + r"$",(-0.5, c), fontsize=14)
+  sage: c3text = text(r"$3\cdot c$",(1, c/2), fontsize=14)
+  sage: show(pgl + pg + pgr + gtext+ pc + ftext + ctext + c3text, aspect_ratio=1, xmax=4)
+
+.. end of output
