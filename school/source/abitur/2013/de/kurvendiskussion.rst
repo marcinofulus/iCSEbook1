@@ -3,49 +3,69 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion 
-  :math:`f:x\rightarrow 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
-  den Graphen :math:`G_f` von :math:`f`.
+  #.  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion 
+      :math:`f:x\rightarrow 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
+      den Graphen :math:`G_f` von :math:`f`.
 
     
-  .. image:: ../figs/kurvendiskussion.png
-     :align: center
+      .. image:: ../figs/kurvendiskussion.png
+         :align: center
 
-  a) Weisen Sie rechnerisch nach, dass :math:`G_f` punktsymmetrisch
-     bezüglich des Koordinatenursprungs ist, und machen Sie anhand
-     des Funktionsterms von f plausibel, dass
-     :math:`\lim\limits_{x\rightarrow +\infty} f(x)=0` gilt.
-  b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von
-     :math:`G_f`
-  c) Berechnen Sie die mittlere Änderungsrate :math:`m_S` von :math:`f`
-     im Intervall :math:`[-0,5;0,5]` sowie die lokale Änderungsrate
-     :math:`m_T` von :math:`f` an der Stelle :math:`x=0`. Berechnen
-     Sie, um wie viele Prozen :math:`m_S` von :math:`m_T` abweicht.
-  d) Der Graph von :math:`f`, die :math:`x`-Achse und die Gerade
-     :math:`x=u` mit :math:`u \in \mathbb{R}^+` schließen für
-     :math:`0\leq x \leq u` eine Flächenstück mit dem Inhalt
-     :math:`A(u)` ein. Zeigen Sie, dass :math:`A(u)=2-2e^{-0,5u^2}`
-     gilt. Geben Sie :math:`\lim\limits_{u\rightarrow + \infty} A(u)` an
-     und deuten Sie das Ergebnis geometrisch.
-  e) Die Ursprungsgerade :math:`h` mit der Gleichung
-     :math:`y=\frac{2}{e^2}\cdot x` schließt mit :math:`G_f` für
-     :math:`x\leq 0` ein Flächenstück mit dem Inhalt :math:`B`
-     vollständig ein. Berechnen Sie die :math:`x`-Koordinate der
-     drei Schnittpunkte der Geraden :math:`h` mit :math:`G_f` und
-     zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie B.
-     
+      a) Weisen Sie rechnerisch nach, dass :math:`G_f` punktsymmetrisch
+         bezüglich des Koordinatenursprungs ist, und machen Sie anhand
+         des Funktionsterms von f plausibel, dass
+         :math:`\lim\limits_{x\rightarrow +\infty} f(x)=0` gilt.
+      b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von
+         :math:`G_f`
+      c) Berechnen Sie die mittlere Änderungsrate :math:`m_S` von :math:`f`
+         im Intervall :math:`[-0,5;0,5]` sowie die lokale Änderungsrate
+         :math:`m_T` von :math:`f` an der Stelle :math:`x=0`. Berechnen
+         Sie, um wie viele Prozent :math:`m_S` von :math:`m_T` abweicht.
+      d) Der Graph von :math:`f`, die :math:`x`-Achse und die Gerade
+         :math:`x=u` mit :math:`u \in \mathbb{R}^+` schließen für
+         :math:`0\leq x \leq u` ein Flächenstück mit dem Inhalt
+         :math:`A(u)` ein. Zeigen Sie, dass :math:`A(u)=2-2e^{-0,5u^2}`
+         gilt. Geben Sie :math:`\lim\limits_{u\rightarrow + \infty} A(u)` an
+         und deuten Sie das Ergebnis geometrisch.
+      e) Die Ursprungsgerade :math:`h` mit der Gleichung
+         :math:`y=\frac{2}{e^2}\cdot x` schließt mit :math:`G_f` für
+         :math:`x\leq 0` ein Flächenstück mit dem Inhalt :math:`B`
+         vollständig ein. Berechnen Sie die :math:`x`-Koordinate der
+         drei Schnittpunkte der Geraden :math:`h` mit :math:`G_f` und
+         zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie B.
 
+  #. Im Folgenden wird die Schar der in :math:`\mathbb{R}` definierten
+     Funktion :math:`g_c: x\rightarrow f(x) + c` mit :math:`c\in \mathbb{R}`
+     betrachtet.
+
+    a) Geben Sie in Abhängigkeit von c ohne weitere Rechnung die Koordinaten
+       des Hochpunkts des Graphen von :math:`g_c` sowie das Verhalten von
+       :math:`g_c` für :math:`x\rightarrow + \infty` an.
+
+    b) Die Anzahl der Nullstellen von :math:`g_c` hängt von :math:`c` ab.
+       Geben Sie jeweils einen möglichen Wert von :math:`c` an, sodass gilt:
+
+       :math:`\alpha`) :math:`g_c` hat keine Nullstelle.
+
+       :math:`\beta`) :math:`g_c` hat genau eine Nullstelle.
+
+       :math:`\gamma`) :math:`g_c` hat genau zwei Nullstellen.
+
+    c) Begründen Sie für :math:`c>0` anhand einer geeigneten Skizze, dass
+       :math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
+       gilt.
+
+Aufgabe 1
+^^^^^^^^^
 
 **Lösung zu Teil a**
 
-Um die Punktsymmetrie von :math:`G_f` zu zeigen, müssen wir 
-:math:`f(x)=-f(-x)` beweisen.
+Zum Nachweis der Punktsmmetrie von :math:`G_f`, müssen wir zeigen,
+dass :math:`f(x)=-f(-x)`, bzw. f(x) + f(-x) = 0 gilt.
 
 .. math::
   
-  f(x) &= -f(-x)\\
-  \rightarrow f(x) + f(-x) &\overset{!}{=} 0\\
-  &= 2x \cdot e^{-0,5x^2} + 2(-x) \cdot e^{-0,5(-x)^2}\\
+  f(x) + f(-x) & = 2x \cdot e^{-0,5x^2} + 2(-x) \cdot e^{-0,5(-x)^2}\\
   &= 2x \cdot e^{-0,5x^2} - 2 x \cdot e^{-0,5x^2}\\
   &= (2x - 2x) e^{-0,5x^2}\\
   &= 0
@@ -67,9 +87,9 @@ Nullstellen der Ableitung von :math:`f` finden.
 
 .. math::
 
-  f'(x) = \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
-  = \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0,5x^2}\right)
-  = 2 \cdot e^{-0,5x^2} - 2x\cdot e^{-0,5x^2}\cdot (-x) 
+  f'(x) &= \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
+  = \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0,5x^2}\right)\\
+  &= 2 \cdot e^{-0,5x^2} + 2x\cdot e^{-0,5x^2}\cdot (-x) 
   = 2\cdot e^{-0,5x^2}\left(1-x^2\right)
 
 Mit Sage lässt sich die Ableitung wie folgt berechnen:
@@ -77,7 +97,7 @@ Mit Sage lässt sich die Ableitung wie folgt berechnen:
 .. sagecellserver::
 
   sage: df(x) = derivative(f(x),x)
-  sage: print("Ableitung von f(x): " + str(df(x)))
+  sage: print("Ableitung von f(x): " + str(df(x).simplify()))
 
 .. end of output
 
@@ -91,7 +111,7 @@ gelöst werden. Da die Exponentialfunktion keine Nullstellen hat,
 ergeben sich alle Nullstellen aus :math:`1-x^2=0`. Man erhält die
 Lösungen :math:`x_1=-1` und :math:`x_2=1`.
 
-Mit Sage lassen sich dies Lösungen bestätigen.
+Mit Sage lassen sich diese Lösungen bestätigen.
 
 .. sagecellserver::
 
@@ -101,8 +121,8 @@ Mit Sage lassen sich dies Lösungen bestätigen.
 .. end of output
 
 Für die Art der Extrempunkte muss man die zweite Ableitung von :math:`f`
-an den berechneten :math:`x`-Werten betrachten. Ist der Wert positiv
-so handelt es sich um ein Minimum, ist er negativ um ein Maximum.
+an den berechneten :math:`x`-Werten betrachten. Ist der Wert positiv,
+so handelt es sich um ein Minimum, ist er negativ, handelt es sich um ein Maximum.
 
 .. math::
 
@@ -119,7 +139,7 @@ Einsetzen von :math:`x_1` und :math:`x_2` liefert:
   &= -2 \cdot e^{-0,5} &< 0
 
 Damit ist :math:`x_1` ein Minimum und :math:`x_2` ein Maximum. Dies
-lässt sich durch betracht von Abbildung 2 bestätigen.
+wird in Abbildung 2 bestätigt.
 
 Mit Sage erhält man die zweite Ableitung, sowie die Werte an den Punkten
 :math:`x_1` und :math:`x_2` über:
@@ -127,7 +147,7 @@ Mit Sage erhält man die zweite Ableitung, sowie die Werte an den Punkten
 .. sagecellserver::
 
   sage: ddf(x) = derivative(df(x),x)
-  sage: print("Zweite Ableitung von f(x): " + str(ddf(x)))
+  sage: print("Zweite Ableitung von f(x): " + str(ddf(x).simplify()))
   sage: print("ddf(-1) = " + str(ddf(-1)))
   sage: print("ddf(1) = " + str(ddf(1)))
 
@@ -135,9 +155,9 @@ Mit Sage erhält man die zweite Ableitung, sowie die Werte an den Punkten
 
 **Lösung zu Teil c**
 
-Die lokale Änderungsrate :math:`m_T` an :math:`x=O` ist die Steigung
-an diesem Punkt. In der vorherigen Teilaufgabe haben wir die Ableitung
-bereits berrechnet und man erhält:
+Die lokale Änderungsrate :math:`m_T` an :math:`x=0` ist die Steigung
+an diesem Punkt. In der vorherigen Teilaufgabe wurde die Ableitung
+bereits berrechnet. Daraus erhalten wir:
 
 .. math::
 
@@ -157,7 +177,7 @@ geteilt durch die Intervalllänge.
   m_s=\frac{f(0,5)-f(-0,5)}{0,5 - (-0,5)} = 2\cdot(0,5)\cdot e^{-0,5\cdot(0,5)^2}
   - 2\cdot(-0,5)\cdot e^{-0,5\cdot(-0,5)^2} = 2\cdot e^{-0,125} \approx 1.76
 
-Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0.882 = 88,2%`
+Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0.882 = 88,2\%`
 
 Mit Sage kann leicht eine Funktion erstellt werden, welche für zwei Intervallgrenzen
 die mittlere Steigung berrechnet.
@@ -232,13 +252,13 @@ Mit Sage lässt sich dieser Wert durch einsetzen von :math:`+\infty` berechnen.
 
 .. end of output
 
-Dieses Ergebnis bedeutet das die eingeschlossene Fläche unter dem Graphen von
-:math:`O` bis :math:`+\infty` endlich ist.
+Dieses Ergebnis bedeutet, dass die eingeschlossene Fläche unter dem Graphen von
+:math:`0` bis :math:`+\infty` endlich, nämlich genau gleich 2 ist.
 
 **Lösung zum Teil e**
 
 Der erste Schnittpunkt der Geraden :math:`y=\frac{2}{e^2}\cdot x` mit :math:`G_f`
-ist :math:`x_1=0` da hier beide Graphen den Wert Null haben. Weiter
+ist :math:`x_1=0` da hier beide Graphen den Wert Null haben. Weitere
 Schnittpunkte ergeben sich durch gleichsetzen beider Funktionen.
 
 .. math::
@@ -264,9 +284,12 @@ in ein Koordinatensystem zeichnet.
 
 .. sagecellserver::
 
-  sage: pf = plot(f, (-4,4), color='blue')
+  sage: pf = plot(f, (0,2), color='blue', fill=g, fillcolor='yellow')
+  sage: ppf = plot(f, (-4,0), color='blue')
+  sage: pppf = plot(f, (2,4), color='blue')
   sage: pg = plot(g, (-4,4), color='red')
-  sage: show(pf + pg, aspect_ratio=1)
+  sage: b = text("B",(1,0.7))
+  sage: show(pf + pg + ppf + pppf + b, aspect_ratio=1)
 
 .. end of output
 
@@ -295,3 +318,39 @@ Mit Sage lässt sich dieses Integral leicht berechnen.
 
 .. end of output
 
+Aufgabe 2
+^^^^^^^^^
+
+**Lösung zum Teil a**
+
+Die Funktionenschar :math:`g_c` ist im Vergleich zu :math:`f(x)`
+um eine Konstante :math:`c` verschieben. Der Hochpunkt des Graphens
+bleibt dabei jedoch an der selben :math:`x`-Koordinate. Dieser wurde
+für :math:`f(x)` in Aufgabe 1 b) berrechnet (:math:`x=1` und 
+:math:`f(1) = \frac{2}{\sqrt{e}}`).
+Der :math:`y`-Wert von :math:`g_c` ergibt sich durch einsetzen.
+
+.. math::
+
+  g_c(1) = f(1) + c = \frac{2}{\sqrt{e}} + c
+
+Damit sind die Koordinaten des Hochpunktes :math:`(1,\frac{2}{\sqrt{e}} + c)`
+
+Der Limes von :math:`g_c` für :math:`x\rightarrow + \infty` ist:
+
+.. math::
+
+  \lim\limits_{x\rightarrow +\infty} g_c(x) 
+  = \lim\limits_{x\rightarrow+\infty}\left( f(x) + c\right)
+  = \lim\limits_{x\rightarrow+\infty}\left( f(x)\right)  
+  + \lim\limits_{x\rightarrow+\infty}(c)
+  \overset{\mathrm{1. a}}{=} 0 + c = c
+
+.. Hier wäre in Sage eine betrachtung von gc(Infinity) interresant
+   Dies ist aber wegen des oben genannten Bugs noch nicht möglich
+
+**Lösung von Teil b**
+
+Damit :math:`g_c` keine Nullstellen hat kann :math:`c=10` gewählt werden.
+Für eine Nullstelle muss :math:`c` gleich dem negativen Wertes des Hochpunktes
+von :math:`f(x)` sein. 
