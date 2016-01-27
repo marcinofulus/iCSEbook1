@@ -74,7 +74,6 @@ Dieses Ergebnis lässt sich leich mit Sage überprüfen
 
 .. sagecellserver::
 
-  sage: x = var('x')
   sage: f(x) = 2*x*exp(-0.5* x**2)
   sage: print("f(x) - f(-x) = " + str(f(x) + f(-x)))
 
@@ -328,11 +327,12 @@ um eine Konstante :math:`c` verschoben. Der Hochpunkt des Graphen
 bleibt dabei jedoch an derselben :math:`x`-Koordinate. Dieser wurde
 für :math:`f(x)` in Aufgabe 1 b) berechnet :math:`(x=1` und 
 :math:`f(1) = \frac{2}{\sqrt{e}})`.
-Der :math:`y`-Wert von :math:`g_c` ergibt sich durch einsetzen.
+Der :math:`y`-Wert des Hochpunktes von :math:`g_c` ergibt sich
+entsprechend durch
 
 .. math::
 
-  g_c(1) = f(1) + c = \frac{2}{\sqrt{e}} + c
+  g_c(1) = f(1) + c = \frac{2}{\sqrt{e}} + c.
 
 Damit sind die Koordinaten des Hochpunktes :math:`\left(1,\frac{2}{\sqrt{e}} + c\right)`
 
@@ -362,14 +362,15 @@ Der Limes von :math:`g_c` für :math:`x\rightarrow + \infty` ist:
 
 **Lösung von Teil b**
 
-Damit :math:`g_c` keine Nullstellen hat kann :math:`c=5` gewählt werden.
-Der Graph liegt hierbei immer über :math:`y=0`.
-Für eine Nullstelle muss :math:`c` gleich dem negativen Werte des Hochpunktes
-von :math:`f(x)` sein. Aus Aufgabe 1 b) folgt das :math:`c=-\frac{2}{\sqrt{e}}`
-ist. Eine weitere möglich Lösung ist :math:`c=0`, damit erhalten wir als
-Funktion :math:`f(x)` welche nur im Ursprung eine Nullstelle hat.
-Für zwei Nullstellen muss der Betrag von :math:`c` kleiner als der Hochpunkt,
-sowie ungleich Null sein.
+Damit :math:`g_c` keine Nullstellen hat, muss ein positives/negatives :math:`c` betragsmäßig 
+größer als der Tiefpunkt/Hochpunkt des Graphen gewählt werden, z.B. :math:`c=2`.
+Für eine Nullstelle kann :math:`c` gleich dem negativen Wert des Hochpunktes oder
+gleich dem positiven Wert des Tiefpunkts von :math:`f(x)` gewählt werden. 
+Aus Aufgabe 1 b) folgt dann, dass :math:`c=\pm\frac{2}{\sqrt{e}}` eine Lösung hierfür
+ist. Eine weitere Lösung ist es, :math:`c=0` zu wählen. Damit erhalten wir :math:`f(x)`, 
+welches nur im Ursprung eine Nullstelle hat.
+Für alle anderen Fälle von :math:`c` (betragsmäßig kleiner als Hoch- und Tiefpunkt und
+ungleich Null) hat :math:`g_c` zwei Nullstellen.
 
 .. In Sage ist es nicht so leicht möglich für c\neq0 Nullstellen zu lösen da dies
    nur noch numerisch möglich ist. Wenn keine Nullstelle vorhanden ist, wird von
@@ -377,19 +378,28 @@ sowie ungleich Null sein.
    nur eine gefunden. Eine möglich Lösung wäre eine Schleife welche für kleine Intervalle
    nach Nullstellen sucht und am Ende alle Lösungen ausgibt (z.B. :math:`c=1`).
 
-Ein Plot für :math:`c\in\{0,1,5\}` zeigt graphisch Funktionen mit unterschiedlich vielen
+Ein Plot für :math:`c\in\{0,1,\frac{2}{\sqrt{e}},2\}` zeigt graphisch Funktionen mit unterschiedlich vielen
 Nullstellen.
 
 .. sagecellserver::
 
   sage: pg0 = plot(gc(0,x), (-4,4), color='blue')
   sage: pg1 = plot(gc(1,x), (-4,4), color='red')
-  sage: pg5 = plot(gc(5,x), (-4,4), color='green')
-  sage: show(pg0 + pg1 + pg5, aspect_ratio=1)
+  sage: pgtp = plot(gc(2/sqrt(e),x), (-4,4), color='purple')
+  sage: pg2 = plot(gc(2,x), (-4,4), color='green')
+  sage: show(pg0 + pg1 + pgtp + pg2, aspect_ratio=1)
 
 .. end of output
 
 **Lösung von Teil c**
+
+Die Formel lässt sich leicht mit der Linerität von Integralen herleiten:
+
+.. math::
+
+  \int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3(f(x)+c)\mathrm{d}x=
+  \int\limits_0^3f(x)\mathrm{d}x+\int\limits_0^3c\mathrm{d}x=
+  \int\limits_0^3f(x)\mathrm{d}x+3c
 
 Eine Skizze, welche die Formel
 :math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
