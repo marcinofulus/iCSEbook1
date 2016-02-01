@@ -9,6 +9,7 @@ Analysis
    Aufgabe 3 <gleichungssystem>
    Aufgabe 4 <intgraph>
    Aufgabe 5 <kurvendiskussion>
+   Aufgabe 5b <kurvendiskussion2>
 
 Stochastik
 ..........
