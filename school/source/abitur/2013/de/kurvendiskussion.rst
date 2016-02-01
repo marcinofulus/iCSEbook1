@@ -391,6 +391,36 @@ Nullstellen.
 
 .. end of output
 
+Die Nullstellen für diese Funktionen lassen sich in Sage numerisch berechnen.
+
+.. sagecellserver::
+
+  sage: def my_find_root(f, a, b, n):
+  sage:     # f: Funktion
+  sage:     # a: Startpunkt des Intervalls
+  sage:     # b: Endpunkt des Intervalls
+  sage:     # n: Anzahl der Teilabschnitte, in den Teilabschnitten wird maximal eine Nullstelle gefunden
+
+  sage:     roots = set()
+  sage:     print("Suche nach Nullstellen zwischen " + str(a) + " und " + str(b) + " für die Funktion: " + str(f))
+  sage:     for i in range(n):
+  sage:         print("Suche Nullstelle im Intevall: [" + str(a + (b-a)/n * i) + ", " + str(a + (b-a)/n * (i+1)) + "]")
+  sage:         try:
+  sage:             r = find_root(f, a + (b-a)/n * i, a + (b-a)/n * (i+1))
+  sage:             print("Nullstelle gefunden bei x = " + str(r))
+  sage:             roots.add(r)
+  sage:         except RuntimeError: # Es wurde keine Nullstelle in diesem Intervall gefunden
+  sage:             pass
+  sage:     print( str(f) + " hat Nullstellen bei x = {" + ", ".join(str(nst) for nst in roots) + "}")
+
+
+  sage: my_find_root(gc(0), -5, 5, 10)
+  sage: my_find_root(gc(1), -5, 5, 10)
+  sage: my_find_root(gc(2/sqrt(e)), -5, 5, 10)
+  sage: my_find_root(gc(2), -5, 5, 10)
+
+.. end of output
+
 **Lösung von Teil c**
 
 Die Formel lässt sich leicht mit der Linerität von Integralen herleiten:
