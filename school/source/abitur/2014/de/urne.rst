@@ -4,19 +4,19 @@ Bayerisches Abitur in Mathematik 2015
 .. admonition:: Aufgabe
 
   In Urne A befinden sich zwei rote und drei weiße Kugeln. Urne B enthält drei
-  rote und zwei weiße Kugeln. Betrachtet wird folgendes Zufallsexperiment.
+  rote und zwei weiße Kugeln. Betrachtet wird folgendes Zufallsexperiment:
      
      Aus Urne A wird eine Kugel zufällig entnommen und in Urne B gelegt;
      danach wird aus Urne B eine Kugel zufällig entnommen und in Urne A
      gelegt.
 
-  a) Geben Sie alle Möglichkeiten für den Inhalt der Urne A nach der Durch-
-     führung des Zufallsexperiments an.
+  a) Geben Sie alle Möglichkeiten für den Inhalt der Urne A nach der
+     Durchführung des Zufallsexperiments an.
 
-  b) Betrachtet wird das Ereignis E: „Nach Durchführung des Zufallsexperi-
-     ments befinden sich wieder drei weiße Kugeln in Urne A.“ Untersuchen
-     Sie, ob das Ereignis E eine größere Wahrscheinlichkeit als sein Gegen-
-     ereignis hat.
+  b) Betrachtet wird das Ereignis E: „Nach Durchführung des Zufallsexperiments
+     befinden sich wieder drei weiße Kugeln in Urne A.“ Untersuchen
+     Sie, ob das Ereignis E eine größere Wahrscheinlichkeit als sein
+     Gegenereignis hat.
 
 **Lösung zu Teil a**     
 
@@ -24,34 +24,51 @@ Da es nur zwei verschiedene Farben unter den Kugeln gibt und das Zufallsexperime
 zwei Schritte hat, betrachten wir vier mögliche Abläufe des Experiments, bei denen
 wir die jeweils verschobenen Kugeln und den Endinhalt der Urne A betrachten:
 
-  1. A :math:`\underrightarrow{\mathrm{rot}}` B, A :math:`\underleftarrow{\mathrm{rot}}` B, 
-     :math:`\quad \Rightarrow` A=\{rrwww\}
+  1. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
+     \overset{\color{red}{\bullet}}{\underset{\color{\red}{\bullet}}{\rightleftarrows}}
+     \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
+     \quad\Rightarrow
+     \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ`
 
-  2. A :math:`\underrightarrow{\mathrm{weiß}}` B, A :math:`\underleftarrow{\mathrm{weiß}}` B, 
-     :math:`\quad \Rightarrow` A=\{rrwww\}
+  2. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
+     \overset{\color{red}{\bullet}}{\underset{\circ}{\rightleftarrows}}
+     \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
+     \quad\Rightarrow
+     \mathrm{A}: \color{red}{\bullet} \circ \circ \circ \circ`
 
-  3. A :math:`\underrightarrow{\mathrm{rot}}` B, A :math:`\underleftarrow{\mathrm{weiß}}` B, 
-     :math:`\quad \Rightarrow` A=\{rwwww\}
+  3. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
+     \overset{\circ}{\underset{\color{red}{\bullet}}{\rightleftarrows}}
+     \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
+     \quad\Rightarrow
+     \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ`
 
-  4. A :math:`\underrightarrow{\mathrm{weiß}}` B, A :math:`\underleftarrow{\mathrm{rot}}` B, 
-     :math:`\quad \Rightarrow` A=\{rrrww\}
+  4. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
+     \overset{\circ}{\underset{\circ}{\rightleftarrows}}
+     \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
+     \quad\Rightarrow
+     \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ`
 
-Die ersten beiden Abläufe liefern also das gleiche Ergebnis. Die drei möglichen Endkonfigurationen
-für die Urne A sind somit: A=\{rwwww\}, A=\{rrwww\} und A=\{rrrww\}.
+Der erste und der vierte Ablauf liefern also das gleiche Ergebnis. Die drei möglichen Endkonfigurationen
+für die Urne A sind somit: :math:`\color{red}{\bullet} \circ \circ \circ \circ`,
+:math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ` und
+:math:`\color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ`.
 
 **Lösung zu Teil b**
 
-Um die Wahrscheinlichkeit zu berechnen, dass Urne A am Ende wieder drei weiße Kugeln enthält,
-berechnen wir die Wahrscheinlichkeiten von den ersten beiden Abläufen des Experiments aus
-Teilaufgabe a.
+Um die Wahrscheinlichkeit zu bestimmen, dass Urne A am Ende wieder drei weiße Kugeln enthält,
+berechnen wir die Wahrscheinlichkeiten für den ersten und den vierten
+Ablauf in Teilaufgabe a, die beide am Ende zu drei weißen Kugeln in Urne
+A führen.
 
-  1. Die Wahrscheinlichkeit zunächst eine rote Kugel aus Urne A zu ziehen beträgt :math:`2/5`.
-     Anschließend befinden sich vier rote und zwei weiße Kugeln in Urne B. Die Wahrscheinlichkeit
-     nun wiederum eine rote Kugel zu ziehen beträgt also :math:`2/3`. Die Wahrscheinlichkeit
-     dieses Ablaufs beträgt also :math:`2/5\cdot2/3=4/15`
+  1. Die Wahrscheinlichkeit, zunächst eine rote Kugel aus Urne A zu
+     ziehen, beträgt :math:`\frac{2}{5}`, da zwei der fünf Kugeln rot sind.
+     Anschließend sind 4 der 6 Kugeln in Urne B rot.
+     Die Wahrscheinlichkeit, nun wiederum eine rote Kugel
+     zu ziehen, beträgt also :math:`\frac{4}{6}=\frac{2}{3}`. Die Wahrscheinlichkeit
+     des gesamten Ablaufs beträgt dann :math:`\frac{2}{5}\cdot\frac{2}{3}=\frac{4}{15}`.
 
-  2. Entsprechend beträgt die Wahrscheinlichkeit beide Male eine weiße Kugel zu ziehen den Wert
-     :math:`3/5\cdot1/2=3/10`
+  2. Entsprechend beträgt die Wahrscheinlichkeit, beide Male eine weiße
+     Kugel zu ziehen, :math:`\frac{3}{5}\cdot\frac{1}{2}=\frac{3}{10}`.
 
 Die Gesamtwahrscheinlichkeit für das Ereignis E errechnet sich aus der Summe der Wahrscheinlichkeiten
 der beiden Abläufe:
@@ -64,59 +81,66 @@ Die Wahrscheinlichkeit des Gegenereignisses
 
 .. math::
 
-  p(\bar{\mathrm{E}})=1-p(\mathrm{E})=13/30
+  p(\bar{\mathrm{E}})=1-p(\mathrm{E})=\frac{13}{30}
 
 ist demzufolge kleiner als die
 Wahrscheinlichkeit des Ereignisses E.
 
-Mit Sage haben wir zwei Möglichkeiten die Wahrscheinlichkeit für das Ereignis E zu bestimmen. Die erste
-Möglichkeit ist es, jeden Möglichen Zug von zwei (unterscheidbaren) Kugeln durchzugehen. Um die
+Mit Sage haben wir zwei Möglichkeiten, die Wahrscheinlichkeit für das Ereignis E zu bestimmen. Die erste
+Möglichkeit besteht darin, jeden möglichen Zug von zwei (unterscheidbaren) Kugeln durchzugehen. Um die
 Wahrscheinlichkeit für das Ereignis E zu berechnen, gehen wir davon aus, dass jede Kugel mit gleicher
-gleicher Wahrscheinlichkeit gezogen werden kann. Mit dieser Lösung können wir auch alle Möglichkeiten
+Wahrscheinlichkeit gezogen werden kann. Mit dieser Lösung können wir auch alle Möglichkeiten
 für den Inhalt der Urne A (Teilaufgabe a) überprüfen.	
 
 .. sagecellserver::
 
-    sage: whitecountlist = [0] * 6
-    sage: totalcount = 0
-    sage: A_original = ['w','w','w','r','r']
-    sage: A = A_original[::]
-    sage: B = ['w','w','r','r','r']
-    sage: for a_ball in A_original:
-    ...       A = A_original[::]
-    ...       A.remove(a_ball)
-    ...       B.append(a_ball)
-    ...       for b_ball in B:
-    ...           A.append(b_ball)
-    ...           print "A: ", A
-    ...           whitecountlist[A.count('w')] += 1
-    ...           totalcount += 1
-    ...           del A[-1]
-    ...       B.remove(a_ball)
-    sage: print " p(E) = ", whitecountlist[3]/totalcount, " and p(!E) = ", 1-whitecountlist[3]/totalcount
+    sage: haeufigkeit_e = 0
+    sage: gesamtzahl = 0
+    sage: A0 = ['w', 'w', 'w', 'r', 'r']
+    sage: B0 = ['w', 'w', 'r', 'r', 'r']
+    sage: for a_kugel in A0:
+    ...       A1 = A0[::]
+    ...       B1 = B0[::]
+    ...       A1.remove(a_kugel)
+    ...       B1.append(a_kugel)
+    ...       for b_kugel in B1:
+    ...           print 'A->B:', a_kugel,
+    ...           A2 = A1[::]
+    ...           A2.append(b_kugel)
+    ...           print '  B->A:', b_kugel,
+    ...           gesamtzahl = gesamtzahl+1
+    ...           if A2.count('w') == 3:
+    ...               haeufigkeit_e = haeufigkeit_e+1
+    ...               print "   A: ", A2, "<==="
+    ...           else:
+    ...               print "   A: ", A2
+    sage: print "p(E) = %s/%s" % (haeufigkeit_e, gesamtzahl)
 
-Eine etwas leichtere Lösung ist es, die Wahrscheinlichkeit für das Ereignis E empirisch zu bestimmen. 
-Hierfür simulieren wir das zufällige Ziehen aus den Urnen und zählen, wie oft das Ereignis E bei einer
-bestimmten Anzahl an Durchführungen eintritt.
+Eine etwas leichtere Lösung besteht darin, die Wahrscheinlichkeit für
+das Ereignis E durch eine Simulation zu bestimmen. Hierfür verschieben
+wir eine zufällige Kugeln von Urne A nach Urne B sowie eine weitere
+zufällige Kugel in umgekehrter Richtung und zählen dabei, wie oft das
+Ereignis E bei einer bestimmten Anzahl an Durchführungen eintritt.
 
 
 .. sagecellserver::
 
     sage: import random
-    sage: successcount = 0
-    sage: testiterations = 100000
-    sage: for i in range(testiterations):
-    ...       A = ['w','w','w','r','r']
-    ...       B = ['w','w','r','r','r']
-    ...       ball = random.choice(A)
-    ...       A.remove(ball)
-    ...       B.append(ball)
-    ...       ball = random.choice(B)
-    ...       B.remove(ball)
-    ...       A.append(ball)
-    ...       if(A.count('w') == 3):
-    ...           successcount += 1
-    sage: print "empiric probability p(E) = ", float(successcount/testiterations), "p(!E) = ", float(1-successcount/testiterations)
+    sage: def verschiebe_kugel(urne1, urne2):
+    ...       kugel = random.choice(urne1)
+    ...       urne1.remove(kugel)
+    ...       urne2.append(kugel)
+    ...       return urne1, urne2
+    sage: haeufigkeit_e = 0
+    sage: iterationen = 100000
+    sage: for _ in range(iterationen):
+    ...       A = ['w', 'w', 'w', 'r', 'r']
+    ...       B = ['w', 'w', 'r', 'r', 'r']
+    ...       verschiebe_kugel(A, B)
+    ...       verschiebe_kugel(B, A)
+    ...       if A.count('w') == 3 :
+    ...           haeufigkeit_e = haeufigkeit_e+1
+    sage: print "Näherung für die Wahrscheinlichkeit p(E) = ", float(haeufigkeit_e/iterationen)
 
 
 
