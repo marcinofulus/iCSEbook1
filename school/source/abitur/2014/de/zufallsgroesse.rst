@@ -27,7 +27,7 @@ in unserem Fall also
 
 .. math::
 
-  E(X) = 0\cdot p_1+1\cdot \frac{3}{10}+2\cdot \frac{1}{5}+3\cdot p_2 = \frac{1}{2} + 3\cdot p_2.
+  E(X) = 0\cdot p_1+1\cdot \frac{3}{10}+2\cdot \frac{1}{5}+3\cdot p_2 = \frac{7}{10} + 3\cdot p_2.
 
 Die Werte für :math:`p_1` und :math:`p_2` können dabei aber nicht beliebig gewählt werden. Die
 Summe aller Wahrscheinlichkeiten muss dabei genau 1 ergeben und die einzelnen Wahrscheinlichkeiten
@@ -60,8 +60,16 @@ graphisch darstellen. Der maximale Wert ist dabei mit einem roten Punkt gekennze
 
 .. sagecellserver::
 
-  sage: E(p2) = 1 * 3/10 + 2 * 1/5 + 3*p2
-  sage: p1 = plot(E(p2), (0, 0.5))
-  sage: max = find_local_maximum(E, 0, 0.5)
-  sage: p2 = point((max[1], max[0]), size=30, color='red')
-  sage: plot(p1 + p2, ymin = 0, figsize=[7,3])
+     sage: @interact
+     sage: def _(p1=slider(0., 1., 0.1),
+     ...         p2=slider(0., 1., 0.1),
+     ...         p3=slider(0., 1., 0.01), eps=3e-16):
+     sage:     p0 = 1-p1-p2-p3
+     sage:     if p0 >= -eps:
+     ...           print 'p_0 =', p0
+     ...           print 'E =', p1+2*p2+3*p3
+     ...       else:
+     ...           print 'p_0 =', p0, '  Negative Werte sind nicht erlaubt'
+
+..  end of output
+
