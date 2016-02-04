@@ -1,4 +1,4 @@
-Bayerisches Abitur in Mathematik 2015
+Bayerisches Abitur in Mathematik 2014
 -------------------------------------
 
 .. admonition:: Aufgabe
@@ -46,7 +46,7 @@ Die Gesamtwahrscheinlichkeit von :math:`\bar{D}` ergibt sich dann zu
 **Lösung zu Teil b**
 
 Die Ereignisse :math:`C` und :math:`D` sind dann abhängig von einander, wenn der Ausgang des Ereignisses
-:math:`C` die Wahrscheinlichket für das Ereignis :math:`D` beeinflusst. Es muss also gelten
+:math:`C` die Wahrscheinlichkeit für das Ereignis :math:`D` beeinflusst. Es muss also gelten
 
 .. math::
 
