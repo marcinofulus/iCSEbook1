@@ -3,21 +3,23 @@ Bayerisches Abitur in Mathematik 2014
 
 .. admonition:: Aufgabe
 
-  Die Zufallsgröße :math:`X` kann die Werte 0, 1, 2 und 3 annehmen. Die Tabelle
+  Die Zufallsgröße :math:`X` kann die Werte :math:`0, 1, 2` und
+  :math:`3` annehmen. Die Tabelle
   zeigt die Wahrscheinlichkeitsverteilung von :math:`X` mit :math:`p_1,p_2\in[0;1]`.
   
-  ==============  ===========  ====================  ===================  ==========
-  :math:`k`       0            1                     2                    3
-  ==============  ===========  ====================  ===================  ==========
-  :math:`P(X=k)`  :math:`p_1`  :math:`\frac{3}{10}`  :math:`\frac{1}{5}`  :math:`p_2`
-  ==============  ===========  ====================  ===================  ==========
-
-  Zeigen Sie, dass der Erwartungswert von :math:`X` nicht größer als 2,2 sein kann.
+  ================================  =============  =============================  ======================================  =====================================  =================================
+  :math:`k`                         :math:`\vert`  :math:`0`                      :math:`1`                               :math:`2`                              :math:`3`
+  ================================  =============  =============================  ======================================  =====================================  =================================
+  :math:`P(X=k)\vphantom{1\over2}`  :math:`\vert`  :math:`p_1\vphantom{1\over2}`  :math:`\frac{3}{10}\vphantom{1\over2}`  :math:`\frac{1}{5}\vphantom{1\over2}`  :math:`p_2\vphantom{1\over2}`
+  ================================  =============  =============================  ======================================  =====================================  =================================
+  
+  Zeigen Sie, dass der Erwartungswert von :math:`X` nicht größer als
+  :math:`2,2` sein kann.
 
 **Lösung**     
 
 Der Erwartungswert einer Zufallsgröße :math:`X` ist gegeben durch die Summe ihrer
-möglichen Werte, mutlipliziert mit deren Wahrscheinlichkeiten:
+möglichen Werte, multipliziert mit deren Wahrscheinlichkeiten:
 
 .. math::
 
@@ -55,7 +57,7 @@ Der maximale Erwartungswert befindet sich somit beim maximalen Wert von :math:`p
 
   E\left(\frac{1}{2}\right)=2{,}2
 
-Mit Sage wollen wir zur Kontrolle den Erwartungswert in Abhängig von der Wahrscheinlichkeit :math:`p_2`
+Mit Sage wollen wir zur Kontrolle den Erwartungswert in Abhängigkeit von der Wahrscheinlichkeit :math:`p_2`
 graphisch darstellen. Der maximale Wert ist dabei mit einem roten Punkt gekennzeichnet.
 
 .. sagecellserver::
