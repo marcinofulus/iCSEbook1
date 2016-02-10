@@ -3,7 +3,7 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  #.  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion 
+  #.  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion
       :math:`f:x\rightarrow 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
       den Graphen :math:`G_f` von :math:`f`.
 
@@ -54,6 +54,33 @@ Bayerisches Abitur in Mathematik 2013
     c) Begründen Sie für :math:`c>0` anhand einer geeigneten Skizze, dass
        :math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
        gilt.
+
+  #.  Die Anzahl der Kinder, die eine Frau im Laufe ihres Lebens
+      durchschnittlich zur Welt bringt, wird durch eine sogenannte
+      Geburtenziffer angegeben, die jedes Jahr statistisch
+      ermittelt wird
+
+      Die Funktion :math:`g_{1,4}: x \rightarrow 2x \cdot e^{-0,5x^2} + 1,4`
+      beschreibt für :math:`x\geq0` modellhaft die zeitlich Entwicklung der
+      Geburtenziffer in einem europäischen Land. Dabei ist :math:`x` die seit
+      dem Jahre 1955 vergangene Zeit in Jahrzehnten (d. h. :math:`x=1`
+      entspricht dem Jahr 1965) und :math:`g_{1,4}(x)` die Geburtenziffer.
+      Damit die Bevölkerungszahl in diesem Land langfristig näherungsweise
+      konstant bleibt, ist dort eine Geburtenziffer von etwa :math:`2,1`
+      erforderlich.
+
+      a) Zeichnen Sie den Graphen von :math:`g_{1,4}` in Abbildung 2 ein
+         und ermitteln Sie graphisch mit angemessener Genauigkeit, in welchem
+         Zeitraum die Geburtenziffer mindestens :math:`2,1` beträgt.
+
+      b) Welche künftige Entwicklung der Bevölkerungszahl ist auf der Grundlage
+         des Modells zu erwarten? Begründen Sie ihr Antwort.
+
+      c) Im betrachteten Zeitraum gibt es ein Jahr, in dem die Geburtenziffer
+         am stärksten abnimmt. Geben sie mithilfe von Abbildung 2 einen
+         Näherungswert für dieses Jahr an. Beschreiben Sie, wie man auf
+         Grundlage des Modells rechnerisch nachweisen könnte, dass die Abnahme
+         der Geburtenziffer von diesem Jahr an kontinuierlich schwächer wird.
 
 Aufgabe 1
 ^^^^^^^^^
@@ -450,3 +477,84 @@ Fläche :math:`3c`. Die gelbe Fläche ist gleich dem Integral über :math:`f(x)`
   sage: show(pgl + pg + pgr + gtext+ pc + ftext + ctext + c3text, aspect_ratio=1, xmax=4)
 
 .. end of output
+
+Aufgabe 3
+^^^^^^^^^
+
+**Lösung zu Teil a**
+
+Um den Startpunkt und Endpunkt des Intervalls zu finden in welchem
+:math:`g_{1,4}(x) > 2,1` ist, muss folgende Gleichung gelöst werden:
+
+.. math:
+
+  g_{1,4}(x) - 2,1 = 0
+
+Aus den vorherigen Aufgaben wissen wir, dass der Hochpunkt von :math:`g_c(x)`
+bei :math:`x = 1` liegt. Daraus folgt, dass der Startpunkt des Intervalls einen
+kleineren :math:`x`-Wert hat. Der Endpunkt muss hingegen einen größeren
+:math:`x`-Wert haben. Die Punkte werden durch numerisches lösen der Gleichung
+mit Hilfe von Sage berechnet.
+
+.. sagecellserver::
+
+  sage: startx = find_root(gc(1.4)-2.1, -1, 1)
+  sage: endx = find_root(gc(1.4)-2.1, 1, 3)
+  sage: print("gc(1.4,x) ist im Intervall [" + str(startx) + ", " + str(endx) + "] größer als 2,1")
+  sage: pg14l = plot(gc(1.4,x), (-4, startx), color='red')
+  sage: pg14 = plot(gc(1.4,x), (startx, endx), fill=2.1, fillcolor='yellow', color='red')
+  sage: pg14r = plot(gc(1.4,x), (endx, 4), color='red')
+  sage: show(pg0 + pg14l + pg14 + pg14r, aspect_ratio=1)
+
+.. end of output
+
+**Lösung zu Teil b**
+
+In Aufgabe 2 c) wurde gezeigt, dass
+
+.. math:: 
+  \lim\limits_{x\rightarrow \infty} g_c(x) = c
+
+gilt. Für das gegebene Modell der Bevölkerungsentwicklung mit :math:`c=1,4`
+folgt daraus, dass sich die Geburtenrate hin zu :math:`1,4` entwickelt. Mit
+dieser Geburtenrate sinkt die Bevölkerungszahl.
+
+**Lösung zu Teil c**
+
+Abweichend von der Aufgabenstellung wird hier berechnet zu welchem Zeitpunk
+die Geburtenzahl am stärksten abnimmt.
+
+Der Punkt mit der stärksten Abnahme ist das Minimum der Ableitung. Da
+:math:`g_{c}(x)` nur um eine Konstante von :math:`f(x)` verschoben ist, sind
+die Ableitungen gleich. Für :math:`f(x)` wurden die ersten zwei Ableitung in
+Aufgabe 1 b) berechnet. Um das Minimum zu finden muss die Nullstelle von
+:math:`f''(x)` gefunden werden.
+
+.. math::
+
+  &f''(x) = 2x \cdot e^{-0,5x^2}\left(x^2 - 3\right)\overset{!}{=}0\\
+  &\rightarrow x_1 = 0\\
+  &\left(x^2  - 3\right) \overset{!}{=}0\\
+  &\rightarrow x_{2/3} = \pm \sqrt{3}
+
+Dieses Ergebnis erhält man auch durch Sage.
+
+.. sagecellserver::
+
+  sage: solve(ddf(x) == 0,x)
+
+.. end of output
+
+Da das Modell nur für :math:`x\geq 0` gültig ist fällt die Nullstelle
+:math:`x_3=-\sqrt{3}` als mögliche Lösung weg. :math:`x_1=0` kann kein
+Minimum der Ableitung sein, da hier der Graph eine positive Steigung hat:
+:math:`g'(0) = f'(0) \overset{1 c.}{=} 2`. Folglich ist :math:`x_2=\sqrt{3}`
+das gesuchte Minimum der Ableitung. Dies Entspricht dem Jahr 1972.
+
+Damit die Abnahme der Geburtenrate ab diesem Zeitpunkt kontinuierlich schwächer
+wird, müssen folgende Punkte erfüllt sein:
+
+* Die Ableitung :math:`g'(x)` muss für alle :math:`x>\sqrt{3}` negativ sein.
+* Die zweite Ableitung :math:`g''(x)` darf für :math:`x>\sqrt{3}` keine
+  Nullstelle haben.
+
