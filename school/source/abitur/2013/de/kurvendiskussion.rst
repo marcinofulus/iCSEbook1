@@ -34,26 +34,26 @@ Bayerisches Abitur in Mathematik 2013
          drei Schnittpunkte der Geraden :math:`h` mit :math:`G_f` und
          zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie B.
 
-  #. Im Folgenden wird die Schar der in :math:`\mathbb{R}` definierten
-     Funktion :math:`g_c: x\rightarrow f(x) + c` mit :math:`c\in \mathbb{R}`
-     betrachtet.
+  #.  Im Folgenden wird die Schar der in :math:`\mathbb{R}` definierten
+      Funktion :math:`g_c: x\rightarrow f(x) + c` mit :math:`c\in \mathbb{R}`
+      betrachtet.
 
-    a) Geben Sie in Abhängigkeit von c ohne weitere Rechnung die Koordinaten
-       des Hochpunkts des Graphen von :math:`g_c` sowie das Verhalten von
-       :math:`g_c` für :math:`x\rightarrow + \infty` an.
+      a) Geben Sie in Abhängigkeit von c ohne weitere Rechnung die Koordinaten
+         des Hochpunkts des Graphen von :math:`g_c` sowie das Verhalten von
+         :math:`g_c` für :math:`x\rightarrow + \infty` an.
 
-    b) Die Anzahl der Nullstellen von :math:`g_c` hängt von :math:`c` ab.
-       Geben Sie jeweils einen möglichen Wert von :math:`c` an, sodass gilt:
+      b) Die Anzahl der Nullstellen von :math:`g_c` hängt von :math:`c` ab.
+         Geben Sie jeweils einen möglichen Wert von :math:`c` an, sodass gilt:
 
-       :math:`\alpha`) :math:`g_c` hat keine Nullstelle.
+         :math:`\alpha`) :math:`g_c` hat keine Nullstelle.
 
-       :math:`\beta`) :math:`g_c` hat genau eine Nullstelle.
+         :math:`\beta`) :math:`g_c` hat genau eine Nullstelle.
 
-       :math:`\gamma`) :math:`g_c` hat genau zwei Nullstellen.
+         :math:`\gamma`) :math:`g_c` hat genau zwei Nullstellen.
 
-    c) Begründen Sie für :math:`c>0` anhand einer geeigneten Skizze, dass
-       :math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
-       gilt.
+      c) Begründen Sie für :math:`c>0` anhand einer geeigneten Skizze, dass
+         :math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
+         gilt.
 
   #.  Die Anzahl der Kinder, die eine Frau im Laufe ihres Lebens
       durchschnittlich zur Welt bringt, wird durch eine sogenannte
@@ -81,6 +81,7 @@ Bayerisches Abitur in Mathematik 2013
          Näherungswert für dieses Jahr an. Beschreiben Sie, wie man auf
          Grundlage des Modells rechnerisch nachweisen könnte, dass die Abnahme
          der Geburtenziffer von diesem Jahr an kontinuierlich schwächer wird.
+
 
 Aufgabe 1
 ^^^^^^^^^
