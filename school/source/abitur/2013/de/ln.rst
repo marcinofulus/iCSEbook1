@@ -13,7 +13,7 @@ Bayerisches Abitur in Mathematik 2013
 Der Definitionsberreich für den natürlichen Logarithmus :math:`\ln(x)` ist
 :math:`]0,\infty]`. Für :math:`\ln(-x)` ergibt sich damit ein Defintionsbereich
 von :math:`[-\infty,0[`. Addiert man nun innerhalb des Logarithmus eine Zahl,
-muss dies auch bei dem Defintionsberreich geschehen. Damit ergibt sich für
+muss dies auch bei dem Defintionsberreich geschehen. Es ergibt sich für
 :math:`f(x)=\ln(2013-x)` der Defintionsberreich
 :math:`\mathrm{D}=[-\infty, 2013[`.
 
