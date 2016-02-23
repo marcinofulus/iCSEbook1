@@ -31,3 +31,4 @@ Geometrie
    :maxdepth: 1
 
    Aufgabe 1 <prisma>
+   Aufgabe 2 <ebene>
