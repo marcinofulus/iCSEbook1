@@ -4,7 +4,7 @@ Bayerisches Abitur in Mathematik 2013
 .. admonition:: Aufgabe
 
   #.  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion
-      :math:`f:x\rightarrow 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
+      :math:`f:x\rightarrow 2x\cdot e^{-0{,}5x^2}`. Abbildung 2 zeigt
       den Graphen :math:`G_f` von :math:`f`.
 
     
@@ -18,13 +18,13 @@ Bayerisches Abitur in Mathematik 2013
       b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von
          :math:`G_f`
       c) Berechnen Sie die mittlere Änderungsrate :math:`m_S` von :math:`f`
-         im Intervall :math:`[-0,5;0,5]` sowie die lokale Änderungsrate
+         im Intervall :math:`[-0{,}5;0{,}5]` sowie die lokale Änderungsrate
          :math:`m_T` von :math:`f` an der Stelle :math:`x=0`. Berechnen
          Sie, um wie viele Prozent :math:`m_S` von :math:`m_T` abweicht.
       d) Der Graph von :math:`f`, die :math:`x`-Achse und die Gerade
          :math:`x=u` mit :math:`u \in \mathbb{R}^+` schließen für
          :math:`0\leq x \leq u` ein Flächenstück mit dem Inhalt
-         :math:`A(u)` ein. Zeigen Sie, dass :math:`A(u)=2-2e^{-0,5u^2}`
+         :math:`A(u)` ein. Zeigen Sie, dass :math:`A(u)=2-2e^{-0{,}5u^2}`
          gilt. Geben Sie :math:`\lim\limits_{u\rightarrow + \infty} A(u)` an
          und deuten Sie das Ergebnis geometrisch.
       e) Die Ursprungsgerade :math:`h` mit der Gleichung
@@ -60,21 +60,21 @@ Bayerisches Abitur in Mathematik 2013
       Geburtenziffer angegeben, die jedes Jahr statistisch
       ermittelt wird
 
-      Die Funktion :math:`g_{1,4}: x \rightarrow 2x \cdot e^{-0,5x^2} + 1,4`
+      Die Funktion :math:`g_{1{,}4}: x \rightarrow 2x \cdot e^{-0{,}5x^2} + 1{,}4`
       beschreibt für :math:`x\geq0` modellhaft die zeitlich Entwicklung der
       Geburtenziffer in einem europäischen Land. Dabei ist :math:`x` die seit
       dem Jahre 1955 vergangene Zeit in Jahrzehnten (d. h. :math:`x=1`
-      entspricht dem Jahr 1965) und :math:`g_{1,4}(x)` die Geburtenziffer.
+      entspricht dem Jahr 1965) und :math:`g_{1{,}4}(x)` die Geburtenziffer.
       Damit die Bevölkerungszahl in diesem Land langfristig näherungsweise
-      konstant bleibt, ist dort eine Geburtenziffer von etwa :math:`2,1`
+      konstant bleibt, ist dort eine Geburtenziffer von etwa :math:`2{,}1`
       erforderlich.
 
-      a) Zeichnen Sie den Graphen von :math:`g_{1,4}` in Abbildung 2 ein
+      a) Zeichnen Sie den Graphen von :math:`g_{1{,}4}` in Abbildung 2 ein
          und ermitteln Sie graphisch mit angemessener Genauigkeit, in welchem
-         Zeitraum die Geburtenziffer mindestens :math:`2,1` beträgt.
+         Zeitraum die Geburtenziffer mindestens :math:`2{,}1` beträgt.
 
       b) Welche künftige Entwicklung der Bevölkerungszahl ist auf der Grundlage
-         des Modells zu erwarten? Begründen Sie ihr Antwort.
+         des Modells zu erwarten? Begründen Sie ihre Antwort.
 
       c) Im betrachteten Zeitraum gibt es ein Jahr, in dem die Geburtenziffer
          am stärksten abnimmt. Geben sie mithilfe von Abbildung 2 einen
@@ -93,9 +93,9 @@ dass :math:`f(x)=-f(-x)`, bzw. f(x) + f(-x) = 0 gilt.
 
 .. math::
   
-  f(x) + f(-x) & = 2x \cdot e^{-0,5x^2} + 2(-x) \cdot e^{-0,5(-x)^2}\\
-  &= 2x \cdot e^{-0,5x^2} - 2 x \cdot e^{-0,5x^2}\\
-  &= (2x - 2x) e^{-0,5x^2}\\
+  f(x) + f(-x) & = 2x \cdot e^{-0{,}5x^2} + 2(-x) \cdot e^{-0{,}5(-x)^2}\\
+  &= 2x \cdot e^{-0,5x^2} - 2 x \cdot e^{-0{,}5x^2}\\
+  &= (2x - 2x) e^{-0{,}5x^2}\\
   &= 0
 
 Dieses Ergebnis lässt sich leich mit Sage überprüfen
@@ -115,9 +115,9 @@ Nullstellen der Ableitung von :math:`f` finden.
 .. math::
 
   f'(x) &= \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
-  = \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0,5x^2}\right)\\
-  &= 2 \cdot e^{-0,5x^2} + 2x\cdot e^{-0,5x^2}\cdot (-x) 
-  = 2\cdot e^{-0,5x^2}\left(1-x^2\right)
+  = \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0{,}5x^2}\right)\\
+  &= 2 \cdot e^{-0{,}5x^2} + 2x\cdot e^{-0{,}5x^2}\cdot (-x) 
+  = 2\cdot e^{-0{,}5x^2}\left(1-x^2\right)
 
 Mit Sage lässt sich die Ableitung wie folgt berechnen:
 
@@ -132,7 +132,7 @@ Um die Extrempunkte zu bekommen muss die Gleichung
 
 .. math::
 
-  2\cdot e^{-0,5x^2}(1-x^2)=0
+  2\cdot e^{-0{,}5x^2}(1-x^2)=0
 
 gelöst werden. Da die Exponentialfunktion keine Nullstellen hat,
 ergeben sich alle Nullstellen aus :math:`1-x^2=0`. Man erhält die
@@ -154,16 +154,16 @@ so handelt es sich um ein Minimum, ist er negativ, handelt es sich um ein Maximu
 .. math::
 
   f''(x) = \frac{d^2}{dx^2}f(x) = \frac{d^2}{dx^2}\left(2\cdot 
-  e^{-0,5x^2}\left(1-x^2\right)\right)
-  = - 2x\cdot e^{-0,5x^2}\left(3-x^2\right)
+  e^{-0{,}5x^2}\left(1-x^2\right)\right)
+  = - 2x\cdot e^{-0{,}5x^2}\left(3-x^2\right)
 
 Einsetzen von :math:`x_1` und :math:`x_2` liefert:
 
 .. math::
-  f''(x_1) &= f''(-1) &= -2 \cdot (-1)\cdot e^{-0,5\cdot(-1)^2}\left(3-(-1)^2\right)
-  &= 2 \cdot e^{-0,5} &> 0\\
-  f''(x_2) &= f''(1) &= -2 \cdot 1\cdot e^{-0,5 \cdot 1^2}\left(3-1^2\right)
-  &= -2 \cdot e^{-0,5} &< 0
+  f''(x_1) &= f''(-1) &= -2 \cdot (-1)\cdot e^{-0{,}5\cdot(-1)^2}\left(3-(-1)^2\right)
+  &= 2 \cdot e^{-0{,}5} &> 0\\
+  f''(x_2) &= f''(1) &= -2 \cdot 1\cdot e^{-0{,}5 \cdot 1^2}\left(3-1^2\right)
+  &= -2 \cdot e^{-0{,}5} &< 0
 
 Damit ist :math:`x_1` ein Minimum und :math:`x_2` ein Maximum. Dies
 wird in Abbildung 2 bestätigt.
@@ -188,7 +188,7 @@ bereits berechnet. Daraus erhalten wir:
 
 .. math::
 
-  f'(0) = 2 \cdot e^{-0,5\cdot0}(1-0) = 2
+  f'(0) = 2 \cdot e^{-0{,}5\cdot0}(1-0) = 2
 
 .. sagecellserver::
 
@@ -196,15 +196,15 @@ bereits berechnet. Daraus erhalten wir:
 
 .. end of output
 
-Die mittlere Änderungsrate :math:`m_s` im Intervall :math:`[-0,5;0,5]`
+Die mittlere Änderungsrate :math:`m_s` im Intervall :math:`[-0{,}5;0{,}5]`
 ergibt sich aus der Differenz der Funktionswerte an den Intervallgrenzen
 geteilt durch die Intervalllänge.
 
 .. math::
-  m_s=\frac{f(0,5)-f(-0,5)}{0,5 - (-0,5)} = 2\cdot(0,5)\cdot e^{-0,5\cdot(0,5)^2}
-  - 2\cdot(-0,5)\cdot e^{-0,5\cdot(-0,5)^2} = 2\cdot e^{-0,125} \approx 1.76
+  m_s=\frac{f(0{,}5)-f(-0{,}5)}{0{,}5 - (-0{,}5)} = 2\cdot(0{,}5)\cdot e^{-0{,}5\cdot(0{,}5)^2}
+  - 2\cdot(-0{,}5)\cdot e^{-0{,}5\cdot(-0{,}5)^2} = 2\cdot e^{-0{,}125} \approx 1{,}76
 
-Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0.882 = 88,2\%`
+Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0{,}882 = 88{,}2\%`
 
 Mit Sage kann leicht eine Funktion erstellt werden, welche für zwei Intervallgrenzen
 die mittlere Steigung berechnet.
@@ -232,18 +232,18 @@ Für :math:`u=0` muss die Fläche Null sein.
 
 .. math::
 
-  A(0) = 2 - 2e^{-0,5\cdot 0^2} = 2 - 2 = 0
+  A(0) = 2 - 2e^{-0{,}5\cdot 0^2} = 2 - 2 = 0
 
 Leitet man :math:`A(u)` nach :math:`u` ab, erhält man:
 
 .. math::
 
   \frac{\mathrm{d}}{\mathrm{d}u} A(u) 
-  = \frac{\mathrm{d}}{\mathrm{d}u}\left(2-2e^{-0,5u^2}\right) 
-  = 2u\cdot e^{-0,5 u^2} = f(u)
+  = \frac{\mathrm{d}}{\mathrm{d}u}\left(2-2e^{-0{,}5u^2}\right) 
+  = 2u\cdot e^{-0{,}5 u^2} = f(u)
 
 Diese beiden Eigenschaften zeigen, dass :math:`A(u)` das bestimmte
-Integral von :math:`f(x)` mit Intervall :math:`[0,u]` ist.
+Integral von :math:`f(x)` mit Intervall :math:`[0;u]` ist.
 
 Mit Sage lässt sich die Integration direkt ausführen.
 
@@ -290,10 +290,10 @@ Schnittpunkte ergeben sich durch gleichsetzen beider Funktionen.
 
 .. math::
 
-  \frac{2}{e^2}\cdot x &= 2x \cdot e^{-0,5x^2} &\left| \cdot \frac{e^2}{2x}\right. \\
-  1 &= e^{-0,5x^2 + 2} &\left| \ln()\right. \\
-  0 &= -0,5x^2 + 2 \qquad&\left| -2\right.\\
-  -2 &= -0,5x^2 &\left| \cdot (-2)\right. \\
+  \frac{2}{e^2}\cdot x &= 2x \cdot e^{-0{,}5x^2} &\left| \cdot \frac{e^2}{2x}\right. \\
+  1 &= e^{-0{,}5x^2 + 2} &\left| \ln()\right. \\
+  0 &= -0{,}5x^2 + 2 \qquad&\left| -2\right.\\
+  -2 &= -0{,}5x^2 &\left| \cdot (-2)\right. \\
   4 &= x^2 &\left| \sqrt{\ } \right. \\
   x_{2/ 3} &= \pm 2
 
@@ -331,7 +331,7 @@ die Ergebnisse aus Teilaufgabe **d** verwenden.
   B =& \int\limits_0^2\left( f(x) - \frac{2}{e^2}\cdot x\right)
   = \int\limits_0^2 2x\cdot e ^{-0.5x^2} 
   - \int\limits_0^2\frac{2}{e^2}\cdot x\\
-  =& 2 - 2e^{-0,5\cdot 2^2} - \left[ \frac{1}{e^2}\cdot x^2 \right]_{0}^{2}
+  =& 2 - 2e^{-0{,}5\cdot 2^2} - \left[ \frac{1}{e^2}\cdot x^2 \right]_{0}^{2}
   = 2 - 2e^{-2} - \frac{1}{e^2}\left(4-0\right)
   = 2 - 6 e^{-2} \approx 1.88
 
@@ -362,7 +362,7 @@ entsprechend durch
 
   g_c(1) = f(1) + c = \frac{2}{\sqrt{e}} + c.
 
-Damit sind die Koordinaten des Hochpunktes :math:`\left(1,\frac{2}{\sqrt{e}} + c\right)`
+Damit sind die Koordinaten des Hochpunktes :math:`\left(1;\frac{2}{\sqrt{e}} + c\right)`
 
 In Sage lässt sich der Hochpunkt für ein festes :math:`c` numerisch berechnen.
 
@@ -406,7 +406,7 @@ ungleich Null) hat :math:`g_c` zwei Nullstellen.
    nur eine gefunden. Eine möglich Lösung wäre eine Schleife welche für kleine Intervalle
    nach Nullstellen sucht und am Ende alle Lösungen ausgibt (z.B. :math:`c=1`).
 
-Ein Plot für :math:`c\in\{0,1,\frac{2}{\sqrt{e}},2\}` zeigt graphisch Funktionen mit unterschiedlich vielen
+Ein Plot für :math:`c\in\{0;1;\frac{2}{\sqrt{e}};2\}` zeigt graphisch Funktionen mit unterschiedlich vielen
 Nullstellen.
 
 .. sagecellserver::
@@ -485,11 +485,11 @@ Aufgabe 3
 **Lösung zu Teil a**
 
 Um den Startpunkt und Endpunkt des Intervalls zu finden in welchem
-:math:`g_{1,4}(x) > 2,1` ist, muss folgende Gleichung gelöst werden:
+:math:`g_{1{,}4}(x) > 2{,}1` ist, muss folgende Gleichung gelöst werden:
 
-.. math:
+.. math::
 
-  g_{1,4}(x) - 2,1 = 0
+  g_{1{,}4}(x) - 2{,}1 = 0
 
 Aus den vorherigen Aufgaben wissen wir, dass der Hochpunkt von :math:`g_c(x)`
 bei :math:`x = 1` liegt. Daraus folgt, dass der Startpunkt des Intervalls einen
@@ -516,24 +516,24 @@ In Aufgabe 2 c) wurde gezeigt, dass
 .. math:: 
   \lim\limits_{x\rightarrow \infty} g_c(x) = c
 
-gilt. Für das gegebene Modell der Bevölkerungsentwicklung mit :math:`c=1,4`
-folgt daraus, dass sich die Geburtenrate hin zu :math:`1,4` entwickelt. Mit
+gilt. Für das gegebene Modell der Bevölkerungsentwicklung mit :math:`c=1{,}4`
+folgt daraus, dass sich die Geburtenrate hin zu :math:`1{,}4` entwickelt. Mit
 dieser Geburtenrate sinkt die Bevölkerungszahl.
 
 **Lösung zu Teil c**
 
-Abweichend von der Aufgabenstellung wird hier berechnet zu welchem Zeitpunk
+Abweichend von der Aufgabenstellung wird hier berechnet, zu welchem Zeitpunk
 die Geburtenzahl am stärksten abnimmt.
 
 Der Punkt mit der stärksten Abnahme ist das Minimum der Ableitung. Da
 :math:`g_{c}(x)` nur um eine Konstante von :math:`f(x)` verschoben ist, sind
-die Ableitungen gleich. Für :math:`f(x)` wurden die ersten zwei Ableitung in
+deren Ableitungen gleich. Für :math:`f(x)` wurden die ersten zwei Ableitung in
 Aufgabe 1 b) berechnet. Um das Minimum zu finden muss die Nullstelle von
 :math:`f''(x)` gefunden werden.
 
 .. math::
 
-  &f''(x) = 2x \cdot e^{-0,5x^2}\left(x^2 - 3\right)\overset{!}{=}0\\
+  &f''(x) = 2x \cdot e^{-0{,}5x^2}\left(x^2 - 3\right)\overset{!}{=}0\\
   &\rightarrow x_1 = 0\\
   &\left(x^2  - 3\right) \overset{!}{=}0\\
   &\rightarrow x_{2/3} = \pm \sqrt{3}
@@ -547,8 +547,9 @@ Dieses Ergebnis erhält man auch durch Sage.
 .. end of output
 
 Da das Modell nur für :math:`x\geq 0` gültig ist fällt die Nullstelle
-:math:`x_3=-\sqrt{3}` als mögliche Lösung weg. :math:`x_1=0` kann kein
-Minimum der Ableitung sein, da hier der Graph eine positive Steigung hat:
+:math:`x_3=-\sqrt{3}` als mögliche Lösung weg. :math:`x_1=0` kann kein globales
+Minimum der Ableitung sein, da hier der Graph eine positive Steigung hat und wir
+bereits negative Werte für die Ableitung nachgewiesen haben:
 :math:`g'(0) = f'(0) \overset{1 c.}{=} 2`. Folglich ist :math:`x_2=\sqrt{3}`
 das gesuchte Minimum der Ableitung. Dies Entspricht dem Jahr 1972.
 
@@ -558,4 +559,3 @@ wird, müssen folgende Punkte erfüllt sein:
 * Die Ableitung :math:`g'(x)` muss für alle :math:`x>\sqrt{3}` negativ sein.
 * Die zweite Ableitung :math:`g''(x)` darf für :math:`x>\sqrt{3}` keine
   Nullstelle haben.
-
