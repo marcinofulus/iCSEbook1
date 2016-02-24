@@ -15,20 +15,81 @@ Bayerisches Abitur in Mathematik 2014
 Die Ebene :math:`E` verläuft parallel zur :math:`x_1`-Achse. Dies lässt sich 
 daran erkennen, dass die Ebenengleichung keine :math:`x_1<`-Komponente enthält.
 
-**Lösung zu Teil b**
-
-
-
-.. math::
-
-  y_K=1
-
-Selbiges Ergebnis erhalten wir mit wenig Aufwand durch Sage:
+Mit Sage können wir die Ebene im Dreidimensionalen darstellen. Hierfür lösen
+wir zunächst die Ebenengleichung nach der Variable x_3 auf.
 
 .. sagecellserver::
 
-    sage: k = vector([0 , y, 4])
-    sage: pm =  norm(p-m)
-    sage: pk =  norm(p-k)
-    sage: mk =  norm(m-k)
-    sage: solve(pm^2 + mk^2 == pk^2, y)
+  sage: var('y')
+  sage: var('x')
+  sage: z = (5-3*y)/4
+  sage: p1 = plot3d(z, (x,-10,10), (y,-10,10))
+  sage: p1
+
+**Lösung zu Teil b**
+
+Mit Sage wollen wir uns zunächst einen Überblick über die Lage der Ebene und der Kugel
+im dreidimensionalen Raum verschaffen.
+
+.. sagecellserver::
+
+  sage: p2 = sphere(center=(1,6,3), size=7, color='red', opacity=1)
+  sage: p1 + p2
+
+Wir können leicht erkennen, dass die Kugel die Ebene in unendlich vielen Punkten schneidet.
+
+Um dies rechnerisch zu überprüfen, bestimmen wir zunächst den Abstand zwischen dem Kugelmittelpunkt und der Ebene.
+
+Aus der Hesse-Normalform der Ebene erhalten wir den Normalenvektor
+
+.. math::
+
+  \vec{n} = \left( \begin{matrix}
+    			0\\
+    			3\\
+    			4
+  	     	    \end{matrix} \right),
+
+bzw. den normierten Normalenvektor
+
+.. math::
+
+  \vec{n}_0 = \left( \begin{matrix}
+    			0\\
+    			\frac{3}{5}\\
+    			\frac{4}{5}
+  	     	    \end{matrix} \right).
+
+Um den Abstand des Kugelmittelpunkts zur Ebene zu bestimmen, definieren wir nun Punkte 
+auf der Gerade in Richtung des Vektors :math:`\vec{n}_0` (also senkrecht zur Ebene), die 
+durch den Kugelmittelpunkt verläuft als
+
+.. math::
+
+  \left( \begin{matrix}
+    			x_1\\
+    			x_2\\
+    			x_3
+  	     	    \end{matrix} \right) = \left( \begin{matrix}
+    			1\\
+    			6\\
+    			3
+  	     	    \end{matrix} \right) + t\cdot \left( \begin{matrix}
+    			0\\
+    			\frac{3}{5}\\
+    			\frac{4}{5}
+  	     	    \end{matrix} \right).
+
+Der Wert :math:`|t|` gibt dabei an, welchen Abstand der Geradenpunkt vom Kugelmittelpunkt hat.
+Wir bestimmen den Wert :math:`t`, für den die Gerade die Ebene schneidet, indem wir die 
+Geradenkoordinaten in die Ebenengleichung einsetzen. Wir erhalten
+
+.. math::
+
+  &3 \cdot (6+\frac{3}{5}t) + 4 \cdot (3+\frac{4}{5}t)-5=0 \quad\Leftrightarrow\\
+  &t=-5 \quad\Leftrightarrow\\
+  &|t|=5.
+
+Der Kugelmittelpunkt hat also den Abstand 5 von der Ebene. Da der der Kugelradius mit dem Wert
+7 größer ist, als der Abstand des Mittelpunkts zur Ebene, ergibt sich ein Schnittkreis mit
+unendlich vielen Schnittpunkten, wie bereits durch Sage deutlich wurde.
