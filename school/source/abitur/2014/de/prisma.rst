@@ -26,7 +26,7 @@ Der Abstand von :math:`B` und :math:`F` berechnet sich dann durch
 
 .. math::
 
-  \overline{BF} = |\vec B - \vec F| = \sqrt{8^2+(-8)^2+(-4)^2}=12.
+  \overline{BF} = |\vec{B} - \vec{F}| = \sqrt{8^2+(-8)^2+(-4)^2}=12.
 
 Wir überprüfen das Ergebnis mit Sage. Hierfür konstruieren wir uns den Punkt
 :math:`F` und berechnen anschließend den Abstand zum Punkt :math:`B`.
@@ -38,7 +38,7 @@ Wir überprüfen das Ergebnis mit Sage. Hierfür konstruieren wir uns den Punkt
     sage: c = vector([0, 8, 0])
     sage: d = vector([0, 0, 4])
     sage: f = c + d - a
-    sage: print 'Abstand B-F:', N(norm(b-f))
+    sage: print 'Abstand B-F:', norm(b-f)
 
 .. end of output
 
@@ -55,9 +55,9 @@ Entsprechend erhalten wir die Koordinaten für die Punkte :math:`M(0|0|2)` und :
 
 .. sagecellserver::
 
+    sage: m = a + 1/2 * (d - a)
     sage: p = b + 1/2 * (c - b)
-    sage: m = a + 1/2 * (d - a)    
-    sage: print "p:", p, ", m:", m
+    sage: print "m:", m, ", p:", p
 
 Um den :math:`y`-Wert des Punktes :math:`K` zu bestimmen, nutzen wir die Bedingung, dass der
 Winkel am Punkt :math:`M` :math:`90°` betragen soll. Dies bedeutet, dass das Dreieck :math:`PMK`
@@ -84,6 +84,7 @@ Selbiges Ergebnis erhalten wir mit wenig Aufwand durch Sage:
 
 .. sagecellserver::
 
+    sage: y = var('y')
     sage: k = vector([0 , y, 4])
     sage: pm =  norm(p-m)
     sage: pk =  norm(p-k)
