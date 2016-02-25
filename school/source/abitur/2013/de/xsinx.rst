@@ -27,7 +27,7 @@ Diese Funktion wird noch einmal abgeleitet:
 Für :math:`x=0` erhält man
 :math:`f''(0) = 2 \cdot \cos 0 - 0 \cdot \sin 0 = 2`.
 
-Durch Sage lässt sich das Ergebnis bestätigen.
+Durch Sage lässt sich das Ergebnis bestätigen:
 
 .. sagecellserver::
 
@@ -39,10 +39,11 @@ Durch Sage lässt sich das Ergebnis bestätigen.
 
 .. end of output
 
-Eine positive zweite Ableitung von :math:`f` an der Stelle :math:`x=0`
-bedeutet, dass die Funktion dort nach links gekrümmt ist.
+Eine positive zweite Ableitung von einer Funktion weist auf eine Linkskrümmung 
+hin, wie es bei :math:`f` an der Stelle :math:`x=0` der Fall ist.
 
-Dies kann man auch erkennen, wenn man sich den Funktionsgraphen zeichnen lässt.
+Dies kann man auch erkennen, wenn man sich mit Hilfe von Sage den 
+Funktionsgraphen zeichnen lässt.
 
 .. sagecellserver::
 

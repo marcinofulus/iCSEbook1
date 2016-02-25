@@ -24,6 +24,8 @@ Mit Sage können wir uns einen Überblick über die Funktion verschaffen
   sage: f(x) = log(2013-x)
   sage: plot(f(x), x, (-2014,2014), figsize=(4, 2.8))
 
+.. end of output
+
 Für die Grenzen von :math:`\mathrm{D}` erhält man folgendes Verhalten:
 
 .. math::
