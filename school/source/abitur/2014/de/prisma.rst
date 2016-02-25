@@ -80,12 +80,24 @@ Auflösen nach :math:`y_K` liefert uns die gewünschte :math:`y`-Koordinate des 
 
   y_K=1
 
-Selbiges Ergebnis erhalten wir mit wenig Aufwand durch Sage:
+Selbiges Ergebnis erhalten wir mit wenig Aufwand durch Sage. Zunächst definieren wir 
+uns eine Funktion, die den Betrag eines Vektors ausrechnet und testen diese für einen
+einfachen Vektor.
 
 .. sagecellserver::
 
-    sage: k = vector([0 , y, 4])
-    sage: pm =  norm(p-m)
-    sage: pk =  norm(p-k)
-    sage: mk =  norm(m-k)
-    sage: solve(pm^2 + mk^2 == pk^2, y)
+  sage: def absolut(v):
+  ...       return sqrt(v[0]^2 + v[1]^2 + v[2] ^2)
+  sage: absolut(vector([1, 1, 1]))
+
+Die :math:`y`-Koordinate :math:`y_K` erhalten wir wieder über den Satz des
+Pythagoras.
+
+.. sagecellserver::
+
+  sage: y = var('y')
+  sage: k = vector([0 , y, 4])
+  sage: pm =  absolut(p-m)
+  sage: pk =  absolut(p-k)
+  sage: mk =  absolut(m-k)
+  sage: solve(pm^2 + mk^2 == pk^2, y)
