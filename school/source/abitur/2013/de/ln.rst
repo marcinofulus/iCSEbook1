@@ -4,8 +4,8 @@ Bayerisches Abitur in Mathematik 2013
 .. admonition:: Aufgabe
 
   Geben sie für die Funktion :math:`f` mit :math:`f(x)=\ln(2013-x)` den
-  maximalen Definitionsbereich :math:`\mathrm{D}`, das Verhalten von :math:`f`
-  an den Grenzen von :math:`\mathrm{D}` sowie die Schnittpunkte des Graphen von
+  maximalen Definitionsbereich :math:`\mathbb{D}`, das Verhalten von :math:`f`
+  an den Grenzen von :math:`\mathbb{D}` sowie die Schnittpunkte des Graphen von
   :math:`f` mit den Koordinatenachsen an.
 
 **Lösung**
@@ -16,6 +16,13 @@ von :math:`[-\infty,0[`. Addiert man nun innerhalb des Logarithmus eine Zahl,
 muss dies auch bei dem Defintionsberreich geschehen. Es ergibt sich für
 :math:`f(x)=\ln(2013-x)` der Defintionsberreich
 :math:`\mathrm{D}=[-\infty, 2013[`.
+
+Mit Sage können wir uns einen Überblick über die Funktion verschaffen
+
+.. sagecellserver::
+
+  sage: f(x) = log(2013-x)
+  sage: plot(f(x), x, (-2014,2014), figsize=(4, 2.8))
 
 Für die Grenzen von :math:`\mathrm{D}` erhält man folgendes Verhalten:
 
@@ -31,12 +38,11 @@ In Sage lässt sich dieses Ergebniss bestätigen, indem man :math:`-\infty` für
 
 .. sagecellserver::
 
-  sage: f(x) = log(2013-x)
   sage: print(u"f(-\u221e) = " + str(f(-infinity)))
 
 .. end of output
 
-Geht :math:`x` gegen :math:`2013` so geht das Argument des Logarithmus gegen
+Geht :math:`x` gegen :math:`2013`, so geht das Argument des Logarithmus gegen
 :math:`0`. In diesem Fall geht der Logarithmus gegen :math:`-\infty`.
 
 .. math::
@@ -51,7 +57,7 @@ Geht :math:`x` gegen :math:`2013` so geht das Argument des Logarithmus gegen
 
 .. end of output
 
-Der Schnittpunkt mit der :math:`y`-Achse erhält man durch einsetzen von
+Den Schnittpunkt mit der :math:`y`-Achse erhält man durch einsetzen von
 :math:`x=0`:
 
 .. math::
@@ -71,7 +77,7 @@ Die Logarithmusfunktion schneidet die :math:`x`-Achse wenn das Argument gleich
 
   2013-x \overset{!}{=}1 \rightarrow x = 2012
 
-Dieses Erebnis lässt sich mit Sage bestätigen:
+Dieses Ergebnis lässt sich mit Sage bestätigen:
 
 .. sagecellserver::
 
