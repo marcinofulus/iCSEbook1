@@ -51,10 +51,9 @@ Wahrscheinlichkeitsterms.
 
 .. end of output
 
-Nun bestimmen wir aus 50000 Realisierungen die Wahrscheinlichkeit in
-Abhängigkeit von der Trefferzahl und vergleichen am Ende die
-Wahrscheinlichkeit :math:`p(\mathrm{E})`, mindestens 19 Treffer zu erzielen,
-mit dem exakten Ergebnis.
+Nun bestimmen wir die Wahrscheinlichkeit in Abhängigkeit von der Trefferzahl aus 50000 
+Realisierungen und vergleichen am Ende die Wahrscheinlichkeit :math:`p(\mathrm{E})`, 
+mindestens 19 Treffer zu erzielen, mit dem exakten Ergebnis.
 
 .. sagecellserver::
 
