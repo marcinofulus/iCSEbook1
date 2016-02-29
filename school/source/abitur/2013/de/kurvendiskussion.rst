@@ -75,7 +75,7 @@ Dieses Ergebnis lässt sich leich mit Sage überprüfen
 .. sagecellserver::
 
   sage: f(x) = 2*x*exp(-0.5* x**2)
-  sage: print("f(x) - f(-x) = " + str(f(x) + f(-x)))
+  sage: print("f(x) + f(-x) = " + str(f(x) + f(-x)))
 
 .. end of output
 
@@ -423,7 +423,7 @@ Die Nullstellen für diese Funktionen lassen sich in Sage numerisch berechnen.
 
 **Lösung von Teil c**
 
-Die Formel lässt sich leicht mit der Linerität von Integralen herleiten:
+Die Formel lässt sich leicht mit der Linearität von Integralen herleiten:
 
 .. math::
 

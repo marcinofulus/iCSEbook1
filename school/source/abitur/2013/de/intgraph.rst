@@ -26,7 +26,7 @@ und Stammfunktion kennen:
 Betrachtet man die Funktion in der Aufgabenstellung, so erkennt man eine
 Nullstelle von :math:`f(x)` bei :math:`x_1=0` und bei :math:`x_2\approx 2,25`.
 Im ersten Fall ist die Steigung negativ also ist :math:`F(0)` ein lokales 
-Maximum. An der stelle :math:`x_2` ist die Steigung von :math:`f` positiv.
+Maximum. An der Stelle :math:`x_2` ist die Steigung von :math:`f` positiv.
 :math:`F(x_2)` ist also ein lokales Minimum.
 
 Eine weitere Eigenschaft von :math:`F(x)` ergibt sich aus den Integralgrenzen.
