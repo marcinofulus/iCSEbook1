@@ -45,14 +45,14 @@ in Hessescher Normalform lautet:
 
 .. math::
 
-0 \cdot x_1 + 0 \cdot x_2 + x_3 = 0
+  0 \cdot x_1 + 0 \cdot x_2 + x_3 = 0
 
-Um den Abstand zum Mittelpunkt der Kugel zu berrechnen muss der Punkt :math:`M(-3|2|7)` in die
+Um den Abstand zum Mittelpunkt der Kugel zu berechnen muss der Punkt :math:`M(-3|2|7)` in die
 Gleichung eingesetzt werden:
 
 .. math::
 
-d = \vert 0 \cdot -3 + 0 \cdot 2 + 7 \vert = 7
+  d = \vert 0 \cdot (-3) + 0 \cdot 2 + 7 \vert = 7
 
 Den Radius der Kugel erhält man durch den Abstand zwischen dem Punkt :math:`P`, der sich auf der Kugeloberfläche
 befindet, und dem Mittelpunkt der Kugel:
@@ -73,7 +73,7 @@ lässt sich dabei mit der Maus rotieren.
   sage: var('x')
   sage: var('y')
   sage: z = 0
-  sage: radius = 7
+  sage: radius = norm(M-P)
   sage: p1 = plot3d(z, (x,-15,15), (y,-15,15), opacity=0.7)
   sage: p2 = sphere(center=(-3,2,7), size=radius, color='red', opacity=0.7)
   sage: show(p1 + p2, aspect_ratio=1)
