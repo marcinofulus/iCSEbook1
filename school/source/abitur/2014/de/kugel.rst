@@ -40,13 +40,19 @@ Selbiges Ergebnis erhalten wir mit Sage:
 **Lösung zu Teil b**
 
 Um zu überprüfen, ob die Kugel die :math:`x_1x_2`-Ebene berührt, reicht es aus, den Abstand zwischen
-der Ebene und dem Kugelmittelpunkt mit dem Radius der Kugel zu vergleichen. Wegen der speziellen
-Lage der Ebene im Raum (Ebenengleichung :math:`x_3=0`) spielen die :math:`x_1`- und die :math:`x_2`-Komponente
-des Mittelpunkts keine dabei Rolle. Der Abstand berechnet sich zu
+der Ebene und dem Kugelmittelpunkt mit dem Radius der Kugel zu vergleichen. Die Ebenengleichung
+in Hessescher Normalform lautet:
 
 .. math::
 
-  d = |x_3| = 7.
+0 \cdot x_1 + 0 \cdot x_2 + x_3 = 0
+
+Um den Abstand zum Mittelpunkt der Kugel zu berrechnen muss der Punkt :math:`M(-3|2|7)` in die
+Gleichung eingesetzt werden:
+
+.. math::
+
+d = \vert 0 \cdot -3 + 0 \cdot 2 + 7 \vert = 7
 
 Den Radius der Kugel erhält man durch den Abstand zwischen dem Punkt :math:`P`, der sich auf der Kugeloberfläche
 befindet, und dem Mittelpunkt der Kugel:
@@ -67,8 +73,9 @@ lässt sich dabei mit der Maus rotieren.
   sage: var('x')
   sage: var('y')
   sage: z = 0
-  sage: p1 = plot3d(z, (x,-15,15), (y,-15,15))
-  sage: p2 = sphere(center=(-3,2,7), size=radius, color='red', opacity=1)
+  sage: radius = 7
+  sage: p1 = plot3d(z, (x,-15,15), (y,-15,15), opacity=0.7)
+  sage: p2 = sphere(center=(-3,2,7), size=radius, color='red', opacity=0.7)
   sage: show(p1 + p2, aspect_ratio=1)
 
 .. end of output
