@@ -13,17 +13,18 @@ Bayerisches Abitur in Mathematik 2014
 **Lösung zu Teil a**
 
 Die Ebene :math:`E` verläuft parallel zur :math:`x_1`-Achse. Dies lässt sich 
-daran erkennen, dass die Ebenengleichung keine :math:`x_1<`-Komponente enthält.
+daran erkennen, dass die Ebenengleichung keine :math:`x_1`-Komponente enthält.
 
 Mit Sage können wir die Ebene im Dreidimensionalen darstellen. Hierfür lösen
-wir zunächst die Ebenengleichung nach der Variable x_3 auf.
+wir zunächst die Ebenengleichung nach der Variablen :math:`x_3` auf.
 
 .. sagecellserver::
 
-  sage: var('y')
-  sage: var('x')
-  sage: z = (5-3*y)/4
-  sage: p1 = plot3d(z, (x,-10,10), (y,-10,10))
+  sage: var('x1')
+  sage: var('x2')
+  sage: var('x3')
+  sage: x3 = (5-3*x2)/4
+  sage: p1 = plot3d(x3, (x1,-10,10), (x2,-10,10))
   sage: p1
 
 **Lösung zu Teil b**
