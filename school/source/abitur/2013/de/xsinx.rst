@@ -42,8 +42,7 @@ Durch Sage lässt sich das Ergebnis bestätigen:
 Eine positive zweite Ableitung von einer Funktion weist auf eine Linkskrümmung 
 hin, wie es bei :math:`f` an der Stelle :math:`x=0` der Fall ist.
 
-Dies kann man auch erkennen, wenn man sich mit Hilfe von Sage den 
-Funktionsgraphen zeichnen lässt.
+Dies kann man auch erkennen, wenn man sich den Funktionsgraphen zeichnen lässt.
 
 .. sagecellserver::
 
