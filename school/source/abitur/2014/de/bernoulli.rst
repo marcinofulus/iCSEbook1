@@ -1,4 +1,4 @@
-Bayerisches Abitur in Mathematik 2015
+Bayerisches Abitur in Mathematik 2014
 -------------------------------------
 
 .. admonition:: Aufgabe
@@ -40,30 +40,38 @@ mindestens 19 Treffer zu erzielen.
 
 Mit Sage wollen wir die Bernoullikette simulieren und zählen dabei die Durchläufe, bei denen
 mindestens 19 Treffer erzielt wurden. Zunächst bestimmen wir aber den Dezimalwert des gegebenen
-Wahrscheinlichkeitsterms und vergleichen ihn anschließend mit dem Ergebnis der Simulation.
+Wahrscheinlichkeitsterms.
 
 .. sagecellserver::
 
   sage: p = 0.9
   sage: q = 0.1
   sage: p_E = p^20 + 20*q*p^19
-  sage: print "probability P_E =", p_E
+  sage: print "Wahrscheinlichkeit p(E) =", p_E
 
 .. end of output
 
+Nun bestimmen wir die Wahrscheinlichkeit in Abhängigkeit von der Trefferzahl aus 50000 
+Realisierungen und vergleichen am Ende die Wahrscheinlichkeit :math:`p(\mathrm{E})`, 
+mindestens 19 Treffer zu erzielen, mit dem exakten Ergebnis.
+
 .. sagecellserver::
 
-  sage: p = 0.9
-  sage: successes = 0
-  sage: rounds = 50000
-  sage: for round in range(rounds):
-  ...       hits = 0
-  ...       for tries in range(20):
-  ...           if (random() < p):
-  ...               hits += 1
-  ...       if(hits >= 19):
-  ...           successes += 1
-  sage: print "empiric probability =", float(successes/rounds)
+  sage: import numpy as np
+  sage: schwelle = 19
+  sage: haeufigkeit_e = np.zeros(21)
+  sage: wiederholungen = 50000
+  sage: for _ in range(wiederholungen):
+  ...       treffer = sum(np.random.random(20) < p)
+  ...       haeufigkeit_e[treffer] = haeufigkeit_e[treffer]+1
+  sage: wahrscheinlichkeiten = haeufigkeit_e/wiederholungen
+  sage: ueberschrift = ' Treffer  Wahrscheinlichkeit'
+  sage: print ueberschrift
+  sage: print "-"*len(ueberschrift)
+  sage: for treffer, p_von_e in enumerate(wahrscheinlichkeiten):
+  ...       print "%6i       %g" % (treffer, p_von_e)
+  sage: p_geq_19 = wahrscheinlichkeiten[19]+wahrscheinlichkeiten[20]
+  sage: print "Näherung für die Wahrscheinlichkeit p(E) =", p_geq_19
 
 .. end of output
 

@@ -4,7 +4,6 @@ Analysis
 .. toctree::
    :maxdepth: 1
 
-
    Aufgabe 1 <extremum>
    Aufgabe 2 <stammfunktionen>
    Aufgabe 3 <sinusfunktionen>
