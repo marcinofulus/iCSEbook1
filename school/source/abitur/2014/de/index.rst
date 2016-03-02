@@ -32,3 +32,4 @@ Geometrie
    Aufgabe 1 <prisma>
    Aufgabe 2 <ebene>
    Aufgabe 3 <quader>
+   Aufgabe 4 <kugel>
