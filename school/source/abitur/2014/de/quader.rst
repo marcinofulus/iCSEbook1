@@ -31,9 +31,9 @@ zwei Vektoren, welches in allen Fällen :math:`0` ergeben muss.
 
 .. math::
 
-  \vec{a}\cdot\vec{b}=2\cdot(-1) + 1\cdot2 + 2\cdot0 = 0\\
-  \vec{a}\cdot\vec{c}=2\cdot4t + 1\cdot2t + 2\cdot(-5t) = 0\\
-  \vec{b}\cdot\vec{c}=(-1)\cdot4t + 2\cdot2t + 0\cdot(-5t) = 0\\
+  \vec{a}\cdot\vec{b} &= 2\cdot(-1) + 1\cdot2 + 2\cdot0 &= 0\\
+  \vec{a}\cdot\vec{c} &= 2\cdot4t + 1\cdot2t + 2\cdot(-5t) &= 0\\
+  \vec{b}\cdot\vec{c} &= (-1)\cdot4t + 2\cdot2t + 0\cdot(-5t) &= 0\\
 
 Wir überprüfen die Skalarprodukte mit Sage:
 
@@ -55,11 +55,11 @@ Das Volumen des Quaders ergibt sich aus dem Betrag des Spatprodukts
 
 .. math::
 
-  V = \left\vert\vec{a}\cdot(\vec{b}\times\vec{c})\right\vert
+  V &= \left\vert\vec{a}\cdot(\vec{b}\times\vec{c})\right\vert
   =\left\vert\left(\begin{matrix} 2\\1\\2 \end{matrix} \right)
   \cdot\left(\begin{matrix} 2\cdot(-5t)-0\cdot2t \\ 0\cdot4t-(-1)\cdot(-5t) \\ (-1)\cdot2t-2\cdot4t
-  \end{matrix}\right)\right\vert
-  =\left\vert 2\cdot(-10t) + 1\cdot(-5t)+2\cdot(-10t) \right\vert = 45\left\vert t \right\vert.
+  \end{matrix}\right)\right\vert \\
+  &=\left\vert 2\cdot(-10t) + 1\cdot(-5t)+2\cdot(-10t) \right\vert = 45\left\vert t \right\vert.
   
 Mit der Vorgabe, dass das Volumen des Quaders gleich 15 sein soll, erhalten wir
 
