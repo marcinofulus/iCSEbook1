@@ -4,9 +4,9 @@ Bayerisches Abitur in Mathematik 2013
 .. admonition:: Aufgabe
 
   Abbildung 1 zeigt den Graphen :math:`G_f` einer in :math:`\mathbb{R}`
-  definierten Funktion f. Skizzieren sie in Abbildung 1 den Graphen der
+  definierten Funktion :math:`f`. Skizzieren Sie in Abbildung 1 den Graphen der
   in :math:`\mathbb{R}` definierten Integralfunktion
-  :math:`F:x\rightarrow \int\limits_1^x f(t)\mathrm{d}t`. Berücksichtigen
+  :math:`F:x\mapsto \int\limits_1^x f(t)\mathrm{d}t`. Berücksichtigen
   Sie dabei mit jeweils angemessener Genauigkeit insbesondere die
   Nullstellen und Extremstellen von :math:`F` sowie :math:`F(0)`.
     

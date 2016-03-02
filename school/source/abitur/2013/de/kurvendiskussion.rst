@@ -4,7 +4,7 @@ Bayerisches Abitur in Mathematik 2013
 .. admonition:: Aufgabe
 
   #.  Gegeben ist die in :math:`\mathbb{R}` definierte Funktion 
-      :math:`f:x\rightarrow 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
+      :math:`f:x\mapsto 2x\cdot e^{-0,5x^2}`. Abbildung 2 zeigt
       den Graphen :math:`G_f` von :math:`f`.
 
     
@@ -13,29 +13,33 @@ Bayerisches Abitur in Mathematik 2013
 
       a) Weisen Sie rechnerisch nach, dass :math:`G_f` punktsymmetrisch
          bezüglich des Koordinatenursprungs ist, und machen Sie anhand
-         des Funktionsterms von f plausibel, dass
+         des Funktionsterms von :math:`f` plausibel, dass
          :math:`\lim\limits_{x\rightarrow +\infty} f(x)=0` gilt.
       b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von
-         :math:`G_f`
+         :math:`G_f`.
       c) Berechnen Sie die mittlere Änderungsrate :math:`m_S` von :math:`f`
          im Intervall :math:`[-0,5;0,5]` sowie die lokale Änderungsrate
          :math:`m_T` von :math:`f` an der Stelle :math:`x=0`. Berechnen
-         Sie, um wie viele Prozent :math:`m_S` von :math:`m_T` abweicht.
+         Sie, um wie viel Prozent :math:`m_S` von :math:`m_T` abweicht.
       d) Der Graph von :math:`f`, die :math:`x`-Achse und die Gerade
          :math:`x=u` mit :math:`u \in \mathbb{R}^+` schließen für
          :math:`0\leq x \leq u` ein Flächenstück mit dem Inhalt
-         :math:`A(u)` ein. Zeigen Sie, dass :math:`A(u)=2-2e^{-0,5u^2}`
+         :math:`A(u)` ein.
+         
+         Zeigen Sie, dass :math:`A(u)=2-2e^{-0,5u^2}`
          gilt. Geben Sie :math:`\lim\limits_{u\rightarrow + \infty} A(u)` an
          und deuten Sie das Ergebnis geometrisch.
       e) Die Ursprungsgerade :math:`h` mit der Gleichung
          :math:`y=\frac{2}{e^2}\cdot x` schließt mit :math:`G_f` für
-         :math:`x\leq 0` ein Flächenstück mit dem Inhalt :math:`B`
-         vollständig ein. Berechnen Sie die :math:`x`-Koordinate der
+         :math:`x\geq 0` ein Flächenstück mit dem Inhalt :math:`B`
+         vollständig ein.
+         
+         Berechnen Sie die :math:`x`-Koordinaten der
          drei Schnittpunkte der Geraden :math:`h` mit :math:`G_f` und
          zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie B.
 
   #. Im Folgenden wird die Schar der in :math:`\mathbb{R}` definierten
-     Funktion :math:`g_c: x\rightarrow f(x) + c` mit :math:`c\in \mathbb{R}`
+     Funktion :math:`g_c: x\mapsto f(x) + c` mit :math:`c\in \mathbb{R}`
      betrachtet.
 
     a) Geben Sie in Abhängigkeit von c ohne weitere Rechnung die Koordinaten
