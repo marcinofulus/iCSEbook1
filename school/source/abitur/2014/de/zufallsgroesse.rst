@@ -66,7 +66,7 @@ durch den jeweiligen Wert von :math:`k`. :math:`p_1` aus der
 Aufgabenstellung wird nun als :math:`p_0` bezeichnet und :math:`p_2`
 als :math:`p_3`. Im Folgenden können die Werte für :math:`p_1, p_2,`
 und :math:`p_3` eingestellt werden. Die Wahrscheinlichkeit :math:`p_0`
-wir dann daraus berechnet. In einem ersten Schritt sollten wie in der
+wird dann daraus berechnet. In einem ersten Schritt sollten wie in der
 Aufgabenstellung :math:`p_1=\frac{3}{10}` und :math:`p_2=\frac{1}{5}`
 eingestellt werden. Durch Variation von :math:`p_3` im erlaubten
 Bereich lässt sich dann der maximale Erwartungswert bestimmen. Durch
@@ -84,8 +84,8 @@ wird.
      sage: def _(p1=slider(0., 1., 0.1),
      ...         p2=slider(0., 1., 0.1),
      ...         p3=slider(0., 1., 0.01), eps=3e-16):
-     sage:     p0 = 1-p1-p2-p3
-     sage:     if p0 >= -eps:
+     ...       p0 = 1-p1-p2-p3
+     ...       if p0 >= -eps:
      ...           print 'p0 =', p0
      ...           print 'E =', p1+2*p2+3*p3
      ...       else:
