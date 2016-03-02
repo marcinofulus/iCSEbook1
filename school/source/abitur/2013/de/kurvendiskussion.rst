@@ -65,7 +65,7 @@ Bayerisches Abitur in Mathematik 2013
       ermittelt wird
 
       Die Funktion :math:`g_{1{,}4}: x \rightarrow 2x \cdot e^{-0{,}5x^2} + 1{,}4`
-      beschreibt für :math:`x\geq0` modellhaft die zeitlich Entwicklung der
+      beschreibt für :math:`x\geq0` modellhaft die zeitliche Entwicklung der
       Geburtenziffer in einem europäischen Land. Dabei ist :math:`x` die seit
       dem Jahre 1955 vergangene Zeit in Jahrzehnten (d. h. :math:`x=1`
       entspricht dem Jahr 1965) und :math:`g_{1{,}4}(x)` die Geburtenziffer.
@@ -93,20 +93,19 @@ Aufgabe 1
 **Lösung zu Teil a**
 
 Zum Nachweis der Punktsmmetrie von :math:`G_f`, müssen wir zeigen,
-dass :math:`f(x)=-f(-x)`, bzw. f(x) + f(-x) = 0 gilt.
+dass :math:`f(x)=-f(-x)` oder, gleichbedeutend damit, :math:`f(x) + f(-x) = 0` gilt.
 
 .. math::
   
   f(x) + f(-x) & = 2x \cdot e^{-0{,}5x^2} + 2(-x) \cdot e^{-0{,}5(-x)^2}\\
   &= 2x \cdot e^{-0,5x^2} - 2 x \cdot e^{-0{,}5x^2}\\
-  &= (2x - 2x) e^{-0{,}5x^2}\\
   &= 0
 
-Dieses Ergebnis lässt sich leich mit Sage überprüfen
+Dieses Ergebnis lässt sich leicht mit Sage überprüfen:
 
 .. sagecellserver::
 
-  sage: f(x) = 2*x*exp(-0.5* x**2)
+  sage: f(x) = 2*x*exp(-1/2*x**2)
   sage: print("f(x) + f(-x) = " + str(f(x) + f(-x)))
 
 .. end of output
@@ -118,21 +117,21 @@ Nullstellen der Ableitung von :math:`f` finden.
 
 .. math::
 
-  f'(x) &= \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
-  = \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0{,}5x^2}\right)\\
-  &= 2 \cdot e^{-0{,}5x^2} + 2x\cdot e^{-0{,}5x^2}\cdot (-x) 
-  = 2\cdot e^{-0{,}5x^2}\left(1-x^2\right)
+  \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
+  &= \frac{\mathrm{d}}{\mathrm{d}x}\left(2x\cdot e^{-0{,}5x^2}\right)\\
+  &= 2 \cdot e^{-0{,}5x^2} + 2x\cdot e^{-0{,}5x^2}\cdot (-x)\\
+  &= 2\cdot e^{-0{,}5x^2}\left(1-x^2\right)
 
 Mit Sage lässt sich die Ableitung wie folgt berechnen:
 
 .. sagecellserver::
 
   sage: df(x) = derivative(f(x),x)
-  sage: print("Ableitung von f(x): " + str(df(x).simplify()))
+  sage: print("Ableitung von f(x): " + str(df(x).full_simplify()))
 
 .. end of output
 
-Um die Extrempunkte zu bekommen muss die Gleichung
+Um die Extrempunkte zu bekommen, muss die Gleichung
 
 .. math::
 
@@ -165,20 +164,20 @@ Einsetzen von :math:`x_1` und :math:`x_2` liefert:
 
 .. math::
   f''(x_1) &= f''(-1) &= -2 \cdot (-1)\cdot e^{-0{,}5\cdot(-1)^2}\left(3-(-1)^2\right)
-  &= 2 \cdot e^{-0{,}5} &> 0\\
+  &= 4 \cdot e^{-0{,}5} &> 0\\
   f''(x_2) &= f''(1) &= -2 \cdot 1\cdot e^{-0{,}5 \cdot 1^2}\left(3-1^2\right)
-  &= -2 \cdot e^{-0{,}5} &< 0
+  &= -4 \cdot e^{-0{,}5} &< 0
 
 Damit ist :math:`x_1` ein Minimum und :math:`x_2` ein Maximum. Dies
 wird in Abbildung 2 bestätigt.
 
-Mit Sage erhält man die zweite Ableitung, sowie die Werte an den Punkten
-:math:`x_1` und :math:`x_2` über:
+Mit Sage erhält man die zweite Ableitung sowie die Werte an den Punkten
+:math:`x_1` und :math:`x_2` folgendermaßen:
 
 .. sagecellserver::
 
   sage: ddf(x) = derivative(df(x),x)
-  sage: print("Zweite Ableitung von f(x): " + str(ddf(x).simplify()))
+  sage: print("Zweite Ableitung von f(x): " + str(ddf(x).full_simplify()))
   sage: print("ddf(-1) = " + str(ddf(-1)))
   sage: print("ddf(1) = " + str(ddf(1)))
 
