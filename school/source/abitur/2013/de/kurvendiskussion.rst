@@ -150,26 +150,29 @@ Mit Sage lassen sich diese Lösungen bestätigen.
 
 .. end of output
 
-Für die Art der Extrempunkte muss man die zweite Ableitung von :math:`f`
+Um die Art der Extrempunkte zu bestimmen, muss man die zweite Ableitung von :math:`f`
 an den berechneten :math:`x`-Werten betrachten. Ist der Wert positiv,
 so handelt es sich um ein Minimum, ist er negativ, handelt es sich um ein Maximum.
+Mit Hilfe der bereits berechneten ersten Ableitung von :math:`f` erhält
+man für die zweiten Ableitung
 
 .. math::
 
-  f''(x) = \frac{d^2}{dx^2}f(x) = \frac{d^2}{dx^2}\left(2\cdot 
-  e^{-0{,}5x^2}\left(1-x^2\right)\right)
-  = - 2x\cdot e^{-0{,}5x^2}\left(3-x^2\right)
+  f''(x) &= \frac{d^2}{dx^2}f(x)\\
+         &= \frac{d}{dx}\left(2\cdot e^{-0{,}5x^2}\left(1-x^2\right)\right)\\
+         &= - 2x\cdot e^{-0{,}5x^2}\left(3-x^2\right)
 
 Einsetzen von :math:`x_1` und :math:`x_2` liefert:
 
 .. math::
+
   f''(x_1) &= f''(-1) &= -2 \cdot (-1)\cdot e^{-0{,}5\cdot(-1)^2}\left(3-(-1)^2\right)
   &= 4 \cdot e^{-0{,}5} &> 0\\
   f''(x_2) &= f''(1) &= -2 \cdot 1\cdot e^{-0{,}5 \cdot 1^2}\left(3-1^2\right)
   &= -4 \cdot e^{-0{,}5} &< 0
 
 Damit ist :math:`x_1` ein Minimum und :math:`x_2` ein Maximum. Dies
-wird in Abbildung 2 bestätigt.
+wird durch Abbildung 2 bestätigt.
 
 Mit Sage erhält man die zweite Ableitung sowie die Werte an den Punkten
 :math:`x_1` und :math:`x_2` folgendermaßen:
@@ -185,29 +188,18 @@ Mit Sage erhält man die zweite Ableitung sowie die Werte an den Punkten
 
 **Lösung zu Teil c**
 
-Die lokale Änderungsrate :math:`m_T` an :math:`x=0` ist die Steigung
-an diesem Punkt. In der vorherigen Teilaufgabe wurde die Ableitung
-bereits berechnet. Daraus erhalten wir:
-
-.. math::
-
-  f'(0) = 2 \cdot e^{-0{,}5\cdot0}(1-0) = 2
-
-.. sagecellserver::
-
-  sage: print("df(0) = " + str(df(0)))
-
-.. end of output
-
-Die mittlere Änderungsrate :math:`m_s` im Intervall :math:`[-0{,}5;0{,}5]`
+Die mittlere Änderungsrate :math:`m_S` von :math:`f` im Intervall :math:`[-0{,}5;0{,}5]`
 ergibt sich aus der Differenz der Funktionswerte an den Intervallgrenzen
-geteilt durch die Intervalllänge.
+geteilt durch die Intervalllänge. Unter Verwendung der Punktsymmetrie
+der Funktion bezüglich des Koordinatenursprungs erhält man
 
 .. math::
-  m_s=\frac{f(0{,}5)-f(-0{,}5)}{0{,}5 - (-0{,}5)} = 2\cdot(0{,}5)\cdot e^{-0{,}5\cdot(0{,}5)^2}
-  - 2\cdot(-0{,}5)\cdot e^{-0{,}5\cdot(-0{,}5)^2} = 2\cdot e^{-0{,}125} \approx 1{,}76
 
-Die prozentuale Abweichung beträgt damit :math:`e^{-0.125}\approx 0{,}882 = 88{,}2\%`
+  m_S &=\frac{f(0{,}5)-f(-0{,}5)}{0{,}5 - (-0{,}5)}\\
+      &= 2f(0{,}5)\\
+      &= 4\cdot(0{,}5)\cdot e^{-0{,}5\cdot(0{,}5)^2}\\
+      &= 2\cdot e^{-0{,}125}\\
+      &\approx 1{,}76
 
 Mit Sage kann leicht eine Funktion erstellt werden, welche für zwei Intervallgrenzen
 die mittlere Steigung berechnet.
@@ -216,16 +208,40 @@ die mittlere Steigung berechnet.
 
   sage: def ms(x1,x2):
   sage:    return (f(x2)-f(x1))/(x2-x1)
-  sage: print("Mittlere Steigung  zwischen -0,5 und 0,5: " + str(ms(-0.5,0.5)))
-  sage: print("Prozentuale Abweichung zur lokalen Steigung: " + str(ms(-0.5,0.5)/df(0)))
+  sage: print("Mittlere Änderungsrate zwischen -0,5 und 0,5: %4.2f" % ms(-0.5, 0.5))
+
+.. end of output
+
+Die lokale Änderungsrate :math:`m_T` bei :math:`x=0` ist die Steigung
+an diesem Punkt. In der vorherigen Teilaufgabe wurde die Ableitung
+bereits berechnet. Daraus erhalten wir:
+
+.. math::
+
+  m_T = f'(0) = 2 \cdot e^{-0{,}5\cdot0}(1-0) = 2
+
+.. sagecellserver::
+
+  sage: print("Lokale Änderungsrate bei x=0: " + str(df(0)))
+
+.. end of output
+
+Die prozentuale Abweichung beträgt damit
+
+.. math::
+
+  \left(\frac{m_S}{m_T}-1\right) = e^{-0.125} = 0{,}882 = 88{,}2\%.
+
+.. sagecellserver::
+
+  sage: print("Prozentuale Abweichung zwischen mittlerer und lokaler Änderungsrate: %4.1f%%" % (100*ms(-0.5,0.5)/df(0)))
 
 .. end of output
 
 **Lösung zum Teil d**
 
-Die Eingeschlossene Fläche :math:`A(u)` lässt sich als Integral von :math:`f(x)`
-mit der unteren Grenze :math:`O` und der oberen Grenze :math:`u` berechnen.
-Es muss gelten:
+Die eingeschlossene Fläche :math:`A(u)` lässt sich als Integral von :math:`f(x)`
+mit der unteren Grenze :math:`0` und der oberen Grenze :math:`u` berechnen:
 
 .. math::
 
@@ -246,16 +262,16 @@ Leitet man :math:`A(u)` nach :math:`u` ab, erhält man:
   = 2u\cdot e^{-0{,}5 u^2} = f(u)
 
 Diese beiden Eigenschaften zeigen, dass :math:`A(u)` das bestimmte
-Integral von :math:`f(x)` mit Intervall :math:`[0;u]` ist.
+Integral von :math:`f(x)` über das Intervall :math:`[0;u]` ist.
 
 Mit Sage lässt sich die Integration direkt ausführen.
 
 .. sagecellserver::
 
-  sage: from sage.symbolic.integration.integral import indefinite_integral
-  sage: u = var('u')
-  sage: assume(u>0)
-  sage: f.integral(x,0,u)
+  sage: var('u')
+  sage: assume(u > 0)
+  sage: a(u) = f.integral(x, 0, u)
+  sage: print("A(u) = "+str(a(u)))
 
 .. end of output
 
@@ -267,18 +283,11 @@ Der Limes von :math:`A(u)` für :math:`u\rightarrow +\infty` ist:
   = \lim\limits_{u\rightarrow +\infty}\left(2-2e^{-0.5u^2}\right)
   = 2 - 0 = 2
 
-Mit Sage lässt sich dieser Wert durch einsetzen von :math:`+\infty` berechnen.
-
-.. 
-  In Sage scheint es einen Bug zu geben der ein Einsetzen von Infinity
-  in f(x) = exp(-x^2) zu einem RuntimeError führt siehe
-  https://groups.google.com/forum/#!topic/sage-devel/tqDSbZ499ME
-  http://trac.sagemath.org/ticket/19918
-
+Mit Sage ergibt sich der Grenzwert auf folgende Weise:
 
 .. sagecellserver::
 
-  sage: print(u"A(\u221E) = " + str(2-2*e^(-0.5*Infinity^2)))
+  sage: print(u"A(\u221E) = " + str(limit(a(u), u=Infinity)))
 
 .. end of output
 
@@ -288,24 +297,23 @@ Dieses Ergebnis bedeutet, dass die eingeschlossene Fläche unter dem Graphen von
 **Lösung zum Teil e**
 
 Der erste Schnittpunkt der Geraden :math:`y=\frac{2}{e^2}\cdot x` mit :math:`G_f`
-ist :math:`x_1=0` da hier beide Graphen den Wert Null haben. Weitere
-Schnittpunkte ergeben sich durch gleichsetzen beider Funktionen.
+ist :math:`x_1=0`, da beide Funktionen durch den Koordiantenursprung
+gehen. Weitere Schnittpunkte ergeben sich durch Gleichsetzen beider Funktionen.
 
 .. math::
 
   \frac{2}{e^2}\cdot x &= 2x \cdot e^{-0{,}5x^2} &\left| \cdot \frac{e^2}{2x}\right. \\
   1 &= e^{-0{,}5x^2 + 2} &\left| \ln()\right. \\
   0 &= -0{,}5x^2 + 2 \qquad&\left| -2\right.\\
-  -2 &= -0{,}5x^2 &\left| \cdot (-2)\right. \\
   4 &= x^2 &\left| \sqrt{\ } \right. \\
   x_{2/ 3} &= \pm 2
 
-Mit Sage lassen sich diese Schnittpunkt wie folgt ermitteln:
+Mit Sage lassen sich diese Schnittpunkte wie folgt ermitteln:
 
 .. sagecellserver::
 
-  sage: g(x) = x * 2 / e^2
-  sage: solve(f(x) == g(x), x)
+  sage: h(x) = x * 2 / e^2
+  sage: solve(f(x) == h(x), x)
 
 .. end of output
 
@@ -314,37 +322,32 @@ in ein Koordinatensystem zeichnet.
 
 .. sagecellserver::
 
-  sage: pf = plot(f, (0,2), color='blue', fill=g, fillcolor='yellow')
-  sage: ppf = plot(f, (-4,0), color='blue')
-  sage: pppf = plot(f, (2,4), color='blue')
-  sage: pg = plot(g, (-4,4), color='red')
-  sage: b = text("B",(1,0.7))
+  sage: pf = plot(f, (0, 2), color='blue', fill=h, fillcolor='yellow')
+  sage: ppf = plot(f, (-4, 0), color='blue')
+  sage: pppf = plot(f, (2, 4), color='blue')
+  sage: pg = plot(h, (-4, 4), color='red')
+  sage: b = text("B",(1, 0.7))
   sage: show(pf + pg + ppf + pppf + b, aspect_ratio=1)
 
 .. end of output
 
-Die eingeschlossene Fläche :math:`B` zwischen den beiden Funktionen
-lässt sich per integration berechnen. Dafür muss die Gerade von der
-Funktion :math:`f(x)` abgezogen werden und dann von :math:`0` bis
-:math:`2` integriert werden. Dabei können wir für die Integration
-die Ergebnisse aus Teilaufgabe **d** verwenden.
+Die eingeschlossene Fläche :math:`B` ergibt sich als Differenz aus der
+Fläche :math:`A(2)` unter der Funktion :math:`f` und der Dreiecksfläche unter
+der Geraden
 
 .. math::
 
-  B =& \int\limits_0^2\left( f(x) - \frac{2}{e^2}\cdot x\right)
-  = \int\limits_0^2 2x\cdot e ^{-0.5x^2} 
-  - \int\limits_0^2\frac{2}{e^2}\cdot x\\
-  =& 2 - 2e^{-0{,}5\cdot 2^2} - \left[ \frac{1}{e^2}\cdot x^2 \right]_{0}^{2}
-  = 2 - 2e^{-2} - \frac{1}{e^2}\left(4-0\right)
-  = 2 - 6 e^{-2} \approx 1.88
+  B &= A(2)-\frac{1}{2}\cdot 2\cdot\frac{2}{e^2}\cdot 2\\
+    &= 2-2e^{-2}-4e^{-2}\\
+    & = 2 - 6 e^{-2}\\
+    &\approx 1.19.
 
 Mit Sage lässt sich dieses Integral leicht berechnen.
 
 .. sagecellserver::
 
-  sage: h(x) = f(x) - g(x)
-  sage: ih = integral(h(x),x,0,2)
-  sage: print("Die Fläche B ist: " + str(float(ih)))
+  sage: b = a(2)-integral(h(x), x, 0, 2)
+  sage: print(u"Die Fläche B ist: " + str(b) + u" \u2248 %4.2f" % b)
 
 .. end of output
 
