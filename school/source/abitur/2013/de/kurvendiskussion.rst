@@ -357,9 +357,9 @@ Aufgabe 2
 **Lösung zum Teil a**
 
 Die Funktionenschar :math:`g_c` ist im Vergleich zu :math:`f(x)`
-um eine Konstante :math:`c` verschoben. Der Hochpunkt des Graphen
-bleibt dabei jedoch an derselben :math:`x`-Koordinate. Dieser wurde
-für :math:`f(x)` in Aufgabe 1 b) berechnet :math:`(x=1` und 
+um eine Konstante :math:`c` vertikal verschoben. Der Hochpunkt des Graphen
+bleibt damit an derselben :math:`x`-Koordinate. Dieser wurde
+für :math:`f(x)` in Aufgabe 1b) berechnet :math:`(x=1` und 
 :math:`f(1) = \frac{2}{\sqrt{e}})`.
 Der :math:`y`-Wert des Hochpunktes von :math:`g_c` ergibt sich
 entsprechend durch
@@ -370,29 +370,24 @@ entsprechend durch
 
 Damit sind die Koordinaten des Hochpunktes :math:`\left(1;\frac{2}{\sqrt{e}} + c\right)`
 
-In Sage lässt sich der Hochpunkt für ein festes :math:`c` numerisch berechnen.
+In Sage lässt sich der Hochpunkt für ein festes :math:`c` numerisch
+berechnen. Hier wählen wir speziell :math:`c=3`.
 
 .. sagecellserver::
 
   sage: c = var('c')
-  sage: gc(c,x) = f(x) + c
+  sage: gc(c, x) = f(x) + c
   sage: hy, hx = find_local_maximum(gc(3), -30, 30)
   sage: print("Der Hochpunkt für c=3 befindet sich am Punkt: (" + str(hx) + "," + str(hy) + ")")
 
 .. end of output
 
-Der Limes von :math:`g_c` für :math:`x\rightarrow + \infty` ist:
+Da :math:`f(x)` im Limes :math:`x\rightarrow + \infty` verschwindet,
+folgt :math:`\lim\limits_{x\rightarrow+\infty}g_c(x) = c`.
 
-.. math::
+.. sagecellserver::
 
-  \lim\limits_{x\rightarrow +\infty} g_c(x) 
-  = \lim\limits_{x\rightarrow+\infty}\left( f(x) + c\right)
-  = \lim\limits_{x\rightarrow+\infty}\left( f(x)\right)  
-  + \lim\limits_{x\rightarrow+\infty}(c)
-  \overset{\mathrm{1. a}}{=} 0 + c = c
-
-.. Hier wäre in Sage eine Betrachtung von gc(Infinity) interesant.
-   Dies ist aber wegen des oben genannten Bugs noch nicht möglich
+  sage: print(u"g_c(c, \u221E) = " + str(limit(gc(c, x), x=Infinity)))
 
 **Lösung von Teil b**
 
@@ -400,7 +395,7 @@ Damit :math:`g_c` keine Nullstellen hat, muss ein positives/negatives :math:`c` 
 größer als der Tiefpunkt/Hochpunkt des Graphen gewählt werden, z.B. :math:`c=2`.
 Für eine Nullstelle kann :math:`c` gleich dem negativen Wert des Hochpunktes oder
 gleich dem positiven Wert des Tiefpunkts von :math:`f(x)` gewählt werden. 
-Aus Aufgabe 1 b) folgt dann, dass :math:`c=\pm\frac{2}{\sqrt{e}}` eine Lösung hierfür
+Aus Aufgabe 1b) folgt dann, dass :math:`c=\pm\frac{2}{\sqrt{e}}` eine Lösung hierfür
 ist. Eine weitere Lösung ist es, :math:`c=0` zu wählen. Damit erhalten wir :math:`f(x)`, 
 welches nur im Ursprung eine Nullstelle hat.
 Für alle anderen Fälle von :math:`c` (betragsmäßig kleiner als Hoch- und Tiefpunkt und
@@ -417,10 +412,10 @@ Nullstellen.
 
 .. sagecellserver::
 
-  sage: pg0 = plot(gc(0,x), (-4,4), color='blue')
-  sage: pg1 = plot(gc(1,x), (-4,4), color='red')
-  sage: pgtp = plot(gc(2/sqrt(e),x), (-4,4), color='purple')
-  sage: pg2 = plot(gc(2,x), (-4,4), color='green')
+  sage: pg0 = plot(gc(0, x), (-4, 4), color='blue')
+  sage: pg1 = plot(gc(1, x), (-4, 4), color='red')
+  sage: pgtp = plot(gc(2/sqrt(e), x), (-4, 4), color='purple')
+  sage: pg2 = plot(gc(2, x), (-4, 4), color='green')
   sage: show(pg0 + pg1 + pgtp + pg2, aspect_ratio=1)
 
 .. end of output
@@ -430,28 +425,24 @@ Die Nullstellen für diese Funktionen lassen sich in Sage numerisch berechnen.
 .. sagecellserver::
 
   sage: def my_find_root(f, a, b, n):
-  sage:     # f: Funktion
-  sage:     # a: Startpunkt des Intervalls
-  sage:     # b: Endpunkt des Intervalls
-  sage:     # n: Anzahl der Teilabschnitte, in den Teilabschnitten wird maximal eine Nullstelle gefunden
+  ...       """finde Nullstellen der Funktion f im Intervall [a, b] durch
+  ...       Unterteilung in n gleich große Teilintervalle
+  ...           
+  ...       """
+  ...       roots = set()
+  ...       print("Suche nach Nullstellen zwischen " + str(a) + " und " + str(b) + " für die Funktion: " + str(f))
+  ...       for i in range(n):
+  ...           print("Suche Nullstelle im Intervall: [" + str(a + (b-a)/n * i) + ", " + str(a + (b-a)/n * (i+1)) + "]")
+  ...           try:
+  ...               r = find_root(f, a + (b-a)/n * i, a + (b-a)/n * (i+1))
+  ...               print("Nullstelle gefunden bei x = " + str(r))
+  ...               roots.add(r)
+  ...           except RuntimeError: # Es wurde keine Nullstelle in diesem Intervall gefunden
+  ...               pass
+  ...       print( str(f) + " hat Nullstellen bei x = {" + ", ".join(str(nst) for nst in roots) + "}")
 
-  sage:     roots = set()
-  sage:     print("Suche nach Nullstellen zwischen " + str(a) + " und " + str(b) + " für die Funktion: " + str(f))
-  sage:     for i in range(n):
-  sage:         print("Suche Nullstelle im Intevall: [" + str(a + (b-a)/n * i) + ", " + str(a + (b-a)/n * (i+1)) + "]")
-  sage:         try:
-  sage:             r = find_root(f, a + (b-a)/n * i, a + (b-a)/n * (i+1))
-  sage:             print("Nullstelle gefunden bei x = " + str(r))
-  sage:             roots.add(r)
-  sage:         except RuntimeError: # Es wurde keine Nullstelle in diesem Intervall gefunden
-  sage:             pass
-  sage:     print( str(f) + " hat Nullstellen bei x = {" + ", ".join(str(nst) for nst in roots) + "}")
-
-
-  sage: my_find_root(gc(0), -5, 5, 10)
-  sage: my_find_root(gc(1), -5, 5, 10)
-  sage: my_find_root(gc(2/sqrt(e)), -5, 5, 10)
-  sage: my_find_root(gc(2), -5, 5, 10)
+  sage: for c in (0, 1, 2/sqrt(e), 2):
+  ...       my_find_root(gc(c), -5, 5, 10)
 
 .. end of output
 
