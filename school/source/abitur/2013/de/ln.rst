@@ -10,29 +10,29 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung**
 
-Der Definitionsberreich für den natürlichen Logarithmus :math:`\ln(x)` ist
-:math:`]0,\infty]`. Für :math:`\ln(-x)` ergibt sich damit ein Defintionsbereich
-von :math:`[-\infty,0[`. Addiert man nun innerhalb des Logarithmus eine Zahl,
-muss dies auch bei dem Defintionsberreich geschehen. Es ergibt sich für
-:math:`f(x)=\ln(2013-x)` der Defintionsberreich
-:math:`\mathrm{D}=[-\infty, 2013[`.
+Der Definitionsbereich für den natürlichen Logarithmus :math:`\ln(x)` ist
+:math:`(0,\infty)`. Für :math:`\ln(-x)` ergibt sich damit ein Defintionsbereich
+von :math:`(-\infty,0)`. Addiert man nun innerhalb des Logarithmus eine Zahl,
+muss dies auch für den Defintionsbereich geschehen. Somit ergibt sich für
+:math:`f(x)=\ln(2013-x)` der Defintionsbereich
+:math:`\mathrm{D}=(-\infty, 2013)`.
 
 Mit Sage können wir uns einen Überblick über die Funktion verschaffen
 
 .. sagecellserver::
 
   sage: f(x) = log(2013-x)
-  sage: plot(f(x), x, (-2014,2014), figsize=(4, 2.8))
+  sage: plot(f(x), x, (-2014, 2014), figsize=(4, 2.8))
 
 .. end of output
 
-Für die Grenzen von :math:`\mathrm{D}` erhält man folgendes Verhalten:
+An den Grenzen von :math:`\mathbb{D}` erhält man folgendes Verhalten:
 
 .. math::
 
-  \lim\limits_{x\rightarrow -\infty}\left(\ln(2013-x)\right) 
-  = \lim\limits_{x\rightarrow -\infty}\left(\ln(-x)\right)
-  = \lim\limits_{\tilde{x}\rightarrow +\infty}\left(\ln(\tilde{x})\right)
+  \lim\limits_{x\rightarrow -\infty}\ln(2013-x)
+  = \lim\limits_{x\rightarrow -\infty}\ln(-x)
+  = \lim\limits_{\tilde{x}\rightarrow +\infty}\ln(\tilde{x})
   = +\infty
 
 In Sage lässt sich dieses Ergebniss bestätigen, indem man :math:`-\infty` für
@@ -49,8 +49,8 @@ Geht :math:`x` gegen :math:`2013`, so geht das Argument des Logarithmus gegen
 
 .. math::
 
-  \lim\limits_{x\rightarrow 2013}\left(\ln(2013-x)\right) 
-  = \lim\limits_{\tilde{x}\rightarrow 0^{+}}\left(\ln(\tilde{x})\right)
+  \lim\limits_{x\rightarrow 2013^{-}}\ln(2013-x)
+  = \lim\limits_{\tilde{x}\rightarrow 0^{+}}\ln(\tilde{x})
   = -\infty
 
 .. sagecellserver::
@@ -59,7 +59,7 @@ Geht :math:`x` gegen :math:`2013`, so geht das Argument des Logarithmus gegen
 
 .. end of output
 
-Den Schnittpunkt mit der :math:`y`-Achse erhält man durch einsetzen von
+Den Schnittpunkt mit der :math:`y`-Achse erhält man durch Einsetzen von
 :math:`x=0`:
 
 .. math::
@@ -68,11 +68,11 @@ Den Schnittpunkt mit der :math:`y`-Achse erhält man durch einsetzen von
 
 .. sagecellserver::
 
-  sage: print("f(0) = " + str(f(0)) + " = " + str(f(0).numerical_approx()))
+  sage: print("f(0) = " + str(f(0)) + " = " + str(f(0).n(12)))
 
 .. end of output
 
-Die Logarithmusfunktion schneidet die :math:`x`-Achse wenn das Argument gleich
+Die Logarithmusfunktion schneidet die :math:`x`-Achse, wenn das Argument gleich
 :math:`1` ist:
 
 .. math::
