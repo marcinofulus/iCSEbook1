@@ -325,9 +325,9 @@ in ein Koordinatensystem zeichnet.
   sage: pf = plot(f, (0, 2), color='blue', fill=h, fillcolor='yellow')
   sage: ppf = plot(f, (-4, 0), color='blue')
   sage: pppf = plot(f, (2, 4), color='blue')
-  sage: pg = plot(h, (-4, 4), color='red')
+  sage: ph = plot(h, (-4, 4), color='red')
   sage: b = text("B",(1, 0.7))
-  sage: show(pf + pg + ppf + pppf + b, aspect_ratio=1)
+  sage: show(pf + ph + ppf + pppf + b, aspect_ratio=1)
 
 .. end of output
 
@@ -378,7 +378,7 @@ berechnen. Hier wählen wir speziell :math:`c=3`.
   sage: c = var('c')
   sage: gc(c, x) = f(x) + c
   sage: hy, hx = find_local_maximum(gc(3), -30, 30)
-  sage: print("Der Hochpunkt für c=3 befindet sich am Punkt: (" + str(hx) + "," + str(hy) + ")")
+  sage: print("Der Hochpunkt für c=3 befindet sich am Punkt: (%4.2f,%4.2f)" % (hx, hy))
 
 .. end of output
 
@@ -420,9 +420,21 @@ Nullstellen.
 
 .. end of output
 
-Die Nullstellen für diese Funktionen lassen sich in Sage numerisch berechnen.
+Die Nullstellen für diese Funktionen lassen sich in Sage numerisch
+berechnen, wenn man ein Intervall vorgibt, in dem man nicht mehr als
+eine Nullstelle erwartet. Das gesamte zu untersuchende Intervall muss
+also in hinreichend kleine Teilintervalle unterteilt werden, um alle
+Nullstellen zu finden. Im folgenden Beispiel wird das Intervall
+:math:`[-5, 5]` in eine wählbare Anzahl von Teilintervallen unterteilt.
+Interessant ist es, wenn man :math:`c` in der Nähe des Wertes wählt, bei
+dem es nur eine Nullstelle gibt, also zum Beispiel :math:`c=\pm 1,2`.
+Dann hängt die Zahl der gefundenen Nullstellen von der
+Intervallaufteilung ab.
+
 
 .. sagecellserver::
+
+  sage: from numpy import linspace
 
   sage: def my_find_root(f, a, b, n):
   ...       """finde Nullstellen der Funktion f im Intervall [a, b] durch
@@ -430,25 +442,26 @@ Die Nullstellen für diese Funktionen lassen sich in Sage numerisch berechnen.
   ...           
   ...       """
   ...       roots = set()
-  ...       print("Suche nach Nullstellen zwischen " + str(a) + " und " + str(b) + " für die Funktion: " + str(f))
-  ...       for i in range(n):
-  ...           print("Suche Nullstelle im Intervall: [" + str(a + (b-a)/n * i) + ", " + str(a + (b-a)/n * (i+1)) + "]")
+  ...       grenzen = linspace(a, b, n+1)
+  ...       for x0, x1 in zip(grenzen[:-1], grenzen[1:]):
   ...           try:
-  ...               r = find_root(f, a + (b-a)/n * i, a + (b-a)/n * (i+1))
-  ...               print("Nullstelle gefunden bei x = " + str(r))
-  ...               roots.add(r)
+  ...               r = find_root(f, x0, x1)
+  ...               roots.add(str(r))
   ...           except RuntimeError: # Es wurde keine Nullstelle in diesem Intervall gefunden
   ...               pass
-  ...       print( str(f) + " hat Nullstellen bei x = {" + ", ".join(str(nst) for nst in roots) + "}")
+  ...       nullstellen = "{" + ", ".join(roots) + "}"
+  ...       print("Nullstellen von " + str(f) + ": " + nullstellen)
 
-  sage: for c in (0, 1, 2/sqrt(e), 2):
-  ...       my_find_root(gc(c), -5, 5, 10)
+  sage: @interact
+  sage: def _(c=slider(-2, 2, 0.1, 0),
+  ...         n=slider(1, 80, 1)):
+  ...       my_find_root(gc(c), -5, 5, n)
 
 .. end of output
 
 **Lösung von Teil c**
 
-Die Formel lässt sich leicht mit der Linearität von Integralen herleiten:
+Die Formel lässt sich leicht mit der Linearität der Integration herleiten:
 
 .. math::
 
@@ -456,22 +469,21 @@ Die Formel lässt sich leicht mit der Linearität von Integralen herleiten:
   \int\limits_0^3f(x)\mathrm{d}x+\int\limits_0^3c\mathrm{d}x=
   \int\limits_0^3f(x)\mathrm{d}x+3c
 
-Eine Skizze, welche die Formel
-:math:`\int\limits_0^3 g_c(x)\mathrm{d}x=\int\limits_0^3f(x)\mathrm{d}x+3c`
-visualisiert, lässt sich in Sage leicht erstellen. Das grüne Rechteck hat die
-Fläche :math:`3c`. Die gelbe Fläche ist gleich dem Integral über :math:`f(x)`.
+Eine Skizze, welche diesen Zusammenhang visualisiert, lässt sich in Sage leicht
+erstellen. Das grüne Rechteck hat die Fläche :math:`3c`. Die gelbe Fläche ist
+gleich dem Integral über :math:`f(x)`.
 
 .. sagecellserver::
 
   sage: c = 1
-  sage: pg = plot(gc(c,x), (0, 3), color='red', fill=c, fillcolor='yellow')
-  sage: pgl = plot(gc(c,x), (-1, 0), color='red')
-  sage: pgr = plot(gc(c,x), (3, 4), color='red')
+  sage: pg = plot(gc(c, x), (0, 3), color='red', fill=c, fillcolor='yellow')
+  sage: pgl = plot(gc(c, x), (-1, 0), color='red')
+  sage: pgr = plot(gc(c, x), (3, 4), color='red')
   sage: gtext = text(r"$g_1(x)$", (2, c + 0.8), fontsize=14)
-  sage: pc = plot(c,(0,3), color='white', fill=True, fillcolor='lightgreen')
+  sage: pc = plot(c,(0, 3), color='white', fill=True, fillcolor='lightgreen')
   sage: ftext = text(r"$\int_0^3 f(x) \mathrm{d}x$",(1, c + 0.5), fontsize=14)
   sage: ctext = text(r"$c=" + str(c) + r"$",(-0.5, c), fontsize=14)
-  sage: c3text = text(r"$3\cdot c$",(1, c/2), fontsize=14)
+  sage: c3text = text(r"$3c$",(1, c/2), fontsize=14)
   sage: show(pgl + pg + pgr + gtext+ pc + ftext + ctext + c3text, aspect_ratio=1, xmax=4)
 
 .. end of output
@@ -481,7 +493,7 @@ Aufgabe 3
 
 **Lösung zu Teil a**
 
-Um den Startpunkt und Endpunkt des Intervalls zu finden in welchem
+Um den Startpunkt und Endpunkt des Intervalls zu finden, in welchem
 :math:`g_{1{,}4}(x) > 2{,}1` ist, muss folgende Gleichung gelöst werden:
 
 .. math::
@@ -491,7 +503,7 @@ Um den Startpunkt und Endpunkt des Intervalls zu finden in welchem
 Aus den vorherigen Aufgaben wissen wir, dass der Hochpunkt von :math:`g_c(x)`
 bei :math:`x = 1` liegt. Daraus folgt, dass der Startpunkt des Intervalls einen
 kleineren :math:`x`-Wert hat. Der Endpunkt muss hingegen einen größeren
-:math:`x`-Wert haben. Die Punkte werden durch numerisches lösen der Gleichung
+:math:`x`-Wert haben. Die Punkte werden durch numerisches Lösen der Gleichung
 mit Hilfe von Sage berechnet.
 
 .. sagecellserver::
@@ -508,34 +520,27 @@ mit Hilfe von Sage berechnet.
 
 **Lösung zu Teil b**
 
-In Aufgabe 2 c) wurde gezeigt, dass
-
-.. math:: 
-  \lim\limits_{x\rightarrow \infty} g_c(x) = c
-
-gilt. Für das gegebene Modell der Bevölkerungsentwicklung mit :math:`c=1{,}4`
-folgt daraus, dass sich die Geburtenrate hin zu :math:`1{,}4` entwickelt. Mit
-dieser Geburtenrate sinkt die Bevölkerungszahl.
+Aus der vorigen Teilaufgabe ergibt sich, dass die Geburtenziffer im
+Rahmen des gegebenen Modells spätestens seit 1975 unter dem Wert lag,
+für den die Bevölkerungszahl langfristig konstant bleibt. Damit ist
+für die künftige Entwicklung eine Abnahme der Bevölkerung zu erwarten.
 
 **Lösung zu Teil c**
 
-Abweichend von der Aufgabenstellung wird hier berechnet, zu welchem Zeitpunk
-die Geburtenzahl am stärksten abnimmt.
-
-Der Punkt mit der stärksten Abnahme ist das Minimum der Ableitung. Da
-:math:`g_{c}(x)` nur um eine Konstante von :math:`f(x)` verschoben ist, sind
-deren Ableitungen gleich. Für :math:`f(x)` wurden die ersten zwei Ableitung in
-Aufgabe 1 b) berechnet. Um das Minimum zu finden muss die Nullstelle von
-:math:`f''(x)` gefunden werden.
+Der Punkt mit der stärksten Abnahme der Geburtenziffer ist durch das Minimum
+der Ableitung der Geburtenziffer gegeben. Da :math:`g_{c}(x)` nur um eine
+Konstante gegenüber :math:`f(x)` vertikal verschoben ist, sind
+die Ableitungen der beiden Funktionen gleich. Für :math:`f(x)` wurden die ersten
+zwei Ableitungen in Aufgabe 1b) berechnet. Um das Minimum der Ableitung
+der Geburtenziffer zu finden, müssen die Nullstellen von
+:math:`f''(x)` bestimmt werden:
 
 .. math::
 
   &f''(x) = 2x \cdot e^{-0{,}5x^2}\left(x^2 - 3\right)\overset{!}{=}0\\
-  &\rightarrow x_1 = 0\\
-  &\left(x^2  - 3\right) \overset{!}{=}0\\
-  &\rightarrow x_{2/3} = \pm \sqrt{3}
+  &\rightarrow x_1 = 0, x_{2/3} = \pm \sqrt{3}
 
-Dieses Ergebnis erhält man auch durch Sage.
+Dieses Ergebnis erhält man auch mit Hilfe von Sage:
 
 .. sagecellserver::
 
@@ -543,16 +548,14 @@ Dieses Ergebnis erhält man auch durch Sage.
 
 .. end of output
 
-Da das Modell nur für :math:`x\geq 0` gültig ist fällt die Nullstelle
-:math:`x_3=-\sqrt{3}` als mögliche Lösung weg. :math:`x_1=0` kann kein globales
-Minimum der Ableitung sein, da hier der Graph eine positive Steigung hat und wir
-bereits negative Werte für die Ableitung nachgewiesen haben:
-:math:`g'(0) = f'(0) \overset{1 c.}{=} 2`. Folglich ist :math:`x_2=\sqrt{3}`
-das gesuchte Minimum der Ableitung. Dies Entspricht dem Jahr 1972.
+Da das Modell nur für :math:`x\geq 0` gültig ist, entfällt die Nullstelle
+:math:`x_3=-\sqrt{3}` als mögliche Lösung. Bei :math:`x_1=0` kann kein globales
+Minimum der Ableitung vorliegen, da die Geburtenziffer dort gemäß
+Teilaufgabe 1c) zunimmt und wir bereits negative Werte für die Ableitung
+nachgewiesen haben.  Folglich ist :math:`x_2=\sqrt{3}`
+das gesuchte Minimum der Ableitung. Dies entspricht dem Jahr 1972.
 
-Damit die Abnahme der Geburtenrate ab diesem Zeitpunkt kontinuierlich schwächer
-wird, müssen folgende Punkte erfüllt sein:
-
-* Die Ableitung :math:`g'(x)` muss für alle :math:`x>\sqrt{3}` negativ sein.
-* Die zweite Ableitung :math:`g''(x)` darf für :math:`x>\sqrt{3}` keine
-  Nullstelle haben.
+Damit die Abnahme der Geburtenziffer ab diesem Zeitpunkt kontinuierlich schwächer
+wird, muss die Ableitung :math:`g'(x)` für :math:`x>\sqrt{3}` negativ
+sein. Dies ist gemäß der in Teilaufgabe 1b) bestimmten Ableitung von
+:math:`f(x)` der Fall.
