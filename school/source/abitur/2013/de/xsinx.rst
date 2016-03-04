@@ -33,8 +33,8 @@ Durch Sage lässt sich das Ergebnis bestätigen:
 .. sagecellserver::
 
   sage: f(x) = x*sin(x)
-  sage: df(x) = derivative(f,x)
-  sage: ddf(x) = derivative(df,x)
+  sage: df(x) = derivative(f, x)
+  sage: ddf(x) = derivative(df, x)
   sage: print("ddf(x) = " + str(ddf(x)))
   sage: print("ddf(0) = " + str(ddf(0)))
 
@@ -47,7 +47,7 @@ Dies kann man auch erkennen, wenn man sich den Funktionsgraphen zeichnen lässt.
 
 .. sagecellserver::
 
-  sage: pf = plot(f(x),(-6, 6))
+  sage: pf = plot(f(x), (-6, 6))
   sage: show(pf, aspect_ratio=1)
 
 .. end of output
