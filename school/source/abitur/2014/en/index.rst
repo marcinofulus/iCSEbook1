@@ -18,6 +18,8 @@ Stochastics
 .. toctree::
    :maxdepth: 1
 
+   Aufgabe 1 <urne>
+
 Geometry
 ........
 
