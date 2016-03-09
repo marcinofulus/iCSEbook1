@@ -15,7 +15,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   
   Prove that the expectation value of :math:`X` can not exceed the value 2.2.
 
-**Lösung**     
+**Solution**     
 
 The expectation value of a random varible :math:`X` is given by the sum over
 the products of all possible values with their probabilities:
