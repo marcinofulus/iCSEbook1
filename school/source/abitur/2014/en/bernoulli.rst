@@ -1,5 +1,5 @@
-Bayerisches Abitur in Mathematik 2014
--------------------------------------
+Bavarian final secondary-school examinations in mathematics 2014
+----------------------------------------------------------------
 
 .. admonition:: Aufgabe
 
