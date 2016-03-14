@@ -86,7 +86,7 @@ comes clear when it is set to 0.
      ...           print 'p0 =', p0
      ...           print 'E =', p1+2*p2+3*p3
      ...       else:
-     ...           print 'p0 =', p0, '  Negative Werte sind nicht erlaubt'
+     ...           print 'p0 =', p0, 'Negative values are forebidden.'
 
 ..  end of output
 

@@ -86,27 +86,27 @@ exact result and will also prove our solution of part a).
 
 .. sagecellserver::
 
-    sage: haeufigkeit_e = 0
-    sage: gesamtzahl = 0
+    sage: frequency_e = 0
+    sage: total = 0
     sage: A0 = ['w', 'w', 'w', 'r', 'r']
     sage: B0 = ['w', 'w', 'r', 'r', 'r']
-    sage: for a_kugel in A0:
+    sage: for a_ball in A0:
     ...       A1 = A0[::]
     ...       B1 = B0[::]
-    ...       A1.remove(a_kugel)
-    ...       B1.append(a_kugel)
-    ...       for b_kugel in B1:
-    ...           print 'A->B:', a_kugel,
+    ...       A1.remove(a_ball)
+    ...       B1.append(a_ball)
+    ...       for b_ball in B1:
+    ...           print 'A->B:', a_ball,
     ...           A2 = A1[::]
-    ...           A2.append(b_kugel)
-    ...           print '  B->A:', b_kugel,
-    ...           gesamtzahl = gesamtzahl+1
+    ...           A2.append(b_ball)
+    ...           print '  B->A:', b_ball,
+    ...           total = total+1
     ...           if A2.count('w') == 3:
-    ...               haeufigkeit_e = haeufigkeit_e+1
+    ...               frequency_e = frequency_e+1
     ...               print "   A: ", A2, "<==="
     ...           else:
     ...               print "   A: ", A2
-    sage: print "p(E) = %s/%s" % (haeufigkeit_e, gesamtzahl)
+    sage: print "p(E) = %s/%s" % (frequency_e, total)
 
 The second possibility is to repeatedly simulate the experiment of randomly drawing 
 balls from the two urns and to check if the event E occurs. This approach is faster 
@@ -117,21 +117,21 @@ in order to reach a good approximation.
 .. sagecellserver::
 
     sage: import random
-    sage: def verschiebe_kugel(urne1, urne2):
-    ...       kugel = random.choice(urne1)
-    ...       urne1.remove(kugel)
-    ...       urne2.append(kugel)
-    ...       return urne1, urne2
-    sage: haeufigkeit_e = 0
-    sage: iterationen = 100000
-    sage: for _ in range(iterationen):
+    sage: def move_ball(urn1, urn2):
+    ...       ball = random.choice(urn1)
+    ...       urn1.remove(ball)
+    ...       urn2.append(ball)
+    ...       return urn1, urn2
+    sage: frequency_e = 0
+    sage: iterations = 100000
+    sage: for _ in range(iterations):
     ...       A = ['w', 'w', 'w', 'r', 'r']
     ...       B = ['w', 'w', 'r', 'r', 'r']
-    ...       verschiebe_kugel(A, B)
-    ...       verschiebe_kugel(B, A)
+    ...       move_ball(A, B)
+    ...       move_ball(B, A)
     ...       if A.count('w') == 3 :
-    ...           haeufigkeit_e = haeufigkeit_e+1
-    sage: print "Näherung für die Wahrscheinlichkeit p(E) = ", float(haeufigkeit_e/iterationen)
+    ...           frequency_e = frequency_e+1
+    sage: print "Approximation for the probability p(E) = ", float(frequency_e/iterations)
 
 
 

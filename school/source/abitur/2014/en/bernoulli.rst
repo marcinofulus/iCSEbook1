@@ -43,7 +43,7 @@ of the given probability
   sage: p = 0.9
   sage: q = 0.1
   sage: p_E = p^20 + 20*q*p^19
-  sage: print "Wahrscheinlichkeit p(E) =", p_E
+  sage: print "Probability p(E) =", p_E
 
 .. end of output
 
@@ -54,20 +54,20 @@ of 'having at least 19 hits'.
 .. sagecellserver::
 
   sage: import numpy as np
-  sage: schwelle = 19
-  sage: haeufigkeit_e = np.zeros(21)
-  sage: wiederholungen = 50000
-  sage: for _ in range(wiederholungen):
-  ...       treffer = sum(np.random.random(20) < p)
-  ...       haeufigkeit_e[treffer] = haeufigkeit_e[treffer]+1
-  sage: wahrscheinlichkeiten = haeufigkeit_e/wiederholungen
-  sage: ueberschrift = ' Treffer  Wahrscheinlichkeit'
-  sage: print ueberschrift
-  sage: print "-"*len(ueberschrift)
-  sage: for treffer, p_von_e in enumerate(wahrscheinlichkeiten):
-  ...       print "%6i       %g" % (treffer, p_von_e)
-  sage: p_geq_19 = wahrscheinlichkeiten[19]+wahrscheinlichkeiten[20]
-  sage: print "Näherung für die Wahrscheinlichkeit p(E) =", p_geq_19
+  sage: threshold_value = 19
+  sage: frequency_e = np.zeros(21)
+  sage: iterations = 50000
+  sage: for _ in range(iterations):
+  ...       hits = sum(np.random.random(20) < p)
+  ...       frequency_e[hits] = frequency_e[hits]+1
+  sage: probabilities = frequency_e/iterations
+  sage: headline = ' Hit  probability'
+  sage: print headline
+  sage: print "-"*len(headline)
+  sage: for hits, p_of_e in enumerate(probabilities):
+  ...       print "%6i       %g" % (hits, p_of_e)
+  sage: p_geq_19 = probabilities[19]+probabilities[20]
+  sage: print "Approximation of the probability p(E) =", p_geq_19
 
 .. end of output
 
