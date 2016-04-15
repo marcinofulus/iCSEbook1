@@ -11,7 +11,7 @@ Analysis
    Aufgabe 5 <qualitative_integrale>
    Aufgabe 6 <wendepunkte>
    Aufgabe 7 <rechteck>
-   Aufgabe 8 <Wurzelfunktion>
+   Aufgabe 8 <wurzelfunktion>
 
 Stochastik
 ..........
