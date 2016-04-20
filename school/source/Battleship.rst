@@ -2,6 +2,8 @@
 Battleship!
 +++++++++++
 
+We are now going to create a game you have probably heard of, called Battleship. You will have to use the basic programming skills you gained in the introductory tutorial. It may be helpful to go back and take a look at certain parts if you get stuck. 
+
 A lot of these exercises are pulled from Code Academy, and so you can
 also solve them there by following this link and finding the right
 module:
@@ -36,14 +38,14 @@ version that works well, you can keep expanding it with more features
 until you have a more involved game.
 
 Let's get to it!
-================
+----------------
 
 Creating the game board.
 ========================
 
 The first thing we have to do is to create the board itself. The board
 represents the ocean, and we want it to be a grid so that we can guess a
-square by giving the x and y coordinates. Let us create a 5x5 board. If
+square where we think the opponent has placed a ship by giving the x and y coordinates. Let us create a 5x5 board. If
 we were to draw it by hand, it would look something like this:
 
 
@@ -64,8 +66,8 @@ lists. We create a list consisting of 5 elements, where each element is
 itself a list of 5 elements. This inner list contains only 5 “O”
 strings. (Capital o, not zero)
 
-Exercises
-=========
+Exercises 1
+===========
 
 1. Create a variable board and set it to contain an empty list
 2. Append the list :math:`\verb+["O", "O", "O", "O", "O"]+` to board 5
@@ -79,7 +81,7 @@ several times during the game, so it is probably a good idea to define a
 function that does exactly this. We can start to create the function
 like so
 
-.. sagecellserver:: python
+.. code:: python
 
     def print_board(board):
     	...
@@ -87,20 +89,14 @@ Remember the indentation! Inside the function we will want to create a
 loop which iterates through the board-list and writes every row of the
 game on a seperate line
 
-.. sagecellserver:: python
+.. code:: python
 
     for row in board:
     	print row
-.. raw:: html
 
-   <style>
-   li {
-   font-family: Times New Roman, serif;
-   }
-   </style>
 
-Exercises
-=========
+Exercises 2
+===========
 
 1. finish the function :math:`\verb+print_board+`
 2. Make sure the function works by calling it with
@@ -117,44 +113,38 @@ Now that you have created the board we will use, and printed it, you
 need to learn how to change it. Remember that we can change a list by
 indexing. If we have a simple list like this
 
-.. sagecellserver:: python
+.. code:: python
 
     names = ["Lisa", "Mary", "Marcus"]
     print names
 
-.. parsed-literal::
-
-    ['Lisa', 'Mary', 'Marcus']
     
 
 then we can for example change 'Marcus' to 'Markus' with indexing
 
-.. sagecellserver:: python
+.. code:: python
 
     names[2] = "Markus"
     print names
 
-.. parsed-literal::
-
-    ['Lisa', 'Mary', 'Markus']
     
 
-Remember that python begins counting at 0!
+Remember that Python begins counting at 0!
 
 Because our board consists of lists inside lists,
 :math:`\verb+board[0]+` returns the list
 :math:`\verb+["O", "O", "O", "O", "O"]+`, which we can then index again.
 Like this
 
-.. sagecellserver:: python
+.. code:: python
 
     board[0][0] = "X"
 Now, we have changed the (0,0) coordinate to "X" instead of "O". Play
 around with changing the list until you feel confident you know how it
 works.
 
-Exercises
-=========
+Exercises 3
+===========
 
 1. run the command :math:`\verb+board[0][0] = 'X'+` and then use
    :math:`\verb+print_board(board)+` to see the result. Which element
@@ -167,7 +157,7 @@ grid, and we have learned how we can change the squares in the board.
 Let us see how we can place and shoot our ships.
 
 Placing ships
-=============
+-------------
 
 Let us begin by placing an enemy ship that only covers one single square
 on the grid. The ship should have the possibility of appearing anywhere
@@ -177,8 +167,8 @@ coordinates between 0 and 4.
 We want the ship to have a different, random position each time we play
 the game. To do this, you need to draw random coordinates.
 
-Exercises:
-==========
+Exercises 4
+===========
 
 1. Import the function :math:`\verb+randint+` from :math:`\verb+random+`
 2. Create a variable :math:`\verb+ship_x+`, and give it a random value
@@ -191,13 +181,13 @@ Now, the ships coordinates are random and stored in the variables
 test our program, it will be useful to know exactly where the ship is.
 You can see where the ship is by simply printing the coordinates
 
-.. sagecellserver:: python
+.. code:: python
 
     print ship_x
     print ship_y
 or you can change the board, so that the ships position is visible
 
-.. sagecellserver:: python
+.. code:: python
 
     board[ship_x][ship_y] = "+"
     print_board(board)
@@ -206,14 +196,14 @@ printout when you are done writing and testing the program. Otherwise,
 the game will be far to easy for the player!
 
 Shoot the ship!
-===============
+---------------
 
 Now we are ready to let the user try to shoot down the ship. To do this
 you need to have the user guess where the ship is, which you can do with
 :math:`\verb+raw_input()+`.
 
-Exercises
-=========
+Exercises 5
+===========
 
 1. Create a variable :math:`\verb+guess_x+` and use
    :math:`\verb+raw_input()+` to store the users answer
@@ -238,8 +228,8 @@ coordinates has to be correct. In other words, :math:`\verb+ship_x+` and
 :math:`\verb+guess_x+` has to be equal and :math:`\verb+ship_y+` and
 :math:`\verb+guess_y+` has to be equal.
 
-Exercises
-=========
+Exercises 6
+===========
 
 1. Create an :math:`\verb+if+` test that checks if
    :math:`\verb+ship_x == guess_x+` and
@@ -255,13 +245,13 @@ should also change the board so the user can see where she has guessed
 previously. Let us use 'X' to show that a field has been shot, but it
 was a miss.
 
-Exercises
-=========
+Exercises 7
+===========
 
 1. In your else block, change the square in your board with coordinates
-   guess\_x and guess\_y to “X”. Then print the board again. **Hint:**
+   :math:`\verb+guess_x+` and :math:`\verb+guess_y+` to 'X'. Then print the board again. **Hint:**
 
-.. sagecellserver:: python
+.. code:: python
 
     if ...:
         print ...
@@ -281,8 +271,8 @@ user to shoot up to 10 times! We choose to use a :math:`\verb+while+`
 loop that repeats until the user either wins, or misses 10 times. This
 means that we need to keep track of how many times the user have missed.
 
-Exercises
-=========
+Exercises 8
+===========
 
 1. Create a variable :math:`\verb+misses+`, and set its value to be 0.
 
@@ -317,7 +307,7 @@ already shot this field!
    the code that already belonged to the :math:`\verb+else+` block to
    another :math:`\verb+else+` block. **Hint:**
 
-.. sagecellserver:: python
+.. code:: python
 
     if guess_x == ship_x ... :
         # User hit the target!
@@ -327,7 +317,7 @@ already shot this field!
         else:
             # User misses!
 Game over!
-==========
+----------
 
 Now you have a pretty good game! But there is still a couple of
 problems. The game keeps going even after the user has guessed
@@ -336,12 +326,12 @@ used up their 10 shots. Let us try to fix both these problems.
 
 First, when the user guesses correctly, we have to make sure that the
 loop stops repeating. We can do this with the command
-:math:`\verb+break+`. When python finds a :math:`\verb+break+` command,
+:math:`\verb+break+`. When Python finds a :math:`\verb+break+` command,
 it immediately jumps to the first line after the entire loop. In other
 words, it breaks the loop.
 
-Exercises
-=========
+Exercises 9
+===========
 
 1. Add a :math:`\verb+break+` command after the success message is
    printed.
@@ -365,9 +355,7 @@ Exercises
    it!
 
 Now you have a complete Battleship! game. Good job! What follows is a
-list of different ways to expand the game if you want.
-
-Here is a list of suggestions for ways to expand the game
+list of different ways to expand the game if you want:
 
 -  Create a nice introduction message
 -  Add more tests. If, for example, the user shoots outside the board,
