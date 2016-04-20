@@ -9,8 +9,8 @@ podejście, chcemy zachęcić czytelnika to samodzielnego
 eksperymentowania z matematyką z pomocą komputera. 
 
 Z zadaniami maturalnymi jest to tylko zabawa, bo przecież rozwiązania
-można otrzymać i bez pomocy komputera. Jendak  w realnym świecie większość
-zagadnień bez metod komputerowych jest nierozwiązywalna! 
+można otrzymać i bez pomocy komputera. Jendak w realnym świecie
+większość zagadnień bez metod komputerowych jest nierozwiązywalna!
 
 
 
