@@ -11,6 +11,8 @@ Analysis
    Aufgabe 5 <kurvendiskussion>
    Aufgabe 6 <ln>
    Aufgabe 7 <xsinx>
+   Aufgabe 8 <schnittpunkt>
+   Aufgabe 9 <inthalbkreis>
 
 Stochastik
 ..........
