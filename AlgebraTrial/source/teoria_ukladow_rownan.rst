@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-Rozwiązania układów równań liniowych
-------------------------------------
+Theorems on Solutions of Linear Equations
+-----------------------------------------
 
-Rząd macierzy
-~~~~~~~~~~~~~
+Rank of a Matrix
+~~~~~~~~~~~~~~~~
 
 Niech :math:`\,\boldsymbol{A}\ ` będzie macierzą o :math:`\,m\,` wierszach
 :math:`\ \ \text{i}\ \ \,n\ ` kolumnach nad ciałem 
@@ -126,8 +126,8 @@ natomiast wszystkie minory stopnia trzeciego znikają. :math:`\\`
 Ostatecznie, każda z zastosowanych metod daje ten sam wynik: 
 :math:`\ \,\text{rz}\,\boldsymbol{A} = 2.`
 
-Ogólne rozwiązanie układu równań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+General Solution of a System of Equations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zajmiemy się (niejednorodnym) układem równań liniowych o postaci macierzowej
 
@@ -287,8 +287,8 @@ Tak więc, przynajmniej w zasadzie, aby rozwiązać układ niejednorodny,
 wystarczy znaleźć (np. odgadnąć) jakieś jego szczególne rozwiązanie
 oraz rozwiązać ogólnie stowarzyszony z nim układ jednorodny. 
 
-Układy równań w Sage
-~~~~~~~~~~~~~~~~~~~~
+Systems of Linear Equations in Sage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zgodnie z Twierdzeniem 3., :math:`\,` rozwiązanie układu równań liniowych o postaci macierzowej
 

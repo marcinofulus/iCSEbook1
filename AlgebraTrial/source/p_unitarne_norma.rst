@@ -1,6 +1,6 @@
 
-Norma wektora
--------------
+Norm of a Vector
+----------------
 
 .. admonition:: Definicja.
    

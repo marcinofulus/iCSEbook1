@@ -1,0 +1,260 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage{geometry}
+\geometry{a4paper}
+%%\usepackage[cm]{fullpage}
+
+%%\usepackage[top=2in, bottom=1.5in, left=2in, right=1in]{geometry}
+
+%% \usepackage[active,tightpage]{preview}
+%% \PreviewEnvironment{eqnarray}
+%% \PreviewEnvironment{equation}
+
+\addtolength{\hoffset}{-25pt}
+\addtolength{\textwidth}{35pt}
+
+
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{wrapfig}
+
+\linespread{1.} % Line spacing
+
+\graphicspath{{figs/}}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\usepackage{listings}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+
+\lstinputlisting[#1]{#2}}}
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\title{Strzelamy i latamy, czyli o prawie Newtona i równaniach różniczkowych cześć II}
+\begin{document}
+\maketitle
+\lstset{language=Python}
+
+Na lekcjach fizyki w szkole pewnie wszyscy spotkali się ze wzorem na
+prędkość: $v=\frac{\Delta x}{\Delta t}$ oraz przyspieszenie
+$a=\frac{\Delta v}{\Delta t}$. Pokażemy, że umiejętne skorzystanie z
+tych pozornie mało spektakularnych wzorów umożliwi napisanie programu
+komputerowego, który będzie mógł rozwiązywać praktycznie
+nieograniczoną pulę zagadnień z dynamiki.
+
+Odkrywania praw fizycznych poprzez ``komputerowe eksperymentowanie'' z
+równaniami jest celem projektu dydaktycznego iCSE prowadzonego na
+Uniwersytecie Śląskim. Jako narzędzie proponujemy system
+Sage\ \cite{sagemath}. Stanowi on otwartoźródłową integrację systemu
+algebry komputerowej z językiem Python, ponadto umożliwia rozpoczęcie
+zabawy od zaraz, korzystając z przeglądarki internetowej i jednej z
+możliwych opcji dostępu poprzez usługę chmurową\ \cite{cloud} lub
+serwer pojedynczych obliczeń, na którym bazuje interaktywna wersja
+tego artykułu\ \cite{web}.
+
+
+
+\section{Równanie Newtona}
+
+W poprzednim artykule dowiedzieliśmy się, że można rozwiązywać
+zagadnienia z zakresu dynamiki Newtona za pomocą metody przybliżonej
+stosując znane ze szkoły wzory na prędkość w ruchu jednostajnym
+prostoliniownym oraz przyśpieszenie w ruchu jednostajnie
+przyśpieszonym. W przypadku dwuwymiarowego zagadnienia, którym jest
+rzut ukośny, stan układu jest jednoznacznie określony przez cztery
+liczby: $x,y,v_x,v_y$. Równania wiążące stan układu w pewnej chwili
+poźniejszej $t+\Delta t$ ze stanem w chwili $t$ mają postać:
+
+\begin{eqnarray}
+x(t+\Delta t)&=& x(t)+ \Delta t \cdot v_x \\ \nonumber
+y(t+\Delta t)&=& y(t)+ \Delta t \cdot v_y \\ \nonumber
+v_x(t+\Delta t) &=&v_x(t) + \Delta t\cdot  \frac{F_x}{m}\\ \nonumber
+v_y(t+\Delta t) &=&v_y(t) + \Delta t\cdot  \frac{F_y}{m},
+\label{eq:euler4} 
+\end{eqnarray}
+gdzie $F_x$ i $F_y$ są siłami działającymi na punkt materialny o masie
+$m$. Jeżeli na ciało działa tylko siła grawitacyjna to mamy $F_x=0$ i
+$F_y=-mg$.
+
+Równania te wyprowadzilismy w poprzednim artykule, korzystając ze
+wzorów na przyśpieszenie i prędkość, napisaliśmy składowe równania
+Newtona w kierunkach $x$ i $y$ jako:
+ 
+\begin{eqnarray}
+\frac{ \Delta x}{\Delta t} &=& v_x \\ \nonumber
+\frac{ \Delta y}{\Delta t} &=& v_y \\ \nonumber
+\frac{ \Delta v_x}{\Delta t} &=& \frac{F_x}{m}\\ \nonumber
+\frac{ \Delta v_y}{\Delta t} &=& \frac{F_y}{m},
+\label{eq:delta} 
+\end{eqnarray}
+
+Takie równania znane są w granicy gdy $\Delta t\to 0$ jako równania
+różniczkowe. Granica ta oznacza, że wyrażenia typu $ \frac{ \Delta
+  x}{\Delta t}$, określane przez matematyków jako ilorazy różnicowe,
+przechodzą w pochodne po czasie funkcji położenia czy
+prędkości. Intuicyjnie, możemy zrozumieć tą granicę jeśli sobie
+przypomnimy, że w układzie (\ref{eq:delta}) zastosowaliśmy przybliżone
+a nie dokładne wzory na prędkość. Błąd tego przybliżenia maleje do
+zera jeśli $ \Delta t\to 0$. W tej granicy równania te są zapisywane,
+zastępując symbole $\Delta$ symbolami $d$:
+
+\begin{eqnarray}
+\frac{ dx}{dt} &=& v_x \\ \nonumber
+\frac{ dy}{dt} &=& v_y \\ \nonumber
+\frac{ dv_x}{dt} &=& \frac{F_x}{m}\\ \nonumber
+\frac{ dv_y}{dt} &=& \frac{F_y}{m},
+\label{eq:ode} 
+\end{eqnarray}
+
+Nie wnikają już głębiej w fascynującą dziedzinę matematyki opisującą w
+ścisły sposób tego typu równania, postarajmy się teraz wykorzystać
+znajomość algorytmu przybliżonego i rozwiązać ciekawy  układ.
+
+
+\section{Modelujemy papierowy samolot }
+
+Puszczając papierowy samolot można zauważyć, że czasem zadziera on do
+góry a czasem leci lotem prostoliniowym. Od czego to zależy?
+Doświadczenia sugerują, że może prędkość początkowa i tzw. trym, czyli
+ustawienie lotek może być decydującym czynnikiem. Jaka jest jednak
+fizyka tego zjawiska?
+
+Papierowy samolot - cóż on ma wspólnego z rzutem ukośnym? Przecież w
+rzucie ukośnym mamy do czynienia z punktem materialnym a tu jest
+zdecydowanie rozciągły objekt, do tego jeszcze oddziaływuje w
+nietrywialny sposób z powietrzem! Zachęcam czytelników do zapytania
+przypadkowo napotkanego naukowca o to jak obliczyć siły działające na
+papierowy samolot. Z dużym prawdopodobieńswtem dowiecie się, że jest
+to problem przekraczający możliwości nauki ....
+
+Możemy jednak spróbować dokonać pewnych idealizacji. Po pierwsze
+trzeba się zastanowić jak podejdziemy do oddziaływania powietrza na
+samolot. Możemy rozwiązać niezwykle trudne do analizy równania
+aerodynamiki. Zdecydowanie przekroczyło by to ramy tego
+artykułu. Jakie więc mamy inne możliwości? Możemy skorzystać z pewnych
+praw z znanych z mechaniki lotu. Niestety mechaniki lotu nie uczy się
+w szkołach a prawa nie mają charakteru fundamentalnych praw przyrody a
+raczej są rozsądnymi przybliżeniami rzeczywistości. W aerodynamice
+wyróżnia się dwie podstawowe siły działające na objekt poruszający się
+w powietrzu: siłę oporu oraz siłe nośną. Ta pierwsza jest nam dobrze
+znana z rozważań lotu pocisku przez powietrze. Wiemy, że działa ona w
+kierunku przeciwnym do wektora prędkości. Druga siła jest siłą
+działającą w kierunku prostopadłym do wektora prędkości i jest zwana
+siłą nośną. Mechanika lotu podaje empiryczne wzory pozwalające
+obliczyć te siły dla dobrze opływanych objektów, do których zaliczaja
+się skrzydło samolotu. Oba wzory, zarówno na siłę nośną i opór,
+zakładają kwadratową zależność od prędkości.
+
+Łatwo można sobie wyobrazić, że na skrzydło ustawione równolegle do
+napływającego powietrza będzie działała niewielka siła oporu a siła
+nośna będzie bliska zeru. Jeśli skrzydło przekręcimy o np. 5 stopni,
+to siła nośna znacznie wzrośnie. Siła oporu też wzrośnie, ale mniej
+radykalnie niż siła nośna. Zjawisko to można zaobserwować wychylając
+dłoń z jadącego samochodu i obracając ją o niewielki kąt.
+
+Prawa mechaniki lotu określają, współczynniki siły nośnej i oporu oraz
+ich zależność od kątą natarcia - czyli ustawienia skrzydła względem
+napływających strug powietrza. Oznacza to, że jeśli mamy dany rozmiar
+i kształt skrzydła to dla każdego kąta natarcia oraz prędkości możemy
+wyliczyć obie siły. Za chwilę skorzystamy z tego faktu.
+
+Wyobraźmy teraz sobie szybowiec, a papierowy samolocik jest właśnie
+szybowcem, lecący z pewną prędkością. Po pierwsze zakładamy,
+że nie wykonujemy zakrętów. Dopuszczamy tylko nurkowanie i wznoszenie
+się. W pewnym przybliżenu można traktować szybowiec jako skrzydło,
+które ma pewną siłę nośną i siłę oporu oraz ogon. Zadaniem ogona jest
+utrzymanie skrzydła pod pewnym kątem do nacierającego powietrza. Jak
+on to robi? Zawsze stara się tak ustawić by stateczniki poziome
+(pionowe nas nie interesują, bo nie skręcamy) były równoległe do
+wektora prędkości. Ustawiając się przekręca nieco cały samolot. Jako,
+że ogon znajduję się daleko z tyłu to dysponuje dość dużą dzwignią. W
+naszym modelu zakładamy idealny ogon - jest bardzo maly i bardzo
+daleko od skrzydeł, tak by siły na niego działające były zaniedbywalne
+przy siłach działających na skrzydło, ale moment siły był na tyle duży
+by samolot ustawiał się natychmiastowo w pozycji - ``ogon idealnie z
+tylu''. Sterowanie kierunkiem lotu odbywa się poprzez zmianę kąta
+zaklinowania satecznika poziomego. Jeśli pilot pociągnie drążek do
+siebie to ustawia sie on w dół co powoduje taki obrót calego samolotu
+by ``ogon był równoległy do prędkości''. Zauważmy, że skrzydło
+samolotu jest ustawione wzgledem lini łączącej jego środek z ogonem
+pod pewnym katem. Jest to tzw. kąt zaklinowania skrzydła. Z reguły ma
+on małą dodatnią wartość. Jeżeli teraz będziemy rozważać lot szybowca
+dla pewnego stałego ustawienia drążka sterowego. Papierowy samolot
+jest rówież w niezłym przybliżeniu takim właśnie przypadkiem.
+
+W takiej sytuacji będziemy mieli zagwarantowane, że kąt natarcia
+skrzydła będzie zawsze ten sam. Wtedy będziemy mieli w ciągu całego
+lotu, niezależnie od tego czy samolot nurukje czy się wznosi, proste
+formuły na siły aerodynamiczne. Siła nośna będzie równa $C_z v^2$ a
+siła oporu $C_x v^2$. Stałe $C_x,C_z$, są zwane współczynnikami sił,
+odpowiednio, oporu i nośnej. W takim przypadku możemy sie pokusić o
+zmodyfikowanie, naszego programu do obliczania trajektorii rzutu
+ukośnego tak by opisywał on zachowanie się naszego szybowca.
+
+Ponieważ siły aerodynamiczne działają w kierunkach prostopadłych i
+równoległych do kierunku ruchu to musimy przeprowadzić sztuczkę
+zamiany układu współrzędnych. Postąpimy tak: znamy wektor prędkości
+samolotu. Dzieląc go przez jego długośc możemy otrzymać wersor (wektor
+jednostkowy) w kierunku ruchu $\vec e_v$. 
+
+Siły aerodynamiczne: oporu $F_D$ i nośna $F_L$ dane są:
+
+\begin{eqnarray}
+F_D = - C_D v^2  \vec e_v \\
+F_L = C_L v^2 {\vec e_v}_{prost}
+
+\end{eqnarray}
+
+Zauważmy, że łatwo możemy otrzymać wersor prędkości - wys
+
+
+
+
+
+\section{Czy możemy obliczyć donośność armaty  Flak 88m?}
+
+\pythonexternal{code04.py}
+
+
+
+\begin{thebibliography}{1}
+\bibitem{sagemath} http://sagemath.org
+\bibitem{cloud} http://cloud.sagemath.com
+\bibitem{web} http://visual.icse.us.edu.pl/Warsztaty
+
+\end{thebibliography}
+
+\end{document}
+
+

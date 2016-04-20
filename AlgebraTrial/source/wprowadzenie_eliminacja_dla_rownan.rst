@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-Metoda eliminacji dla układów równań
-------------------------------------
+Elimination Method for Systems of Equations
+-------------------------------------------
 
-Postać schodkowa układu równań
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Echelon Form of a System of Equations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy układ :math:`\,m\,` równań o :math:`\,n\,` niewiadomych
 :math:`\,(2\le m\le n):`
@@ -47,17 +47,17 @@ nie występują niewiadome :math:`\ x_1,\dots,x_{k-1}\ \,` :math:`(k=2,\dots,m)\
     | (czyli współczynniki przy tych niewiadomych są równe zeru).
     | Tutaj :math:`\ k=2,\dots,m;\ \ 2\le m\le n`. 
 
-Eliminacja Gaussa
+Gauss Elimination 
 ~~~~~~~~~~~~~~~~~
 
 | Rozważymy teraz konkretny układ trzech równań liniowych o trzech niewiadomych.
 |  
 | Doprowadzimy go do postaci schodkowej poprzez następujące *operacje elementarne*:
 
-#. przestawienie dwóch równań,
-#. pomnożenie obu stron równania przez liczbę różną od zera,
-#. | dodanie stronami do jednego z równań dowolnej wielokrotności innego równania
-   | (w szczególności: dodanie bądź odjęcie dwóch równań stronami).
+#. swap the positions of two equations,
+#. multiply an equation by a non-zero scalar,
+#. | add to one equation a scalar multiple of another
+   | (in particular: addition or subtraction of two equations).
 
 | Jest oczywiste, że operacje te nie zmieniają zbioru rozwiązań,
 | czyli prowadzą do układu równań równoważnego z wyjściowym.
@@ -146,8 +146,8 @@ Eliminacja Gaussa
 Metoda rozwiązywania układów równań liniowych, polegająca na sprowadzeniu układu
 do postaci schodkowej i zastosowaniu podstawień wstecznych, nazywa się eliminacją Gaussa.
 
-Eliminacja Gaussa-Jordana
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Gauss-Jordan Elimination
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Można jednak nie poprzestać na postaci schodkowej:
 

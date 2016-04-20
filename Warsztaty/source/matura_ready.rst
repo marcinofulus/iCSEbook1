@@ -29,3 +29,17 @@ Po co się męczyć - niech "pomyśli" komputer!
 
    matura2015_p*
 
+
+Zadania - poziom rozszerzony
+++++++++++++++++++++++++++++
+
+Komputer? Sam? Już panu tłumaczyłem, że on jest głupi. (Stanisław Lem)
+======================================================================
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   matura2015_r*
+

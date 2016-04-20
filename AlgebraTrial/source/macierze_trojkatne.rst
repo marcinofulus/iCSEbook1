@@ -1,6 +1,6 @@
 
-Macierze trójkątne
-------------------
+Triangular Matrices
+-------------------
 
 Jeżeli w macierzy :math:`\,\boldsymbol{L}=[l_{ij}]_{n\times n}\in M_n(K)\,`
 wszystkie elementy powyżej głównej przekątnej są równe zeru,

@@ -1,0 +1,3 @@
+213,214d212
+<         U = g.notebook.user_manager().user(username)
+<         U.set_suspension()

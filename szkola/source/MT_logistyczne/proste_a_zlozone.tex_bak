@@ -1,0 +1,281 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{a4paper}
+
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+
+\linespread{1.2} % Line spacing
+
+\graphicspath{{figs/}}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\usepackage{listings}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\title{Proste modele ze złożonym zachowaniem}
+\begin{document}
+\maketitle
+\lstset{language=Python}
+
+
+\section{Wstęp: nauka z komputerem }
+
+Komputer jest narzędziem coraz częściej stosowanym przez naukowców do
+ukazywania skrzętnie ukrywanych przez naturę tajemnic. Symulacja, obok
+eksperymentu i teorii staje się trzecim sposobem badania świata. Na
+Uniwersytecie Śląskim trzy lata temu rozpoczęliśmy program integracji
+metod komputerowych z edukacją. W efekcie powstało wiele niezwykle
+fascynujących materiałów dydaktycznych pozwalających na łatwiejsze i
+bardziej dogłebne poznanie wielu tematów. Jako podstawowe narzędzie
+został zastosowanych język Python, który wraz z potęgą bibliotek,
+które są w nim dostępne stanowi chyba najlepsze na dzień dzisiejszy
+narzędzie do samodzielnego eksperymentowania z równaniami, obrazami czy
+danymi. Jedną z ciekawszych implementacji kompletnego środowiska
+pracy,jest Sage. Stanowi on otwartą integrację systemu algebry komputerowej z językiem Python, ponadto umożliwia rozpoczęcie zabawy od zaraz, korzystając z przeglądarki internetowej i jednej z możliwych opcji dostępu poprzez usługę chmurową http://cloud.sagemath.org lub server pojedyńczych obliczeń, na którym bazuje interaktywna wersja tego artykułu (http://visual.icse.us.edu.pl/Warsztaty).
+
+
+
+\section{Chaos w ekologii}
+
+W latach siedemdziesiątych XX wieku, na Uniwersytecie w Oxford,
+australijski uczony Robert May zajmował się teoretycznymi aspektami
+dynamiki populacyjnej. Swoje prace podsumował w artykule, który ukazał
+się w \emph{Nature} pod prowokującym tytułem ``Proste modele
+matematyczne z bardzo skomplikowaną dynamiką'' \cite{may76}. Artykuł
+ten po latach stał się jedną z najczęściej cytowanych prac z
+teoretycznej ekologii. Co wzbudziło tak wielkie zainteresowanie w tej
+pracy?
+
+Klasycznym zadaniem w tej dynamiki populacyjnej jest obliczenie
+populacji pewnego gatunku w przyszłości znając jego obecny
+stan. Matematycznie najprostszym, rodzajem ekosystemów wydawały się
+takie w których życie jednego pokolenia populacji trwa jeden
+sezon. Dobrym przykładem jest populacja owadów, które w ciągu jednego
+sezonu przechodzą pełną metamorfozę np. motyle. Czas jest w naturalny
+sposób podzielony na dyskretne okresy, odpowiadające cyklom życia
+populacji. Równania opisujące taki ekosystem mają więc w naturalny
+sposób tzw.  dyskretny czas tj. $t=1,2,3...$.
+
+Robert May zajmował się między innymi właśnie taką dynamiką. W swoich
+rozważaniach uprościł ekosystem do jednego gatunku w którym populacja
+była funkcją kwadratową populacji w roku poprzednim. Skąd taki model?
+
+Najprostszym równaniem dyskretnym opisującym ewolucję populacji jest
+model liniowy:
+
+\begin{equation}
+\label{eq:Ni}
+N_{i+1} = \alpha \; N_{i},
+\end{equation}
+%
+gdzie $N_i$ to liczebność w i-tym sezonie. Łatwo się przekonać, że
+takie równanie może prowadzić to trzech scenariuszy.  Dla $\alpha=1$
+ewolucja nie będzie zmieniać stanu liczebnego populacji, $\alpha<1$
+prowadzi do wyginięcia a $\alpha>1$ do nieograniczonego
+wzrostu. Ponieważ wszystko w przyrodzie wydaje się być ograniczone,
+warto ulepszyć to równanie tak by brało pod uwagę ograniczoną ilość
+zasobów. Wyobraźmy sobie, że szkodniki zjadają zboże, którego jest
+dokładnie ta sama ilość co roku. Jeżeli owadów jest mało w porównaniu
+do ilości pożywienia to mogą rozmnażać się z pełną siła rozrodczą
+matematycznie określoną przez stałą $\alpha>1$. Jednak w miarę wzrostu
+liczebności szkodników, pożywienia nie będzie wystarczać i siła
+rozrodcza będzie maleć. W krytycznym przypadku można sobie wyobrazić
+ze owadów rodzi się tyle, że zjadają całe zboże przed osiągnięciem
+zdolności rozrodczej i populacja ginie.
+
+Zmodyfikujmy więc poprzedni model, zakładając, że nasza stała rozrodu
+będzie liniowo malała wraz z wielkością populacji:
+
+\begin{equation}
+\label{eq:N2i}
+N_{i+1} = \underbrace{(A - B N_{i})}_{\alpha( N_{i} )} \; N_{i},
+\end{equation}
+%
+gdzie $A$ to stała wzrostu populacji w warunkach dostatku a $B$ jest
+stałą, która określającą szybkość negatywnego wpływu braku pożywienia
+na siłę rozrodczą. W szczególności jeśli $N_i=A/B$ to pożywienia jest
+na tyle mało, że żaden osobnik nie dożywa okresu rozmnażania.
+
+Równanie to, można przeskalować do matematycznie równoważnej postaci,
+zależnej tylko od jednego parametru, które jest znane pod nazwą
+odwzorowania logistycznego:
+
+\begin{equation}
+x_{i+1} = a x_{i} (1 - x_{i}),
+\label{eq:logistic}
+\end{equation}
+%
+gdzie $a<=4$ jest pewną dodatnią stałą a $x_i\in(0,1)$ jest
+proporcjonalne do liczebności populacji w i-tym sezonie.
+
+Mogło by się wydawać, że tak prosty model będzie dawał proste
+wyniki. Spróbujmy sami!
+
+Rozważmy równanie (\ref{eq:logistic}) dla parametru
+$a=0.5$, startując z liczebności $x=0.45$. Kolejne wartości populacji
+można otrzymać stosując przekształcenie
+kwadratowe (\ref{eq:logistic}) do wartości z
+poprzedniego sezonu, na przykład za korzystając z poniższego programu\footnote{Program jest napisany w języku Python i  można go uruchomić m.in. na platformie Sage. Zachęcamy do lektury książki http://icse.us.edu.pl/e-book/} symulującego nasz model:
+
+\begin{python}/
+a = 0.5
+x = 0.45
+for i in range(10):
+    x = a*x*(1-x)
+    print x
+\end{python}
+
+
+Wykonując ten przykład otrzymujemy kolejne wartości populacji, które
+wraz z upływem czasu dążą do zera. Eksperymentując z powyższym kodem
+łatwo też jest się przekonać, że niezależnie od wartości z której
+startujemy, populacja zawsze ginie. Z pomocą systemu Sage, możemy też przedstawić tę ewolucję graficzne rysując wykres liczebności populacji od czasu.
+%
+\begin{figure}{H}
+  \begin{center}
+     \includegraphics{xi1.pdf}
+  \end{center}
+  \caption{Dla  $a=1.5$ ekosystem osiąga dynamiczną równowagę.}
+\end{figure}
+%
+Zwiększmy teraz parametr $a$ do dowolnej wartości z przedziału
+$a\in(1,3)$.  Okazuje się, że wtedy ciąg $x_i$ dąży do pewnej
+wielkości większej od zera $x^{*}$. Interpretując w kategoriach
+ekologii, możemy powiedzieć, że wielkość populacji ustala się na
+pewnym poziomie, który nie zmienia się z sezonu na sezon. Warto
+zauważyć, że wartość ta nie od punktu startowego. Jest to efekt
+dążenia ekosystemu do stabilizacji - populacja dostosowuje swoją
+liczebność do możliwości wyżywienia się. Matematycznie mówimy, że układ dąży do stabilnego punktu stałego, tj. spełniającego  $x^{*}=f(x^{*})$.
+
+Taki efekt był oczekiwany przez badaczy i równanie logistyczne
+(\ref{eq:logistic}) nie przyciągnęło by szczególnej uwagi gdyby nie
+pewna niespodzianka. Okazało się bowiem, że dla pewnych wartości
+parametru $a$ model nie zachowuje się w przewidywalny
+sposób. Pojawiają się nie tylko stany okresowe, ale i stany w których
+populacja z roku na rok zmienia się w chaotyczny sposób i występuje
+czułość na warunki początkowe - wszystkie cechy, które są
+charakterystyczne dla {\em chaosu deterministycznego}.
+
+Zbadajmy to! Na początek ustalmy wartość parametru na $a = 3.2$
+i przyjrzyjmy się ewolucji.
+\begin{figure}{H}
+  \begin{center}
+    \includegraphics{xi2.pdf}
+ \caption{Większe wartości, np. $a=3.2$ prowadzą to oscylacji. W tym
+  przypadku populacja co drugi sezon jest taka sama.}
+  \end{center}
+\end{figure}
+Zaskoczeniem może być fakt, że tym razem populacja nie osiąga jednej
+wartości, ale dwie, które występują kolejno po sobie do drugi sezon.
+Okazało się jednak, że to nie koniec kłopotów!
+\begin{figure}{H} % Inline image example
+  \begin{center}
+\includegraphics{xi3.pdf}
+  \end{center}
+\caption{Dla  $a=4$ liczba osobników w kolejnych latach zdaje się być losowa!}
+\end{figure}
+%
+Dla $a=4$ system przestaje być przewidywalny. Popatrzmy sami na
+rysunek lub wygenerujmy sami ciąg liczb sa pomocą komputera. Wyniki
+wyglądają na czysto przypadkowe i co należy podkreślić dla różnych
+populacji początkowych są kompletnie różne. Uważny czytelki powinien
+jednak się oburzyć! Jak układ, który jest opisany przez
+deterministyczne\footnote{Prawo deterministyczne to takie w którym przyszłość jest jednoznacznie określona przez stan początkowy. Antonimem jest "probablistyczne"} równanie, do tego nawet całkiem proste, może mieć
+nieprzewidywalne zachowanie!?
+
+Otóż może. Własoscią tego układu jest niezwykła czułość na warunki
+początkowe. Wystarczy dodać jedną milionową do stanu początkowego i
+już po kilku krokach otrzymamy całkiem inne wartości. Sprawdźmy to
+przy pomocy komputera:
+
+\begin{python}
+a=4.0
+x=0.123
+y=0.123+0.000001
+pkts = []
+for i in range(25):
+   x = a*x*(1-x)
+   y = a*y*(1-y)
+   print x,y
+\end{python}
+
+Ta czułość na warunki początkowe, chaotyczność rozwiązań w modelu
+opisanym deterministycznymi równaniami jest znana jako {\em Chaos
+  Deterministyczny}. Analiza tego takich układów jest niezwykle
+trudna. Możemy jednak dość łatwo odkryć wiele jego tajemnic stosując
+symulacje komputerowe. Narysujmy tak zwany diagram bifurkacyjny, na
+którym będziemy odkładać na osi odciętych wartości parametru $a$ a na
+osi rzędnych punkty stabilne odwzorowania logistycznego. Stabilne
+punkty otrzymamy symulując dużą ilość układów jednocześnie i
+rysując wartości końcowe.  Jak można się domyslić wymaga to wykonania
+dużej ilości obliczeń. Spróbujmy ``ostrożnie'' z nastepującymi
+wartościami:
+
+\pythonexternal{bifurcation_diagram.py}
+
+Powinnismy otrzymać coś podobnego do rysunku \ref{fig:bd}. Mając
+jednak program komputerowy, możemy zmienić zakres parametru $a$ i
+eksplorować własnoręcznie niekończącą się strukturę geometryczną owego
+diagramu.
+\begin{wrapfigure}{l}{0.5\textwidth} % Inline image example
+  \begin{center}
+    \label{fig:bd}
+    \includegraphics[width=0.48\textwidth]{Bifurcation_diagram.png}
+  \end{center}
+  \caption{Diagram bifurkacyjny dla równania logistycznego}
+\end{wrapfigure}
+To tylko czubek góry lodowej. Na temat tego równania napisano tysiące
+prac naukowych i mimo tego wciąż skrywa ono swoje tajemnice. Z pomocą
+symulacji komputerowej można, nawet bez stosowania zaawansowanej
+matematyki pobawić się w odkrywcę świata dynamiki
+nieliniowej. Zapraszamy do lektury wersji online, zawierającej
+szczegóły wielu ciekawych własności równania logistycznego oraz
+interesujące sposoby ich wizulalizacji.
+
+\begin{thebibliography}{1}
+\bibitem{may76}
+May, R. M. ``Simple mathematical models with very complicated dynamics''. Nature 261 (5560): 459–467,1976.
+
+\end{thebibliography}
+
+\end{document}
+
+%sagemathcloud={"zoom_width":130}

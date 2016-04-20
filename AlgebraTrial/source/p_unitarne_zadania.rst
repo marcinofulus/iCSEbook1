@@ -1,6 +1,6 @@
 
-Zadania
--------
+Problems
+--------
 
 **Zadanie 1.** :math:`\,`
 

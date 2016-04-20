@@ -1,9 +1,9 @@
 
-Operacje na macierzach
-----------------------
+Operations upon Matrices
+------------------------
 
-Operacje i macierze elementarne
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Elementary Operations and Elementary Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
@@ -176,8 +176,8 @@ O_3(i,j,a)\,\boldsymbol{A}\ =\ O_3(i,j,a)\,(\boldsymbol{I}_m\boldsymbol{A})\ =\
 [\,O_3(i,j,a)\,\boldsymbol{I}_m\,]\,\boldsymbol{A}\ =\ \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,.`
 
 
-Macierze permutacji
-~~~~~~~~~~~~~~~~~~~
+Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~
 
 Aby wykonać operację permutacji wierszy :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 

@@ -1,6 +1,6 @@
 
-Problem własny operatora liniowego
-----------------------------------
+Formulation of the Eigenproblem
+-------------------------------
 
 .. admonition:: Definicja.
    

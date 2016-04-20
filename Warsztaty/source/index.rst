@@ -28,8 +28,8 @@ myślisz" dostępnej w formacie PDF na stronie projektu iCSE.
    matura
 
 
-Warsztaty z konferencji iCSE4schools
-====================================
+Warsztaty z konferencji iCSE4school
+===================================
 
 
 .. toctree::
@@ -37,6 +37,25 @@ Warsztaty z konferencji iCSE4schools
 
 
    Parrondos_paradox
+
+
+iCSE4school
+===========
+
+There are some materials from Oslo teaching experiences.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   basicProgramming
+   basicProgrammingExpanded                         
+   parachuteCode                                    
+   bungeeCode                                       
+   Skydiving1                                       
+   Skydiving2                                       
+   ProjectileMotion                                 
+   Battleship
 
 
 

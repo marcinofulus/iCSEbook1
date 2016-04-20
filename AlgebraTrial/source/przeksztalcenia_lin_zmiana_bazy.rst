@@ -1,6 +1,6 @@
 
-Zmiana bazy przestrzeni wektorowej
-----------------------------------
+Change of Basis
+---------------
 
 Jeżeli w przestrzeni wektorowej została wybrana baza, to każdy wektor jest jednoznacznie
 określony przez swoje współrzędne, a każdy operator liniowy :math:`\,` - :math:`\,` przez 
@@ -10,8 +10,8 @@ a ten sam operator :math:`\,` - :math:`\,` różne macierze.
 W tej sekcji wyprowadzimy wzory, opisujące transformację współrzędnych wektorów 
 i macierzy operatorów liniowych przy przejściu od jednej do drugiej bazy.
 
-Macierz przejścia
-~~~~~~~~~~~~~~~~~
+Change-of-Basis Matrix
+~~~~~~~~~~~~~~~~~~~~~~
 
 Niech układy :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
 i :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ ` będą dwiema bazami
@@ -123,8 +123,8 @@ Związki pomiędzy wektorami obydwu baz można zapisać jako
    \boldsymbol{S}\ =\ 
    \left[\begin{array}{ccc} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{array}\right]\,. 
 
-Wzory transformacyjne
-~~~~~~~~~~~~~~~~~~~~~
+Change-of-Basis Transformation Formulae
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Odtąd bazy :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
 i :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ `
@@ -341,8 +341,8 @@ Ortogonalne są również macierze permutacji.
       
       M_{\mathcal{B}}(T^{-1})\ \ =\ \ [\,M_{\mathcal{B}}(T)\,]^{-1}\,.
 
-Przykłady
-~~~~~~~~~
+Examples
+~~~~~~~~
 
 **Przykład 0.**
 

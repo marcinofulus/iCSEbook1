@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Pouczający przykład z dyskusją
-------------------------------
+Example with Discussion
+-----------------------
 
 Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`\,Q:`
 
@@ -37,8 +37,8 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
       1 & 3 & 1 & 6 & -4 & 4
    \end{array}\right]\,.
 
-Metoda eliminacji
-~~~~~~~~~~~~~~~~~
+Elimination Method
+~~~~~~~~~~~~~~~~~~
 
 Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
 
@@ -132,8 +132,8 @@ Ostatecznie, rozwiązanie układu w wersji wektorowej przedstawia się następuj
    stowarzyszonego z niejednorodnym układem wyjściowym. 
    Tę ostatnią interpretację potwierdzą dalsze rachunki w tym przykładzie.
 
-Metoda bezpośrednia
-~~~~~~~~~~~~~~~~~~~
+A Direct Approach
+~~~~~~~~~~~~~~~~~
 
 Użyjemy metod ``solve_right()`` oraz ``right_kernel_matrix()`` do wyznaczenia
 szczególnego rozwiązania wyjściowego układu niejednorodnego oraz ogólnego rozwiązania 
@@ -174,8 +174,8 @@ Rozwiązaniem ogólnym jest więc zbiór wektorów postaci
    \left[\begin{array}{r}  0  \\  0  \\  2  \\  1  \\   2 \end{array}\right]\,,\quad
    s,t,u\,\in\,Q.
 
-Porównanie wyników
-~~~~~~~~~~~~~~~~~~
+Comparison of Results
+~~~~~~~~~~~~~~~~~~~~~
 
 Wzory :eq:`11` i :eq:`12`, przedstawiające ogólne rozwiązanie układu równań,
 nie są identyczne: zawierają takie samo rozwiązanie szczególne, 
@@ -215,8 +215,8 @@ bazą jest *każdy* maksymalny liniowo niezależny układ wektorów.
 Nietrywialne przestrzenie nad ciałami liczbowymi :math:`\,Q,\,R,\,C\,`
 mają nieskończenie wiele baz.
 
-Alternatywne rozwiązanie układu jednorodnego
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Alternative Solution of the Homogeneous System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Występujący w tym przykładzie jednorodny układ równań o postaci macierzowej
 

@@ -1,9 +1,9 @@
 
-Zadania
--------
+Problems
+--------
 
-Operacje i macierze elementarne
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Elementary Operations and Elementary Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\\` 
 Udowodnij, że aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
@@ -44,8 +44,8 @@ gdzie
 Zapisz :math:`\,\boldsymbol{A} = \boldsymbol{I}_m\boldsymbol{A}\ \ ` 
 i :math:`\,` zastosuj twierdzenie z poprzedniego zadania.
 
-Macierze permutacji
-~~~~~~~~~~~~~~~~~~~
+Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\,`
 Pokaż, że:
@@ -82,8 +82,8 @@ Udowodnij, że iloczyn dwóch macierzy permutacji jest macierzą permutacji, prz
    \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
    \qquad\rho,\sigma\in S_m\,.
 
-Macierze permutacji w wersji kolumnowej
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Column Version of Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W tym ujęciu operacja :math:`\,O_\sigma\,` permutuje kolumny (a nie - jak poprzednio - wiersze)
 zadanej macierzy prostokątnej.
@@ -164,8 +164,8 @@ kolejność permutacji :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` w :eq:`PP_col` jes
 Oznacza to, że macierze :math:`\ \boldsymbol{P}_\sigma\ ` tworzą 
 :math:`\,` *reprezentację* :math:`\,` grupy permutacji :math:`\ S_n.`
  
-Wyliczanie macierzy odwrotnej metodą eliminacji
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inversion of a Matrix by Elimination Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W sekcji 4.5 wynik zestawienia dwóch macierzy kwadratowych stopnia :math:`\,n\,`
 (nazywany tam agregatem) jest jednorodną macierzą prostokątną o :math:`\,n\,` wierszach
@@ -195,7 +195,7 @@ Porównaj swój wynik z wynikiem komputerowym.
    
    n=3
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   html.table([["Znajdź macierz odwrotną do macierzy:", 'A', '=', A]])
+   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
 
    print "Rozwiązanie:"
 
@@ -223,7 +223,7 @@ Porównaj swój wynik z wynikiem komputerowym.
 
    n=4
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]])
+   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
    
    print "Rozwiązanie:"
    
@@ -236,16 +236,16 @@ Porównaj swój wynik z wynikiem komputerowym.
    def _(h=('Krok:',["2-blok (A,I)","2-blok (I,A^(-1))","Sprawdzenie"])):
     
        if h=="2-blok (A,I)": 
-           html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
-                       ["B", '=', B]])
+           pretty_print(html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
+                       ["B", '=', B]]))
                     
        elif h=="2-blok (I,A^(-1))": 
-           html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
-                       ["B.rref()", '=', R]])
+           pretty_print(html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
+                       ["B.rref()", '=', R]]))
                     
        elif h=="Sprawdzenie":
-           html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
-                       [A, '*', A_1, '=', A*A_1]])
+           pretty_print(html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
+                       [A, '*', A_1, '=', A*A_1]]))
 
 Dla większych wartości :math:`\,n\,` warto porównać wyniki komputerowe
 otrzymane metodą eliminacji oraz przez bezpośrednie użycie metody ``inverse()``

@@ -1,6 +1,6 @@
 
-Własności i przykłady
----------------------
+Properties and Examples
+-----------------------
 
 Ważne własności przekształceń liniowych przedstawia
 

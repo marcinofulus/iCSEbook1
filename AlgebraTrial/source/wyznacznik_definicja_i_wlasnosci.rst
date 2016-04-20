@@ -1,6 +1,6 @@
 
-Definicja i własności wyznacznika
----------------------------------
+Definition and Properties of the Deteminant
+-------------------------------------------
 
 Przyjmiemy aksjomatyczną definicję wyznacznika, która z góry określa jego podstawowe własności.
 Posłużymy się przy tym kolumnowym zapisem kwadratowej macierzy :math:`\,\boldsymbol{A}\,`

@@ -1,9 +1,6 @@
 
-Zadania
--------
-
-Układy równań w praktyce
-~~~~~~~~~~~~~~~~~~~~~~~~
+Problems
+--------
 
 **Zadanie 1.**
 Używając tylko metod Sage'a dla operacji elementarnych na wierszach:

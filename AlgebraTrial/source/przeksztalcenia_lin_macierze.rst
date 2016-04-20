@@ -1,11 +1,11 @@
 
-Macierze przekształceń liniowych
---------------------------------
+Matrix Representation of Linear Transformations
+-----------------------------------------------
 
 Przed rozwinięciem ogólnej teorii wyjaśnimy na prostym przykładzie związek
 przekształceń liniowych z macierzami.
 
-Wprowadzenie
+Introduction
 ~~~~~~~~~~~~
 
 Rozważmy odwzorowanie :math:`\ F:\,R^3\rightarrow R^2\ ` zadane wzorem
@@ -115,8 +115,8 @@ W następnym uogólnieniu zdefiniujemy macierz przekształcenia liniowego
 są :math:`\,` *dowolnymi* :math:`\,` skończenie wymiarowymi przestrzeniami wektorowymi 
 nad ciałem :math:`\ K\,,\ ` w każdej z których wybrano bazę.
 
-Definicja macierzy przekształcenia liniowego
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Matrix of a Linear Transformation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Niech będą dane dwie skończenie wymiarowe przestrzenie wektorowe nad ciałem :math:`\,K:\ \\`
 :math:`n`-wymiarowa przestrzeń :math:`\,V\,` 
@@ -341,8 +341,8 @@ w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma teraz w zapisie
    \left[\;I_{\mathcal{C}}(Fv_1\,|\,I_{\mathcal{C}}(Fv_2\,|\ \dots\ |\,
    I_{\mathcal{C}}(Fv_n\,\right]\,.
 
-Podstawowe twierdzenia
-~~~~~~~~~~~~~~~~~~~~~~
+Basic Theorems
+~~~~~~~~~~~~~~
 
 Sens wprowadzenia macierzowej reprezentacji przekształceń liniowych wyjaśnia
 

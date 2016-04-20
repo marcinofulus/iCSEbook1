@@ -1,10 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Układ równań liniowych w mechanice
-----------------------------------
-
-Liniowy łańcuch mas na sprężynach
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Equilibrium of a Linear Set of Masses Connected by Springs
+----------------------------------------------------------
 
 Rozważmy układ :math:`\,n+1\,` punktów materialnych :math:`\,P_0,\,P_1,\,\ldots,\,P_n\,,\ `
 rozmieszczonych na pionowej osi o początku :math:`\,\boldsymbol{O}.\ ` 

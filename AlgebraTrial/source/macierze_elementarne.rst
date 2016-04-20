@@ -1,5 +1,5 @@
-Macierze elementarne
---------------------
+Elementary Matrices
+-------------------
 
 Macierz :math:`\,\boldsymbol{E}\in M_m(K)\ ` nazywa się *macierzą elementarną*,
 jeżeli jest ona wynikiem wykonania jednej operacji elementarnej na wierszach
