@@ -12,6 +12,7 @@ Analysis
    Aufgabe 6 <wendepunkte>
    Aufgabe 7 <rechteck>
    Aufgabe 8 <wurzelfunktion>
+   Aufgabe 9 <gebrochenrational>
 
 Stochastik
 ..........
