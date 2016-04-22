@@ -11,7 +11,7 @@ Bayerisches Abitur in Mathematik 2013
 
   b) Bestimmen Sie einen Näherungswert :math:`\kappa_1` für die
      :math:`x`-Koordinate dieses Schnittpunktes, indem Sie für die in
-     :math:`\mathbb{R}` definierte Funktion :math:`d:x \mapsto g(x)-h(x)` den
+     :math:`\mathbb{R}` definierte Funktion :math:`f:x \mapsto g(x)-h(x)` den
      ersten Schritt des Newton-Verfahrens mit dem Startwert :math:`x_0=1`
      durchführen.
 
