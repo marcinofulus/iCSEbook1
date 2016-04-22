@@ -13,6 +13,7 @@ Analysis
    Aufgabe 7 <xsinx>
    Aufgabe 8 <schnittpunkt>
    Aufgabe 9 <inthalbkreis>
+   Aufgabe 10 <asymp>
 
 Stochastik
 ..........
