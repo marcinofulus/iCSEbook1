@@ -18,7 +18,7 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung zu Teil a**
 
-Die Grahen lassen sich mit Hilfe von Sage leicht zeichnen:
+Die Graphen lassen sich mit Hilfe von Sage leicht zeichnen:
 
 .. sagecellserver::
 
@@ -32,30 +32,35 @@ Die Grahen lassen sich mit Hilfe von Sage leicht zeichnen:
 
 **Lösung zu Teil b**
 
-Das Newton Verfahren berrechnet für ein gut gewählten Startpunkt einen
-Näherungswert für eine Nullstelle. Dafür muss mehrfach die Formel
+Das Newton-Verfahren berechnet für einen gut gewählten Startpunkt einen
+Näherungswert für die in der Nähe liegende Nullstelle. Dafür muss in jedem Schritt die Formel
 
 .. math::
 
-  x_{n+1} = x_n - \frac{d(x_n)}{d'(x_n)}
+  x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
 
 ausgeführt werden. Für den ersten Schritt erhält man:
 
 .. math::
 
   \kappa_1 = 1 - \frac{g(1) - h(1)}{g'(1) - h'(1)} 
-  = 1 - \frac{e^{-1} - 1}{-e^{-1}-3}
+  = 1 - \frac{e^{-1} - 1}{-e^{-1}-3}\approx 0{,}812
 
-Mit Sage lässt sich dieser Wert berechen. Eine geneaure Lösung für die
-Nullstelle ist ebenso möglich.
+Mit Sage lassen sich auch einfach mehrere Schritte des Newton-Verfahrens durchführen. Hierbei
+lässt sich erkennen, dass das Newton-Verfahren bereits nach fünf Schritten einen Wert liefert,
+der bis auf die 12. Nachkommastelle mit der Nullstelle übereinstimmt, die von Sage numerisch
+berechnet wurde.
 
 .. sagecellserver::
 
-    sage: d(x) = g(x) - h(x)
-    sage: dd(x) = derivative(d, x)
-    sage: k1(x) = x - d(x) / dd(x)
-    sage: print(u"\u03BA_1 = " + str(k1(1)) + " = " + str(float(k1(1))))
-    sage: print("Numerische Lösung: d(0) = " + str(find_root(d(x), -1, 1)))
+    sage: f(x) = g(x) - h(x)
+    sage: df(x) = derivative(f, x)
+    sage: nullst_approx = 1 
+    sage: newton(x) = x - f(x) / df(x)
+    sage: for i in range(5):
+    ...       nullst_approx = newton(nullst_approx)
+    ...       print (str(i + 1) + ". Schritt Newton-Verfahren: x_0 = " + str(float(nullst_approx)))
+    sage: print("Numerische Lösung: x_0 = " + str(find_root(f(x), -1, 1)))
 
 .. end of output
 
