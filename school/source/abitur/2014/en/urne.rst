@@ -6,7 +6,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   Urn A contains two red and three white balls. Urn B contains three
   red and two white balls. We will assume the following experiment:
 
-     We choose a random ball from urn A and put it into urn B. Afterwards, 
+     We choose a random ball from urn A and put it into urn B. Then, 
      we choose a random ball from urn B and put it into urn A. 
 
   a) Determine all possible contents of urn A after the experiment.
@@ -18,7 +18,7 @@ Bavarian final secondary-school examinations in mathematics 2014
 
 The experiment consists of two steps. As there are two types of balls that can be chosen
 in each step, we have to consider four different sequences of the experiment. In the following,
-the ball movement, as well as the end configuration of urn A, are displayed for each of the 
+the ball movement as well as the final content of urn A are displayed for each of the 
 four sequences.
 
   1. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
@@ -45,33 +45,33 @@ four sequences.
      \quad\Rightarrow
      \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ`
 
-The first and the fourth sequence provide the same end configuration. Therefore,
-we have three possible end configurations for urn A: :math:`\color{red}{\bullet} \circ 
+The first and the fourth sequence provide the same final content of urn
+A. Therefore, the three possible final contents of urn A are: :math:`\color{red}{\bullet} \circ 
 \circ \circ \circ`, :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ` and
 :math:`\color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ`.
 
 **Solution of part b**
 
-The probability of an end configuration with three white balls in urn A is given by the sum
-of the probabilities of the first and the fourth sequence from part a).
+The probability for urn A to finally contain three white balls is given by the sum
+of the probabilities of the first and the fourth sequence from part a.
 
-  1. The probability of drawing a red ball in the first step equals to :math:`\frac{2}{5}`,
-     because of the fact that two of the five balls in urn A are red. Urn B then contains
+  1. The probability of drawing a red ball in the first step equals :math:`\frac{2}{5}`,
+     because two of the five balls in urn A are red. Urn B then contains
      four red balls and two white balls. Therefore, the probability of 
-     drawing one of the four red balls in the second step equals to 
-     :math:`\frac{4}{6}=\frac{2}{3}`. The probability of this sequence can be calculated as
-     :math:`\frac{2}{5}\cdot\frac{2}{3}=\frac{4}{15}`.
+     drawing one of the four red balls in the second step equals 
+     :math:`\frac{4}{6}=\frac{2}{3}`. The probability for this sequence
+     is thus obtained as :math:`\frac{2}{5}\cdot\frac{2}{3}=\frac{4}{15}`.
 
-  2. Equivalent, the probability of drawing a white ball in both steps can be calculated as
+  2. Along the same lines, the probability of drawing a white ball in both steps can be calculated as
      :math:`\frac{3}{5}\cdot\frac{1}{2}=\frac{3}{10}`.
 
-The probability of the event E is the sum of the probabilities of these two sequences:
+The probability for event E is the sum of the probabilities for these two sequences:
 
 .. math::
 
   p(\mathrm{E}) = \frac{4}{15}+\frac{3}{10}=\frac{17}{30}\approx0.5667
 
-The probability of the complementary event :math:`\bar{E}`
+The probability for the complementary event :math:`\bar{E}`
 
 .. math::
 
@@ -79,10 +79,10 @@ The probability of the complementary event :math:`\bar{E}`
 
 is smaller than the probability of the event E.
 
-The probability of the event E can be computed with Sage in two different ways. The first possibility
+The probability for event E can be computed with Sage in two different ways. The first possibility
 is to simulate every possible sequence of the experiment with distinguishable balls. We therefore
 consider that every ball will be chosen with the same probability. This approach will lead to an
-exact result and will also prove our solution of part a).	
+exact result and will also prove our solution of part a.	
 
 .. sagecellserver::
 
@@ -108,11 +108,13 @@ exact result and will also prove our solution of part a).
     ...               print "   A: ", A2
     sage: print "p(E) = %s/%s" % (frequency_e, total)
 
-The second possibility is to repeatedly simulate the experiment of randomly drawing 
-balls from the two urns and to check if the event E occurs. This approach is faster 
-to compute, but it will give us only an empiric approximation of the result. 
-The runtime of the program will exceed the runtime of the first program, 
-in order to reach a good approximation. 
+A somewhat simpler solution consists in determining the probability for
+E by means of a simulation. To this end, we move a randomly chosen ball
+from urn A to urn B and another one in the opposite direction. The
+number of occurrences of event E is counted. This approach will give us
+only an approximation of the exact result. Furthermore, in order to
+reach a satisfying approximation, many repetitions are needed so that
+the runtime of this code exceeds the runtime of the first solution.
 
 .. sagecellserver::
 
