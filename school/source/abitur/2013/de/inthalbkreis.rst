@@ -10,6 +10,9 @@ Bayerisches Abitur in Mathematik 2013
   definierte Integralfunktion 
   :math:`F: x \mapsto \int\limits_0^x f(t)\mathrm{d}t`.
 
+  a) Geben Sie :math:`F(0)`, :math:`F(2)` und :math:`F(-2)` an.
+  b) Skizzieren Sie den Graphen von :math:`F` in Abbildung 1.
+
   .. image:: ../figs/inthalbkreis.png
      :align: center
 
