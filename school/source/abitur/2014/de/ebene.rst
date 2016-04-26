@@ -8,7 +8,7 @@ Bayerisches Abitur in Mathematik 2014
   a) Beschreiben Sie die besondere Lage von :math:`E` im Koordinatensystem.
 
   b) Untersuchen Sie rechnerisch, ob die Kugel mit Mittelpunkt :math:`Z(1|6|3)`
-     und Radius 7 die Ebene :math:`E` schneidet.
+     und Radius :math:`7` die Ebene :math:`E` schneidet.
 
 **Lösung zu Teil a**
 

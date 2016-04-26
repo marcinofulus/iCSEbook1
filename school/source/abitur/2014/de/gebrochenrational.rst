@@ -9,7 +9,7 @@ Bayerisches Abitur in Mathematik 2014
 
     f(x)=\frac{20x}{x^2-25}
 
-  und maximalem Definitionsbereich :math:`D_f`. Die Abbildung zeigt den Teil des
+  und maximalem Definitionsbereich :math:`D_f`. Die Abbildung zeigt einen Teil des
   Graphen :math:`G_f` von :math:`f`.
 
   .. image:: ../figs/gebrochenrational.png
@@ -20,7 +20,7 @@ Bayerisches Abitur in Mathematik 2014
      drei Asymptoten von :math:`G_f` an.
 
   b) Weisen Sie nach, dass die Steigung von :math:`G_f` in jedem Punkt des Graphen negativ ist. Berechnen
-     Sie die Größe des Winkels, unter dem :math:`G_f` die :math:`x-`Achse schneidet.
+     Sie die Größe des Winkels, unter dem :math:`G_f` die :math:`x`-Achse schneidet.
 
   c) Skizzieren Sie in der Abbildung den darin fehlenden Teil von :math:`G_f` unter Berücksichtigung der
      bisherigen Ergebnisse.
@@ -34,7 +34,7 @@ Bayerisches Abitur in Mathematik 2014
      :math:`x=s` mit :math:`s>10` schließen ein Flächenstück mit dem Inhalt :math:`A(s)` ein. Bestimmen
      Sie :math:`A(s)`.
 
-  f) Ermitteln Sie :math:`s` so, dass das Flächenstück aus Aufgabe 1e) den Inhalt 100 besitzt.
+  f) Ermitteln Sie :math:`s` so, dass das Flächenstück aus Aufgabe 1e den Inhalt 100 besitzt.
 
   g) Bestimmen Sie das Verhalten von :math:`A(s)` für :math:`s\rightarrow \infty`.
 
@@ -184,7 +184,7 @@ In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 
 **Lösung zu Teil 1e**
 
-Da die Funktion :math:`f` für :math:`x>10 stets positiv ist,`kann die beschriebene Fläche durch das Integral von 10 
+Da die Funktion :math:`f` für :math:`x>10` stets positiv ist, kann die beschriebene Fläche durch das Integral von 10 
 bis :math:`s` über die Funktion :math:`f` bestimmt werden:
 
 .. math::

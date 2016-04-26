@@ -8,7 +8,7 @@ Bayerisches Abitur in Mathematik 2014
   .. math::
      \vec{a} = \left(\begin{matrix} 2\\1\\2 \end{matrix} \right),\quad
      \vec{b} = \left(\begin{matrix} -1\\2\\0 \end{matrix} \right),\quad
-     \vec{c} = \left(\begin{matrix} 4t\\2t\\-5t \end{matrix} \right),
+     \vec{c_t} = \left(\begin{matrix} 4t\\2t\\-5t \end{matrix} \right),
 
   spannen für jeden Wert von :math:`t` mit :math:`t\in\mathbb{R}\backslash\{0\}`
   einen Körper auf. Die Abbildung zeigt den Sachverhalt beispielhaft für einen

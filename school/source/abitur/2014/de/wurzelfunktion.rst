@@ -223,7 +223,7 @@ Dieses Ergebnis lässt sich auch mit Sage herleiten.
      III. Quadranten.
 
   b) Zeichnen Sie die Parabel :math:`G_h` -- unter Berücksichtigung des Scheitels --
-     im Bereich :math:`-2\leq x\leq4` in ihre Zeichnung aus Aufgabe 1d) ein. 
+     im Bereich :math:`-2\leq x\leq4` in Ihre Zeichnung aus Aufgabe 1d ein. 
      Spiegelt man diesen Teil von :math:`G_h` an der Winkelhalbierenden :math:`w`,
      so entsteht eine herzförmige Figur; ergänzen Sie Ihre Zeichnung dementsprechend.
 
@@ -297,7 +297,7 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vo
 .. admonition:: Aufgabe 3
 
   Durch die in Aufgabe 2 entstandene herzförmige Figur soll das abgebildete Blatt modellhaft 
-  beschrieben werden. Eine Längeneinheit im Koordinatensystem aus Aufgabe 1d) soll dabei 1 cm 
+  beschrieben werden. Eine Längeneinheit im Koordinatensystem aus Aufgabe 1d soll dabei 1 cm 
   in der Wirklichkeit entsprechen.
 
   .. image:: ../figs/blatt.png
@@ -314,7 +314,7 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vo
 
   c) Der Verlauf des oberen Blattrands wird in der Nähe der Blattspitze durch das bisher verwendete 
      Modell nicht genau genug dargestellt. Daher soll der obere Blattrand im Modell für 
-     :math:`-2\leq x \leq 0` nicht mehr durch :math:`G_h` , sondern durch den Graphen :math:`G_k` einer in 
+     :math:`-2\leq x \leq 0` nicht mehr durch :math:`G_h`, sondern durch den Graphen :math:`G_k` einer in 
      :math:`\mathbb{R}` definierten ganzrationalen Funktion :math:`k` dritten Grades beschrieben werden. 
      Für die Funktion :math:`k` werden die folgenden Bedingungen gewählt (:math:`k'` und :math:`h'` sind die 
      Ableitungsfunktionen von :math:`k` bzw. :math:`h`):
