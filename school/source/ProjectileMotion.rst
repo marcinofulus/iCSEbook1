@@ -1,26 +1,30 @@
 
 Workshop: Projectile Motion
 +++++++++++++++++++++++++++
+This tutorial is adapted from a presentation held by Jonas van den Brink at iCSE4schools’ workshop in Katowice January 29, 2015.
+
+This workshop focuses on introducing computations to introductory
+physics. Introducing computations should lead to a sense of empowerment
+For this to be possible, the computations must 
+    1. relate to well-known problems 
+    2. be shown to be a powerful tool 
+    3. be understable. Students should write their own code
 
 An introduction to computing trajectories
 -----------------------------------------
 
-This workshop focuses on introducing computations to introductory
-physics. Introducing computations should lead to a sense of empowerment
-For this to be possible, the computations must 1. Relate to well-known
-problems 2. Must be shown to be a powerful tool 3. Understable. Students
-should write their own code
-
 The goal is to find the velocity and position of an object as functions of time: :math:`\vec{v}(t)`, :math:`\vec{r}(t)` 
 =======================================================================================================================
 
-|cannonball| Equations of motion:
+Equations of motion:
 
 .. math::  \frac{d \vec{r}}{d t} = \vec{v}(t), \qquad \frac{d \vec{v}}{d t} = \vec{a}(t)
 
+where :math:`r` is position, :math:`v` is velocity, :math:`a` is acceleration and :math:`t` is time.
+
 .. image:: figs/cannonball.svg
 
-Newtons 2. law of motion:
+Newton's second law of motion:
 
 .. math::  \vec{F} = m\vec{a}
 
@@ -30,27 +34,30 @@ Newtons 2. law of motion:
 
 .. math::  \vec{F}(r,v,t) = m\vec{a}(r,v,t).
 
-Our algorithm is now as follows 1. Find the physical forces of the
-system. 2. Use Newtons 2. law to find the acceleration 3. Calculate ~
-v(t) and~ r(t) by solving the equations of motion In this workshop, we
-will solve step number 3 numerically, using the Euler method.
+Our algorithm is now as follows: 
+    1. Find the physical forces of the system 
+    2. Use Newton's second law to find the acceleration 
+    3. Calculate ~v(t) and ~r(t) by solving the equations of motion 
+
+In this workshop, we will solve step number 3 numerically, using the Euler method.
 
 The Euler Method
-================
+----------------
 
 A method for solving ordinary differential equations (ODEs)
------------------------------------------------------------
+===========================================================
 
-We can solve the equations of motion numerically using the Euler method
+We can solve the equations of motion numerically using the Euler method.
+
 From the definition of the derivative
 
 .. math:: \frac{d v}{d t} = \lim_{\Delta t \to 0} \frac{v(t+\Delta t) - v(t)}{\Delta t} =  a(t)
 
-We now remove the limit, making :math:`\Delta t` a very small constant
+we now remove the limit, making :math:`\Delta t` a very small constant.
 
 .. math:: \frac{v(t+\Delta t) - v(t)}{\Delta t} \approx  a(t)
 
-Solving for :math:`v(t+\Delta t)` gives
+Solving for :math:`v(t+\Delta t)` gives:
 
 .. math::  v(t+\Delta t) \approx v(t) + a(t)\cdot \Delta t 
 
@@ -66,28 +73,21 @@ If :math:`a(t)` and :math:`v(t)` are known, we can calculate
 Our functions are no longer continuous, they have become discretized
 ====================================================================
 
-We only focus on multiples of our time-step
+We only focus on multiples of our time-step:
 
-.. raw:: latex
+.. math::
+   t   \in \{ 0,\ \Delta t,\  2\Delta t, \ 3\Delta t,  \ldots \} \\
+   t_i  \equiv i\cdot\Delta t
 
-   \begin{align*}
-   t  & \in \{ 0,\ \Delta t,\  2\Delta t, \ 3\Delta t,  \ldots \} \\
-   t_i & \equiv i\cdot\Delta t
-   \end{align*}
+Introduce the shorthand:
 
-Introduce the shorthand
-
-.. raw:: latex
-
-   \begin{align*}
-   v(t_i) & \equiv v_i \\
-   r(t_i) & \equiv r_i \\
-   \end{align*}
+.. math::
+   v(t_i)  \equiv v_i \\
+   r(t_i)  \equiv r_i \\
 
 .. figure:: figs/time_discretization.svg
    :alt: time discretization
 
-   time discretization
 
 We solve the equations of motion iteratively
 ============================================
@@ -108,23 +108,24 @@ and :math:`r_0`, until we have reached our end-time :math:`t_N`
 Algorithm for the Euler method
 ==============================
 
-for :math:`i=0,1,2,3,\ldots, N-1`: 1. Use the previous results
-:math:`x_i` and :math:`v_i` to compute the acceleration: $ a\_i =
-F(x\_i, v\_i, t\_i)/m$. 2. Compute the new velocity: $ v\_{i+1} = v\_i +
-a\_i:raw-latex:`\Delta `t$. 3. Compute the new position: $ r\_{i+1} =
-r\_i + v\_i:raw-latex:`\Delta `t$.
+for :math:`i=0,1,2,3,\ldots, N-1`: 
+    1. Use the previous results :math:`x_i` and :math:`v_i` to compute the acceleration: 
+       :math:`a_i =F(x_i, v_i, t_i)/m` 
+    2. Compute the new velocity: :math:`v_{i+1} = v_i +a_i\Delta t` 
+    3. Compute the new position: :math:`r_{i+1} = r_i + v_i\Delta t`
 
 Implementation
-==============
+--------------
+
 
 Moving from physics and math to actual computer code
-----------------------------------------------------
+====================================================
 
-for :math:`i=0,1,2,3,\ldots, N-1`: 1. Use the previous results
-:math:`x_i` and :math:`v_i` to compute the acceleration: $ a\_i =
-F(x\_i, v\_i, t\_i)/m$. 2. Compute the new velocity: $ v\_{i+1} = v\_i +
-a\_i:raw-latex:`\Delta `t$. 3. Compute the new position: $ r\_{i+1} =
-r\_i + v\_i:raw-latex:`\Delta `t$.
+for :math:`i=0,1,2,3,\ldots, N-1`: 
+    1. Use the previous results :math:`x_i` and :math:`v_i` to compute the acceleration:
+       :math:`a_i = F(x_i, v_i, t_i)/m`
+    2. Compute the new velocity: :math:`v_{i+1} = v_i + a_i\Delta t` 
+    3. Compute the new position: :math:`r_{i+1} = r_i + v_i\Delta t` 
 
 .. code:: python
 
@@ -203,7 +204,6 @@ result
     
     # Import functionality for plotting
     import matplotlib.pyplot as plt
-    %matplotlib inline 
     
     # Plot figure
     plt.plot(x,y)
@@ -218,17 +218,12 @@ result
     # Makes the plot appear on the screen
     plt.show()
 
-
-.. image:: output_30_0.png
-
-
 .. figure:: figs/plot_cannonball1.svg
    :alt: plot\_cannonball1
 
-   plot\_cannonball1
 
 Numerical Experimentation
-=========================
+-------------------------
 
 Altering parameters let’s us immediately see the consequences
 
@@ -250,13 +245,14 @@ Students can use numerical experimentation to build intuition and knowledge
    air drag. What is important, and what can be ignored?
 
 Examples of possible projects
-=============================
+-----------------------------
 
-You will have a chance to look at some of these today 
 
-Catapults and cannons and sports such as baseball 
-* Easy to compare with experimental data, either before or after simulation. 
-* Can look into studies of air drag, Reynolds number etc. |cannonball|
+Catapults and cannons and sports such as baseball
+=================================================
+
+-  Easy to compare with experimental data, either before or after simulation.
+-  Can look into studies of air drag, Reynolds number etc. |cannonball|
 
 .. |cannonball| image:: figs/cannonball.svg
 

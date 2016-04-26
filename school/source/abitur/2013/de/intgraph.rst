@@ -16,40 +16,41 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung**
 
-Um diese Aufgabe zu lösen, muss man einen Zusammenhang zwischen Funktion
-und Stammfunktion kennen:
-  Hat die Funktion eine Nullstelle mit Vorzeichenwechsel, so gibt es hier in der Stammfunktion
-  ein lokales Extremum. Ist die Steigung der Funkion an dieser Nullstelle negativ so
-  handelt es sich um ein Maximum in der Stammfunktion, bei positiver Steigung
-  um ein Minimum.
+Hat die Funktion eine Nullstelle mit Vorzeichenwechsel, so besitzt die
+zugehörige Stammfunktion an dieser Stelle ein lokales Extremum. Dabei
+handelt es sich um ein Maximum, wenn die Steigung der Funktion an der
+Nullstelle negativ ist. Ist die Steigung der Funktion positiv, so hat
+die Stammfunktion dort ein Minimum.
 
-Betrachtet man die Funktion in der Aufgabenstellung, so erkennt man eine
-Nullstelle von :math:`f(x)` bei :math:`x_1=0` und bei :math:`x_2\approx 2,25`.
-Im ersten Fall ist die Steigung negativ also ist :math:`F(0)` ein lokales 
-Maximum. An der Stelle :math:`x_2` ist die Steigung von :math:`f` positiv.
-:math:`F(x_2)` ist also ein lokales Minimum.
+Betrachtet man die Funktion in der Aufgabenstellung, so erkennt man 
+Nullstellen von :math:`f(x)` bei :math:`x_1=0` und bei :math:`x_2\approx 2,25`.
+Im ersten Fall ist die Steigung negativ, so dass :math:`F(0)` ein lokales 
+Maximum der Stammfunktion ist. An der Stelle :math:`x_2` ist die Steigung von
+:math:`f` positiv und somit handelt es sich bei :math:`F(x_2)` um ein lokales Minimum.
 
-Eine weitere Eigenschaft von :math:`F(x)` ergibt sich aus den Integralgrenzen.
-Diese hat als untere Grenze :math:`x_3=1`. Dies bedeutet, dass :math:`F` hier eine
-Nullstelle hat.
+Eine weitere Eigenschaft von :math:`F(x)` ergibt sich aus der unteren
+Integrationsgrenze bei :math:`t=1`. Damit ist :math:`F(1)=0`.
 
-Mit Sage lässt sich eine Integration bei bekannter Funktion :math:`g` durchführen.
-Für :math:`g` wurde hier 
+Mit Sage lässt sich eine Integration bei bekannter Funktion :math:`f` durchführen.
+Für :math:`f` wählen wir
 
 .. math::
 
-  g(x)=-3\cdot\left(e^{0.5\cdot x} + \frac{4}{x-4}\right)
+  f(x)=\frac{5x(4x-9)}{(2x-9)^2},
 
-gewählt, da dies etwa dem Verlauf der Funktion in Abbildung 1 folgt.
+da diese Funktion die Eigenschaften besitzt, die wir in der obigen
+Argumentation verwendet haben, und ihr qualitativer Verlauf der
+Darstellung in Abbildung 1 entspricht.
 
 
 .. sagecellserver::
 
-  sage: g(x) = -3*(e**(0.5*x) + 4/(x-4))
-  sage: ig = g.integrate(x).real()
-  sage: pg = plot(g, (-3,4), color='blue')
-  sage: pig = plot(ig - ig(1), (-3,4), color='red')
-  sage: show(pg + pig, figsize=(4,2.8), ymax=5)
+  sage: var('t')
+  sage: f(x) = 5*x*(4*x-9)/(2*x-9)^2
+  sage: assume(1 < x, 2*x-7 < 0)
+  sage: F(x) = integrate(f(t), t, 1, x)
+  sage: ranges = {'xmin': -3, 'xmax': 4, 'ymin': -2, 'ymax': 7}
+  sage: show(plot(f, color='blue', **ranges)+plot(F, color='red', **ranges),
+             figsize=(3.5, 4.5))
 
 .. end of output
-
