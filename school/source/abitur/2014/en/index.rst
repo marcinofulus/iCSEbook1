@@ -18,10 +18,10 @@ Stochastics
 .. toctree::
    :maxdepth: 1
 
-   Aufgabe 1 <urne>
-   Aufgabe 2 <bernoulli>
-   Aufgabe 3 <zufallsgroesse>
-   Aufgabe 4 <baumdiagramm>
+   Problem 1 <urne>
+   Problem 2 <bernoulli>
+   Problem 3 <zufallsgroesse>
+   Problem 4 <baumdiagramm>
 
 Geometry
 ........
