@@ -23,8 +23,8 @@ wir zunächst die Ebenengleichung nach der Variablen :math:`x_3` auf.
   sage: var('x1')
   sage: var('x2')
   sage: var('x3')
-  sage: x3 = (5-3*x2)/4
-  sage: p1 = plot3d(x3, (x1,-10,10), (x2,-10,10))
+  sage: solution = solve(3*x2+4*x3 == 5, x3, solution_dict=1)[0]
+  sage: p1 = plot3d(solution[x3], (x1, -10, 10), (x2, -10, 10))
   sage: p1
 
 **Lösung zu Teil b**
@@ -34,7 +34,7 @@ im dreidimensionalen Raum verschaffen.
 
 .. sagecellserver::
 
-  sage: p2 = sphere(center=(1,6,3), size=7, color='red', opacity=1)
+  sage: p2 = sphere(center=(1, 6, 3), size=7, color='red', opacity=1)
   sage: p1 + p2
 
 Wir können leicht erkennen, dass die Kugel die Ebene in unendlich vielen Punkten schneidet.
@@ -94,3 +94,21 @@ Geradenkoordinaten in die Ebenengleichung einsetzen. Wir erhalten
 Der Kugelmittelpunkt hat also den Abstand 5 von der Ebene. Da der der Kugelradius mit dem Wert
 7 größer ist, als der Abstand des Mittelpunkts zur Ebene, ergibt sich ein Schnittkreis mit
 unendlich vielen Schnittpunkten, wie bereits durch Sage deutlich wurde.
+Die gerade durchgeführte Rechnung kann man folgendermaßen in Sage
+nachvollziehen:
+
+.. sagecellserver::
+
+  sage: t = var('t')
+  sage: n = vector([0, 3, 4])
+  sage: n0 = n/norm(n)
+  sage: z = vector([1, 6, 3])
+  sage: radius = 7
+  sage: gerade = z+t*n0
+  sage: solution = solve(3*gerade[1]+4*gerade[2] == 5, t, solution_dict=True)[0]
+  sage: abstand = abs(solution[t])
+  sage: print('Abstand Kugelzentrum - Ebene: %4.2f' % abstand)
+  sage: if abstand < radius:
+  sage:     print('Ebene schneidet Kugel')
+  sage: else:
+  sage:     print('Ebene schneidet Kugel nicht')
