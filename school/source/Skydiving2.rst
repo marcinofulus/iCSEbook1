@@ -3,7 +3,7 @@ Skydiving - part 2
 ++++++++++++++++++
 
 In part 1 we created a program to solve the equations of motion for
-skydiving. We began with Newtons 2nd law, and we looked at the forces
+skydiving. We began with Newton's second law, and we looked at the forces
 acting on the jumper. This gave us a formula for the acceleration as a
 function of the velocity. Then we used the equations of motion that we
 know hold for constant acceleration to find the velocity at small steps
@@ -45,7 +45,7 @@ to take short steps in time of length :math:`\Delta t`, which gave us
    v_2 &= v_1 + a(v_1)\Delta t \\
    v_3 &= v_2 + a(v_2)\Delta t \\
    &\vdots \\
-   v_{i+1} &= v_i + a(v_i)\Delta t.
+   v_{n+1} &= v_n + a(v_n)\Delta t.
    \end{align*}
 
 
@@ -56,17 +56,20 @@ can use to find the position:
 .. math:: x = x_0 + v_0 t + \frac{1}{2}at^2.
 
 We can use this to take short 'steps in time' in the same way as we did
-for the velocity
+for the velocity:
 
-.. raw:: latex
+
+.. math::
 
    \begin{align*}
-   x_1 &= x_0  + v_0 \Delta t + \frac{1}{2} a(v_0) \Delta t^2 \\  
-   x_2 &= x_1  + v_1 \Delta t + \frac{1}{2} a(v_1) \Delta t^2 \\  
-   x_3 &= x_2  + v_2 \Delta t + \frac{1}{2} a(v_2) \Delta t^2 \\  
+   x_1 &= x_0 + v_0 \Delta t + \frac{1}{2} a(v_0) \Delta t^2 \\  
+   x_2 &= x_1 + v_1 \Delta t + \frac{1}{2} a(v_1) \Delta t^2 \\
+   x_3 &= x_2 + v_2 \Delta t + \frac{1}{2} a(v_2) \Delta t^2 \\
    &\vdots \\
-   x_{i+1} &= x_i + v_i\Delta t + \frac{1}{2} a(v_i)\Delta t^2.
+   x_{n+1} &= x_n + v_n\Delta t + \frac{1}{2} a(v_n)\Delta t^2.
    \end{align*}
+
+
 
 Bungee jump
 ===========
@@ -78,7 +81,7 @@ when it is stretched. When the jumper jumps from the top of a bridge,
 the cord is not stretched, and so it does not affect the jumper until
 she has fallen far enough for the cord to begin to stretch. This point,
 right before the elastic cord starts to stretch, is known as the point
-of equilibrium
+of equilibrium.
 
 Now, let us create a reference that fits the problem we are examining.
 We place :math:`x=0` at the point of equilibrium, and we decide that the
@@ -89,11 +92,13 @@ a river 60 meters below the bridge.
 .. figure:: figs/Bungee_bridge.svg
    :alt: bungee jumper illustration
 
-   bungee jumper illustration
+   Illustration of a bungee jumper. The
+   bridge is 60 m tall and the equilibrium point (x = 0) is marked with
+   a horizontal line.
 
 
 
-We can tell that if the jumpers position is above the point of
+We can tell that if the jumper's position is above the point of
 equilibrium, then the cord will not be stretched, and it will not act on
 the jumper with any force. And because we have placed the point of
 equilibrium at :math:`x=0`, the force exerted by the cord :math:`S`
@@ -118,7 +123,7 @@ Now we can express the force from the cord as a function of the position
    -kx & \mbox{if } x \leq 0
    \end{cases}.
 
-In addition to :math:`S(x)`, the jumper experiences both gravity mg, and
+In addition to :math:`S(x)`, the jumper experiences both gravity :math:`mg`, and
 air resistance :math:`Dv`. From Newtons 2nd law:
 
 .. math:: \sum F = ma,
@@ -135,7 +140,7 @@ both the velocity and position of the jumper.
 This means that we have to solve for both velocity and position at the
 same time, like this
 
-.. raw:: latex
+.. math::
 
    \begin{align*}
    v_1 &= v_0 + a(x_0, v_0)\Delta t \\
@@ -143,14 +148,15 @@ same time, like this
    v_2 &= v_1 + a(x_1, v_1)\Delta t \\
    x_2 &= x_1 + v_1\Delta t + \frac{1}{2}a(x_1, v_1)\Delta t^2 \\
    &\vdots \\
-   v_{i+1} &= v_i + a(x_i, v_i)\Delta t \\
-   x_{i+1} &= x_i + v_i\Delta t + \frac{1}{2}a(x_i, v_i)\Delta t^2 \\
+   v_{n+1} &= v_n + a(x_n, v_n)\Delta t \\
+   x_{n+1} &= x_n + v_n\Delta t + \frac{1}{2}a(x_n, v_n)\Delta t^2 \\
    \end{align*}
+
 
 The Code
 ========
 
-1. Import pylab, we do not need anything else
+1. Import Pylab, we do not need anything else
 2. Declare all the parameters we need. Use :math:`m=60`, :math:`v_0=0`,
    :math:`x_0=20`, :math:`D=10`. You can just guess the value of
    :math:`k`, we will adjust it later.
@@ -164,41 +170,47 @@ The Code
    :math:`\verb+dt+`), :math:`T=60` and :math:`n=T/dt`
 6. Declare three arrays, one for the velocity :math:`v` , one for the
    position :math:`x` and one for the time :math:`t`. We want the arrays
-   to be empty and have room for n+1 elements, so use the
+   to be empty and have room for N+1 elements, so use the
    :math:`\verb+zeros+` command.
 7. Set the first element in the x-array to :math:`x_0`, i.e.
    :math:`\verb+x[0] = x0+`.
-8. Create a :math:`\verb+for+` loop that that iterates over $i =
-   0,1,2,..,n $ (**Hint:** use :math:`\verb+range+`)
-9. Inside the loop, calculate :math:`\verb!t[i+1]!`,
-   :math:`\verb!v[i+1]!` and :math:`\verb!x[i+1]!`. Use the following
+8. Create a :math:`\verb+for+` loop that that iterates over :math:`n =0,1,2,..,N` 
+   (**Hint:** use :math:`\verb+range+`)
+9. Inside the loop, calculate :math:`\verb!t[n+1]!`,
+   :math:`\verb!v[n+1]!` and :math:`\verb!x[n+1]!`. Use the following
    formulas
 
-.. raw:: latex
+.. math::
+
 
    \begin{align*}
-   t_{i+1} &= t_i + \Delta t, \\
-   v_{i+1} &= v_i + a(x_i, v_i)\Delta t, \\
-   x_{i+1} &= x_i + v_i\Delta t + \frac{1}{2}a(x_i, v_i)\Delta t^2.
+   t_{n+1} &= t_n + \Delta t, \\
+   v_{n+1} &= v_n + a(x_n, v_n)\Delta t, \\
+   x_{n+1} &= x_n + v_n\Delta t + \frac{1}{2}a(x_n, v_n) \Delta t^2.
    \end{align*}
-
+   
+   
 You should have something similar to
 
-.. sagecellserver:: python
+.. code:: python
 
-    for i in range(n):
-        t[i+1] = t[i] + ...
-        v[i+1] = v[i] + ...
-        x[i+1] = x[i] + ... 
-10.Plot the result to see if everything is correct (**Hint:**
+    for n in range(N):
+        t[n+1] = t[n] + ...
+        v[n+1] = v[n] + ...
+        x[n+1] = x[n] + ... 
+        
+10. Plot the result to see if everything is correct (**Hint:**
 :math:`\verb!plot(t, x)!`).
+
+We encourage you to solve the exercises independently before you have a look 
+at the solutions we have provided in "Bungee code".
 
 Exercises
 =========
 
 1. Make the plot look nicer. Label the axes, etc.
-2. By examining the plot, try to adjust :math:`k` such that the jumper
-   barely touches the water. That is, the bottom of the curve reaches
+2. By examining the plot, try to adjust :math:`k` to a value that makes 
+   the jumper barely touch the water. That is, the bottom of the curve reaches
    exactly :math:`-40`.
 3. Print out the maximum velocity experienced by the jumper. **Hint:**
    :math:`\verb!max(v)!`. How does this compare to the skydivers maximum
@@ -219,9 +231,9 @@ Exercises
 =========
 
 1. Calculate the new equilibrium point when there is a person of mass
-   :math:`m` is hanging from the cord equilibrium. **Hint:** Use the
+   :math:`m` hanging from the cord equilibrium. **Hint:** Use the
    same approach as we used to find the terminal velocity of the
-   parachute jumper
+   parachute jumper.
 
 2. Find the equilibrium point by looking at the plot. Compare what you
    see with the calculation you did by hand.
@@ -233,7 +245,7 @@ The term 'g-force' is somewhat misleading because it is not really a
 'force' you experience, but *acceleration*. When the human body is
 accelerated, we feel it as weight pulling at us. Like when you are
 sitting in a car that drives through a turn. You feel like you are
-beeing pulled to the side. So these accelerations feels like a force
+being pulled to the side. So these accelerations feel like forces
 acting on the body, and that is why we call them 'g-forces'.
 
 The letter 'g' in 'g-force' stands for gravitation. This is because we
@@ -245,14 +257,14 @@ trough turns and possibly even through loops. You become weightless when
 there is a quick dive down from a peak in the roller coaster, that is,
 you experience 0 g or free-fall. An advantage with using g-forces is
 that they are independent from mass. This means that every person will
-feel the exact same g-forces during the same roller coaster.
+feel the exact same g-forces during the same roller coaster ride.
 
 To calculate the g-forces experienced by the jumper in both cases, we
 just need to add an additional array to the loop. For this array, we
 calculate the acceleration acting on the jumper, divide by :math:`g` and
 add 1. Here is the code:
 
-.. sagecellserver:: python
+.. code:: python
 
     gforces = zeros(N+1)
     ...
@@ -263,6 +275,7 @@ add 1. Here is the code:
         v[i+1] = v[i] + ...
         x[i+1] = x[i] + ...
         gforces[i] = a(x[i],v[i])/g + 1
+        
 Exercise
 ========
 
@@ -282,7 +295,7 @@ the first loop still iterate only over the first :math:`60` seconds.
 Then we change :math:`C` and :math:`A`, and solve the remaining
 :math:`120` seconds.
 
-.. sagecellserver:: python
+.. code:: python
 
     dt = 0.01
     T = 180
@@ -298,27 +311,27 @@ Then we change :math:`C` and :math:`A`, and solve the remaining
     C = C_p
     A = A_p
     
-    # Simulationg the last 120 seconds
+    # Simulating the last 120 seconds
     for i in range(60/dt, 180/dt):
         t[i+1] = t[i] + dt
         v[i+1] = v[i] + a(v[i])*dt
         gforces[i] = 1 - a(v[i])/g
 Now, we can plot the velocity against time, and the g-forces. What do we
-see? One problem that has materialized is that the change in the values
-of :math:`C` and :math:`A` happens far to sudden. It is like the
+see? One problem that has materialized is that the changes in the values
+of :math:`C` and :math:`A` happen too suddenly. It is as if the
 parachute deployed immediately, which would have slowed the jumper
 extremely fast, causing almost 100 g! Anything above 10g can be fatal,
 and an average person will start to faint above 5g. It does not look
 good for our poor parachute jumper!
 
 This is why modern parachutes are made to deploy slower on purpose, so
-the velocity decreases slower. Let us attempt to simulate that the
+the velocity doesn’t decrease so suddenly. Let us attempt to simulate that the
 parachute takes 5 seconds to deploy completely, and see how it affects
-the g-forces. This time, we create three loops. One without a parachute,
+the g-forces. This time, we create three loops. One without the parachute,
 one where the parachute is in the process of deploying, and one after
 the parachute is completely deployed.
 
-.. sagecellserver:: python
+.. code:: python
 
     dt = 0.01
     T = 180
@@ -339,7 +352,7 @@ the parachute is completely deployed.
         v[i+1] = v[i] + a(v[i])*dt
         gforces[i] = 1 - a(v[i])/g
     
-    # Simulationg the last 120 seconds
+    # Simulating the last 120 seconds
     for i in range(65/dt, 180/dt):
         t[i+1] = t[i] + dt
         v[i+1] = v[i] + a(v[i])*dt
