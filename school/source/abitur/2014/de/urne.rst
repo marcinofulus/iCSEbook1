@@ -118,10 +118,13 @@ für den Inhalt der Urne A (Teilaufgabe a) überprüfen.
 
 Eine etwas leichtere Lösung besteht darin, die Wahrscheinlichkeit für
 das Ereignis E durch eine Simulation zu bestimmen. Hierfür verschieben
-wir eine zufällige Kugeln von Urne A nach Urne B, sowie eine weitere
+wir eine zufällige Kugel von Urne A nach Urne B, sowie eine weitere
 zufällige Kugel in umgekehrter Richtung und zählen dabei, wie oft das
 Ereignis E bei einer bestimmten Anzahl an Durchführungen eintritt.
-
+Diese Variante liefert nur eine näherungsweise Lösung. Um eine
+hinreichende Genauigkeit zu erreichen, sind viele Wiederholungen
+erforderlich, so dass diese Lösung eine längere Laufzeit erfordert
+als die erste Lösung.
 
 .. sagecellserver::
 
