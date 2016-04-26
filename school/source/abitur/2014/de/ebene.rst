@@ -107,7 +107,7 @@ nachvollziehen:
   sage: gerade = z+t*n0
   sage: solution = solve(3*gerade[1]+4*gerade[2] == 5, t, solution_dict=True)[0]
   sage: abstand = abs(solution[t])
-  sage: print('Abstand Kugelzentrum - Ebene: %4.2f' % abstand)
+  sage: print "Abstand Kugelzentrum - Ebene:", abstand
   sage: if abstand < radius:
   sage:     print('Ebene schneidet Kugel')
   sage: else:
