@@ -36,32 +36,37 @@ Wir verschaffen uns mit Sage zunächst einen Überblick über die gegebene Funkt
 
   sage: f(x) = 2 - sqrt(12 - 2*x)
   sage: p1 = plot(f(x), x, (-7,6), figsize=(4, 2.8))
-  sage: show(p1)
+  sage: show(p1, gridlines=True)
 
 .. end of output
 
-Den Schnittpunkt mit der :math:`y`-Achse erhalten wir durch Einsetzen von :math:`f(0)`
+Den Schnittpunkt mit der :math:`y`-Achse ist durch :math:`(0|f(0))`
+gegeben, wobei
 
 .. math::
 
-  \left(0\,\left|\,f(0))=(0\,\left|\,2-2*\sqrt{3}\right.\right.\right),
+  f(0)=2-2\sqrt{3}.
 
 oder mit Hilfe von Sage
 
 .. sagecellserver::
 
-  sage: print "Der y-Achsenabschnitt ist ", f(0)
-  sage: print "(ca.", float(f(0)), ")"
+  sage: print "Der y-Achsenabschnitt ist ", f(0), u"\u2248", f(0).n(digits=4)
 
 .. end of output
 
-Den Schnittpunkt mit der :math:`x`-Achse erhalten durch die Nullstellen:
+Den Schnittpunkt mit der :math:`x`-Achse ergibt sich aus der Nullstelle
+der Funktion :math:`f`:
 
 .. math::
 
-  &f(x) = 2-\sqrt{12-2x} = 0 \Leftrightarrow\\
-  &12-2x=4 \Leftrightarrow\\
-  &x=4,
+  &f(x) = 2-\sqrt{12-2x} \overset{!}{=} 0 \Leftrightarrow
+
+Auflösen nach :math:`x` liefert
+
+.. math::
+
+  x=4
 
 oder mit Hilfe von Sage:
 
@@ -72,21 +77,24 @@ oder mit Hilfe von Sage:
 .. end of output
 
 Der Schnittpunkt mit der :math:`x`-Achse befindet sich also bei :math:`(4|0)`.
-Die beiden Schnittpunkte mit den Koordinatenachsen können auch in etwa aus dem
-Funktionsgraphen abgelesen werden.
+Die beiden gefundenen Schnittpunkte mit den Koordinatenachsen sind mit
+dem von Sage gelieferten Funktionsgraphen konsistent.
 
-Für das Verhalten von :math:`x\rightarrow -\infty` ergibt sich
+Für das Verhalten für :math:`x\rightarrow -\infty` ergibt sich
 
 .. math::
 
-  &\lim\limits_{x\rightarrow -\infty} 2-\sqrt{12-2x} = \lim\limits_{x\rightarrow \infty}
-  2-\sqrt{2x} = \lim\limits_{x\rightarrow \infty} -\sqrt{x} = -\infty.
+  \lim\limits_{x\rightarrow -\infty} 2-\sqrt{12-2x} &=
+  \lim\limits_{x\rightarrow \infty} 2-\sqrt{12+2x}\\
+  &= -\lim\limits_{x\rightarrow \infty} \sqrt{2x}\\
+  &= -\infty.
 
 Dies können wir mit Sage überprüfen:
 
 .. sagecellserver::
 
-  sage: print "Verhalten von f --> -unendlich:", f(-infinity)
+  sage: limitval = limit(f(x), x=-infinity)
+  sage: html("$\lim_{x=-\infty} f(x) = %s$" % latex(limitval))
 
 .. end of output
 
@@ -94,7 +102,7 @@ Für :math:`f(6)` erhalten wir
 
 .. math::
 
-  f(6) = 2-\sqrt(12-2\cdot6)=2,
+  f(6) = 2-\sqrt{12-2\cdot6}=2,
 
 bzw. 
 
@@ -118,39 +126,42 @@ Selbiges Ergebnis erhalten wir mit Sage:
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x),  x)
+  sage: df = derivative(f,  x)
   sage: print "Die Ableitung von f ist:", df
   sage: p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
   sage: show(p2)
 
 .. end of output
 
-Der Definitionsbereich der Ableitung wird zusätzlich zu der Wurzelfunktion aus 
-:math:`f(x)` noch durch die Nullstelle im Nenner eingeschränkt (:math:`x_o=6`):
-
-.. math::
-
-  \mathbb{D}_{f'}=]-\infty;6[
+Der Definitionsbereich der Ableitung wird gegenüber dem Definitionsbereich von
+:math:`f(x)` noch durch die Nullstelle des Nenners der Ableitung bei :math:`x_0=6` 
+eingeschränkt, so dass :math:`\mathbb{D}_{f'}=]-\infty;6[`.
 
 Für den Grenzwert :math:`\lim\limits_{x\rightarrow 6}f'(x)` erhalten wir
 
 .. math::
 
-  \lim\limits_{x\rightarrow 6}f'(x) = \lim\limits_{x\rightarrow 0}\frac{1}{\sqrt(x)}=\infty.
+  \lim\limits_{x\rightarrow 6}f'(x) = \lim\limits_{x\rightarrow 0}\frac{1}{\sqrt{x}}=\infty.
 
-Dies lässt sich auch in dem Graph von :math:`f'(x)` ablesen.
+Dies lässt sich auch vom Graphen der Funktion :math:`f'(x)` ablesen oder
+mit Sage berechnen lassen:
+
+.. sagecellserver::
+
+  sage: limitval = limit(df(x), x=6)
+  sage: html("$\lim_{x=6} f'(x) = %s$" % latex(limitval))
 
 **Lösung zu Teil 1c**
 
 Das Monotonieverhalten von :math:`f` lässt sich aus der Ableitung :math:`f'` bestimmen.
-Aus dem Plot von Teilaufgabe b) können wir ablesen, dass :math:`f'` überall positiv ist
+Aus dem Plot von Teilaufgabe b können wir ablesen, dass :math:`f'` überall positiv ist
 und damit :math:`f` auf dem ganzen Definitionsbereich streng monoton steigend ist.
 
 Dies lässt sich bestätigen, indem man die Ableitung :math:`f'` genauer untersucht:
 Da die Wurzel im Nenner auf ihrem Definitionsbereich stetig ist und nur positive Werte annehmen
 kann und auch der Zähler mit dem Wert 1 immer positiv ist, ist auch :math:`f'` stets positiv.
 
-Der Wertebereich von :math:`f` beginnt nach Teilaufgabe a) bei :math:`-\infty` und nimmt
+Der Wertebereich von :math:`f` beginnt nach Teilaufgabe a bei :math:`-\infty` und nimmt
 für :math:`x=6` (dem Rand des Definitionsbereichs) den Wert 2 an. Da die Funktion auf ihrem
 Definitionsbereich stetig und streng monoton steigend ist, werden auch (und ausschließlich)
 alle Werte dazwischen angenommen. Der Wertebereich von :math:`f` ist also
@@ -167,7 +178,11 @@ Wir erhalten
 
   f(-2) = -2.
 
-Die grafische Darstellung von :math:`f` ist Teilaufgabe a) zu entnehmen.
+.. sagecellserver::
+
+  sage: print f(-2)
+
+Die grafische Darstellung von :math:`f` ist Teilaufgabe a zu entnehmen.
 
 **Lösung zu Teil 1e**
 
@@ -215,7 +230,7 @@ Dieses Ergebnis lässt sich auch mit Sage herleiten.
 
   Der Graph der in :math:`\mathbb{R}` definierten Funktion 
   :math:`h:x\mapsto-\frac{1}{2}x^2+2x+4` ist die Parabel :math:`G_h`. Der Graph
-  der in Aufgabe 1e) betrachteten Umkehrfunktion :math:`f^{-1}` ist ein Teil
+  der in Aufgabe 1e betrachteten Umkehrfunktion :math:`f^{-1}` ist ein Teil
   dieser Parabel.
 
   a) Berechnen Sie die Koordinaten der Schnittpunkte von :math:`G_h` mit der durch
@@ -235,22 +250,31 @@ Die Schnittpunkte der Graphen erhalten wir durch Gleichsetzen der beiden Funktio
 
   & -\frac{1}{2}x^2+2x+4 = x\\
   & -\frac{1}{2}x^2+x+4 = 0\\
-  & x_{1/2}=\frac{-1\pm\sqrt{1^2-4\cdot\left(-\frac{1}{2}\right)\cdot4}}{2\cdot \frac{1}{2}}\\
-  & x_1 = -4, \quad x_2=2
+  & x_{1/2}=\frac{-1\pm\sqrt{1^2-4\cdot\left(-\frac{1}{2}\right)\cdot4}}
+                 {2\cdot\left(-\frac{1}{2}\right)}\\
+  & x_1 = -2, \quad x_2=4
 
 Die :math:`y`-Werte der Schnittpunkte sind wegen der Geradengleichung :math:`y=x` gleich den 
 :math:`x`-Werten, also
 
 .. math::
 
-  y_1=-4, \quad y_2=2.
+  y_1=-2, \quad y_2=4.
 
-Wir überprüfen die Schnittpunkte, indem wir :math:`G_h` und :math:`w` von Sage zeichnen lassen:
+Mit Sage können wir dieses Problem sowohl analytisch
 
 .. sagecellserver::
 
   sage: h(x)=-1/2*x^2+2*x+4
   sage: w(x) = x
+  sage: for loesung in solve(h(x) == w(x), x, solution_dict=True):
+  sage:     print "(", loesung[x], "|", loesung[x], ")"
+
+
+als auch graphisch lösen. Für Letzteres lassen wir :math:`G_h` und :math:`w` von Sage zeichnen:
+
+.. sagecellserver::
+
   sage: p3 = plot(h(x), x, (-3, 6), figsize=(4, 2.8), fill=w, fillcolor = 'red')
   sage: p4 = plot(w(x), x, (-3, 6), figsize=(4, 2.8), color='green')
   sage: show(p3 + p4, aspect_ratio=1) 
@@ -259,20 +283,22 @@ Wir überprüfen die Schnittpunkte, indem wir :math:`G_h` und :math:`w` von Sage
 
 **Lösung zu Teil 2b**
 
-Betrachtet man den Graphen von Teilaufgabe 2a), lässt sich bereits die Hälfte der Herzform
-durch die Parabel erkennen. Um die volle Herzform zu erhalten, muss :math:`G_h` noch an der
-Winkelhalbierenden :math:`w` gespiegelt werden. Eine Spiegelung an der Winkelhalbierenden
-:math:`y = x` entspricht der Umkehrung der Funktion. Die Umkehrung zu :math:`h` ist die Funktion
-:math:`f`, wie uns bereits aus Aufgabe 1e) bekannt ist. Allerdings gilt diese Umkehrung für :math:`h` 
-nur im Definitionsbereich :math:`]-\infty;2]`, vgl. Aufgabe 1e). Für Werte :math:`x>2` kann jedoch 
-als Umkehrfunktion für :math:`h` die Funktion
+Betrachtet man den Graphen von Teilaufgabe 2a, lässt sich bereits die
+Hälfte der Herzform durch die Parabel erkennen. Um die volle Herzform zu
+erhalten, muss :math:`G_h` noch an der Winkelhalbierenden :math:`w`
+gespiegelt werden. Eine Spiegelung an der Winkelhalbierenden :math:`y =
+x` entspricht der Umkehrung der Funktion. Die Umkehrungfunktion von
+:math:`h` ist die Funktion :math:`f`, wie uns bereits aus Aufgabe 1e
+bekannt ist. Allerdings gilt diese Umkehrung für :math:`h` nur im
+Definitionsbereich :math:`]-\infty;2]`, vgl. Aufgabe 1e. Für Werte
+:math:`x>2` kann jedoch als Umkehrfunktion für :math:`h` die Funktion
 
 .. math::
 
   f_2 = 2+\sqrt{12-2x}
 
 gefunden werden, die sich von :math:`f` nur durch das Vorzeichen der Wurzel unterscheidet. Um die
-Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vor:
+Herzform durch Spiegelung von :math:`G_h` zu zeichnen, gehen wir nun wie folgt vor:
 
   - Wir zeichnen :math:`G_h` zwischen den Schnittpunkten :math:`x_1=-2` und :math:`x_2=4`.
 
