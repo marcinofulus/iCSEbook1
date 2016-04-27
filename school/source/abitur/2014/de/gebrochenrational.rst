@@ -1,6 +1,9 @@
 Bayerisches Abitur in Mathematik 2014
 -------------------------------------
 
+Aufgabe 1
+^^^^^^^^^
+
 .. admonition:: Aufgabe 1
 
   Gegeben ist die Funktion :math:`f` mit
@@ -16,11 +19,11 @@ Bayerisches Abitur in Mathematik 2014
      :align: center
 
   a) Zeigen Sie, dass :math:`D_f=\mathbb{R}\backslash\{-5;5\}` gilt und dass :math:`G_f` symmetrisch
-     bezüglich des Koordinatenursprungs ist. Geben Sie die Nullstelle von f sowie die Gleichungen der
+     bezüglich des Koordinatenursprungs ist. Geben Sie die Nullstelle von :math:`f` sowie die Gleichungen der
      drei Asymptoten von :math:`G_f` an.
 
   b) Weisen Sie nach, dass die Steigung von :math:`G_f` in jedem Punkt des Graphen negativ ist. Berechnen
-     Sie die Größe des Winkels, unter dem :math:`G_f` die :math:`x-`Achse schneidet.
+     Sie die Größe des Winkels, unter dem :math:`G_f` die :math:`x`-Achse schneidet.
 
   c) Skizzieren Sie in der Abbildung den darin fehlenden Teil von :math:`G_f` unter Berücksichtigung der
      bisherigen Ergebnisse.
@@ -46,7 +49,7 @@ Zunächst wollen wir den Ausschnitt des Graphen mit Sage vervollständigen:
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
+  sage: plot(f(x), x, (-10,10), exclude=(-5,5), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
 
 .. end of output
 
@@ -64,19 +67,19 @@ erfüllt ist:
 
 .. math::
 
-    f(x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
+    f(-x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
 
 Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
-und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynoms im Zähler, verschwindet
-die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`. Die dritte Asymptote ist daher
-die x-Achse, welche durch :math:`y=0` gegeben ist.
+und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynom
+im Zähler, verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`.
+Die dritte Asymptote ist daher die x-Achse, welche durch :math:`y=0` gegeben ist.
 
 Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20,20), ymax=12, ymin=-12)
+  sage: p1 = plot(f(x), x, (-20,20), exclude=(-5,5) ymax=12, ymin=-12)
   sage: p2 = line([[-5, -13], [-5,13]], color = 'red')
   sage: p3 = line([[5, -13], [5,13]], color = 'red')
   sage: p4 = plot(g(x), x, (-20,20), aspect_ratio=1, color = 'red')
@@ -86,7 +89,7 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 **Lösung zu Teil 1b**
 
-Zunächst berechnen die Ableitung von f mit der Quotientenregel:
+Zunächst berechnen wir die Ableitung von f mit der Quotientenregel:
 
 .. math::
 
@@ -101,13 +104,14 @@ Dieses Ergebnis wird von dem Graphen von :math:`f'(x)` bestätigt.
 .. sagecellserver::
 
   sage: df = derivative(f(x), x)
+  sage: print("Ableitung von f(x): " + str(df))
   sage: p5 = plot(df(x), x, (-20,20), ymax=12, ymin=-12)
   sage: show(p5, aspect_ratio=1, figsize=(4, 2.8))
 
 .. end of output
 
 Um den Winkel zu berechnen, unter dem :math:`G_f` die :math:`x`-Achse schneidet, berechnen wir die Steigung
-von :math:`f` an der Stelle :math:`x=0`
+von :math:`f` an der Stelle :math:`x=0`:
 
 .. math ::
 
@@ -128,6 +132,7 @@ Wir überprüfen das Ergebnis mit Sage, indem wir die Tangente im Punkt :math:`x
   sage: p1 = plot(f(x), x, (-4,4), ymax=5, ymin=-5)
   sage: p6 = plot(w(x), x, (-4,4), aspect_ratio=1, color='green')
   sage: show(p1+p6, aspect_ratio=1, figsize=(4, 2.8))
+  sage: print("Winkel: " + str(n(arctan(m)*180/pi)) + "°")
 
 .. end of output
 
@@ -138,7 +143,8 @@ Der Graph wurde bereits in Aufgabe 1a) vervollständigt.
 **Lösung zu Teil 1d**
 
 Die Funktion :math:`f` ist nicht umkehrbar, da mehrere :math:`x`-Werte den gleichen :math:`y`-Werten zugeordnet
-werden können. :math:`f` ist also nicht auf dem gesamten Definitionsbereich injektiv, und somit nicht invertierbar
+werden können. :math:`f` ist also nicht auf dem gesamten Definitionsbereich injektiv,
+und somit nicht invertierbar.
 
 :math:`f^*` hingegen ist auf dem gesamten Definitionsbereich injektiv und kann daher invertiert werden.
 Wir bestimmen die Umkehrfunktion :math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nach  :math:`x` auflösen.
@@ -148,7 +154,7 @@ Wir bestimmen die Umkehrfunktion :math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nac
   &y=\frac{20x}{x^2-25}&\quad\Leftrightarrow\\
   &x^2y-20x-25y = 0&
 
-Die Mitternachtsforel liefert schließlich:
+Die Mitternachtsformel liefert schließlich:
 
 .. math::
 
@@ -163,13 +169,13 @@ Diese Lösungen erhalten wir auch mit Sage:
 
 .. end of output
 
-Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von :math:`f^*` lediglich  Werte :math:`\geq5`
-annehmen kann, können wir lediglich auf der Suche nach der Lösung von :math:`x_{1/2}` sein, bei der ein plus vor der
-Wurzel steht, also:
+Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von :math:`f^*` lediglich  Werte
+:math:`\geq5` annehmen kann, können wir lediglich auf der Suche nach der Lösung von :math:`x_{1/2}` sein,
+bei der ein plus vor der Wurzel steht, also:
 
 .. math::
 
-  f^{*-1}= \frac{5\left(2\pm\sqrt{x^2+4}\right)}{x}
+  f^{*-1}= \frac{5\left(2+\sqrt{x^2+4}\right)}{x}
 
 In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 
@@ -177,15 +183,15 @@ In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 
   sage: f_inv(x) = 5*(sqrt(x^2 + 4) + 2)/x
   sage: p1 = plot(f(x), x, (5,20), ymax=20, ymin = 0)
-  sage: p7 = plot(f_inv(x), x, (0,20), ymax=20)
+  sage: p7 = plot(f_inv(x), x, (0,20), ymax=20, color='green')
   sage: show(p1+p7, aspect_ratio=1, figsize=(4, 2.8))
 
 .. end of output
 
 **Lösung zu Teil 1e**
 
-Da die Funktion :math:`f` für :math:`x>10 stets positiv ist,`kann die beschriebene Fläche durch das Integral von 10 
-bis :math:`s` über die Funktion :math:`f` bestimmt werden:
+Da die Funktion :math:`f` für :math:`x>10` stets positiv ist, kann die beschriebene Fläche durch das Integral
+von :math:`10` bis :math:`s` über die Funktion :math:`f` bestimmt werden:
 
 .. math::
 
@@ -204,9 +210,10 @@ Mit Sage können wir diese Lösung überprüfen:
 .. sagecellserver::
 
   sage: from sage.symbolic.integration.integral import definite_integral
-  sage: assume(x>10)
-  sage: A(x) = definite_integral(f(y), y, 10, x)
-  sage: print "Die Fläche ist A(x) =", A(x)
+  sage: s = var('s')
+  sage: assume(s>10)
+  sage: A(s) = definite_integral(f(y), y, 10, s)
+  sage: print "Die Fläche ist A(s) =", A(s)
 
 .. end of output
 
@@ -243,8 +250,9 @@ nach :math:`s` auf. Sage liefert uns den Wert :math:`1285{,}3`.
 
 **Lösung zu Teil 1g**
 
-Das Argument des Logarithmus ist eine Parabel, die für :math:`\mathrm{ļim} x\rightarrow\infty` gegen unendlich geht. 
-Entsprechend ist auch der Grenzwert von :math:`A(s)` für :math:`\mathrm{ļim} x\rightarrow\infty` unendlich.
+Das Argument des Logarithmus ist eine Parabel, die für :math:`\lim\limits_{x\rightarrow\infty}`
+gegen unendlich geht. Entsprechend ist auch der Grenzwert von :math:`A(s)` für 
+:math:`\lim\limits_{x\rightarrow\infty}` unendlich.
 
 Dieses Ergebnis liefert auch Sage:
 
@@ -253,6 +261,10 @@ Dieses Ergebnis liefert auch Sage:
   sage: print "Der Grenzwert von A(s) für s --> unendlich:", A(infinity)
 
 .. end of output
+
+
+Aufgabe 2
+^^^^^^^^^
 
 .. admonition:: Aufgabe 2
 
