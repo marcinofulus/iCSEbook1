@@ -275,9 +275,9 @@ als auch graphisch lösen. Für Letzteres lassen wir :math:`G_h` und :math:`w` v
 
 .. sagecellserver::
 
-  sage: p3 = plot(h(x), x, (-3, 6), figsize=(4, 2.8), fill=w, fillcolor = 'red')
-  sage: p4 = plot(w(x), x, (-3, 6), figsize=(4, 2.8), color='green')
-  sage: show(p3 + p4, aspect_ratio=1) 
+  sage: p3 = plot(h(x), x, (-3, 6), fill=w, fillcolor = 'red')
+  sage: p4 = plot(w(x), x, (-3, 6), color='green')
+  sage: show(p3+p4, aspect_ratio=1, figsize=4) 
 
 .. end of output
 
@@ -313,10 +313,10 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen, gehen wir nun wie folgt v
 .. sagecellserver::
 
   sage: f2(x) =  2 + sqrt(12-2*x)
-  sage: p1 = plot(h(x), x, (-2,4), figsize=(4, 2.8))
-  sage: p2 = plot(f(x), x, (-2,6), figsize=(4, 2.8))
-  sage: p3 = plot(f2(x), x, (4,6), figsize=(4, 2.8))
-  sage: show(p1+ p2 + p3, aspect_ratio=1)
+  sage: p5 = plot(h(x), x, (-2, 4))
+  sage: p6 = plot(f(x), x, (-2, 6))
+  sage: p7 = plot(f2(x), x, (4, 6))
+  sage: show(p5+p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -360,15 +360,16 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen, gehen wir nun wie folgt v
 **Lösung zu Teil 3a**
 
 Zunächst wollen wir den Inhalt der roten Fläche aus Teilaufgabe 2a berechnen. Dies erreichen wir,
-indem wir die Differenz der beiden Funktionen :math:`G_h` und :math:`w` über den relevanten Bereich
-integrieren:
+indem wir die Differenz der beiden Funktionen :math:`h(x)` und
+:math:`w(x)` zwischen den Schnittpunkten bei :math:`x=-2` und :math:`4` integrieren:
 
 .. math::
 
-  A_{rot} = \left|\int\limits_{-2}^4 \left( h(x)-w(x) \right)\, \mathrm{d}x\right| = 
-  \left|\int\limits_{-2}^4 \left( -\frac{1}{2}x^2+2x+4 -x \right)\, \mathrm{d}x\right|=
-  \left|\int\limits_{-2}^4 \left( -\frac{1}{2}x^2+x+4 \right)\, \mathrm{d}x\right| = 
-  \left|\left[-\frac{1}{6}x^3+\frac{1}{2}x^2+4x\right]_{-2}^4\right|=18
+  \int\limits_{-2}^4 \left( h(x)-w(x) \right)\, \mathrm{d}x &= 
+  \int\limits_{-2}^4 \left( -\frac{1}{2}x^2+2x+4 -x \right)\mathrm{d}x\\
+  &= \int\limits_{-2}^4 \left( -\frac{1}{2}x^2+x+4 \right)\mathrm{d}x\\
+  &= \left[-\frac{1}{6}x^3+\frac{1}{2}x^2+4x\right]_{-2}^4\\
+  &=18
 
 Dieses Ergebnis erhalten wir auch mit Hilfe von Sage:
 
@@ -390,125 +391,105 @@ erhalten wir:
 **Lösung zu Teil 3b**
 
 Zur Berechnung der Tangentengleichung im Punkt :math:`\left(-2\left|h(-2)\right)\right.=(-2|-2)`
-müssen wir zunächst die Steigung von :math:`h` am Punkt -2 bestimmen:
+müssen wir zunächst die Steigung von :math:`h` am Punkt -2 bestimmen.
+Mit
 
 .. math::
 
-  & h'(x) = -x+2\Leftrightarrow\\
-  & h'(-2) = 4
+  h'(x) = -x+2\Leftrightarrow
 
-Die Gleichung der Tangente ergibt sich dann durch einsetzen des Punktes
+ergibt sich
 
 .. math::
 
-  & y &= m\cdot x + t \Leftrightarrow\\
-  & -2 &= 4 \cdot (-2) + t \Leftrightarrow\\
-  & t &= 6 \Leftrightarrow\\
-  & y  &= 4x+6
+  m = h'(-2) = 4.
 
-Mit Sage wollen wir die Tangente in unsere Zeichnung eintragen.
+Die Gleichung der Tangente :math:`y=m\cdot x+t` ergibt sich dann durch Einsetzen des Punktes
+:math:`x=-2, y=-2` zu
+
+.. math::
+
+   y = 4x+6.
+
+Diese Gleichung können wir in Sage direkt aus den Forderungen bestimmen,
+dass die Tangente durch den vorgegebenen Punkt gehen muss und die
+Steigung der Tangente in diesem Punkt gleich der Steigung der Funktion
+:math:`h(x)` sein muss.
 
 .. sagecellserver::
 
-  sage: t(x) = 4*x+6
-  sage: p3 = plot(h(x), x, (-3, 4), figsize=(4, 2.8))
-  sage: p4 = plot(w(x), x, (-3, 4), figsize=(4, 2.8), color='green')
-  sage: p6 = plot(t(x), x, (-3, 4), figsize=(4, 2.8), ymax = 7, color = 'red')
-  sage: show(p3 + p4 + p6, aspect_ratio=1)
+  sage: m, t = var('m t')
+  sage: y(x) = m*x+t
+  sage: dh = derivative(h, x)
+  sage: dy = derivative(y, x)
+  sage: loesung = solve([y(-2)==h(-2),
+  ...                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
+  sage: y(x) = y.subs(loesung)
+  sage: print 'Tangentengleichung: y = %sx+%s' % (loesung[m], loesung[t])
+
+Zudem wollen wir Sage nutzen, um die Tangente in unsere Zeichnung einzutragen.
+
+.. sagecellserver::
+
+  sage: p8 = plot(h(x), x, (-3, 0))
+  sage: p9 = plot(y(x), x, (-3, 0), color='green')
+  sage: show(p8+p9, figsize=(4, 2.8))
 
 .. end of output
 
-Es wird bereits aus der Zeichnung ersichtlich, dass dieser Winkel deutlich größer ist als das 
-Bild des Blatts vermuten lässt. Den Winkel zwischen der roten und grünen Gerade erhält man aus
-deren Steigungen: 
+Es wird bereits aus der Zeichnung ersichtlich, dass der gesuchte Winkel deutlich größer ist als das 
+Bild des Blatts ind er Aufgabenstellung vermuten lässt. Den Winkel
+zwischen der Winkelhalbierenden und der Tangente erhält man aus deren
+Steigungen :math:`m_w` und :math:`m_t` gemäß
 
 .. math::
 
-  \alpha = \tan^{-1}\left(\frac{m_\mathrm{rot}-m_\mathrm{grün}}{1+m_\mathrm{rot} m_\mathrm{grün}}\right)
+  \alpha = \tan^{-1}\left(\frac{m_w-m_t}{1+m_w m_t}\right)
   =\tan^{-1}\left(\frac{4-1}{1+4}\right) \approx 30,9°
+
+Der ingesamt eingeschlossene Winkel ist doppelt so groß und beträgt
+somit etwa :math:`62°`.
 
 **Lösung zu Teil 3c**
 
-Eine ganzrationale Funktion (oder Polynom) dritten Grades hat die allgemeine Form
+Die Bedingungen I und III sorgen dafür, dass sich :math:`G_k` stetig in
+die restliche Blattkontur einfügt. Bedingung III stellt ferner sicher,
+dass der Übergang am oberen Ende glatt erfolgt. Bedingung IV führt dazu,
+dass die Steigung der Tangente an den oberen Blattrand im Punkt (-2|-2)
+deutlich kleiner ist als der bisherige Wert 4. Daher läuft das Blatt
+nun wesentlich spitzer zu.
 
-.. math::
-
-  k(x)=ax^3+bx^2+cx+d
-
-Die Ableitung ist dann von der Form
-
-.. math::
-
-  k'(x)=3ax^2+2bx+c
-
-Auf der anderen Seite haben wir die bisherige Funktion :math:`h` und deren Ableitung :math:`h'`:
-
-.. math::
-
-  &h(x)=-\frac{1}{2}x^2+2x+4\\
-  &h'(x)=-x+2
-
-Um die Parameter :math:`a,b,c,d` zu bestimmen, nutzen wir die Randbedingungen aus der Angabe und erhalten
-das Gleichungssystem:
-
-
-.. math::
-
-  & \mathrm{I} & \qquad &d=4\\
-  & \mathrm{II} & &c=2\\
-  & \mathrm{III} & &-8a+4b-2c+d=-2\\
-  & \mathrm{IV} & &12a-4b+c=1{,}5\\
-
-Die Konstanten :math:`c` und :math:`d` sind bereits durch die Gleichungen I und II bestimmt. Durch Einsetzen
-in III und IV erhalten wir das Gleichungssystem mit zwei Unbekannten
-
-.. math::
-
-  & \mathrm{III} &\qquad &-8a+4b=-2\\
-  & \mathrm{IV} & &12a-4b=-0{,}5\\
-
-Durch die Addition III+IV erhalten wir
-
-.. math::
-
-  4a=-2,5 \Leftrightarrow a = -\frac{5}/{8}
-
-und durch anschließendes Einsetzen in III
-
-.. math::
-
-  5+4b=-2 \Leftrightarrow b=-\frac{7}{4}.
-
-Das Gleichungssystem kann auch elegant mit Hilfe von Sage gelöst werden:
+Da in der Aufgabe die explizite Bestimmung der Funktion :math:`k(x)`
+nicht verlang war, überlassen wir diese Aufgabe Sage.
 
 .. sagecellserver::
 
+  sage: a, b, c, d = var('a b c d')
+  sage: k(x) = a*x^3+b*x^2+c*x+d
+  sage: dk = derivative(k, x)
   sage: gleichungen = [k(0)==h(0),
-  ...                dk(0)==dh(0),
-  ...                k(-2)==h(-2),
-  ...                dk(-2)==1.5]
-  sage: loesung = solve(gleichungen, a, b, c, d)
-  sage: print loesung 
+  ...                  dk(0)==dh(0),
+  ...                  k(-2)==h(-2),
+  ...                  dk(-2)==1.5]
+  sage: loesung = solve(gleichungen, a, b, c, d, solution_dict=True)[0]
+  sage: k = k.subs(loesung)
+  sage: print k
 
 .. end of output
 
-Mit den berechneten Parametern können wir das Blatt mit der neuen Funktion für :math:`-2\leq x\leq0` nähern:
+Mit den berechneten Parametern können wir das Blattmodell mit der neuen Funktion für
+:math:`-2\leq x\leq0` darstellen, wobei die neue Funktion :math:`k` hier
+in rot gezeigt wird.
 
 .. sagecellserver::
 
-  sage: k=-5/8*x^3-7/4*x^2+2*x+4
-  sage: p1 = plot(h(x), x, (0, 4), figsize=(4, 2.8))
-  sage: p2 = plot(k(x), x, (-2, 0), figsize=(4, 2.8))
-  sage: p3 = plot(w(x), x, (-3, 4), figsize=(4, 2.8), color='green')
-  sage: show(p1 + p2 + p3, aspect_ratio=1)
+  sage: p10 = plot(h(x), x, (0, 4))
+  sage: p11 = plot(k(x), x, (-2, 0), color='red')
+  sage: p12 = plot(f(x), x, (-2, 6))
+  sage: p13 = plot(f2(x), x, (4, 6))
+  sage: p14 = plot(h(x), x, (-2, 0), linestyle=':')
+  sage: show(p10+p11+p12+p13+p14, aspect_ratio=1, figsize=4)
 
 .. end of output
 
-Wir sehen, dass die Blattform deutlich besser getroffen ist als zuvor. Der Winkel bei :math:`x=-2` 
-zwischen der Kurve mit der Steigung :math:`k'(x)=1{,}5` und der Winkelhalbierenden ist deutlich
-kleiner als zuvor und ähnelt daher deutlich mehr dem Blatt als die reine Parabel, wodurch 
-die Bedingung :math:`k'(x)=1{,}5` begründet wird.
-Die Bedingung :math:`k(0)=h(0)` ist notwendig, um keinen Sprung beim Übergang von der Parabel 
-zum Polynom vierten Grades in zu bekommen. :math:`k'(0)=h'(0)`
-sorgt dafür dass der Übergang auch ohne Knick passiert. Die Bedingung
-:math:`k(-2)=h(-2)` sorgt schließlich dafür, dass der Punkt der Blattspitze nicht verschoben wird.
+Wir sehen, dass die Blattform  besser getroffen ist als zuvor.
