@@ -444,8 +444,8 @@ Steigungen :math:`m_w` und :math:`m_t` gemäß
 
 .. math::
 
-  \alpha = \tan^{-1}\left(\frac{m_w-m_t}{1+m_w m_t}\right)
-  =\tan^{-1}\left(\frac{4-1}{1+4}\right) \approx 30,9°
+  \alpha = \arctan\left(\frac{m_w-m_t}{1+m_w m_t}\right)
+  =\arctan\left(\frac{4-1}{1+4}\right) \approx 30,9°
 
 Der ingesamt eingeschlossene Winkel ist doppelt so groß und beträgt
 somit etwa :math:`62°`.
