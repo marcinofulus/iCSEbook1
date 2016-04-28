@@ -46,7 +46,7 @@ Zunächst wollen wir den Ausschnitt des Graphen mit Sage vervollständigen:
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
+  sage: plot(f(x), x, (-10,10), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
 
 .. end of output
 
@@ -66,6 +66,8 @@ erfüllt ist:
 
     f(x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
 
+und auch aus der obigen Darstellung deutlich wird.
+
 Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
 und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynoms im Zähler, verschwindet
 die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`. Die dritte Asymptote ist daher
@@ -76,11 +78,11 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20,20), ymax=12, ymin=-12)
-  sage: p2 = line([[-5, -13], [-5,13]], color = 'red')
-  sage: p3 = line([[5, -13], [5,13]], color = 'red')
-  sage: p4 = plot(g(x), x, (-20,20), aspect_ratio=1, color = 'red')
-  sage: show(p1 + p2 + p3 + p4, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p1 = plot(f(x), x, (-20, 20), ymax=12, ymin=-12)
+  sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
+  sage: p3 = line([[5, -13], [5, 13]], color = 'red')
+  sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
+  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -100,9 +102,9 @@ Dieses Ergebnis wird von dem Graphen von :math:`f'(x)` bestätigt.
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x), x)
-  sage: p5 = plot(df(x), x, (-20,20), ymax=12, ymin=-12)
-  sage: show(p5, aspect_ratio=1, figsize=(4, 2.8))
+  sage: df = derivative(f, x)
+  sage: p5 = plot(df(x), x, (-20, 20), ymax=12, ymin=-12)
+  sage: show(p5, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -119,42 +121,46 @@ Der Schnittwinkel berechnet sich dann zu:
 
   \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°
 
-Wir überprüfen das Ergebnis mit Sage, indem wir die Tangente im Punkt :math:`x=0` einzeichnen.
+Wir überprüfen das Ergebnis mit Sage, und zeichnen die Tangente im Punkt :math:`x=0` ein.
 
 .. sagecellserver::
 
   sage: m = df(0)
-  sage: w(x) = m * x
-  sage: p1 = plot(f(x), x, (-4,4), ymax=5, ymin=-5)
-  sage: p6 = plot(w(x), x, (-4,4), aspect_ratio=1, color='green')
-  sage: show(p1+p6, aspect_ratio=1, figsize=(4, 2.8))
+  sage: print u"\u03b1 =", RDF(180/pi*arctan(m))
+  sage: w(x) = m*x
+  sage: p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
+  sage: p7 = plot(w(x), x, (-4, 4), color='green')
+  sage: show(p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
 **Lösung zu Teil 1c**
 
-Der Graph wurde bereits in Aufgabe 1a) vervollständigt.
+Der Graph wurde bereits in Aufgabe 1a vervollständigt.
 
 **Lösung zu Teil 1d**
 
-Die Funktion :math:`f` ist nicht umkehrbar, da mehrere :math:`x`-Werte den gleichen :math:`y`-Werten zugeordnet
-werden können. :math:`f` ist also nicht auf dem gesamten Definitionsbereich injektiv, und somit nicht invertierbar
+Die Funktion :math:`f` ist nicht umkehrbar, da mehrere :math:`x`-Werte
+den gleichen :math:`y`-Werten zugeordnet werden können. :math:`f` ist
+also nicht auf dem gesamten Definitionsbereich injektiv, und somit nicht
+invertierbar.
 
-:math:`f^*` hingegen ist auf dem gesamten Definitionsbereich injektiv und kann daher invertiert werden.
-Wir bestimmen die Umkehrfunktion :math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nach  :math:`x` auflösen.
+:math:`f^*` hingegen ist auf dem gesamten Definitionsbereich injektiv
+und kann daher invertiert werden.  Wir bestimmen die Umkehrfunktion
+:math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nach  :math:`x` auflösen.
+Zunächst ergibt sich eine quadratische Gleichung für :math:`x`
 
 .. math::
 
-  &y=\frac{20x}{x^2-25}&\quad\Leftrightarrow\\
-  &x^2y-20x-25y = 0&
+  x^2y-20x-25y = 0
 
-Die Mitternachtsforel liefert schließlich:
+deren Lösungen durch
 
 .. math::
 
   x_{1/2}= \frac{5\left(2\pm\sqrt{y^2+4}\right)}{y}
 
-Diese Lösungen erhalten wir auch mit Sage:
+gegeben sind.  Diese Lösungen erhalten wir auch mit Sage:
 
 .. sagecellserver::
 
@@ -163,9 +169,10 @@ Diese Lösungen erhalten wir auch mit Sage:
 
 .. end of output
 
-Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von :math:`f^*` lediglich  Werte :math:`\geq5`
-annehmen kann, können wir lediglich auf der Suche nach der Lösung von :math:`x_{1/2}` sein, bei der ein plus vor der
-Wurzel steht, also:
+Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von
+:math:`f^*` lediglich  Werte :math:`\geq5` annehmen kann, müssen wir die
+Lösung mit dem Pluszeichen wählen. Die gesuchte Umkehrfunktion lautet
+also
 
 .. math::
 
@@ -176,9 +183,9 @@ In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 .. sagecellserver::
 
   sage: f_inv(x) = 5*(sqrt(x^2 + 4) + 2)/x
-  sage: p1 = plot(f(x), x, (5,20), ymax=20, ymin = 0)
-  sage: p7 = plot(f_inv(x), x, (0,20), ymax=20)
-  sage: show(p1+p7, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p8 = plot(f(x), x, (5, 20))
+  sage: p9 = plot(f_inv(x), x, (0, 20))
+  sage: show(p8+p9, aspect_ratio=1, ymax=20, figsize=4)
 
 .. end of output
 
@@ -189,24 +196,26 @@ bis :math:`s` über die Funktion :math:`f` bestimmt werden:
 
 .. math::
 
-  A(s)=\int\limits_{10}^sf(x)\mathrm{d}x
+  A(s)=\int\limits_{10}^sf(x)\mathrm{d}x.
 
 Da der Zähler von :math:`f` bis auf einen Faktor die Ableitung des Nenners ist, lässt sich der Logarithmus als
 Stammfunktion finden:
 
 .. math::
 
-  A(s) = \int\limits_{10}^s\frac{20x}{x^2-25}\mathrm{d}x = 10\int\limits_{10}^s\frac{2x}{x^2-25}\mathrm{d}x
-       = 10 \left[\ln(x^2-25) \right]^s_{10}=10\ln\left(\frac{s^2-25}{75}\right)
+  A(s) = \int\limits_{10}^s\frac{20x}{x^2-25}\mathrm{d}x 
+  = 10\int\limits_{10}^s\frac{2x}{x^2-25}\mathrm{d}x
+  = 10 \left.\ln(x^2-25) \right\vert^s_{10}=10\ln\left(\frac{s^2-25}{75}\right)
 
 Mit Sage können wir diese Lösung überprüfen:
 
 .. sagecellserver::
 
   sage: from sage.symbolic.integration.integral import definite_integral
-  sage: assume(x>10)
-  sage: A(x) = definite_integral(f(y), y, 10, x)
-  sage: print "Die Fläche ist A(x) =", A(x)
+  sage: s = var('s')
+  sage: assume(s > 10)
+  sage: A(s) = definite_integral(f(x), x, 10, s)
+  sage: print "Die Fläche ist A(s) =", A(s)
 
 .. end of output
 
@@ -217,40 +226,42 @@ halten und den Flächeninhalt in Abhängigkeit von :math:`s` ausgeben.
 
   sage: @interact
   sage: def _(s=slider(10.1, 19.9, 0.1)):
-  ...       p1 = plot(f(x), x, (5,10), ymax=10, ymin = 0)
-  ...       p2 = plot(f(x), x, (10,s), ymax=10, ymin = 0,fill = 0, fillcolor='yellow')
-  ...       p3 = plot(f(x), x, (s,20), ymax=10, ymin = 0)
-  ...       show(p1 + p2 + p3, aspect_ratio=1, figsize=(4, 2.8))
+  ...       p10 = plot(f(x), x, (5, 10))
+  ...       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
+  ...       p12 = plot(f(x), x, (s, 20))
+  ...       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
   ...       print "Die gelbe Fläche hat den Inhalt:", float(A(s))
 
 .. end of output
 
 **Lösung zu Teil 1f**
 
-Um das Flächenstück mit dem Inhalt 100 zu bestimmen lösen wir die Gleichung
+Um das Flächenstück mit dem Inhalt 100 zu bestimmen, lassen wir die Gleichung
 
 .. math::
 
   A(s) = 100
 
-nach :math:`s` auf. Sage liefert uns den Wert :math:`1285{,}3`.
+von Sage auflösen. Dabei ist es wichtig, dass wir Sage weiter oben
+gesagt haben, dass :math:`s>10` sein soll. Der gesuchte Wert für
+:math:`s` ergibt sich zu
 
 .. sagecellserver::
 
-  sage: print float(solve(A(x) == 100, x)[0].right())
+  sage: print float(solve(A(s) == 100, s)[0].right())
 
 .. end of output
 
 **Lösung zu Teil 1g**
 
-Das Argument des Logarithmus ist eine Parabel, die für :math:`\mathrm{ļim} x\rightarrow\infty` gegen unendlich geht. 
-Entsprechend ist auch der Grenzwert von :math:`A(s)` für :math:`\mathrm{ļim} x\rightarrow\infty` unendlich.
+Das Argument des Logarithmus geht für große Argumente gegen unendlich.
+Daher ist auch der Grenzwert von :math:`A(s)` für :math:`s\rightarrow+\infty` unendlich.
 
 Dieses Ergebnis liefert auch Sage:
 
 .. sagecellserver::
 
-  sage: print "Der Grenzwert von A(s) für s --> unendlich:", A(infinity)
+  sage: html("$\lim_{s=\infty} A(s) = %s$" % latex(A(infinity)))
 
 .. end of output
 
