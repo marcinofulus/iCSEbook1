@@ -151,6 +151,8 @@ mit Sage berechnen lassen:
   sage: limitval = limit(df(x), x=6)
   sage: html("$\lim_{x=6} f'(x) = %s$" % latex(limitval))
 
+.. end of output
+
 **Lösung zu Teil 1c**
 
 Das Monotonieverhalten von :math:`f` lässt sich aus der Ableitung :math:`f'` bestimmen.
@@ -181,6 +183,8 @@ Wir erhalten
 .. sagecellserver::
 
   sage: print f(-2)
+
+.. end of output
 
 Die grafische Darstellung von :math:`f` ist Teilaufgabe a zu entnehmen.
 
@@ -270,6 +274,7 @@ Mit Sage können wir dieses Problem sowohl analytisch
   sage: for loesung in solve(h(x) == w(x), x, solution_dict=True):
   sage:     print "(", loesung[x], "|", loesung[x], ")"
 
+.. end of output
 
 als auch graphisch lösen. Für Letzteres lassen wir :math:`G_h` und :math:`w` von Sage zeichnen:
 
@@ -426,6 +431,8 @@ Steigung der Tangente in diesem Punkt gleich der Steigung der Funktion
   ...                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
   sage: y(x) = y.subs(loesung)
   sage: print 'Tangentengleichung: y = %sx+%s' % (loesung[m], loesung[t])
+
+.. end of output
 
 Zudem wollen wir Sage nutzen, um die Tangente in unsere Zeichnung einzutragen.
 
