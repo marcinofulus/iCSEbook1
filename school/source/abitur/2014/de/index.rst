@@ -24,6 +24,7 @@ Stochastik
    Aufgabe 2 <bernoulli>
    Aufgabe 3 <zufallsgroesse>
    Aufgabe 4 <baumdiagramm>
+   Aufgabe 5 <jim_studie>
 
 Geometrie
 .........
