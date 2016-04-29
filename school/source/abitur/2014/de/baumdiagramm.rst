@@ -49,11 +49,12 @@ womit wir :math:`P(\bar C) = 1-P(C)=\frac{1}{3}` und damit schließlich
    P(D|\bar{C}) = \frac{P(\bar{C}\cap D)}{P(\bar C)}=\frac{1/10}{1/3} 
                 = \frac{3}{10}
 
-erhalten. Somit folgt wie behauptet :math:`P(D|C)\neq P(D|\bar{C})`.
+erhalten. Somit folgt wie behauptet :math:`P(D|C)\neq P(D|\bar{C})`, so
+dass die Ereignisse :math:`C` und :math:`D` abhängig sind.
 
 **Lösung zu Teil c**
 
-Entsprechend den Überlegungen zu Teil b muss nun :math:`P(D|C)=P(D|\bar{C})`
+Im Gegensatz zur Teilaufgabe b muss nun :math:`P(D|C)=P(D|\bar{C})`
 gelten. Dabei muss weiterhin :math:`P(\bar{C})=\frac{1}{3}` sein. Wir
 erhalten somit
 

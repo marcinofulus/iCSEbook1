@@ -64,7 +64,7 @@ Der maximale Erwartungswert befindet sich somit beim maximalen Wert von
 Für die Verwendung mit Sage indizieren wir die Wahrscheinlichkeiten
 durch den jeweiligen Wert von :math:`k`. :math:`p_1` aus der
 Aufgabenstellung wird nun als :math:`p_0` bezeichnet und :math:`p_2`
-als :math:`p_3`. Im Folgenden können die Werte für :math:`p_1, p_2,`
+als :math:`p_3`. Im Sage-Interace können die Werte für :math:`p_1, p_2,`
 und :math:`p_3` eingestellt werden. Die Wahrscheinlichkeit :math:`p_0`
 wird dann daraus berechnet. In einem ersten Schritt sollten wie in der
 Aufgabenstellung :math:`p_1=\frac{3}{10}` und :math:`p_2=\frac{1}{5}`
