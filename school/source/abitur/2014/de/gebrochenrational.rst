@@ -176,7 +176,7 @@ also
 
 .. math::
 
-  f^{*-1}= \frac{5\left(2\pm\sqrt{x^2+4}\right)}{x}
+  f^{*-1}= \frac{5\left(2+\sqrt{x^2+4}\right)}{x}
 
 In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 
@@ -304,82 +304,127 @@ Dieses Ergebnis liefert auch Sage:
 
 **Lösung zu Teil 2a**
 
-Um die Fahrtdauer zu berechnen müssen wir lediglich die Werte :math:`x=10` bzw. :math:`x=20` in :math:`t(x)` einsetzen.
+Um die Fahrtdauer zu berechnen, müssen wir lediglich die Werte
+:math:`x=10` bzw. :math:`x=20` in :math:`t(x)` einsetzen und das
+Ergebnis mit 60 multiplizieren, um Stunden in Minuten umzurechnen.
 
-Wir erhalten:
+Wir erhalten bei einer Geschwindigkeit von :math:`10\frac{\mathrm{km}}{\mathrm{h}}`
 
 .. math::
 
-  t(10) = \frac{8}{3}\approx2,67 \qquad t(20) = \frac{16}{15}\approx1,07
+  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160
 
-Mit Sage können wir die Fahrtdauer allgemein in Abhängigkeit von der Eigengeschwindigkeit des Boots darstellen.
-Wir erkennen bereits, dass das Modell für :math:`0 < x<5` negative Fahrtzeiten vorhersagt und damit für diesen Bereich 
-keine vernünftige Beschreibung des Problems sein kann.
+und bei einer Geschwindigkeit von :math:`20\frac{\mathrm{km}}{\mathrm{h}}`
+
+.. math::
+
+  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64
+
+Diese Ergebnisse lassen sich auch leicht mit Sage erhalten. Zudem
+stellen wir die Fahrtdauer in Abhängigkeit von der Geschwindigkeit
+zwischen :math:`10\frac{\mathrm{km}}{\mathrm{h}}` und
+:math:`20\frac{\mathrm{km}}{\mathrm{h}}` dar.
 
 .. sagecellserver::
 
-  sage: p1 = plot(f(x), x, (0,50), ymax=12, ymin=-12)
-  sage: show(p1, aspect_ratio=1, figsize=(4, 2.8))
+  sage: t(x) = 10/(x+5)+10/(x-5)
+  sage: print "Fahrtdauer bei 10 km/h:", 60*t(10), "Minuten"
+  sage: print "Fahrtdauer bei 20 km/h:", 60*t(20), "Minuten"
+  sage: p1 = plot(60*t(x), x, (10, 20))
+  sage: show(p1, figsize=(4, 2.8))
 
 .. end of output
 
 **Lösung zu Teil 2b**
 
-Die Zeit, die benötigt wird, um eine Strecke der Länge :math:`s` mit einer konstanten Geschwindigkeit :math:`x` 
-zurückzulegen lässt sich mit :math:`\frac{s}{x}` berechnen. Ein Boot bewegt sich mit seiner Eigengeschwindigkeit 
-allerdings nur relativ zu dem Wasser, in dem es sich befindet. Betrachtet man dagegen die Geschwindigkeit
-des Boots relativ zum unbewegten Rand des Flusses, muss die Flussgeschwindigkeit des Wassers zur Eigengeschwindigkeit
-des Boots hinzuaddiert, bzw. von dieser abgezogen werden. Dadurch rechtfertigen sich die beiden Terme von :math:`t(x)`
-als die benötigte Zeit für den Hin- bzw. Rückweg.
+Die Zeit, die benötigt wird, um eine Strecke der Länge :math:`s` mit
+einer konstanten Geschwindigkeit :math:`x` zurückzulegen, lässt sich mit
+:math:`\frac{s}{x}` berechnen. Ein Boot bewegt sich mit seiner
+Eigengeschwindigkeit allerdings nur relativ zu dem Wasser, in dem es
+sich befindet. Betrachtet man dagegen die Geschwindigkeit des Boots
+relativ zum unbewegten Rand des Flusses, muss die Fließgeschwindigkeit
+des Wassers je nach Fahrtrichtung zur Eigengeschwindigkeit des Boots
+hinzuaddiert oder von dieser abgezogen werden. Dadurch ergeben sich für
+:math:`s=10` und eine Fließgeschwindigkeit von
+:math:`5\frac{\mathrm{km}}{\mathrm{h}}` die beiden Terme von
+:math:`t(x)` als die benötigte Zeit für den Hin- und Rückweg.
 
 **Lösung zu Teil 2c**
 
-Für :math:`0<x<5` kann zwar der erste Term von :math:`t(x)` verwendet werden, um die Zeit zu berechnen, die das Boot
-für den Hinweg benötigt, für den Rückweg ergibt sich allerdings das folgende Problem: Die Eigengeschwindigkeit
-des Boots ist niedriger als die Flussgeschwindigkeit des Wassers. Das Boot entfernt sich dadurch immer weiter von seinem 
-Startpunkt und kann diesen dementsprechend nie wieder erreichen. :math:`t(x)` müsste in diesem Bereich also 
-einen unendlich großen Wert zurückliefern. Wie wir in Teilaufgabe a) aber bereits festgestellt haben, gibt :math:`t(x)` für
-:math:`0<x<5` allerdings einen negativen Wert zurück.
+Für :math:`0<x<5` kann zwar der erste Term von :math:`t(x)` verwendet
+werden, um die Zeit zu berechnen, die das Boot für den Hinweg benötigt,
+für den Rückweg ergibt sich allerdings das folgende Problem: Die
+Eigengeschwindigkeit des Boots ist niedriger als die
+Fließgeschwindigkeit des Wassers. Das Boot entfernt sich dadurch immer
+weiter vom Ausgangspunkt und kann diesen dementsprechend nie wieder
+erreichen. :math:`t(x)` müsste in diesem Bereich also einen unendlich
+großen Wert ergeben. 
 
-**Lösung zu Teil 2d**
-
-Wir erweitern die beiden Brüche in :math:`t(x)`, um sie anschließenden zusammenzufassen:
-
-.. math::
-
-  t(x) = \frac{10}{x+5}\frac{10}{x-5} = \frac{10(x-5+10(x+5))}{(x+5)(x-5)}=\frac{20x}{x^2-25}=f(x)
-
-**Lösung zu Teil 2e**
-
-Für Geschwindigkeiten, die nicht viel größer als :math:`5\frac{\mathrm{km}}{\mathrm{h}}` sind, dauert der Rückweg
-deutlich länger als der Hinweg und man kann den Hinweg vernachlässigen. In diesem Fall lässt sich leicht 
-nach der Geschwindigkeit auflösen:
-
-.. math::
-
-  y = \frac{10}{x-5} \quad\Leftrightarrow\quad x = \frac{10}{y}+5,
-
-wobei :math:`y` die benötigte Zeit und :math:`x` die Geschwindigkeit bezeichnet. Diese Näherung wird immer besser,
-je höher die Fahrtzeit ist. Für 14 Stunden beispielsweise liefert sie einen guten Näherungswert, für 2 Stunden jedoch
-einen äußerst schlechten. Für eine Fahrtzeit von 4 Stunden erhalten wir eine genäherte Geschwindigkei von 
-:math:`7{,}5\frac{\mathrm{km}}{\mathrm{h}}`.
-
-In Teilaufgabe 1d) haben wir bereits die Umkehrfunktion von :math:`f(x)` für :math:`x>5` berechnet. Da :math:`f(x)=h(x)` 
-gilt, liefert uns :math:`f^{-1}(x)` die exakte Geschwindigkeit, mit der man die Fahrtzeit :math:`x` benötigt. Um die
-Genauigkeit unserer Näherungslösung für unterschiedliche Fahrtzeiten zu analysieren, können wir Sage verwenden. Die
-blaue Kurve bezeichnet die exakte Lösung, die grüne unsere Näherung und die rote den Fehler in der Geschwindigkeit,
-der durch die Näherung entstanden ist.
-
+Die Darstellung der Funktion mit Hilfe von Sage zeigt, dass sich für
+:math:`x<5` negative Werte ergeben, die offenbar keiner korrekten
+Fahrtdauer entsprechen können.
 
 .. sagecellserver::
 
-  sage: t_inv_approx(x) = 10/x + 5
-  sage: err(x) = f_inv(x) - t_inv_approx(x)
-  sage: p9 = plot(f_inv(x), x, (0,20), ymax=12)
-  sage: p10 = plot(t_inv_approx(x), x, (0,20), ymax=12, color='green')
-  sage: p11 = plot(err(x), x, (0,20), ymax=12, color='red')
-  sage: show(p9 + p10 + p11, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p13 = plot(60*t(x), x, (0, 50), ymax=800, ymin=-800)
+  sage: show(p13, figsize=(4, 2.8))
 
 .. end of output
- 
-Es lässt sich dem Graphen entnehmen, dass die Näherung erst ab etwa 10 Stunden einen guten Wert liefert.
+
+**Lösung zu Teil 2d**
+
+Wir erweitern die beiden Brüche in :math:`t(x)`, um sie anschließend zusammenzufassen:
+
+.. math::
+
+  t(x) &= \frac{10}{x+5}+\frac{10}{x-5}\\
+  &= \frac{10(x-5)+10(x+5))}{(x+5)(x-5)}\\
+  &=\frac{20x}{x^2-25}\\
+  &=f(x)
+
+In Sage kann man dieses Ergebnis durch Betrachtung der Differenz der
+beiden Funktionen verifizieren. Dabei muss man allerdings die Methode
+``rational_simplify()`` verwenden, da Sage sonst die erforderlichen
+Umformungen nicht vornimmt.
+
+.. sagecellserver::
+
+  sage: print t(x)-f(x)
+  sage: print (t(x)-f(x)).rational_simplify()
+
+.. end of output
+
+**Lösung zu Teil 2e**
+
+Die Eigengeschwindigkeit lässt sich aus der Abbildung ablesen, indem man
+den Punkt auf dem Graphen sucht, dessen :math:`y`-Wert der
+Gesamtfahrzeit entspricht. Der zugehörige :math:`x`-Wert gibt die
+Eigengeschwindigkeit an. Für ein Gesamtfahrzeit von 4 Stunden liest man
+so aus der Abbildung eine Geschwindigkeit von etwa
+:math:`8\frac{\mathrm{km}}{\mathrm{h}}` ab. Der genaue Wert lässt sich
+mit Hilfe der in Teilaufgabe 1d bestimmten Umkehrfunktion
+:math:`f^{*-1}` ermitteln. Man findet
+
+.. math::
+
+  f^{*-1}(4) = 5\frac{1+\sqrt{5}}{2}.
+
+Mit Sage ergibt sich der Wert zu
+
+.. sagecellserver::
+
+  sage: t = 4
+  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von", t, ": ", f_inv(t).n(10), "km/h"
+
+.. end of output
+
+Die graphische Konstruktion ergibt sich mit Hilfe von Sage
+folgendermaßen:
+
+.. sagecellserver::
+
+  sage: p14 = plot(f(x), x, (5.1, 14))
+  sage: x4, y4 = f_inv(t), t
+  sage: l1 = line([(x4, y4), (0, y4)], color='red')
+  sage: l2 = line([(x4, y4), (x4, 0)], color='red')
+  sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
