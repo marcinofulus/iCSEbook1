@@ -75,3 +75,5 @@ mindestens 19 Treffer zu erzielen, mit dem exakten Ergebnis.
 
 .. end of output
 
+Dieses Ergebnis stellt eine gute Näherung für das exakte Resultat dar.
+Der Unterschied ergibt sich aus der endlichen Zahl von Realisierungen.
