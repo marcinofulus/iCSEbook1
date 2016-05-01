@@ -13,7 +13,7 @@ We first employ Sage to obtain an overview of the given function.
 
 .. sagecellserver::
 
-   sage: p = plot(x/ln(x), xmin=0, xmax=10, ymin=-2, ymax=5, color='blue')
+   sage: p = plot(x/ln(x), xmin=0, xmax=10, ymin=-2, ymax=5, color='blue', detect_poles='show')
    sage: p.show(figsize=(4, 2.8))
 
 .. end of output
