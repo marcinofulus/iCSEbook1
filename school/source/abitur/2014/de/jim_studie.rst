@@ -10,16 +10,17 @@ Bayerisches Abitur in Mathematik 2014
   wiedergegeben, von denen 102 Jungen sind. Dabei werden für vier Geräteklassen
   jeweils die Anzahl der Mädchen und die Anzahl der Jungen unter
   den 200 ausgewählten Jugendlichen angegeben, die ein entsprechendes Gerät besitzen.
+  
+  .. csv-table::
+   :header: ,Mädchen,Jungen
+   :widths: 20, 10, 10
+   :stub-columns: 1
 
-  ================================  =============================  ======================================
-  .                                 Mädchen                        Jungen
-  ================================  =============================  ======================================
-  Smartphone                        :math:`42`                     :math:`52`
-  Computer                          :math:`77`                     :math:`87`
-  Fernsehgerät                      :math:`54`                     :math:`65`
-  feste Spielkonsole                :math:`37`                     :math:`62`
-  ================================  =============================  ======================================
-
+   Smartphone,:math:`42`,:math:`52`
+   Computer,:math:`77`,:math:`87`
+   Fernsehgerät,:math:`54`,:math:`65`
+   feste Spielekonsole,:math:`37`,:math:`62`
+  
   a) Bestimmen Sie die Wahrscheinlichkeit dafür, dass eine aus den
      200 Jugendlichen zufällig ausgewählte Person weiblich ist und kein 
      Fernsehgerät besitzt.
@@ -63,7 +64,7 @@ dieser Liste.
 
   sage: import random
   sage: jugendliche = 54 * ["maedchen_mit"] + (98-54) * ["maedchen_ohne"] + 65 * ["junge_mit"] + (102-65) * ["junge_ohne"]
-  sage: iterationen = 10000000
+  sage: iterationen = 100000
   sage: haeufigkeit_maedchen_ohne = 0
   sage: for _ in range(iterationen):
   ...       person = random.choice(jugendliche)
@@ -88,7 +89,7 @@ Wir benutzen wieder die Liste aus Teilaufgabe a), um das Ergebnis empirisch zu �
 
 .. sagecellserver::
 
-  sage: iterationen = 4000000
+  sage: iterationen = 400000
   sage: haeufigkeit_mit = 0
   sage: haeufigkeit_maedchen_mit = 0
   sage: for _ in range(iterationen):
@@ -146,7 +147,7 @@ Zur Berechnung der Summe verwenden wir Sage und erhalten in etwa den Wert 30,6\%
 Die Studie wurde bei Jugendlichen in der Altersklasse 12 bis 19 erhoben. Allerdings ist nicht
 bekannt, ob diese Ergebnisse auch für die Alterklasse der 9. Klasse (etwa 14-15 Jahre) repräsentativ
 sind. Daher kann der Wert der Summe nicht verwendet werden, um die Wahrscheinlichkeit anzugeben,
-dass in einer Klasse von 25 Schülerinnen weniger als die Hälfte einen Fernseher haben.
+dass in einer 9. Klasse von 25 Schülerinnen weniger als die Hälfte einen Fernseher haben.
 
 Wenn wir allerdings davon ausgehen, dass wirklich 55\% der Mädchen in der 9.
 Jahrgangsstufe ein Fernsehgerät besitzen, können wir mit Sage empirisch
@@ -231,6 +232,7 @@ Wir können den Grenzwert :math:`C=84` durch eine Simulation überprüfen.
   sage: haeufigkeit_C = 0
   sage: haeufigkeit_Cp1 = 0
   sage: wiederholungen = 50000
+  sage: C = 84
   sage: for _ in range(wiederholungen):
   ...       jungen_mit = sum(np.random.random(100) < p)
   ...       if(jungen_mit <= C):
@@ -311,11 +313,14 @@ lässt sich folgende Rechnung vollziehen
 .. math::
 
   &\frac{P(A\cap B)}{P(B)}&>&\frac{P(A)-P(A\cap B)}{P(\bar{B})}\\
+  \Rightarrow &P(A\cap B)P(\bar{B})&>&P(A)P(B)-P(A\cap B)P(B)\\
+  \Rightarrow &P(A\cap B)(P(\bar{B})+P(B))&>&P(A)P(B)\\
   \Rightarrow &P(A\cap B)&>&P(A)P(B)\\
-  \Rightarrow &P(A\cap B)>0.233
+  \Rightarrow &P(A\cap B)&>&0.233
 
-Von den 200 Jugendlichen müssen also mindestens 47 ein Smartphone und eine
+Von den 200 Jugendlichen müssen also mindestens 23,3\% ein Smartphone und eine
 feste Spielekonsole besitzen, damit die These der Aufgabenstellung stimmt.
+Dies entspricht 47 Jungendlichen.
 
 Den Grenzwert von :math:`P(A\cap B)` sodass :math:`A` und :math:`B` unabhängig
 sind, lässt sich auch mit Sage berechnen, indem man das lineare
