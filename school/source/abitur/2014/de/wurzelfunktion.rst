@@ -36,32 +36,37 @@ Wir verschaffen uns mit Sage zunächst einen Überblick über die gegebene Funkt
 
   sage: f(x) = 2 - sqrt(12 - 2*x)
   sage: p1 = plot(f(x), x, (-7,6), figsize=(4, 2.8))
-  sage: show(p1)
+  sage: show(p1, gridlines=True)
 
 .. end of output
 
-Den Schnittpunkt mit der :math:`y`-Achse erhalten wir durch Einsetzen von :math:`f(0)`
+Den Schnittpunkt mit der :math:`y`-Achse ist durch :math:`(0|f(0))`
+gegeben, wobei
 
 .. math::
 
-  \left(0\,\left|\,f(0))=(0\,\left|\,2-2*\sqrt{3}\right.\right.\right),
+  f(0)=2-2\sqrt{3}.
 
 oder mit Hilfe von Sage
 
 .. sagecellserver::
 
-  sage: print "Der y-Achsenabschnitt ist ", f(0)
-  sage: print "(ca.", float(f(0)), ")"
+  sage: print "Der y-Achsenabschnitt ist ", f(0), u"\u2248", f(0).n(digits=4)
 
 .. end of output
 
-Den Schnittpunkt mit der :math:`x`-Achse erhalten durch die Nullstellen:
+Den Schnittpunkt mit der :math:`x`-Achse ergibt sich aus der Nullstelle
+der Funktion :math:`f`:
 
 .. math::
 
-  &f(x) = 2-\sqrt{12-2x} = 0 \Leftrightarrow\\
-  &12-2x=4 \Leftrightarrow\\
-  &x=4,
+  &f(x) = 2-\sqrt{12-2x} \overset{!}{=} 0 \Leftrightarrow
+
+Auflösen nach :math:`x` liefert
+
+.. math::
+
+  x=4
 
 oder mit Hilfe von Sage:
 
@@ -72,21 +77,24 @@ oder mit Hilfe von Sage:
 .. end of output
 
 Der Schnittpunkt mit der :math:`x`-Achse befindet sich also bei :math:`(4|0)`.
-Die beiden Schnittpunkte mit den Koordinatenachsen können auch in etwa aus dem
-Funktionsgraphen abgelesen werden.
+Die beiden gefundenen Schnittpunkte mit den Koordinatenachsen sind mit
+dem von Sage gelieferten Funktionsgraphen konsistent.
 
-Für das Verhalten von :math:`x\rightarrow -\infty` ergibt sich
+Für das Verhalten für :math:`x\rightarrow -\infty` ergibt sich
 
 .. math::
 
-  &\lim\limits_{x\rightarrow -\infty} 2-\sqrt{12-2x} = \lim\limits_{x\rightarrow \infty}
-  2-\sqrt{2x} = \lim\limits_{x\rightarrow \infty} -\sqrt{x} = -\infty.
+  \lim\limits_{x\rightarrow -\infty} 2-\sqrt{12-2x} &=
+  \lim\limits_{x\rightarrow \infty} 2-\sqrt{12+2x}\\
+  &= -\lim\limits_{x\rightarrow \infty} \sqrt{2x}\\
+  &= -\infty.
 
 Dies können wir mit Sage überprüfen:
 
 .. sagecellserver::
 
-  sage: print "Verhalten von f --> -unendlich:", f(-infinity)
+  sage: limitval = limit(f(x), x=-infinity)
+  sage: html("$\lim_{x=-\infty} f(x) = %s$" % latex(limitval))
 
 .. end of output
 
@@ -94,7 +102,7 @@ Für :math:`f(6)` erhalten wir
 
 .. math::
 
-  f(6) = 2-\sqrt(12-2\cdot6)=2,
+  f(6) = 2-\sqrt{12-2\cdot6}=2,
 
 bzw. 
 
@@ -118,39 +126,44 @@ Selbiges Ergebnis erhalten wir mit Sage:
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x),  x)
+  sage: df = derivative(f,  x)
   sage: print "Die Ableitung von f ist:", df
   sage: p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
   sage: show(p2)
 
 .. end of output
 
-Der Definitionsbereich der Ableitung wird zusätzlich zu der Wurzelfunktion aus 
-:math:`f(x)` noch durch die Nullstelle im Nenner eingeschränkt (:math:`x_o=6`):
-
-.. math::
-
-  \mathbb{D}_{f'}=]-\infty;6[
+Der Definitionsbereich der Ableitung wird gegenüber dem Definitionsbereich von
+:math:`f(x)` noch durch die Nullstelle des Nenners der Ableitung bei :math:`x_0=6` 
+eingeschränkt, so dass :math:`\mathbb{D}_{f'}=]-\infty;6[`.
 
 Für den Grenzwert :math:`\lim\limits_{x\rightarrow 6}f'(x)` erhalten wir
 
 .. math::
 
-  \lim\limits_{x\rightarrow 6}f'(x) = \lim\limits_{x\rightarrow 0}\frac{1}{\sqrt(x)}=\infty.
+  \lim\limits_{x\rightarrow 6}f'(x) = \lim\limits_{x\rightarrow 0}\frac{1}{\sqrt{x}}=\infty.
 
-Dies lässt sich auch in dem Graph von :math:`f'(x)` ablesen.
+Dies lässt sich auch vom Graphen der Funktion :math:`f'(x)` ablesen oder
+mit Sage berechnen lassen:
+
+.. sagecellserver::
+
+  sage: limitval = limit(df(x), x=6)
+  sage: html("$\lim_{x=6} f'(x) = %s$" % latex(limitval))
+
+.. end of output
 
 **Lösung zu Teil 1c**
 
 Das Monotonieverhalten von :math:`f` lässt sich aus der Ableitung :math:`f'` bestimmen.
-Aus dem Plot von Teilaufgabe b) können wir ablesen, dass :math:`f'` überall positiv ist
+Aus dem Plot von Teilaufgabe b können wir ablesen, dass :math:`f'` überall positiv ist
 und damit :math:`f` auf dem ganzen Definitionsbereich streng monoton steigend ist.
 
 Dies lässt sich bestätigen, indem man die Ableitung :math:`f'` genauer untersucht:
 Da die Wurzel im Nenner auf ihrem Definitionsbereich stetig ist und nur positive Werte annehmen
 kann und auch der Zähler mit dem Wert 1 immer positiv ist, ist auch :math:`f'` stets positiv.
 
-Der Wertebereich von :math:`f` beginnt nach Teilaufgabe a) bei :math:`-\infty` und nimmt
+Der Wertebereich von :math:`f` beginnt nach Teilaufgabe a bei :math:`-\infty` und nimmt
 für :math:`x=6` (dem Rand des Definitionsbereichs) den Wert 2 an. Da die Funktion auf ihrem
 Definitionsbereich stetig und streng monoton steigend ist, werden auch (und ausschließlich)
 alle Werte dazwischen angenommen. Der Wertebereich von :math:`f` ist also
@@ -167,7 +180,13 @@ Wir erhalten
 
   f(-2) = -2.
 
-Die grafische Darstellung von :math:`f` ist Teilaufgabe a) zu entnehmen.
+.. sagecellserver::
+
+  sage: print f(-2)
+
+.. end of output
+
+Die grafische Darstellung von :math:`f` ist Teilaufgabe a zu entnehmen.
 
 **Lösung zu Teil 1e**
 
@@ -215,7 +234,7 @@ Dieses Ergebnis lässt sich auch mit Sage herleiten.
 
   Der Graph der in :math:`\mathbb{R}` definierten Funktion 
   :math:`h:x\mapsto-\frac{1}{2}x^2+2x+4` ist die Parabel :math:`G_h`. Der Graph
-  der in Aufgabe 1e) betrachteten Umkehrfunktion :math:`f^{-1}` ist ein Teil
+  der in Aufgabe 1e betrachteten Umkehrfunktion :math:`f^{-1}` ist ein Teil
   dieser Parabel.
 
   a) Berechnen Sie die Koordinaten der Schnittpunkte von :math:`G_h` mit der durch
@@ -223,7 +242,7 @@ Dieses Ergebnis lässt sich auch mit Sage herleiten.
      III. Quadranten.
 
   b) Zeichnen Sie die Parabel :math:`G_h` -- unter Berücksichtigung des Scheitels --
-     im Bereich :math:`-2\leq x\leq4` in ihre Zeichnung aus Aufgabe 1d) ein. 
+     im Bereich :math:`-2\leq x\leq4` in Ihre Zeichnung aus Aufgabe 1d ein. 
      Spiegelt man diesen Teil von :math:`G_h` an der Winkelhalbierenden :math:`w`,
      so entsteht eine herzförmige Figur; ergänzen Sie Ihre Zeichnung dementsprechend.
 
@@ -235,44 +254,56 @@ Die Schnittpunkte der Graphen erhalten wir durch Gleichsetzen der beiden Funktio
 
   & -\frac{1}{2}x^2+2x+4 = x\\
   & -\frac{1}{2}x^2+x+4 = 0\\
-  & x_{1/2}=\frac{-1\pm\sqrt{1^2-4\cdot\left(-\frac{1}{2}\right)\cdot4}}{2\cdot \frac{1}{2}}\\
-  & x_1 = -4, \quad x_2=2
+  & x_{1/2}=\frac{-1\pm\sqrt{1^2-4\cdot\left(-\frac{1}{2}\right)\cdot4}}
+                 {2\cdot\left(-\frac{1}{2}\right)}\\
+  & x_1 = -2, \quad x_2=4
 
 Die :math:`y`-Werte der Schnittpunkte sind wegen der Geradengleichung :math:`y=x` gleich den 
 :math:`x`-Werten, also
 
 .. math::
 
-  y_1=-4, \quad y_2=2.
+  y_1=-2, \quad y_2=4.
 
-Wir überprüfen die Schnittpunkte, indem wir :math:`G_h` und :math:`w` von Sage zeichnen lassen:
+Mit Sage können wir dieses Problem sowohl analytisch
 
 .. sagecellserver::
 
   sage: h(x)=-1/2*x^2+2*x+4
   sage: w(x) = x
-  sage: p3 = plot(h(x), x, (-3, 6), figsize=(4, 2.8), fill=w, fillcolor = 'red')
-  sage: p4 = plot(w(x), x, (-3, 6), figsize=(4, 2.8), color='green')
-  sage: show(p3 + p4, aspect_ratio=1) 
+  sage: for loesung in solve(h(x) == w(x), x, solution_dict=True):
+  sage:     print "(", loesung[x], "|", loesung[x], ")"
+
+.. end of output
+
+als auch graphisch lösen. Für Letzteres lassen wir :math:`G_h` und :math:`w` von Sage zeichnen:
+
+.. sagecellserver::
+
+  sage: p3 = plot(h(x), x, (-3, 6), fill=w, fillcolor = 'red')
+  sage: p4 = plot(w(x), x, (-3, 6), color='green')
+  sage: show(p3+p4, aspect_ratio=1, figsize=4) 
 
 .. end of output
 
 **Lösung zu Teil 2b**
 
-Betrachtet man den Graphen von Teilaufgabe 2a), lässt sich bereits die Hälfte der Herzform
-durch die Parabel erkennen. Um die volle Herzform zu erhalten, muss :math:`G_h` noch an der
-Winkelhalbierenden :math:`w` gespiegelt werden. Eine Spiegelung an der Winkelhalbierenden
-:math:`y = x` entspricht der Umkehrung der Funktion. Die Umkehrung zu :math:`h` ist die Funktion
-:math:`f`, wie uns bereits aus Aufgabe 1e) bekannt ist. Allerdings gilt diese Umkehrung für :math:`h` 
-nur im Definitionsbereich :math:`]-\infty;2]`, vgl. Aufgabe 1e). Für Werte :math:`x>2` kann jedoch 
-als Umkehrfunktion für :math:`h` die Funktion
+Betrachtet man den Graphen von Teilaufgabe 2a, lässt sich bereits die
+Hälfte der Herzform durch die Parabel erkennen. Um die volle Herzform zu
+erhalten, muss :math:`G_h` noch an der Winkelhalbierenden :math:`w`
+gespiegelt werden. Eine Spiegelung an der Winkelhalbierenden :math:`y =
+x` entspricht der Umkehrung der Funktion. Die Umkehrungfunktion von
+:math:`h` ist die Funktion :math:`f`, wie uns bereits aus Aufgabe 1e
+bekannt ist. Allerdings gilt diese Umkehrung für :math:`h` nur im
+Definitionsbereich :math:`]-\infty;2]`, vgl. Aufgabe 1e. Für Werte
+:math:`x>2` kann jedoch als Umkehrfunktion für :math:`h` die Funktion
 
 .. math::
 
   f_2 = 2+\sqrt{12-2x}
 
 gefunden werden, die sich von :math:`f` nur durch das Vorzeichen der Wurzel unterscheidet. Um die
-Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vor:
+Herzform durch Spiegelung von :math:`G_h` zu zeichnen, gehen wir nun wie folgt vor:
 
   - Wir zeichnen :math:`G_h` zwischen den Schnittpunkten :math:`x_1=-2` und :math:`x_2=4`.
 
@@ -287,17 +318,17 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vo
 .. sagecellserver::
 
   sage: f2(x) =  2 + sqrt(12-2*x)
-  sage: p1 = plot(h(x), x, (-2,4), figsize=(4, 2.8))
-  sage: p2 = plot(f(x), x, (-2,6), figsize=(4, 2.8))
-  sage: p3 = plot(f2(x), x, (4,6), figsize=(4, 2.8))
-  sage: show(p1+ p2 + p3, aspect_ratio=1)
+  sage: p5 = plot(h(x), x, (-2, 4))
+  sage: p6 = plot(f(x), x, (-2, 6))
+  sage: p7 = plot(f2(x), x, (4, 6))
+  sage: show(p5+p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
 .. admonition:: Aufgabe 3
 
   Durch die in Aufgabe 2 entstandene herzförmige Figur soll das abgebildete Blatt modellhaft 
-  beschrieben werden. Eine Längeneinheit im Koordinatensystem aus Aufgabe 1d) soll dabei 1 cm 
+  beschrieben werden. Eine Längeneinheit im Koordinatensystem aus Aufgabe 1d soll dabei 1 cm 
   in der Wirklichkeit entsprechen.
 
   .. image:: ../figs/blatt.png
@@ -314,7 +345,7 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vo
 
   c) Der Verlauf des oberen Blattrands wird in der Nähe der Blattspitze durch das bisher verwendete 
      Modell nicht genau genug dargestellt. Daher soll der obere Blattrand im Modell für 
-     :math:`-2\leq x \leq 0` nicht mehr durch :math:`G_h` , sondern durch den Graphen :math:`G_k` einer in 
+     :math:`-2\leq x \leq 0` nicht mehr durch :math:`G_h`, sondern durch den Graphen :math:`G_k` einer in 
      :math:`\mathbb{R}` definierten ganzrationalen Funktion :math:`k` dritten Grades beschrieben werden. 
      Für die Funktion :math:`k` werden die folgenden Bedingungen gewählt (:math:`k'` und :math:`h'` sind die 
      Ableitungsfunktionen von :math:`k` bzw. :math:`h`):
@@ -334,15 +365,16 @@ Herzform durch Spiegelung von :math:`G_h` zu zeichnen gehen wir nun wie folgt vo
 **Lösung zu Teil 3a**
 
 Zunächst wollen wir den Inhalt der roten Fläche aus Teilaufgabe 2a berechnen. Dies erreichen wir,
-indem wir die Differenz der beiden Funktionen :math:`G_h` und :math:`w` über den relevanten Bereich
-integrieren:
+indem wir die Differenz der beiden Funktionen :math:`h(x)` und
+:math:`w(x)` zwischen den Schnittpunkten bei :math:`x=-2` und :math:`4` integrieren:
 
 .. math::
 
-  A_{rot} = \left|\int\limits_{-2}^4 \left( h(x)-w(x) \right)\, \mathrm{d}x\right| = 
-  \left|\int\limits_{-2}^4 \left( -\frac{1}{2}x^2+2x+4 -x \right)\, \mathrm{d}x\right|=
-  \left|\int\limits_{-2}^4 \left( -\frac{1}{2}x^2+x+4 \right)\, \mathrm{d}x\right| = 
-  \left|\left[-\frac{1}{6}x^3+\frac{1}{2}x^2+4x\right]_{-2}^4\right|=18
+  \int\limits_{-2}^4 \left( h(x)-w(x) \right)\, \mathrm{d}x &= 
+  \int\limits_{-2}^4 \left( -\frac{1}{2}x^2+2x+4 -x \right)\mathrm{d}x\\
+  &= \int\limits_{-2}^4 \left( -\frac{1}{2}x^2+x+4 \right)\mathrm{d}x\\
+  &= \left[-\frac{1}{6}x^3+\frac{1}{2}x^2+4x\right]_{-2}^4\\
+  &=18
 
 Dieses Ergebnis erhalten wir auch mit Hilfe von Sage:
 
@@ -364,125 +396,107 @@ erhalten wir:
 **Lösung zu Teil 3b**
 
 Zur Berechnung der Tangentengleichung im Punkt :math:`\left(-2\left|h(-2)\right)\right.=(-2|-2)`
-müssen wir zunächst die Steigung von :math:`h` am Punkt -2 bestimmen:
+müssen wir zunächst die Steigung von :math:`h` am Punkt -2 bestimmen.
+Mit
 
 .. math::
 
-  & h'(x) = -x+2\Leftrightarrow\\
-  & h'(-2) = 4
+  h'(x) = -x+2\Leftrightarrow
 
-Die Gleichung der Tangente ergibt sich dann durch einsetzen des Punktes
+ergibt sich
 
 .. math::
 
-  & y &= m\cdot x + t \Leftrightarrow\\
-  & -2 &= 4 \cdot (-2) + t \Leftrightarrow\\
-  & t &= 6 \Leftrightarrow\\
-  & y  &= 4x+6
+  m = h'(-2) = 4.
 
-Mit Sage wollen wir die Tangente in unsere Zeichnung eintragen.
+Die Gleichung der Tangente :math:`y=m\cdot x+t` ergibt sich dann durch Einsetzen des Punktes
+:math:`x=-2, y=-2` zu
+
+.. math::
+
+   y = 4x+6.
+
+Diese Gleichung können wir in Sage direkt aus den Forderungen bestimmen,
+dass die Tangente durch den vorgegebenen Punkt gehen muss und die
+Steigung der Tangente in diesem Punkt gleich der Steigung der Funktion
+:math:`h(x)` sein muss.
 
 .. sagecellserver::
 
-  sage: t(x) = 4*x+6
-  sage: p3 = plot(h(x), x, (-3, 4), figsize=(4, 2.8))
-  sage: p4 = plot(w(x), x, (-3, 4), figsize=(4, 2.8), color='green')
-  sage: p6 = plot(t(x), x, (-3, 4), figsize=(4, 2.8), ymax = 7, color = 'red')
-  sage: show(p3 + p4 + p6, aspect_ratio=1)
+  sage: m, t = var('m t')
+  sage: y(x) = m*x+t
+  sage: dh = derivative(h, x)
+  sage: dy = derivative(y, x)
+  sage: loesung = solve([y(-2)==h(-2),
+  ...                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
+  sage: y(x) = y.subs(loesung)
+  sage: print 'Tangentengleichung: y = %sx+%s' % (loesung[m], loesung[t])
 
 .. end of output
 
-Es wird bereits aus der Zeichnung ersichtlich, dass dieser Winkel deutlich größer ist als das 
-Bild des Blatts vermuten lässt. Den Winkel zwischen der roten und grünen Gerade erhält man aus
-deren Steigungen: 
+Zudem wollen wir Sage nutzen, um die Tangente in unsere Zeichnung einzutragen.
+
+.. sagecellserver::
+
+  sage: p8 = plot(h(x), x, (-3, 0))
+  sage: p9 = plot(y(x), x, (-3, 0), color='green')
+  sage: show(p8+p9, figsize=(4, 2.8))
+
+.. end of output
+
+Es wird bereits aus der Zeichnung ersichtlich, dass der gesuchte Winkel deutlich größer ist als das 
+Bild des Blatts ind er Aufgabenstellung vermuten lässt. Den Winkel
+zwischen der Winkelhalbierenden und der Tangente erhält man aus deren
+Steigungen :math:`m_w` und :math:`m_t` gemäß
 
 .. math::
 
-  \alpha = \tan^{-1}\left(\frac{m_\mathrm{rot}-m_\mathrm{grün}}{1+m_\mathrm{rot} m_\mathrm{grün}}\right)
-  =\tan^{-1}\left(\frac{4-1}{1+4}\right) \approx 30,9°
+  \alpha = \arctan\left(\frac{m_w-m_t}{1+m_w m_t}\right)
+  =\arctan\left(\frac{4-1}{1+4}\right) \approx 30,9°
+
+Der ingesamt eingeschlossene Winkel ist doppelt so groß und beträgt
+somit etwa :math:`62°`.
 
 **Lösung zu Teil 3c**
 
-Eine ganzrationale Funktion (oder Polynom) dritten Grades hat die allgemeine Form
+Die Bedingungen I und III sorgen dafür, dass sich :math:`G_k` stetig in
+die restliche Blattkontur einfügt. Bedingung III stellt ferner sicher,
+dass der Übergang am oberen Ende glatt erfolgt. Bedingung IV führt dazu,
+dass die Steigung der Tangente an den oberen Blattrand im Punkt (-2|-2)
+deutlich kleiner ist als der bisherige Wert 4. Daher läuft das Blatt
+nun wesentlich spitzer zu.
 
-.. math::
-
-  k(x)=ax^3+bx^2+cx+d
-
-Die Ableitung ist dann von der Form
-
-.. math::
-
-  k'(x)=3ax^2+2bx+c
-
-Auf der anderen Seite haben wir die bisherige Funktion :math:`h` und deren Ableitung :math:`h'`:
-
-.. math::
-
-  &h(x)=-\frac{1}{2}x^2+2x+4\\
-  &h'(x)=-x+2
-
-Um die Parameter :math:`a,b,c,d` zu bestimmen, nutzen wir die Randbedingungen aus der Angabe und erhalten
-das Gleichungssystem:
-
-
-.. math::
-
-  & \mathrm{I} & \qquad &d=4\\
-  & \mathrm{II} & &c=2\\
-  & \mathrm{III} & &-8a+4b-2c+d=-2\\
-  & \mathrm{IV} & &12a-4b+c=1{,}5\\
-
-Die Konstanten :math:`c` und :math:`d` sind bereits durch die Gleichungen I und II bestimmt. Durch Einsetzen
-in III und IV erhalten wir das Gleichungssystem mit zwei Unbekannten
-
-.. math::
-
-  & \mathrm{III} &\qquad &-8a+4b=-2\\
-  & \mathrm{IV} & &12a-4b=-0{,}5\\
-
-Durch die Addition III+IV erhalten wir
-
-.. math::
-
-  4a=-2,5 \Leftrightarrow a = -\frac{5}/{8}
-
-und durch anschließendes Einsetzen in III
-
-.. math::
-
-  5+4b=-2 \Leftrightarrow b=-\frac{7}{4}.
-
-Das Gleichungssystem kann auch elegant mit Hilfe von Sage gelöst werden:
+Da in der Aufgabe die explizite Bestimmung der Funktion :math:`k(x)`
+nicht verlang war, überlassen wir diese Aufgabe Sage.
 
 .. sagecellserver::
 
+  sage: a, b, c, d = var('a b c d')
+  sage: k(x) = a*x^3+b*x^2+c*x+d
+  sage: dk = derivative(k, x)
   sage: gleichungen = [k(0)==h(0),
-  ...                dk(0)==dh(0),
-  ...                k(-2)==h(-2),
-  ...                dk(-2)==1.5]
-  sage: loesung = solve(gleichungen, a, b, c, d)
-  sage: print loesung 
+  ...                  dk(0)==dh(0),
+  ...                  k(-2)==h(-2),
+  ...                  dk(-2)==1.5]
+  sage: loesung = solve(gleichungen, a, b, c, d, solution_dict=True)[0]
+  sage: k = k.subs(loesung)
+  sage: print k
 
 .. end of output
 
-Mit den berechneten Parametern können wir das Blatt mit der neuen Funktion für :math:`-2\leq x\leq0` nähern:
+Mit den berechneten Parametern können wir das Blattmodell mit der neuen Funktion für
+:math:`-2\leq x\leq0` darstellen, wobei die neue Funktion :math:`k` hier
+in rot gezeigt wird.
 
 .. sagecellserver::
 
-  sage: k=-5/8*x^3-7/4*x^2+2*x+4
-  sage: p1 = plot(h(x), x, (0, 4), figsize=(4, 2.8))
-  sage: p2 = plot(k(x), x, (-2, 0), figsize=(4, 2.8))
-  sage: p3 = plot(w(x), x, (-3, 4), figsize=(4, 2.8), color='green')
-  sage: show(p1 + p2 + p3, aspect_ratio=1)
+  sage: p10 = plot(h(x), x, (0, 4))
+  sage: p11 = plot(k(x), x, (-2, 0), color='red')
+  sage: p12 = plot(f(x), x, (-2, 6))
+  sage: p13 = plot(f2(x), x, (4, 6))
+  sage: p14 = plot(h(x), x, (-2, 0), linestyle=':')
+  sage: show(p10+p11+p12+p13+p14, aspect_ratio=1, figsize=4)
 
 .. end of output
 
-Wir sehen, dass die Blattform deutlich besser getroffen ist als zuvor. Der Winkel bei :math:`x=-2` 
-zwischen der Kurve mit der Steigung :math:`k'(x)=1{,}5` und der Winkelhalbierenden ist deutlich
-kleiner als zuvor und ähnelt daher deutlich mehr dem Blatt als die reine Parabel, wodurch 
-die Bedingung :math:`k'(x)=1{,}5` begründet wird.
-Die Bedingung :math:`k(0)=h(0)` ist notwendig, um keinen Sprung beim Übergang von der Parabel 
-zum Polynom vierten Grades in zu bekommen. :math:`k'(0)=h'(0)`
-sorgt dafür dass der Übergang auch ohne Knick passiert. Die Bedingung
-:math:`k(-2)=h(-2)` sorgt schließlich dafür, dass der Punkt der Blattspitze nicht verschoben wird.
+Wir sehen, dass die Blattform  besser getroffen ist als zuvor.

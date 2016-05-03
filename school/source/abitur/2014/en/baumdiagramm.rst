@@ -16,9 +16,9 @@ Bavarian final secondary-school examinations in mathematics 2014
   c) Modify the value :math:`\frac{1}{10}` in the tree diagram so that
      :math:`C` and :math:`D` are statistically independent.
 
-**Solution for part a**     
+**Solution of part a**     
 
-The probability :math:`P(D)` results from the given tree diagram 
+The probability :math:`P(D)` results from the given tree diagram as
 
 .. math::
 
@@ -27,15 +27,13 @@ The probability :math:`P(D)` results from the given tree diagram
 The condition :math:`P(D)+P(\bar{D})=1` leads to
 :math:`P(\bar{D})=\frac{1}{2}`.
 
-**Solution for part b**
+**Solution of part b**
 
-Two events :math:`C` and :math:`D` are statistically dependent if the appearence
-of event :math:`C` has an influence on the probability of event :math:`D`.
- 
-This leads to :math:`P(D|C)\neq P(D|\bar{C})`.
-The tree diagram provides :math:`P(D|C)=\frac{3}{5}`.
+Two events :math:`C` and :math:`D` are statistically dependent if the
+occurrence of event :math:`C` has an influence on the probability of event :math:`D`,
+i.e. :math:`P(D|C)\neq P(D|\bar{C})`. From the tree diagram we read off :math:`P(D|C)=\frac{3}{5}`.
 
-Further, we have to consider
+In addition, we need
 
 .. math::
 
@@ -48,14 +46,14 @@ which results in :math:`P(\bar C) = 1-P(C)=\frac{1}{3}` and finally in
    P(D|\bar{C}) = \frac{P(\bar{C}\cap D)}{P(\bar C)}=\frac{1/10}{1/3} 
                 = \frac{3}{10}.
 
-This proves the condition :math:`P(D|C)\neq P(D|\bar{C})`. Therefore, event
-:math:`C` and :math:`D` are statistically dependent.
+This proves :math:`P(D|C)\neq P(D|\bar{C})` so that :math:`C` and :math:`D` are
+indeed statistically dependent.
 
-**Lösung zu Teil c**
+**Solution of part c**
 
 In contrast to the previous task, the condition :math:`P(D|C)=P(D|\bar{C})`
-has to hold. :math:`P(\bar{C})` is given as :math:`\frac{1}{3}`. This
-leads to
+has to hold. :math:`P(\bar{C})` is still given as :math:`\frac{1}{3}` so
+that
 
 .. math::
 
@@ -81,7 +79,7 @@ the conditions
 
    P(\bar{D}|\bar{C})\cdot P(\bar{C}) = P(\bar{C}\cap\bar{D}).
 
-The values of :math:`P(D|C)`, :math:`P(C\cap D)` and :math:`P(\bar{C}\cap D)` 
+The values of :math:`P(D|C)`, :math:`P(C\cap D)`, and :math:`P(\bar{C}\cap D)` 
 can be modified in the list ``probabilities``.
 
 .. sagecellserver::

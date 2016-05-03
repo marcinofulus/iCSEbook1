@@ -40,19 +40,10 @@ Selbiges Ergebnis erhalten wir mit Sage:
 **Lösung zu Teil b**
 
 Um zu überprüfen, ob die Kugel die :math:`x_1x_2`-Ebene berührt, reicht es aus, den Abstand zwischen
-der Ebene und dem Kugelmittelpunkt mit dem Radius der Kugel zu vergleichen. Die Ebenengleichung
-in Hessescher Normalform lautet:
-
-.. math::
-
-  0 \cdot x_1 + 0 \cdot x_2 + x_3 = 0
-
-Um den Abstand zum Mittelpunkt der Kugel zu berechnen muss der Punkt :math:`M(-3|2|7)` in die
-Gleichung eingesetzt werden:
-
-.. math::
-
-  d = \vert 0 \cdot (-3) + 0 \cdot 2 + 7 \vert = 7
+der Ebene und dem Kugelmittelpunkt mit dem Radius der Kugel zu
+vergleichen. Der Abstand des Kugelmittelpunkts von der
+:math:`x_1x_2`-Ebene ist gleich der :math:`x_3`-Koordinate von
+:math:`M`. Er ist also gleich 7.
 
 Den Radius der Kugel erhält man durch den Abstand zwischen dem Punkt :math:`P`, der sich auf der Kugeloberfläche
 befindet, und dem Mittelpunkt der Kugel:
@@ -61,9 +52,9 @@ befindet, und dem Mittelpunkt der Kugel:
 
   r = \left\vert\vec{M}-\vec{P}\right\vert = \sqrt{(-3-3)^2 + (2-4)^2 + (7-4)^2} = 7
 
-Da der Abstand der Kugel zur Ebene gleich dem Radius der Kugel ist, berührt die Kugel die Ebene in genau
-einem Punkt. Der Berührungspunkt ist dabei die Projektion des Kugelmittelpunkts auf die :math:`x_1x_2`-Ebene:
-:math:`S(-3|2|0)`.
+Da der Abstand zwischen Kugelmittelpunkt und Ebene gleich dem Radius der Kugel ist,
+berührt die Kugel die Ebene in genau einem Punkt. Der Berührungspunkt ist dabei die
+Projektion des Kugelmittelpunkts auf die :math:`x_1x_2`-Ebene: :math:`S(-3|2|0)`.
 
 Dies wollen wir uns mit Sage veranschaulichen. Die 3-dimensionale Darstellung von Kugel und Ebene
 lässt sich dabei mit der Maus rotieren.
@@ -74,9 +65,10 @@ lässt sich dabei mit der Maus rotieren.
   sage: var('y')
   sage: z = 0
   sage: radius = norm(M-P)
-  sage: p1 = plot3d(z, (x,-15,15), (y,-15,15), opacity=0.7)
-  sage: p2 = sphere(center=(-3,2,7), size=radius, color='red', opacity=0.7)
+  sage: print 'Kugelradius                     :', radius
+  sage: print 'Abstand Kugelmittelpunkt - Ebene:', M[2]
+  sage: p1 = plot3d(z, (x, -15, 15), (y, -15, 15), opacity=0.7)
+  sage: p2 = sphere(center=(-3, 2, 7), size=radius, color='red', opacity=0.7)
   sage: show(p1 + p2, aspect_ratio=1)
 
 .. end of output
-

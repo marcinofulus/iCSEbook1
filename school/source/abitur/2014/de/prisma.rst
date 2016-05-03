@@ -59,45 +59,28 @@ Entsprechend erhalten wir die Koordinaten für die Punkte :math:`M(0|0|2)` und :
     sage: p = b + 1/2 * (c - b)
     sage: print "m:", m, ", p:", p
 
-Um den :math:`y`-Wert des Punktes :math:`K` zu bestimmen, nutzen wir die Bedingung, dass der
-Winkel am Punkt :math:`M` :math:`90°` betragen soll. Dies bedeutet, dass das Dreieck :math:`PMK`
-den Satz des Pythagoras erfüllen muss:
+Um den :math:`y`-Wert des Punktes :math:`K` zu bestimmen, nutzen wir die
+Bedingung der Rechtwinkligkeit am Punkt :math:`M`. Damit muss das
+Skalarprodukt der Vektoren :math:`\vec k` und :math:`\vec p`, die von
+:math:`M` nach :math:`K` bzw. :math:`P` zeigen, verschwinden. Mit
 
 .. math::
 
-  \overline{PM}^2 + \overline{MK}^2 = \overline{KP}^2\\
+  \vec{k} = \begin{pmatrix} 0\\ y_K\\ 2\end{pmatrix}\qquad
+  \vec{p} = \begin{pmatrix} 4\\ 4\\ -2\end{pmatrix}
 
-Das Einsetzen der Koordinaten liefert uns die Gleichung
-
-.. math::
-
-  (4^2+4^2+2^2) + (0^2+y_K^2+2^2) = (4^2 + (4-y_K)^2 + 4^2).
-
-Auflösen nach :math:`y_K` liefert uns die gewünschte :math:`y`-Koordinate des Punktes
-:math:`K`.
+ergibt sich für das Skalarprodukt
 
 .. math::
 
-  y_K=1
+  \vec{k}\cdot\vec{p} = 4y_k-4 \overset{!}{=} 0
 
-Selbiges Ergebnis erhalten wir mit wenig Aufwand durch Sage. Zunächst definieren wir 
-uns eine Funktion, die den Betrag eines Vektors ausrechnet und testen diese für einen
-einfachen Vektor.
+und somit :math:`y_K=1`.
 
-.. sagecellserver::
-
-  sage: def absolut(v):
-  ...       return sqrt(v[0]^2 + v[1]^2 + v[2] ^2)
-  sage: absolut(vector([1, 1, 1]))
-
-Die :math:`y`-Koordinate :math:`y_K` erhalten wir wieder über den Satz des
-Pythagoras.
+Mit Sage lässt sich dieses Ergebnis folgendermaßen erhalten:
 
 .. sagecellserver::
 
   sage: y = var('y')
-  sage: k = vector([0 , y, 4])
-  sage: pm =  absolut(p-m)
-  sage: pk =  absolut(p-k)
-  sage: mk =  absolut(m-k)
-  sage: solve(pm^2 + mk^2 == pk^2, y)
+  sage: k = vector([0, y, 4])
+  sage: solve((m-k).dot_product(m-p) == 0, y)

@@ -12,7 +12,7 @@ Aufgabe 1
 
     f(x)=\frac{20x}{x^2-25}
 
-  und maximalem Definitionsbereich :math:`D_f`. Die Abbildung zeigt den Teil des
+  und maximalem Definitionsbereich :math:`D_f`. Die Abbildung zeigt einen Teil des
   Graphen :math:`G_f` von :math:`f`.
 
   .. image:: ../figs/gebrochenrational.png
@@ -37,7 +37,7 @@ Aufgabe 1
      :math:`x=s` mit :math:`s>10` schließen ein Flächenstück mit dem Inhalt :math:`A(s)` ein. Bestimmen
      Sie :math:`A(s)`.
 
-  f) Ermitteln Sie :math:`s` so, dass das Flächenstück aus Aufgabe 1e) den Inhalt 100 besitzt.
+  f) Ermitteln Sie :math:`s` so, dass das Flächenstück aus Aufgabe 1e den Inhalt 100 besitzt.
 
   g) Bestimmen Sie das Verhalten von :math:`A(s)` für :math:`s\rightarrow \infty`.
 
@@ -69,6 +69,8 @@ erfüllt ist:
 
     f(-x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
 
+und auch aus der obigen Darstellung deutlich wird.
+
 Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
 und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynom
 im Zähler, verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`.
@@ -79,7 +81,7 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20,20), exclude=(-5,5) ymax=12, ymin=-12)
+  sage: p1 = plot(f(x), x, (-20,20), exclude=(-5,5), ymax=12, ymin=-12)
   sage: p2 = line([[-5, -13], [-5,13]], color = 'red')
   sage: p3 = line([[5, -13], [5,13]], color = 'red')
   sage: p4 = plot(g(x), x, (-20,20), aspect_ratio=1, color = 'red')
@@ -103,10 +105,9 @@ Dieses Ergebnis wird von dem Graphen von :math:`f'(x)` bestätigt.
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x), x)
-  sage: print("Ableitung von f(x): " + str(df))
-  sage: p5 = plot(df(x), x, (-20,20), ymax=12, ymin=-12)
-  sage: show(p5, aspect_ratio=1, figsize=(4, 2.8))
+  sage: df = derivative(f, x)
+  sage: p5 = plot(df(x), x, (-20, 20), ymax=12, ymin=-12)
+  sage: show(p5, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -123,44 +124,46 @@ Der Schnittwinkel berechnet sich dann zu:
 
   \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°
 
-Wir überprüfen das Ergebnis mit Sage, indem wir die Tangente im Punkt :math:`x=0` einzeichnen.
+Wir überprüfen das Ergebnis mit Sage, und zeichnen die Tangente im Punkt :math:`x=0` ein.
 
 .. sagecellserver::
 
   sage: m = df(0)
-  sage: w(x) = m * x
-  sage: p1 = plot(f(x), x, (-4,4), ymax=5, ymin=-5)
-  sage: p6 = plot(w(x), x, (-4,4), aspect_ratio=1, color='green')
-  sage: show(p1+p6, aspect_ratio=1, figsize=(4, 2.8))
-  sage: print("Winkel: " + str(n(arctan(m)*180/pi)) + "°")
+  sage: print u"\u03b1 =", RDF(180/pi*arctan(m))
+  sage: w(x) = m*x
+  sage: p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
+  sage: p7 = plot(w(x), x, (-4, 4), color='green')
+  sage: show(p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
 **Lösung zu Teil 1c**
 
-Der Graph wurde bereits in Aufgabe 1a) vervollständigt.
+Der Graph wurde bereits in Aufgabe 1a vervollständigt.
 
 **Lösung zu Teil 1d**
 
-Die Funktion :math:`f` ist nicht umkehrbar, da mehrere :math:`x`-Werte den gleichen :math:`y`-Werten zugeordnet
-werden können. :math:`f` ist also nicht auf dem gesamten Definitionsbereich injektiv,
-und somit nicht invertierbar.
+Die Funktion :math:`f` ist nicht umkehrbar, da mehrere :math:`x`-Werte
+den gleichen :math:`y`-Werten zugeordnet werden können. :math:`f` ist
+also nicht auf dem gesamten Definitionsbereich injektiv, und somit nicht
+invertierbar.
 
-:math:`f^*` hingegen ist auf dem gesamten Definitionsbereich injektiv und kann daher invertiert werden.
-Wir bestimmen die Umkehrfunktion :math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nach  :math:`x` auflösen.
+:math:`f^*` hingegen ist auf dem gesamten Definitionsbereich injektiv
+und kann daher invertiert werden.  Wir bestimmen die Umkehrfunktion
+:math:`f^{*-1}`, indem wir :math:`y=f^*(x)` nach  :math:`x` auflösen.
+Zunächst ergibt sich eine quadratische Gleichung für :math:`x`
 
 .. math::
 
-  &y=\frac{20x}{x^2-25}&\quad\Leftrightarrow\\
-  &x^2y-20x-25y = 0&
+  x^2y-20x-25y = 0
 
-Die Mitternachtsformel liefert schließlich:
+deren Lösungen durch
 
 .. math::
 
   x_{1/2}= \frac{5\left(2\pm\sqrt{y^2+4}\right)}{y}
 
-Diese Lösungen erhalten wir auch mit Sage:
+gegeben sind. Diese Lösungen erhalten wir auch mit Sage:
 
 .. sagecellserver::
 
@@ -169,9 +172,10 @@ Diese Lösungen erhalten wir auch mit Sage:
 
 .. end of output
 
-Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von :math:`f^*` lediglich  Werte
-:math:`\geq5` annehmen kann, können wir lediglich auf der Suche nach der Lösung von :math:`x_{1/2}` sein,
-bei der ein plus vor der Wurzel steht, also:
+Da die Umkehrfunktion :math:`f^{*-1}` wegen des Definitionsbereichs von
+:math:`f^*` lediglich  Werte :math:`\geq5` annehmen kann, müssen wir die
+Lösung mit dem Pluszeichen wählen. Die gesuchte Umkehrfunktion lautet
+also
 
 .. math::
 
@@ -182,28 +186,29 @@ In Sage wollen wir nun :math:`f^*` und :math:`f^{*-1}` zeichnen.
 .. sagecellserver::
 
   sage: f_inv(x) = 5*(sqrt(x^2 + 4) + 2)/x
-  sage: p1 = plot(f(x), x, (5,20), ymax=20, ymin = 0)
-  sage: p7 = plot(f_inv(x), x, (0,20), ymax=20, color='green')
-  sage: show(p1+p7, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p8 = plot(f(x), x, (5, 20))
+  sage: p9 = plot(f_inv(x), x, (0, 20))
+  sage: show(p8+p9, aspect_ratio=1, ymax=20, figsize=4)
 
 .. end of output
 
 **Lösung zu Teil 1e**
 
-Da die Funktion :math:`f` für :math:`x>10` stets positiv ist, kann die beschriebene Fläche durch das Integral
-von :math:`10` bis :math:`s` über die Funktion :math:`f` bestimmt werden:
+Da die Funktion :math:`f` für :math:`x>10` stets positiv ist, kann die beschriebene Fläche durch das Integral von 10 
+bis :math:`s` über die Funktion :math:`f` bestimmt werden:
 
 .. math::
 
-  A(s)=\int\limits_{10}^sf(x)\mathrm{d}x
+  A(s)=\int\limits_{10}^sf(x)\mathrm{d}x.
 
 Da der Zähler von :math:`f` bis auf einen Faktor die Ableitung des Nenners ist, lässt sich der Logarithmus als
 Stammfunktion finden:
 
 .. math::
 
-  A(s) = \int\limits_{10}^s\frac{20x}{x^2-25}\mathrm{d}x = 10\int\limits_{10}^s\frac{2x}{x^2-25}\mathrm{d}x
-       = 10 \left[\ln(x^2-25) \right]^s_{10}=10\ln\left(\frac{s^2-25}{75}\right)
+  A(s) = \int\limits_{10}^s\frac{20x}{x^2-25}\mathrm{d}x 
+  = 10\int\limits_{10}^s\frac{2x}{x^2-25}\mathrm{d}x
+  = 10 \left.\ln(x^2-25) \right\vert^s_{10}=10\ln\left(\frac{s^2-25}{75}\right)
 
 Mit Sage können wir diese Lösung überprüfen:
 
@@ -211,8 +216,8 @@ Mit Sage können wir diese Lösung überprüfen:
 
   sage: from sage.symbolic.integration.integral import definite_integral
   sage: s = var('s')
-  sage: assume(s>10)
-  sage: A(s) = definite_integral(f(y), y, 10, s)
+  sage: assume(s > 10)
+  sage: A(s) = definite_integral(f(x), x, 10, s)
   sage: print "Die Fläche ist A(s) =", A(s)
 
 .. end of output
@@ -224,41 +229,42 @@ halten und den Flächeninhalt in Abhängigkeit von :math:`s` ausgeben.
 
   sage: @interact
   sage: def _(s=slider(10.1, 19.9, 0.1)):
-  ...       p1 = plot(f(x), x, (5,10), ymax=10, ymin = 0)
-  ...       p2 = plot(f(x), x, (10,s), ymax=10, ymin = 0,fill = 0, fillcolor='yellow')
-  ...       p3 = plot(f(x), x, (s,20), ymax=10, ymin = 0)
-  ...       show(p1 + p2 + p3, aspect_ratio=1, figsize=(4, 2.8))
+  ...       p10 = plot(f(x), x, (5, 10))
+  ...       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
+  ...       p12 = plot(f(x), x, (s, 20))
+  ...       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
   ...       print "Die gelbe Fläche hat den Inhalt:", float(A(s))
 
 .. end of output
 
 **Lösung zu Teil 1f**
 
-Um das Flächenstück mit dem Inhalt 100 zu bestimmen lösen wir die Gleichung
+Um das Flächenstück mit dem Inhalt 100 zu bestimmen, lassen wir die Gleichung
 
 .. math::
 
   A(s) = 100
 
-nach :math:`s` auf. Sage liefert uns den Wert :math:`1285{,}3`.
+von Sage auflösen. Dabei ist es wichtig, dass wir Sage weiter oben
+gesagt haben, dass :math:`s>10` sein soll. Der gesuchte Wert für
+:math:`s` ergibt sich zu
 
 .. sagecellserver::
 
-  sage: print float(solve(A(x) == 100, x)[0].right())
+  sage: print float(solve(A(s) == 100, s)[0].right())
 
 .. end of output
 
 **Lösung zu Teil 1g**
 
-Das Argument des Logarithmus ist eine Parabel, die für :math:`\lim\limits_{x\rightarrow\infty}`
-gegen unendlich geht. Entsprechend ist auch der Grenzwert von :math:`A(s)` für 
-:math:`\lim\limits_{x\rightarrow\infty}` unendlich.
+Das Argument des Logarithmus geht für große Argumente gegen unendlich.
+Daher ist auch der Grenzwert von :math:`A(s)` für :math:`s\rightarrow+\infty` unendlich.
 
 Dieses Ergebnis liefert auch Sage:
 
 .. sagecellserver::
 
-  sage: print "Der Grenzwert von A(s) für s --> unendlich:", A(infinity)
+  sage: html("$\lim_{s=\infty} A(s) = %s$" % latex(A(infinity)))
 
 .. end of output
 
@@ -305,92 +311,127 @@ Aufgabe 2
 
 **Lösung zu Teil 2a**
 
-Um die Fahrtdauer zu berechnen müssen wir lediglich die Werte :math:`x=10` bzw. :math:`x=20` in :math:`t(x)` einsetzen.
+Um die Fahrtdauer zu berechnen, müssen wir lediglich die Werte
+:math:`x=10` bzw. :math:`x=20` in :math:`t(x)` einsetzen und das
+Ergebnis mit 60 multiplizieren, um Stunden in Minuten umzurechnen.
 
-Wir erhalten:
+Wir erhalten bei einer Geschwindigkeit von :math:`10\frac{\mathrm{km}}{\mathrm{h}}`
 
 .. math::
 
-  t(10) = \frac{8}{3}\approx2,67 \qquad t(20) = \frac{16}{15}\approx1,07
+  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160
 
-Mit Sage können wir die Fahrtdauer allgemein in Abhängigkeit von der Eigengeschwindigkeit des Boots darstellen.
-Wir erkennen bereits, dass das Modell für :math:`0 < x<5` negative Fahrtzeiten vorhersagt und damit für diesen Bereich 
-keine vernünftige Beschreibung des Problems sein kann.
+und bei einer Geschwindigkeit von :math:`20\frac{\mathrm{km}}{\mathrm{h}}`
+
+.. math::
+
+  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64
+
+Diese Ergebnisse lassen sich auch leicht mit Sage erhalten. Zudem
+stellen wir die Fahrtdauer in Abhängigkeit von der Geschwindigkeit
+zwischen :math:`10\frac{\mathrm{km}}{\mathrm{h}}` und
+:math:`20\frac{\mathrm{km}}{\mathrm{h}}` dar.
 
 .. sagecellserver::
 
-  sage: t(x) = 10/(x+5) + 10/(x-5)
-  sage: p1 = plot(t(x), x, (0,50), exclude=[5], ymax=12, ymin=-12)
-  sage: show(p1, aspect_ratio=1, figsize=(4, 2.8))
-  sage: print("t(10) = " + str(t(10)) + ", t(20) = " + str(t(20)))
+  sage: t(x) = 10/(x+5)+10/(x-5)
+  sage: print "Fahrtdauer bei 10 km/h:", 60*t(10), "Minuten"
+  sage: print "Fahrtdauer bei 20 km/h:", 60*t(20), "Minuten"
+  sage: p1 = plot(60*t(x), x, (10, 20))
+  sage: show(p1, figsize=(4, 2.8))
 
 .. end of output
 
 **Lösung zu Teil 2b**
 
-Die Zeit, die benötigt wird, um eine Strecke der Länge :math:`s` mit einer konstanten Geschwindigkeit :math:`x` 
-zurückzulegen lässt sich mit :math:`\frac{s}{x}` berechnen. Ein Boot bewegt sich mit seiner Eigengeschwindigkeit 
-allerdings nur relativ zu dem Wasser, in dem es sich befindet. Betrachtet man dagegen die Geschwindigkeit
-des Boots relativ zum unbewegten Rand des Flusses, muss die Flussgeschwindigkeit des Wassers zur Eigengeschwindigkeit
-des Boots hinzuaddiert, bzw. von dieser abgezogen werden. Dadurch rechtfertigen sich die beiden Terme von :math:`t(x)`
-als die benötigte Zeit für den Hin- bzw. Rückweg.
+Die Zeit, die benötigt wird, um eine Strecke der Länge :math:`s` mit
+einer konstanten Geschwindigkeit :math:`x` zurückzulegen, lässt sich mit
+:math:`\frac{s}{x}` berechnen. Ein Boot bewegt sich mit seiner
+Eigengeschwindigkeit allerdings nur relativ zu dem Wasser, in dem es
+sich befindet. Betrachtet man dagegen die Geschwindigkeit des Boots
+relativ zum unbewegten Rand des Flusses, muss die Fließgeschwindigkeit
+des Wassers je nach Fahrtrichtung zur Eigengeschwindigkeit des Boots
+hinzuaddiert oder von dieser abgezogen werden. Dadurch ergeben sich für
+:math:`s=10` und eine Fließgeschwindigkeit von
+:math:`5\frac{\mathrm{km}}{\mathrm{h}}` die beiden Terme von
+:math:`t(x)` als die benötigte Zeit für den Hin- und Rückweg.
 
 **Lösung zu Teil 2c**
 
-Für :math:`0<x<5` kann zwar der erste Term von :math:`t(x)` verwendet werden, um die Zeit zu berechnen, die das Boot
-für den Hinweg benötigt, für den Rückweg ergibt sich allerdings das folgende Problem: Die Eigengeschwindigkeit
-des Boots ist niedriger als die Flussgeschwindigkeit des Wassers. Das Boot entfernt sich dadurch immer weiter von seinem 
-Startpunkt und kann diesen dementsprechend nie wieder erreichen. :math:`t(x)` müsste in diesem Bereich also 
-einen unendlich großen Wert zurückliefern. Wie wir in Teilaufgabe a) aber bereits festgestellt haben, gibt :math:`t(x)` für
-:math:`0<x<5` allerdings einen negativen Wert zurück.
+Für :math:`0<x<5` kann zwar der erste Term von :math:`t(x)` verwendet
+werden, um die Zeit zu berechnen, die das Boot für den Hinweg benötigt,
+für den Rückweg ergibt sich allerdings das folgende Problem: Die
+Eigengeschwindigkeit des Boots ist niedriger als die
+Fließgeschwindigkeit des Wassers. Das Boot entfernt sich dadurch immer
+weiter vom Ausgangspunkt und kann diesen dementsprechend nie wieder
+erreichen. :math:`t(x)` müsste in diesem Bereich also einen unendlich
+großen Wert ergeben. 
 
-**Lösung zu Teil 2d**
-
-Wir erweitern die beiden Brüche in :math:`t(x)`, um sie anschließenden zusammenzufassen:
-
-.. math::
-
-  t(x) = \frac{10}{x+5} + \frac{10}{x-5} = \frac{10(x-5)+10(x+5)}{(x+5)(x-5)}=\frac{20x}{x^2-25}=f(x)
-
-In Sage lässt sich die Gleicheit von :math:`t(x)` und :math:`f(x)` wie folgt zeigen:
+Die Darstellung der Funktion mit Hilfe von Sage zeigt, dass sich für
+:math:`x<5` negative Werte ergeben, die offenbar keiner korrekten
+Fahrtdauer entsprechen können.
 
 .. sagecellserver::
 
-  sage: print("t(x) == f(x): " + str(bool(t(x) == f(x))))
+  sage: p13 = plot(60*t(x), x, (0, 50), ymax=800, ymin=-800)
+  sage: show(p13, figsize=(4, 2.8))
+
+.. end of output
+
+**Lösung zu Teil 2d**
+
+Wir erweitern die beiden Brüche in :math:`t(x)`, um sie anschließend zusammenzufassen:
+
+.. math::
+
+  t(x) &= \frac{10}{x+5}+\frac{10}{x-5}\\
+  &= \frac{10(x-5)+10(x+5))}{(x+5)(x-5)}\\
+  &=\frac{20x}{x^2-25}\\
+  &=f(x)
+
+In Sage kann man dieses Ergebnis durch Betrachtung der Differenz der
+beiden Funktionen verifizieren. Dabei muss man allerdings die Methode
+``rational_simplify()`` verwenden, da Sage sonst die erforderlichen
+Umformungen nicht vornimmt.
+
+.. sagecellserver::
+
+  sage: print t(x)-f(x)
+  sage: print (t(x)-f(x)).rational_simplify()
 
 .. end of output
 
 **Lösung zu Teil 2e**
 
-Für Geschwindigkeiten, die nicht viel größer als :math:`5\frac{\mathrm{km}}{\mathrm{h}}` sind, dauert der Rückweg
-deutlich länger als der Hinweg und man kann den Hinweg vernachlässigen. In diesem Fall lässt sich leicht 
-nach der Geschwindigkeit auflösen:
+Die Eigengeschwindigkeit lässt sich aus der Abbildung ablesen, indem man
+den Punkt auf dem Graphen sucht, dessen :math:`y`-Wert der
+Gesamtfahrzeit entspricht. Der zugehörige :math:`x`-Wert gibt die
+Eigengeschwindigkeit an. Für ein Gesamtfahrzeit von 4 Stunden liest man
+so aus der Abbildung eine Geschwindigkeit von etwa
+:math:`8\frac{\mathrm{km}}{\mathrm{h}}` ab. Der genaue Wert lässt sich
+mit Hilfe der in Teilaufgabe 1d bestimmten Umkehrfunktion
+:math:`f^{*-1}` ermitteln. Man findet
 
 .. math::
 
-  y = \frac{10}{x-5} \quad\Leftrightarrow\quad x = \frac{10}{y}+5,
+  f^{*-1}(4) = 5\frac{1+\sqrt{5}}{2}.
 
-wobei :math:`y` die benötigte Zeit und :math:`x` die Geschwindigkeit bezeichnet. Diese Näherung wird immer besser,
-je höher die Fahrtzeit ist. Für 14 Stunden beispielsweise liefert sie einen guten Näherungswert, für 2 Stunden jedoch
-einen äußerst schlechten. Für eine Fahrtzeit von 4 Stunden erhalten wir eine genäherte Geschwindigkei von 
-:math:`7{,}5\frac{\mathrm{km}}{\mathrm{h}}`.
-
-In Teilaufgabe 1d) haben wir bereits die Umkehrfunktion von :math:`f(x)` für :math:`x>5` berechnet. Da :math:`f(x)=h(x)` 
-gilt, liefert uns :math:`f^{-1}(x)` die exakte Geschwindigkeit, mit der man die Fahrtzeit :math:`x` benötigt. Um die
-Genauigkeit unserer Näherungslösung für unterschiedliche Fahrtzeiten zu analysieren, können wir Sage verwenden. Die
-blaue Kurve bezeichnet die exakte Lösung, die grüne unsere Näherung und die rote den Fehler in der Geschwindigkeit,
-der durch die Näherung entstanden ist.
-
+Mit Sage ergibt sich der Wert zu
 
 .. sagecellserver::
 
-  sage: t_inv_approx(x) = 10/x + 5
-  sage: err(x) = f_inv(x) - t_inv_approx(x)
-  sage: p9 = plot(f_inv(x), x, (0,20), ymax=12)
-  sage: p10 = plot(t_inv_approx(x), x, (0,20), ymax=12, color='green')
-  sage: p11 = plot(err(x), x, (0,20), ymax=12, color='red')
-  sage: show(p9 + p10 + p11, aspect_ratio=1, figsize=(4, 2.8))
+  sage: t = 4
+  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von", t, ": ", f_inv(t).n(10), "km/h"
 
 .. end of output
- 
-Es lässt sich dem Graphen entnehmen, dass die Näherung erst ab etwa 10 Stunden einen guten Wert liefert.
+
+Die graphische Konstruktion ergibt sich mit Hilfe von Sage
+folgendermaßen:
+
+.. sagecellserver::
+
+  sage: p14 = plot(f(x), x, (5.1, 14))
+  sage: x4, y4 = f_inv(t), t
+  sage: l1 = line([(x4, y4), (0, y4)], color='red')
+  sage: l2 = line([(x4, y4), (x4, 0)], color='red')
+  sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
