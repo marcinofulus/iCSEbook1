@@ -435,3 +435,5 @@ folgendermaßen:
   sage: l1 = line([(x4, y4), (0, y4)], color='red')
   sage: l2 = line([(x4, y4), (x4, 0)], color='red')
   sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
+
+.. end of output
