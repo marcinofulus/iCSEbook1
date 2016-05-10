@@ -43,6 +43,15 @@ Mit Sage lassen sich alle Graphen darstellen.
 
 .. end of output
 
+Wir überprüfen außerdem, dass der Graph mit der Assymptote keine gemeinsamen
+Schnittpunkte hat:
+
+.. sagecellserver::
+
+  sage: solve(asymp1(x) == f(x), x)
+
+.. end of output
+
 **Lösung zum Teil b**
 
 Um die Lage der Extrempunkte zu bestimmen, muss die Ableitung von :math:`f`
@@ -54,8 +63,8 @@ zweiten Ableitungen an diesen Punkten.
   sage: df = derivative(f)
   sage: extrema = solve(df==0, x)
   sage: ddf = derivative(df)
-  sage: print("Zweite Ableitung des Extremum:" + str(extrema[0]) + ": " + str(ddf(extrema[0].right())))
-  sage: print("Zweite Ableitung des Extremum:" + str(extrema[1]) + ": " + str(ddf(extrema[1].right())))
+  sage: print("Zweite Ableitung des Extremums" + str(extrema[0]) + ": " + str(ddf(extrema[0].right())))
+  sage: print("Zweite Ableitung des Extremums" + str(extrema[1]) + ": " + str(ddf(extrema[1].right())))
 
 .. end of output
 
@@ -67,7 +76,7 @@ Aufgabe 2
 .. admonition:: Aufgabe 2
 
   Abbildung 2 legt die Vermutung nahe, dass :math:`G_f` bezüglich des
-  Schnittpunkts :math:`P(-1\vert 1)` seiner Asymptoten symmetrisch ist. Zum
+  Schnittpunkts :math:`P(-1\vert -1)` seiner Asymptoten symmetrisch ist. Zum
   Nachweis dieser Symmetrie von :math:`G_f` kann die Funktion :math:`g`
   betrachtet werden, deren Graph aus :math:`G_f` durch Verschiebung um
   :math:`1` in positive :math:`x`-Richtung und um :math:`1` in positive
@@ -83,8 +92,8 @@ Aufgabe 2
 
 **Lösung zum Teil a**
 
-Eine Verschiebung um :math:`-1` in :math:`x`-Richtung erhält man indem man in
-:math:`f`, :math:`x` durch :math:`x-1` ersetzt. Durch Addition von :math:`1`
+Eine positive Verschiebung um :math:`1` in :math:`x`-Richtung erhält man, 
+indem  :math:`x` durch :math:`x-1` ersetzt wird. Durch Addition von :math:`1`
 erhält man die Verschiebung in :math:`y`-Richtung. Es ergibt sich für
 :math:`g`:
 
@@ -115,14 +124,15 @@ Die bestimmte Integration lässt sich in Sage leicht durchführen:
 .. end of output
 
 Aufgrund der vorher bestimmen Punktsymmetrie zum Punkt :math:`P(-1\vert1)`
-sind die :math:`x`-Werte: :math:`{0,4}` zu :math:`{-2,-6}` symmetrisch.
+sind die :math:`y`-Werte: von :math:`f` für den Bereich :math:`0\leq x\leq 4`
+symmetrisch bezüglich :math`y=-1`: zum Bereich :math:`-2\geq x \geq -6\}`.
 Wäre die Funktion zum Punkt :math:`\bar{P}(-1\vert0)` punktsymmetrisch, so
 würde sich der Wert des Integrals nur im Vorzeichen unterscheiden.
 
 Die Verschiebung in :math:`y`-Richtung wird berücksichtigt durch subtrahieren
 von :math:`4\cdot 2`. Es ergibt sich also:
 
-.. math:
+.. math::
 
   \int\limits_{-6}^{-2} f(x) \mathrm{d}x = - (2 + 8 \cdot \ln 5) - 4\cdot 2
 
@@ -135,7 +145,8 @@ Dieser Wert lässt sich durch Sage bestätigen:
 .. end of output
 
 In Sage kann dies graphisch dargestellt werden. Die rot eingezeichnete Fläche
-entspricht :math:`4\cdot2` aus der Verschiebung in :math:`y`-Richtung.
+mit dem Inhalt :math:`4\cdot2` ist die Korrektur zum Integral, die aus der 
+Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
 
 .. sagecellserver::
 
@@ -144,4 +155,5 @@ entspricht :math:`4\cdot2` aus der Verschiebung in :math:`y`-Richtung.
   sage: pf2 = plot(f, 0, 4, fill='axis')
   sage: rec = polygon([[-6,0],[-2,0],[-2,-2],[-6,-2]], color='red')
   sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1)
+
 .. end of output
