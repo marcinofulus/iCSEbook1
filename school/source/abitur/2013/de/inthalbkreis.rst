@@ -33,7 +33,7 @@ integriert. Dadurch ergibt sich der Wert:
 
   F(2)=\frac{1}{2} \cdot \pi r^2 = \frac{1}{2} \cdot \pi
 
-Aufgrund der Symetrie von :math:`F` gilt :math:`F(x) = -F(-x)` und damit
+Aufgrund der Antisymmetrie von :math:`F` gilt :math:`F(x) = -F(-x)` und damit
 :math:`F(-2) = -\frac{1}{2} \cdot \pi`.
 
 Diese Lösung lässt sich durch Sage prüfen:
@@ -61,5 +61,4 @@ In Sage können beide Funktionen in einem Koordinatensystem gezeichnet werden.
     sage: show(pf + pintf, aspect_ratio=1)
 
 .. end of output
-
 
