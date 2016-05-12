@@ -18,58 +18,85 @@ Aufgabe 1
   a) Geben Sie die Gleichungen der Asymptoten von :math:`G_f` an und zeigen Sie
      rechnerisch, dass :math:`G_f` seine schräge Asymptote nicht schneidet.
      Zeichnen Sie die Asymptoten in Abbildung 2 ein.
-  b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von :math:`G_f`
+  b) Bestimmen Sie rechnerisch Lage und Art der Extrempunkte von
+     :math:`G_f`.
 
 **Lösung zum Teil a**
 
-Am Punkt :math:`x=-1` hat :math:`f(x)` eine Polstelle. Damit ergibt sich die
-Gleichung der ersten Asymptoten zu: :math:`x=-1`. Die zweite Asymptote
-ergibt sich aus der Betrachtung von :math:`f(x)` für sehr große Werte. Der
-Summand :math:`\frac{8}{x+1}` geht hierfür gegen Null. Die Funktion nähert sich
-der Geraden :math:`g(x) = \frac{1}{2}x -\frac{1}{2}` an. Für negative Werte von
-:math:`x` ergibt sich das gleiche verhalten.
+Am Punkt :math:`x=-1` hat :math:`f(x)` eine Polstelle. Damit ergibt sich
+die Gleichung der ersten Asymptoten zu: :math:`x=-1`. Die zweite
+Asymptote ergibt sich aus der Betrachtung von :math:`f(x)` für
+betragsmäßig sehr große Werte von :math:`x`. Der Summand
+:math:`\frac{8}{x+1}` geht in diesem Grenzfall gegen Null. Die Funktion
+nähert sich somit der Geraden :math:`g(x) = \frac{1}{2}x -\frac{1}{2}`
+an.
 
-Mit Sage lassen sich alle Graphen darstellen.
+Wenn man es in Sage nicht explizit verbietet, wird die vertikale
+Asymptote bei :math:`x=-1` automatisch als Teil des Funktionsgraphen
+dargestellt. Zusätzlich muss dann die Asymptote für große Werte von
+:math:`x` eingezeichnet werden.
 
 .. sagecellserver::
 
+  sage: ranges = {'xmin': -10, 'xmax': 10, 'ymin': -10, 'ymax': 10}
   sage: f(x) = x/2- 1/2 + 8/(x+1)
-  sage: t = var('t')
-  sage: pasymp0 = parametric_plot((-1, t), (t, -11, 11), color='red')
-  sage: asymp1 = x/2 - 1/2
-  sage: pasymp1 = plot(asymp1, color='green', xmin=-10, xmax=10, ymin=-10, ymax=10) 
-  sage: pf = plot(f, exclude=[-1], xmin=-10, xmax=10, ymin=-10, ymax=10)
-  sage: show(pf + pasymp0 + pasymp1, aspect_ratio=1)
+  sage: pf = plot(f, **ranges)
+  sage: asymptote = x/2 - 1/2
+  sage: pasymp = plot(asymptote, color='green', **ranges) 
+  sage: show(pf + pasymp, aspect_ratio=1, figsize=4)
 
 .. end of output
 
-Wir überprüfen außerdem, dass der Graph mit der Assymptote keine gemeinsamen
-Schnittpunkte hat:
+Ein Schnittpunkt der Funktion mit ihrer Asymptote kann nur vorliegen,
+wenn
+
+.. math::
+
+  f(x) - g(x) = \frac{8}{x+1} = 0
+
+eine Lösung besitzt. Dies ist jedoch offensichtlich nicht der Fall.
+Entsprechend findet auch Sage keinen Schnittpunkt.
 
 .. sagecellserver::
 
-  sage: solve(asymp1(x) == f(x), x)
+  sage: solve(asymptote == f, x)
 
 .. end of output
 
 **Lösung zum Teil b**
 
-Um die Lage der Extrempunkte zu bestimmen, muss die Ableitung von :math:`f`
-gleich Null gesetzt werden. Die Art ergibt sich dann aus dem Vorzeichen der
-zweiten Ableitungen an diesen Punkten.
+Um die Lage der Extrempunkte zu bestimmen, muss die Ableitung von
+:math:`f` gleich Null gesetzt werden. Die Art der Extrema ergibt sich
+dann aus dem Vorzeichen der zweiten Ableitungen an diesen Punkten.
+
+Durch Ableiten ergibt sich:
+
+.. math::
+
+  \frac{\mathrm{d}f}{\mathrm{d}x} &= \frac{1}{2}-\frac{8}{(x+1)^2}\\
+  \frac{\mathrm{d}^2f}{\mathrm{d}x^2} &= \frac{16}{(x+1)^3}
+
+Die erste Ableitung verschwindet wenn :math:`x+1 = \pm 4`, also an den
+Stellen :math:`x_1=-5` und :math:`x_2=3`. Im ersten Fall ist die
+zweite Ableitung negativ, so dass ein Maximum vorliegt. Im zweiten Fall
+ist die zweite Ableitung dagegen positiv und es liegt ein Minimum vor.
+
+Diese Ergebnisse lassen sich mit Sage bestätigen.
 
 .. sagecellserver::
 
   sage: df = derivative(f)
-  sage: extrema = solve(df==0, x)
   sage: ddf = derivative(df)
-  sage: print("Zweite Ableitung des Extremums" + str(extrema[0]) + ": " + str(ddf(extrema[0].right())))
-  sage: print("Zweite Ableitung des Extremums" + str(extrema[1]) + ": " + str(ddf(extrema[1].right())))
+  sage: print "f'(x)  = ", df
+  sage: print "f''(x) = ", ddf
+  sage: extrema = solve(df==0, x)
+  sage: x1 = extrema[0].right()
+  sage: x2 = extrema[1].right()
+  sage: print "Zweite Ableitung des Extremums bei x=%s: %s" % (x1, ddf(x1))
+  sage: print "Zweite Ableitung des Extremums " + str(extrema[1]) + ": " + str(ddf(extrema[1].right()))
 
 .. end of output
 
-Es ergibt sich also ein Minimum am Punkt :math:`x=3` und ein Maximum am Punkt
-:math:`x=-5`.
 
 Aufgabe 2
 ^^^^^^^^^
@@ -88,7 +115,7 @@ Aufgabe 2
   b) Zeigen Sie, dass :math:`\int\limits_0^4 f(x)\mathrm{d}x=2+8\cdot\ln 5`
      gilt. Bestimmen Sie nun ohne weitere Integration den Wert des Integrals
      :math:`\int\limits_{-6}^{-2} f(x) \mathrm{d}x`; veranschaulichen Sie Ihr
-     Vorgehen durch geeignete Eintragung in Abbildung 2.
+     Vorgehen durch geeignete Eintragungen in Abbildung 2.
 
 **Lösung zum Teil a**
 
@@ -104,48 +131,62 @@ erhält man die Verschiebung in :math:`y`-Richtung. Es ergibt sich für
 
 .. end of output
 
-Die Symmetrie von :math:`g` lässt sich dann in Sage wie folgt zeigen:
+Die Punktsymmetrie von :math:`g` bezüglich des Ursprungs lässt sich dann
+in Sage wie folgt zeigen:
 
 .. sagecellserver::
 
-  sage: print("g(x) = -g(-x): " + str(g(x)==-g(-x)))
-  sage: print("g(x) ist punktsymmetrisch: " + str(bool(g(x)==-g(-x))))
+  sage: print "g(x) = ", g(x)
+  sage: print "-g(-x) = ", -g(-x)
+  sage: print "g(x) ist punktsymmetrisch: " + str(bool(g(x)==-g(-x)))
 
 .. end of output
 
 **Lösung zum Teil b**
 
-Die bestimmte Integration lässt sich in Sage leicht durchführen:
-
-.. sagecellserver::
-
-  sage: f.integrate(x,0,4)
-
-.. end of output
-
-Aufgrund der vorher bestimmen Punktsymmetrie zum Punkt :math:`P(-1\vert1)`
-sind die :math:`y`-Werte: von :math:`f` für den Bereich :math:`0\leq x\leq 4`
-symmetrisch bezüglich :math`y=-1`: zum Bereich :math:`-2\geq x \geq -6\}`.
-Wäre die Funktion zum Punkt :math:`\bar{P}(-1\vert0)` punktsymmetrisch, so
-würde sich der Wert des Integrals nur im Vorzeichen unterscheiden.
-
-Die Verschiebung in :math:`y`-Richtung wird berücksichtigt durch subtrahieren
-von :math:`4\cdot 2`. Es ergibt sich also:
+Die Stammfunktion der Funktion :math:`f` lautet
 
 .. math::
 
-  \int\limits_{-6}^{-2} f(x) \mathrm{d}x = - (2 + 8 \cdot \ln 5) - 4\cdot 2
+  F(x) = \frac{x^2}{4}-\frac{x}{2}+8\ln(\vert x+1\vert).
+
+Durch Einsetzen der Integrationsgrenzen erhält man das angegebene
+Ergebnisse.
+
+Mit Hilfe von Sage erhält man
+
+.. sagecellserver::
+
+  sage: F = f.integrate(x)
+  sage: print "Stammfunktion F = ", F
+  sage: pretty_print(html("$\int_0^4 f(x)\mathrm{d}x = $" + str(F(4)-F(0))))
+
+.. end of output
+
+Das zweite zu berechnende Integral lässt sich nun unter
+Ausnutzung der Punktsymmetrie von :math:`g(x)=f(x-1)+1` berechnen.
+
+.. math::
+
+  \int_{-6}^{-2}f(x)\mathrm{d}x &= \int_{-6}^{-2}[g(x+1)-1]\mathrm{d}x\\
+                                &= \int_{-5}^{_1}[g(x)-1]\mathrm{d}x\\
+                                &= -\int_1^5[g(-x)+1]\mathrm{d}x\\
+                                &= -\int_1^5[g(x)+1]\mathrm{d}x\\
+                                &= -\int_1^5[f(x-1)+2]\mathrm{d}x\\
+                                &= -\int_0^4[f(x)+2]\mathrm{d}x\\
+                                &= -\int_0^4f(x)\mathrm{d}x-8\\
+                                &= -8\ln(5)-10
 
 Dieser Wert lässt sich durch Sage bestätigen:
 
 .. sagecellserver::
 
-  sage: f.integrate(x,-6,-2)
+  sage: f.integrate(x, -6, -2)
 
 .. end of output
 
 In Sage kann dies graphisch dargestellt werden. Die rot eingezeichnete Fläche
-mit dem Inhalt :math:`4\cdot2` ist die Korrektur zum Integral, die aus der 
+mit dem Inhalt :math:`2\cdot4=8` ist die Korrektur zum Integral, die aus der 
 Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
 
 .. sagecellserver::
@@ -153,7 +194,7 @@ Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
   sage: pf = plot(f, exclude=[-1], xmin=-10, xmax=10, ymin=-10, ymax=10)
   sage: pf1 = plot(f, -6, -2, fill=-2)
   sage: pf2 = plot(f, 0, 4, fill='axis')
-  sage: rec = polygon([[-6,0],[-2,0],[-2,-2],[-6,-2]], color='red')
-  sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1)
+  sage: rec = polygon([[-6, 0], [-2, 0], [-2, -2], [-6, -2]], color='red')
+  sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1, figsize=4)
 
 .. end of output
