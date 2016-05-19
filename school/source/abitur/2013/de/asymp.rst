@@ -31,16 +31,17 @@ betragsmäßig sehr große Werte von :math:`x`. Der Summand
 nähert sich somit der Geraden :math:`g(x) = \frac{1}{2}x -\frac{1}{2}`
 an.
 
-Wenn man es in Sage nicht explizit verbietet, wird die vertikale
-Asymptote bei :math:`x=-1` automatisch als Teil des Funktionsgraphen
-dargestellt. Zusätzlich muss dann die Asymptote für große Werte von
-:math:`x` eingezeichnet werden.
+Der folgende Code verlangt von Sage, Polstellen der Funktion zu
+identifizieren. Diese werden dann durch graue gestrichelte Linien
+dargestellt. Dadurch wird bereits die vertikale Asymptote bei
+:math:`x=-1` erfasst.  Zusätzlich muss noch die Asymptote für große
+Werte von :math:`x` eingezeichnet werden.
 
 .. sagecellserver::
 
   sage: ranges = {'xmin': -10, 'xmax': 10, 'ymin': -10, 'ymax': 10}
   sage: f(x) = x/2- 1/2 + 8/(x+1)
-  sage: pf = plot(f, **ranges)
+  sage: pf = plot(f, detect_poles="show", **ranges)
   sage: asymptote = x/2 - 1/2
   sage: pasymp = plot(asymptote, color='green', **ranges) 
   sage: show(pf + pasymp, aspect_ratio=1, figsize=4)
