@@ -7,7 +7,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   :math:`\mathbb{R}^+\backslash\{1\}`, determine position and nature
   of the extrema of the graph of :math:`f`.
 
-**Lösung**
+**Solution**
 
 We first employ Sage to obtain an overview of the given function.
 

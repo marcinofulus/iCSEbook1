@@ -74,7 +74,7 @@ und auch aus der obigen Darstellung deutlich wird.
 Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
 und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynom
 im Zähler, verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`.
-Die dritte Asymptote ist daher die x-Achse, welche durch :math:`y=0` gegeben ist.
+Die dritte Asymptote ist daher die :math:`x`-Achse, welche durch :math:`y=0` gegeben ist.
 
 Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
@@ -91,7 +91,7 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 **Lösung zu Teil 1b**
 
-Zunächst berechnen wir die Ableitung von f mit der Quotientenregel:
+Zunächst berechnen wir die Ableitung von :math:`f` mit der Quotientenregel:
 
 .. math::
 
@@ -122,7 +122,7 @@ Der Schnittwinkel berechnet sich dann zu:
 
 .. math::
 
-  \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°
+  \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°.
 
 Wir überprüfen das Ergebnis mit Sage, und zeichnen die Tangente im Punkt :math:`x=0` ein.
 

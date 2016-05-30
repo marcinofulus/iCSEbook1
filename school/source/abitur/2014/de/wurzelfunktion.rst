@@ -401,7 +401,7 @@ Mit
 
 .. math::
 
-  h'(x) = -x+2\Leftrightarrow
+  h'(x) = -x+2
 
 ergibt sich
 
@@ -460,7 +460,7 @@ somit etwa :math:`62°`.
 **Lösung zu Teil 3c**
 
 Die Bedingungen I und III sorgen dafür, dass sich :math:`G_k` stetig in
-die restliche Blattkontur einfügt. Bedingung III stellt ferner sicher,
+die restliche Blattkontur einfügt. Bedingung II stellt ferner sicher,
 dass der Übergang am oberen Ende glatt erfolgt. Bedingung IV führt dazu,
 dass die Steigung der Tangente an den oberen Blattrand im Punkt (-2|-2)
 deutlich kleiner ist als der bisherige Wert 4. Daher läuft das Blatt

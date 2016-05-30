@@ -109,6 +109,6 @@ nachvollziehen:
   sage: abstand = abs(solution[t])
   sage: print "Abstand Kugelzentrum - Ebene:", abstand
   sage: if abstand < radius:
-  sage:     print('Ebene schneidet Kugel')
+  ...       print('Ebene schneidet Kugel')
   sage: else:
-  sage:     print('Ebene schneidet Kugel nicht')
+  ...       print('Ebene schneidet Kugel nicht')
