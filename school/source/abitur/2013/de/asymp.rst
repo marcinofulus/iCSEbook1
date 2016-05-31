@@ -198,3 +198,42 @@ Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
   sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1, figsize=4)
 
 .. end of output
+
+Aufgabe 3
+^^^^^^^^^
+.. admonition:: Aufgabe 3
+
+  .. image:: ../figs/zylinder.png
+     :align: right
+
+  Eine vertikal stehende Getränkedose hat die Form eines geraden Zylinders. Die
+  Lage des gemeinsamen Schwerpunts S von Dose und enthaltener Flüssigkeit hängt
+  von der Füllhöhe der Flüssigkeit über dem Dosenboden ab. Ist die Dose
+  vollständig gefüllt, so beträgt die Füllhöhe 15cm.
+  
+  Die bisher betrachtete Funktion :math:`f` git für :math:`0\leq x \leq 15` die
+  Höhe von :math:`S` über dem Dosenboden in Zentimetern an; dabei ist :math:`x`
+  die Füllhöhe in Zentimetern (vgl. Abbildung 3).
+  
+  a) Berechnen Sie :math:`f(0)` und :math:`f(15)`. Interpretieren Sie die
+     beiden Ergebnisse im Sachzusammenhang.
+  b) Die zunächst leere Dose wird langsam mit Flüssigkeit gefüllt, bis die
+     maximale Füllhöhe von 15cm erreicht ist. Beschreiben Sie mithilfe von
+     Abbildung 2 die Bewegung des Schwerpunkts :math:`S` während des
+     Füllvorgangs. Welche Bedeutung im Sachzusammenhang hat die Tatsche, dass
+     :math:`x`-Koordinate und :math:`y`-Koordinate des Tiefpunkts von
+     :math:`G_f` übereinstimmen?
+  c) Für welche Füllhöhen von :math:`x` liegt der Schwerpunkt :math:`S`
+     höchstens 5cm hoch? Beantworten Sie diese Frage zunächst näherungsweise
+     mithilfe von Abbildung 2 und anschließend durch Rechnung.
+
+**Lösung zu Teil a**
+
+
+.. sagecellserver::
+
+  sage: 
+
+.. end of output
+
+
