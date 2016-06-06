@@ -25,6 +25,8 @@ Stochastik
    Aufgabe 3 <zufallsgroesse>
    Aufgabe 4 <baumdiagramm>
    Aufgabe 5 <jim_studie>
+   Aufgabe 6 <supermarkt>
+   Aufgabe 7 <gluecksrad>
 
 Geometrie
 .........
