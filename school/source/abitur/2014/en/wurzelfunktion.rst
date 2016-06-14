@@ -50,7 +50,7 @@ This can be checked using Sage:
 
 .. sagecellserver::
 
-  sage: print "Der y-Achsenabschnitt ist ", f(0), u"\u2248", f(0).n(digits=4)
+  sage: print "intersection with the y-axis ", f(0), u"\u2248", f(0).n(digits=4)
 
 .. end of output
 
@@ -59,7 +59,7 @@ zeros of the function :math:`f`:
 
 .. math::
 
-  &f(x) = 2-\sqrt{12-2x} \overset{!}{=} 0 \Leftrightarrow
+  f(x) = 2-\sqrt{12-2x} \overset{!}{=} 0
 
 Solving the equation for :math:`x` leads to
 
@@ -102,7 +102,7 @@ The value :math:`f(6)` can be calculated as
 
 .. math::
 
-  f(6) = 2-\sqrt{12-2\cdot6}=2,
+  f(6) = 2-\sqrt{12-2\cdot6}=2.
 
 .. sagecellserver::
 
@@ -110,11 +110,10 @@ The value :math:`f(6)` can be calculated as
 
 .. end of output
 
-which can also be obtained from the curve of :math:`f`.
 
 **Solution of part 1b**
 
-The derivation of :math:`f` can be calculated by use of the chain rule:
+The derivation of :math:`f` can be calculated by using the chain rule:
 
 .. math::
 
@@ -272,8 +271,8 @@ Using Sage, we can solve the problem analytically
 
   sage: h(x)=-1/2*x^2+2*x+4
   sage: w(x) = x
-  sage: for loesung in solve(h(x) == w(x), x, solution_dict=True):
-  sage:     print "(", loesung[x], "|", loesung[x], ")"
+  sage: for solution in solve(h(x) == w(x), x, solution_dict=True):
+  sage:     print "(", solution[x], "|", solution[x], ")"
 
 .. end of output
 

@@ -49,7 +49,8 @@ can be determined by
 
 .. math::
 
-  \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}).
+  \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}),\\
+  \vec{P} = \vec{B} + 1/2 \cdot (\vec{C} - \vec{B}).
 
 Therefore, we obtain the coordinates :math:`M(0|0|2)` und :math:`P(4|4|0)`.
 

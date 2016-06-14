@@ -19,8 +19,9 @@ Problem 1
      :align: center
 
   a) Prove that :math:`D_f=\mathbb{R}\backslash\{-5;5\}` is fulfilled and that
-     :math:`G_f` is symmetric relative to the point (0|0). Denote the zeros of 
-     :math:`f` and the equations of the three asymptotes of :math:`G_f`.
+     :math:`G_f` is symmetric relative to the point :math:`\left(0\vert0\right)`.
+     Denote the zeros of :math:`f` and the equations of the three asymptotes
+     of :math:`G_f`.
 
   b) Prove that the slope of :math:`G_f` is negative in every point. Calculate
      the angle between :math:`G_f` and the :math:`x`-axis at their intersection
@@ -39,7 +40,7 @@ Problem 1
      equations :math:`x=10` and :math:`x=s` with :math:`s>10` include an area
      with the content :math:`A(s)`. Calculate :math:`A(s)`.
 
-  f) Determine :math:`s` so that the content of the area from part 1e equals to
+  f) Determine :math:`s` so that the content of the area from problem 1e equals to
      100.
 
   g) Determine the behavior of :math:`A(s)` in the limes

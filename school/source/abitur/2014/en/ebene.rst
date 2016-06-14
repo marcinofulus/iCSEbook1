@@ -13,8 +13,8 @@ Bavarian final secondary-school examinations in mathematics 2014
 
 **Solution of part a**
 
-The equation of the plane is independent of the :math:`x_1`-component. Therefore,
-The plane :math:`E` is aligned parallel to the :math:`x_1`-axis.
+The equation for the plane is independent of the :math:`x_1`-component. Therefore,
+the plane :math:`E` is aligned parallel to the :math:`x_1`-axis.
 
 We can use Sage to depict the plane in a 3D-space by resolving the plane's
 equation for :math:`x_3`.
@@ -41,7 +41,7 @@ First, we will use Sage to get an overview of the problem.
 
 .. end of output
 
-It's easy to see that the sphere and the plane have infinitly many intersection
+It is easy to see that the sphere and the plane have infinitly many intersection
 points.
 
 In order to verify this solution by calculation, we will determine the distance
@@ -93,7 +93,8 @@ the plane's equation. This leads to
 
 .. math::
 
-  &3 \cdot (6+\frac{3}{5}t) + 4 \cdot (3+\frac{4}{5}t)-5=0 \quad\Leftrightarrow\\
+  &3 \cdot \left(6+\frac{3}{5}t\right) + 4 \cdot \left(3+\frac{4}{5}t\right)-5
+  =0 \quad\Leftrightarrow\\
   &t=-5 \quad\Leftrightarrow\\
   &|t|=5.
 
