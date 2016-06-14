@@ -43,7 +43,7 @@ Die Wahrscheinlichkeit für den Gewinn des Gutscheins liegt bei
 
 .. math::
 
-  \frac{5}{15}=\frac{1}{3}
+  \frac{5}{1+2+3+4+5}=\frac{5}{15}=\frac{1}{3}
 
 **Lösung zu Teil 1b**
 
@@ -97,11 +97,11 @@ Wir simulieren das Spiel mit Sage aus Sicht des Supermarkts:
   ...       ergebnis = random.random()*360
   ...       if ergebnis < winkel:
   ...           return 5
-  ...       elif ergebnis < 3*winkel:
+  ...       elif winkel <= ergebnis < 3*winkel:
   ...           return 4
-  ...       elif ergebnis < 6*winkel:
+  ...       elif winkel*3 <= ergebnis < 6*winkel:
   ...           return 3
-  ...       elif ergebnis < 10*winkel:
+  ...       elif winkel*6 <= ergebnis < 10*winkel:
   ...           return 2
   ...       else:
   ...           return -4
@@ -114,7 +114,7 @@ Wir simulieren das Spiel mit Sage aus Sicht des Supermarkts:
   ...           tickets += 1
   ...       ueberschuss += spiel
   sage: print "Überschuss für den Kindergarten:", ueberschuss, "Euro"
-  sage: print "Erwartungswert:", float(ueberschuss/iterations), "Euro"
+  sage: print "Durchschnittlicher Gewinn pro Spiel für den Kindergarten:", float(ueberschuss/iterations), "Euro"
   sage: print "Gewinnwahrscheinlichkeit Ticket:", float(tickets/iterations)
 
 
