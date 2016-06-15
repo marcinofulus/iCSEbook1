@@ -59,6 +59,8 @@ Entsprechend erhalten wir die Koordinaten für die Punkte :math:`M(0|0|2)` und :
     sage: p = b + 1/2 * (c - b)
     sage: print "m:", m, ", p:", p
 
+.. end of output
+
 Um den :math:`y`-Wert des Punktes :math:`K` zu bestimmen, nutzen wir die
 Bedingung der Rechtwinkligkeit am Punkt :math:`M`. Damit muss das
 Skalarprodukt der Vektoren :math:`\vec k` und :math:`\vec p`, die von
@@ -84,3 +86,5 @@ Mit Sage lässt sich dieses Ergebnis folgendermaßen erhalten:
   sage: y = var('y')
   sage: k = vector([0, y, 4])
   sage: solve((m-k).dot_product(m-p) == 0, y)
+
+.. end of output
