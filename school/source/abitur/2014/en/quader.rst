@@ -34,7 +34,7 @@ we calculate every possible inner product of two vectors.
   \vec{b}\cdot\vec{c} &= (-1)\cdot4t + 2\cdot2t + 0\cdot(-5t) &= 0\\
 
 The fact that every inner product vanishes proves that the generated body 
-is a cuboid. The inner products can also be calculated with Sage:
+is a cuboid for any value of :math:`t`. The inner products can also be calculated with Sage:
 
 .. sagecellserver::
 
@@ -61,7 +61,7 @@ The volume of a cuboid can be calculated with the scalar triple product:
   &=\left\vert 2\cdot(-10t) + 1\cdot(-5t)+2\cdot(-10t) \right\vert\\
   &= 45\left\vert t \right\vert.
   
-Together with the condition that the cuboid's volume should equal 15, we obtain
+Together with the condition that the cuboid's volume should be equal to 15, we obtain
 
 .. math::
 
@@ -71,7 +71,7 @@ which can be rewritten as
 
 .. math::
 
-  \left\vert t \right\vert = \frac{1}{3} \Leftrightarrow t=\pm\frac{1}{3}
+  \left\vert t \right\vert = \frac{1}{3} \Leftrightarrow t=\pm\frac{1}{3}.
 
 We obtain two possible solutions for :math:`t`. One solution implies that the
 orientation of the vector :math:`c` is towards the upper half-space, the other

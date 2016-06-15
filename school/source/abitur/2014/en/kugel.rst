@@ -7,16 +7,16 @@ Bavarian final secondary-school examinations in mathematics 2014
   :math:`P(3|4|4)` is located on the surface of this sphere.
 
   a) The point :math:`Q` is also located on the surface of the sphere. The
-     edge :math:`[PQ]` contains the center :math:`M`. Determine the coordinates
-     of the point :math:`Q`.
+     line segment :math:`[PQ]` contains the center :math:`M`. Determine
+     the coordinates of the point :math:`Q`.
 
   b) Prove that the sphere touches the :math:`x_1x_2`-plane.
 
 **Solution of part a**
 
 Due to the fact that both points, :math:`P` and :math:`Q`, are located on the
-surface of the sphere and that their edge contains the center of the sphere,
-:math:`Q` can be represented as:
+surface of the sphere and that the line segment connecting the poinst contain
+the center of the sphere, :math:`Q` can be represented as:
 
 .. math::
 

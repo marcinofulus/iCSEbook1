@@ -31,7 +31,7 @@ Bayerisches Abitur in Mathematik 2014
   Bilder sind 3D-Bilder.
 
   c) Ermitteln Sie, wie viele Päckchen ein Kind mindestens benötigt, um mit
-     einer Wahrscheinlichkeit von mehr als 99 % mindestens ein 3D-Bild zu
+     einer Wahrscheinlichkeit von mehr als 99\% mindestens ein 3D-Bild zu
      erhalten.
 
 
