@@ -37,9 +37,10 @@ im dreidimensionalen Raum verschaffen.
   sage: p2 = sphere(center=(1, 6, 3), size=7, color='red', opacity=1)
   sage: p1 + p2
 
-Wir können leicht erkennen, dass die Kugel die Ebene in unendlich vielen Punkten schneidet.
+Wir können leicht erkennen, dass die Kugel die Ebene schneidet.
 
-Um dies rechnerisch zu überprüfen, bestimmen wir zunächst den Abstand zwischen dem Kugelmittelpunkt und der Ebene.
+Um dies rechnerisch zu überprüfen, bestimmen wir zunächst den Abstand zwischen
+dem Kugelmittelpunkt und der Ebene.
 
 Aus der Hesse-Normalform der Ebene erhalten wir den Normalenvektor
 
@@ -62,7 +63,7 @@ bzw. den normierten Normalenvektor
   	     	    \end{matrix} \right).
 
 Um den Abstand des Kugelmittelpunkts zur Ebene zu bestimmen, definieren wir nun Punkte 
-auf der Gerade in Richtung des Vektors :math:`\vec{n}_0` (also senkrecht zur Ebene), die 
+auf der Gerade in Richtung der Ebenennormale :math:`\vec{n}_0`, die 
 durch den Kugelmittelpunkt verläuft als
 
 .. math::
@@ -91,11 +92,9 @@ Geradenkoordinaten in die Ebenengleichung einsetzen. Wir erhalten
   &t=-5 \quad\Leftrightarrow\\
   &|t|=5.
 
-Der Kugelmittelpunkt hat also den Abstand 5 von der Ebene. Da der der Kugelradius mit dem Wert
-7 größer ist, als der Abstand des Mittelpunkts zur Ebene, ergibt sich ein Schnittkreis mit
-unendlich vielen Schnittpunkten, wie bereits durch Sage deutlich wurde.
-Die gerade durchgeführte Rechnung kann man folgendermaßen in Sage
-nachvollziehen:
+Der Abstand des Kugelmittelpunkts von der Ebene beträgt also 5 und ist kleiner
+als der Kugelradius 7. Somit schneidet die Kugel die Ebene. Die gerade
+durchgeführte Rechnung kann man folgendermaßen in Sage nachvollziehen:
 
 .. sagecellserver::
 
@@ -107,7 +106,7 @@ nachvollziehen:
   sage: gerade = z+t*n0
   sage: solution = solve(3*gerade[1]+4*gerade[2] == 5, t, solution_dict=True)[0]
   sage: abstand = abs(solution[t])
-  sage: print "Abstand Kugelzentrum - Ebene:", abstand
+  sage: print "Abstand Kugelmittelpunkt - Ebene:", abstand
   sage: if abstand < radius:
   ...       print('Ebene schneidet Kugel')
   sage: else:

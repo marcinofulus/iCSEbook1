@@ -8,7 +8,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   a) explain the special location of the plane :math:`E` in the coordinate
      system.
 
-  b) verify by calculation if a sphere with the center :math:`Z(1|6|3)` and
+  b) verify by calculation whether a sphere with center :math:`Z(1|6|3)` and
      radius :math:`7` intersects the plane :math:`E`.
 
 **Solution of part a**
@@ -16,7 +16,7 @@ Bavarian final secondary-school examinations in mathematics 2014
 The equation for the plane is independent of the :math:`x_1`-component. Therefore,
 the plane :math:`E` is aligned parallel to the :math:`x_1`-axis.
 
-We can use Sage to depict the plane in a 3D-space by resolving the plane's
+We can use Sage to depict the plane in three dimensions by solving the plane's
 equation for :math:`x_3`.
 
 .. sagecellserver::
@@ -41,10 +41,9 @@ First, we will use Sage to get an overview of the problem.
 
 .. end of output
 
-It is easy to see that the sphere and the plane have infinitly many intersection
-points.
+It is easy to see that the sphere and the plane intersect.
 
-In order to verify this solution by calculation, we will determine the distance
+In order to analytically verify this observation, we will determine the distance
 between the plane and the center of the sphere. The normal vector of the plane
 can be derived from its Hesse normal form:
 
@@ -67,8 +66,8 @@ or in normalized form:
   	     	    \end{matrix} \right).
 
 In order to calculate the distance between the plane and the center of the
-sphere, we define points along the line, which is aligned parallel to the
-normal :math:`\vec{n}_0` and which contains the center of the sphere, as
+sphere, we define points along the line aligned parallel to the normal
+:math:`\vec{n}_0` and going through the center of the sphere as
 
 .. math::
 
@@ -86,10 +85,10 @@ normal :math:`\vec{n}_0` and which contains the center of the sphere, as
     			\frac{4}{5}
   	     	    \end{matrix} \right).
 
-The value of :math:`|t|` refers to the distance of the current point to the
+The value of :math:`|t|` corresponds to the distance of the current point from the
 center of the sphere. The value :math:`t` of the intersection point of the line
 and the plane can be determined by inserting the coordinates of the line into
-the plane's equation. This leads to
+the plane's equation. We find
 
 .. math::
 
@@ -98,10 +97,9 @@ the plane's equation. This leads to
   &t=-5 \quad\Leftrightarrow\\
   &|t|=5.
 
-Thus, the distance between the plane and the center of the sphere equals to 5, 
-which is smaller than the radius of the sphere. Therefore, the 
-area of intersection is the border of a circle, which obviously contains
-infinitely many intersection points. The calculation can be verified by Sage:
+Thus, the distance between the plane and the center of the sphere equals 5 
+and is smaller than the radius 7 of the sphere. Therefore, the 
+sphere intersects the plane. The calculation can be verified by Sage:
 
 .. sagecellserver::
 
