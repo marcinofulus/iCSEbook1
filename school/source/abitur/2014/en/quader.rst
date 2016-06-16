@@ -14,9 +14,9 @@ Bavarian final secondary-school examinations in mathematics 2014
   :math:`t\in\mathbb{R}\backslash\{0\}`. The figure below illustrates this
   for an example of :math:`t`.
 
-  a) Prove that the genarated body is always a cuboid.
+  a) Prove that the generated body is always a cuboid.
 
-  b) Determine the values of :math:`t` that imply a cuboid with a volume of 15.
+  b) Determine the values of :math:`t` leading to a cuboid with a volume of 15.
 
   .. image:: ../figs/quader.png
      :align: center
@@ -24,8 +24,9 @@ Bavarian final secondary-school examinations in mathematics 2014
 **Solution of part a**
 
 The generated body is a cuboid if and only if the vectors :math:`\vec{a}`,
-:math:`\vec{b}` and :math:`\vec{c}` are perpendicular to eachother. Therefore,
-we calculate every possible inner product of two vectors.
+:math:`\vec{b}` and :math:`\vec{c}` are mutually orthogonal. Therefore,
+we calculate all possible inner products of two vectors and verify that
+all of them vanish.
 
 .. math::
 
@@ -73,12 +74,12 @@ which can be rewritten as
 
   \left\vert t \right\vert = \frac{1}{3} \Leftrightarrow t=\pm\frac{1}{3}.
 
-We obtain two possible solutions for :math:`t`. One solution implies that the
-orientation of the vector :math:`c` is towards the upper half-space, the other
-implies that the orientation is towards the lower half-space.
+We obtain two possible solutions for :math:`t`. In one case, the vector 
+:math:`c` points towards the upper half-space while in the other case it
+points towards the lower half-space.
 
-This result can be verified with Sage. Especially the time-intensive
-calculation of the triple product can be evaluated very fast.
+This result can be verified with the help of Sage. In particular, the evaluation
+of the triple product is significantly simplified.
 
 .. sagecellserver::
 
