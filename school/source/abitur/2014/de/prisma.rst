@@ -51,7 +51,8 @@ erhält man durch
 
   \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}).
 
-Entsprechend erhalten wir die Koordinaten für die Punkte :math:`M(0|0|2)` und :math:`P(4|4|0)`.
+Entsprechend erhalten wir die Koordinaten für die Mittelpunkte :math:`M(0|0|2)`
+und :math:`P(4|4|0)`.
 
 .. sagecellserver::
 
@@ -79,7 +80,7 @@ ergibt sich für das Skalarprodukt
 
 und somit :math:`y_K=1`.
 
-Mit Sage lässt sich dieses Ergebnis folgendermaßen erhalten:
+Mit Sage lässt sich dieses Ergebnis leicht folgendermaßen erhalten:
 
 .. sagecellserver::
 

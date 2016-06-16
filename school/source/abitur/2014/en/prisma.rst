@@ -11,14 +11,14 @@ Bavarian final secondary-school examinations in mathematics 2014
 
   a) Determine the distance between the two vertices :math:`B` and :math:`F`.
 
-  b) The points :math:`M` and :math:`P` are located in the center of the edges
+  b) The points :math:`M` and :math:`P` correspond to the midpoints of the edges
      :math:`[AD]` and :math:`[BC]`. The point :math:`K(0|y_K|4)` is located on
      the edge :math:`[DF]`. Determine :math:`y_K` so that the triangle
      :math:`KMP` is orthogonal in :math:`M`.
 
 **Solution of part a**
 
-First, we have to calculate the coordinates of the vertex :math:`F`, which is
+First, we need to calculate the coordinates of the vertex :math:`F`
 located above the point :math:`C` in :math:`z`-direction, at the same height as
 the point :math:`D`. :math:`F` therefore has the coordinates :math:`F(0|8|4)`.
 
@@ -28,8 +28,8 @@ The distance between :math:`B` and :math:`F` can be calculated as
 
   \overline{BF} = |\vec{B} - \vec{F}| = \sqrt{8^2+(-8)^2+(-4)^2}=12.
 
-We can verify the result with sage by constructing the point :math:`F` and 
-measuring its distance to the point :math:`B`.
+We can verify the result with the help of Sage by constructing the point
+:math:`F` and determining its distance to the point :math:`B`.
 
 .. sagecellserver::
 
@@ -44,15 +44,15 @@ measuring its distance to the point :math:`B`.
 
 **Solution of part b**
 
-The center :math:`M` of the edge between the points :math:`A` and :math:`D`
+The midpoint :math:`M` of the edge between the points :math:`A` and :math:`D`
 can be determined by
 
 .. math::
 
-  \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}),\\
-  \vec{P} = \vec{B} + 1/2 \cdot (\vec{C} - \vec{B}).
+  \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}).
 
-Therefore, we obtain the coordinates :math:`M(0|0|2)` und :math:`P(4|4|0)`.
+Correspondingly, we obtain the coordinates of the midpoints :math:`M(0|0|2)`
+and :math:`P(4|4|0)`.
 
 .. sagecellserver::
 
@@ -64,23 +64,22 @@ Therefore, we obtain the coordinates :math:`M(0|0|2)` und :math:`P(4|4|0)`.
 
 In order to determine the :math:`y`-value of the point :math:`K`, we will use
 the condition that the triangle :math:`KMP` has to be orthogonal in :math:`M`.
-This implies that the inner product of the vectors :math:`\vec k` and 
-:math:`\vec p` -- which are connecting the point :math:`M` to the points 
-:math:`K` and :math:`P` -- is equal to zero. The vectors can be determined
-as
+This implies that the inner product of the vectors :math:`\vec k` and
+:math:`\vec p` connecting the point :math:`M` to the points :math:`K` and
+:math:`P`, respectively, must vanish. The vectors can be determined as
 
 .. math::
 
   \vec{k} = \begin{pmatrix} 0\\ y_K\\ 2\end{pmatrix}\qquad
-  \vec{p} = \begin{pmatrix} 4\\ 4\\ -2\end{pmatrix}.
+  \vec{p} = \begin{pmatrix} 4\\ 4\\ -2\end{pmatrix} 
 
-This leads to the inner product
+with the inner product
 
 .. math::
 
   \vec{k}\cdot\vec{p} = 4y_k-4 \overset{!}{=} 0,
 
-which implies :math:`y_K=1`.
+Therefore, we find :math:`y_K=1`.
 
 Sage offers a fast way to verify the solution:
 
