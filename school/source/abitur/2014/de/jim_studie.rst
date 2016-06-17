@@ -33,7 +33,7 @@ Bayerisches Abitur in Mathematik 2014
      ausgewählte Person besitzt ein Fernsehgerät.“ und „Eine aus den
      200 Jugendlichen zufällig ausgewählte Person ist ein Mädchen.“ abhängig sind.
 
-  d) Der Studie zufolge besitzen 55 % der Mädchen im Alter von 12 bis
+  d) Der Studie zufolge besitzen 55% der Mädchen im Alter von 12 bis
      19 Jahren ein Fernsehgerät. Geben Sie den Wert der Summe
 
      .. math::
