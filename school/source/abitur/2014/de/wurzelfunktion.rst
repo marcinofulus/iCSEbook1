@@ -445,13 +445,13 @@ Zudem wollen wir Sage nutzen, um die Tangente in unsere Zeichnung einzutragen.
 .. end of output
 
 Es wird bereits aus der Zeichnung ersichtlich, dass der gesuchte Winkel deutlich größer ist als das 
-Bild des Blatts ind er Aufgabenstellung vermuten lässt. Den Winkel
+Bild des Blatts in der Aufgabenstellung vermuten lässt. Den Winkel
 zwischen der Winkelhalbierenden und der Tangente erhält man aus deren
-Steigungen :math:`m_w` und :math:`m_t` gemäß
+Steigungen :math:`m_w=1` und :math:`m_t=4` gemäß
 
 .. math::
 
-  \alpha = \arctan\left(\frac{m_w-m_t}{1+m_w m_t}\right)
+  \alpha = \arctan\left(\frac{m_t-m_w}{1+m_w m_t}\right)
   =\arctan\left(\frac{4-1}{1+4}\right) \approx 30,9°
 
 Der ingesamt eingeschlossene Winkel ist doppelt so groß und beträgt
