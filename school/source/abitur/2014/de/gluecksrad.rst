@@ -18,6 +18,8 @@ Bayerisches Abitur in Mathematik 2014
      Nummer 1 sowie die Wahrscheinlichkeit dafür, dass ein Spieler bei einem
      Spiel eine Eintrittskarte gewinnt.
 
+     *(Teilergebnis: Größe des Öffnungswinkels: 24°)*
+
   b) Berechnen Sie den Erwartungswert der Auszahlung pro Spiel, wenn der
      Gewinn einer Eintrittskarte mit einer Auszahlung von fünfzehn Euro
      gleichgesetzt wird. Interpretieren Sie das Ergebnis.
