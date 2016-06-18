@@ -168,7 +168,7 @@ numerator, we obtain a strictly positive derivative :math:`f'`.
 
 According to part a, the codomain of :math:`f` starts at :math:`-\infty`. At
 the right end :math:`x=6` of the domain, :math:`f` takes on the value
-2. Due to the fact that :math:`f` is steady and monotonically increasing in its
+2. Due to the fact that :math:`f` is continuous and monotonically increasing in its
 domain, the codomain of :math:`f` is found as
 
 .. math::
@@ -238,12 +238,12 @@ which can be verified with Sage:
   graph of the inverse function from part 1e is a part of :math:`G_h`.
 
   a) Calculate the coordinates of the intersection points of the curve
-     :math:`G_h` and the bisectrix of the first and third quadrant :math:`w` given
+     :math:`G_h` and the bisector of the first and third quadrant :math:`w` given
      by the term :math:`y=x`
 
   b) Draw the parabola :math:`G_h` -- including the apex -- on the interval 
      :math:`-2\leq x\leq4` into your graph from part 1d. Taking the mirror image
-     of this part of :math:`G_h` with respect to the bisectrix :math:`w` leads to
+     of this part of :math:`G_h` with respect to the angle bisector :math:`w` leads to
      a heart-shaped figure. Complete your graph accordingly.
 
 **Solution of part 2a**
@@ -260,7 +260,7 @@ function terms:
   & x_1 = -2, \quad x_2=4
 
 The :math:`y`-coordinates of the intersection points are equal to their
-:math:`x`-coordinates, due to the function term :math:`y=x` of the bisectrix:
+:math:`x`-coordinates, due to the function term :math:`y=x` of the angle bisector:
 
 .. math::
 
@@ -291,7 +291,7 @@ as well as graphically:
 
 The upper half of the heart-shaped figure can already be recognized in the
 graph of part 2a. Its full form can be obtained by reflection. A reflection of
-a function at the bisectrix :math:`y=x` can be implemented by
+a function at the angle bisector :math:`y=x` can be implemented by
 reversing this function. The inverse function of :math:`h` is :math:`f`, as we
 already know from part 1e. However, this inversion only holds within the domain
 :math:`]-\infty;2]` (compare part 1e). For :math:`x>2` we can use
@@ -337,7 +337,7 @@ heart-shaped figure by reflection, we will proceed as follows:
   .. image:: ../figs/blatt.png
      :align: center
 
-  a) Calculate the area delimited by :math:`G_h` and the bisectrix :math:`w`.
+  a) Calculate the area delimited by :math:`G_h` and the angle bisector :math:`w`.
      Use this result to determine the area of the leaf, based on our model.
 
   b) Determine the term of the tangent to :math:`G_h` at the point 
@@ -385,7 +385,7 @@ This result can be verified with Sage:
 .. end of output
 
 Having obtained the heart-shaped figure by reflection of the red region at the
-bisectrix :math:`w`, the area enclosed by the heart-shaped figure is twice the
+angle bisector :math:`w`, the area enclosed by the heart-shaped figure is twice the
 red area. In view of the specified length scale, we obtain:
 
 .. math::
@@ -445,7 +445,7 @@ Further, we use Sage to draw the tangent into our figure.
 
 The figure already indicates that the angle, based on our model, is considerably
 larger than the angle on the picture of the leaf. We can calculate the angle between
-the bisectrix and the tangent, based on their slopes :math:`m_w=1` and :math:`m_t=4`
+the angle bisector and the tangent, based on their slopes :math:`m_w=1` and :math:`m_t=4`
 using the formula
 
 .. math::
@@ -458,7 +458,7 @@ The angle between the two edges is twice as large, i.e. approximately
 
 **Solution of part 3c**
 
-The conditions I and III are necessary for a steady insertion of :math:`G_k`.
+The conditions I and III are necessary for a continuous insertion of :math:`G_k`.
 Condition II ensures that the transition from :math:`h` to :math:`k` is
 smooth. Condition IV leads to a smaller angle between the leaf edges at the
 point (-2|-2) and therefore to a sharper leaf apex.
