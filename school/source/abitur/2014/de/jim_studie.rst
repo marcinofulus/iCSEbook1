@@ -11,15 +11,17 @@ Bayerisches Abitur in Mathematik 2014
   jeweils die Anzahl der Mädchen und die Anzahl der Jungen unter
   den 200 ausgewählten Jugendlichen angegeben, die ein entsprechendes Gerät besitzen.
   
-  .. csv-table::
-   :header: ,Mädchen,Jungen
-   :widths: 20, 10, 10
-   :stub-columns: 1
-
-   Smartphone,:math:`42`,:math:`52`
-   Computer,:math:`77`,:math:`87`
-   Fernsehgerät,:math:`54`,:math:`65`
-   feste Spielekonsole,:math:`37`,:math:`62`
+   +--------------------+---------+--------+
+   |                    | Mädchen | Jungen |
+   +--------------------+---------+--------+
+   | Smartphone         |   42    |   52   |
+   +--------------------+---------+--------+
+   | Computer           |   77    |   87   |
+   +--------------------+---------+--------+
+   | Fernsehgerät       |   54    |   65   |
+   +--------------------+---------+--------+
+   | feste Spielkonsole |   37    |   62   |
+   +--------------------+---------+--------+
   
   a) Bestimmen Sie die Wahrscheinlichkeit dafür, dass eine aus den
      200 Jugendlichen zufällig ausgewählte Person weiblich ist und kein 
