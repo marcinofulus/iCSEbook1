@@ -53,7 +53,7 @@ liegt demnach bei
 
 .. math::
 
-  \frac{44}{200}=\frac{11}{50}=22\%
+  \frac{44}{200}=22\%.
 
 Wir überprüfen das Ergebnis mit Sage, indem wir mit den gegebenen Daten eine Liste von 
 200 Jugendlichen erstellen, die entweder Mädchen mit oder ohne Fernsehferät oder Jungen
@@ -67,8 +67,7 @@ dieser Liste.
   sage: iterationen = 100000
   sage: haeufigkeit_maedchen_ohne = 0
   sage: for _ in range(iterationen):
-  ...       person = random.choice(jugendliche)
-  ...       if(person == "maedchen_ohne"):
+  ...       if random.choice(jugendliche) == "maedchen_ohne":
   ...           haeufigkeit_maedchen_ohne += 1
   sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher:",  float(haeufigkeit_maedchen_ohne)/iterationen
 
@@ -94,9 +93,9 @@ Wir benutzen wieder die Liste aus Teilaufgabe a), um das Ergebnis empirisch zu �
   sage: haeufigkeit_maedchen_mit = 0
   sage: for _ in range(iterationen):
   ...       person = random.choice(jugendliche)
-  ...       if("mit" in person):
+  ...       if person.endswith("mit"):
   ...           haeufigkeit_mit += 1
-  ...           if(person == "maedchen_mit"):
+  ...           if person == "maedchen_mit":
   ...               haeufigkeit_maedchen_mit += 1
   sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher:",  float(haeufigkeit_maedchen_mit)/haeufigkeit_mit
 
@@ -104,9 +103,10 @@ Wir benutzen wieder die Liste aus Teilaufgabe a), um das Ergebnis empirisch zu �
 
 **Lösung zu Teil 1c**
 
-Die beiden Ereignisse :math:`A` „Eine aus den 200 Jugendlichen zufällig ausgewählte Person besitzt ein Fernsehgerät.“
-und :math:`B` „Eine aus den 200 Jugendlichen zufällig ausgewählte Person ist ein Mädchen.“ wären unabhängig, wenn
-gelten würde:
+Die beiden Ereignisse :math:`A` „Eine aus den 200 Jugendlichen zufällig
+ausgewählte Person besitzt ein Fernsehgerät.“ und :math:`B` „Eine aus den 200
+Jugendlichen zufällig ausgewählte Person ist ein Mädchen.“ wären unabhängig,
+wenn gelten würde:
  
 .. math::
 
@@ -119,7 +119,7 @@ dass eine zufällig gewählte Person ein Mädchen ist:
 
 .. math::
 
-  P(B)=\frac{98}{200}=\frac{49}{100} = 49\%.
+  P(B)=\frac{98}{200} = 49\%.
 
 Es gilt also
 
@@ -163,7 +163,7 @@ Mädchen weniger als die Hälfte ein Fernsehgerät hat.
   sage: wiederholungen = 50000
   sage: for _ in range(wiederholungen):
   ...       maedchen_mit = sum(np.random.random(25) < p)
-  ...       if(maedchen_mit <= schwelle):
+  ...       if maedchen_mit <= schwelle:
   ...           haeufigkeit_e += 1
   sage: print "Empirische Wahrscheinlichkeit, dass weniger als die Hälfte einen Fernseher besitzt:", float(haeufigkeit_e)/wiederholungen
 
@@ -215,7 +215,7 @@ Wir berechnen die Summe mit Hilfe von Sage:
 .. sagecellserver::
 
   sage: summe = 0
-  sage: p=0.9
+  sage: p = 0.9
   sage: for C in range (101):
   ...       summe += bernoulli(100, p, C)
   ...       if(summe > 0.05):
