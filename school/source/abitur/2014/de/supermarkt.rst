@@ -37,26 +37,22 @@ Bayerisches Abitur in Mathematik 2014
 
 **Lösung zu Teil a**
 
-Das erste Bild, das der Junge ansieht ist logischerweise zu 100\% (=
-:math:`\frac{200}{200}`) ein neues Bild. Das zweite Bild ist verschieden, falls
-es nicht identisch mit dem ersten ist. Die Wahrscheinlichkeit dass das zweite
-Bild verschieden vom ersten ist beträgt also :math:`\frac{199}{200}`. Das
-dritte Bild ist, vorausgesetzt die ersten beiden Bilder unterscheiden sich, zu
-einer Wahrscheinlichkeit von :math:`\frac{198}{200}` verschieden von den
-ersten beiden. Diese Logik lässt sich bis zum fünften Bild und noch weiter
-fortsetzen. Um die Wahrscheinlichkeit dafür zu erhalten, dass sich alle Bilder
-in einem Päckchen unterscheiden, müssen die einzelnen Wahrscheinlichkeiten
-aufmultipliziert werden und es ergibt sich für 5 Bilder:
+Um fünf verschiedene Bilder zu erhalten, kann man beim ersten Bild aus allen
+200 Bildern wählen, beim zweiten Bild nur noch aus 199 Bildern usw. Die jeweiligen
+Wahrscheinlichkeiten ergeben sich durch Division durch die Anzahl verschiedener Bilder,
+also 200. Die Wahrscheinlichkeit, dass sich fünf Bilder unterscheiden, ergibt sich
+durch Multiplikation der entsprechenden Wahrscheinlichkeiten:
 
 .. math::
 
   \frac{200\cdot199\cdot198\cdot197\cdot196}{200^5}
 
-Mit Sage lässt sich dieser Ausdruck als Dezimalwert zu 95\% nähern:
+Wertet man diesen Ausdruck mit Sage aus, ergibt sich
 
 .. sagecellserver::
 
-  sage: print "Die Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten liegt bei", float(200*199*198*197*196/200**5)
+  sage: print "Die Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten liegt bei {:4.1%}.".format(
+  ...         float(200*199*198*197*196/200**5))
 
 .. end of output
 
@@ -64,59 +60,56 @@ Dieser Wert kann empirisch durch eine Simulation mit Sage bestätigt werden:
 
 .. sagecellserver::
 
-  sage: import random
-  sage: bilder = range(200)
-  sage: iterations = 100000
-  sage: suc = 0
-  sage: for _ in range(iterations):
-  ...       a = set()
-  ...       for _ in range(5):
-  ...           a.add(random.choice(bilder))
+  sage: from numpy.random import randint
+  sage: iterationen = 100000
+  sage: verschiedene = 0
+  sage: for _ in range(iterationen):
+  ...       a = set(randint(200, size=5))
   ...       if len(a) == 5:
-  ...           suc +=1
-  sage: print "Empirische Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten:", float(suc/iterations)
+  ...           verschiedene +=1
+  sage: print "Empirische Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten: {:4.1%}".format(
+  ...         float(verschiedene)/iterationen)
 
 .. end of output
 
 **Lösung zu Teil b**
 
-Die Wahrscheinlichkeit dafür, dass ein Bild, das der Junge aus einem der
-beiden Päckchen zieht, sich bereits in seiner Sammlung befindent liegt bei
+Die Wahrscheinlichkeit, dass sich ein Bild, das der Junge aus einem der
+beiden Päckchen zieht, bereits in seiner Sammlung befindet beträgt
 
-.. math::
+.. math:
 
-  \frac{200-15}{200}=\frac{185}{200}.
+  \frac{200-15}{200}=\frac{37}{40}.
 
-Die Wahrscheinlichkeit dafür, dass alle 10 Bilder, die der Junge aus den beiden
-Päckchen zieht, sich bereits in seiner Sammlung befinden, erhält man wieder
+Die Wahrscheinlichkeit, dass sich alle 10 Bilder, die der Junge aus den beiden
+Päckchen zieht, bereits in seiner Sammlung befinden, erhält man wieder
 durch Multiplikation:
 
 .. math::
 
-  P=\left(\frac{185}{200}\right)^{10}
+  P=\left(\frac{37}{40}\right)^{10}
 
-Mit Sage geben wir wieder einen gerundeten Dezimalwert aus
+Mit Sage kann man diesen Ausdruck auswerten
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit kein neues Bilder zu erhalten:", float((185/200)**10)
+  sage: print "Wahrscheinlichkeit kein neues Bilder zu erhalten: {:4.1%}".format(float((37/40)**10))
 
 .. end of output
 
-und überprüfen diesen Wert empirisch
+und mit einer Simulation überprüfen
 
 .. sagecellserver::
 
-  sage: iterations = 100000
-  sage: besitz = range(185)
-  sage: nosuccess = 0
-  sage: for _ in range(iterations):
-  ...       for _ in range(10):
-  ...           bild = random.choice(bilder)
-  ...           if not bild in besitz:
-  ...               nosuccess += 1
-  ...               break
-  sage: print "Empirische Wahrscheinlichkeit kein neues Bild zu erhalten:", float(1 - nosuccess/iterations)
+  sage: iterationen = 100000
+  sage: besitz = set(range(185))
+  sage: kein_neues = 0
+  sage: for _ in range(iterationen):
+  ...       bilder = set(randint(200, size=10))
+  ...       if bilder.issubset(besitz):
+  ...           kein_neues = kein_neues+1
+  sage: print "Empirische Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(
+  ...         float(kein_neues/iterationen))
 
 .. end of output
 
@@ -136,33 +129,32 @@ ist, liegt entsprechend bei
   P(n)=\left(\frac{9}{10}\right)^n
 
 Die Aufgabe lautet nun :math:`n` so zu bestimmen, dass der
-Wahrscheinlichkeitsterm kleiner als 1\% ist. Wir lösen also die Gleichung
+Wahrscheinlichkeitsterm kleiner als 1% ist. Wir lösen also die Gleichung
 
 .. math::
 
   P(n)=0{,}01
 
-mit Hilfe des Logarithmus zu 
+und erhalten
 
 .. math::
 
-  n=43{,}7
+  n= \frac{\log(0.01)}{\log(0.9)} = 43{,}7.
 
-Da die Bilder nur in 5er-Päckchen zu erhalten sind, benötigt man 9 Päckchen
-um mit einer Wahrscheinlichkeit von über 99\% mindestens ein 3D-Bild zu ziehen.
-Wir überprüfen dies wieder mit Sage.
+Da die Bilder nur in 5er-Päckchen zu erhalten sind, benötigt man 9 Päckchen,
+um mit einer Wahrscheinlichkeit von über 99% mindestens ein 3D-Bild zu ziehen.
+Wir überprüfen dies wieder durch Simulation mit Sage.
 
 .. sagecellserver::
 
-  sage: iterations = 100000
-  sage: dreiDBilder = range(20)
-  sage: success = 0
-  sage: for _ in range(iterations):
-  ...       for _ in range(45):
-  ...           bild = random.choice(bilder)
-  ...           if bild in dreiDBilder:
-  ...               success += 1
-  ...               break
-  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3d-Bild zu erhalten:", float(success/iterations)
+  sage: iterationen = 100000
+  sage: dreiDBilder = set(range(20))
+  sage: dreiD_gefunden = 0
+  sage: for _ in range(iterationen):
+  ...       meinebilder = set(randint(200, size=45))
+  ...       if not meinebilder.isdisjoint(dreiDBilder):
+  ...           dreiD_gefunden = dreiD_gefunden+1
+  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3d-Bild zu erhalten: {:4.1%}".format(
+  ...         float(dreiD_gefunden/iterationen))
 
 .. end of output
