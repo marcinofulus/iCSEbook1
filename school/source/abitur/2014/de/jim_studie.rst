@@ -57,21 +57,41 @@ liegt demnach bei
 
   \frac{44}{200}=22\%.
 
-Wir überprüfen das Ergebnis mit Sage, indem wir mit den gegebenen Daten eine Liste von 
-200 Jugendlichen erstellen, die entweder Mädchen mit oder ohne Fernsehferät oder Jungen
+Wir überprüfen das Ergebnis, indem wir mit den gegebenen Daten eine Liste von 
+200 Jugendlichen erstellen, die entweder Mädchen mit oder ohne Fernsehgerät oder Jungen
 mit oder ohne Fernsehgerät sind. Anschließend simulieren wir das zufällige Ziehen aus
-dieser Liste.
+dieser Liste und geben zunächst alle gefundenen Häufigkeiten aus.
 
 .. sagecellserver::
 
   sage: import random
-  sage: jugendliche = 54 * ["maedchen_mit"] + (98-54) * ["maedchen_ohne"] + 65 * ["junge_mit"] + (102-65) * ["junge_ohne"]
-  sage: iterationen = 100000
-  sage: haeufigkeit_maedchen_ohne = 0
+  sage: maedchen = 98
+  sage: jungen = 102
+  sage: maedchen_mit = 54
+  sage: jungen_mit = 65
+  sage: jugendliche = (["Mädchen mit Fernseher"]*maedchen_mit
+  ...                  + ["Mädchen ohne Fernseher"]*(maedchen-maedchen_mit)
+  ...                  + ["Jungen mit Fernseher"]*jungen_mit
+  ...                  + ["Jungen ohne Fernseher"]*(jungen-jungen_mit)
+  ...                  )
+  sage: iterationen = 60000
+  sage: haeufigkeit = {"Mädchen mit Fernseher": 0,
+  ...                  "Mädchen ohne Fernseher": 0,
+  ...                  "Jungen mit Fernseher": 0,
+  ...                  "Jungen ohne Fernseher": 0}
   sage: for _ in range(iterationen):
-  ...       if random.choice(jugendliche) == "maedchen_ohne":
-  ...           haeufigkeit_maedchen_ohne += 1
-  sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher:",  float(haeufigkeit_maedchen_ohne)/iterationen
+  ...       key = random.choice(jugendliche)
+  ...       haeufigkeit[key] = haeufigkeit[key]+1
+  sage: table(list(haeufigkeit.items()))
+
+.. end of output
+
+Damit lässt sich nun die Wahrscheinlichkeit bestimmen, ein Mädchen ohne Fernseher zu finden.
+
+.. sagecellserver::
+
+  sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher: {:4.1%}".format(
+  ...         (float(haeufigkeit["Mädchen ohne Fernseher"])/iterationen))
 
 .. end of output
 
@@ -86,20 +106,13 @@ Mädchen ist, ergibt sich als
 
   \frac{54}{119}\approx 45{,}4\%
 
-Wir benutzen wieder die Liste aus Teilaufgabe a), um das Ergebnis empirisch zu überprüfen.
+Wir benutzen unsere Simulation aus Teilaufgabe a, um das Ergebnis empirisch zu überprüfen.
 
 .. sagecellserver::
 
-  sage: iterationen = 400000
-  sage: haeufigkeit_mit = 0
-  sage: haeufigkeit_maedchen_mit = 0
-  sage: for _ in range(iterationen):
-  ...       person = random.choice(jugendliche)
-  ...       if person.endswith("mit"):
-  ...           haeufigkeit_mit += 1
-  ...           if person == "maedchen_mit":
-  ...               haeufigkeit_maedchen_mit += 1
-  sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher:",  float(haeufigkeit_maedchen_mit)/haeufigkeit_mit
+  sage: mit_fernseher = haeufigkeit["Mädchen mit Fernseher"]+haeufigkeit["Jungen mit Fernseher"]
+  sage: print "Wahrscheinlichkeit, dass eine Person mit Fernseher weiblich ist: {:4.1%}".format(
+  ...         (float(haeufigkeit["Mädchen mit Fernseher"])/mit_fernseher))
 
 .. end of output
 
@@ -123,7 +136,7 @@ dass eine zufällig gewählte Person ein Mädchen ist:
 
   P(B)=\frac{98}{200} = 49\%.
 
-Es gilt also
+Es gilt
 
 .. math::
 
@@ -133,25 +146,36 @@ und somit sind die Ereignisse :math:`A` und :math:`B` abhängig.
 
 **Lösung zu Teil 1d**
 
-Zur Berechnung der Summe verwenden wir Sage und erhalten in etwa den Wert 30,6\%.
+Zur Berechnung der Summe verwenden wir Sage und erhalten in etwa den Wert 30,6%.
 
 .. sagecellserver::
 
   sage: def bernoulli(N, p, n):
   ...       return p^n*(1-p)^(N-n)*binomial(N, n)
+
+  sage: p = 0.55
+  sage: ntot = 25
+  sage: nmax = 12
   sage: summe = 0
-  sage: for i in range(13):
-  ...       summe += bernoulli(25, 0.55, i)
-  sage: print "Der Wert der Summe ist", summe
+  sage: for i in range(nmax+1):
+  ...       summe = summe+bernoulli(ntot, p, i)
+  sage: print "Der Wert der Summe ist {:4.1%}".format(float(summe))
 
 .. end of output
+
+Alternativ kann man das Ergebnis direkt folgendermaßen erhalten:
+
+.. sagecellserver::
+
+  sage: from scipy.special import bdtr
+  sage: print "Der Wert der Summe ist {:4.1%}".format(bdtr(nmax, ntot, p))
 
 Die Studie wurde bei Jugendlichen in der Altersklasse 12 bis 19 erhoben. Allerdings ist nicht
 bekannt, ob diese Ergebnisse auch für die Alterklasse der 9. Klasse (etwa 14-15 Jahre) repräsentativ
 sind. Daher kann der Wert der Summe nicht verwendet werden, um die Wahrscheinlichkeit anzugeben,
 dass in einer 9. Klasse von 25 Schülerinnen weniger als die Hälfte einen Fernseher haben.
 
-Wenn wir allerdings davon ausgehen, dass wirklich 55\% der Mädchen in der 9.
+Wenn wir allerdings davon ausgehen, dass wirklich 55% der Mädchen in der 9.
 Jahrgangsstufe ein Fernsehgerät besitzen, können wir mit Sage empirisch
 überprüfen, dass die Summe die Wahrscheinlichkeit wiedergibt, dass von 25
 Mädchen weniger als die Hälfte ein Fernsehgerät hat.
@@ -161,31 +185,33 @@ Mädchen weniger als die Hälfte ein Fernsehgerät hat.
   sage: import numpy as np
   sage: schwelle = 12
   sage: p = 0.55
-  sage: haeufigkeit_e = 0
-  sage: wiederholungen = 50000
-  sage: for _ in range(wiederholungen):
+  sage: haeufigkeit = 0
+  sage: iterationen = 50000
+  sage: for _ in range(iterationen):
   ...       maedchen_mit = sum(np.random.random(25) < p)
   ...       if maedchen_mit <= schwelle:
-  ...           haeufigkeit_e += 1
-  sage: print "Empirische Wahrscheinlichkeit, dass weniger als die Hälfte einen Fernseher besitzt:", float(haeufigkeit_e)/wiederholungen
+  ...           haeufigkeit = haeufigkeit+1
+  sage: print("Wahrscheinlichkeit, dass weniger als die Hälfte der Mädchen "
+  ...         "einen Fernseher besitzt: {:4.1%}".format(
+  ...         float(haeufigkeit)/iterationen))
 
 .. end of output
 
 
 .. admonition:: Aufgabe 2
 
-  Der JIM-Studie zufolge besitzen deutlich weniger als 90\% der Jugendlichen
+  Der JIM-Studie zufolge besitzen deutlich weniger als 90% der Jugendlichen
   einen Computer. Daher wird an den Stadtrat einer Kleinstadt der Wunsch
   herangetragen, im örtlichen Jugendzentrum einen Arbeitsraum mit Computern
   einzurichten. Der Stadtrat möchte die dafür erforderlichen finanziellen
-  Mittel nur dann bewilligen, wenn weniger als 90 % der Jugendlichen der
+  Mittel nur dann bewilligen, wenn weniger als 90% der Jugendlichen der
   Kleinstadt einen Computer besitzen.
 
   a) Die Entscheidung über die Bewilligung der finanziellen Mittel soll 
      mithilfe einer Befragung von 100 zufällig ausgewählten 12- bis 19-jährigen
      Jugendlichen der Kleinstadt getroffen werden. Die Wahrscheinlichkeit 
      dafür, dass die finanziellen Mittel irrtümlich bewilligt werden, soll 
-     höchstens 5\% betragen. Bestimmen Sie die zugehörige Entscheidungsregel, 
+     höchstens 5% betragen. Bestimmen Sie die zugehörige Entscheidungsregel, 
      bei der zugleich die Wahrscheinlichkeit dafür, dass die finanziellen 
      Mittel irrtümlich nicht bewilligt werden, möglichst klein ist.
 
@@ -197,16 +223,16 @@ Mädchen weniger als die Hälfte ein Fernsehgerät hat.
 
 **Lösung zu Teil 2a**
 
-Bei dem vorliegenden Hypothesentest ist also zu überprüfen, wie viele der
+Bei dem vorliegenden Hypothesentest ist zu überprüfen, wie viele der
 100 befragten Jugendlichen einen Computer haben dürfen, damit die
-Wahrscheinlichkeit, dass mehr als 90\% der Jugendlichen einen Computer
-haben, höchstens bei 5\% liegt.
+Wahrscheinlichkeit, dass mehr als 90% der Jugendlichen einen Computer
+haben, höchstens bei 5% liegt.
 
 Hierfür gehen wir davon aus, dass die Zufallsgröße :math:`X`, wie viele 
 Jugendliche einen Computer haben, binomial verteilt ist. Wir gehen von 
-dem Schwellwert aus, dass 90\% der Jugendlichen einen Computer haben, und 
+dem Schwellwert aus, dass 90% der Jugendlichen einen Computer haben, und 
 überprüfen, welcher Grenzwert :math:`C` bei einer Stichprobengröße von 100 nur
-zu 5\% unterschritten wird:
+zu 5% unterschritten wird:
 
 .. math::
 
@@ -216,14 +242,16 @@ Wir berechnen die Summe mit Hilfe von Sage:
 
 .. sagecellserver::
 
-  sage: summe = 0
   sage: p = 0.9
-  sage: for C in range (101):
-  ...       summe += bernoulli(100, p, C)
-  ...       if(summe > 0.05):
-  ...           C -= 1
-  ...           break
-  sage: print "Der Arbeitsraum sollte genehmigt werden, wenn", C, "oder weniger Jugendliche einen Computer haben"
+  sage: jugendliche = 100
+  sage: C = 0
+  sage: summe = bernoulli(jugendliche, p, C)
+  sage: while summe < 0.05:
+  ...       C = C+1
+  ...       summe = summe+bernoulli(jugendliche, p, C)
+  ...   C = C-1
+  sage: print("Der Arbeitsraum sollte genehmigt werden, wenn {} "
+  ...         "oder weniger Jugendliche einen Computer haben.").format(C)
 
 .. end of output
 
@@ -233,19 +261,22 @@ Wir können den Grenzwert :math:`C=84` durch eine Simulation überprüfen.
 
   sage: haeufigkeit_C = 0
   sage: haeufigkeit_Cp1 = 0
-  sage: wiederholungen = 50000
+  sage: iterationen = 50000
   sage: C = 84
-  sage: for _ in range(wiederholungen):
-  ...       jungen_mit = sum(np.random.random(100) < p)
-  ...       if(jungen_mit <= C):
-  ...           haeufigkeit_C += 1
-  ...       if(jungen_mit <= C + 1):
-  ...           haeufigkeit_Cp1 += 1
-  sage: print "Empirische Wahrscheinlichkeit, dass bei 90% Computerwahrscheinlichleit von 100 Jugendlichen", C, "oder weniger einen Computer haben: ", float(haeufigkeit_C)/wiederholungen
-  sage: print "Empirische Wahrscheinlichkeit, dass bei 90% Computerwahrscheinlichleit von 100 Jugendlichen", C + 1, "oder weniger einen Computer haben: ", float(haeufigkeit_Cp1)/wiederholungen
+  sage: for _ in range(iterationen):
+  ...       jugendliche_mit = sum(np.random.random(100) < p)
+  ...       if jugendliche_mit <= C:
+  ...           haeufigkeit_C = haeufigkeit_C+1
+  ...       if jugendliche_mit <= C + 1:
+  ...           haeufigkeit_Cp1 = haeufigkeit_Cp1+1
+  sage: print("Empirische Wahrscheinlichkeit, dass bei 90% Computerwahrscheinlichkeit "
+  ...         "von 100 Jugendlichen {} oder weniger einen Computer haben: {:3.1%}".format(
+  ...         C, float(haeufigkeit_C)/iterationen))
+  sage: print("Empirische Wahrscheinlichkeit, dass bei 90% Computerwahrscheinlichkeit "
+              "von 100 Jugendlichen {} oder weniger einen Computer haben: {:3.1%}".format(
+              C+1, float(haeufigkeit_Cp1)/iterationen))
 
 .. end of output
-
 
 **Lösung zu Teil 2b**
 
@@ -253,20 +284,21 @@ Der Anteil der in der Tabelle erfassten Jugendlichen mit Computer beträgt
 
 .. math::
 
-  \frac{77+87}{200} = \frac{41}{50} = 82\%.
+  \frac{77+87}{200} = 82\%.
 
-Die Wahrscheinlichkeit, dass von 100 Jugendlichen, die jeweils zu 82\% einen
+Die Wahrscheinlichkeit, dass von 100 Jugendlichen, die jeweils zu 82% einen
 Computer besitzen, insgesamt genau 85 einen Computer besitzen, liegt bei
 
 .. math::
 
   P(X=85) = B(100;0.82;85)
 
-Mit Sage lösen wir :math:`P(X=85) \approx8{,}1\%`.
+Mit Sage finden wir :math:`P(X=85) \approx8{,}1\%`.
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit für genau 85 Jugendliche mit Computer:", bernoulli(100, 0.82, 85)
+  sage: print "Wahrscheinlichkeit für genau 85 Jugendliche mit Computer: {:3.1%}".format(
+  ...          float(bernoulli(100, 0.82, 85)))
 
 .. end of output
 
@@ -283,7 +315,7 @@ Mit Sage lösen wir :math:`P(X=85) \approx8{,}1\%`.
 
 **Lösung zu Teil 3**
 
-Die Aufgabe ist ein Problem der Abhängigkeit von Ereignissen. Wir benennen im
+In dieser Aufgabe geht es um die Abhängigkeit von Ereignissen. Wir benennen im
 Folgenden die Ereignisse :math:`A` „Eine aus den 200 Jugendlichen zufällig 
 ausgewählte Person besitzt eine feste Spielekonsole.“ und :math:`B` „Eine aus
 den 200 Jugendlichen zufällig ausgewählte Person besitzt ein Smartphone.“
@@ -295,8 +327,8 @@ dass
 
   P(A|B) > P(A|\bar{B})
 
-erfüllt ist. Aus der Tabelle lässt sich :math:`P(B) = 47\%`, und
-:math:`P(A) = 49{,}5\%` ermitteln.
+erfüllt ist. Aus der Tabelle lassen sich :math:`P(A) = (37+62)/200 = 49{,}5\%` und
+:math:`P(B) = (42+52)/200 = 47\%` ermitteln.
 
 Mit Hilfe der Zusammenhänge
 
@@ -310,23 +342,23 @@ und
 
   P(A\cap B) + P(A \cap \bar{B}) = P(A)
 
-lässt sich folgende Rechnung vollziehen
+lässt sich obige Forderung folgendermaßen umformen:
 
 .. math::
 
-  &\frac{P(A\cap B)}{P(B)}&>&\frac{P(A)-P(A\cap B)}{P(\bar{B})}\\
-  \Rightarrow &P(A\cap B)P(\bar{B})&>&P(A)P(B)-P(A\cap B)P(B)\\
-  \Rightarrow &P(A\cap B)(P(\bar{B})+P(B))&>&P(A)P(B)\\
-  \Rightarrow &P(A\cap B)&>&P(A)P(B)\\
-  \Rightarrow &P(A\cap B)&>&0.233
+  \frac{P(A\cap B)}{P(B)}& > &\frac{P(A)-P(A\cap B)}{P(\bar{B})}\\
+  P(A\cap B)P(\bar{B})& > &P(A)P(B)-P(A\cap B)P(B)\\
+  P(A\cap B)[P(\bar{B})+P(B)]& > &P(A)P(B)\\
+  P(A\cap B)& > &P(A)P(B)\\
+  P(A\cap B)& > &0.495\cdot0.47
 
-Von den 200 Jugendlichen müssen also mindestens 23,3\% ein Smartphone und eine
+Von den 200 Jugendlichen müssen also mindestens 23,3% ein Smartphone und eine
 feste Spielekonsole besitzen, damit die These der Aufgabenstellung stimmt.
-Dies entspricht 47 Jungendlichen.
+Dies entspricht 47 Jugendlichen.
 
-Den Grenzwert von :math:`P(A\cap B)` sodass :math:`A` und :math:`B` unabhängig
-sind, lässt sich auch mit Sage berechnen, indem man das lineare
-Gleichungssystem löst:
+Den Grenzwert von :math:`P(A\cap B)`, ab dem :math:`A` und :math:`B` in der
+gewünschten Weise voneinander abhängig sind, lässt sich auch mit Sage berechnen,
+indem man das lineare Gleichungssystem löst:
 
 .. sagecellserver::
 
@@ -336,9 +368,9 @@ Gleichungssystem löst:
   sage: gleichungen = [p_b + p_nb == 1,
   ...                  p_aub + p_aunb == p_a,
   ...                  p_aub/p_b == p_aunb/p_nb]
-  sage: loesung = solve(gleichungen + wahrscheinlichkeiten, p_aub, p_aunb, p_b, p_nb, p_a, solution_dict=True)[0]
-  sage: print "Der Grenzwert für statistische Unabhängigkeit ist: p_aub =", float(loesung[p_aub])
+  sage: loesung = solve(gleichungen + wahrscheinlichkeiten, p_aub, p_aunb, p_b, p_nb, p_a,
+  ...                   solution_dict=True)[0]
+  sage: print "Statistische Unabhängigkeit liegt vor für P(A∩B) = {:4.1%}".format(
+  ...         float(loesung[p_aub]))
 
 .. end of output
-
-
