@@ -12,15 +12,16 @@ Problem 1
 
     f(x)=\frac{20x}{x^2-25}
 
-  and a maximal domain of definition :math:`D_f`, the figure shows a part of the
-  the graph :math:`G_f` of this function :math:`f`.
+  and a maximal domain :math:`D_f`, the figure shows part of its
+  graph :math:`G_f`.
 
   .. image:: ../figs/gebrochenrational.png
+     :width: 35%
      :align: center
 
-  a) Prove that :math:`D_f=\mathbb{R}\backslash\{-5;5\}` is fulfilled and that
+  a) Prove that :math:`D_f=\mathbb{R}\backslash\{-5;5\}` and that
      :math:`G_f` is symmetric relative to the point :math:`\left(0\vert0\right)`.
-     Denote the zeros of :math:`f` and the equations of the three asymptotes
+     Specify the zeros of :math:`f` and the equations of the three asymptotes
      of :math:`G_f`.
 
   b) Prove that the slope of :math:`G_f` is negative in every point. Calculate
@@ -28,70 +29,70 @@ Problem 1
      point.
 
   c) Draw the missing parts of the graph into the figure above, considering
-     the obtained results.
+     the results obtained so far.
 
-  d) The function :math:`f^*:x\mapsto f(x)` with the domain of definition 
-     :math:`]5;+\infty[` differs only in its domain of definition from the
-     function :math:`f`. Explain, why the function :math:`f` is not reversible,
-     but why the function :math:`f^*` is. Draw the graph of the reversed
-     function :math:`f^*` into the figure.
+  d) The function :math:`f^*:x\mapsto f(x)` with the domain :math:`]5;+\infty[`
+     differs from the function :math:`f` only in terms of its domain.
+     Explain, why the function :math:`f` is not invertible, incontrast
+     to the function :math:`f^*`. Draw the graph of the inverted function
+     :math:`f^*` into the figure.
 
-  e) The graph :math:`f`, the :math:`x`-axis and the lines, given by the
-     equations :math:`x=10` and :math:`x=s` with :math:`s>10` include an area
-     with the content :math:`A(s)`. Calculate :math:`A(s)`.
+  e) The graph of :math:`f`, the :math:`x`-axis and the lines given by the
+     :math:`x=10` and :math:`x=s` with :math:`s>10` enclose an area
+     with the content :math:`A(s)`. Determine :math:`A(s)`.
 
-  f) Determine :math:`s` so that the content of the area from problem 1e equals to
+  f) Determine :math:`s` so that the content of the area from problem 1e equals
      100.
 
-  g) Determine the behavior of :math:`A(s)` in the limes
-     :math:`s\rightarrow \infty`.
+  g) Determine the behavior of :math:`A(s)` in the limit :math:`s\rightarrow \infty`.
 
 
 **Solution of part 1a**
 
-First we will complete the graph of :math:`f` with Sage:
+First we will complete the graph of :math:`f` with the help of Sage:
 
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), exclude=(-5,5), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
+  sage: plot(f(x), x, (-10, 10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
 
 .. end of output
 
-The graph already indicates the lack of definition at the points :math:`x_1=-5`
-and :math:`x_2=5`, where the poles of :math:`f` are located. We can verify this
-by looking at the factorized form of :math:`f`
+The graph already indicates that the points :math:`x_1=-5` and
+:math:`x_2=5` are to be excluded from the domain, because
+they correspond to the poles of :math:`f`. We can verify this
+by inspecting the factorized form of :math:`f`
 
 .. math::
 
   f(x)=\frac{20x}{(x-5)(x+5)},
 
-which indicates the zeros of the denominator. The zero of the function is
-identical to the zero of the numerator, which is located at (:math:`x_0=0`).
-The antisymmetric behavior of the function corresponds to the condition
+and reading off the zeros of the denominator. The zero of the function is
+identical to the zero of the numerator, which is located at :math:`x_0=0`.
+The symmetry with respect to the origin corresponds to the condition
 :math:`f(-x)=-f(x)`, which is obviously fulfilled:
 
 .. math::
 
     f(-x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
 
-The two asymptotes, which result from the poles, are given by the equations
-:math:`x=-5` and :math:`x=5`. Due to the fact that the order of the polynomial
-in the denominator is greater than the order of the polynomial in the
-numerator, we can assume that the function vanishes in the limes
-:math:`x\rightarrow-\infty` and :math:`x\rightarrow\infty`. Therefore, the
-third assymptote is the :math:`x`-axis, given by the equation :math:`y=0`.
+The two asymptotes resulting from the poles are given by the equations
+:math:`x=-5` and :math:`x=5`. The function :math:`f` vanishes in the limits
+:math:`x\rightarrow-\infty` and :math:`x\rightarrow\infty`, because the
+order of the polynomial in the denominator exceeds the order of the
+polynomial in the numerator. Therefore, the third asymptote corresponds
+to the :math:`x`-axis, given by the equation :math:`y=0`.
 
 We draw the asymptotes into the graph of :math:`f`.
 
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20,20), exclude=(-5,5), ymax=12, ymin=-12)
-  sage: p2 = line([[-5, -13], [-5,13]], color = 'red')
-  sage: p3 = line([[5, -13], [5,13]], color = 'red')
-  sage: p4 = plot(g(x), x, (-20,20), aspect_ratio=1, color = 'red')
-  sage: show(p1 + p2 + p3 + p4, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p1 = plot(f(x), x, (-20, 20), exclude=(-5, 5), ymax=12, ymin=-12)
+  sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
+  sage: p3 = line([[5, -13], [5, 13]], color = 'red')
+  sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
+  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -101,14 +102,15 @@ First, we calculate the derivative of :math:`f` using the quotient rule:
 
 .. math::
 
-  f'(x)=\frac{(x^2-25)\cdot 20 - 20x\cdot2x}{(x^2-25)^2}=\frac{-20x^2-500}{(x^2-25)^2}
+  f'(x)=\frac{(x^2-25)\cdot 20 -
+  20x\cdot2x}{(x^2-25)^2}=\frac{-20x^2-500}{(x^2-25)^2}.
 
-We can see, that the numerator is always negative and the demoninator is always
-greater or equal zero. Therefore, the derivatve :math:`f'(x)` is 
+As we can see, the numerator is always negative while the denominator is always
+greater or equal zero. Therefore, the derivative :math:`f'(x)` is 
 -- except for the zeros of the denominator, which are not included in the
-domain of definition -- always negative.
+domain -- always negative.
 
-The graph of :math:`f'(x)` verifies this result.
+The graph of :math:`f'(x)` confirms this result.
 
 .. sagecellserver::
 
@@ -153,10 +155,10 @@ The graph was already completed in part 1a.
 **Solution of part 1d**
 
 The function :math:`f` assigns multiple :math:`x`-values to the same
-:math:`y`-values and is therefore not injective on its complete domain of
-definition. Thus, the function :math:`f` is not revertible.
+:math:`y`-values and is therefore not injective on its complete domain.
+Thus, the function :math:`f` is not invertible.
 
-:math:`f^*` on the other hand is injective on its complete domain of defintion
+:math:`f^*` on the other hand is injective on its complete domain
 and is therefore invertible. The reversed function :math:`f^{*-1}` can be
 calculated by solving :math:`y=f^*(x)` for  :math:`x`. We obtain the quadratic
 equation
@@ -165,7 +167,7 @@ equation
 
   x^2y-20x-25y = 0
 
-for :math:`x`, whose solutions are given by
+for :math:`x`, which is solved by
 
 .. math::
 
@@ -180,9 +182,9 @@ These solutions can also be obtained with Sage:
 
 .. end of output
 
-Due to the domain of definition of :math:`f^*`, :math:`f^{*-1}` can only take
-values :math:`\geq5`. Thus, we have to choose the solution with the plus sign
-in front of the square root. The reverse function then has the form
+Due to the domain of :math:`f^*`, :math:`f^{*-1}` can only take
+values :math:`\geq5`. Thus, we have to choose the plus sign in the
+solution given above. The inverse function then reads
 
 .. math::
 
@@ -209,9 +211,9 @@ from 10 to :math:`s`:
 
   A(s)=\int\limits_{10}^sf(x)\mathrm{d}x.
 
-We denote that the numerator of :math:`f` is except for a constant factor the
-derivation of the denominator. Therefore, we can find the logarithm as an
-antiderivative:
+We note that the numerator of :math:`f` corresponds to the derivative of
+the denominator up to a constant factor. Therefore, the antiderivative
+can be expressed in terms of a logarithm:
 
 .. math::
 
@@ -219,7 +221,7 @@ antiderivative:
   = 10\int\limits_{10}^s\frac{2x}{x^2-25}\mathrm{d}x
   = 10 \left.\ln(x^2-25) \right\vert^s_{10}=10\ln\left(\frac{s^2-25}{75}\right)
 
-Sage verifies this solution:
+Sage confirms this solution:
 
 .. sagecellserver::
 
@@ -227,11 +229,11 @@ Sage verifies this solution:
   sage: s = var('s')
   sage: assume(s > 10)
   sage: A(s) = definite_integral(f(x), x, 10, s)
-  sage: print "Die Fläche ist A(s) =", A(s)
+  sage: print "The area is given by A(s) =", A(s)
 
 .. end of output
 
-The described area is emphasized with yellow color in the figure. The value of
+In the following figure, the area is highlighted in yellow. The value of
 :math:`s` can be changed dynamically and the content of the area is calculated
 and presented under the figure.
 
@@ -243,7 +245,7 @@ and presented under the figure.
   ...       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
   ...       p12 = plot(f(x), x, (s, 20))
   ...       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
-  ...       print "Die gelbe Fläche hat den Inhalt:", float(A(s))
+  ...       print "Area of the yellow region:", float(A(s))
 
 .. end of output
 
@@ -255,8 +257,9 @@ The area with the content 100 can be calculated by solving the equation
 
   A(s) = 100
 
-with Sage. It is important to deliver Sage the condition :math:`s>10` for this
-purpose. The requested value of :math:`s` is then
+with Sage. At this point, it is important that we had specified
+:math:`s>10` in the code above. The requested value of :math:`s` is
+found as
 
 .. sagecellserver::
 
@@ -266,7 +269,7 @@ purpose. The requested value of :math:`s` is then
 
 **Solution of part 1g**
 
-The value of the logarithm goes in the limes :math:`x\rightarrow\infty` to
+In the limit :math:`x\rightarrow\infty` the logarithm goes to
 infinity. Therefore, the content of the area :math:`A(s)` also goes to infinity
 in this case.
 
@@ -284,17 +287,17 @@ Problem 2
 
 .. admonition:: Problem 2
 
-  A motorboat drives with constant speed along a river. First, the boat 
-  travels a distance of 10 km down the river and afterwards the same way up
+  A motorboat cruises with constant motor power along a river. First, the boat 
+  travels a distance of 10 km down the river before returning the same way up
   the river. The proper speed denotes the speed with which the boat would
-  travel on resting water.
+  travel on water at rest.
 
-  The following model describes the boat with a constant proper speed and the
-  water of the river with a constant speed of
-  :math:`5\frac{\mathrm{km}}{\mathrm{h}}`. The time needed to turn the
-  boat's dircetion will be neglected.
+  In the following, it shall be assumed that the proper speed of the
+  boat be constant and the water of the river flows at a constant speed of
+  :math:`5\frac{\mathrm{km}}{\mathrm{h}}`. The time needed for the
+  transposition maneuver shall be neglected.
 
-  The total time for both ways of the boat's journey (in hours) are given
+  The total time (in hours) for the boat's roundtrip, within the model, is given
   by the term
 
   .. math::
@@ -304,45 +307,43 @@ Problem 2
   for :math:`x>5`. :math:`x` denotes the proper speed of the boat in units of
   :math:`\frac{\mathrm{km}}{\mathrm{h}}`.
 
-  a) Based on the model, determine the total time for a journey with the
+  a) Based on the model, determine the total time in minutes for a journey with the
      proper speeds :math:`10\,\frac{\mathrm{km}}{\mathrm{h}}` and
-     :math:`20\,\frac{\mathrm{km}}{\mathrm{h}}` in minutes.
+     :math:`20\,\frac{\mathrm{km}}{\mathrm{h}}`.
 
-  b) Explain, why the first summand of the term :math:`t(x)` describes the time
-     needed to travel down the river and the second summand the time to travel
-     up the river.
+  b) Explain, why the first and second summand of the term :math:`t(x)` describe the time
+     needed to travel down and up the river, respectively.
 
-  c) Explain, why the term :math:`t(x)` can not be used to calculate the total
-     time if :math:`0<x<5` is fulfilled.
+  c) Explain, why the term :math:`t(x)` cannot be used to calculate the total
+     time when :math:`0<x<5`.
 
-  d) Prove that the terms :math:`f(x)` and :math:`t(x)` are equivalent.
+  d) Demonstrate that the terms :math:`f(x)` and :math:`t(x)` are equivalent.
 
-  e) Describe how you can use the graph in order to get an approximate value
-     for the proper speed of the boat based on the total time for a total time
+  e) Describe how one can use the graph in order to get an approximate value
+     for the proper speed of the boat based on the total time taken
      between 2 and 14 hours. Based on the model, calculate the proper speed of
-     the boat if it needs four hours for the whole journey.
+     the boat if four hours are needed for the whole journey.
 
 **Solution of part 2a**
 
-In order to calculate the total time, we simply have to insert the values
-:math:`x=10` and :math:`x=20` in :math:`t(x)` and multiply it with 60
-(1 hour = 60 minutes).
+In order to calculate the total time of travel, we simply have to insert the values
+:math:`x=10` and :math:`x=20` in :math:`t(x)` and multiply the result
+with 60 to obtain the time in minutes.
 
-We obtain a total time of 
-
-.. math::
-
-  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160 \mathrm{min}
-
-for a proper speed of :math:`10\frac{\mathrm{km}}{\mathrm{h}}` and a total time
-of
+We find a total time of 
 
 .. math::
 
-  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64 \mathrm{min}
+  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160\,\mathrm{min}
+
+for a proper speed of :math:`10\frac{\mathrm{km}}{\mathrm{h}}` and
+
+.. math::
+
+  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64\,\mathrm{min}.
 
 for a proper speed of :math:`20\frac{\mathrm{km}}{\mathrm{h}}`. We can verify
-these values with Sage. Further, we use Sage to plot the total time with
+these results with Sage. Furthermore, we use Sage to plot the total time with
 respect to the proper speed in the interval between
 :math:`10\frac{\mathrm{km}}{\mathrm{h}}` and 
 :math:`20\frac{\mathrm{km}}{\mathrm{h}}`.
@@ -359,38 +360,39 @@ respect to the proper speed in the interval between
 
 **Solution of part 2b**
 
-The time needed to travel a distance of the length :math:`s` with a constant
-speed :math:`x`, can be expressed as :math:`\frac{s}{x}`. However, a  boat
-travels with its proper speed relative to the water beneath it. Depending on
-the direction of the boat, its speed relative to the boarder of the river can
-be obtained by adding or subtracting the speed of the water to or from the
-boat's proper speed. For a distance of :math:`s=10\mathrm{km}` and a water
-speed of :math:`5\frac{\mathrm{km}}{\mathrm{h}}`, the two summands of the term
-:math:`t(x)` denote the time needed to travel down and up the river.
+The time needed to travel a distance :math:`s` with constant speed
+:math:`x` can be expressed as :math:`\frac{s}{x}`. However, the boat
+travels with its proper speed relative to the surrounding water.
+Depending on the boat's direction of travel, its speed relative to
+the shore is obtained by adding or subtracting the
+speed of the water to or from the boat's proper speed. For a distance
+:math:`s=10\,\mathrm{km}` and a flow velocity of
+:math:`5\frac{\mathrm{km}}{\mathrm{h}}`, the two summands of the term
+:math:`t(x)` correspond to the time needed to travel down and up the river.
 
 **Solution of part 2c**
 
 For :math:`0<x<5`, we can use the first part of the term :math:`t(x)` to
-calculate the time needed to travel down the river. However, the second term
-can not be used to calculate the time needed for the boat to return because the
-boat's speed is lower than the speed of the water and the boat therefore can't
-overcome the backward drift of the water. Thus, the boat will never return.
-:math:`t(x)` should therefore have an infinitely large value.
+calculate the time needed for travelling down the river. However, the
+second term cannot be used to calculate the time needed for the return
+voyage because the water's flow velocity exceeds the speed of the boat.
+Therefore, the boat will not be able to reach the point of departure.
+:math:`t(x)` should therefore yield an infinitely large value.
 
-However, the graph shows that the function has negative values on the interval
-:math:`0<x<5`, which obviously can not be interpreted as total time.
+However, the graph shows that the function yields negative values on the
+interval :math:`0<x<5`, which obviously precludes an interpretation in
+terms of a total time.
 
 .. sagecellserver::
 
-  sage: p13 = plot(60*t(x), x, (0, 50), ymax=800, ymin=-800)
+  sage: p13 = plot(60*t(x), x, (0, 30), exclude=(5,), ymax=800, ymin=-800)
   sage: show(p13, figsize=(4, 2.8))
 
 .. end of output
 
 **Solution of part 2d**
 
-We expand the two fractions in the term of :math:`t(x)`, in order to summarize
-them:
+Finding the common denominator, we add up the two terms and find
 
 .. math::
 
@@ -412,32 +414,33 @@ program to work.
 
 **Solution of part 2e**
 
-The proper distance can be read off the graph by searching the point of the
-curve, where the :math:`y`-value matches the specified total time. The
-corresponding :math:`x`-value represents the proper speed of the boat. The 
-proper speed for a total time of 4 hours can be approximated as 
+The proper speed can be read off the graph by searching the point of the
+curve where the :math:`y`-value matches the specified total time. The
+corresponding :math:`x`-value represents the proper speed of the boat. 
+For a total time of 4 hours one finds a proper speed of approximately
 :math:`8\frac{\mathrm{km}}{\mathrm{h}}`. The exact value can be determined by
-the reversed function :math:`f^{*-1}` from part 1d. We obtain
+means of the inverse function :math:`f^{*-1}` defined in part 1d. We obtain
 
 .. math::
 
   f^{*-1}(4) = 5\frac{1+\sqrt{5}}{2}.
 
-Sage reproduces this value:
+Sage confirms this result:
 
 .. sagecellserver::
 
-  sage: t = 4
-  sage: print "Proper speed for a total time of", t, ": ", f_inv(t).n(10), "km/h"
+  sage: totaltime = 4
+  sage: print "Proper speed for a total time of {}h: {}km/h".format(
+  ...         totaltime, f_inv(totaltime).n(10))
 
 .. end of output
 
-The graphic construction with Sage can be implemented as follows:
+The graphic construction can be visualized with Sage as follows:
 
 .. sagecellserver::
 
   sage: p14 = plot(f(x), x, (5.1, 14))
-  sage: x4, y4 = f_inv(t), t
+  sage: x4, y4 = f_inv(totaltime), totaltime
   sage: l1 = line([(x4, y4), (0, y4)], color='red')
   sage: l2 = line([(x4, y4), (x4, 0)], color='red')
   sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)

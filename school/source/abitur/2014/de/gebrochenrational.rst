@@ -16,6 +16,7 @@ Aufgabe 1
   Graphen :math:`G_f` von :math:`f`.
 
   .. image:: ../figs/gebrochenrational.png
+     :width: 35%
      :align: center
 
   a) Zeigen Sie, dass :math:`D_f=\mathbb{R}\backslash\{-5;5\}` gilt und dass :math:`G_f` symmetrisch
@@ -49,7 +50,7 @@ Zunächst wollen wir den Ausschnitt des Graphen mit Sage vervollständigen:
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
+  sage: plot(f(x), x, (-10,10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
 
 .. end of output
 
@@ -87,7 +88,7 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
   sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
   sage: p3 = line([[5, -13], [5, 13]], color = 'red')
   sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
-  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=(4, 2.8))
+  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -422,8 +423,9 @@ Mit Sage ergibt sich der Wert zu
 
 .. sagecellserver::
 
-  sage: t = 4
-  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von", t, ": ", f_inv(t).n(10), "km/h"
+  sage: gesamtzeit = 4
+  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von {}h: {}km/h".format(
+  ...         gesamtzeit, f_inv(gesamtzeit).n(10))
 
 .. end of output
 
@@ -433,7 +435,7 @@ folgendermaßen:
 .. sagecellserver::
 
   sage: p14 = plot(f(x), x, (5.1, 14))
-  sage: x4, y4 = f_inv(t), t
+  sage: x4, y4 = f_inv(gesamtzeit), gesamtzeit
   sage: l1 = line([(x4, y4), (0, y4)], color='red')
   sage: l2 = line([(x4, y4), (x4, 0)], color='red')
   sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
