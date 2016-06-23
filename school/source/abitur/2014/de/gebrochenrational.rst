@@ -321,13 +321,13 @@ Wir erhalten bei einer Geschwindigkeit von :math:`10\frac{\mathrm{km}}{\mathrm{h
 
 .. math::
 
-  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160
+  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160\,\mathrm{min}
 
 und bei einer Geschwindigkeit von :math:`20\frac{\mathrm{km}}{\mathrm{h}}`
 
 .. math::
 
-  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64
+  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64\,\mathrm{min}.
 
 Diese Ergebnisse lassen sich auch leicht mit Sage erhalten. Zudem
 stellen wir die Fahrtdauer in Abhängigkeit von der Geschwindigkeit
