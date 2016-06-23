@@ -49,7 +49,7 @@ Zunächst wollen wir den Ausschnitt des Graphen mit Sage vervollständigen:
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), exclude=(-5,5), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
+  sage: plot(f(x), x, (-10,10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=(4, 2.8), aspect_ratio=1)
 
 .. end of output
 
@@ -71,21 +71,23 @@ erfüllt ist:
 
 und auch aus der obigen Darstellung deutlich wird.
 
-Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
-und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynom
-im Zähler, verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`.
-Die dritte Asymptote ist daher die :math:`x`-Achse, welche durch :math:`y=0` gegeben ist.
+Die beiden Asymptoten der Polstellen sind entsprechend durch die
+Gleichungen :math:`x=-5` und :math:`x=5` gegeben. Da der Grad des
+Polynoms im Nenner größer ist als der des Polynoms im Zähler,
+verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und
+:math:`x\rightarrow\infty`.  Die dritte Asymptote ist daher die
+:math:`x`-Achse, welche durch :math:`y=0` gegeben ist.
 
 Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20,20), exclude=(-5,5), ymax=12, ymin=-12)
-  sage: p2 = line([[-5, -13], [-5,13]], color = 'red')
-  sage: p3 = line([[5, -13], [5,13]], color = 'red')
-  sage: p4 = plot(g(x), x, (-20,20), aspect_ratio=1, color = 'red')
-  sage: show(p1 + p2 + p3 + p4, aspect_ratio=1, figsize=(4, 2.8))
+  sage: p1 = plot(f(x), x, (-20, 20), exclude=(-5, 5), ymax=12, ymin=-12)
+  sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
+  sage: p3 = line([[5, -13], [5, 13]], color = 'red')
+  sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
+  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=(4, 2.8))
 
 .. end of output
 
