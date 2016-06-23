@@ -74,11 +74,12 @@ und daraus
 
   \left\vert t \right\vert = \frac{1}{3} \Leftrightarrow t=\pm\frac{1}{3}
 
-Es gibt also zwei mögliche Lösungen für das Problem. Eine, bei der der Vektor :math:`\vec{c}` in die
-obere Halbebene zeigt und eine, bei der der Vektor :math:`\vec{c}` in die untere Halbebene zeigt.
+Es gibt also zwei mögliche Lösungen für das Problem. In einem Fall zeigt der
+Vektor :math:`\vec{c}` in die obere Halbebene und im anderen Fall in die untere
+Halbebene.
 
-Mit Hilfe von Sage lässt sich das Ergebnis leicht überprüfen. Insbesondere bei der Berechnung des
-Spatprodukts liefert Sage eine deutliche Zeitersparnis.
+Mit Hilfe von Sage lässt sich das Ergebnis leicht überprüfen. Insbesondere bei
+der Berechnung des Spatprodukts liefert Sage eine deutliche Erleichterung.
 
 .. sagecellserver::
 
