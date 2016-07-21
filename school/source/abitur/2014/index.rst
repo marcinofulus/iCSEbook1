@@ -6,7 +6,10 @@ German version
 
 Quelle des Aufgabentexts:
 `http://www.isb.bayern.de/download/14772/abiturpruefung_mathematik_2014_pruefungsteil_a.pdf
-<http://www.isb.bayern.de/download/14772/abiturpruefung_mathematik_2014_pruefungsteil_a.pdf>`_
+<http://www.isb.bayern.de/download/14772/abiturpruefung_mathematik_2014_pruefungsteil_a.pdf>`_,
+`https://www.isb.bayern.de/download/14773/abiturpruefung_mathematik_2014_pruefungsteil_b.pdf
+<https://www.isb.bayern.de/download/14773/abiturpruefung_mathematik_2014_pruefungsteil_b.pdf>`_
+
 
 .. toctree::
    :maxdepth: 2
