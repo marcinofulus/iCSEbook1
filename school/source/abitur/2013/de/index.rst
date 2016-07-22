@@ -20,6 +20,11 @@ Stochastik
 
 .. toctree::
    :maxdepth: 1
+   
+   Aufgabe 1 <blutgruppe>
+
+.. toctree::
+   :maxdepth: 1
 
 
 Geometrie
