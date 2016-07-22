@@ -57,7 +57,7 @@ Verbindungsvektoren :math:`\vec{AB}` und :math:`\vec{AC}` bestimmen:
 .. math::
 
   \vec{AB} = \vec{B} - \vec{A} = \begin{pmatrix} -4\\ 4\\ 0\end{pmatrix},\\
-  \vec{AC} = \vec{C} - \vec{A} = \begin{pmatrix} -4\\ 0\\ 4\end{pmatrix},
+  \vec{AC} = \vec{C} - \vec{A} = \begin{pmatrix} -4\\ 0\\ 4\end{pmatrix}.
 
 Mit Hilfe des Kreuzprodukts können wir anschließend den Flächeninhalt des
 Dreiecks bestimmen:
@@ -66,7 +66,7 @@ Dreiecks bestimmen:
 
   A = \frac{1}{2}\cdot\left|\vec{AB}\times\vec{AC}\right| = 
   \frac{1}{2}\cdot\left|\begin{pmatrix} 16\\ 16\\ 16\end{pmatrix}\right| =
-  8\sqrt{3}
+  8\sqrt{3}.
 
 Wir überprüfen das Ergebnis mit Sage:
 
@@ -95,8 +95,8 @@ Wir zeichnen zusätzlich das Dreieck mit Hilfe von Sage:
   sage: C = point(c, size=10)
   sage: Ct = text3d("C", c + labeloffset, color='black', horizontal_alignment='left')
   sage: tri = polygon([a, b, c])
-  sage: p1 = plot(tri + A + At + B + Bt + C + Ct)
-  sage: p1
+  sage: p1 = tri + A + At + B + Bt + C + Ct
+  sage: show(p1)
 
 .. end of output
 
@@ -109,7 +109,7 @@ Die Gerade muss durch den Punkt :math:`P` laufen und entlang des Vektors
 
   \vec{g} = \vec{P}+\lambda\cdot\vec{v} = 
   \begin{pmatrix} 2\\ 2\\ 3\end{pmatrix} + \lambda\cdot
-  \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}
+  \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}.
 
 Für den Schnittpunkt :math:`R` setzen wir die Koordinaten der Gerade in die
 Ebenengleichung ein:
@@ -117,13 +117,13 @@ Ebenengleichung ein:
 .. math::
 
   &2 + \lambda\cdot (-1) + 2 + \lambda\cdot(-1) + 3 + \lambda\cdot (-4) = 4\Leftrightarrow\\
-  &\lambda = 0{,}5
+  &\lambda = 0{,}5.
 
-Der Schnittpunkt ergibt sich dadurch als 
+Der Schnittpunkt ergibt sich dadurch als
 
 .. math::
 
-  \vec{R} = \vec{P} + \frac{1}{2}\vec{v} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix}
+  \vec{R} = \vec{P} + \frac{1}{2}\vec{v} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix}.
 
 Wir überprüfen diesen Schnittpunkt mit Sage
 
@@ -148,8 +148,8 @@ Wir sehen, dass die Gerade auf dem dreieckigen Spiegel auftritt.
   sage: Pt = text3d("P", p + labeloffset, color='black', horizontal_alignment='left')
   sage: R = point(r, size=10)
   sage: Rt = text3d("R", r + labeloffset, color='black', horizontal_alignment='left')
-  sage: p2 = plot(g + P + Pt + R + Rt)
-  sage: p2 + p1
+  sage: p2 = g + P + Pt + R + Rt
+  sage: show(p2 + p1)
 
 .. end of output
 
@@ -194,8 +194,8 @@ den reflektierten Lichtstrahl in unsere Skizze ein:
   sage: pq = line([p, q], color='black', legend_label='bla', thickness=2)
   sage: g_refl = line([r, r + r-q], color='red', thickness=2)
   sage: g_refl_q = line([q, r], color='red', thickness=1, linestyle='--')
-  sage: p3 = plot(pq + g_refl + g_refl_q + Q + Qt)
-  sage: p1 + p2 + p3
+  sage: p3 = pq + g_refl + g_refl_q + Q + Qt
+  sage: show(p1 + p2 + p3)
 
 .. end of output
 
@@ -226,7 +226,7 @@ leicht aufstellen:
   \lambda \cdot \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix} +
   \mu\cdot \begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
 
-Diese Ebenengleichung lässt sich offenbar auch das Wegkürzen der :math:`x_1`-
+Diese Ebenengleichung lässt sich durch die :math:`x_1`-
 und :math:`x_2`-Komponente darstellen:
 
 .. math::
@@ -234,7 +234,7 @@ und :math:`x_2`-Komponente darstellen:
   E:\quad x_1 - x_2 = 0
 
 Das Einfallslot, welches senkrecht zur Ebene :math:`E` durch den Punkt
- :math:`R` verläuft, lässt sich darstellen als
+:math:`R` verläuft, lässt sich darstellen als
 
 .. math::
 
@@ -253,15 +253,15 @@ Zeichnung ein:
   sage: lotvektor = vector([1,1,1])
   sage: F = polygon((vector([0,0,0]), vector([4,4,0]), vector([4,4,4]), vector([0,0,4])), color='green')
   sage: e = line([r, r + lotvektor], color='black', thickness=2)
-  sage: p4 = plot(e + F)
-  sage: p1 + p2 + p3 + p4
+  sage: p4 = e + F
+  sage: show(p1 + p2 + p3 + p4)
 
 .. end of output
 
 **Lösung zu Teil e**
 
 Die Winkel :math:`\alpha` und :math:`\beta` können einfach über das
-Skalarproduk berechnet werden:
+Skalarprodukt berechnet werden:
 
 .. math::
 
