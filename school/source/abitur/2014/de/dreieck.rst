@@ -201,7 +201,7 @@ den reflektierten Lichtstrahl in unsere Skizze ein:
 
 **Lösung zu Teil d**
 
-Wir betrachten die beiden geraden
+Wir betrachten die beiden Geraden
 
 .. math::
 
