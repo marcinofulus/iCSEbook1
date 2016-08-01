@@ -38,3 +38,5 @@ Geometrie
    Aufgabe 2 <ebene>
    Aufgabe 3 <quader>
    Aufgabe 4 <kugel>
+   Aufgabe 5 <dreieck>
+   Aufgabe 6 <haus>
