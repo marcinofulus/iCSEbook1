@@ -92,7 +92,7 @@ was wir bereits in Teilaufgabe a) gemacht haben:
 
 .. math::
 
-  F'(2) = 0,5
+  F'(2) = f(2) = 0,5
 
 **Lösung zu Teil c**
 

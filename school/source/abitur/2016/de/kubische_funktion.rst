@@ -48,7 +48,8 @@ oben geöffnete Parabel mit den Nullstellen (1|0) und (4|0) ist.
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x), x)
+  sage: df = derivative(f, x)
+  sage: print "Nullstellen der Ableitung: ", solve(df(x) == 0, x)
   sage: plot(df(x), (-10,6), x, figsize=(4, 2.8), ymax = 10, ymin = -10)
      
 .. end of output
@@ -64,9 +65,9 @@ gelten:
 
 Die Ableitung von :math:`f` muss also eine Nullstelle in der Ableitung haben.
 Bei einer Parabel ist dies ausschließlich am Scheitelpunkt der Fall. Dieser
-befindet sich aus Symmetrie-Gründen immer zwischen zwei Punkten mit gleichem
-Funktionswert. Der Wendepunkt von :math:`f` muss also in der Mitte der beiden
-Nullstellen liegen:
+befindet sich aus Symmetrie-Gründen immer in der Mitte zwischen zwei Punkten
+mit gleichem Funktionswert. Der Wendepunkt von :math:`f` muss also in der
+Mitte der beiden Nullstellen liegen:
 
 .. math::
 
@@ -78,7 +79,7 @@ mit Hilfe von Sage:
 
 .. sagecellserver::
 
-  sage: ddf = derivative(df(x), x)
+  sage: ddf = derivative(df, x)
   sage: print "Wendepunkt bei", solve(ddf(x) == 0, x)[0]
      
 .. end of output

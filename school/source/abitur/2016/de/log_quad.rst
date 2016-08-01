@@ -48,7 +48,7 @@ Auch die Nullstelle können wir mit Sage überprüfen.
 .. end of output
 
 Wie der Graph von Sage bereits andeutet, verläuft die Funktion für
-:math:`x\rightarrow0` gegen :math:`-\infty`. Dies liegt kann dadurch begründet
+:math:`x\rightarrow0` gegen :math:`-\infty`. Dies kann dadurch begründet
 werden, dass einerseits der Zähler gegen :math:`-\infty` geht und andererseits
 der Nenner der Funktion gegen :math:`0^+`.
 
@@ -62,13 +62,13 @@ anschließend gleich 0 setzen:
 
   f'(x) = \frac{x-2x \ln x}{x^4} = 0 \quad\Rightarrow\\
   \ln x= \frac{1}{2} \quad\Rightarrow\\
-  x = e^{\frac{1}{2}} = \sqrt(e)
+  x = e^{\frac{1}{2}} = \sqrt{e}
 
 Zur Überprüfung zeichnen wir diese Tangente in die Skizze der Funktion ein:
 
 .. sagecellserver::
 
-  sage: df = derivative(f(x), x)
+  sage: df = derivative(f, x)
   sage: x_0 = solve(df(x) == 0, x)[0].right()
   sage: print "Waagrechte Tangente an der Stelle", x_0, "(", float(x_0), ")"
   sage: p1 = plot(f(x), (0,5), x, ymin=-1,  exclude=[0], figsize=(4, 2.8))
