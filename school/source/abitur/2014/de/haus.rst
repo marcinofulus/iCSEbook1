@@ -3,14 +3,14 @@ Bayerisches Abitur in Mathematik 2014
 
 .. admonition:: Aufgabe
 
-Die Abbildung zeigt modellhaft ein Einfamilienhaus, das auf einer horizontalen
-Fläche steht. Auf einer der beiden rechteckigen Dachflächen soll eine
-Dachgaube errichtet werden. Die Punkte :math:`A`, :math:`B`, :math:`C`, 
-:math:`D`, :math:`O`, :math:`P`, :math:`Q` und :math:`R` sind die Eckpunkte
-eines Quaders. Das gerade dreiseitige Prisma :math:`LMNIJK` stellt die 
-Dachgaube dar, die Strecke :math:`[GH]` den First des Dachs, d. h. die obere
-waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1m,
-d. h. das Haus ist 10 m lang.
+  Die Abbildung zeigt modellhaft ein Einfamilienhaus, das auf einer horizontalen
+  Fläche steht. Auf einer der beiden rechteckigen Dachflächen soll eine
+  Dachgaube errichtet werden. Die Punkte :math:`A`, :math:`B`, :math:`C`, 
+  :math:`D`, :math:`O`, :math:`P`, :math:`Q` und :math:`R` sind die Eckpunkte
+  eines Quaders. Das gerade dreiseitige Prisma :math:`LMNIJK` stellt die 
+  Dachgaube dar, die Strecke :math:`[GH]` den First des Dachs, d. h. die obere
+  waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1m,
+  d. h. das Haus ist 10 m lang.
 
   .. image:: ../figs/haus.png
      :align: center
@@ -25,26 +25,26 @@ d. h. das Haus ist 10 m lang.
      Horizontale mindestens 35° beträgt. Zeigen Sie rechnerisch, dass für das 
      betrachtete Einfamilienhaus die Errichtung einer Dachgaube zulässig ist.
 
-Die Dachfläche, auf der die Dachgaube errichtet wird, liegt im Modell in der
-Ebene
+  Die Dachfläche, auf der die Dachgaube errichtet wird, liegt im Modell in der
+  Ebene
 
-.. math::
+  .. math::
 
-  E:3x_1+4x_3-44=0.
+    E:3x_1+4x_3-44=0.
 
-Die Dachgaube soll so errichtet werden, dass sie von dem seitlichen Rand der
-Dachfläche, der im Modell durch die Strecke :math:`HC` dargestellt wird, den 
-Abstand 2m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
-Koordinaten des Punkts M wird die durch den Punkt :math:`T(4|8|8)` verlaufende
-Gerade
+  Die Dachgaube soll so errichtet werden, dass sie von dem seitlichen Rand der
+  Dachfläche, der im Modell durch die Strecke :math:`HC` dargestellt wird, den 
+  Abstand 2m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
+  Koordinaten des Punkts M wird die durch den Punkt :math:`T(4|8|8)` verlaufende
+  Gerade
 
-.. math::
+  .. math::
 
-  t:\bar{X} = \begin{pmatrix} 4\\ 8\\ 8\end{pmatrix} + 
-  \lambda\cdot\begin{pmatrix} 4\\ 0\\ -3\end{pmatrix},\quad
-  \lambda\in\mathbb{R},
+    t:\bar{X} = \begin{pmatrix} 4\\ 8\\ 8\end{pmatrix} + 
+    \lambda\cdot\begin{pmatrix} 4\\ 0\\ -3\end{pmatrix},\quad
+    \lambda\in\mathbb{R},
 
-betrachtet.
+  betrachtet.
 
   c) Begründen Sie, dass :math:`t` in der Ebene :math:`E` verläuft und von der
      Geraden :math:`HC` den Abstand 2 besitzt.
@@ -53,19 +53,19 @@ betrachtet.
      der Dachgaube vom First 1m beträgt. Bestimmen Sie die Koordinaten
      von :math:`M`.
 
-Die Punkte :math:`M` und :math:`N` liegen auf der Geraden
+  Die Punkte :math:`M` und :math:`N` liegen auf der Geraden
 
-.. math::
+  .. math::
 
-  m:\bar{X} = \begin{pmatrix} 4{,}8\\ 8\\ 7{,}4\end{pmatrix} +
-  \mu\cdot \begin{pmatrix} 6\\ 0\\ -1\end{pmatrix},\quad
-  \mu\in\mathbb{R}, 
+    m:\bar{X} = \begin{pmatrix} 4{,}8\\ 8\\ 7{,}4\end{pmatrix} +
+    \mu\cdot \begin{pmatrix} 6\\ 0\\ -1\end{pmatrix},\quad
+    \mu\in\mathbb{R}, 
 
-die im Modell die Neigung der Dachfläche der Gaube festlegt. Die zur
-:math:`x_3`-Achse parallele Strecke :math:`NL` stellt im Modell den sogenannten
-Gaubenstiel dar; dessen Länge soll 1,4m betragen. Um die Koordinaten von
-:math:`N` und :math:`L` zu bestimmen, wird die Ebene :math:`F` betrachtet, die
-durch Verschiebung von E um 1,4 in positive :math:`x_3`-Richtung entsteht.
+  die im Modell die Neigung der Dachfläche der Gaube festlegt. Die zur
+  :math:`x_3`-Achse parallele Strecke :math:`NL` stellt im Modell den sogenannten
+  Gaubenstiel dar; dessen Länge soll 1,4m betragen. Um die Koordinaten von
+  :math:`N` und :math:`L` zu bestimmen, wird die Ebene :math:`F` betrachtet, die
+  durch Verschiebung von E um 1,4 in positive :math:`x_3`-Richtung entsteht.
 
   e) Begründen Sie, dass :math:`3x_1+4x_3-49{,}6=0` eine Gleichung von
      :math:`F` ist.
@@ -134,7 +134,7 @@ Das Haus erfüllt also die Satzung.
 
 **Lösung zu Teil c**
 
-Wir setzen die :math:`t` in die Ebenengleichung ein:
+Wir setzen die Gerade :math:`t` in die Ebenengleichung ein:
 
 .. math::
 
@@ -144,7 +144,7 @@ Wir setzen die :math:`t` in die Ebenengleichung ein:
 
 .. math::
 
-  HC = H + \lambda\cdot H - C = \begin{pmatrix} 4\\ 10\\ 8\end{pmatrix} + 
+  HC = H + \lambda\cdot\left(H - C\right) = \begin{pmatrix} 4\\ 10\\ 8\end{pmatrix} + 
        \lambda \cdot \begin{pmatrix} 4\\ 0\\ -3\end{pmatrix}
 
 ist offensichtlich parallel zu :math:`t`. Der Abstand zwischen :math:`t`
