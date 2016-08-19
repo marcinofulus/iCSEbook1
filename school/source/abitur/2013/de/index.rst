@@ -22,6 +22,11 @@ Stochastik
    :maxdepth: 1
    
    Aufgabe 1 <blutgruppe>
+   Aufgabe 2 <stoffwechsel>
+   Aufgabe 3 <gewinnspiel>
+   Aufgabe 4 <umfrage>
+   Aufgabe 5 <nullhypothese>
+   Aufgabe 6 <erwartungswert>
 
 .. toctree::
    :maxdepth: 1
