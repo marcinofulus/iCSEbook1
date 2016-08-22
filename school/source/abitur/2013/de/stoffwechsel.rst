@@ -3,7 +3,7 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  Bei 0,074% der neugeborenen Kinder liegt eine bestimme Stoffwechselstörung
+  Bei 0,074% der neugeborenen Kinder liegt eine bestimmte Stoffwechselstörung
   vor. Wird diese Störung frühzeitig erkannt, lässt sich durch eine geeignete
   Behandlung eine spätere Erkrankung vermeiden. Zur Früherkennung kann zunächst
   ein einfacher Test durchgeführt werden. Zeigt das Ergebnis des Tests die
@@ -62,7 +62,7 @@ bei einem kranken neugeborenen Kind.
 
   P_T(S) = \frac{P(S \cap T)}{P(T)} = \frac{0{,}00074\cdot 0{,}995}{0{,}00853} \approx 8{,}63\%
 
-Dies bedeutet das bei einem Positiven Testergebnis nur in 8,63% tatsächlich
+Dies bedeutet, dass bei einem Positiven Testergebnis nur in 8,63% tatsächlich
 eine Stoffwechselstörung vorliegt.
 
 **Lösung zu Teil c**

@@ -58,8 +58,8 @@ Bayerisches Abitur in Mathematik 2013
 **Lösung zu Teil a**
 
 Die Wahrscheinlichkeit bei 25 Blutspendern genau zehn Personen mit Blutgruppe
-A zu haben ist durch die Binomialverteilung gegeben. Die Wahrscheinlichkeit, dass
-ein Spender die Blutgruppe A hat, ist:
+A zu haben ist durch die Binomialverteilung gegeben. Die Wahrscheinlichkeit, für
+jeden einzelnen Spender die Blutgruppe A zu haben, ist:
 
 .. math:: 
 
@@ -96,21 +96,23 @@ Mit Sage lässt sich dieses Zufallsexperiment simulieren:
 
 **Lösung zu Teil b**
 
-Die Wahrscheinlichkeit dafür das mehr als die Hälfte der Spender die Blutgruppe
-0 und den Rhesusfaktor Rh+ besitzen lässt sich mittels Sage leicht bestimmen:
+Die Wahrscheinlichkeit dafür, dass mehr als die Hälfte der Spender die
+Blutgruppe 0 und den Rhesusfaktor Rh+ besitzen lässt sich mittels Sage leicht
+bestimmen:
 
 .. sagecellserver:: 
 
   sage: def bernoulli(N, p, n):
   sage:     return p^n*(1-p)^(N-n)*binomial(N, n)
   sage: summe = 0
-  sage: for i in range(12,25):
+  sage: for i in range(13,26):
   sage:     summe += bernoulli(25, 0.35, i)
   sage: print("Die Wahrscheinlichkeit dass mehr als die Hälfte der Spender die Blutgruppe 0, Rh+ besitzen:" + str(summe))
 
 .. end of output
 
 **Lösung zu Teil c**
+
 Für einen Empfänger mit Blutgruppe B und Rhesusfaktor Rh- können nach der
 Tabelle sowohl Personen mit Blutgruppe 0 Rh- sowie B Rh- Blut spenden.
 Die Wahrscheinlichkeit dafür den passende Spender zu finden beträgt also:
@@ -119,10 +121,10 @@ Die Wahrscheinlichkeit dafür den passende Spender zu finden beträgt also:
 
   P(0, Rh-) + P(B, Rh-) = 8\%
 
-Die Wahrscheinlichkeit das eine Person kein passender Spender ist beträgt also
-:math:`1-0{,}08 = 92\%`. Die Anzahl der Spender, bis die Wahrscheinlichkeit
-unter :math:`5\%` ist, dass kein passender Spender dabei ist, wird wie folgt
-berechnet:
+Die Wahrscheinlichkeit, dass eine Person kein passender Spender ist beträgt
+also :math:`1-0{,}08 = 92\%`. Die Anzahl der Spender, bis die
+Wahrscheinlichkeit unter :math:`5\%` ist, dass kein passender Spender dabei
+ist, wird wie folgt berechnet:
 
 .. math::
 

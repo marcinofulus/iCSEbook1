@@ -28,9 +28,6 @@ Stochastik
    Aufgabe 5 <nullhypothese>
    Aufgabe 6 <erwartungswert>
 
-.. toctree::
-   :maxdepth: 1
-
 
 Geometrie
 .........

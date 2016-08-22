@@ -9,7 +9,7 @@ Bayerisches Abitur in Mathematik 2013
   rote, drei grüne und drei blaue Kugeln befinden, drei Kugeln ohne Zurücklegen
   zufällig entnommen. Haben die drei entnommenen Kugeln die gleiche Farbe, so
   gewinnt der Spieler und bekommt einen bestimmen Geldbetrag ausgezahlt;
-  ansonsten verliert er un erhält keine Auszahlung. Anschließend werden die
+  ansonsten verliert er und erhält keine Auszahlung. Anschließend werden die
   gezogenen Kugeln in den Behälter zurückgelegt.
   
   a) Zeigen Sie, dass bei einem Spiel die Wahrscheinlichkeit für einen Gewinn
