@@ -118,11 +118,12 @@ podłodze windy.
 
 .. sagecellserver::
 
-    sage: N=waveII.shape[0]
-    sage: @interact
-    sage: def _(i1=slider(0,N,default=int(N/6)),i2=slider(0,N,default=int(N-N/6))  ):
-    ...       l=list_plot( zip( waveII[i1:i2,0]-waveII[0,0],waveII[i1:i2,3] ) ,plotjoined=True,figsize=(7,4),gridlines=True)
-    ...       show(l)
+    N=waveII.shape[0]
+    @interact
+    def _(i1=slider(0,N,default=int(N/6)),i2=slider(0,N,default=int(N-N/6))  ):
+    	l=list_plot( zip( waveII[i1:i2,0]-waveII[0,0],waveII[i1:i2,3] ),\
+		 plotjoined=True,figsize=(7,4),gridlines=True)
+        show(l)
 
 
 .. end of output
