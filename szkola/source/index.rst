@@ -76,6 +76,14 @@ rysować jej wykres!
    Rzut ukośny: numeryczna analiza równań ruchu <rzut_ukosny>
    Akcelerometr w domu  <akcelerometr>
    gramy_funkcje
+   gps
+   
+Młody Technik - artykuły
+========================
+
+  - Proste modele ze złożonym zachowaniem czyli o chaosie ( :download:`pdf <MT_logistyczne/proste_a_zlozone.pdf>` )
+  - Rzut ukośny, czyli o prawie Newtona i równaniach różniczkowych ( :download:`pdf <MT_armata_ode/armata_ode.pdf>` )
+   
 
 Krótki kurs Sage
 ================

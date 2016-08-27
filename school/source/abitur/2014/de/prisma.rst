@@ -51,13 +51,16 @@ erhält man durch
 
   \vec{M} = \vec{A} + 1/2 \cdot (\vec{D} - \vec{A}).
 
-Entsprechend erhalten wir die Koordinaten für die Punkte :math:`M(0|0|2)` und :math:`P(4|4|0)`.
+Entsprechend erhalten wir die Koordinaten für die Mittelpunkte :math:`M(0|0|2)`
+und :math:`P(4|4|0)`.
 
 .. sagecellserver::
 
     sage: m = a + 1/2 * (d - a)
     sage: p = b + 1/2 * (c - b)
     sage: print "m:", m, ", p:", p
+
+.. end of output
 
 Um den :math:`y`-Wert des Punktes :math:`K` zu bestimmen, nutzen wir die
 Bedingung der Rechtwinkligkeit am Punkt :math:`M`. Damit muss das
@@ -77,10 +80,12 @@ ergibt sich für das Skalarprodukt
 
 und somit :math:`y_K=1`.
 
-Mit Sage lässt sich dieses Ergebnis folgendermaßen erhalten:
+Mit Sage lässt sich dieses Ergebnis leicht folgendermaßen erhalten:
 
 .. sagecellserver::
 
   sage: y = var('y')
   sage: k = vector([0, y, 4])
   sage: solve((m-k).dot_product(m-p) == 0, y)
+
+.. end of output

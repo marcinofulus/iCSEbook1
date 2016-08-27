@@ -1,6 +1,9 @@
 Bayerisches Abitur in Mathematik 2014
 -------------------------------------
 
+Aufgabe 1
+^^^^^^^^^
+
 .. admonition:: Aufgabe 1
 
   Gegeben ist die Funktion :math:`f` mit
@@ -13,10 +16,11 @@ Bayerisches Abitur in Mathematik 2014
   Graphen :math:`G_f` von :math:`f`.
 
   .. image:: ../figs/gebrochenrational.png
+     :width: 35%
      :align: center
 
   a) Zeigen Sie, dass :math:`D_f=\mathbb{R}\backslash\{-5;5\}` gilt und dass :math:`G_f` symmetrisch
-     bezüglich des Koordinatenursprungs ist. Geben Sie die Nullstelle von f sowie die Gleichungen der
+     bezüglich des Koordinatenursprungs ist. Geben Sie die Nullstelle von :math:`f` sowie die Gleichungen der
      drei Asymptoten von :math:`G_f` an.
 
   b) Weisen Sie nach, dass die Steigung von :math:`G_f` in jedem Punkt des Graphen negativ ist. Berechnen
@@ -46,7 +50,7 @@ Zunächst wollen wir den Ausschnitt des Graphen mit Sage vervollständigen:
 .. sagecellserver::
 
   sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10,10), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
+  sage: plot(f(x), x, (-10,10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
 
 .. end of output
 
@@ -64,21 +68,23 @@ erfüllt ist:
 
 .. math::
 
-    f(x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
+    f(-x)=\frac{20(-x)}{(-x)^2-25}=-\frac{20x}{x^2-25}=-f(x)
 
 und auch aus der obigen Darstellung deutlich wird.
 
-Die beiden Asymptoten der Polstellen sind entsprechend durch die Gleichungen :math:`x=-5`
-und :math:`x=5` gegeben. Da der Grad des Polynoms im Nenner größer ist als der des Polynoms im Zähler, verschwindet
-die Funktion für Werte :math:`x\rightarrow-\infty` und :math:`x\rightarrow\infty`. Die dritte Asymptote ist daher
-die x-Achse, welche durch :math:`y=0` gegeben ist.
+Die beiden Asymptoten der Polstellen sind entsprechend durch die
+Gleichungen :math:`x=-5` und :math:`x=5` gegeben. Da der Grad des
+Polynoms im Nenner größer ist als der des Polynoms im Zähler,
+verschwindet die Funktion für Werte :math:`x\rightarrow-\infty` und
+:math:`x\rightarrow\infty`.  Die dritte Asymptote ist daher die
+:math:`x`-Achse, welche durch :math:`y=0` gegeben ist.
 
 Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 .. sagecellserver::
 
   sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20, 20), ymax=12, ymin=-12)
+  sage: p1 = plot(f(x), x, (-20, 20), exclude=(-5, 5), ymax=12, ymin=-12)
   sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
   sage: p3 = line([[5, -13], [5, 13]], color = 'red')
   sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
@@ -88,7 +94,7 @@ Wir zeichnen die Asymptoten in den Graphen von :math:`f` ein.
 
 **Lösung zu Teil 1b**
 
-Zunächst berechnen die Ableitung von f mit der Quotientenregel:
+Zunächst berechnen wir die Ableitung von :math:`f` mit der Quotientenregel:
 
 .. math::
 
@@ -109,7 +115,7 @@ Dieses Ergebnis wird von dem Graphen von :math:`f'(x)` bestätigt.
 .. end of output
 
 Um den Winkel zu berechnen, unter dem :math:`G_f` die :math:`x`-Achse schneidet, berechnen wir die Steigung
-von :math:`f` an der Stelle :math:`x=0`
+von :math:`f` an der Stelle :math:`x=0`:
 
 .. math ::
 
@@ -119,7 +125,7 @@ Der Schnittwinkel berechnet sich dann zu:
 
 .. math::
 
-  \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°
+  \alpha = \arctan\left(-\frac{4}{5}\right)=-38,7°.
 
 Wir überprüfen das Ergebnis mit Sage, und zeichnen die Tangente im Punkt :math:`x=0` ein.
 
@@ -160,7 +166,7 @@ deren Lösungen durch
 
   x_{1/2}= \frac{5\left(2\pm\sqrt{y^2+4}\right)}{y}
 
-gegeben sind.  Diese Lösungen erhalten wir auch mit Sage:
+gegeben sind. Diese Lösungen erhalten wir auch mit Sage:
 
 .. sagecellserver::
 
@@ -265,6 +271,10 @@ Dieses Ergebnis liefert auch Sage:
 
 .. end of output
 
+
+Aufgabe 2
+^^^^^^^^^
+
 .. admonition:: Aufgabe 2
 
   Ein Motorboot fährt mit konstanter Motorleistung auf einem Fluss eine Strecke der Länge 10 km zuerst
@@ -286,8 +296,8 @@ Dieses Ergebnis liefert auch Sage:
   angegeben. Dabei ist :math:`x` die Eigengeschwindigkeit des Boots in :math:`\frac{\mathrm{km}}{\mathrm{h}}`.
 
   a) Bestimmen Sie auf der Grundlage des Modells für eine Fahrt mit einer Eigengeschwindigkeit von 
-     :math:`10\frac{\mathrm{km}}{\mathrm{h}}` und für eine Fahrt mit einer Eigengeschwindigkeit von
-     :math:`20\frac{\mathrm{km}}{\mathrm{h}}` jeweils die Gesamtfahrtzeit in Minuten.
+     :math:`10\,\frac{\mathrm{km}}{\mathrm{h}}` und für eine Fahrt mit einer Eigengeschwindigkeit von
+     :math:`20\,\frac{\mathrm{km}}{\mathrm{h}}` jeweils die Gesamtfahrtzeit in Minuten.
 
   b) Begründen Sie, dass der erste Summand des Terms :math:`t(x)` die für die Hinfahrt, der zweite Summand die
      für die Rückfahrt erforderliche Zeit in Stunden angibt.
@@ -312,13 +322,13 @@ Wir erhalten bei einer Geschwindigkeit von :math:`10\frac{\mathrm{km}}{\mathrm{h
 
 .. math::
 
-  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160
+  60t(10) = 60\left(\frac{10}{15}+\frac{10}{5}\right) = 160\,\mathrm{min}
 
 und bei einer Geschwindigkeit von :math:`20\frac{\mathrm{km}}{\mathrm{h}}`
 
 .. math::
 
-  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64
+  60t(20) = 60\left(\frac{10}{25}+\frac{10}{15}\right) = 64\,\mathrm{min}.
 
 Diese Ergebnisse lassen sich auch leicht mit Sage erhalten. Zudem
 stellen wir die Fahrtdauer in Abhängigkeit von der Geschwindigkeit
@@ -413,8 +423,9 @@ Mit Sage ergibt sich der Wert zu
 
 .. sagecellserver::
 
-  sage: t = 4
-  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von", t, ": ", f_inv(t).n(10), "km/h"
+  sage: gesamtzeit = 4
+  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von {}h: {}km/h".format(
+  ...         gesamtzeit, f_inv(gesamtzeit).n(10))
 
 .. end of output
 
@@ -424,7 +435,9 @@ folgendermaßen:
 .. sagecellserver::
 
   sage: p14 = plot(f(x), x, (5.1, 14))
-  sage: x4, y4 = f_inv(t), t
+  sage: x4, y4 = f_inv(gesamtzeit), gesamtzeit
   sage: l1 = line([(x4, y4), (0, y4)], color='red')
   sage: l2 = line([(x4, y4), (x4, 0)], color='red')
   sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
+
+.. end of output
