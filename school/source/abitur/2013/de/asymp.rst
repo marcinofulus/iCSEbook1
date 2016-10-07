@@ -199,3 +199,72 @@ Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
   sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1, figsize=4)
 
 .. end of output
+
+Aufgabe 3
+^^^^^^^^^
+.. admonition:: Aufgabe 3
+
+  .. image:: ../figs/zylinder.png
+     :align: right
+
+  Eine vertikal stehende Getränkedose hat die Form eines geraden Zylinders. Die
+  Lage des gemeinsamen Schwerpunkts S von Dose und enthaltener Flüssigkeit hängt
+  von der Füllhöhe der Flüssigkeit über dem Dosenboden ab. Ist die Dose
+  vollständig gefüllt, so beträgt die Füllhöhe 15 cm.
+  
+  Die bisher betrachtete Funktion :math:`f` gilt für :math:`0\leq x \leq 15` die
+  Höhe von :math:`S` über dem Dosenboden in Zentimetern an; dabei ist :math:`x`
+  die Füllhöhe in Zentimetern (vgl. Abbildung 3).
+  
+  a) Berechnen Sie :math:`f(0)` und :math:`f(15)`. Interpretieren Sie die
+     beiden Ergebnisse im Sachzusammenhang.
+  b) Die zunächst leere Dose wird langsam mit Flüssigkeit gefüllt, bis die
+     maximale Füllhöhe von 15 cm erreicht ist. Beschreiben Sie mithilfe von
+     Abbildung 2 die Bewegung des Schwerpunkts :math:`S` während des
+     Füllvorgangs. Welche Bedeutung im Sachzusammenhang hat die Tatsche, dass
+     :math:`x`-Koordinate und :math:`y`-Koordinate des Tiefpunkts von
+     :math:`G_f` übereinstimmen?
+  c) Für welche Füllhöhen von :math:`x` liegt der Schwerpunkt :math:`S`
+     höchstens 5 cm hoch? Beantworten Sie diese Frage zunächst näherungsweise
+     mithilfe von Abbildung 2 und anschließend durch Rechnung.
+
+**Lösung zu Teil a**
+
+Ist die Dose vollständig leer (:math:`x=0`) so stimmt der Schwerpunkt :math:`S`
+mit dem Schwerpunkt der Dose überein. Bei einer gleichmäßigen Gewichtsverteilung
+liegt :math:`S` somit in der Mitte der Dose. Ist die Dose bis zum Rand gefüllt,
+so liegt der Schwerpunkt der Flüssigkeit über dem Schwerpunkt der Dose. Der
+gemeinsame Schwerpunkt ist also gleich dem Schwerpunkt der leeren Dose.
+
+.. math::
+    f(0)=f(15)=\frac{15}{2}\mathrm{cm} = 7,5\mathrm{cm}
+
+**Lösung zu Teil b**
+Wird die Dose mit Flüssigkeit gefüllt, so sinkt der Schwerpunkt zunächst.
+Bei einer Füllhöhe von 3,5 cm trifft der Schwerpunkt die auf die Oberfläche
+der Flüssigkeit. Ab dieser Füllhöhe steigt der Schwerpunkt von Dose und
+Flüssigkeit.
+
+**Lösung zu Teil c**
+Aus Abbildung 2 lässt sich der Bereich in dem der Schwerpunkt unter 5 cm liegt
+zu :math:`0.5 < x < 9.5` abschätzen. Die genauen Grenzen für :math:`x` erhält
+man, indem man die Gleichung
+
+.. math::
+  f(x)= \frac{1}{2}x - \frac{1}{2} + \frac{8}{x+1} = 5
+
+nach :math:`x` auflöst.
+
+Mit Sage lässt sich so die genauen Grenzen berechnen: 
+
+
+.. sagecellserver::
+
+  sage: result = solve(f(x)==5,x)
+  sage: print("Lösung der Gleichung " + str(f) + " = 5 :" + repr(result))
+  sage: print("Dies entspricht etwa: x = "+ str(result[0].right().n()) + 
+  sage: " und x = " + str(result[1].right().n())) 
+
+.. end of output
+
+
