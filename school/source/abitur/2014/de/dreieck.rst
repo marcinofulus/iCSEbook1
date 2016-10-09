@@ -25,7 +25,7 @@ Bayerisches Abitur in Mathematik 2014
      :math:`R`, in dem :math:`g` die Ebene :math:`E` schneidet, und begründen
      Sie, dass der Lichtstrahl auf dem dreieckigen Spiegel auftrifft.
 
-     *(zur Kontrolle:* :math:`R(1,5|1,5|1)` *)*
+     *(zur Kontrolle:* :math:`R(1{,}5|1{,}5|1)` *)*
 
   Der einfallende Lichtstrahl wird in demjenigen Punkt des Spiegels
   reflektiert, der im Modell durch den Punkt :math:`R` dargestellt wird. Der
