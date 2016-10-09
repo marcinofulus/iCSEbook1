@@ -35,12 +35,12 @@ Bayerisches Abitur in Mathematik 2014
   Die Dachgaube soll so errichtet werden, dass sie von dem seitlichen Rand der
   Dachfläche, der im Modell durch die Strecke :math:`HC` dargestellt wird, den 
   Abstand 2m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
-  Koordinaten des Punkts M wird die durch den Punkt :math:`T(4|8|8)` verlaufende
+  Koordinaten des Punkts :math:`M` wird die durch den Punkt :math:`T(4|8|8)` verlaufende
   Gerade
 
   .. math::
 
-    t:\bar{X} = \begin{pmatrix} 4\\ 8\\ 8\end{pmatrix} + 
+    t:\vec{X} = \begin{pmatrix} 4\\ 8\\ 8\end{pmatrix} + 
     \lambda\cdot\begin{pmatrix} 4\\ 0\\ -3\end{pmatrix},\quad
     \lambda\in\mathbb{R},
 
@@ -53,19 +53,21 @@ Bayerisches Abitur in Mathematik 2014
      der Dachgaube vom First 1m beträgt. Bestimmen Sie die Koordinaten
      von :math:`M`.
 
+     *(Ergebnis:* :math:`M(4{,}8|8|7{,}4)` *)*
+
   Die Punkte :math:`M` und :math:`N` liegen auf der Geraden
 
   .. math::
 
-    m:\bar{X} = \begin{pmatrix} 4{,}8\\ 8\\ 7{,}4\end{pmatrix} +
+    m:\vec{X} = \begin{pmatrix} 4{,}8\\ 8\\ 7{,}4\end{pmatrix} +
     \mu\cdot \begin{pmatrix} 6\\ 0\\ -1\end{pmatrix},\quad
     \mu\in\mathbb{R}, 
 
   die im Modell die Neigung der Dachfläche der Gaube festlegt. Die zur
-  :math:`x_3`-Achse parallele Strecke :math:`NL` stellt im Modell den sogenannten
+  :math:`x_3`-Achse parallele Strecke :math:`[NL]` stellt im Modell den sogenannten
   Gaubenstiel dar; dessen Länge soll 1,4m betragen. Um die Koordinaten von
   :math:`N` und :math:`L` zu bestimmen, wird die Ebene :math:`F` betrachtet, die
-  durch Verschiebung von E um 1,4 in positive :math:`x_3`-Richtung entsteht.
+  durch Verschiebung von :math:`E` um 1,4 in positive :math:`x_3`-Richtung entsteht.
 
   e) Begründen Sie, dass :math:`3x_1+4x_3-49{,}6=0` eine Gleichung von
      :math:`F` ist.
