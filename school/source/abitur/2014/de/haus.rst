@@ -85,14 +85,14 @@ Breite:
 
 .. math::
 
-  A = |BC|\cdot |BG|
+  A = |BC|\,|BG|
 
 Hierfür bestimmen wir zunächst aus der Skizze die Punkte :math:`B(8|0|5)` und
 :math:`G(4|0|8)`. Wir erhalten also
 
 .. math::
 
-  A = \left|\begin{pmatrix} 0\\ 10\\ 0\end{pmatrix}\right|\cdot
+  A = \left|\begin{pmatrix} 0\\ 10\\ 0\end{pmatrix}\right|\,
       \left|\begin{pmatrix} 4\\ 0\\ 3\end{pmatrix}\right| = 50
 
 Mit Sage legen wir zunächst alle Punkte fest und überprüfen anschließend
@@ -142,14 +142,14 @@ Wir setzen die Gerade :math:`t` in die Ebenengleichung ein:
 
 .. math::
 
-  3\cdot(4+4\lambda) + 4\cdot(8-3\lambda) - 44 = 0.
+  3(4+4\lambda) + 4(8-3\lambda) - 44 = 0.
 
 :math:`t` verläuft also in der Ebene. Die Gerade
 
 .. math::
 
-  HC = H + \lambda\cdot\left(H - C\right) = \begin{pmatrix} 4\\ 10\\ 8\end{pmatrix} + 
-       \lambda \cdot \begin{pmatrix} 4\\ 0\\ -3\end{pmatrix}
+  HC = H + \lambda\left(H - C\right) = \begin{pmatrix} 4\\ 10\\ 8\end{pmatrix} + 
+       \lambda \begin{pmatrix} 4\\ 0\\ -3\end{pmatrix}
 
 ist offensichtlich parallel zu :math:`t`. Der Abstand zwischen :math:`t`
 und :math:`HC` ist gleich dem Abstand der Punkte :math:`T` und :math:`H`:
