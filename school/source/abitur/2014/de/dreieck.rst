@@ -68,8 +68,8 @@ Dreiecks bestimmen:
 
 .. math::
 
-  A = \frac{1}{2}\cdot\left|\vec{AB}\times\vec{AC}\right| = 
-  \frac{1}{2}\cdot\left|\begin{pmatrix} 16\\ 16\\ 16\end{pmatrix}\right| =
+  A = \frac{1}{2}\left|\vec{AB}\times\vec{AC}\right| = 
+  \frac{1}{2}\left|\begin{pmatrix} 16\\ 16\\ 16\end{pmatrix}\right| =
   8\sqrt{3}.
 
 Wir überprüfen das Ergebnis mit Sage:
@@ -170,8 +170,8 @@ nicht normierte Normalenvektor von :math:`E` durch
   \vec{n} = \begin{pmatrix} 1\\ 1\\ 1\end{pmatrix}
 
 gegeben ist, welcher offensichtlich parallel zum Verbindungsvektor
-:math:`\vec{PQ}` ist. Die Punkte :math:`P` und :math:`Q` liegen also auf der
-selben Normale zu :math:`E`. Damit die Punkte symmetrisch bezüglich :math:`E`
+:math:`\vec{PQ}` ist. Die Punkte :math:`P` und :math:`Q` liegen also auf derselben
+Normalen zu :math:`E`. Damit die Punkte symmetrisch bezüglich :math:`E`
 sind, müssen sie noch den gleichen Abstand zur Ebene haben. Wir überprüfen
 dies, indem wir die Mitte der Verbindungsstrecke in die Ebenengleichung 
 einsetzen:
@@ -181,7 +181,7 @@ einsetzen:
   \vec{M} = \vec{P} + \frac{1}{2}\vec{PQ} = \begin{pmatrix} 1\\ 1\\ 2\end{pmatrix}\\
   E:\quad 1 + 1 + 2 = 4
 
-Die Punkte sind also symmetrisch bezüglich der Ebene.
+Die Punkte liegen also symmetrisch bezüglich der Ebene.
 
 Wir zeichnen die Verbindung der Punkte :math:`P` und :math:`Q`, sowie
 den reflektierten Lichtstrahl in unsere Skizze ein:
