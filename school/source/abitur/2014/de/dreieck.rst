@@ -92,52 +92,50 @@ Wir zeichnen zusätzlich das Dreieck mit Hilfe von Sage:
 
   sage: from sage.plot.polygon import Polygon
   sage: labeloffset = vector([0, 0, 0.3])
-  sage: A = point(a, size=10)
-  sage: At = text3d("A", a + labeloffset, color='black', horizontal_alignment='left')
-  sage: B = point(b, size=10)
-  sage: Bt = text3d("B", b + labeloffset, color='black', horizontal_alignment='left')
-  sage: C = point(c, size=10)
-  sage: Ct = text3d("C", c + labeloffset, color='black', horizontal_alignment='left')
-  sage: tri = polygon([a, b, c])
-  sage: p1 = tri + A + At + B + Bt + C + Ct
+  sage: p1 = polygon([a, b, c])
+  sage: for p, label in ((a, 'A'), (b, 'B'), (c, 'C')):
+  sage:     p1 = p1+point(p, size=10)
+  sage:     p1 = p1+text3d(label, p+labeloffset, color='black', horizontal_alignment='left')
   sage: show(p1)
 
 .. end of output
 
 **Lösung zu Teil b**
 
-Die Gerade muss durch den Punkt :math:`P` laufen und entlang des Vektors
+Die Gerade muss durch den Punkt :math:`P` gehen und entlang des Vektors
 :math:`\vec{v}` verlaufen. Eine Geradendarstellung ergibt sich als
 
 .. math::
 
-  \vec{g} = \vec{P}+\lambda\cdot\vec{v} = 
-  \begin{pmatrix} 2\\ 2\\ 3\end{pmatrix} + \lambda\cdot
-  \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}.
+  \vec{g} = \vec{P}+\lambda\vec{v} = 
+  \begin{pmatrix} 2\\ 2\\ 3\end{pmatrix}
+  + \lambda\begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}.
 
 Für den Schnittpunkt :math:`R` setzen wir die Koordinaten der Gerade in die
 Ebenengleichung ein:
 
 .. math::
 
-  &2 + \lambda\cdot (-1) + 2 + \lambda\cdot(-1) + 3 + \lambda\cdot (-4) = 4\Leftrightarrow\\
-  &\lambda = 0{,}5.
+  \begin{gather}
+  2 -\lambda + 2 -\lambda + 3 -4\lambda = 7-6\lambda \overset{!}{=} 4\\
+  \rightarrow \lambda = \frac{1}{2}.
+  \end{gather}
 
 Der Schnittpunkt ergibt sich dadurch als
 
 .. math::
 
-  \vec{R} = \vec{P} + \frac{1}{2}\vec{v} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix}.
+  \vec{R} = \vec{P} + \frac{1}{2}\vec{v} = \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 1\end{pmatrix}.
 
 Wir überprüfen diesen Schnittpunkt mit Sage
 
 .. sagecellserver::
 
-  sage: p = vector([2, 2, 3])
-  sage: v = vector([-1, -1, -4])
-  sage: plane = Polyhedron(eqns=[(-4,1,1,1)])
-  sage: L = Polyhedron([p, p + v])
-  sage: print L.intersection(plane).vertices()
+  sage: p = vector(QQ, (2, 2, 3))
+  sage: v = vector(QQ, (-1, -1, -4))
+  sage: ebene = Polyhedron(eqns=[(-4, 1, 1, 1)])
+  sage: gerade = Polyhedron(vertices=[p], rays=[-v, v])
+  sage: print gerade.intersection(ebene).vertices()
 
 .. end of output
 
