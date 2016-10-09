@@ -189,13 +189,12 @@ den reflektierten Lichtstrahl in unsere Skizze ein:
 .. sagecellserver::
 
   sage: q = vector([0, 0, 1])
-  sage: labeloffset = vector([0, 0, 0.3])
   sage: Q = point(q, size=10)
   sage: Qt = text3d("Q", q + labeloffset, color='black', horizontal_alignment='left')
-  sage: pq = line([p, q], color='black', legend_label='bla', thickness=2)
+  sage: pq = line([p, q], color='black', thickness=2)
   sage: g_refl = line([r, r + r-q], color='red', thickness=2)
   sage: g_refl_q = line([q, r], color='red', thickness=1, linestyle='--')
-  sage: p3 = pq + g_refl + g_refl_q + Q + Qt
+  sage: p3 = Q + Qt + pq + g_refl + g_refl_q
   sage: show(p1 + p2 + p3)
 
 .. end of output
