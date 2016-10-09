@@ -88,12 +88,14 @@ Breite:
   A = |BC|\,|BG|
 
 Hierfür bestimmen wir zunächst aus der Skizze die Punkte :math:`B(8|0|5)` und
-:math:`G(4|0|8)`. Wir erhalten also
+:math:`G(4|0|8)`. Mit :math:`C(8|10|5)` erhalten wir
 
 .. math::
 
   A = \left|\begin{pmatrix} 0\\ 10\\ 0\end{pmatrix}\right|\,
-      \left|\begin{pmatrix} 4\\ 0\\ 3\end{pmatrix}\right| = 50
+      \left|\begin{pmatrix} -4\\ 0\\ 3\end{pmatrix}\right| = 50
+
+Die gesuchte Fläche beträgt also 50m².
 
 Mit Sage legen wir zunächst alle Punkte fest und überprüfen anschließend
 das Ergebnis.
@@ -102,16 +104,14 @@ das Ergebnis.
 
   sage: o = vector([0,0,0])
   sage: p = vector([8,0,0])
-  sage: r = vector([0,10,0])
-  sage: a = vector([0,0,5])
-  sage: q = p+r
-  sage: b = a+p
-  sage: d = r+a
-  sage: c = d+p
-  sage: h = vector([4,10,8])
-  sage: g = b+h-c
-  sage: t = vector([4,8,8])
-  sage: print "Fläche:", abs((b-g).cross_product(c-b)) 
+  sage: c = vector([8, 10, 5])
+  sage: breite, laenge, hoehe = c
+  sage: h = vector([4, 10, 8])
+  sage: t = vector([4, 8, 8])
+  sage: a = o+vector([0, 0, hoehe])
+  sage: b = p+vector([0, 0, hoehe])
+  sage: g = h-vector([0, laenge, 0])
+  sage: print "Fläche: %sm²" % float(norm(b-g)*norm(c-b))
 
 .. end of output
 
@@ -130,9 +130,9 @@ Das Haus erfüllt also die Satzung.
 
 .. sagecellserver::
 
-  sage: ba = a-b
-  sage: bg = g-b
-  sage: print "Winkel der Dachgaube:", float(arccos(ba.dot_product(bg)/(abs(ba)*abs(bg)))*180/pi)
+  sage: ba = (a-b).normalized()
+  sage: bg = (g-b).normalized()
+  sage: print "Winkel der Dachgaube: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
 
 .. end of output
 
@@ -158,20 +158,34 @@ und :math:`HC` ist gleich dem Abstand der Punkte :math:`T` und :math:`H`:
 
   \left|\vec{H}-\vec{T}\right| = \left|\begin{pmatrix} 0\\ 2\\ 0\end{pmatrix}\right| = 2
 
-**Lösung zu Teil d**
-
-Wir bestimmen die Koordinaten von :math:`M` mit Hilfe von Sage. Wir erhalten
-zunächst zwei mögliche Punkte auf der Geraden mit Abstand 1m vom First:
+Dies wird von Sage bestätigt:
 
 .. sagecellserver::
 
-  sage: lamb = solve(abs(x*(c-h))==1, x)
+  sage: norm(h-t)
+
+.. end of output
+
+**Lösung zu Teil d**
+
+Der Abstand eines durch :math:`\lambda` gegebenen Punktes vom Punkt :math:`T` ist durch
+
+.. math::
+
+  \left\vert\lambda\begin{pmatrix}4\\0\\-3\end{pmatrix}\right\vert = 25\lambda^2
+
+gegeben. Für :math:`\lambda=\pm\frac{1}{5}` beträgt der Abstand 1.
+Dies ergibt sich auch mit Hilfe von Sage.
+
+.. sagecellserver::
+
+  sage: lamb = solve(abs(x*(c-h)) == 1, x)
   sage: print "Die Lösungen für lambda lauten:", lamb
 
 .. end of output
 
 Allerdings ist nur die Lösung mit positivem :math:`\lambda` sinnvoll, 
-da der andere Punkt oberhalb des Firstes liegt: M(4,8|8|7,4).
+da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt M(4,8|8|7,4).
 
 .. sagecellserver::
 
@@ -192,15 +206,24 @@ lässt sich die Ebenengleichung folgendermaßen umschreiben:
 
 **Lösung zu Teil f**
 
-Wir bestimmen zunächst den Punkt :math:`N`, der gleich dem Schnittpunkt der
-Ebene :math:`F` und der Gerade :math:`m` ist. Den Punkt :math:`L` erhalten
-wir durch verschieben des Punktes :math:`N` in :math:`x_3`-Richtung.
+Einsetzen der Geradengleichung für :math:`m` in die Ebenengleichung von :math:`F` ergibt
+
+.. math::
+
+  \begin{gather}
+  3(4{,}8+6\mu)+4(7{,}4-\mu)-49{,}6 = 14\mu-5{,}6 = 0\\
+  \Rightarrow\, \mu = 0{,}4
+  \end{gather}
+
+Damit ergibt sich durch Einsetzen in die Geradengleichung von :math:`m` der Punkt
+:math:`N(7{,}2|8|7)` und durch Verschieben um :math:`-1{,}4` in :math:`x_3`-Richtung
+der Punkt :math:`L(7{,2}|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgendermaßen:
 
 .. sagecellserver::
 
-  sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0,x)[0].right()
-  sage: n = m + mu * vector([6,0,-1])
-  sage: l = n + vector([0,0,-1.4])
-  sage: print "Koordinaten von N:", n, ", L:", l
+  sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
+  sage: n = m + mu*vector([6, 0, -1])
+  sage: l = n + vector([0, 0, -1.4])
+  sage: print "Koordinaten von N: ", n, ", L:", l
 
 .. end of output
