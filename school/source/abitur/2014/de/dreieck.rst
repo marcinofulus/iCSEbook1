@@ -25,6 +25,8 @@ Bayerisches Abitur in Mathematik 2014
      :math:`R`, in dem :math:`g` die Ebene :math:`E` schneidet, und begründen
      Sie, dass der Lichtstrahl auf dem dreieckigen Spiegel auftrifft.
 
+     *(zur Kontrolle:* :math:`R(1,5|1,5|1)` *)*
+
   Der einfallende Lichtstrahl wird in demjenigen Punkt des Spiegels
   reflektiert, der im Modell durch den Punkt :math:`R` dargestellt wird. Der
   reflektierte Lichtstrahl geht für einen Beobachter scheinbar von einer
@@ -43,6 +45,8 @@ Bayerisches Abitur in Mathematik 2014
      Lichtstrahl im Modell verlaufen, liegen in einer Ebene :math:`F`.
      Ermitteln Sie eine Gleichung von :math:`F` in Normalenform. Weisen Sie
      nach, dass das Einfallslot ebenfalls in der Ebene :math:`F` liegt.
+
+     *(mögliches Teilergebnis:* :math:`F : x_1-x_2=0` *)*
 
   e) Zeigen Sie, dass die Größe des Winkels :math:`\beta` zwischen
      reflektiertem Lichtstrahl und Einfallslot mit der Größe des Winkels
