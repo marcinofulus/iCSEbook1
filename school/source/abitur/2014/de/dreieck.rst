@@ -135,7 +135,8 @@ Wir überprüfen diesen Schnittpunkt mit Sage
   sage: v = vector(QQ, (-1, -1, -4))
   sage: ebene = Polyhedron(eqns=[(-4, 1, 1, 1)])
   sage: gerade = Polyhedron(vertices=[p], rays=[-v, v])
-  sage: print gerade.intersection(ebene).vertices()
+  sage: r = gerade.intersection(ebene).vertices()[0].vector()
+  sage: print 'Schnittpunkt R', r
 
 .. end of output
 
@@ -144,13 +145,10 @@ Wir sehen, dass die Gerade auf dem dreieckigen Spiegel auftritt.
 
 .. sagecellserver::
 
-  sage: r = p + 0.5*v
-  sage: g = line([p, r], color='red', thickness=2)
-  sage: P = point(p, size=10)
-  sage: Pt = text3d("P", p + labeloffset, color='black', horizontal_alignment='left')
-  sage: R = point(r, size=10)
-  sage: Rt = text3d("R", r + labeloffset, color='black', horizontal_alignment='left')
-  sage: p2 = g + P + Pt + R + Rt
+  sage: p2 = line([p, r], color='red', thickness=2)
+  sage: for pt, label in ((p, 'P'), (r, 'R')):
+  sage:     p2 = p2+point(pt, size=10)
+  sage:     p2 = p2+text3d(label, pt+labeloffset, color='black', horizontal_alignment='left')
   sage: show(p2 + p1)
 
 .. end of output
