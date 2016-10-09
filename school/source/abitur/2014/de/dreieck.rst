@@ -206,7 +206,7 @@ Wir betrachten die beiden Geraden
 .. math::
 
   \vec{g}_1 = \vec{R} + \lambda\vec{v} =
-  \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} +
+  \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 1\end{pmatrix} +
   \lambda \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}
 
 und
@@ -214,17 +214,17 @@ und
 .. math::
 
   \vec{g}_2 = \vec{R} + \mu(\vec{R}-\vec{Q}) =
-  \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} + 
-  \mu\begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
+  \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 1\end{pmatrix} + 
+  \mu\begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 0\end{pmatrix}
 
 Eine Ebenengleichung lässt sich mit dem gemeinsamen Schnittpunkt :math:`R`
 leicht aufstellen:
 
 .. math::
 
-  F:\quad \vec{X} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} + 
+  F:\quad \vec{X} = \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 1\end{pmatrix} + 
   \lambda \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix} +
-  \mu \begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
+  \mu \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 0\end{pmatrix}
 
 Diese Ebenengleichung lässt sich durch die :math:`x_1`-
 und :math:`x_2`-Komponente darstellen:
@@ -238,10 +238,10 @@ Das Einfallslot, welches senkrecht zur Ebene :math:`E` durch den Punkt
 
 .. math::
 
-  \vec{e} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} +
+  \vec{e} = \begin{pmatrix} \frac{3}{2}\\ \frac{3}{2}\\ 1\end{pmatrix} +
   \lambda \begin{pmatrix} 1\\ 1\\ 1\end{pmatrix}.
 
-Die :math:`x_1`- und :math:`x_2`-Koordinate von :math:`e` erfüllt
+Die :math:`x_1`- und die :math:`x_2`-Koordinate von :math:`e` erfüllen
 offensichtlich die Ebenengleichung :math:`F`, womit :math:`e` in :math:`F`
 liegt.
 
@@ -267,7 +267,9 @@ Skalarprodukt berechnet werden:
 
   \cos(\alpha) = 
   \frac{-\vec{v}\cdot\vec{n}}{\left|\vec{v}\right|\left|\vec{n}\right|}=
-  \frac{6}{3\sqrt{6}}
+  -\frac{1}{\sqrt{18}}\begin{pmatrix}-1\\-1\\-4\end{pmatrix}\cdot
+  \frac{1}{\sqrt{3}}\begin{pmatrix}1\\1\\1\end{pmatrix}=
+  \sqrt{\frac{2}{3}}
 
 und analog:
 
@@ -275,7 +277,18 @@ und analog:
 
   \cos(\beta) = 
   \frac{\vec{QR}\cdot\vec{n}}{\left|\vec{QR}\right|\left|\vec{n}\right|}=
-  \frac{6}{3\sqrt{6}}
+  \frac{2}{\sqrt{18}}\begin{pmatrix}\frac{3}{2}\\\frac{3}{2}\\0\end{pmatrix}\cdot
+  \frac{1}{\sqrt{3}}\begin{pmatrix}1\\1\\1\end{pmatrix}=
+  \sqrt{\frac{2}{3}}
   
 Die Winkel :math:`\alpha` und :math:`\beta` sind also gleich groß, was auch
-durch unsere Skizze bestätigt wird.
+durch unsere Skizze oder durch explizite Auswertung mit Sage bestätigt wird.
+
+.. sagecellserver::
+
+  sage: n = lotvektor.normalized()
+  sage: cosa = -n.dot_product(v.normalized())
+  sage: cosb = n.dot_product((r-q).normalized())
+  sage: print simplify(cosa-cosb)
+
+.. end of output
