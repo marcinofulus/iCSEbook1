@@ -141,7 +141,8 @@ Wir überprüfen diesen Schnittpunkt mit Sage
 .. end of output
 
 und zeichnen die Gerade anschließend in unsere Graphik aus Teilaufgabe a) ein.
-Wir sehen, dass die Gerade auf dem dreieckigen Spiegel auftritt.
+Wir sehen, dass die Gerade auf dem dreieckigen Spiegel auftritt. Dies folgt auch
+daraus, dass alle Koordinaten des Schnittpunkts positiv sind.
 
 .. sagecellserver::
 
