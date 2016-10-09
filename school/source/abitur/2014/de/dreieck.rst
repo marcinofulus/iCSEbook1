@@ -205,17 +205,17 @@ Wir betrachten die beiden Geraden
 
 .. math::
 
-  \vec{g}_1 = \vec{R} + \lambda\cdot\vec{v} =
+  \vec{g}_1 = \vec{R} + \lambda\vec{v} =
   \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} +
-  \lambda \cdot \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}
+  \lambda \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix}
 
 und
 
 .. math::
 
-  \vec{g}_2 = \vec{R} + \mu\cdot(\vec{R}-\vec{Q}) =
+  \vec{g}_2 = \vec{R} + \mu(\vec{R}-\vec{Q}) =
   \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} + 
-  \mu\cdot \begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
+  \mu\begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
 
 Eine Ebenengleichung lässt sich mit dem gemeinsamen Schnittpunkt :math:`R`
 leicht aufstellen:
@@ -223,8 +223,8 @@ leicht aufstellen:
 .. math::
 
   F:\quad \vec{X} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} + 
-  \lambda \cdot \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix} +
-  \mu\cdot \begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
+  \lambda \begin{pmatrix} -1\\ -1\\ -4\end{pmatrix} +
+  \mu \begin{pmatrix} 1{,}5\\ 1{,}5\\ 0\end{pmatrix}
 
 Diese Ebenengleichung lässt sich durch die :math:`x_1`-
 und :math:`x_2`-Komponente darstellen:
@@ -239,7 +239,7 @@ Das Einfallslot, welches senkrecht zur Ebene :math:`E` durch den Punkt
 .. math::
 
   \vec{e} = \begin{pmatrix} 1{,}5\\ 1{,}5\\ 1\end{pmatrix} +
-  \lambda \cdot \begin{pmatrix} 1\\ 1\\ 1\end{pmatrix}.
+  \lambda \begin{pmatrix} 1\\ 1\\ 1\end{pmatrix}.
 
 Die :math:`x_1`- und :math:`x_2`-Koordinate von :math:`e` erfüllt
 offensichtlich die Ebenengleichung :math:`F`, womit :math:`e` in :math:`F`
