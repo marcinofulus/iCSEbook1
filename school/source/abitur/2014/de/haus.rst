@@ -74,6 +74,8 @@ Bayerisches Abitur in Mathematik 2014
 
   f) Bestimmen Sie die Koordinaten von :math:`N` und :math:`L`.
 
+     *(Teilergebnis:* :math:`N(7{,}2|8|7)` *)*
+
 
 
 **Lösung zu Teil a**
