@@ -95,16 +95,18 @@ Mit Sage lässt sich dieses Zufallsexperiment simulieren:
 
 Die Wahrscheinlichkeit dafür, dass mehr als die Hälfte der Spender die
 Blutgruppe 0 und den Rhesusfaktor Rh+ besitzen lässt sich mittels Sage leicht
-bestimmen:
+durch Aufsummation bestimmen:
 
 .. sagecellserver:: 
 
   sage: def bernoulli(N, p, n):
   sage:     return p^n*(1-p)^(N-n)*binomial(N, n)
+
+  sage: p_0_rhneg = 0.35
   sage: summe = 0
-  sage: for i in range(13,26):
-  sage:     summe += bernoulli(25, 0.35, i)
-  sage: print("Die Wahrscheinlichkeit dass mehr als die Hälfte der Spender die Blutgruppe 0, Rh+ besitzen:" + str(summe))
+  sage: for treffer in range((personen+1)//2, personen+1):
+  sage:     summe = summe+bernoulli(personen, p_0_rhneg, treffer)
+  sage: print("Die Wahrscheinlichkeit, dass mehr als die Hälfte der Spender die Blutgruppe 0 Rh+ besitzen: {:5.2%}".format(float(summe)))
 
 .. end of output
 
@@ -112,41 +114,42 @@ bestimmen:
 
 Für einen Empfänger mit Blutgruppe B und Rhesusfaktor Rh- können nach der
 Tabelle sowohl Personen mit Blutgruppe 0 Rh- sowie B Rh- Blut spenden.
-Die Wahrscheinlichkeit dafür den passende Spender zu finden beträgt also:
+Die Wahrscheinlichkeit dafür, den passenden Spender zu finden, beträgt also:
 
 .. math::
 
-  P(0, Rh-) + P(B, Rh-) = 8\%
+  P(\mathrm{0, Rh-}) + P(\mathrm{B, Rh-}) = 8\%
 
 Die Wahrscheinlichkeit, dass eine Person kein passender Spender ist beträgt
-also :math:`1-0{,}08 = 92\%`. Die Anzahl der Spender, bis die
-Wahrscheinlichkeit unter :math:`5\%` ist, dass kein passender Spender dabei
-ist, wird wie folgt berechnet:
+also :math:`92\%`. Die Wahrscheinlichkeit, dass unter :math:`n` Personen kein
+passender Spender dabei ist, beträgt demnach :math:`0.92^n`. Wir suchen nun die
+kleinste ganze Zahl :math:`n`, für die 
 
 .. math::
 
-  (0{,}92)^{n} \leq 0{,}05 \Leftrightarrow \\
-  n \leq \frac{\ln(0{,}05)}{\ln(0{,}92)} \approx 35{,}9
+  (0{,}92)^{n} \leq 0{,}05\,.
 
-Mit Sage kann auch hier eine Zufallsexperiment durchgeführt werden:
+Nimmt man den Logarithmus und bedenkt, dass :math:`\ln(0,92)` negativ ist, findet
+man
+
+.. math::
+
+  n \geq \frac{\ln(0{,}05)}{\ln(0{,}92)} \approx 35{,}9\,.
+
+Man benötigt also mindestens 36 Spender.
+
+Mit Hilfe eines Zufallsexperiments kann man mit Sage näherungsweise die Wahrscheinlichkeit
+bestimmen, dass unter 36 Spendern mindestens ein passender ist.
 
 .. sagecellserver:: 
 
-  sage: from random import random
-  sage: iterationen = 10000
+  sage: wiederholungen = 100000
   sage: n = 36
   sage: p = 0.08
   sage: erfolge = 0
-  
-  sage: def iterate():
-  sage:     for _ in range(n):
-  sage:         if random() <= p:
-  sage:             return True
-  sage:     return False
-
-  sage: for _ in range(iterationen):
-  sage:     if(iterate()):
+  sage: for _ in range(wiederholungen):
+  sage:     if np.sum(random_sample(n) < p):
   sage:         erfolge += 1
-  sage: print("Wahrscheinlichkeit das bei {} Personen ein passender Spender dabei ist: {:4.3%}".format(n, float(erfolge)/iterationen))
+  sage: print("Wahrscheinlichkeit das bei {} Personen ein passender Spender dabei ist: {:5.2%}".format(n, float(erfolge)/wiederholungen))
 
 .. end of output
