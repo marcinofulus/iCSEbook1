@@ -113,6 +113,9 @@ Aufgabe 2
   a) Bestimmen Sie einen Funktionsterm von :math:`g`. Weisen Sie anschließend
      die Punktsymmetrie von :math:`G_f` nach, indem Sie zeigen, dass der Graph
      von :math:`g` punktsymmetrisch bezüglich des Koordinatenursprungs ist.
+
+     *(Teilergebnis:* :math:`g(x)=\frac{1}{2}x+\frac{8}{x}`\ *)*
+
   b) Zeigen Sie, dass :math:`\int\limits_0^4 f(x)\mathrm{d}x=2+8\cdot\ln 5`
      gilt. Bestimmen Sie nun ohne weitere Integration den Wert des Integrals
      :math:`\int\limits_{-6}^{-2} f(x) \mathrm{d}x`; veranschaulichen Sie Ihr
@@ -208,11 +211,11 @@ Aufgabe 3
      :align: right
 
   Eine vertikal stehende Getränkedose hat die Form eines geraden Zylinders. Die
-  Lage des gemeinsamen Schwerpunkts S von Dose und enthaltener Flüssigkeit hängt
+  Lage des gemeinsamen Schwerpunkts :math:`S` von Dose und enthaltener Flüssigkeit hängt
   von der Füllhöhe der Flüssigkeit über dem Dosenboden ab. Ist die Dose
   vollständig gefüllt, so beträgt die Füllhöhe 15 cm.
   
-  Die bisher betrachtete Funktion :math:`f` gilt für :math:`0\leq x \leq 15` die
+  Die bisher betrachtete Funktion :math:`f` gibt für :math:`0\leq x \leq 15` die
   Höhe von :math:`S` über dem Dosenboden in Zentimetern an; dabei ist :math:`x`
   die Füllhöhe in Zentimetern (vgl. Abbildung 3).
   
