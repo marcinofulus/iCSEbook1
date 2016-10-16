@@ -3,30 +3,24 @@ Bayerisches Abitur in Mathematik 2016
 
 .. admonition:: Aufgabe
 
-  Die Abbildung zeigt den Graphen der in :math:`\mathbb{R}` definierten
+  Abbildung 1 zeigt den Graphen der in :math:`\mathbb{R}` definierten
   Funktion :math:`f`.
 
-  .. image:: ../figs/qualitatives_integral.png
+  .. figure:: ../figs/qualitatives_integral.png
      :align: center
 
-  a) Bestimmen Sie mithilfe der Abbildung einen Näherungswert für
+     Abb. 1
 
-     .. math::
-
-       \int\limits_3^5 f(x)\mathrm{d}x.
+  a) Bestimmen Sie mithilfe von Abbildung 1 einen Näherungswert für
+     :math:`\int\limits_3^5 f(x)\mathrm{d}x`.
 
   Die Funktion :math:`F` ist die in :math:`\mathbb{R}` definierte Stammfunktion
   von :math:`f` mit :math:`F(3)=0`
 
-  b) Geben Sie mithilfe der Abbildung einen Näherungswert für die Ableitung von
+  b) Geben Sie mithilfe von Abbildung 1 einen Näherungswert für die Ableitung von
      :math:`F` an der Stelle :math:`x=2` an.
 
-  c) Zeigen Sie, dass
-
-     .. math::
-
-       F(b) = \int\limits_3^b f(x)\mathrm{d}x
-
+  c) Zeigen Sie, dass :math:`F(b) = \int\limits_3^b f(x)\mathrm{d}x`
      mit :math:`b\in\mathbb{R}` gilt.
 
 **Lösung zu Teil a**
