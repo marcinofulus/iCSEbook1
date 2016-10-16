@@ -11,25 +11,25 @@ Bayerisches Abitur in Mathematik 2013
   
   Liegt bei einem neugeborenen Kind die Stoffwechselstörung vor, so ist das
   Testergebnis mit einer Wahrscheinlichkeit von 99,5% positiv. Liegt bei einem
-  neugeborenem Kind die Stoffwechselstörung nicht vor, so beträgt die
+  neugeborenen Kind die Stoffwechselstörung nicht vor, so beträgt die
   Wahrscheinlichkeit dafür, dass das Testergebnis irrtümlich positiv ist,
   0,78%.
   
   Bei einem zufällig ausgewählten neugeborenen Kind wird der Test durchgeführt.
-  Betrachtet werden folgende Ergebnisse:
+  Betrachtet werden folgende Ereignisse:
   
-  S: "Die Stoffwechselstörung liegt vor."
+  S: „Die Stoffwechselstörung liegt vor.“
   
-  T: "Das Testergebnis ist positiv."
+  T: „Das Testergebnis ist positiv.“
   
   a) Beschreiben Sie das Ereignis :math:`\overline{S\cup T}` im
      Sachzusammenhang.
   
-  b) Berechnen Sie die Wahrscheinlichkeit :math:`P(T)` und :math:`P_T (S)`.
+  b) Berechnen Sie die Wahrscheinlichkeiten :math:`P(T)` und :math:`P_T (S)`.
      Interpretieren Sie das Ergebnis für :math:`P_T(S)` im Sachzusammenhang.
   
   c) Im Rahmen eines Screenings wird eine sehr große Anzahl zufällig
-     ausgewählter neugeborener Kinder getestet. Ermitteln Sie die pro Millionen
+     ausgewählter neugeborener Kinder getestet. Ermitteln Sie die pro Million
      getesteter Kinder im Mittel zu erwartende Anzahl derjenigen Kinder, bei
      denen die Stoffwechselstörung vorliegt und das Testergebnis negativ ist.
   
