@@ -35,7 +35,7 @@ Der folgende Code verlangt von Sage, Polstellen der Funktion zu
 identifizieren. Diese werden dann durch graue gestrichelte Linien
 dargestellt. Dadurch wird bereits die vertikale Asymptote bei
 :math:`x=-1` erfasst.  Zusätzlich muss noch die Asymptote für große
-Werte von :math:`x` eingezeichnet werden.
+Werte von :math:`\vert x\vert` eingezeichnet werden.
 
 .. sagecellserver::
 
@@ -90,11 +90,9 @@ Diese Ergebnisse lassen sich mit Sage bestätigen.
   sage: ddf = derivative(df)
   sage: print "f'(x)  = ", df
   sage: print "f''(x) = ", ddf
-  sage: extrema = solve(df==0, x)
-  sage: x1 = extrema[0].right()
-  sage: x2 = extrema[1].right()
-  sage: print "Zweite Ableitung des Extremums bei x=%s: %s" % (x1, ddf(x1))
-  sage: print "Zweite Ableitung des Extremums " + str(extrema[1]) + ": " + str(ddf(extrema[1].right()))
+  sage: for extremum in solve(df == 0, x):
+  sage:     x = extremum.right()
+  sage:     print "Zweite Ableitung des Extremums bei x=%s: %s" % (x, ddf(x))
 
 .. end of output
 
