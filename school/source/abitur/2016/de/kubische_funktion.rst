@@ -16,41 +16,32 @@ Bayerisches Abitur in Mathematik 2016
 
 **Lösung zu Teil a**
 
-Die Ableitung einer kubischen Funktion ist immer eine Parabel. Eine kubische
-Funktion kann außerdem höchstens zwei Extrempunkte haben. Da die kubische
-Funktion zuerst einen Hochpunkt besitzt, muss die Ableitung im Bereich
-:math:`x<1` stets positiv sein. Auch nach dem Tiefpunkt, für :math:`x>4` muss
-die Ableitung stets positiv sein. Die Ableitungsfunktion :math:`f'` muss also
-eine nach oben geöffnete Parabel sein.
+Die Ableitung einer kubischen Funktion ist immer eine Parabel, wobei Extrema
+der kubischen Funktion Nullstellen der Parabel entsprechen. Da bei :math:`x=1` ein
+Hochpunkt liegen soll, muss die zweite Ableitung der Funktion dort negativ sein,
+während die zweite Ableitung am Tiefpunkt bei :math:`x=4` positiv sein muss. Damit
+ist der Graph von :math:`f'` eine nach oben geöffnete Parabel.
 
-Die Schnittpunkte der Parabel mit der :math:`x`-Achse ergeben sich ebenfalls
-durch die Positionen der Extrema, an denen die Ableitungsfunktion verschwinden
-muss.
-
-Eine Funktion, für die dieses Verhalten erfüllt ist, lautet:
+Um mit Sage ein konkretes Beispiel für die Funktion :math:`f` betrachten zu
+können, wählen wir die Ableitung
 
 .. math::
 
-  \frac{1}{3}x^3-\frac{5}{2}x^2+4x
+  f'(x) = (x-1)(x-4)\,,
 
-Durch eine Zeichnung mit Sage können wir leicht die in der Aufgabenstellung
-beschriebenen Extrema erkennen.
-
-.. sagecellserver::
-
-  sage: f(x) = 1/3*x**3 - 5/2*x**2 + 4*x
-  sage: plot(f(x), (-3,7), x, figsize=(4, 2.8), ymax = 10, ymin = -10)
-     
-.. end of output
-
-Mit Sage können wir auch überprüfen, dass der Graph der Ableitung eine nach
-oben geöffnete Parabel mit den Nullstellen (1|0) und (4|0) ist.
+die offenbar die richtigen Nullstellen besitzt. Wir lassen nun mit Sage die
+Funktion :math:`f` sowie ihre erste und zweite Ableitung darstellen und können
+damit die gerade diskutierten Eigenschaften der Funktion :math:`f` überprüfen.
 
 .. sagecellserver::
 
-  sage: df = derivative(f, x)
-  sage: print "Nullstellen der Ableitung: ", solve(df(x) == 0, x)
-  sage: plot(df(x), (-10,6), x, figsize=(4, 2.8), ymax = 10, ymin = -10)
+  sage: df(x) = (x-1)*(x-4)
+  sage: ddf(x) = derivative(df, x)
+  sage: f(x) = integral(df, x)
+  sage: p1 = plot(f(x), (-3, 6), color='red', legend_label="$f(x)$")
+  sage: p2 = plot(df(x), (-3, 6), color='green', legend_label="$f'(x)$")
+  sage: p3 = plot(ddf(x), (-3, 6), color='blue', legend_label="$f''(x)$")
+  sage: plot(p1+p2+p3, figsize=(4, 2.8), ymin=-10, ymax=10)
      
 .. end of output
 
@@ -63,9 +54,9 @@ gelten:
 
   f''(x_0)=0
 
-Die Ableitung von :math:`f` muss also eine Nullstelle in der Ableitung haben.
+Die Ableitung von :math:`f` muss also ein Extremum besitzen.
 Bei einer Parabel ist dies ausschließlich am Scheitelpunkt der Fall. Dieser
-befindet sich aus Symmetrie-Gründen immer in der Mitte zwischen zwei Punkten
+befindet sich aus Symmetriegründen immer in der Mitte zwischen zwei Punkten
 mit gleichem Funktionswert. Der Wendepunkt von :math:`f` muss also in der
 Mitte der beiden Nullstellen liegen:
 
@@ -74,12 +65,11 @@ Mitte der beiden Nullstellen liegen:
   x_0 = \frac{1 + 4}{2} = 2,5
 
 Der Wendepunkt von :math:`f` lässt sich bereits in der Zeichnung aus
-Teilaufgabe a) erkennen. Wir überprüfen den genauen Punkt dennoch rechnerisch
-mit Hilfe von Sage: 
+Teilaufgabe a) erkennen. Wir können ihn aber auch rechnerisch
+mit Hilfe von Sage erhalten: 
 
 .. sagecellserver::
 
-  sage: ddf = derivative(df, x)
   sage: print "Wendepunkt bei", solve(ddf(x) == 0, x)[0]
      
 .. end of output
