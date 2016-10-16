@@ -28,7 +28,7 @@ gegeben. Wir zeichnen die Funktion mit Sage.
 .. sagecellserver::
 
   sage: f(x) = sqrt(1-ln(x))
-  sage: plot(f(x), (0,e), x, ymin=0, figsize=(4, 2.8))
+  sage: plot(f(x), (0, e), figsize=(4, 2.8))
      
 .. end of output
 
