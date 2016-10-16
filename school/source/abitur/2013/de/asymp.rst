@@ -246,20 +246,22 @@ Aufgabe 3
 Ist die Dose vollständig leer (:math:`x=0`) so stimmt der Schwerpunkt :math:`S`
 mit dem Schwerpunkt der Dose überein. Bei einer gleichmäßigen Gewichtsverteilung
 liegt :math:`S` somit in der Mitte der Dose. Ist die Dose bis zum Rand gefüllt,
-so liegt der Schwerpunkt der Flüssigkeit über dem Schwerpunkt der Dose. Der
+so liegt der Schwerpunkt der Flüssigkeit im Schwerpunkt der Dose. Der
 gemeinsame Schwerpunkt ist also gleich dem Schwerpunkt der leeren Dose.
 
 .. math::
-    f(0)=f(15)=\frac{15}{2}\mathrm{cm} = 7,5\mathrm{cm}
+
+  f(0)=f(15)=\frac{15}{2}\,\mathrm{cm} = 7{,}5\,\mathrm{cm}
 
 **Lösung zu Teil b**
-Wird die Dose mit Flüssigkeit gefüllt, so sinkt der Schwerpunkt zunächst.
-Bei einer Füllhöhe von 3,5 cm trifft der Schwerpunkt die auf die Oberfläche
-der Flüssigkeit. Ab dieser Füllhöhe steigt der Schwerpunkt von Dose und
-Flüssigkeit.
+
+Wird die Dose mit Flüssigkeit gefüllt, so sinkt der Schwerpunkt zunächst.  Bei
+einer Füllhöhe von :math:`3\,\mathrm{cm}` erreicht die Oberfläche der Flüssigkeit den
+Schwerpunkt. Ab dieser Füllhöhe steigt der Schwerpunkt wieder.
 
 **Lösung zu Teil c**
-Aus Abbildung 2 lässt sich der Bereich in dem der Schwerpunkt unter 5 cm liegt
+
+Aus Abbildung 2 lässt sich der Bereich, in dem der Schwerpunkt unter 5 cm liegt,
 zu :math:`0.5 < x < 9.5` abschätzen. Die genauen Grenzen für :math:`x` erhält
 man, indem man die Gleichung
 
@@ -268,16 +270,28 @@ man, indem man die Gleichung
 
 nach :math:`x` auflöst.
 
-Mit Sage lässt sich so die genauen Grenzen berechnen: 
+Mit Sage lassen sich so die genauen Grenzen berechnen: 
 
 
 .. sagecellserver::
 
-  sage: result = solve(f(x)==5,x)
-  sage: print("Lösung der Gleichung " + str(f) + " = 5 :" + repr(result))
-  sage: print("Dies entspricht etwa: x = "+ str(result[0].right().n()) + 
-  sage: " und x = " + str(result[1].right().n())) 
+  sage: result = solve(f(x) == 5, x)
+  sage: print "Lösung der Gleichung " + str(f) + " = 5 :" + repr(result)
+  sage: print "Dies entspricht etwa: x = %5.3f und x = %5.3f." % (result[0].right().n(), result[1].right().n())
 
 .. end of output
 
+Das gleiche Ergebnis
 
+.. math::
+
+  x_{1,2} = 5\pm2\sqrt{5}
+
+ergibt sich auch, indem man die sich aus der obigen Gleichung ergebende
+quadratische Gleichung
+
+.. math::
+
+  x^2-10x+5=0
+
+löst. 
