@@ -18,15 +18,17 @@ Bayerisches Abitur in Mathematik 2013
   Bei einem zufällig ausgewählten neugeborenen Kind wird der Test durchgeführt.
   Betrachtet werden folgende Ereignisse:
   
-  S: „Die Stoffwechselstörung liegt vor.“
+  :math:`S`: „Die Stoffwechselstörung liegt vor.“
   
-  T: „Das Testergebnis ist positiv.“
+  :math:`T`: „Das Testergebnis ist positiv.“
   
   a) Beschreiben Sie das Ereignis :math:`\overline{S\cup T}` im
      Sachzusammenhang.
   
   b) Berechnen Sie die Wahrscheinlichkeiten :math:`P(T)` und :math:`P_T (S)`.
      Interpretieren Sie das Ergebnis für :math:`P_T(S)` im Sachzusammenhang.
+
+     *(zur Kontrolle:* :math:`P(T)\approx 0{,}85\%, P_T(S)<0{,}1`\ *)*
   
   c) Im Rahmen eines Screenings wird eine sehr große Anzahl zufällig
      ausgewählter neugeborener Kinder getestet. Ermitteln Sie die pro Million
