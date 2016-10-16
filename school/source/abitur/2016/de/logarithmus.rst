@@ -23,13 +23,12 @@ wird. Der maximale Definitionsbereich ist also durch
 
   \mathbb{D}=]0;e]
 
-gegeben. Wir zeichnen die Funktion mit Sage. Sage erkennt hierbei automatisch
-den maximalen Definitionsbereich.
+gegeben. Wir zeichnen die Funktion mit Sage.
 
 .. sagecellserver::
 
   sage: f(x) = sqrt(1-ln(x))
-  sage: plot(f(x), (-5,5), x, ymin=0, figsize=(4, 2.8))
+  sage: plot(f(x), (0,e), x, ymin=0, figsize=(4, 2.8))
      
 .. end of output
 
@@ -40,10 +39,9 @@ nach :math:`x` auf:
 
 .. math::
 
-  \sqrt{1-\ln x} &= 2\Rightarrow\\
-  1-\ln(x) &= 4\Rightarrow\\
-  \ln(x) &= -3 \Rightarrow\\
-  x &= e^{-3}
+  \sqrt{1-\ln x} = 2\Rightarrow
+  \ln(x) = -3 \Rightarrow
+  x = e^{-3}
 
 Das Ergebnis wird durch Sage bestätigt:
 
