@@ -13,7 +13,7 @@ Bayerisches Abitur in Mathematik 2016
 
   an.
 
-**Lösung zu Teil a**
+**Lösung**
 
 
 Zunächst zeigen wir, dass :math:`f(x) = -f(-x)` gilt:
@@ -22,26 +22,33 @@ Zunächst zeigen wir, dass :math:`f(x) = -f(-x)` gilt:
 
   f(-x) = (-x)^2\cdot\sin(-x)=x^2\cdot(-\sin(x)) = -f(x)
 
-Oder mit Hilfe von Sage:
+Dies lässt sich auch mit Sage überprüfen
 
 .. sagecellserver::
 
   sage: f(x) = x^2*sin(x)
-  sage: if (f(-x) == -f(x)):
-  ...       print "Die Funktion ist ungerade"
+  sage: if f(-x) == -f(x):
+  ...       print "Die Funktion ist ungerade."
   sage: else:
-  ...       print "Die Funktion ist nicht ungerade"
+  ...       print "Die Funktion ist nicht ungerade."
    
 .. end of output
 
-Sind die Grenzen eines Integrals über eine ungerade Funktion symmetrisch
-gegenüber der Null, so wie es hier der Fall ist, ist der Wert des Integrals
-Null.
+und wird durch die Form des Funktionsgraphen bestätigt:
+
+.. sagecellserver::
+
+  sage: plot(f(x), (-pi, pi), figsize=(4, 2.8))
+
+.. end of output
+
+Sind die Grenzen eines Integrals über eine ungerade Funktion so wie hier symmetrisch
+bezüglich der Null, so verschwindet das Integral.
 
 Sage kann das bestätigen:
 
 .. sagecellserver::
 
-  sage: print "Wert des Integrals ist:", integral(f, x, -pi, pi)
+  sage: print "Wert des Integrals:", integral(f, x, -pi, pi)
 
 .. end of output
