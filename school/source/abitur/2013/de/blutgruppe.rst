@@ -57,13 +57,13 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung zu Teil a**
 
-Die Wahrscheinlichkeit bei 25 Blutspendern genau zehn Personen mit Blutgruppe
-A zu haben ist durch die Binomialverteilung gegeben. Die Wahrscheinlichkeit, für
+Die Wahrscheinlichkeit, bei 25 Blutspendern genau zehn Personen mit Blutgruppe
+A zu haben, ist durch die Binomialverteilung gegeben. Die Wahrscheinlichkeit, für
 jeden einzelnen Spender die Blutgruppe A zu haben, ist:
 
 .. math:: 
 
-  P(A) = P(A, Rh+) + P(A, Rh-) = 43 \%
+  P(\mathrm{A}) = P(\mathrm{A, Rh+}) + P(\mathrm{A, Rh-}) = 43 \%
 
 Die gesuchte Wahrscheinlichkeit ergibt sich dann zu:
 
@@ -76,21 +76,18 @@ Mit Sage lässt sich dieses Zufallsexperiment simulieren:
 
 .. sagecellserver::
 
-  sage: from random import random
-  sage: iterationen = 10000
-  sage: n = 25
-  sage: k = 10
-  sage: p = 0.43
-  sage: erfolge = 0
-  sage: for _ in range(iterationen):
-  sage:     a = 0
-  sage:     for __ in range(n):
-  sage:         if random()<=p:
-  sage:             a += 1
-  sage:     if(a == 10):
-  sage:         erfolge += 1
-  sage: print("Empirische Wahrscheinlichkeit bei 25 Personen 10 Personen mit Blutgruppe A zu haben: {:4.3%}".format(
-  sage:        float(erfolge)/iterationen))
+  sage: import numpy as np
+  sage: from numpy.random import random_sample
+  sage: wiederholungen = 100000
+  sage: personen = 25
+  sage: personen_a = 10
+  sage: p_a = 0.43
+  sage: treffer = 0
+  sage: for _ in range(wiederholungen):
+  sage:     if np.sum(random_sample(personen) < p_a) == personen_a:
+  sage:         treffer = treffer+1
+  sage: print("Empirische Wahrscheinlichkeit, bei 25 Personen genau 10 Personen mit Blutgruppe A zu haben: {:5.2%}".format(
+  sage:        float(treffer)/wiederholungen))
 
 .. end of output
 
