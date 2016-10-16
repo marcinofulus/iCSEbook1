@@ -8,7 +8,8 @@ Analysis
    Aufgabe 2 <ungerades_integral>
    Aufgabe 3 <kubische_funktion>
    Aufgabe 4 <log_quad>
-   Aufgabe 5 <qualitatives_integral>
+   Aufgabe 5 <beispielfunktion>
+   Aufgabe 6 <qualitatives_integral>
 
 Stochastik
 ..........
