@@ -3,7 +3,7 @@ Bayerisches Abitur in Mathematik 2016
 
 .. admonition:: Aufgabe
 
-  Gegeben ist die in :math:`\mathbb{R}` definierte ganzrationale Funktion 
+  Gegeben ist eine in :math:`\mathbb{R}` definierte ganzrationale Funktion 
   :math:`f` dritten Grades, deren Graph :math:`G_f` an der Stelle :math:`x=1`
   einen Hochpunkt und an der Stelle :math:`x=4` einen Tiefpunkt besitzt.
 
