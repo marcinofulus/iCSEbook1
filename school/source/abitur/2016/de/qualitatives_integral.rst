@@ -27,15 +27,13 @@ Bayerisches Abitur in Mathematik 2016
 
 Das Integral entspricht der Fläche unter der Kurve zwischen den
 :math:`x`-Werten 3 und 5. Dank der eingezeichneten Karo-Kästchen lässt sich
-diese Fläche durch Zählen der Kästchen abschätzen. Die Fläche kann zu etwa
-11 Kästchen abgeschätzt werden. Ein Kästchen hat eine Höhe und Breite von
-jeweils 0,5. Der Flächeninhalt eines Kästchens entspricht daher 0,25, der
-Wert des Integrals etwa 2,75.
+diese Fläche zu etwa 9 Kästchen abgeschätzen. Ein Kästchen hat eine Höhe und
+Breite von jeweils 0,5. Der Flächeninhalt eines Kästchens entspricht daher
+0,25, der Wert des Integrals beträgt somit etwa 2,25.
 
-Da wir keinen Funktionsterm zu dem Graphen haben, ist es nicht einfach, dieses
-Ergebnis mit Sage zu überprüfen. Allerdings können wir versuchen, den Graphen
-mit Hilfe einer Interpolation in etwa zu reproduzieren. 
-
+Da wir keinen Funktionsterm zu dem gegebenen Graphen haben, ist es nicht
+einfach, dieses Ergebnis mit Sage zu überprüfen. Allerdings können wir
+versuchen, den Graphen mit Hilfe einer Interpolation in etwa zu reproduzieren. 
 Hierfür wählen wir ein Polynom 4. Grades, welches von der Form
 
 .. math::
@@ -46,31 +44,32 @@ ist.
 
 Um die Paramater :math:`a` bis :math:`e` festzulegen, müssen wir fünf Punkte
 wählen, die den Graphen in etwa charakterisieren. Hierfür wählen wir die Punkte
-:math:`(0|3)`, :math:`(1|1)`, :math:`(2|0.5)`, :math:`(0|3)`,
-:math:`(4|1{,}3)` und :math:`(6|2)`.
+:math:`(0|3)`, :math:`(1|1)`, :math:`(2|0{,}5)`, :math:`(4|1{,}2)` und :math:`(6|2)`.
 
 Mit Hilfe von Sage lösen wir das entsprechende Gleichungssystem:
 
 .. sagecellserver::
 
-  sage: var('a', 'b', 'c', 'd', 'e')
-  sage: gleichungen = [e==3, a*2**4 + b*2**3 + c*2**2+d*2+e==0.5, a+b+c+d+e==1, a*6**4+b*6**3+c*6**2+d*6+e==2, a*4**4+b*4**3+c*4**2+d*4+e==1.3]
+  sage: var('a, b, c, d, e')
+  sage: f(x) = a*x**4 + b*x**3 + c*x**2 + d*x + e
+  sage: gleichungen = [f(0) == 3, f(1) == 1, f(2) == 0.5, f(4) == 1.2, f(6) == 2]
   sage: loesung = solve(gleichungen, a, b, c, d, e, solution_dict=True)[0]
-  sage: print loesung
+  sage: f(x) = f(x).substitute(loesung)
+  sage: print f(x)
      
 .. end of output
 
-Der Plot der Funktion ähnelt stark der Abbildung:
+Der Graph der Funktion entspricht im Intervall :math:`[0, 6]` recht gut
+dem gegebenen Funktionsgraphen:
 
 .. sagecellserver::
 
-  sage: f(x) = loesung[a]*x**4 + loesung[b]*x**3 + loesung[c]*x**2 + loesung[d]*x + loesung[e]
-  sage: p1 = plot(f(x), (0,6), x, figsize=(4, 2.8))
+  sage: p1 = plot(f(x), (0, 6), ymin=0, figsize=(4, 2.8))
   sage: p1
      
 .. end of output
 
-Und auch der Wert des Integrals lässt sich in etwa reproduzieren:
+Auch der Wert des Integrals lässt sich in etwa reproduzieren:
 
 .. sagecellserver::
 
@@ -80,35 +79,35 @@ Und auch der Wert des Integrals lässt sich in etwa reproduzieren:
 
 **Lösung zu Teil b**
 
-Die Ableitung der Funktion :math:`F` entspricht der Funktion :math:`f`. Wir
+Die Ableitung der Funktion :math:`F` ist die ursprüngliche Funktion :math:`f`. Wir
 müssen also lediglich den Wert von :math:`f` an der Stelle :math:`x=2` ablesen,
 was wir bereits in Teilaufgabe a) gemacht haben:
 
 .. math::
 
-  F'(2) = f(2) = 0,5
+  F'(2) = f(2) = 0{,}5
+
+Die entsprechende Tangente ist im folgenden Aufgabenteil als grüne Gerade dargestellt.
 
 **Lösung zu Teil c**
 
-Da :math:`F` eine Stammfunktion von :math:`f` ist, handelt es sich hierbei auch
-um ein Integral von :math:`f`. Lediglich die untere Grenze des Integrals, das
-die Stammfunktion :math:`F` repräsentiert muss noch gefunden werden. Hierfür
-nutzen wir die Bedingung :math:`F(3) = 0`, welche mit der Integralform
+Da :math:`F` eine Stammfunktion von :math:`f` ist, gilt
 
 .. math::
 
-  \int\limits_3^3f(x)\mathrm{d}x = 0
+  \int\limits_3^bf(x)\mathrm{d}x = F(b)-F(3)\,.
 
-konsistent ist.
+Aus der Voraussetzung :math:`F(3)=0` folgt dann die zu beweisende Aussage.
 
-Wir zeichnen F(x) in den Plot von :math:`f` mit ein:	
+Wir zeichnen :math:`F(x)` in den Plot von :math:`f` mit ein:	
 
 .. sagecellserver::
 
   sage: F(x) = integral(f(x), x)
   sage: F_3(x) = F(x) - F(3)
-  sage: p2 = plot(F_3(x), (0,6), x, figsize=(4, 2.8), color = 'red')
-  sage: p1 + p2
+  sage: p2 = plot(F_3(x), (0, 6), ymin=-2, color = 'red')
+  sage: p3 = plot(F_3(2)+0.5*(x-2), (0, 6), color='green')
+  sage: show(p1+p2+p3, figsize=(4, 2.8))
      
 .. end of output
 
