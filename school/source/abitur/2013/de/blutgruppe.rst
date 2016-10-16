@@ -23,8 +23,8 @@ Bayerisches Abitur in Mathematik 2013
   b) Ermitteln Sie die Wahrscheinlichkeit dafür, dass mehr als die Hälfte der
      Spender die Blutgruppe 0 und den Rhesusfaktor Rh+ besitzen.
   
-  Folgende Tabelle gibt für die Verschiedenen Empfänger von Spendenblut an,
-  welches Spendenblut für sie jeweils geeignet ist:
+  Folgende Tabelle gibt für die verschiedenen Empfänger von Spenderblut an,
+  welches Spenderblut für sie jeweils geeignet ist:
   
   +------------------+-----------------------------------------------------------------+
   |                  | Spender                                                         |
@@ -51,7 +51,7 @@ Bayerisches Abitur in Mathematik 2013
   c) Für einen Patienten mit der Blutgruppe B und dem Rhesusfaktor Rh- wird
      Spendenblut benötigt. Bestimmen Sie, wie viele zufällig ausgewählte
      Personen mindestens Blut spenden müssen, damit man mit einer
-     Wahrscheinlichkeit von mehr als 95 % mindestens einen für diesen Patienten
+     Wahrscheinlichkeit von mehr als 95 % mindesten einen für diesen Patienten
      geeignete Blutspende erhält.
   
 
