@@ -62,7 +62,7 @@ Mitte der beiden Nullstellen liegen:
 
 .. math::
 
-  x_0 = \frac{1 + 4}{2} = 2,5
+  x_0 = \frac{1 + 4}{2} = 2{,}5
 
 Der Wendepunkt von :math:`f` lässt sich bereits in der Zeichnung aus
 Teilaufgabe a) erkennen. Wir können ihn aber auch rechnerisch
