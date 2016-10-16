@@ -124,7 +124,7 @@ Aufgabe 2
 Eine positive Verschiebung um :math:`1` in :math:`x`-Richtung erhält man, 
 indem  :math:`x` durch :math:`x-1` ersetzt wird. Durch Addition von :math:`1`
 erhält man die Verschiebung in :math:`y`-Richtung. Es ergibt sich für
-:math:`g`:
+:math:`g` in Übereinstimmung mit dem angegebenen Teilergebnis:
 
 .. sagecellserver::
 
@@ -140,7 +140,10 @@ in Sage wie folgt zeigen:
 
   sage: print "g(x) = ", g(x)
   sage: print "-g(-x) = ", -g(-x)
-  sage: print "g(x) ist punktsymmetrisch: " + str(bool(g(x)==-g(-x)))
+  sage: if g(x) == -g(-x):
+  sage:     print "g(x) ist punktsymmetrisch."
+  sage: else:
+  sage:     print "g(x) ist nicht punktsymmetrisch."
 
 .. end of output
 
@@ -152,10 +155,14 @@ Die Stammfunktion der Funktion :math:`f` lautet
 
   F(x) = \frac{x^2}{4}-\frac{x}{2}+8\ln(\vert x+1\vert).
 
-Durch Einsetzen der Integrationsgrenzen erhält man das angegebene
-Ergebnisse.
+Durch Einsetzen der Integrationsgrenzen findet man das angegebene
+Ergebnis
 
-Mit Hilfe von Sage erhält man
+.. math::
+
+  \int_0^4f(x)\mathrm{d}x = F(4)-F(0) = 2+8\ln(5)\,.
+
+Mit Hilfe von Sage erhält man entsprechend
 
 .. sagecellserver::
 
@@ -165,19 +172,24 @@ Mit Hilfe von Sage erhält man
 
 .. end of output
 
-Das zweite zu berechnende Integral lässt sich nun unter
-Ausnutzung der Punktsymmetrie von :math:`g(x)=f(x-1)+1` berechnen.
+Aus der Punktsymmetrie :math:`g(-x)=-g(x)` und der Beziehung :math:`g(x)=f(x-1)+1`
+folgt
 
 .. math::
 
-  \int_{-6}^{-2}f(x)\mathrm{d}x &= \int_{-6}^{-2}[g(x+1)-1]\mathrm{d}x\\
-                                &= \int_{-5}^{_1}[g(x)-1]\mathrm{d}x\\
-                                &= -\int_1^5[g(-x)+1]\mathrm{d}x\\
-                                &= -\int_1^5[g(x)+1]\mathrm{d}x\\
-                                &= -\int_1^5[f(x-1)+2]\mathrm{d}x\\
+  f(x) = -f(-x-2)-2
+
+Das zweite zu berechnende Integral lässt sich somit folgendermaßen bestimmen:
+
+.. math::
+
+  \int_{-6}^{-2}f(x)\mathrm{d}x &= -\int_{-6}^{-2}[f(-x-2)+2]\mathrm{d}x\\
+                                &= -\int_2^6[f(x-2)+2]\mathrm{d}x\\
                                 &= -\int_0^4[f(x)+2]\mathrm{d}x\\
                                 &= -\int_0^4f(x)\mathrm{d}x-8\\
-                                &= -8\ln(5)-10
+                                &= -8\ln(5)-10\,.
+
+Hierbei wurde zunächst das Integrationsintervall gespiegelt und anschließend verschoben.
 
 Dieser Wert lässt sich durch Sage bestätigen:
 
@@ -196,8 +208,8 @@ Punktsymmetrie zu einem Punkt mit :math:`y=-1` folgt.
   sage: pf = plot(f, exclude=[-1], xmin=-10, xmax=10, ymin=-10, ymax=10)
   sage: pf1 = plot(f, -6, -2, fill=-2)
   sage: pf2 = plot(f, 0, 4, fill='axis')
-  sage: rec = polygon([[-6, 0], [-2, 0], [-2, -2], [-6, -2]], color='red')
-  sage: show(pf + pf1 + pf2 + rec, aspect_ratio=1, figsize=4)
+  sage: rect = polygon([[-6, 0], [-2, 0], [-2, -2], [-6, -2]], color='red')
+  sage: show(pf + pf1 + pf2 + rect, aspect_ratio=1, figsize=4)
 
 .. end of output
 
