@@ -6,7 +6,7 @@ Bayerisches Abitur in Mathematik 2016
   Gegeben ist die Funktion :math:`f:x\mapsto\frac{\ln x}{x^2}` mit maximalem
   Definitionsbereich :math:`\mathbb{D}`.
 
-  a) Geben Sie :math:`\mathbb{D}`, sowie die Nullstelle von :math:`f` an
+  a) Geben Sie :math:`\mathbb{D}` sowie die Nullstelle von :math:`f` an
      und bestimmen Sie :math:`\lim\limits_{x\rightarrow0}f(x)`.
 
   b) Ermitteln Sie die :math:`x`-Koordinate des Punkts, in dem der Graph von
