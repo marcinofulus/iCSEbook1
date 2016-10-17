@@ -12,9 +12,9 @@ Bayerisches Abitur in Mathematik 2013
   einer zusätzlichen Kampagne verbunden wären, jedoch möglichst vermeiden.
   
   a) Um zu einer Entscheidung über die Durchführung einer zusätzlichen
-     Kampagne zu gelangen, soll die Nullhypothese "Der Kandidat der Partei A
-     würde gegenwärtig höchstens 50% aller Stimmen erhalten." mithilfe einer
-     Stichprobe von 200 Wahlbeteiligten auf einem Signifikanzniveau von 5%
+     Kampagne zu gelangen, soll die Nullhypothese „Der Kandidat der Partei A
+     würde gegenwärtig höchstens 50% aller Stimmen erhalten.“ mithilfe einer
+     Stichprobe von 200 Wahlberechtigten auf einem Signifikanzniveau von 5%
      getestet werden. Bestimmen Sie die zugehörige Entscheidungsregel.
 
   b) Begründen Sie, dass die Wahl der Nullhypothese für den beschriebenen
