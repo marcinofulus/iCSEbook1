@@ -45,15 +45,12 @@ Aus der Aufgabenstellung ergibt sich folgende Vierfeldertafel:
 |:math:`\sum`        |44%      |56%                 |100%        |
 +--------------------+---------+--------------------+------------+
 
-Aus der Aussage "Jeder Siebte derjenigen Befragte, die sich noch nicht für
-einen Kandidaten entschieden haben, ist Jungwähler." erhalten wir für die
-Vierfeldertafel die Gleichung
-
-.. math::
-
-  X + 6\cdot X = 56\% \Rightarrow X = 8\%.
-
-Damit können wir durch einfaches Subtrahieren die Vierfeldertafel füllen.
+Hierbei haben wir in der Spalte :math:`\overline{K}` die Aussage „Jeder Siebte
+derjenigen Befragte, die sich noch nicht für einen Kandidaten entschieden haben,
+ist Jungwähler.“ berücksichtigt. Aus der Summe der noch unentschiedenen
+Wahlberechtigten ergibt sich :math:`X=8\%`. In den Zeilen :math:`J` und
+:math:`\overline{J}` lassen sich dann die leeren Felder durch Subtraktion
+ergänzen.
 
 +--------------------+---------+--------------------+------------+
 |                    |:math:`K`|:math:`\overline{K}`|:math:`\sum`|
@@ -67,7 +64,7 @@ Damit können wir durch einfaches Subtrahieren die Vierfeldertafel füllen.
 
 **Lösung zu Teil b**
 
-Um die Ungleichung zu zeigen berechnen wir :math:`P_J(\overline{K})` und 
+Um die Ungleichung zu zeigen, berechnen wir :math:`P_J(\overline{K})` und 
 :math:`P_{\overline{J}}(\overline{K})`.
 
 .. math::
@@ -78,49 +75,37 @@ Um die Ungleichung zu zeigen berechnen wir :math:`P_J(\overline{K})` und
   = \frac{48\%}{88\%} \approx 54{,}5\% \\
 
 Die Ungleichung :math:`P_J(\overline{K})>P_{\overline{J}}(\overline{K})` ist
-also erfüllt, jedoch ist es deswegen nicht sinnvoll sich im Wahlkampf auf die
+also erfüllt. Dennoch ist es nicht sinnvoll, sich im Wahlkampf auf die
 Jungwähler zu konzentrieren. Für die Wahlentscheidung muss die Gesamtzahl der
-Wähler betrachtet werden. Auch wenn bei den älteren Wählern sich Prozentual
-schon mehr für einen Kandidaten entschieden haben als bei Jungwählern ist dies
-in absoluten Zahlen nicht der Fall. Bei 8% Jungwählern und 48% älteren Wählern
-die sich noch nicht entschieden haben sollte der Wahlkampf besser auf ältere
+Wähler betrachtet werden. Auch wenn sich bei den älteren Wählern prozentual
+bereits mehr Wähler für einen Kandidaten entschieden haben als bei Jungwählern,
+ist dies in absoluten Zahlen nicht der Fall. Bei 8% Jungwählern und 48% älteren
+Wählern, die sich noch nicht entschieden haben, sollte der Wahlkampf besser auf ältere
 Wähler konzentriert sein.
 
 **Lösung zu Teil c**
 
-Die Wahrscheinlichkeit das ein Wahlberechtigter ein Jungwähler ist beträgt 12%.
-Die Wahrscheinlichkeit genau sechs Jungwählern bei 48 Wählern zu haben lässt
-sich analog dem Urnenmodell mit zurücklegen berechnen.
+Die Wahrscheinlichkeit, dass ein Wahlberechtigter ein Jungwähler ist beträgt 12%.
+Die Wahrscheinlichkeit genau sechs Jungwähler unter 48 Wählern zu haben, lässt
+sich aus der Binomialverteilung erhalten:
 
 .. math::
 
-  P^{48}_{0{,}12}(6) = {48 \choose 6} \cdot 0{,}12^6 \cdot (1-0{,}12)^{48} = 17{,}07\%
+  P^{48}_{0{,}12}(6) = {48 \choose 6} \cdot 0{,}12^6 \cdot (1-0{,}12)^{42} = 17{,}07\%
 
-Mit Sage können wir diese Experiment simulieren.
+Mit Sage können wir dieses Experiment simulieren.
 
 .. sagecellserver::
 
-  sage: from random import random
-  sage: iterationen = 10000
-  sage: n = 48
+  sage: import numpy as np
+  sage: from numpy.random import random_sample
+  sage: iterationen = 1000000
+  sage: personen = 48
+  sage: jungwaehler = 6
   sage: p = 0.12
-  sage: k = 6
-  sage: erfolge = 0
-
-  sage: def iterate():
-  sage:     j = 0
-  sage:     for _ in range(n):
-  sage:         if random() <= p:
-  sage:             j += 1
-  sage:     return j == k
-
-  sage: for _ in range(iterationen):
-  sage:     if(iterate()):
-  sage:         erfolge += 1
-  sage: print("Wahrscheinlichkeit dafür, dass bei {} zufälligen Personen genau {} Jungwähler dabei sind beträgt: {:4.3%}".format(n, k, float(erfolge)/iterationen))
+  sage: sechs_jungwaehler = np.sum(random_sample((personen, iterationen)) < p, axis=0) == 6
+  sage: treffer = np.sum(sechs_jungwaehler)
+  sage: print("Wahrscheinlichkeit dafür, dass bei {} zufälligen Personen genau {} Jungwähler dabei sind beträgt: {:4.2%}".format(
+  sage:     personen, jungwaehler, float(treffer)/iterationen))
 
 .. end of output
-
-
-
-
