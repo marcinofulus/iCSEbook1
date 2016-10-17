@@ -23,44 +23,51 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung zu Teil a**
 
-Wir wollen die Nullhypothese widerlegen. Dafür gehen wir davon aus, dass 50%
-der Wähler den Kandidaten der Partei A wählen. Bei einer Umfrage von 200
-Personen, müssen wir nun die Anzahl der Personen bestimmen die für unseren
-Kandidaten wählen, sodass das Signifikanzniveau bei 5% liegt. Die Gleichung
+Wir wollen die Nullhypothese widerlegen. Dafür gehen wir davon aus, dass 50% der
+Wähler den Kandidaten der Partei A wählen. Bei einer Umfrage unter 200 Personen
+müssen wir nun die Anzahl :math:`k` der Personen bestimmen, die sich für unseren
+Kandidaten aussprechen, sodass das Signifikanzniveau bei 5% liegt. Die Gleichung
 
 .. math::
 
-  1- P^{200}_{0{,}5}(X \leq k) \leq 5\%
+  1- P^{200}_{0{,}5}(X \leq k) \leq 0{,}05
 
-Muss also nach :math:`k` gelöst werden. Aus einem Tafelwerk zur
-Binomialverteilung können wir :math:`k=112` bestimmen.
+muss also nach :math:`k` aufgelöst werden. Aus einem Tafelwerk zur
+Binomialverteilung können wir :math:`k\approx112` bestimmen. Alternativ können wir
+Sage heranziehen:
 
-Mit Sage können wir dieses Experiment simulieren und überprüfen bei wie vielen
-Umfragen mindestens 112 Personen angeben würden Kandidat A zu wählen, obwohl
-die Wahrscheinlichkeit dass eine Person Kandidat A wählt bei 50% liegt.
+.. sagecellserver::
+
+  sage: from scipy.stats import binom
+  sage: gesamt = 200
+  sage: p = 0.5
+  sage: for zustimmend in (111, 112, 113):
+  sage:     print "Signifikanzniveau für {} Zustimmungen: {:4.2f}%".format(
+  sage:         zustimmend, (1-binom.cdf(zustimmend-1, gesamt, p))*100)
+
+.. end of output
+
+Zudem können wir die Umfrage simulieren und überprüfen, bei wie vielen
+Umfragen mindestens 112 Personen angeben würden, Kandidat A zu wählen, obwohl
+die Wahrscheinlichkeit, dass eine Person Kandidat A wählt, bei 50% liegt.
 
 
 .. sagecellserver::
 
-  sage: from random import random
-  sage: iteration = 5000
+  sage: import numpy as np
+  sage: from numpy.random import random_sample
+  sage: wiederholungen = 10000
   sage: p = 0.5
-  sage: n = 200
-  sage: k = 112
-  sage: success = 0
+  sage: personen = 200
+  sage: schwelle = 112
+  sage: fuer_A = random_sample((personen, wiederholungen)) < p
+  sage: ueber_schwelle = np.sum(fuer_A, axis=0) >= schwelle
+  sage: faelle = np.sum(ueber_schwelle)
 
-  sage: def umfrage():
-  sage:     i = 0
-  sage:     for _ in range(n):
-  sage:         if(random() < p):
-  sage:             i += 1
-  sage:     return i >= k
-
-  sage: for _ in range(iteration):
-  sage:     if(umfrage()):
-  sage:         success += 1
-
-  sage: print("Die Wahrscheinlichkeit, dass bei einer Umfrage von {} Personen mindestens {} Personen Kandidat A wählen, obwohl die Wahrscheinlichkeit sich für Kandidat A zu entscheiden bei {:3.1%} liegt, beträgt:  {:4.3%} ".format(n, k, float(p), float(success/iteration)))
+  sage: print(("Die Wahrscheinlichkeit, dass bei einer Umfrage unter {} Personen mindestens "
+               "{} Personen Kandidat A wählen,\nwenn die Wahrscheinlichkeit, sich für "
+               "Kandidat A zu entscheiden, bei {:2.0%} liegt, beträgt:  {:3.2%} ").format(
+            personen, schwelle, float(p), float(faelle)/wiederholungen))
 
 
 .. end of output
@@ -68,8 +75,7 @@ die Wahrscheinlichkeit dass eine Person Kandidat A wählt bei 50% liegt.
 **Lösung zu Teil b**
 
 Mit der gewählten Nullhypothese kann relativ sicher gesagt werden, dass bei
-Erfolg der Kandidat der Partei A gewählt wird. Stimmt die erste Umfrage, dass
-der Kandidat nur ungefähr 50% der stimmen erhält, so wird die Nullhypothese
-wahrscheinlich widerlegt und die Wahlhelferin bekommt die Mittel für eine
-zusätzliche Kampagne genehmigt.
-
+mindestens 112 positiven Äußerungen der Kandidat der Partei A gewählt wird.
+Stimmt die erste Umfrage, dass der Kandidat nur ungefähr 50% der Stimmen erhält,
+so wird die Nullhypothese wahrscheinlich widerlegt und die Wahlhelferin bekommt
+die Mittel für eine zusätzliche Kampagne genehmigt.
