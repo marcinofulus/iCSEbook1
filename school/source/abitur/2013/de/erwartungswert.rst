@@ -17,8 +17,12 @@ Bayerisches Abitur in Mathematik 2013
      :align: center
   
   a) Berechnen Sie die Wahrscheinlichkeit :math:`P(X=1)` und :math:`P(X=2)`.
+
+     *(Ergebnis:* :math:`P(X=1)=\frac{12}{55}, P(X=2)=\frac{28}{55}`\ *)*
   
   b) Bestimmen Sie Erwartungswert und Varianz der Zufallsgröße :math:`X`.
+
+     *(Ergebnis:* :math:`E(X)=2, \mathrm{Var}(X)=\frac{6}{11}`\ *)*
   
   c) Abbildung 2 zeigt die Wahrscheinlichkeitsverteilung einer
      binomialverteilten Zufallsgröße :math:`Y` mit den Parametern :math:`n=3`
@@ -26,7 +30,7 @@ Bayerisches Abitur in Mathematik 2013
      gleichen Erwartungswert wie die Zufallsgröße :math:`X`, aber eine größer
      Varianz als :math:`X` besitzt.
      Erläutern Sie, woran man durch Vergleich der Abbildungen 1 und 2 erkennen
-     kann, dass :math:`Var(Y)>Var(X)` gilt.
+     kann, dass :math:`\mathrm{Var}(Y)>\mathrm{Var}(X)` gilt.
 
 
 **Lösung zu Teil a**
