@@ -13,10 +13,10 @@ Bayerisches Abitur in Mathematik 2013
   
   Betrachtet werden folgende Ereignisse:
   
-  J: "Eine aus den Befragten zufällig ausgewählte Person ist Jungwähler."
+  :math:`J`: „Eine aus den Befragten zufällig ausgewählte Person ist Jungwähler.“
   
-  K: "Eine aus den Befragten zufällig ausgewählte Person hat sich bereits für
-  einen Kandidaten entschieden."
+  :math:`K`: „Eine aus den Befragten zufällig ausgewählte Person hat sich bereits für
+  einen Kandidaten entschieden.“
   
   a) Erstellen Sie zu dem beschriebenen Sachzusammenhang eine vollständig
      ausgefüllte Vierfeldertafel.
