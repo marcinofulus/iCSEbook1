@@ -49,22 +49,23 @@ vorliegt und das Testergebnis negativ ist.
 
 **Lösung zu Teil b**
 
-:math:`P(T)` beschreibt wie Wahrscheinlich ein positives Testergebnis ist.
+:math:`P(T)` beschreibt die Wahrscheinlichkeit für ein positives Testergebnis.
 Sie ergibt sich aus der Wahrscheinlichkeit eines positiven Tests bei
-eine gesunden neugeborenen Kind, sowie dem Wahrscheinlichkeit eines positiven Tests
+einem gesunden neugeborenen Kind sowie der Wahrscheinlichkeit eines positiven Tests
 bei einem kranken neugeborenen Kind.
 
 .. math::
 
-  P(T) = (1-0{,}00074)\cdot 0{,}0078 + 0{,}00074 \cdot 0{,}995 \approx 0{,}853\%
+  P(T) = (1-0{,}00074)\cdot 0{,}0078 + 0{,}00074 \cdot 0{,}995 \approx
+  0{,}00853\,.
 
-:math:`P_S(T)` berechnet sich wie folgt:
+:math:`P_T(S)` berechnet sich wie folgt:
 
 .. math::
 
-  P_T(S) = \frac{P(S \cap T)}{P(T)} = \frac{0{,}00074\cdot 0{,}995}{0{,}00853} \approx 8{,}63\%
+  P_T(S) = \frac{P(S \cap T)}{P(T)} = \frac{0{,}00074\cdot 0{,}995}{0{,}00853} \approx 0{,}0863\,.
 
-Dies bedeutet, dass bei einem Positiven Testergebnis nur in 8,63% tatsächlich
+Dies bedeutet, dass bei einem positiven Testergebnis nur in 8,63% tatsächlich
 eine Stoffwechselstörung vorliegt.
 
 **Lösung zu Teil c**
@@ -76,7 +77,7 @@ nicht positiv getestet wird beträgt:
 
   P(S\cap\overline{T}) = 0{,}00074\cdot (1-0{,}995) \approx 3{,}7 \cdot 10^{-6}
 
-Bei einer Millionen getesteten Kinder tritt dieses Ereignis folglich bei etwa
+Bei einer Million getesteter Kinder tritt dieses Ereignis folglich bei etwa
 vier Kindern auf.
 
 Mit Sage können wir den Test simulieren und die Anzahl aller auftretenden
@@ -84,35 +85,24 @@ Ereignisse bestimmen.
 
 .. sagecellserver::
 
-  sage: from random import random
+  sage: import numpy as np
+  sage: from numpy.random import random_sample
   sage: kinder = 1000000
   sage: ps = 0.00074
-  sage: pst= 0.995
+  sage: pst = 0.995
   sage: pnst = 0.0078
 
-  sage: sum_s_pos = 0
-  sage: sum_s_neg = 0
-  sage: sum_ns_pos = 0
-  sage: sum_ns_neg = 0
+  sage: test_s = random_sample(kinder)
+  sage: kranke_kinder = np.sum(random_sample(kinder) < ps)
+  sage: kranke_kinder_pos = np.sum(random_sample(kranke_kinder) < pst)
+  sage: kranke_kinder_neg = kranke_kinder-kranke_kinder_pos
+  sage: gesunde_kinder = kinder-kranke_kinder
+  sage: gesunde_kinder_pos = np.sum(random_sample(gesunde_kinder) < pnst)
+  sage: gesunde_kinder_neg = gesunde_kinder-gesunde_kinder_pos
 
-  sage: for _ in range(kinder):
-  sage:     if(random() <= ps): # Kind hat Stoffwechselkrankheit
-  sage:         if(random()<= pst): # Test ist positiv
-  sage:             sum_s_pos += 1
-  sage:         else: # Test ist negativ
-  sage:             sum_s_neg += 1
-  sage:     else: # Kind hat nicht Stoffwechselkrankheit
-  sage:         if(random() <= pnst): # Test ist positiv
-  sage:             sum_ns_pos += 1
-  sage:         else: # Test ist negativ
-  sage:             sum_ns_neg += 1
-
-  sage: print("{} Kinder wurden wie folgt getestet:\n".format(kinder) +
-  sage:       "{} Kinder waren erkrankt und wurden positiv getestet.\n".format(sum_s_pos) +
-  sage:       "{} Kinder waren erkrankt und wurden negativ getestet.\n".format(sum_s_neg) +
-  sage:       "{} Kinder waren nicht erkrankt und wurden positiv getestet.\n".format(sum_ns_pos) +
-  sage:       "{} Kinder waren nicht erkrankt und wurden negativ getestet.\n".format(sum_ns_neg))  
-
-.. end of output
-
-
+  sage: print("""{} Kinder wurden wie folgt getestet:
+  sage: {} Kinder waren erkrankt und wurden positiv getestet.
+  sage: {} Kinder waren erkrankt und wurden negativ getestet.
+  sage: {} Kinder waren nicht erkrankt und wurden positiv getestet.
+  sage: {} Kinder waren nicht erkrankt und wurden negativ getestet.""").format(
+  sage:     kinder, kranke_kinder_pos, kranke_kinder_neg, gesunde_kinder_pos, gesunde_kinder_neg)
