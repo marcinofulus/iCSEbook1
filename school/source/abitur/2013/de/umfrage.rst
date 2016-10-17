@@ -27,7 +27,7 @@ Bayerisches Abitur in Mathematik 2013
      konzentrieren.
   
   c) Der Kandidat der Partei A spricht an einem Tag während seines Wahlkampfs
-     48 zufällig ausgewählt wahlberechtigte an. Bestimmen Sie die
+     48 zufällig ausgewählte Wahlberechtigte an. Bestimmen Sie die
      Wahrscheinlichkeit dafür, dass sich darunter genau sechs Jungwähler
      befinden.
 
