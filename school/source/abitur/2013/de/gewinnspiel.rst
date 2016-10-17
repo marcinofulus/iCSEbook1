@@ -8,7 +8,7 @@ Bayerisches Abitur in Mathematik 2013
   Spieler zwei Euro bezahlt hat, werden aus einem Behälter, in dem sich drei
   rote, drei grüne und drei blaue Kugeln befinden, drei Kugeln ohne Zurücklegen
   zufällig entnommen. Haben die drei entnommenen Kugeln die gleiche Farbe, so
-  gewinnt der Spieler und bekommt einen bestimmen Geldbetrag ausgezahlt;
+  gewinnt der Spieler und bekommt einen bestimmten Geldbetrag ausgezahlt;
   ansonsten verliert er und erhält keine Auszahlung. Anschließend werden die
   gezogenen Kugeln in den Behälter zurückgelegt.
   
