@@ -49,14 +49,24 @@ Bayerisches Abitur in Mathematik 2013
   
 **Lösung zu Teil a**
 
-Die Koordinaten des Punktes B erhält man indem man die Vektoren für A und B
-addiert. Das Volumen :math:`V` der Pyramide lässt sich über die Formel
+Die Koordinaten des Punktes :math:`B` erhält man, indem man die Vektoren von
+:math:`D` nach :math:`A` bzw. :math:`C` addiert. Es ergibt sich :math:`B
+(12|12|0)`.
+
+Das Volumen :math:`V` der Pyramide lässt sich über die Formel
 
 .. math::
 
-  V = \frac{1}{3} (\vec{A} \times \vec{C}) \cdot \vec{S}
+  V = \frac{1}{3}Ah=\frac{1}{3}144\cdot 8=384
 
-berechnen. Mit Sage können wir die Aufgabe leicht lösen.
+mit der Grundfläche :math:`A` und der Höhe `h` berechnen. Allgemeiner gilt
+die Beziehung
+
+.. math::
+
+  V = \frac{1}{3} (\vec{A} \times \vec{C}) \cdot \vec{S}\,,
+
+die sich auch mit Sage leicht auswerten lässt.
 
 .. sagecellserver::
 
@@ -69,22 +79,23 @@ berechnen. Mit Sage können wir die Aufgabe leicht lösen.
     sage: print("B = {}".format(b))
 
     sage: v = 1/3 * a.cross_product(b) * s
-    sage: print("Das Volumen der Pyramide beträgt {}m".format(v))
+    sage: print("Das Volumen der Pyramide beträgt {}m³.".format(v))
 
 .. end of output
 
 **Lösung zu Teil b**
 
-Es soll die Ebene E die sich aus den Punkten B, C und S ergibt berechnet
-werden. Die Gleichung für die Ebene soll in Normalenform angegeben werden.
-Den Normalenvektor erhält man indem man aus den Ortsvektoren der Punkte
-zwei Spannvektoren bildet und diese mit Hilfe des Kreuzproduktes multipliziert.
+Es soll die Ebene :math:`E` die sich aus den Punkten :math:`B`, :math:`C` und
+:math:`S` ergibt berechnet werden. Die Gleichung für die Ebene soll in
+Normalenform angegeben werden. Den Normalenvektor erhält man, indem man aus den
+Ortsvektoren der Punkte zwei Spannvektoren bildet und diese mit Hilfe des
+Kreuzproduktes multipliziert.
 
 .. math::
 
   \vec{n} = (\vec{C}-\vec{B}) \times (\vec{S} - \vec{B})
 
-Mit mit :math:`\vec{B}` als Stützvektor lautet die Gleichung für die Ebene in
+Mit :math:`\vec{B}` als Stützvektor lautet die Gleichung für die Ebene in
 Normalenform dann:
 
 .. math::
@@ -95,18 +106,20 @@ Mit Sage ergibt sich folgende Gleichung für E:
 
 .. sagecellserver::
 
-    sage: var("x_1")
-    sage: var("x_2")
-    sage: var("x_3")
+    sage: var("x_1, x_2, x_3")
     sage: n = (c-b).cross_product(s-b)
-    sage: E = n.dot_product(vector([x_1, x_2, x_3])) - b.dot_product(n) == 0
+    sage: print("Normalenvektor: {}".format(n))
+    sage: E = n.dot_product(vector([x_1, x_2, x_3])-b) == 0
     sage: print("E : {}".format(E))
 
 .. end of output
 
+Das Ergebnis entspricht bis auf einen Faktor 48 der im Aufgabentext angegebenen
+Lösung.
+
 **Lösung zu Teil c**
 
-Die Strebe vom Mittelpunkt der Grundfläche :math:`S' = (6,6,0)` zur südlichen
+Die Strebe vom Mittelpunkt der Grundfläche :math:`S' (6|6|0)` zur südlichen
 Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene E durch den
 Punkt S' gesucht. Ist das Lot bestimmt können wir den Schnittpunkt mit der
 Ebene berechnen und daraus die Höhe (entspricht der :math:`x_3` Koordinate)
@@ -132,7 +145,7 @@ berechnet werden.
 
 **Lösung zu Teil d**
 
-Da sich der Punkt S in über der Mitte der Grundfläche befindet handelt es sich
+Da sich der Punkt S über der Mitte der Grundfläche befindet, handelt es sich
 bei dem angegebenen Dreieck um ein gleichschenkliges Dreieck. Die Fläche eines
 gleichschenklichen Dreiecks mit Schenkel :math:`a` und Basis :math:`b` ist
 über die Formel
