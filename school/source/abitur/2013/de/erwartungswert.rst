@@ -35,9 +35,31 @@ Bayerisches Abitur in Mathematik 2013
 
 **Lösung zu Teil a**
 
-Das Losverfahren entspricht dem ziehen ohne zurücklegen aus einer Urne. Dafür
-ergibt sich eine hypergeometrische Verteilung. Die Wahrscheinlichkeiten für
-:math:`P(X=1)` und :math:`P(X=2)` können durch Sage gelöst werden.
+Das Losverfahren entspricht dem Ziehen aus einer Urne ohne Zurücklegen. Dafür
+ergibt sich eine hypergeometrische Verteilung. Mit der Zahl der Stadträtinnen
+(:math:`w=8`) und der Stadträte (:math:`m=4`) erhält man bei :math:`N=3`
+Ausschussmitgliedern
+
+.. math::
+
+  P(X) = \dfrac{\frac{w!}{X!(w-X)!} \frac{m!}{(N-X)!(m-N+X)!}}
+                           {\frac{(w+m)!}{N!(w+m-N)!}}\,.
+
+Einsetzen liefert
+
+.. math::
+
+  P(1)=\frac{12}{55}\,.
+  
+Da die Summe der Wahrscheinlichkeiten gleich Eins sein muss, ergibt sich mit
+den anderen angegebenen Wahrscheinlichkeiten ferne
+
+.. math::
+
+  P(2) = 1-P(0)-P(1)-P(3) = \frac{28}{55}\,.
+
+Die Wahrscheinlichkeiten können auch leicht mit Hilfe von Sage berechnet
+werden.
 
 
 .. sagecellserver::
@@ -45,11 +67,11 @@ ergibt sich eine hypergeometrische Verteilung. Die Wahrscheinlichkeiten für
   sage: def hypergeometrisch(M, N, n, k):
   sage:     return binomial(M, k) * binomial(N - M, n - k) / binomial(N, n)
 
-  sage: N = 12
-  sage: M = 8
-  sage: n = 3
-  sage: for k in range(n+1):
-  sage:     print("P(X={}) = {}".format(k, hypergeometrisch(M, N, n, k)))
+  sage: w = 8
+  sage: m = 4
+  sage: N = 3
+  sage: for X in range(N+1):
+  sage:     print("P(X={}) = {}".format(X, hypergeometrisch(w, m+w, N, X)))
 
 .. end of output
 
@@ -60,30 +82,53 @@ Formel
 
 .. math::
 
-  E(X) = \sum_k k \cdot P(X=k).
+  E(X) = \sum_k k \cdot P(k).
 
 Die Varianz ist dann durch
 
 .. math::
 
-  Var(X) = E(X^2) - \vert E(X) \vert^2
+  \mathrm{Var}(X) = E(X^2) - \big(E(X)\big)^2
 
-gegeben.
+mit
 
-Mit Sage können wir diese Werte leicht bestimmen.
+.. math::
+
+  E(X^2) = \sum_k k^2 \cdot P(k)
+
+gegeben. Mit den Wahrscheinlichkeiten aus der ersten Teilaufgabe erhält man
+
+.. math::
+
+  E(X) &= \frac{1}{55}(0\cdot 1+1\cdot 12+2\cdot 28+3\cdot 14) = \frac{110}{55} = 2\\
+  E(X^2) &= \frac{1}{55}(0\cdot 1+1\cdot 12+4\cdot 28+9\cdot 14) = \frac{250}{55} = \frac{50}{11}
+
+und damit
+
+.. math::
+
+  \mathrm{Var}(X) = \frac{50}{11}-4 = \frac{6}{11}\,.
+
+Mit Sage können wir diese Werte ebenfalls leicht bestimmen.
 
 .. sagecellserver::
 
-  sage: E = sum(hypergeometrisch(M, N, n, k)*k for k in range(n+1))
-  sage: sigma = sum(hypergeometrisch(M, N, n, k)*k**2 for k in range(n+1)) - E**2
-  sage: print(u"E(X) = {} \n \u03c3 = {}".format(E, sigma))
+  sage: E_X = sum(hypergeometrisch(w, m+w, N, k)*k for k in range(N+1))
+  sage: E_X2 = sum(hypergeometrisch(w, m+w, N, k)*k^2 for k in range(N+1))
+  sage: print(u"E(X) = {} \nVar(X) = {}".format(E_X, E_X2-E_X^2))
 
 .. end of output
 
 **Lösung zu Teil c**
 
-Mit der gegebenen binomialen Wahrscheinlichkeitsverteilung können wir mit Hilfe
-von Sage den Erwartungswert sowie die Varianz genau bestimmen.
+Mit der gegebenen binomialen Wahrscheinlichkeitsverteilung
+
+.. math::
+
+  P(Y=k) = \left(\frac{2}{3}\right)^k\left(\frac{1}{3}\right)^{3-k}
+           \begin{pmatrix}3\\k\end{pmatrix}
+
+können wir mit Hilfe von Sage den Erwartungswert sowie die Varianz bestimmen.
 
 .. sagecellserver::
 
@@ -93,21 +138,23 @@ von Sage den Erwartungswert sowie die Varianz genau bestimmen.
   sage: N = 3
   sage: p = 2/3
   sage: for k in range(N+1):
-  sage:     print("P(X={}) = {}".format(k, bernoulli(N,p,k)))
+  sage:     print("P(X={}) = {}".format(k, bernoulli(N, p, k)))
     
-  sage: E = sum(bernoulli(N,p,k)*k for k in range(N+1))
-  sage: sigma = sum(bernoulli(N,p,k)*k**2 for k in range(N+1)) - E**2
-  sage: print(u"E(X) = {} \n\u03c3 = {}".format(E, sigma))
+  sage: E_Y = sum(bernoulli(N, p, k)*k for k in range(N+1))
+  sage: E_Y2 = sum(bernoulli(N, p, k)*k^2 for k in range(N+1))
+  sage: print(u"E(Y) = {} \nVar(Y) = {}".format(E_Y, E_Y2-E_Y^2))
 
 .. end of output
 
-Vergleicht man die Ergebnisse mit der Teilaufgabe b, so sieht man das der
-Erwartungswert gleich ist, die Varianz jedoch größer ist.
+Natürlich kann man diese Ergebnisse auch durch explizite Rechnung analog zur
+vorigen Teilaufgabe erhalten, wenn man zunächst die Wahrscheinlichkeiten
+bestimmt.
 
-Aus den Abbildungen lässt sich dies bereit schließen, so ist bei :math:`k=2`
-die Wahrscheinlichkeit für :math:`Y` deutlich kleiner und der
-Wert bei :math:`k=0` hingegen deutlich größer. Die
-Wahrscheinlichkeitsverteilung für :math:`Y` ist als "breiter" verteilt als die
-für :math:`X`. Dies größere Verteilung wird genau durch eine größere Varianz
-beschrieben.
+Vergleicht man die Ergebnisse mit der Teilaufgabe b, so sieht man, dass der
+Erwartungswert gleich ist, die Varianz jedoch größer.
 
+Aus den Abbildungen lässt sich dies bereits schließen, da die Wahrscheinlichkeit
+für :math:`Y` bei :math:`k=2` kleiner und bei :math:`k=0` und :math:`k=3`
+hingegen deutlich größer ist als für :math:`X`. Die
+Wahrscheinlichkeitsverteilung für :math:`Y` ist also „breiter“
+und besitzt somit eine größere Varianz.
