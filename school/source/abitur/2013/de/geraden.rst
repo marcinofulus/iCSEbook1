@@ -11,7 +11,9 @@ Bayerisches Abitur in Mathematik 2013
   \begin{pmatrix}1\\-2\\4\end{pmatrix}`, :math:`\mu \in \mathrm{R}`, gegeben.
   Die Geraden :math:`g` und :math:`h` schneiden sich im Punkt :math:`T`.
   
-  a) Bestimmen Sie die Koordinateen von :math:`T`
+  a) Bestimmen Sie die Koordinaten von :math:`T`.
+
+     *(Ergebnis:* :math:`T(2|-1|3)`\ *)*
   
   b) Geben Sie die Koordinaten zweier Punkte :math:`P` und :math:`Q` an, die
      auf :math:`g` liegen und von :math:`T` gleich weit entfernt sind.
