@@ -4,21 +4,23 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  Die Abbildung zeigt modellhaft einen Ausstellungspavillion, der die Form
+  Die Abbildung zeigt modellhaft einen Ausstellungspavillon, der die Form
   einer geraden vierseitigen Pyramide mit quadratischer Grundfläche hat und auf
-  einer horizontalen Fläche steht. Das Dreieck BCS beschreibt im Modell die
+  einer horizontalen Fläche steht. Das Dreieck :math:`BCS` beschreibt im Modell die
   südliche Außenwand des Pavillons. Im Koordinatensystem entspricht eine
-  Längeneinheit 1m, d. h. die Grundfläche des Pavillons hat eine Seitenlänge
-  von 12m.
+  Längeneinheit 1 m, d. h. die Grundfläche des Pavillons hat eine Seitenlänge
+  von 12 m.
   
   .. image:: ../figs/pyramide.png
          :align: center
   
-  a) Geben Sie die Koordinaten des Punktes B an und bestimmen Sie das Volumen
+  a) Geben Sie die Koordinaten des Punktes :math:`B` an und bestimmen Sie das Volumen
      des Pavillons.
   
-  b) Die südliche Außenwand des Pavillons liegt im Modell in einer Ebene E.
-     Bestimmen Sie eine Gleichung von E in Normalform.
+  b) Die südliche Außenwand des Pavillons liegt im Modell in einer Ebene :math:`E`.
+     Bestimmen Sie eine Gleichung von :math:`E` in Normalform.
+
+     *(mögliches Ergebnis:* :math:`E : 4x_2+3x_3-48=0`\ *)*
   
   c) Der Innenausbau des Pavillons erfordert eine möglichst kurze, dünne
      Strebe zwischen dem Mittelpunkt der Grundfläche und der südlichen
@@ -26,23 +28,24 @@ Bayerisches Abitur in Mathematik 2013
      an der Außenwand befestigt ist.
   
   An einem Teil der südlichen Außenwand sind Solarmodule flächenbündig
-  montiert. Die Solarmodule bedecken im Modell einen dreieckige Fläche, deren
-  Eckpunkte die Spitze S sowie die Mittelpunkte der Kante [SB] und [SC] sind.
+  montiert. Die Solarmodule bedecken im Modell eine dreieckige Fläche, deren
+  Eckpunkte die Spitze :math:`S` sowie die Mittelpunkte der Kante :math:`[SB]`
+  und :math:`[SC]` sind.
   
   d) Ermitteln Sie den Inhalt der von den Solarmodulen bedeckten Fläche.
   
   e) Die von Solarmodulen abgegebene elektrische Leistung hängt unter anderem
-     von der Größe des Neigungswinkels gegen die Horizontale ab. Die Tabelle
-     gibt den Anteil der abgegebenen Leistungen an der maximal möglichen
+     von der Größe ihres Neigungswinkels gegen die Horizontale ab. Die Tabelle
+     gibt den Anteil der abgegebenen Leistung an der maximal möglichen
      Leistung in Abhängigkeit von der Größe des Neigungswinkels an. Schätzen
-     Sie diesen Anteil für die Solarmodule des Pavillons - nach Berechnung
-     des Neigungswinkels - unter Verwendung der Tabelle ab.
+     Sie diesen Anteil für die Solarmodule des Pavillons ‒ nach Berechnung
+     des Neigungswinkels ‒ unter Verwendung der Tabelle ab.
   
-  ================================= === === === ==== ==== === === === === ===
-  Neigungswinkel                    0°  10° 20° 30°  40°  50° 60° 70° 80° 90°
-  ================================= === === === ==== ==== === === === === ===
-  Anteiln an der maximalen Leistung 87% 93% 97% 100% 100% 98% 94% 88% 80% 69%
-  ================================= === === === ==== ==== === === === === ===
+  ================================ === === === ==== ==== === === === === ===
+  Neigungswinkel                   0°  10° 20° 30°  40°  50° 60° 70° 80° 90°
+  ================================ === === === ==== ==== === === === === ===
+  Anteil an der maximalen Leistung 87% 93% 97% 100% 100% 98% 94% 88% 80% 69%
+  ================================ === === === ==== ==== === === === === ===
   
 **Lösung zu Teil a**
 
