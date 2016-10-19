@@ -6,9 +6,9 @@ Bayerisches Abitur in Mathematik 2013
 
   In einem kartesischen Koordinatensystem sind die Geraden
   :math:`g: \vec{X} = \begin{pmatrix}8\\1\\7\end{pmatrix} + \lambda\cdot
-  \begin{pmatrix}3\\1\\2\end{pmatrix}`, :math:`\lambda \in \mathrm{R}`, und
+  \begin{pmatrix}3\\1\\2\end{pmatrix}`, :math:`\lambda \in \mathbb{R}`, und
   :math:`h: \vec{X} = \begin{pmatrix}-1\\5\\-9\end{pmatrix} + \mu \cdot 
-  \begin{pmatrix}1\\-2\\4\end{pmatrix}`, :math:`\mu \in \mathrm{R}`, gegeben.
+  \begin{pmatrix}1\\-2\\4\end{pmatrix}`, :math:`\mu \in \mathbb{R}`, gegeben.
   Die Geraden :math:`g` und :math:`h` schneiden sich im Punkt :math:`T`.
   
   a) Bestimmen Sie die Koordinaten von :math:`T`.
@@ -18,7 +18,7 @@ Bayerisches Abitur in Mathematik 2013
   b) Geben Sie die Koordinaten zweier Punkte :math:`P` und :math:`Q` an, die
      auf :math:`g` liegen und von :math:`T` gleich weit entfernt sind.
   
-  c) Zwei Punkte :math:`U` und :math:`V` der Geraden h bilden zusammen mit
+  c) Zwei Punkte :math:`U` und :math:`V` der Geraden :math:`h` bilden zusammen mit
      :math:`P` und :math:`Q` das Rechteck :math:`PUQV`. Beschreiben Sie einen
      Weg zur Ermittlung der Koordinaten von :math:`U` und :math:`V`
   
