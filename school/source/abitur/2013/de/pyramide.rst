@@ -94,15 +94,24 @@ Kreuzproduktes multipliziert.
 .. math::
 
   \vec{n} = (\vec{C}-\vec{B}) \times (\vec{S} - \vec{B})
+          = \begin{pmatrix}-12\\0\\0\end{pmatrix}\times\begin{pmatrix}-6\\-6\\8\end{pmatrix}
+          = \begin{pmatrix}0\\96\\72\end{pmatrix}\,.
 
 Mit :math:`\vec{B}` als Stützvektor lautet die Gleichung für die Ebene in
-Normalenform dann:
+Normalenform dann
 
 .. math::
 
-  E : \vec{n} \cdot \left( \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} - \vec{B}\right) = 0
+  E : \vec{n} \cdot \left( \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} - \vec{B}\right) 
+      = 96(x_2-12)+72x_3 = 0
 
-Mit Sage ergibt sich folgende Gleichung für E:
+oder
+
+.. math::
+
+  E : 96x_2+72x_3-1152=0\,.
+
+Mit Sage erhält man dieses Ergebnis wie folgt:
 
 .. sagecellserver::
 
@@ -121,71 +130,80 @@ Lösung.
 
 Die Strebe vom Mittelpunkt der Grundfläche :math:`S' (6|6|0)` zur südlichen
 Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene E durch den
-Punkt S' gesucht. Ist das Lot bestimmt können wir den Schnittpunkt mit der
-Ebene berechnen und daraus die Höhe (entspricht der :math:`x_3` Koordinate)
+Punkt S' gesucht. Ist das Lot bestimmt, können wir den Schnittpunkt mit der
+Ebene berechnen und daraus anhand der :math:`x_3`-Koordinate die Höhe 
 ablesen.
 
 Der Normalenvektor :math:`\vec{n}` der Ebene wurde bereits in Teil b berechnet.
-In Sage definieren wir damit die Hilfsgerade :math:`\vec{h}(t)`. Danach wird
-der Schnittpunkt mit der Ebene durch einsetzen der Geraden und auflösen nach
-:math:`t` bestimmt. Mit dem geben :math:`t` kann dann der Schnittpunkt
-berechnet werden.
+Wir definieren nun die Hilfsgerade
+
+.. math::
+
+  h(t) = x_{S'}+t\vec n = \begin{pmatrix}6\\6\\0\end{pmatrix}
+  +t\begin{pmatrix}0\\96\\72\end{pmatrix}
+
+und suchen deren Schnittpunkt mit der Ebene :math:`E`. Einsetzen der
+Koordinaten :math:`x_2(t)` und :math:`x_3(t)` in die Ebenengleichung und
+Auflösen nach :math:`t` liefert :math:`t=\frac{1}{25}`, so dass die gesuchte
+Höhe 2,88 m beträgt.
+
+Dieses Ergebnis wird durch Sage bestätigt, indem wir den beschriebenen Rechenweg
+mit der abstrakt formulierten Ebenengleichung aus Teil b nachvollziehen.
 
 .. sagecellserver::
 
     sage: var("t")
-    sage: h = vector([6,6,0]) + n * t
-    sage: print(n.dot_product(h) - b.dot_product(n) == 0)
-    sage: result = solve(n.dot_product(h) - b.dot_product(n) == 0,t)
-    sage: print(result[0])
-    sage: p = vector([6,6,0]) + n * result[0].right()
+    sage: h = vector([6, 6, 0]) + n * t
+    sage: schnittpunktgleichung = n.dot_product(h-b) == 0
+    sage: print(schnittpunktgleichung)
+
+    sage: result = solve(schnittpunktgleichung, t)
+    sage: t0 = result[0]
+    sage: print(t0)
+
+    sage: p = h.subs(t0)
     sage: print("Höhe der Aufhängung: {}m".format(p[2]))
 
 .. end of output
 
 **Lösung zu Teil d**
 
-Da sich der Punkt S über der Mitte der Grundfläche befindet, handelt es sich
-bei dem angegebenen Dreieck um ein gleichschenkliges Dreieck. Die Fläche eines
-gleichschenklichen Dreiecks mit Schenkel :math:`a` und Basis :math:`b` ist
-über die Formel
+Die Fläche lässt sich mit Hilfe des Kreuzprodukts
 
 .. math::
 
-  F = \frac{b}{4} \sqrt{4a^2 -b^2}
+  F = \frac{1}{2}\left\vert\frac{1}{2}(\vec{S}-\vec{B})\times
+         \frac{1}{2}(\vec{S}-\vec{C})\right\vert
 
-gegeben. Mit Sage bestimmen man die Vektoren die das Dreieck aufspannen und
-berechnen deren Länge. Zur Überprüfung ob es sich tatsächlich um ein 
-gleichschenkliges Dreieck handelt, werden die Längen aller Vektoren ausgegeben.
+berechnen. Wir überlassen die Rechenarbeit Sage und erhalten
 
 .. sagecellserver::
 
-    sage: sb_ = (s - b) / 2
-    sage: sc_ = (s - c) / 2
-    sage: sbsc = sb_ - sc_
-    sage: print(sb_.norm(), sc_.norm(), sbsc.norm())
-    sage: F = sbsc.norm() / 4 * sqrt(4 * sb_.norm()**2 - sbsc.norm()**2)
-    sage: print("F = {} m^2".format(F))
+    sage: sb2 = (s-b)/2
+    sage: sc2 = (s-c)/2
+    sage: F = abs(sb2.cross_product(sc2))/2
+    sage: print("F = {}m²".format(F))
     
 .. end of output
 
 **Lösung zu Teil e**
 
-Der Neigungswinkel der Ebene E zur :math:`x_1 x_2`-Ebene ist gleich dem Winkel
-zwischen den beiden Ebenennormalen. Für die :math:`x_1 x_2`-Ebene ist die
-Normale der Einheitsvektor in :math:`x_3`-Richtung. Der Winkel zwischen zwei
-Vektoren lässt sich mit folgender Formel berechnen:
+Der Neigungswinkel der Ebene :math:`E` gegenüber der :math:`x_1-x_2`-Ebene ist gleich dem Winkel
+zwischen den beiden Ebenennormalen. Für die :math:`x_1-x_2`-Ebene ist die
+Normale der Einheitsvektor in :math:`x_3`-Richtung. Der Normalenvektor der Ebene
+:math:`E` ist der in Teil b bestimmte Vektor :math:`\vec n`. Der gesuchte Winkel lässt
+sich nun mit folgender Formel berechnen:
 
 .. math::
 
-  \phi = \cos^{-1}\left( \frac{\vec{n}\cdot \vec{e}_3}{\vert\vec{n}\vert \cdot \vert \vec{e}_3\vert}\right).
+  \phi = \cos^{-1}\left( \frac{\vec{n}\cdot \vec{e}_3}{\vert\vec{n}\vert\,\vert \vec{e}_3\vert}\right).
   
 .. sagecellserver::
 
     sage: x_3 = vector([0,0,1])
-    sage: print("Neigungswinkel: {}°".format((arccos(n*x_3 / n.norm()) * 180/pi).n()))
+    sage: print("Neigungswinkel: {}°".format((arccos(n*x_3/n.norm()) * 180/pi).n(digits=3)))
     
 .. end of output
 
-Mit Sage erhält man einen Neigungswinkel von 53°, die abgegebene Leistung
-beträgt also zwischen 94% und 98% der maximalen Leistung.
+Mit Hilfe der angegebenen Tabelle lässt sich für einen Winkel von 53,1° die
+abgegebene Leistung zu 96 bis 97% der maximalen Leistung abschätzen.
