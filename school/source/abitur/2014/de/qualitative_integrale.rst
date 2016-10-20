@@ -8,9 +8,11 @@ Bayerisches Abitur in Mathematik 2014
   .. image:: ../figs/qualitative_integrale.png
      :align: center
   
-  a) Beschreiben Sie für :math:`a\leq x\leq b` den Verlauf des Graphen einer Stammfunktion von :math:`f`.
+  a) Beschreiben Sie für :math:`a\leq x\leq b` den Verlauf des Graphen einer
+     Stammfunktion von :math:`f`.
 
-  b) Skizzieren Sie in der Abbildung den Graphen einer Stammfunktion von :math:`f` im gesamten dargestellten Bereich. 
+  b) Skizzieren Sie in der Abbildung den Graphen einer Stammfunktion von
+     :math:`f` im gesamten dargestellten Bereich. 
 
 **Lösung zu Teil a**
 
