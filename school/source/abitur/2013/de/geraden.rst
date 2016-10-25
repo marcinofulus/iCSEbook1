@@ -48,7 +48,7 @@ Die Lösung lässt sich mit Hilfe von Sage bestimmen:
     sage:                 g[1] == h[1],
     sage:                 g[2] == h[2]], mu, lamb)
     sage: print("Werte für den Schnittpunkt: {}".format(result[0]))
-    sage: t = h.subs(result[0])
+    sage: t = h.subs(result[0][0])
     sage: print("Schnittpunkt bei: T = {}".format(t))
 
 .. end of output
