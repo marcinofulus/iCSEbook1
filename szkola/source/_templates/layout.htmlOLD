@@ -1,0 +1,22 @@
+{% extends "!layout.html" %}
+{% block linktags %}
+    <script type="text/javascript" src="http://sagecell.icse.us.edu.pl:6363/static/jquery.min.js"></script>
+    <script type="text/javascript" src="http://sagecell.icse.us.edu.pl:6363/embedded_sagecell.js"></script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({inputLocation: ".sage_linked",
+                               linked: true});
+        sagecell.makeSagecell({inputLocation: ".sage_unlinked",
+                               linked: false});
+    </script>
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+    {{ super() }}
+{% endblock %}

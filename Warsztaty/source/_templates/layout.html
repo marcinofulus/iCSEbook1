@@ -1,5 +1,15 @@
 {% extends "!layout.html" %}
 {% block linktags %}
+    <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script type="text/javascript" src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({inputLocation: ".sage_linked",
+                               linked: true});
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({inputLocation: ".sage_unlinked",
+                               linked: false});
+    </script>
 
 
 
@@ -19,6 +29,7 @@
 			height: auto;
 		}
 	</style>
+
 
     {{ super() }}
 {% endblock %}

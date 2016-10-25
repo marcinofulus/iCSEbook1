@@ -120,6 +120,7 @@ przedstawmy je graficzne rysując wykres liczebności populacji od
 czasu.
 
 .. sagecellserver::
+   :linked: false
 
    @interact
    def myf(x = slider(0.0,1.0,0.01,default=0.4),a=slider(0,4,0.01,default=0.5)):

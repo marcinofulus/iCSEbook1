@@ -35,4 +35,17 @@ Poniższy kod rozwiązuje i ilustruje nasze zadanie:
     plt += point(1/2*(p1+p2),size=40,color='red')
     plt += point(-1/2*(p1+p2),size=40,color='green')
     plt.show()
+    show(-1/2*(p1+p2) )
 
+
+.. sagecellserver::
+
+   var('x y z')
+   p = implicit_plot3d(x^2+y^2+z^2==4, (x, -3, 3), (y, -3,3), (z, -3,3))
+
+   var('x p y')
+   h  =  10
+   p=implicit_plot3d( p*x-(1+p^2)/(4*h)*x^2-y,(x,-20,20),(y,0,10),(p,-7.7,7.7),plot_points=70) +\
+    sum([parametric_plot3d( (x,p0*x-(1+p0^2)/(4*h)*x^2,p0),(x,0,40*p0/(p0^2 + 1)),color='red',thickness=11) for p0 in srange(0.5,6,1)])
+
+   show(p)
