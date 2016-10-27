@@ -37,7 +37,7 @@ First, we will use Sage to get an overview of the problem.
 .. sagecellserver::
 
   sage: p2 = sphere(center=(1, 6, 3), size=7, color='red', opacity=1)
-  sage: p1 + p2
+  sage: show(p1 + p2, aspect_ratio=1)
 
 .. end of output
 
