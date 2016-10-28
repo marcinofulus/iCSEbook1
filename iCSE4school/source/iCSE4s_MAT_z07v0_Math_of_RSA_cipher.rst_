@@ -1,0 +1,593 @@
+.. -*- coding: utf-8 -*-
+
+
+
+I. Introduction.
+----------------
+
+Definition of congruence relation.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Two integers   *a*   and   *b*   are said to be  **congruent**   **modulo**    *n*  , written:
+
+.. image:: iCSE4s_MAT_z07v0_Math_of_RSA_cipher_media/https://upload.wikimedia.org/math/3/c/8/3c8c79012aeebb48b9128a4011e231ad.png
+    :align: center
+
+if their difference   *a*   −   *b*   is an integer multiple of   *n*   (or   *n*   divides   *a*   −   *b*  ). / Sage: (a  − b) % c == 0 /
+
+The number   *n*   is called the modulus of the congruence.
+
+For example:
+""""""""""""
+
+<dl><dd><span style="font-family: arial, helvetica, sans-serif;">2 ≡ 2 (mod 8), because 2 − 2 = 0, which is a multiple of 8,</span></dd><dd><span style="font-family: arial, helvetica, sans-serif;">3 ≡ 18 (mod 5), because 3 − 18 = −15, which is a multiple of 5,</span></dd><dd><span style="font-family: arial, helvetica, sans-serif;">100 ≡ 1 (mod 9), because 100 − 1 = 99, which is a multiple of 9,</span></dd><dd><span style="font-family: arial, helvetica, sans-serif;">250 ≡ 206 (mod 22), because 250 − 206 = 44, which is a multiple of 22.</span></dd></dl>
+
+Exercise 1.
+"""""""""""
+
+Find x if you know:
+
+3x\+2 ≡ 1 (mod 5)
+
+
+::
+
+    sage: for x in range(40):
+    ...       if (3*x+2 - 1) % 5 == 0:
+    ...           print x
+    3
+    8
+    13
+    18
+    23
+    28
+    33
+    38
+
+.. end of output
+
+
+We can realise there are infinitely many solutions. Besides, the solutions determine an arithmetic progression.
+
+Exercise 2.
+"""""""""""
+
+Find x if you know:
+
+3x ≡ 1 (mod 6)
+
+
+::
+
+    sage: for x in range(100):
+    ...       if (3*x-1) % 6 == 0:
+    ...           print x
+    sage: print "?"
+    ?
+
+.. end of output
+
+
+In the exercise above there is not a number which satisfies the given congruity.
+
+**Exercise 3.**
+
+A bar of chocolate consists of less than 100 pieces. While dividing it into three equal parts, there remains 1 piece of chocolate. While dividing it into 5 parts, what remains are 3 pieces of chocolate but when dividing into 7 equal parts, 2 pieces remain.
+
+We know that the number of chocolate pieces must satisfy the below congruence:
+
+x ≡ 1 mod 3,
+
+x ≡ 3 mod 5,
+
+x ≡ 2 mod 7.
+
+
+::
+
+    sage: for x in range(100):
+    ...       if (x -1) % 3 == 0 and (x-3) % 5 == 0 and (x-2) % 7 == 0:
+    ...           print x
+    58
+
+.. end of output
+
+
+Fermet’s Little Theorem
+^^^^^^^^^^^^^^^^^^^^^^^
+
+If   *p*   is a prime number and   *a*   is not divisible by   *p,*
+
+*then*     *a*  <sup> <em>p</em> − 1</sup>  − 1 is an integer multiple of   *p*  , or in symbols:
+
+.. image:: iCSE4s_MAT_z07v0_Math_of_RSA_cipher_media/https://upload.wikimedia.org/math/d/9/9/d999506f0d091a358bace3f8568dca2f.png
+    :align: center
+
+ 
+
+Let’s check the correctness of the Fermet’s Little Theorem basing on the Python language.
+
+For a we substitute 35, so p=3 and p=5 the am. theory doesn’t have to be satisfied. We can even state that it must be dividable by p.
+
+
+::
+
+    sage: for x in range (1, 30):
+    ...       p = nth_prime(x)
+    ...       p, 35^(p-1) % p
+    (2, 1)
+    (3, 1)
+    (5, 0)
+    (7, 0)
+    (11, 1)
+    (13, 1)
+    (17, 1)
+    (19, 1)
+    (23, 1)
+    (29, 1)
+    (31, 1)
+    (37, 1)
+    (41, 1)
+    (43, 1)
+    (47, 1)
+    (53, 1)
+    (59, 1)
+    (61, 1)
+    (67, 1)
+    (71, 1)
+    (73, 1)
+    (79, 1)
+    (83, 1)
+    (89, 1)
+    (97, 1)
+    (101, 1)
+    (103, 1)
+    (107, 1)
+    (109, 1)
+
+.. end of output
+
+
+II. Message Encryption.
+-----------------------
+
+Cryptography was mentioned in the Antique Times for the first time. So, we can conclude that encryption and writing were invented at the same time. Encryption was used to send military and political messages. During the IT lessons we acquired (or will acquire) the Caesar cipher. It is a simple encryption where letters are substituted. Although the ciphered message is not understandable, but simple to de cryption .  Other methods of encryption applied in the Antique Times were much more sophisticated and  more difficult to de cryption .  Until 1960s of the20th century only symmetric encryptions had been well\-known. They are the encryptions which have just one method of ciphering and deciphering the message.
+
+In the 1970s of the 20th century, the power of computing and the need for data protection led the cryptographers to invent an asymmetric encryption, where two different keys are used – one to  encryption  and the other to de cryption  the message ( the order of keys is of no importance). One of the keys is available to a person who is to send the secret message. You can even make the key available to the public on your website (available to everyone – a public key). The other key is a secret one (a private key) which is only known to us and cannot be made available to anyone. Only the private key allows us to decipher the message.
+
+Below, you can find a simple asymmetric encryption which can be cracked ( if you know the digits: d, n, define number e) It is you task to score extra points.
+
+How to create asymmetrical encryption mathematically?
+-----------------------------------------------------
+
+To create a simple asymmetrical encryption you need various natural numbers: a, b, a1, b1.
+
+The bigger the numbers is the safer the encryption becomes. It is more difficult to decription if you don’t know the proper key.
+
+For our task we take only two\-digit and three\-digit numbers.
+
+Calculate: M=a\*b\-1, then e=a1\*M\+a, d=b1\*M\+b and n=(e\*d\-1)/M
+
+The key of the cipher are pairs of numbers: (d, n) and (e, n).
+
+Below you can find an example of the  number cither:
+
+
+::
+
+    sage: number=1234567   #You can change this number (message). What will be if number larger then n?
+    sage: a=89    #you can change the numbers: a, b, a1, b1
+    sage: b=45
+    sage: a1=98
+    sage: b1=55
+    sage: M=a*b-1
+    sage: e=a1*M+a
+    sage: d=b1*M+b
+    sage: n=(e*d-1)/M
+    sage: print " public key:", (d, n)
+    sage: print "private key:",(e, n)
+    sage: # encryption
+    sage: szyfr = (number*d) % n
+    sage: print "encryption:", szyfr
+    sage: # decryption
+    sage: deszyfr = (szyfr*e) % n
+    sage: print "wiadomość odszyfrowana:", deszyfr
+     public key: (220265, 21590866)
+    private key: (392481, 21590866)
+    encryption: 16533851
+    wiadomość odszyfrowana: 1234567
+
+.. end of output
+
+
+What to do when the number is larger than n?
+--------------------------------------------
+
+1. We calculate the remainder of division by n ( we receive a “portion” to cipher)
+
+2. We cipher the “portion”
+
+3. We add the ciphered “portion” in the next power of number n to the code.
+
+4. We divide the number by n
+
+5. If the result is larger than 0, repeat the steps from 1 – 4.
+
+
+::
+
+    sage: number=123456567675635352364213879879797996743546789435345241234324234235 #Big number(message)
+    sage: szyfr = 0
+    sage: i=0
+    sage: while number>0:                           # 5
+    ...       pomoc=number%n                        # 1 
+    ...       szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
+    ...       i=i+1
+    ...       number=int(number/n)                  # 4
+    sage: print szyfr
+    376390582133058535471577929122322141211706492105498186656472237557
+
+.. end of output
+
+
+In the similar way the message is decription.
+
+Help:
+
+============== =============== =====
+number → szyfr szyfr → deszyfr d → e
+============== =============== =====
+
+Try to decription the number (message) below.
+
+
+::
+
+    sage: #Copy the algorithm above, exchange the variable according to the above mentioned rule and try to decription the am. number.
+    sage: #If deszyfr=number so you have decription the number.
+
+
+.. end of output
+
+
+What we usually want to do is to cipher a text not a number, so we have to substitute letters into numbers. We shall use ASCII code. Each letter, symbol is given a number from 1 to 128.
+
+Below you can find the algorithm of the encryption.
+
+
+::
+
+    sage: number=0
+    sage: i=0
+    sage: tekst="This is the secret message or anything." 
+    sage: for x in tekst:
+    ...       i=i+1
+    ...       print x, ord(x)
+    ...       number=number + ord(x)*128^i  
+    sage: print number
+    T 84
+    h 104
+    i 105
+    s 115
+      32
+    i 105
+    s 115
+      32
+    t 116
+    h 104
+    e 101
+      32
+    s 115
+    e 101
+    c 99
+    r 114
+    e 101
+    t 116
+      32
+    m 109
+    e 101
+    s 115
+    s 115
+    a 97
+    g 103
+    e 101
+      32
+    o 111
+    r 114
+      32
+    a 97
+    n 110
+    y 121
+    t 116
+    h 104
+    i 105
+    n 110
+    g 103
+    . 46
+    710462119235500194958769552333505678558759290256842999253022836498080435596626110976
+
+.. end of output
+
+Full algorithm of encryption
+----------------------------
+
+::
+
+    sage: number=0
+    sage: i=0
+    sage: tekst="This is the secret message or anything." #message
+    sage: tekst2=""
+    sage: print "message:", tekst
+    sage: # change text to number
+    sage: for x in tekst:
+    ...       i=i+1
+    ...       number=number + ord(x)*128^i
+    sage: print "number:", number
+    sage: print ""
+    sage: # encription
+    sage: szyfr = 0
+    sage: i=0
+    sage: while number>0:
+    ...       pomoc=number%n
+    ...       szyfr = szyfr + ((pomoc*d) % n)*n^i
+    ...       i=i+1
+    ...       number=int(number/n)
+    sage: print "encription:", szyfr
+    message: This is the secret message or anything.
+    number: 710462119235500194958769552333505678558759290256842999253022836498080435596626110976
+    
+    encription: 2477717329701027097585045352756763118051056145804692906609710645765611862711721717856778
+
+.. end of output
+
+Full algorithm of decryption
+----------------------------
+
+::
+
+    sage: tekst2=""
+    sage: deszyfr = 0
+    sage: i=0
+    sage: print "encription:", szyfr
+    sage: print ""
+    sage: # decription
+    sage: while szyfr>0:
+    ...       pomoc=szyfr%n
+    ...       deszyfr = deszyfr + ((pomoc*e) % n)*n^i
+    ...       i=i+1
+    ...       szyfr=int(szyfr/n)
+    sage: print "decription: ", deszyfr
+    sage: ## change number to text
+    sage: i=0
+    sage: while deszyfr>0:
+    ...       i=i+1
+    ...       deszyfr=int(deszyfr/128)
+    ...       tekst2 = tekst2 + chr(deszyfr%128)
+    sage: print "message: "
+    sage: print tekst2
+    encription: 2477717329701027097585045352756763118051056145804692906609710645765611862711721717856778
+    
+    decription:  710462119235500194958769552333505678558759290256842999253022836498080435596626110976
+    message: 
+    This is the secret message or anything. 
+
+.. end of output
+
+III. RSA asymmetric cipher
+--------------------------
+
+**RSA**  is one of the first and most popular algorithm cryptosystems with a public key. It was designed in 1977 by Ron Rivest,  Adi Szamir and Leonard Adleman.  Its  name derives from the first letters of the creators’ surnames.
+
+The security of the RSA cryptosystem  is based on the decomposition of large  complex numbers into prime numbers (factoring problem).
+
+Example below
+
+1. Choose prime numbers 20\-34 digits and multiply this numbers
+
+2. Find factoring ( it lasts a long time ).
+
+
+::
+
+    sage: %time
+    sage: @interact 
+    sage: def _(n=slider( srange(20,40,2))):
+    ...       a=int(random()*10^n)
+    ...       a=next_prime(a)
+    ...       print a
+    ...       b=int(random()*10^n)
+    ...       b=next_prime(b)
+    ...       print b
+    ...       n=a*b
+    ...       print(factor(n))
+    <html>...</html>
+
+    CPU time: 0.00 s,  Wall time: 0.00 s
+
+.. end of output
+
+It see below also
+
+
+::
+
+    sage: @interact 
+    sage: def _(n=slider( range(34,101,2))):
+    ...       t=2^((n-34)/2)
+    ...       print n,"-digits prime numbers, factoring time:", t, "minutes"
+    ...       if t>100 and t<60*24:
+    ...           print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
+    ...       elif t>60*24 and t<60*24*365:
+    ...           print n,"-digits prime numbers, factoring time:", int(t/60/24), "days"
+    ...       elif t>60*24*365:
+    ...           print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
+    <html>...</html>
+
+
+.. end of output
+
+Generating RSA cryptosystem
+---------------------------
+
+1. Choose two large prime numbers: p, q.
+
+2. Compute:  n=p\*q, f=(p\-1)(q\-1).
+
+3. Choose an integer d such that: 1 < d < f and gcd(d, f) = 1 (You can choose a prime number).
+
+4. Determine   *e*   as:  *de*   ≡1 mod f .
+
+ 
+
+Public key: (d, n)
+
+Private key: (e, n)
+
+It is enough to copy the algorithm of cither from the previous lessons and substitute them.
+
+
+::
+
+    sage: los=int(100*random())
+    sage: p=nth_prime(30+los)
+    sage: los=int(100*random())
+    sage: q=nth_prime(30+los)
+    sage: n=p*q
+    sage: f=(p-1)*(q-1)
+    sage: los=int(f*random())
+    sage: e=next_prime(los)
+    sage: print p, q, e, n, f
+    331 457 148793 151267 150480
+
+.. end of output
+
+Determine   *e*   as:  *(d\*e)*   % f=1 .
+
+We can use expanded Euclidean algorithm, it is made so as below.
+
+
+::
+
+    sage: a = e
+    sage: p0 = 0
+    sage: p1 = 1
+    sage: a0 = a
+    sage: n0 = f
+    sage: q  = int(n0/a0) 
+    sage: r  = n0 % a0
+    sage: while (r > 0):
+    ...       t = p0 - q * p1
+    ...       if (t >= 0):
+    ...           t = t % n
+    ...       else:
+    ...           t = n - ((-t) % n)
+    ...       p0 = p1
+    ...       p1 = t
+    ...       n0 = a0
+    ...       a0 = r
+    ...       q  = int(n0/a0)
+    ...       r  = n0 % a0
+    sage: d = p1
+    sage: print "verification : (d*e)%f =", (d*e)%f
+    sage: print " public key:", d, n
+    sage: print "private key:", e, n
+    verification : (d*e)%f = 1
+     public key: 75017 151267
+    private key: 148793 151267
+
+.. end of output
+
+ 
+
+Full algorithm of encryption RSA
+--------------------------------
+
+It is enough to copy the algorithm of coding from the previous lessons and substitute  pomoc\*d them pomoc^d.
+
+
+::
+
+    sage: number=0
+    sage: i=0
+    sage: tekst="This is secret message or anything." #message
+    sage: tekst2=""
+    sage: print "message:", tekst
+    sage: # change text to number
+    sage: for x in tekst:
+    ...       i=i+1
+    ...       number=number + ord(x)*128^i
+    sage: print "number:", number
+    sage: print ""
+    sage: # encription
+    sage: szyfr = 0
+    sage: i=0
+    sage: while number>0:
+    ...       pomoc=number%n
+    ...       szyfr = szyfr + ((pomoc*d) % n)*n^i
+    ...       i=i+1
+    ...       number=int(number/n)
+    sage: print "encription:", szyfr
+    message: This is secret message or anything.
+    number: 2646677640212700497205442012598759228582528569761078801948670121021823134208
+    
+    encription: 108876062567358820544342947328076430542448993152549314920703498522112981038792
+
+.. end of output
+
+
+Full algorithm of decryption RSA
+--------------------------------
+
+It is enough to copy the algorithm of coding from the previous lessons and substitute  pomoc\*e them pomoc^e.
+
+Try to decription the number (message) below.
+
+
+::
+
+    sage: # Try to decription the number (message) below.
+
+
+.. end of output
+
+IV. Conclusion
+--------------
+
+Introduction to Python
+^^^^^^^^^^^^^^^^^^^^^^
+
+Python programming language was introduced in the first grade. Until then,  students had not  acquired any programming language. Searching suitable commands caused problems to them. 
+
+Also understanding the loop in a short period of time was impossible for quite a big group of them. From my own experience, I can admit that the greatest obstacle for a programmer\-beginner
+
+is  lack of both a debugger in the Sage environment and tabulators which are used in the loops and in the conditional structure. Despite the difficulties, students were very active 
+
+during the classes (high attendance and their good results at a task and an exercise solving). 
+
+The main advantage of Python is its simple visualisation. According to the algorithm which had been previously prepared students were able to solve equations and squared and polynominal ineqations in a graphic way.
+
+RSA asymmetric cipher
+^^^^^^^^^^^^^^^^^^^^^
+
+This year the students of our school had a chance to listen to a lecture about the methods of encryption. Students showed their great interest in the matter.
+
+That is why I decided to organize the workshops of asymmetrical encryption using Python programming language. It helps us use large signed numbers.
+
+It is a good way to show the students the practical way of encrypting  and decrypting a message while using public and private keys.
+
+The students’ job was to acquire mathematical knowledge  of congruence, Fermat’s little theorem and  Euclidean algorithm.
+
+The am. issues were presented  in the beginning and students solved their task during the workshops. Next classes referred to the asymmetrical 
+
+encryption and the issue connected with  the RSA encryption security. Each student generated their own pair of keys and made both encryption and decryption of their own messages.
+
+In spite of the theoretical knowledge they had, it was quite surprising for them to find out  it is not possible to decrypt a message with the same key and that the keys can be exchanged.
+
+It means a private key can become a public one and the other way round. The greatest surprise  was about a big number factoring. A simulation made on a server and simple calculations 
+
+showed that a two hundred\-digit number will be factorized into prime numbers for more than 3000 years.
+
+ 
+
+ *29.06.2015, Krzysztof Jarczewski* 
+

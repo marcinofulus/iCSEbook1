@@ -1,0 +1,253 @@
+.. -*- coding: utf-8 -*-
+
+Please write a title for this worksheet!
+========================================
+
+ 1. **Wstęp teoretyczny.**
+
+Niniejszy dokument przedstawia sposób wykorzystania języka programowania Python i środowiska SAGE do analizy ruchu jednostajnie przyspieszonego. Obliczenia i wykresy przedstawione zostaną w oparciu o wyniki prawdziwych eksperymentów. Idea eksperymentu została przedstawiona na lekcji, której przebieg relacjonuje poniższy film:
+
+<iframe src="http://www.youtube.com/embed/deTJ4i1V0dg" frameborder="0" width="720" height="593"></iframe>
+
+Na lekcji wykorzystano tor powietrzny zakupiony specjalnie na potrzeby realizacji projektu. Zadaniem uczniów było skonstruować w domu dowolny układ doświadczalny do obserwacji ruchu jednostajnie przyspieszonego. Dokonując odpowiednich pomiarów i obliczeń, należało zbadać (różnymi sposobami), czy ruch jest rzeczywiście jednostajnie przyspieszony i ile wynosi jego przyspieszenie oraz niepewność pomiaru przyspieszenia.
+
+**2. Opis układu i czynności.**
+
+Użyte przez ucznia elementy do budowy układu pomiarowego, to:
+
+- metalowa szyna
+- miarka
+- stoper
+- książki
+- kuleczka
+- Zeszyt i długopis (zapisanie pomiarów)
+
+Czynności wykonane przez ucznia:
+
+- Przygotowanie metalowej szyny o długości 1,7 m.
+- Zaznaczenie na szynie markerem kolejnych odcinków drogi równych s1=0.1m, s2=0.2m, s3=0.3m, s4=0.5m, s5=0.7m,s6=0.9m,s7=1.1m,s8=1.3m,s9=1.5m,s10=1.7m.
+- Podparcie deski na jednym końcu książką, tworząc równie pochyłą o niewielkim kącie nachylenia. Kąt dobrano tak, by piłeczka poruszała się powoli, z małym przyspieszeniem.
+- Puszczenie piłeczki i uruchomienie  w tym czasie  stopera (który może dokonywać wielu pomiarów czasu), kiedy piłeczka  przekraczała narysowane linie stoper był zatrzymywany.
+- Spisanie wyników i powtórzenie czynności 5 razy.
+
+**3. Wyniki pomiarów i obliczeń**
+
+Poniższa tabelka została skopiowanan z pracy ucznia i zawiera wyniki jego obliczeń. Niżej znajdują się obliczenia w w wersji zaproponowanej przeze mnie. ****
+
+=== ==== ===== ===== ===== ===== ===== ====== ==== ========== ================================================================================================ =========== ====== ======
+Lp. s[m] t1[s] t2[s] t3[s] t4[s] t5[s] tśr[s] Δt   a=2\*s/t^2 ai\-aśr                                                                                          (ai\-aśr)^2 Δt^2   Δa    
+1   0.1  1.14  0.92  1.01  0.91  1.05  1.00   0.09 0.19       ::
+
+    class="shrunk"><span style="font-size: medium;">0.10 </span>
+
+  
+::
+
+    class="shrunk"> 0.01054     0.0081 0.0373
+2   0.2  1.86  1.74  1.64  1.64  1.70  1.71   0.09 0.13       0.04                                                                                             0.00167     0.0081 0.0149
+3   0.3  2.43  2.33  2.30  2.22  2.36  2.32   0.07 0.11       0.01                                                                                             0.00024     0.0049 0.0070
+4   0.5  3.47  3.36  3.33  3.24  3.27  3.33   0.08 0.08       \-0.004                                                                                          0.00002     0.0064 0.0044
+5   0.7  4.40  4.33  4.21  4.13  4.25  4.26   0.10 0.07       \-0.01                                                                                           0.00032     0.0100 0.0037
+6   0.9  5.22  5.01  5.06  4.89  5.07  5.05   0.11 0.07       \-0.02                                                                                           0.00059     0.0121 0.0031
+7   1.1  5.83  5.71  5.58  5.56  5.71  5.67   0.11 0.06       \-0.02                                                                                           0.00059     0.0121 0.0027
+8   1.3  6.40  6.29  6.14  6.08  6.26  6.23   0.12 0.06       \-0.02                                                                                           0.00078     0.0144 0.0026
+9   1.5  6.85  6.82  6.63  6.57  6.80  6.73   0.12 0.06       \-0.02                                                                                           0.00082     0.0144 0.0024
+10  1.7  7.28  7.20  7.05  7.00  7.25  7.15   0.12 0.06       \-0.02                                                                                           0.00081     0.0144 0.0022
+=== ==== ===== ===== ===== ===== ===== ====== ==== ========== ================================================================================================ =========== ====== ======
+
+****
+
+aśr=  0.09  [m/s^2]                 odchylenie  standardowe a=0.04[m/s^2]
+
+**4. Sposób rozwiązania problemu i analiza danych.**
+
+Rozwiązanie przedstawione przez ucznia jest dalekie od doskonałości, dlatego przedstawiam poniżej bardziej wzorcowy sposób potraktowania problemu. W oddzielnym pliku prezentuję oryginalną pracę domową ucznia.
+
+Czasy zmierzone dla każdej z dróg są uśredniane. Jako niepewność pomiaru drogi przyjęto 1 cm, jako niepewność pomiaru czasu \- odchylenie std. serii pomiarów czasu. Niepewność pomiaru przyspieszenia obliczana jest metodą pochodnej logarytmicznej. Średnia wartość kwadratu czasu obliczana jest na potrzeby wyskalowania osi na wykresie s(t^2), niepewność kwadratu czasu: delta(t^2)=2t\*delta(t) potrzebna jest do przedstawienia szerokości prostokąta niepewności na tym wykresie.
+
+
+::
+
+    sage: var('s,t,a')
+    sage: delta_t= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: mean_t = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: mean_t2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: delta_t2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: t=[[1.14, 0.92, 1.01, 0.91, 1.05], [1.86, 1.74, 1.64, 1.64, 1.70], [2.43, 2.33, 2.30, 2.22, 2.36], [3.47, 3.36, 3.33, 3.24, 3.27], [4.40, 4.33, 4.21, 4.13, 4.25], [5.22, 5.01, 5.06, 4.89, 5.07], [5.83, 5.71, 5.58, 5.56, 5.71], [6.40, 6.29, 6.14, 6.08, 6.26], [6.85, 6.82, 6.63, 6.57, 6.80], [7.28, 7.20, 7.05, 7.00, 7.25]]
+    sage: s=[0.1, 0.2, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7]
+    sage: for k in range(10): 
+    ...       mean_t[k]+=mean(t[k])
+    ...       mean_t2[k]=mean_t[k]^2
+    ...       delta_t[k]+=std(t[k])
+    ...       delta_t2[k]=2*mean_t[k]*delta_t[k]
+    ...       print k, N(mean_t[k], digits=4), N(mean_t2[k], digits=4), N(delta_t[k], digits=4), N(delta_t2[k], digits=4)
+    0 1.006 1.012 0.09555 0.1922
+    1 1.716 2.945 0.09099 0.3123
+    2 2.328 5.420 0.07727 0.3597
+    3 3.334 11.12 0.08961 0.5975
+    4 4.264 18.18 0.1048 0.8936
+    5 5.050 25.50 0.1190 1.201
+    6 5.678 32.24 0.1103 1.253
+    7 6.234 38.86 0.1264 1.576
+    8 6.734 45.35 0.1254 1.689
+    9 7.156 51.21 0.1242 1.778
+
+.. end of output
+
+Obliczenia związane z przyspieszeniem
+
+
+::
+
+    sage: a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: delta_a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    sage: for k in range(10):
+    ...       a[k]=2*s[k]/mean_t2[k]
+    ...       delta_a[k]=a[k]*(0.01/s[k]+2*delta_t[k]/mean_t[k])
+    ...       print k, N(a[k], digits=3), N(delta_a[k], digits=2)
+    sage: mean_a=mean(a)
+    sage: print "Average a = ", N(mean_a, digits=3)
+    sage: std_a=std(a)
+    sage: print "Sigma a = ", N(std_a, digits=3)
+    0 0.198 0.057
+    1 0.136 0.021
+    2 0.111 0.011
+    3 0.0900 0.0066
+    4 0.0770 0.0049
+    5 0.0706 0.0041
+    6 0.0682 0.0033
+    7 0.0669 0.0032
+    8 0.0662 0.0029
+    9 0.0664 0.0027
+    Average a =  0.0949
+    Sigma a =  0.0429
+
+.. end of output
+
+Wykres s(t)
+
+
+::
+
+    sage: import matplotlib.pyplot as plt
+    sage: plt.errorbar(mean_t, s, xerr=delta_t, yerr=0.01, fmt='o-')
+    sage: rys3=plt.savefig('1.png')
+
+
+.. end of output
+
+Wykres s(t^2)
+
+
+::
+
+    sage: pkt=[(mean_t2[i],s[i]) for i in range(10)]
+    sage: point(pkt, gridlines=True, size=25, color='red', legend_label='y(x)') 
+    sage: var ('aa')
+    sage: prosta(x) = aa*x
+    sage: fit = find_fit(pkt, prosta,solution_dict=True)
+    sage: print fit
+    sage: rys1=plot(prosta.subs(fit), x, 0, 50, color="green", legend_label='dopasowana prosta')
+    sage: rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='punkty pomiarowe')
+    sage: rys1+rys2
+    {aa: 0.033996168019849206}
+
+.. end of output
+
+::
+
+    sage: import matplotlib.pyplot as plt2
+    sage: plt2.errorbar(mean_t2, s, xerr=delta_t2, yerr=0.01, fmt='x-')
+    sage: rys3=plt2.savefig('2.png') 
+    sage: # Nie wiem jak połączyć ten wykres z poprzednim, ani dlaczego na tym wykresie są 2 wykresy - proszę o pomoc
+
+
+.. end of output
+
+Wykres a(t)
+
+
+::
+
+    sage: pkt=[(mean_t[i],a[i]) for i in range(10)]
+    sage: point(pkt, gridlines=True, size=25, color='red', legend_label='y(x)') 
+    sage: var ('aa,b')
+    sage: prosta(x) = aa*x+b
+    sage: fit = find_fit(pkt, prosta,solution_dict=True)
+    sage: print fit
+    sage: rys1=plot(prosta.subs(fit), x, 0, 8, color="green", legend_label='dopasowana prosta')
+    sage: rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='punkty pomiarowe')
+    sage: rys1+rys2
+    {b: 0.1695123033662655, aa: -0.017142840357879423}
+
+.. end of output
+
+::
+
+    sage: import matplotlib.pyplot as plt4
+    sage: plt4.errorbar(mean_t, a, xerr=delta_t, yerr=delta_a, fmt='o-')
+    sage: rys4=plt4.savefig('4.png')
+    sage: #Nie rozumiem dlaczego tu widać 3 wykresy, ani nie wiem, jak połączyć ten wykres z poprzednim - proszę o pomoc. Efekt ten nie występuje, gdy poniższy wykres zostaje uruchomiony jako pierwszy w całym notatniku.
+    /usr/lib/sagemath/local/lib/python2.7/site-packages/setuptools-12.4-py2.7.egg/pkg_resources/__init__.py:1224: UserWarning: /home/sage/.sage//.python-eggs is writable by group/others and vulnerable to attack when used with get_resource_filename. Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable).
+
+.. end of output
+
+**5. Dyskusja**
+
+Na pierwszy rzut oka widać, że badany ruch nie był jednostajnie przyspieszony, gdyż przyspieszenie z biegiem czasu malało. Uczeń przypisał ten efekt niemożnością dokładnego pomiaru czasu gdy ten czas był krótki. Ja skłaniałbym sie ku tezie, że w miarę wzrostu prędkości rosły siły oporu.
+
+Średnie wartości przyspieszeń dla poszczególnych dróg oraz ich wartość średnia zostały policzone powyżej. Poniżej przytaczam rozumowanie ucznia, które doprowadza do odczytania przyspieszenia w inny sposób \- z nachylenia prostej na wykresie s(t^2). Dokonuje on również analizy niepwności metodą pochodnej logarytmicznej. Końcowy wniosek ucznia jest moim zdaniem błędny.
+
+**Dyskusja błędów.**
+
+Z wykresu s(t^2śr) odczytujemy s i t^2śr (bierzemy pod uwagę współrzędne punktu na końcu prostej)
+
+s=1.7[m]
+
+tśr^2=51.12
+
+Obliczamy wartość tangesa nachylenia prostej do osi:
+
+tgα=s/tśr^2
+
+tgα=1.7/51.12
+
+tgα=0.0332[m/s^2]
+
+Obliczam wartość przyspieszenia:
+
+a=2\*tgα
+
+a=2\*0.0332[m/s^2]=0.0664≈0.07[m/s^2]
+
+Obliczam niepewność względną wartości przyspieszenia:
+
+W=Δs/s\+2\*Δtśr/tśr
+
+W=0.001/1.7\+2\*0.12/7.15=0.034
+
+W=0.034\*100%=3.41%
+
+Niepewność względna pomiaru przyspieszenia wynosi 0.034 czyli stanowi 3.41% wyznaczonej wartości przyspieszenia.
+
+Obliczam niepewność bezwzględną pomiaru przyspieszenia:
+
+W=Δa/a→Δa=W\*a
+
+Δa=0.034\*0.07=0.0024[m/s^2]
+
+Zapisuje pełen wynik pomiaru:
+
+a=0.0700±0.0024[m/s^2]
+
+**Formułuje wnioski:**
+
+\-zgodnie z przewidywaniami uzyskałem paraboliczny wykres zależności drogi od czasu dla ciała poruszającego się po równi pochyłej. W ten sposób potwierdziłem zależność s=a\*t^2/2
+
+\-Uzyskałem także poprawny wykres zależności s od t^2.Moje punkty pomiarowe układają się wzdłuż lini prostej.
+
+\-Na wykresie a od t pierwsze 3 punkty pomiarowe nie znajdują się na lini prostej poziomej do osi t, ponieważ, ich pomiar był trudny.Odcinki drogi były krótkie a mój czas reakcji niewystarczający.Pozostałe punkty znajdowały się dalej od startu co umożliwiało dokładniejszy pomiar czasu.
+
+**Podsumowując doświadczalnie potwierdziłem, że ruch kulki po równi pochyłej jest ruchem jednostajnie przyspieszonym prostoliniowym.**
+
+

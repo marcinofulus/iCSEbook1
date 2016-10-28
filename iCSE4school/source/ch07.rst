@@ -1,79 +1,23 @@
 
-Zadanie 1 - o graficznym i algebraicznym rozwiązywaniu nierówności
-------------------------------------------------------------------
+Prąd stały
+-----------------------
 
-Mamy rozwiązań nierówność: :math:`-4\le x-1\le4`. Jest to dość proste
-zadanie, ale możemy zobaczyć czy system algebry komputerowej też sobie
-z nim poradzi. Wpisujemy i od razu mamy wynik:
-
-.. math:: 
-
-   \sin(x^2)
-
-
-.. sagecellserver::
-
-   solve([-4<=x-1,x-1<=4],x)
-
-
-... ale czy nie jest on bardziej skomplikowany od zadania? 
-
-
-Możemy przekonać Sage to narysowania obszaru w którym :math:`x`
-spełniają warunek z zadania. Zastosujemy, znacznie ogólniejszą,
-procedurę :code:`region_plot`:
-
-
-.. sagecellserver::
-
-   var('x,y')
-   region_plot([-4<=x-1,x-1<=4],(x,-10,10),(y,-1,1) )
-
-
-
-
-.. admonition:: :code:`==` czy :code:`=`?
-
-   We wszystkich językach programowania mamy dwa różne znaki
-   równości. W Pythonie (który jest językiem Sage), mamy
-
-    - :code:`=` znak przypisania do zmiennej.
-    - :code:`==` znak porówniania logicznego - czy to jest "matematyczne równa się"
-
-
-   Znaki `<`, `>=` itp. mają znaczenie takie jak w matematyce.
-   
-Próby 28 października   
-------------------------------------------------------------------
-
-http://www.sphinx-doc.org/en/1.4.8/
-
-
-   
-.. admonition:: Adam Ogaza
-
-   hlhlhl
-   
-.. admonition:: Krzysztof Jarczewski
-
-   lhlhlhl
-   
-   
-.. admonition:: Krzysztof Oleś
+.. admonition:: Jolanta Drogoń
 
   Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
-**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
-   
+**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example be
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
 .. sagecellserver::
 
-  p=2 #change p
-  for n in range(1,6): #change a range
-    p=0.5*(p+2/p)
-    print p
-    print "error =",abs(N(sqrt(2)-p))
+  w=1
+  for i in range(1,6):
+    w=w*((2*i)/(2*i-1))*((2*i)/(2*i+1))
+    print 2*w     #do you prefer fractions or decimals?
+    print "error =",abs(N(pi-2*w))   print "error =",abs(N(sqrt(2)-p))
   
-We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
+gfakfgalfgalfgalgfalgalgh;zga;gha;gha;gha;gha;gha;
 
 And what's interesting?
 Let's try to transform a formula that has :math:`\sqrt{2}`, for instance
@@ -149,33 +93,3 @@ The differences are large, what we can see, considering graphs related functions
   \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
 
 Is not that strange?
-    
-.. admonition:: Łukasz Głaz
-
-   lhlhlhlhl
-   
-.. admonition:: Mirosław Malinowski
-
-   jhkhkhkhkh   
-   
-.. admonition:: Mariola Strojny
-
-   jhkhkhkhkh
-   
-.. admonition:: Hanna Stachera
-
-   jhkhkhkhkh   
-   
-.. admonition:: Jolanta Drogoń
-
-   jhkhkhkhkh   
-   
-.. admonition:: Justyna Matejczyk
-
-   jhkhkhkhkh   
-   
-.. admonition:: Katarzyna Sikora
-
-   jhkhkhkhkh   
-    
-  

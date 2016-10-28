@@ -1,85 +1,69 @@
 
-Zadanie 1 - o graficznym i algebraicznym rozwiązywaniu nierówności
-------------------------------------------------------------------
+Funkcja abs()
+-----------------------
 
-Mamy rozwiązań nierówność: :math:`-4\le x-1\le4`. Jest to dość proste
-zadanie, ale możemy zobaczyć czy system algebry komputerowej też sobie
-z nim poradzi. Wpisujemy i od razu mamy wynik:
+.. admonition:: Mariola Strojny, Michał Strojny 2016
 
-.. math:: 
+  Jednym z ważniejszych terminów dotyczących liczb rzeczywistych jest wartość bezwzględna liczby rzeczywistej.
 
-   \sin(x^2)
+Definicja mówi, że wartością bezwzględną liczby rzeczywistej a (oznaczamy |a|) nazywamy:
 
+Liczbę a, jeżeli a jest liczbą nieujemną;
+Liczbę przeciwną do a, jeśli a jest liczbą ujemną
+Zapis symboliczny :
 
-.. sagecellserver::
+                                               |a|= a, gdy a≥0
 
-   solve([-4<=x-1,x-1<=4],x)
+                                                      -a, gdy a<0
 
+ 
 
-... ale czy nie jest on bardziej skomplikowany od zadania? 
+Prześledźmy kilka przykładów jak powstają wykresy funkcji z użyciem wartości bezwzględnej, potraktowanej jako przekształcenie.
 
+Funkcja liniowa jest dobrym obiektem do przykładowego pokazania jak działają złożenia przekształceń.
 
-Możemy przekonać Sage to narysowania obszaru w którym :math:`x`
-spełniają warunek z zadania. Zastosujemy, znacznie ogólniejszą,
-procedurę :code:`region_plot`:
+ 
 
+                Niech dana będzie funkcja liniowa f(x) = x
 
-.. sagecellserver::
-
-   var('x,y')
-   region_plot([-4<=x-1,x-1<=4],(x,-10,10),(y,-1,1) )
-
-
-
-
-.. admonition:: :code:`==` czy :code:`=`?
-
-   We wszystkich językach programowania mamy dwa różne znaki
-   równości. W Pythonie (który jest językiem Sage), mamy
-
-    - :code:`=` znak przypisania do zmiennej.
-    - :code:`==` znak porówniania logicznego - czy to jest "matematyczne równa się"
-
-
-   Znaki `<`, `>=` itp. mają znaczenie takie jak w matematyce.
-   
-Próby 28 października   
-------------------------------------------------------------------
-
-http://www.sphinx-doc.org/en/1.4.8/
-
-
-   
-.. admonition:: Adam Ogaza
-
-   hlhlhl
-   
-.. admonition:: Krzysztof Jarczewski
-
-   lhlhlhl
-   
-   
-.. admonition:: Krzysztof Oleś
-
-  Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
-**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
    
 .. sagecellserver::
 
-  p=2 #change p
-  for n in range(1,6): #change a range
-    p=0.5*(p+2/p)
-    print p
-    print "error =",abs(N(sqrt(2)-p))
+  var('x')
+  f(x)=x
+  plot(f,x,-10,10,color='blue',thickness=2)
   
+Tworzymy wykres funkcji f(x) = |x|. Na mocy definicji wartości bezwzględnej odbija się część wykresu dla ujemnych wartości, pozostała część nie zmienia swojego położenia.
+
+.. sagecellserver::
+
+  var ('x')
+  f(x)=abs(x)
+  plot(f,x,-10,10, color='blue',thickness=2)
+  
+  
+Otrzymamy wykres f(x)=|x| przesuwamy o wektor [0, -2]. W wyniku translacji otrzymujemy wykres f(x)=|x|-2
+
 We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
+
+.. sagecellserver::
+
+  var ('x')
+  f(x)=abs(abs(x)-2)-2
+  plot(f,x,-10,10, color='blue',thickness=2)
 
 And what's interesting?
 Let's try to transform a formula that has :math:`\sqrt{2}`, for instance
 
-.. math::
+.. sagecellserver::
 
+  var ('x')
+  f(x)=abs(abs(abs(x)-2)-2)-2
+  plot(f,x,-10,10, color='blue',thickness=2)
+  
+  
+  
   \left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\right)^3.
 
 Everyone has heard about the transformation of expressions that contain numbers that are not rational, so let's get to the tedious work...
@@ -149,33 +133,3 @@ The differences are large, what we can see, considering graphs related functions
   \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
 
 Is not that strange?
-    
-.. admonition:: Łukasz Głaz
-
-   lhlhlhlhl
-   
-.. admonition:: Mirosław Malinowski
-
-   jhkhkhkhkh   
-   
-.. admonition:: Mariola Strojny
-
-   jhkhkhkhkh
-   
-.. admonition:: Hanna Stachera
-
-   jhkhkhkhkh   
-   
-.. admonition:: Jolanta Drogoń
-
-   jhkhkhkhkh   
-   
-.. admonition:: Justyna Matejczyk
-
-   jhkhkhkhkh   
-   
-.. admonition:: Katarzyna Sikora
-
-   jhkhkhkhkh   
-    
-  
