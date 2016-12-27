@@ -154,7 +154,7 @@ Wir überprüfen dies wieder durch Simulation mit Sage.
   ...       meinebilder = set(randint(200, size=45))
   ...       if not meinebilder.isdisjoint(dreiDBilder):
   ...           dreiD_gefunden = dreiD_gefunden+1
-  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3d-Bild zu erhalten: {:4.1%}".format(
+  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3D-Bild zu erhalten: {:4.1%}".format(
   ...         float(dreiD_gefunden/iterationen))
 
 .. end of output
