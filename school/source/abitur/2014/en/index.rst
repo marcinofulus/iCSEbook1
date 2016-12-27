@@ -26,6 +26,7 @@ Stochastics
    Problem 4 <baumdiagramm>
    Problem 5 <jim_studie>
    Problem 6 <supermarkt>
+   Problem 7 <gluecksrad>
 
 Geometry
 ........
