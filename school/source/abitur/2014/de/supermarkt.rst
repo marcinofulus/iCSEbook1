@@ -139,7 +139,7 @@ und erhalten
 
 .. math::
 
-  n= \frac{\log(0.01)}{\log(0.9)} = 43{,}7.
+  n= \frac{\log(0{,}01)}{\log(0{,}9)} = 43{,}7.
 
 Da die Bilder nur in 5er-Päckchen zu erhalten sind, benötigt man 9 Päckchen,
 um mit einer Wahrscheinlichkeit von über 99% mindestens ein 3D-Bild zu ziehen.
