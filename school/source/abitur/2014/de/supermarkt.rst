@@ -93,7 +93,7 @@ Mit Sage kann man diesen Ausdruck auswerten
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit kein neues Bilder zu erhalten: {:4.1%}".format(float((37/40)**10))
+  sage: print "Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(float((37/40)**10))
 
 .. end of output
 
