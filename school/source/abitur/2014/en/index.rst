@@ -24,6 +24,8 @@ Stochastics
    Problem 2 <bernoulli>
    Problem 3 <zufallsgroesse>
    Problem 4 <baumdiagramm>
+   Problem 5 <jim_studie>
+   Problem 6 <supermarkt>
 
 Geometry
 ........
