@@ -147,11 +147,13 @@ Wir überprüfen dies wieder durch Simulation mit Sage.
 
 .. sagecellserver::
 
+  sage: nr_paeckchen = 9
+  sage: bilder_je_paeckchen = 5
   sage: iterationen = 100000
   sage: dreiDBilder = set(range(20))
   sage: dreiD_gefunden = 0
   sage: for _ in range(iterationen):
-  ...       meinebilder = set(randint(200, size=45))
+  ...       meinebilder = set(randint(200, size=nr_paeckchen*bilder_je_paeckchen))
   ...       if not meinebilder.isdisjoint(dreiDBilder):
   ...           dreiD_gefunden = dreiD_gefunden+1
   sage: print "Empirische Wahrscheinlichkeit mindestens ein 3D-Bild zu erhalten: {:4.1%}".format(
