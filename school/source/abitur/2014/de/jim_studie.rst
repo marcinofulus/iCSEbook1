@@ -350,7 +350,7 @@ lässt sich obige Forderung folgendermaßen umformen:
   P(A\cap B)P(\bar{B})& > &P(A)P(B)-P(A\cap B)P(B)\\
   P(A\cap B)[P(\bar{B})+P(B)]& > &P(A)P(B)\\
   P(A\cap B)& > &P(A)P(B)\\
-  P(A\cap B)& > &0.495\cdot0.47
+  P(A\cap B)& > &0{,}495\cdot0{,}47
 
 Von den 200 Jugendlichen müssen also mindestens 23,3% ein Smartphone und eine
 feste Spielekonsole besitzen, damit die These der Aufgabenstellung stimmt.

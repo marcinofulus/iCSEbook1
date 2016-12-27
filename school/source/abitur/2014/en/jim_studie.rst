@@ -37,7 +37,7 @@ Bavarian final secondary-school examinations in mathematics 2014
   
      .. math::
 
-       \sum\limits_{i=0}^{12}B(25;0{,}55;i)
+       \sum\limits_{i=0}^{12}B(25;0.55;i)
 
      in percent. Justify that this value in general does not represent the
      probability that among 25 girls of a class in 9th grade less than half
@@ -100,7 +100,7 @@ The probability that this person is a girl then is found as
 
 .. math::
 
-  \frac{54}{119}\approx 45{,}4\%
+  \frac{54}{119}\approx 45.4\%
 
 We make use of the simulation of part a) in order to empirically check this result.
 
@@ -142,7 +142,7 @@ and therefore the events :math:`A` und :math:`B` are not independent.
 
 **Solution of part 1d**
 
-We determine the sum by means of Sage and obtain approximately 30,6%.
+We determine the sum by means of Sage and obtain approximately 30.6%.
 
 .. sagecellserver::
 
@@ -283,7 +283,7 @@ At a probability of 82% for owning a computer, the probability that exactly
 
   P(X=85) = B(100;0.82;85)
 
-With Sage we find :math:`P(X=85) \approx8{,}1\%`.
+With Sage we find :math:`P(X=85) \approx8.1\%`.
 
 .. sagecellserver::
 
@@ -315,7 +315,7 @@ We demand that the two events are statistically dependent in a way that
 
   P(A|B) > P(A|\bar{B})
 
-is fulfilled. From the table we obtain :math:`P(A) = (37+62)/200 = 49{,}5\%` and
+is fulfilled. From the table we obtain :math:`P(A) = (37+62)/200 = 49.5\%` and
 :math:`P(B) = (42+52)/200 = 47\%`.
 
 By means of
@@ -340,7 +340,7 @@ the above condition can be transformed into
   P(A\cap B)& > &P(A)P(B)\\
   P(A\cap B)& > &0.495\cdot0.47
 
-Out of 200 adolescents, at least 23,3% must own a smart phone and a stationary
+Out of 200 adolescents, at least 23.3% must own a smart phone and a stationary
 game console for the hypothesis formulated in the problem to hold. This
 threshold amounts to 47 adolescents.
 
