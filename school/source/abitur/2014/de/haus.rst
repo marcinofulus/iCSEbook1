@@ -180,12 +180,13 @@ Dies ergibt sich auch mit Hilfe von Sage.
 .. sagecellserver::
 
   sage: lamb = solve(abs(x*(c-h)) == 1, x)
-  sage: print "Die Lösungen für lambda lauten:", lamb
+  sage: print "Die Lösungen für λ lauten:", lamb
 
 .. end of output
 
 Allerdings ist nur die Lösung mit positivem :math:`\lambda` sinnvoll, 
-da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt M(4,8|8|7,4).
+da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt
+:math:`M(4{,}8|8|7{,}4)`.
 
 .. sagecellserver::
 
