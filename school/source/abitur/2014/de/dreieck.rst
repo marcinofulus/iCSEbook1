@@ -183,7 +183,7 @@ einsetzen:
 
 Die Punkte liegen also symmetrisch bezüglich der Ebene.
 
-Wir zeichnen die Verbindung der Punkte :math:`P` und :math:`Q`, sowie
+Wir zeichnen die Verbindung der Punkte :math:`P` und :math:`Q` sowie
 den reflektierten Lichtstrahl in unsere Skizze ein:
 
 .. sagecellserver::
