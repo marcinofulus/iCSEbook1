@@ -38,3 +38,4 @@ Geometry
    Problem 2 <ebene>
    Problem 3 <quader>
    Problem 4 <kugel>
+   Problem 5 <dreieck>
