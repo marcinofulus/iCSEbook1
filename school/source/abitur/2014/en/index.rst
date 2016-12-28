@@ -39,3 +39,4 @@ Geometry
    Problem 3 <quader>
    Problem 4 <kugel>
    Problem 5 <dreieck>
+   Problem 6 <haus>
