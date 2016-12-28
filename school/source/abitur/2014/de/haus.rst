@@ -218,7 +218,7 @@ Einsetzen der Geradengleichung für :math:`m` in die Ebenengleichung von :math:`
 
 Damit ergibt sich durch Einsetzen in die Geradengleichung von :math:`m` der Punkt
 :math:`N(7{,}2|8|7)` und durch Verschieben um :math:`-1{,}4` in :math:`x_3`-Richtung
-der Punkt :math:`L(7{,2}|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgendermaßen:
+der Punkt :math:`L(7{,}2|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgendermaßen:
 
 .. sagecellserver::
 
