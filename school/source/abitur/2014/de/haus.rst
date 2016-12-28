@@ -132,7 +132,7 @@ Das Haus erfüllt also die Satzung.
 
   sage: ba = (a-b).normalized()
   sage: bg = (g-b).normalized()
-  sage: print "Winkel der Dachgaube: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
+  sage: print "Dachneigung: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
 
 .. end of output
 
