@@ -7,7 +7,7 @@ Bayerisches Abitur in Mathematik 2013
   Definitionsmenge :math:`D`.
 
   a) Bestimmen Sie :math:`D` und geben Sie die Nullstelle von :math:`g` an.
-  b) Ermitteln Sie die Gleichung der Tangente an den Graphen von :math:`g` im Punkt :math:`P(0\vert3)`.
+  b) Ermitteln Sie die Gleichung der Tangente an den Graphen von :math:`g` im Punkt :math:`P(0|3)`.
 
 **Lösung zu Teil a**
 
@@ -37,7 +37,7 @@ folgende Graph der Funktion :math:`g(x)`.
 
 **Lösung zu Teil b**
 
-Um die Tangentengleichung am Punkt :math:`P(0\vert3)` zu bestimmen,
+Um die Tangentengleichung am Punkt :math:`P(0|3)` zu bestimmen,
 muss die Ableitung von :math:`g` an diesem Punkt berechnet werden.
 Diese ergibt sich zu 
 
@@ -70,7 +70,7 @@ die Tangente :math:`h(x)` rot.
 .. sagecellserver::
 
     sage: pg = plot(g, (-3, 5), color='blue')
-    sage: h(x) = x/2+3
+    sage: h(x) = dg(0)*x+g(0)
     sage: ph = plot(h, (-3,5), color='red')
     sage: show(pg+ph, figsize=(4, 2.8))
 
