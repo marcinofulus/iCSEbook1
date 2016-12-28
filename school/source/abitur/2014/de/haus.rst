@@ -34,7 +34,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Die Dachgaube soll so errichtet werden, dass sie von dem seitlichen Rand der
   Dachfläche, der im Modell durch die Strecke :math:`HC` dargestellt wird, den 
-  Abstand 2m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
+  Abstand 2 m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
   Koordinaten des Punkts :math:`M` wird die durch den Punkt :math:`T(4|8|8)` verlaufende
   Gerade
 
@@ -49,7 +49,7 @@ Bayerisches Abitur in Mathematik 2014
   c) Begründen Sie, dass :math:`t` in der Ebene :math:`E` verläuft und von der
      Geraden :math:`HC` den Abstand 2 besitzt.
 
-  d) Auf der Geraden t wird nun der Punkt :math:`M` so festgelegt, dass der Abstand
+  d) Auf der Geraden :math:`t` wird nun der Punkt :math:`M` so festgelegt, dass der Abstand
      der Dachgaube vom First 1m beträgt. Bestimmen Sie die Koordinaten
      von :math:`M`.
 
@@ -95,7 +95,7 @@ Hierfür bestimmen wir zunächst aus der Skizze die Punkte :math:`B(8|0|5)` und
   A = \left|\begin{pmatrix} 0\\ 10\\ 0\end{pmatrix}\right|\,
       \left|\begin{pmatrix} -4\\ 0\\ 3\end{pmatrix}\right| = 50
 
-Die gesuchte Fläche beträgt also 50m².
+Die gesuchte Fläche beträgt also 50 m².
 
 Mit Sage legen wir zunächst alle Punkte fest und überprüfen anschließend
 das Ergebnis.
@@ -196,7 +196,7 @@ da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt M(4,
 
 **Lösung zu Teil e**
 
-Durch eine Verschiebung von :math:`E` um 1,4m in positive :math:`x_3`-Richtung
+Durch eine Verschiebung von :math:`E` um 1,4 m in positive :math:`x_3`-Richtung
 lässt sich die Ebenengleichung folgendermaßen umschreiben:
 
 .. math::
