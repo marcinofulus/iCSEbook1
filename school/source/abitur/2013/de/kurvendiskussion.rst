@@ -36,10 +36,10 @@ Bayerisches Abitur in Mathematik 2013
          
          Berechnen Sie die :math:`x`-Koordinaten der
          drei Schnittpunkte der Geraden :math:`h` mit :math:`G_f` und
-         zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie B.
+         zeichnen Sie die Gerade in Abbildung 2 ein. Berechnen Sie :math:`B`.
 
   #. Im Folgenden wird die Schar der in :math:`\mathbb{R}` definierten
-     Funktion :math:`g_c: x\mapsto f(x) + c` mit :math:`c\in \mathbb{R}`
+     Funktionen :math:`g_c: x\mapsto f(x) + c` mit :math:`c\in \mathbb{R}`
      betrachtet.
 
       a) Geben Sie in Abhängigkeit von c ohne weitere Rechnung die Koordinaten
@@ -98,7 +98,7 @@ dass :math:`f(x)=-f(-x)` oder, gleichbedeutend damit, :math:`f(x) + f(-x) = 0` g
 .. math::
   
   f(x) + f(-x) & = 2x \cdot e^{-0{,}5x^2} + 2(-x) \cdot e^{-0{,}5(-x)^2}\\
-  &= 2x \cdot e^{-0,5x^2} - 2 x \cdot e^{-0{,}5x^2}\\
+  &= 2x \cdot e^{-0{,}5x^2} - 2 x \cdot e^{-0{,}5x^2}\\
   &= 0
 
 Dieses Ergebnis lässt sich leicht mit Sage überprüfen:
@@ -230,7 +230,7 @@ Die prozentuale Abweichung beträgt damit
 
 .. math::
 
-  \left(\frac{m_S}{m_T}-1\right) = e^{-0.125} = 0{,}882 = 88{,}2\%.
+  \left(\frac{m_S}{m_T}-1\right) = e^{-0{,}125} = 0{,}882 = 88{,}2\%.
 
 .. sagecellserver::
 
@@ -287,7 +287,7 @@ Mit Sage ergibt sich der Grenzwert auf folgende Weise:
 
 .. sagecellserver::
 
-  sage: print(u"A(\u221E) = " + str(limit(a(u), u=Infinity)))
+  sage: print("A(∞) = " + str(limit(a(u), u=Infinity)))
 
 .. end of output
 
@@ -297,7 +297,7 @@ Dieses Ergebnis bedeutet, dass die eingeschlossene Fläche unter dem Graphen von
 **Lösung zum Teil e**
 
 Der erste Schnittpunkt der Geraden :math:`y=\frac{2}{e^2}\cdot x` mit :math:`G_f`
-ist :math:`x_1=0`, da beide Funktionen durch den Koordiantenursprung
+ist :math:`x_1=0`, da beide Funktionen durch den Koordinatenursprung
 gehen. Weitere Schnittpunkte ergeben sich durch Gleichsetzen beider Funktionen.
 
 .. math::
@@ -340,14 +340,14 @@ der Geraden
   B &= A(2)-\frac{1}{2}\cdot 2\cdot\frac{2}{e^2}\cdot 2\\
     &= 2-2e^{-2}-4e^{-2}\\
     & = 2 - 6 e^{-2}\\
-    &\approx 1.19.
+    &\approx 1{,}19.
 
 Mit Sage lässt sich dieses Integral leicht berechnen.
 
 .. sagecellserver::
 
   sage: b = a(2)-integral(h(x), x, 0, 2)
-  sage: print(u"Die Fläche B ist: " + str(b) + u" \u2248 %4.2f" % b)
+  sage: print(u"Die Fläche B ist: " + str(b) + u" ≈ %4.2f" % b)
 
 .. end of output
 
@@ -359,8 +359,8 @@ Aufgabe 2
 Die Funktionenschar :math:`g_c` ist im Vergleich zu :math:`f(x)`
 um eine Konstante :math:`c` vertikal verschoben. Der Hochpunkt des Graphen
 bleibt damit an derselben :math:`x`-Koordinate. Dieser wurde
-für :math:`f(x)` in Aufgabe 1b) berechnet :math:`(x=1` und 
-:math:`f(1) = \frac{2}{\sqrt{e}})`.
+für :math:`f(x)` in Aufgabe 1b) berechnet und liegt bei :math:`x=1` und 
+:math:`f(1) = \frac{2}{\sqrt{e}}`.
 Der :math:`y`-Wert des Hochpunktes von :math:`g_c` ergibt sich
 entsprechend durch
 
@@ -427,7 +427,7 @@ also in hinreichend kleine Teilintervalle unterteilt werden, um alle
 Nullstellen zu finden. Im folgenden Beispiel wird das Intervall
 :math:`[-5, 5]` in eine wählbare Anzahl von Teilintervallen unterteilt.
 Interessant ist es, wenn man :math:`c` in der Nähe des Wertes wählt, bei
-dem es nur eine Nullstelle gibt, also zum Beispiel :math:`c=\pm 1,2`.
+dem es nur eine Nullstelle gibt, also zum Beispiel :math:`c=\pm 1{,}2`.
 Dann hängt die Zahl der gefundenen Nullstellen von der
 Intervallaufteilung ab.
 
@@ -510,10 +510,10 @@ mit Hilfe von Sage berechnet.
 
   sage: startx = find_root(gc(1.4)-2.1, -1, 1)
   sage: endx = find_root(gc(1.4)-2.1, 1, 3)
-  sage: print("gc(1.4,x) ist im Intervall [" + str(startx) + ", " + str(endx) + "] größer als 2,1")
-  sage: pg14l = plot(gc(1.4,x), (-4, startx), color='red')
-  sage: pg14 = plot(gc(1.4,x), (startx, endx), fill=2.1, fillcolor='yellow', color='red')
-  sage: pg14r = plot(gc(1.4,x), (endx, 4), color='red')
+  sage: print("gc(1.4, x) ist im Intervall [" + str(startx) + ", " + str(endx) + "] größer als 2,1")
+  sage: pg14l = plot(gc(1.4, x), (-4, startx), color='red')
+  sage: pg14 = plot(gc(1.4, x), (startx, endx), fill=2.1, fillcolor='yellow', color='red')
+  sage: pg14r = plot(gc(1.4, x), (endx, 4), color='red')
   sage: show(pg0 + pg14l + pg14 + pg14r, aspect_ratio=1)
 
 .. end of output
@@ -544,7 +544,7 @@ Dieses Ergebnis erhält man auch mit Hilfe von Sage:
 
 .. sagecellserver::
 
-  sage: solve(ddf(x) == 0,x)
+  sage: solve(ddf(x) == 0, x)
 
 .. end of output
 

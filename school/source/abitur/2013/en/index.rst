@@ -8,6 +8,7 @@ Analysis
    Problem 2 <wertemenge>
    Problem 3 <gleichungssystem>
    Problem 4 <intgraph>
+   Problem 5 <kurvendiskussion>
 
 Stochastics
 ...........
