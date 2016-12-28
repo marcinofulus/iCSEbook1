@@ -197,7 +197,7 @@ da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt
 
 **Lösung zu Teil e**
 
-Durch eine Verschiebung von :math:`E` um 1,4 m in positive :math:`x_3`-Richtung
+Durch eine Verschiebung von :math:`E` um 1,4 in positive :math:`x_3`-Richtung
 lässt sich die Ebenengleichung folgendermaßen umschreiben:
 
 .. math::
