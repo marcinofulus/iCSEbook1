@@ -5,6 +5,7 @@ Analysis
    :maxdepth: 1
 
    Problem 1 <sqrt>
+   Problem 2 <wertemenge>
 
 Stochastics
 ...........

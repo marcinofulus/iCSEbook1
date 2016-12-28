@@ -3,7 +3,7 @@ Bayerisches Abitur in Mathematik 2013
 
 .. admonition:: Aufgabe
 
-  Gegebe Sie jeweils den Term einer in :math:`\mathbb{R}` definierte Funktion
+  Geben Sie jeweils den Term einer in :math:`\mathbb{R}` definierte Funktion
   an, die die angegebene Wertemenge :math:`W` hat.
   
   a) :math:`W=[2;+\infty[`
