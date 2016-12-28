@@ -224,7 +224,7 @@ der Punkt :math:`L(7{,2}|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgen
 
   sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
   sage: n = m + mu*vector([6, 0, -1])
-  sage: l = n + vector([0, 0, -1.4])
+  sage: l = n + vector([0, 0, -7/5])
   sage: print "Koordinaten von N: ", n, ", L:", l
 
 .. end of output
