@@ -9,7 +9,7 @@ Bayerisches Abitur in Mathematik 2014
   :math:`D`, :math:`O`, :math:`P`, :math:`Q` und :math:`R` sind die Eckpunkte
   eines Quaders. Das gerade dreiseitige Prisma :math:`LMNIJK` stellt die 
   Dachgaube dar, die Strecke :math:`[GH]` den First des Dachs, d. h. die obere
-  waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1m,
+  waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1 m,
   d. h. das Haus ist 10 m lang.
 
   .. image:: ../figs/haus.png
