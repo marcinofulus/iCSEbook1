@@ -50,7 +50,7 @@ Bayerisches Abitur in Mathematik 2014
      Geraden :math:`HC` den Abstand 2 besitzt.
 
   d) Auf der Geraden :math:`t` wird nun der Punkt :math:`M` so festgelegt, dass der Abstand
-     der Dachgaube vom First 1m beträgt. Bestimmen Sie die Koordinaten
+     der Dachgaube vom First 1 m beträgt. Bestimmen Sie die Koordinaten
      von :math:`M`.
 
      *(Ergebnis:* :math:`M(4{,}8|8|7{,}4)` *)*
@@ -65,7 +65,7 @@ Bayerisches Abitur in Mathematik 2014
 
   die im Modell die Neigung der Dachfläche der Gaube festlegt. Die zur
   :math:`x_3`-Achse parallele Strecke :math:`[NL]` stellt im Modell den sogenannten
-  Gaubenstiel dar; dessen Länge soll 1,4m betragen. Um die Koordinaten von
+  Gaubenstiel dar; dessen Länge soll 1,4 m betragen. Um die Koordinaten von
   :math:`N` und :math:`L` zu bestimmen, wird die Ebene :math:`F` betrachtet, die
   durch Verschiebung von :math:`E` um 1,4 in positive :math:`x_3`-Richtung entsteht.
 
