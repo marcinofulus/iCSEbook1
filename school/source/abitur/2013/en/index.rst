@@ -13,6 +13,7 @@ Analysis
    Problem 7 <xsinx>
    Problem 8 <schnittpunkt>
    Problem 9 <inthalbkreis>
+   Problem 10 <asymp>
 
 Stochastics
 ...........
