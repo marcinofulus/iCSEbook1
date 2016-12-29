@@ -12,6 +12,7 @@ Analysis
    Problem 6 <ln>
    Problem 7 <xsinx>
    Problem 8 <schnittpunkt>
+   Problem 9 <inthalbkreis>
 
 Stochastics
 ...........

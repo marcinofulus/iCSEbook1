@@ -34,7 +34,7 @@ Radius :math:`r` ergibt sich
 
   F(2) = \frac{\pi}{2} .
 
-Aus der Symmetrie der Funktion :math:`f(x)` folgt dei Antisymmetrie der
+Aus der Symmetrie der Funktion :math:`f(x)` folgt die Antisymmetrie der
 Stammfunktion
 
 .. math::
