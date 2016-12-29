@@ -9,6 +9,7 @@ Analysis
    Problem 3 <gleichungssystem>
    Problem 4 <intgraph>
    Problem 5 <kurvendiskussion>
+   Problem 6 <ln>
 
 Stochastics
 ...........
