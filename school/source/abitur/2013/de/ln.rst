@@ -11,10 +11,10 @@ Bayerisches Abitur in Mathematik 2013
 **Lösung**
 
 Der Definitionsbereich für den natürlichen Logarithmus :math:`\ln(x)` ist
-:math:`(0,\infty)`. Für :math:`\ln(-x)` ergibt sich damit ein Defintionsbereich
+:math:`(0,\infty)`. Für :math:`\ln(-x)` ergibt sich damit ein Definitionsbereich
 von :math:`(-\infty,0)`. Addiert man nun innerhalb des Logarithmus eine Zahl,
-muss dies auch für den Defintionsbereich geschehen. Somit ergibt sich für
-:math:`f(x)=\ln(2013-x)` der Defintionsbereich
+muss dies auch für den Definitionsbereich geschehen. Somit ergibt sich für
+:math:`f(x)=\ln(2013-x)` der Definitionsbereich
 :math:`\mathrm{D}=(-\infty, 2013)`.
 
 Mit Sage können wir uns einen Überblick über die Funktion verschaffen
@@ -35,7 +35,7 @@ An den Grenzen von :math:`\mathbb{D}` erhält man folgendes Verhalten:
   = \lim\limits_{\tilde{x}\rightarrow +\infty}\ln(\tilde{x})
   = +\infty
 
-In Sage lässt sich dieses Ergebniss bestätigen, indem man :math:`-\infty` für
+In Sage lässt sich dieses Ergebnis bestätigen, indem man :math:`-\infty` für
 :math:`x` einsetzen.
 
 .. sagecellserver::
