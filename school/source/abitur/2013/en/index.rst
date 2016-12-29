@@ -11,6 +11,7 @@ Analysis
    Problem 5 <kurvendiskussion>
    Problem 6 <ln>
    Problem 7 <xsinx>
+   Problem 8 <schnittpunkt>
 
 Stochastics
 ...........
