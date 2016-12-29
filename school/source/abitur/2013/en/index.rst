@@ -10,6 +10,7 @@ Analysis
    Problem 4 <intgraph>
    Problem 5 <kurvendiskussion>
    Problem 6 <ln>
+   Problem 7 <xsinx>
 
 Stochastics
 ...........
