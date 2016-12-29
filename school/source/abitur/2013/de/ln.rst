@@ -15,7 +15,7 @@ Der Definitionsbereich für den natürlichen Logarithmus :math:`\ln(x)` ist
 von :math:`(-\infty,0)`. Addiert man nun innerhalb des Logarithmus eine Zahl,
 muss dies auch für den Definitionsbereich geschehen. Somit ergibt sich für
 :math:`f(x)=\ln(2013-x)` der Definitionsbereich
-:math:`\mathrm{D}=(-\infty, 2013)`.
+:math:`\mathbb{D}=(-\infty, 2013)`.
 
 Mit Sage können wir uns einen Überblick über die Funktion verschaffen
 
