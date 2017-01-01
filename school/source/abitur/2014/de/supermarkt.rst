@@ -93,7 +93,7 @@ Mit Sage kann man diesen Ausdruck auswerten
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit kein neues Bilder zu erhalten: {:4.1%}".format(float((37/40)**10))
+  sage: print "Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(float((37/40)**10))
 
 .. end of output
 
@@ -139,7 +139,7 @@ und erhalten
 
 .. math::
 
-  n= \frac{\log(0.01)}{\log(0.9)} = 43{,}7.
+  n= \frac{\log(0{,}01)}{\log(0{,}9)} = 43{,}7.
 
 Da die Bilder nur in 5er-Päckchen zu erhalten sind, benötigt man 9 Päckchen,
 um mit einer Wahrscheinlichkeit von über 99% mindestens ein 3D-Bild zu ziehen.
@@ -147,14 +147,16 @@ Wir überprüfen dies wieder durch Simulation mit Sage.
 
 .. sagecellserver::
 
+  sage: nr_paeckchen = 9
+  sage: bilder_je_paeckchen = 5
   sage: iterationen = 100000
   sage: dreiDBilder = set(range(20))
   sage: dreiD_gefunden = 0
   sage: for _ in range(iterationen):
-  ...       meinebilder = set(randint(200, size=45))
+  ...       meinebilder = set(randint(200, size=nr_paeckchen*bilder_je_paeckchen))
   ...       if not meinebilder.isdisjoint(dreiDBilder):
   ...           dreiD_gefunden = dreiD_gefunden+1
-  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3d-Bild zu erhalten: {:4.1%}".format(
+  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3D-Bild zu erhalten: {:4.1%}".format(
   ...         float(dreiD_gefunden/iterationen))
 
 .. end of output

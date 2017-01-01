@@ -11,11 +11,11 @@ Bayerisches Abitur in Mathematik 2013
 **Lösung**
 
 Der Definitionsbereich für den natürlichen Logarithmus :math:`\ln(x)` ist
-:math:`(0,\infty)`. Für :math:`\ln(-x)` ergibt sich damit ein Defintionsbereich
+:math:`(0,\infty)`. Für :math:`\ln(-x)` ergibt sich damit ein Definitionsbereich
 von :math:`(-\infty,0)`. Addiert man nun innerhalb des Logarithmus eine Zahl,
-muss dies auch für den Defintionsbereich geschehen. Somit ergibt sich für
-:math:`f(x)=\ln(2013-x)` der Defintionsbereich
-:math:`\mathrm{D}=(-\infty, 2013)`.
+muss dies auch für den Definitionsbereich geschehen. Somit ergibt sich für
+:math:`f(x)=\ln(2013-x)` der Definitionsbereich
+:math:`\mathbb{D}=(-\infty, 2013)`.
 
 Mit Sage können wir uns einen Überblick über die Funktion verschaffen
 
@@ -35,12 +35,12 @@ An den Grenzen von :math:`\mathbb{D}` erhält man folgendes Verhalten:
   = \lim\limits_{\tilde{x}\rightarrow +\infty}\ln(\tilde{x})
   = +\infty
 
-In Sage lässt sich dieses Ergebniss bestätigen, indem man :math:`-\infty` für
+In Sage lässt sich dieses Ergebnis bestätigen, indem man :math:`-\infty` für
 :math:`x` einsetzen.
 
 .. sagecellserver::
 
-  sage: print(u"f(-\u221e) = " + str(f(-infinity)))
+  sage: print("f(-∞) = " + str(f(-infinity)))
 
 .. end of output
 
@@ -55,7 +55,7 @@ Geht :math:`x` gegen :math:`2013`, so geht das Argument des Logarithmus gegen
 
 .. sagecellserver::
 
-  sage: print(u"f(2013) = " + str(f(2013)))
+  sage: print("f(2013) = " + str(f(2013)))
 
 .. end of output
 
@@ -64,7 +64,9 @@ Den Schnittpunkt mit der :math:`y`-Achse erhält man durch Einsetzen von
 
 .. math::
 
-  f(0)=\ln(2013-0) = \ln(2013) \approx 7,61
+  f(0)=\ln(2013-0) = \ln(2013) \approx 7{,}61
+
+Dieses Resultat passt zu dem oben dargestellten Funktionsgraphen.
 
 .. sagecellserver::
 
@@ -86,5 +88,3 @@ Dieses Ergebnis lässt sich mit Sage bestätigen:
   sage: solve(f(x) == 0, x)
 
 .. end of output
-
-

@@ -40,7 +40,7 @@ Gleichung bestimmen:
 
   x+2x+3x+4x+5x =360°\quad\Leftrightarrow\quad x=24°
 
-Die Wahrscheinlichkeit für den Gewinn des Gutscheins liegt bei
+Die Wahrscheinlichkeit für den Gewinn der Eintrittskarte liegt bei
 
 .. math::
 
@@ -54,7 +54,7 @@ Der Erwartungswert berechnet sich mit der Formel
 
   E=\sum\limits_{X}P(X)\cdot X,
 
-wobei :math:`X` der Auszahlungsbetrag ist. Unter der Annahme, dass der Gewinn des Gutscheins
+wobei :math:`X` der Auszahlungsbetrag ist. Unter der Annahme, dass der Gewinn der Eintrittskarte
 wie eine Auszahlung von 15 Euro zu behandeln ist, erhalten wir
 
 .. math::

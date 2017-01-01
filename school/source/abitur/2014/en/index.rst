@@ -24,6 +24,9 @@ Stochastics
    Problem 2 <bernoulli>
    Problem 3 <zufallsgroesse>
    Problem 4 <baumdiagramm>
+   Problem 5 <jim_studie>
+   Problem 6 <supermarkt>
+   Problem 7 <gluecksrad>
 
 Geometry
 ........
@@ -35,3 +38,5 @@ Geometry
    Problem 2 <ebene>
    Problem 3 <quader>
    Problem 4 <kugel>
+   Problem 5 <dreieck>
+   Problem 6 <haus>

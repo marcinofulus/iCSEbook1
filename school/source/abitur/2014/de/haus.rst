@@ -9,7 +9,7 @@ Bayerisches Abitur in Mathematik 2014
   :math:`D`, :math:`O`, :math:`P`, :math:`Q` und :math:`R` sind die Eckpunkte
   eines Quaders. Das gerade dreiseitige Prisma :math:`LMNIJK` stellt die 
   Dachgaube dar, die Strecke :math:`[GH]` den First des Dachs, d. h. die obere
-  waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1m,
+  waagrechte Dachkante. Eine Längeneinheit im Koordinatensystem entspricht 1 m,
   d. h. das Haus ist 10 m lang.
 
   .. image:: ../figs/haus.png
@@ -34,7 +34,7 @@ Bayerisches Abitur in Mathematik 2014
 
   Die Dachgaube soll so errichtet werden, dass sie von dem seitlichen Rand der
   Dachfläche, der im Modell durch die Strecke :math:`HC` dargestellt wird, den 
-  Abstand 2m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
+  Abstand 2 m und vom First des Dachs den Abstand 1m hat. Zur Ermittlung der
   Koordinaten des Punkts :math:`M` wird die durch den Punkt :math:`T(4|8|8)` verlaufende
   Gerade
 
@@ -49,8 +49,8 @@ Bayerisches Abitur in Mathematik 2014
   c) Begründen Sie, dass :math:`t` in der Ebene :math:`E` verläuft und von der
      Geraden :math:`HC` den Abstand 2 besitzt.
 
-  d) Auf der Geraden t wird nun der Punkt :math:`M` so festgelegt, dass der Abstand
-     der Dachgaube vom First 1m beträgt. Bestimmen Sie die Koordinaten
+  d) Auf der Geraden :math:`t` wird nun der Punkt :math:`M` so festgelegt, dass der Abstand
+     der Dachgaube vom First 1 m beträgt. Bestimmen Sie die Koordinaten
      von :math:`M`.
 
      *(Ergebnis:* :math:`M(4{,}8|8|7{,}4)` *)*
@@ -65,7 +65,7 @@ Bayerisches Abitur in Mathematik 2014
 
   die im Modell die Neigung der Dachfläche der Gaube festlegt. Die zur
   :math:`x_3`-Achse parallele Strecke :math:`[NL]` stellt im Modell den sogenannten
-  Gaubenstiel dar; dessen Länge soll 1,4m betragen. Um die Koordinaten von
+  Gaubenstiel dar; dessen Länge soll 1,4 m betragen. Um die Koordinaten von
   :math:`N` und :math:`L` zu bestimmen, wird die Ebene :math:`F` betrachtet, die
   durch Verschiebung von :math:`E` um 1,4 in positive :math:`x_3`-Richtung entsteht.
 
@@ -95,7 +95,7 @@ Hierfür bestimmen wir zunächst aus der Skizze die Punkte :math:`B(8|0|5)` und
   A = \left|\begin{pmatrix} 0\\ 10\\ 0\end{pmatrix}\right|\,
       \left|\begin{pmatrix} -4\\ 0\\ 3\end{pmatrix}\right| = 50
 
-Die gesuchte Fläche beträgt also 50m².
+Die gesuchte Fläche beträgt also 50 m².
 
 Mit Sage legen wir zunächst alle Punkte fest und überprüfen anschließend
 das Ergebnis.
@@ -132,7 +132,7 @@ Das Haus erfüllt also die Satzung.
 
   sage: ba = (a-b).normalized()
   sage: bg = (g-b).normalized()
-  sage: print "Winkel der Dachgaube: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
+  sage: print "Dachneigung: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
 
 .. end of output
 
@@ -180,12 +180,13 @@ Dies ergibt sich auch mit Hilfe von Sage.
 .. sagecellserver::
 
   sage: lamb = solve(abs(x*(c-h)) == 1, x)
-  sage: print "Die Lösungen für lambda lauten:", lamb
+  sage: print "Die Lösungen für λ lauten:", lamb
 
 .. end of output
 
 Allerdings ist nur die Lösung mit positivem :math:`\lambda` sinnvoll, 
-da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt M(4,8|8|7,4).
+da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt
+:math:`M(4{,}8|8|7{,}4)`.
 
 .. sagecellserver::
 
@@ -196,7 +197,7 @@ da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt M(4,
 
 **Lösung zu Teil e**
 
-Durch eine Verschiebung von :math:`E` um 1,4m in positive :math:`x_3`-Richtung
+Durch eine Verschiebung von :math:`E` um 1,4 in positive :math:`x_3`-Richtung
 lässt sich die Ebenengleichung folgendermaßen umschreiben:
 
 .. math::
@@ -217,13 +218,13 @@ Einsetzen der Geradengleichung für :math:`m` in die Ebenengleichung von :math:`
 
 Damit ergibt sich durch Einsetzen in die Geradengleichung von :math:`m` der Punkt
 :math:`N(7{,}2|8|7)` und durch Verschieben um :math:`-1{,}4` in :math:`x_3`-Richtung
-der Punkt :math:`L(7{,2}|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgendermaßen:
+der Punkt :math:`L(7{,}2|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgendermaßen:
 
 .. sagecellserver::
 
   sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
   sage: n = m + mu*vector([6, 0, -1])
-  sage: l = n + vector([0, 0, -1.4])
+  sage: l = n + vector([0, 0, -7/5])
   sage: print "Koordinaten von N: ", n, ", L:", l
 
 .. end of output

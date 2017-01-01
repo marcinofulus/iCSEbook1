@@ -1,7 +1,7 @@
 Bayerisches Abitur in Mathematik 2013
 -------------------------------------
 
-.. admonition:: Angabe
+.. admonition:: Einleitung
 
   Gegeben ist die Funktion :math:`f:x\mapsto \frac{1}{2}x -\frac{1}{2}
   + \frac{8}{x+1}` mit Definitionsbereich :math:`\mathbb{R} \backslash \{-1\}`.
@@ -133,8 +133,9 @@ erhält man die Verschiebung in :math:`y`-Richtung. Es ergibt sich für
 
 .. end of output
 
-Die Punktsymmetrie von :math:`g` bezüglich des Ursprungs lässt sich dann
-in Sage wie folgt zeigen:
+Die Punktsymmetrie von :math:`g` bezüglich des Ursprungs ergibt sich daraus,
+dass nur lineare oder invers lineare Terme vorliegen, und lässt sich
+wie folgt mit Sage zeigen:
 
 .. sagecellserver::
 
@@ -243,15 +244,19 @@ Aufgabe 3
 
 **Lösung zu Teil a**
 
-Ist die Dose vollständig leer (:math:`x=0`) so stimmt der Schwerpunkt :math:`S`
-mit dem Schwerpunkt der Dose überein. Bei einer gleichmäßigen Gewichtsverteilung
-liegt :math:`S` somit in der Mitte der Dose. Ist die Dose bis zum Rand gefüllt,
-so liegt der Schwerpunkt der Flüssigkeit im Schwerpunkt der Dose. Der
-gemeinsame Schwerpunkt ist also gleich dem Schwerpunkt der leeren Dose.
+Einsetzen der gegebenen Argumente in die Funktion :math:`f` ergibt
 
 .. math::
+   
+   f(0)=f(15)=\frac{15}{2}\,.
 
-  f(0)=f(15)=\frac{15}{2}\,\mathrm{cm} = 7{,}5\,\mathrm{cm}
+
+Ist die Dose vollständig leer (:math:`x=0`) so stimmt der Schwerpunkt :math:`S`
+mit dem Schwerpunkt der Dose überein. Bei einer gleichmäßigen Gewichtsverteilung
+liegt :math:`S` somit in der Mitte der Dose bei einer Höhe von
+:math:`7{,}5\,\mathrm{cm}`.  Ist die Dose bis zum Rand gefüllt, so liegt der
+Schwerpunkt der Flüssigkeit im Schwerpunkt der Dose. Der gemeinsame Schwerpunkt
+ist also gleich dem Schwerpunkt der leeren Dose.
 
 **Lösung zu Teil b**
 

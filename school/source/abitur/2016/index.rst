@@ -14,7 +14,7 @@ Quelle des Aufgabentexts: `https://www.isb.bayern.de/download/17845/abiturpruefu
 English version
 ---------------
 
-The text of the English version is an unofficial translation.
+The problem texts of the English version are an unofficial translation.
 
 .. toctree::
    :maxdepth: 2
