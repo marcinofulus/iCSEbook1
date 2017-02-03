@@ -1,22 +1,22 @@
 
-Prąd stały
+Projekt badanie funkcji
 -----------------------
 
-.. admonition:: Jolanta Drogoń
+.. admonition:: Hanna Stachera
 
   Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
-**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look
-
-uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-
+**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
+   
 .. sagecellserver::
 
-  var('R,E,rw,J,P,U')
-sol = solve([R+rw == E/J,P == U*J,R==U/J],[P,J,U],solution_dict=True)
-show
- 
-gfakfgalfgalfgalgfalgalgh;zga;gha;gha;gha;gha;gha;
+  p=2 #change p
+  for n in range(1,6): #change a range
+    p=0.5*(p+2/p)
+    print p
+    print "error =",abs(N(sqrt(2)-p))
+  
+We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
 
 And what's interesting?
 Let's try to transform a formula that has :math:`\sqrt{2}`, for instance

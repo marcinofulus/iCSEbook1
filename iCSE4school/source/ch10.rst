@@ -1,22 +1,45 @@
 
-Prąd stały
+Całkowanie równań ruchu
 -----------------------
 
-.. admonition:: Jolanta Drogoń
+.. admonition:: Adam Ogaza
 
-  Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
+  całkowanie numeryczne równań ruchu :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
-**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look
-
-uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-
+**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
+   
 .. sagecellserver::
 
-  var('R,E,rw,J,P,U')
-sol = solve([R+rw == E/J,P == U*J,R==U/J],[P,J,U],solution_dict=True)
-show
- 
-gfakfgalfgalfgalgfalgalgh;zga;gha;gha;gha;gha;gha;
+    # Oscylator - położenie i prędkość
+    x0 = 0
+    v0 = 10
+    dt = 0.05
+    totaltime = 10
+    k = 1
+    m = 1
+    t = 0
+    A = v0*sqrt(m/k)
+
+    wykresX = point( [(x0,t)],pointsize=50,figsize=5,color='red')
+    wykresV = point( [(v0,t)],pointsize=50,figsize=5,color='green')
+    for i in range(int(totaltime/dt)):
+        v1  = v0 - k/m*x0*dt        
+        x1 = x0 + v0*dt
+
+        x0,v0 = x1,v1 
+        t += dt
+        wykresX = wykresX +  point( [(t, x1)],pointsize=20,figsize=5, color='purple')
+        wykresV = wykresV +  point( [(t, v1)],pointsize=20,figsize=5, color='green')
+
+    var('t')
+
+    wykresX_exact = plot(A*sin(sqrt(k/m)*t),(t,0,totaltime),color='red')
+    wykresV_exact = plot(A*cos(sqrt(k/m)*t),(t,0,totaltime),color='yellow')
+
+    show(wykresX+wykresX_exact)
+    show(wykresV+wykresV_exact)  
+
+We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
 
 And what's interesting?
 Let's try to transform a formula that has :math:`\sqrt{2}`, for instance

@@ -1,0 +1,33 @@
+
+Próba KS i KJ
+-------------
+    
+Prędkość.
+
+.. sagecellserver::
+
+    show("v=s/t")
+    v=10*int(5*random()+2)
+    t=int(5*random()+2)
+    s=v*t
+    r=random()
+    if (r<0.3):
+        show("v=",v, "[km/h], t=", t, "[h], s=? [km]")
+    else:
+        if (r<0.7):
+            show("v=",v, "[km/h], s=", s, "[km], t=? [h]")
+        else:
+            show("s=",s, "[km], t=", t, "[h], v=? [km/h]")
+        
+Wynik  
+
+.. sagecellserver::  
+
+    if (r<0.3):
+        show("s=",s, "[km]")
+    else:
+        if (r<0.7):
+            show("t=",t, "[h]")
+        else:
+            show("v=",v, "[km/h]")
+           

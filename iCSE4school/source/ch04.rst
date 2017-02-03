@@ -1,5 +1,5 @@
 
-Funkcja abs()
+Funkcja abs() wersja 28 października
 -----------------------
 
 .. admonition:: Mariola Strojny, Michał Strojny 2016
@@ -8,23 +8,26 @@ Funkcja abs()
 
 Definicja mówi, że wartością bezwzględną liczby rzeczywistej a (oznaczamy |a|) nazywamy:
 
-Liczbę a, jeżeli a jest liczbą nieujemną;
-Liczbę przeciwną do a, jeśli a jest liczbą ujemną
-Zapis symboliczny :
+Liczbę :math:`a`, jeżeli :math:`a` jest liczbą nieujemną;
+Liczbę przeciwną do :math:`a`, jeśli :math:`a` jest liczbą ujemną
+Zapis symboliczny:
 
-                                               |a|= a, gdy a≥0
+.. math::
 
-                                                      -a, gdy a<0
+  |a|=\left\{
+  \begin{array}{ll}
+  a, & \textrm{ gdy } a\geq 0 \\
+  -a, & \textrm{ gdy } a<0 \\
+  \end{array}
+  \right.
 
  
-
 Prześledźmy kilka przykładów jak powstają wykresy funkcji z użyciem wartości bezwzględnej, potraktowanej jako przekształcenie.
 
 Funkcja liniowa jest dobrym obiektem do przykładowego pokazania jak działają złożenia przekształceń.
 
  
-
-                Niech dana będzie funkcja liniowa f(x) = x
+Niech dana będzie funkcja liniowa :math:`f(x) = 100x`
 
   
    
@@ -34,7 +37,7 @@ Funkcja liniowa jest dobrym obiektem do przykładowego pokazania jak działają 
   f(x)=x
   plot(f,x,-10,10,color='blue',thickness=2)
   
-Tworzymy wykres funkcji f(x) = |x|. Na mocy definicji wartości bezwzględnej odbija się część wykresu dla ujemnych wartości, pozostała część nie zmienia swojego położenia.
+Tworzymy wykres funkcji :math:`f(x) = |x|`. Na mocy definicji wartości bezwzględnej odbija się część wykresu dla ujemnych wartości, pozostała część nie zmienia swojego położenia.
 
 .. sagecellserver::
 
@@ -43,28 +46,25 @@ Tworzymy wykres funkcji f(x) = |x|. Na mocy definicji wartości bezwzględnej od
   plot(f,x,-10,10, color='blue',thickness=2)
   
   
-Otrzymamy wykres f(x)=|x| przesuwamy o wektor [0, -2]. W wyniku translacji otrzymujemy wykres f(x)=|x|-2
+Otrzymamy wykres :math:`f(x)=|x|` przesuwamy o wektor :math:`[0, -200]`. W wyniku translacji otrzymujemy wykres :math:`f(x)=|x|-2`
 
 We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
 
 .. sagecellserver::
 
-  var ('x')
-  f(x)=abs(abs(x)-2)-2
-  plot(f,x,-10,10, color='blue',thickness=2)
+  f(x)=tan(x)
+  plot(f,xmin=0, xmax=2*pi, ymin=-5, ymax=5, detect_poles="show", linestyle="-", figsize=4, axes_labels=['x','y'], tick_formatter=pi,   ticks=pi/4) 
+       	
 
 And what's interesting?
 Let's try to transform a formula that has :math:`\sqrt{2}`, for instance
 
 .. sagecellserver::
 
-  var ('x')
-  f(x)=abs(abs(abs(x)-2)-2)-2
-  plot(f,x,-10,10, color='blue',thickness=2)
+  var('a','b','c')
+  r_kwadr = a*x^2 + b*x + c == 0
+  solve(r_kwadr, x) 
   
-  
-  
-  \left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\right)^3.
 
 Everyone has heard about the transformation of expressions that contain numbers that are not rational, so let's get to the tedious work...
 
