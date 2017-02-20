@@ -10,8 +10,8 @@ Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżen
 
 Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
-1a. Definicja kongruencji
-^^^^^^^^^^^^^^^^^^^^^^^^^
+1a. Definicja kongruencji.
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Dwie liczby całkowite *a* and *b* przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
@@ -98,10 +98,9 @@ x ≡ 2 mod 7.
 
 **Jeśli** *p* jest liczbą pierwszą oraz *a*, *p* są względnie pierwsze, **wtedy** :math:`a^{p−1} - 1` jest wielokrotnością liczby *p*. Zapisujemy to symbolicznie: :math:`a^{p−1}≡1 (mod \hspace{2mm} p)`.
 
+Sprawdźmy poprawność powyższego twierdzenia, dla kolejnych liczb pierwszych, numerycznie z wykorzystaniem języka Python.
 
-Sprawdźmy poprawność powyższego twierdzenia, dla kolejnych liczb pierwszych, numerycznie z wykorzystaniem języka SageMath.
-
-Dla a = 35 i p = 3 lub p = 5 liczby nie spełniają założeń twierdzenia. Możemy stwierdzić, że wtedy liczba :math:`a^{p−1} - 1` jest podzielna przez p.
+Dla a = 35 i p = 3 lub p = 5 liczby nie spełniają założeń twierdzenia. Możemy dodatkowo stwierdzić, że liczba :math:`a^{p−1} - 1` jest podzielna przez p.
 
 .. sagecellserver::
 

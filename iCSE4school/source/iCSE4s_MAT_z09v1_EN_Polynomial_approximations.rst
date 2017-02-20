@@ -6,15 +6,15 @@ Polynomial  approximation
 1. Introduction.
 ^^^^^^^^^^^^^^^^
 
-In each of the windows code you can change the numbers, text, variables, or all of the code.
+In each of the program's window you can change the numbers, text, variables, or the code.
 
-You do not have to worry if the program stops working, because after refreshing return to the initial settings.
+You do not have to worry if the program stops working, because after its refreshing it returns to the initial settings.
 
-Often next code follows from the previous one, so please exercises (algorithms) run by the order.  
+Often next code results from the previous one, so the exercises (algorithms) should be run in their order.
 
 2. Factorial. 
 ^^^^^^^^^^^^^
-The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the prodact of all positive integers less than or equal to   *n*.
+The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the product of all positive integers smaller than or equal *n*.
     
 .. math::
      
@@ -25,14 +25,14 @@ The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the prodact of
      \end{array}
      \right.
 
-For example
+For example,
 
 .. math:: 
    \ 4!= 4 \cdot 3! =...= 4 \cdot 3 \cdot 2 \cdot 1 \cdot 1 = 24 
    
 The  **factorial** in SageMath.
 
-The first example counts factorial by definition.
+The first example counts factorial according to the definition.
 
 .. sagecellserver::
     
@@ -41,7 +41,7 @@ The first example counts factorial by definition.
         silnia=silnia*i
         print i, '!=', silnia
         
-The second example uses a built-in strong in Sage.
+The second example uses a built-in function in SageMath.
 
 .. sagecellserver::
     
@@ -50,7 +50,7 @@ The second example uses a built-in strong in Sage.
 3. Derivative.
 ^^^^^^^^^^^^^^
 
-**Derivative** will be construed as a mathematical operation on the function.
+**Derivative** will be interpreted as a mathematical operation on a function.
 
 **Basic formulas:**
 
@@ -92,7 +92,7 @@ The following formulas for the derivative of the sum, difference, product and qu
 
 The number before the variable does not change operations on the derivative. 
 
-Algebraic expressions separated by *+* or *-* count separately.
+Algebraic expressions separated by *+* or *--* count separately.
 
 **Examples**
 
@@ -130,16 +130,16 @@ Algebraic expressions separated by *+* or *-* count separately.
 
 **Derivatives of derivatives - Derivatives of higher orders.**
 
-Of course, we can calculate the derivative of a derivative.
+We can calculate the derivative of a derivative.
 
-Derivatives of higher orders written in the following manner:
+Derivatives of higher orders are written in the following way:
 
 .. math:: 
 
     f''(x) , \hspace{1,1cm}  f'''(x) , \hspace{1,1cm}  f''''(x),\hspace{1cm}... \\
     f^{(2)}(x) , \hspace{1cm}  f^{(3)}(x) , \hspace{1cm}  f^{(4)}(x),\hspace{1cm}...
 
-Below calculation of higher order derivatives of the SageMath:
+Below, the calculations of higher order derivatives of the SageMath:
 
 .. sagecellserver::
 
@@ -159,7 +159,7 @@ Below calculation of higher order derivatives of the SageMath:
 
 **Calculating the value of the derivative at the point.**
 
-Derivative of a function is of course a function so we can calculate the value of the derivative for the argument.
+Derivative of a function is a function so we can calculate the value of the derivative for the argument.
 
 **Below suitable examples.**
 
@@ -178,7 +178,7 @@ Derivative of a function is of course a function so we can calculate the value o
 4. Polynomial.
 ^^^^^^^^^^^^^^
 
-**Polynomial** of degree n variable x is called function:
+**Polynomial** of *n* degree and *x* variable is called function:
 
 .. math::
 
@@ -186,7 +186,7 @@ Derivative of a function is of course a function so we can calculate the value o
 
 **Conclusion**
 
-Linear function and quadratic function is a polynomial.
+Linear function and quadratic function are polynomial.
 
 .. math::
 
@@ -198,15 +198,13 @@ Linear function and quadratic function is a polynomial.
 5. Line.
 ^^^^^^^^
 
-We know that by two points passes exactly one line.
-More than knowing the coordinates of the points above, we can determine the formula of this line.
-Recall that the pattern is a linear function:
+We know are line goes through two points. Besides, knowing the coordinates of the points above, we can determine the formula of this line. We should remember that the formula is a linear function:
 
 .. math::
 
     y = a x + b 
 
-Directional factor and the intercept can be calculated from formulas:
+Directional factor and the intercept can be calculated from these formulas:
 
 .. math:: 
 
@@ -234,7 +232,7 @@ Typing the appropriate equations, we can draw a straight line through two points
 6. Parabola.
 ^^^^^^^^^^^^
 
-Below is an example for three points which are not collinear. Then we can determine the quadratic function, which includes these points. So we have determined from the following equations quadratic function coefficients *a, b, c*.
+Below, there is an example for three points which are not collinear. Then we can determine the quadratic function, which includes these points. So we have to determine *a, b, c* coefficients from the following equation quadratic function.
 
 .. math::
 
@@ -244,7 +242,7 @@ Below is an example for three points which are not collinear. Then we can determ
     y_3=ax_3^2+bx_3+c 
     \end{cases} 
 
-This work is tedious, even for a specific example. If we wanted to determine appropriate models as above for the linear function that probably it would take us a long time.
+This work is tedious, even for a specific example. If we wanted to determine appropriate models as above for the linear function that probably it would probably take us a long time.
 
 Below we use the capabilities of Sage.
 
@@ -263,7 +261,7 @@ Below we use the capabilities of Sage.
     sage: show(p1+p2+p3,figsize=3)
 
 
-We calculate the following equations, where he searched coefficients: *a, b, c*.
+We calculate the following equations, where he search coefficients: *a, b, c*.
 
 .. math:: 
 
@@ -282,7 +280,7 @@ Change the above system of equations for the corresponding matrix equation.
     \end{bmatrix} 
     \begin{bmatrix} a\\b\\c\end{bmatrix} = \begin{bmatrix} y_1\\y_2\\y_3\end{bmatrix}
 
-In the SageMath we can easily solve this equation is enough to apply the operation:
+In the SageMath we can easily solve this equation is enough to apply the following operation:
 
 .. math::
 
@@ -306,7 +304,7 @@ In the SageMath we can easily solve this equation is enough to apply the operati
 
 Here is an example for a few random points. The resulting function is a polynomial.
 
-If you specify n points, it certainly passes through these points a polynomial of degree less than n.
+If you specify *n* points, it certainly passes through these points a polynomial of degree less than *n*.
 
 
 .. sagecellserver::
@@ -333,7 +331,7 @@ If you specify n points, it certainly passes through these points a polynomial o
     sage: show(points,ymin=-2,ymax=6,figsize=4) 
  
 
-For the random points the calculated polynomial coefficients.
+For the random points calculate polynomial coefficients.
 
 .. sagecellserver::
 
@@ -343,7 +341,7 @@ For the random points the calculated polynomial coefficients.
     sage: show(M)
     sage: show(wynik)
 
-We draw a polynomial that passes through the given points.
+We draw a polynomial that goes passes through the given points.
 
 .. sagecellserver::
 
@@ -360,9 +358,9 @@ We draw a polynomial that passes through the given points.
 8. Taylor's formula.
 ^^^^^^^^^^^^^^^^^^^^
 
-The mathematical analysis is known below the following formula that approximates any function corresponding polynomial.
+From the mathematical analysis is known below the following formula is known. It approximates any function corresponding polynomial.
 
-**Definition Taylor's formula**
+**Taylor's formula**
 
 .. math::
 
@@ -399,7 +397,7 @@ Here is an example for the function :math:`f(x)=sin(x)`.
 
 **Exercise for students.**
 
-For the function :math:`f(x)=cos(x)` to find the corresponding polynomial formula of Taylor-Maclaurin.
+For the function :math:`f(x)=cos(x)` find the corresponding polynomial formula of Taylor-Maclaurin.
 
 .. sagecellserver::
 

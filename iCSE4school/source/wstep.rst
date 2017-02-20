@@ -26,8 +26,8 @@ problemów z pogranicza zagadnień naukowych.
 Chcąc wykorzystać nasze materiały oraz nie mając podstawowych
 umiejętności w zakresie obsługi języka Python proponujemy zacząć od
 zapoznania się tym językiem oraz ze środowiskiem SageMath dostępnym pod
-adresem `SageMath.org <http://sagemath.org>`_. W środowisku Sage uczeń ma szansę, prócz
-programowania, wykonywania ćwiczeń na przykładowych materiałach tam
+adresem `SageMath.org <http://sagemath.org>`_. W środowisku Sage uczeń ma 
+szansę, prócz programowania, wykonywania ćwiczeń na przykładowych materiałach tam
 zamieszczonych z możliwością modyfikowania tekstów źródłowych.
 
 Opracowane w projekcie scenariusze lekcji z wykorzystaniem języka
@@ -85,7 +85,7 @@ programować na rynku pracy.  Zachęcając do wykorzystania opracowanych
 w projekcie ICSE4 materiałów dydaktycznych zapraszamy do zgłaszania
 uwag.  
 
-Autorzy.
+Autorzy!
 
 
 .. [#e-learning] https://pl.wikipedia.org/wiki/E-learning 
