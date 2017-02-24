@@ -51,7 +51,7 @@ Bayerisches Abitur in Mathematik 2013
   c) Für einen Patienten mit der Blutgruppe B und dem Rhesusfaktor Rh- wird
      Spendenblut benötigt. Bestimmen Sie, wie viele zufällig ausgewählte
      Personen mindestens Blut spenden müssen, damit man mit einer
-     Wahrscheinlichkeit von mehr als 95 % mindesten einen für diesen Patienten
+     Wahrscheinlichkeit von mehr als 95 % mindestens einen für diesen Patienten
      geeignete Blutspende erhält.
   
 
