@@ -66,8 +66,8 @@ The desired probability is:
 
 .. math::
 
-  W^{25}_{0,43}(10) =& {25 \choose 10}\cdot0{,}43^{10}\cdot(1-0{,}43)^{15}\\
-  =& \frac{25!}{10!\cdot 15!} 0{,}43^{10} \cdot 0{,}57^{15} \approx 15{,}4 \% 
+  W^{25}_{0.43}(10) =& {25 \choose 10}\cdot0{.}43^{10}\cdot(1-0{.}43)^{15}\\
+  =& \frac{25!}{10!\cdot 15!} 0{.}43^{10} \cdot 0{.}57^{15} \approx 15{.}4 \% 
 
 This random experiment can be simulated with Sage:
 
@@ -122,13 +122,13 @@ We look for the smallest number :math:`n` for which
 
 .. math::
 
-  (0{,}92)^{n} \leq 0{,}05\,.
+  (0{.}92)^{n} \leq 0{.}05\,.
 
-Taking the logarithm and bearing in mind that :math:`\ln(0,92)` is negative, one finds
+Taking the logarithm and bearing in mind that :math:`\ln(0.92)` is negative, one finds
 
 .. math::
 
-  n \geq \frac{\ln(0{,}05)}{\ln(0{,}92)} \approx 35{,}9\,.
+  n \geq \frac{\ln(0{.}05)}{\ln(0{.}92)} \approx 35{.}9\,.
 
 One hence needs at least 36 donors.
 
