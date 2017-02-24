@@ -22,6 +22,8 @@ Stochastics
    :maxdepth: 1
 
    Problem 1 <blutgruppe>
+   Problem 2 <stoffwechsel>
+
 Geometry
 ........
 
