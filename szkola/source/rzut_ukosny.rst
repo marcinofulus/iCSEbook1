@@ -109,34 +109,34 @@ Wprowadzając wartości początkowe :math:`\:x_0\:` i :math:`\:y_0\:` dla wspó�
 
 .. sagecellserver::
 
-    sage: vx = vx0 
-    sage: vy = vy0 - g * dt
-    sage: x  = x0  + vx0 *dt 
-    sage: y  = y0  + vy0 *dt
-    sage: x0, y0, vx0, vy0 = x, y, vx, vy
-    sage: punkty.append( (x, y, vx, vy))
-    sage: html.table([('$x$', '$y$','$v_x$','$v_y$')]+punkty,header=True)
-   
+    vx = vx0 
+    vy = vy0 - g * dt
+    x  = x0  + vx0 *dt 
+    y  = y0  + vy0 *dt
+    x0, y0, vx0, vy0 = x, y, vx, vy
+    punkty.append( (x, y, vx, vy))
+    table([('$x$', '$y$','$v_x$','$v_y$')]+punkty,header_row=True)
+
 
 
 .. end of output
 
 .. code-block:: python
 
-    sage: x0,y0=0,0
-    sage: vx0,vy0= 10,10
-    sage: g=9.81
-    sage: dt = 0.03
-    sage: wykres = point( [(x0,y0)],pointsize=50,figsize=5,color='red')
-    sage: for i in range(int(2.1/dt)):
-    ...       x1 = x0 + vx0*dt
-    ...       y1 = y0 + vy0*dt
-    ...       vx1  = vx0        
-    ...       vy1  = vy0 - g*dt 
-    ...       x0,y0,vx0,vy0 = x1,y1,vx1,vy1 
-    ...       wykres = wykres +  point( [(x1,y1)],pointsize=20,figsize=6)
-    sage: var('t')
-    sage: wykres + parametric_plot((10*t,10*t-g*t^2/2),(t,0,2.1),color='red')
+     x0,y0=0,0
+     vx0,vy0= 10,10
+     g=9.81
+     dt = 0.03
+     wykres = point( [(x0,y0)],pointsize=50,figsize=5,color='red')
+     for i in range(int(2.1/dt)):
+          x1 = x0 + vx0*dt
+          y1 = y0 + vy0*dt
+          vx1  = vx0        
+          vy1  = vy0 - g*dt 
+          x0,y0,vx0,vy0 = x1,y1,vx1,vy1 
+          wykres = wykres +  point( [(x1,y1)],pointsize=20,figsize=6)
+     var('t')
+     wykres + parametric_plot((10*t,10*t-g*t^2/2),(t,0,2.1),color='red')
 
 .. image:: Warsztaty_Rzut_ukosny_media/cell_38_sage0.png
     :align: center
@@ -147,28 +147,28 @@ Wprowadzając wartości początkowe :math:`\:x_0\:` i :math:`\:y_0\:` dla wspó�
 
 .. sagecellserver:: 
 
-    sage: var('t')
-    sage: @interact
-    sage: def _(n=slider(range(10,100)+range(100,1000,100))):
-    ...       g=9.81
-    ...       x0, y0, vx0, vy0 = [0,0,10,10] 
-    ...       dt = 2.1/n
-    ...       trajektoria = [ (x0, y0) ]
-    ...       
-    ...       for i in range(n):
-    ...           vx = vx0 
-    ...           vy = vy0  - g * dt
-    ...           x = x0 + vx0 *dt 
-    ...           y = y0 + vy0 *dt 
-    ...           if y<0:
-    ...               break
-    ...           x0, y0,vx0, vy0 = x, y, vx , vy 
-    ...           trajektoria.append(( x,y ))
-    ...       
-    ...       plt1 =  line(trajektoria,figsize=(6,3),marker='o') 
-    ...       x0, y0, vx0, vy0 = [0,0,10,10]
-    ...       plt2 =  parametric_plot( [x0+vx0*t,y0+vy0*t-g*t^2/2],(t,0,2.1),color='red' )
-    ...       (plt1+plt2).show()
+    var('t')
+    @interact
+    def _(n=slider(range(10,100)+range(100,1000,100))):
+        g=9.81
+        x0, y0, vx0, vy0 = [0,0,10,10] 
+        dt = 2.1/n
+        trajektoria = [ (x0, y0) ]
+        
+        for i in range(n):
+            vx = vx0 
+            vy = vy0  - g * dt
+            x = x0 + vx0 *dt 
+            y = y0 + vy0 *dt 
+            if y<0:
+                break
+            x0, y0,vx0, vy0 = x, y, vx , vy 
+            trajektoria.append(( x,y ))
+        
+        plt1 =  line(trajektoria,figsize=(6,3),marker='o') 
+        x0, y0, vx0, vy0 = [0,0,10,10]
+        plt2 =  parametric_plot( [x0+vx0*t,y0+vy0*t-g*t^2/2],(t,0,2.1),color='red' )
+        (plt1+plt2).show()
 
 
 .. end of output
@@ -197,29 +197,29 @@ Jeżeli pocisk "odczuwa" powietrze, to może oznaczać że ruch będzie inny w o
 
 .. sagecellserver:: 
 
-    sage: var('t')
-    sage: @interact
-    sage: def _(Cx=slider(srange(0,1,0.01)),wiatr=slider(srange(-50,50,0.1))):
-    ...       n=200
-    ...       g=9.81
-    ...       x0, y0, vx0, vy0 = [0,0,10,10] 
-    ...       dt = 2.1/n
-    ...       trajektoria = [ (x0, y0) ]
-    ...       
-    ...       for i in range(n):
-    ...           vx = vx0 - Cx*(vx0-wiatr)*dt
-    ...           vy = vy0  - g * dt - Cx*vy0*dt
-    ...           x = x0 + vx0 *dt 
-    ...           y = y0 + vy0 *dt 
-    ...           if y<0:
-    ...               break
-    ...           x0, y0,vx0, vy0 = x, y, vx , vy 
-    ...           trajektoria.append(( x,y ))
-    ...       
-    ...       plt1 =  line(trajektoria,figsize=(6,3)) 
-    ...       x0, y0, vx0, vy0 = [0,0,10,10]
-    ...       plt2 =  parametric_plot( [x0+vx0*t,y0+vy0*t-g*t^2/2],(t,0,2.1),color='red' )
-    ...       (plt1+plt2).show()
+     var('t')
+     @interact
+     def _(Cx=slider(srange(0,1,0.01)),wiatr=slider(srange(-50,50,0.1))):
+         n=200
+         g=9.81
+         x0, y0, vx0, vy0 = [0,0,10,10] 
+         dt = 2.1/n
+         trajektoria = [ (x0, y0) ]
+         
+         for i in range(n):
+             vx = vx0 - Cx*(vx0-wiatr)*dt
+             vy = vy0  - g * dt - Cx*vy0*dt
+             x = x0 + vx0 *dt 
+             y = y0 + vy0 *dt 
+             if y<0:
+                 break
+             x0, y0,vx0, vy0 = x, y, vx , vy 
+             trajektoria.append(( x,y ))
+         
+         plt1 =  line(trajektoria,figsize=(6,3)) 
+         x0, y0, vx0, vy0 = [0,0,10,10]
+         plt2 =  parametric_plot( [x0+vx0*t,y0+vy0*t-g*t^2/2],(t,0,2.1),color='red' )
+         (plt1+plt2).show()
 
 
 .. end of output
@@ -359,8 +359,9 @@ jest równaniem:
 **Literatura.**
 
 
-[1]  Roman Leitner,  Zarys matematyki wyższej,  część I,  WNT Warszawa  (w niniejszym opracowaniu przyjęto oznaczenia z tego podręcznika) 
-[2]  G.M. Fichtenholz,  Rachunek różniczkowy i całkowy,  tom I,  PWN Warszawa
+ [1]  Roman Leitner,  Zarys matematyki wyższej,  część I,  WNT Warszawa  (w niniejszym opracowaniu przyjęto oznaczenia z tego podręcznika) 
+
+ [2]  G.M. Fichtenholz,  Rachunek różniczkowy i całkowy,  tom I,  PWN Warszawa
 
 
 .. code-block:: python
@@ -412,10 +413,10 @@ rysunku:
 
 .. sagecellserver::
 
-    sage: var('x p y')
-    sage: h  =  10
-    sage: implicit_plot3d( p*x-(1+p^2)/(4*h)*x^2-y,(x,-20,20),(y,0,10),(p,-7.7,7.7),plot_points=90) +\
-    ...    sum([parametric_plot3d( (x,p0*x-(1+p0^2)/(4*h)*x^2,p0),(x,0,40*p0/(p0^2 + 1)),color='red',thickness=11) for p0 in srange(0.5,6,1)])
+    var('x p y')
+    h  =  10
+    implicit_plot3d( p*x-(1+p^2)/(4*h)*x^2-y,(x,-20,20),(y,0,10),(p,-7.7,7.7),plot_points=90) +\
+     sum([parametric_plot3d( (x,p0*x-(1+p0^2)/(4*h)*x^2,p0),(x,0,40*p0/(p0^2 + 1)),color='red',thickness=11) for p0 in srange(0.5,6,1)])
 
 
 .. end of output

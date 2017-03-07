@@ -1,5 +1,5 @@
-Zadanie 02 - 
-------------
+Zadanie 02 - Forget before assume!
+----------------------------------
 
 .. image:: matura2015/matura2015_r02.png
    :align: center

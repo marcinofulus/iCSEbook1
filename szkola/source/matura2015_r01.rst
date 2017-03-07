@@ -1,5 +1,5 @@
-łxsxcZadanie 01 - 
-------------
+Zadanie 01 - Nierówności - graficznie!
+--------------------------------------
 
 .. image:: matura2015/matura2015_r01.png
    :align: center
