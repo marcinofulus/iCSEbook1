@@ -3,8 +3,39 @@
 Przybliżanie wielomianami.
 ==========================
 
-1. Wprowadzenie.
-^^^^^^^^^^^^^^^^
+1. Wprowadzenie metodyczne.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+	Zajęcia odbywały się na dodatkowych godzinach (ICSE4school) w grupie uczniów, które miały rozszerzony poziom nauczania z matematyki i informatyki w drugiej klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony metodą „flip teaching”, czyli uczniowie musieli się przygotować do zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie wielomianu przechodzącego przez dane punkty. Według programu nauczania na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy wielomian przechodzący przez te punkty oraz narysuje to na wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy, mnożeniem macierzy przez wektor i wyznaczaniem jej wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych współczynnikach wielomianu to mieli podać hipotezę, a następnie sprawdzić ją w internecie, czy jest ona prawdziwa.
+    
+	Według mnie zajęcia te mogą być dobrym uzupełnieniem i ugruntowaniem wiedzy uczniów z matematyki w trzeciej klasie liceum na poziomie rozszerzonym lub na zajęciach dodatkowych w klasie drugiej. Ponadto każdy rozdział można traktować niezależnie, czyli przeprowadzać go w czasie przeprowadzania danego materiału na lekcjach matematyki. 
+	
+**Uczniowie powinni znać:**
+funkcję liniową i kwadratową *(4.6–10 mat_p)*, pojęcie wielomianu *(3.6 mat_r)*, definicję silnia *(10.1 mat_r)*.
+    
+Podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*.
+
+**Uczniowie na poniższych zajęciach poznają:**
+
+- sposoby implementacji i obliczania silni,
+
+- pochodną funkcji i sposoby jej obliczania *(11.2 mat_r)*,
+
+- wyznaczanie prostej, paraboli i wielomianu przechodzącego przez dane punkty *(3.2 mat_p)*,
+
+- wzór Taylora oraz jego interpretację geometryczną.
+
+Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.
+
+*mat_p – matematyka poziom podstawowy,*
+    
+*mat_r – matematyka poziom rozszerzony,*
+    
+*inf_r – informatyka poziom rozszerzony.*   
+
+Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.
+
+    **Uwaga!**
 
 W każdym z okien programu można zmieniać liczby, tekst, zmienne lub cały kod.
 

@@ -1,8 +1,49 @@
 RSA szyfrowanie asymetryczne. 
 =============================
 
-1. Wprowadzenie.
-^^^^^^^^^^^^^^^^
+1. Wprowadzenie metodyczne.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Zajęcia odbywały się na dodatkowych godzinach (ICSE4school) w grupie uczniów, które miały rozszerzony poziom nauczania z matematyki i informatyki w drugiej klasie liceum. Powyższy temat nadaje się również jako praca projektowa, która łączy wiedzę matematyczno-informatyczną. Język SageMath umożliwia pracę na dużych liczbach przekraczających zakres zmiennych typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę imponująca. Jak wiadomo powyższe elementy są istotne w dziedzinie kryptografii, która łączy teorię liczb z praktyką programistyczną. Nie przekracza to zakresu materiału przewidzianego na rozszerzeniu z informatyki liceum lub technikum. Dlatego też postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania wiadomości **RSA**.
+
+    Materiał dla uczniów jest podzielony na trzy rozdziały. Pierwszy z nich wprowadza pojęcia kongruencji oraz istotne matematyczne twierdzenia, które są wykorzystywane w kryptografii. Co prawda dowody i szczegóły zagadnień są pominięte, ale zainteresowani uczniowie bez problemu znajdą te informacje w internecie. Drugi rozdział to szczegółowe wprowadzenie szyfrowania asymetrycznego stosowanego na początku lat 70 poprzedniego stulecia (obecnie stosowanego już tylko w celach dydaktycznych). Trzeci rozdział to już pełne szyfrowanie RSA. W każdej części są wyszczególnione ćwiczenia i zadania dla uczniów.  
+    
+    
+    
+**Uczniowie powinni znać i  rozumieć:**
+
+- działania na potęgach, NWD, dzielenie z resztą. *(1.1, 1.4, 1.5 mat_p)*,
+
+- podstawowy algorytm Euklidesa a najlepiej rozszerzoną jego wersję, *(1.0-II-5.11.a inf_r)*,
+
+- podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*,
+
+- potrzebę szyfrowania wiadomości *(1.0-II-2.5, 1.0-II-5.11.e inf_r)*,
+
+- kodowanie znaków ASCI *(1.0-II-5.11.d inf_r)*.
+
+
+
+**Uczniowie na poniższych zajęciach poznają:**
+    
+- własności działania modulo (kongruencję), chińskie twierdzenie o resztach,
+
+- małe twierdzenie Fermata, proste szyfrowanie asymetryczne,
+
+- szyfrowanie asymetryczne RSA – oparte na liczbach pierwszych *(1.0-II-5.11.e inf_r)*.
+
+
+
+**Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.**
+
+mat_p – matematyka poziom podstawowy, inf_r – informatyka poziom rozszerzony.   
+
+
+Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe. 
+
+
+
+    **Uwaga!**
 
 W każdym z okien programu można zmieniać liczby, tekst, zmienne lub cały kod.
 
@@ -13,7 +54,7 @@ Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy
 1a. Definicja kongruencji.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Dwie liczby całkowite *a* and *b* przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
+Dwie liczby całkowite : :math:`a, b` przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
 Kongruencję zapisujemy symbolicznie: :math:`a ≡ b (mod \hspace{2mm} n)`.
 
