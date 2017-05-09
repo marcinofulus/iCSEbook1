@@ -11,7 +11,7 @@ O ne of the most important term referring to real numbers is absolute value. The
 
 The symbolic notation
 
-\|a\|= a dla a≥0
+\|a\|= a dla a>=0
 
 \-a dla a<0
 

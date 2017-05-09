@@ -13,23 +13,23 @@ Often next code results from the previous one, so the exercises (algorithms) sho
 1a. Definition of congruence relation.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Two integers *a* and *b* are said to be  **congruent modulo** *n*, written: :math:`a ≡ b (mod \hspace{2mm} n)`, when: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
+Two integers *a* and *b* are said to be  **congruent modulo** *n*, written: :math:`a = b (mod \hspace{2mm} n)`, when: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
 Examples:
 """""""""
 
-2 ≡ 2 (mod 8), because 2 − 2 = 0, which is a multiple of 8,
+2 = 2 (mod 8), because 2 - 2 = 0, which is a multiple of 8,
 
-3 ≡ 18 (mod 5), because 3 − 18 = −15, which is a multiple of 5,
+3 = 18 (mod 5), because 3 - 18 = -15, which is a multiple of 5,
 
-100 ≡ 1 (mod 9), because 100 − 1 = 99, which is a multiple of 9,
+100 = 1 (mod 9), because 100 - 1 = 99, which is a multiple of 9,
 
-250 ≡ 206 (mod 22), because 250 − 206 = 44, which is a multiple of 22.
+250 = 206 (mod 22), because 250 - 206 = 44, which is a multiple of 22.
 
 Exercise 1.
 """""""""""
 
-Find x if you know: 3x ≡ 1 (mod 4), 5<x<10
+Find x if you know: 3x = 1 (mod 4), 5<x<10
 
 .. sagecellserver::
 
@@ -41,7 +41,7 @@ Find x if you know: 3x ≡ 1 (mod 4), 5<x<10
 Exercise 2.
 """""""""""
 
-Find x if you know: 3x+2 ≡ 1 (mod 5)
+Find x if you know: 3x+2 = 1 (mod 5)
 
 .. sagecellserver::
 
@@ -56,7 +56,7 @@ We can realise there are infinitely many solutions. What is more, the solutions 
 Exercise 3.
 """""""""""
 
-Find x if you know: 3x ≡ 1 (mod 6)
+Find x if you know: 3x = 1 (mod 6)
 
 .. sagecellserver::
 
@@ -81,11 +81,11 @@ A bar of chocolate consists of less than 100 pieces. While dividing it into thre
 
 We know that the number of chocolate pieces must satisfy the below congruence:
 
-x ≡ 1 mod 3,
+x = 1 mod 3,
 
-x ≡ 3 mod 5,
+x = 3 mod 5,
 
-x ≡ 2 mod 7.
+x = 2 mod 7.
 
 .. sagecellserver::
 
@@ -99,7 +99,7 @@ x ≡ 2 mod 7.
 
 If   *p*   is a prime number and   *a*   is not divisible by   *p*,
 
-*then* :math:`a^{p−1} - 1` is an integer multiple of *p*, or in symbols: :math:`a^{p−1}≡1 (mod \hspace{2mm} p)`
+*then* :math:`a^{p-1} - 1` is an integer multiple of *p*, or in symbols: :math:`a^{p-1}=1 (mod \hspace{2mm} p)`
 
 Let’s check the correctness of the Fermet’s Little Theorem basing on the Python language.
 
@@ -335,7 +335,7 @@ Generating RSA cryptosystem.
 
 3. Choose an integer *d* such that: :math:`1  < d < f` and :math:`gcd(d,\hspace{2mm} f) = 1` (You can choose a prime number).
 
-4. Determine :math:`e` as: :math:`de≡1 \hspace{1mm} (mod \hspace{1mm} f)`.
+4. Determine :math:`e` as: :math:`de=1 \hspace{1mm} (mod \hspace{1mm} f)`.
 
 Public key: :math:`(d, n)`
 

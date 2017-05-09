@@ -56,23 +56,23 @@ Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy
 
 Dwie liczby całkowite : :math:`a, b` przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
-Kongruencję zapisujemy symbolicznie: :math:`a ≡ b (mod \hspace{2mm} n)`.
+Kongruencję zapisujemy symbolicznie: :math:`a = b (mod \hspace{2mm} n)`.
 
 Przykłady:
 """"""""""
 
-2 ≡ 2 (mod 8), ponieważ 2 − 2 = 0,  0 jest podzielne przez 8,
+2 = 2 (mod 8), ponieważ 2 - 2 = 0,  0 jest podzielne przez 8,
 
-3 ≡ 18 (mod 5), ponieważ 3 − 18 = −15, -15 jest podzielne przez 5,
+3 = 18 (mod 5), ponieważ 3 - 18 = -15, -15 jest podzielne przez 5,
 
-100 ≡ 1 (mod 9), ponieważ 100 − 1 = 99, 99 jest podzielne przez 9,
+100 = 1 (mod 9), ponieważ 100 - 1 = 99, 99 jest podzielne przez 9,
 
-250 ≡ 206 (mod 22), ponieważ 250 − 206 = 44, 44 jest podzielne przez 22.
+250 = 206 (mod 22), ponieważ 250 - 206 = 44, 44 jest podzielne przez 22.
 
 Ćwiczenie 1.
 """"""""""""
 
-Znajdź x takie, że: 3x ≡ 1 (mod 4), 5<x<10
+Znajdź x takie, że: 3x = 1 (mod 4), 5<x<10
 
 .. sagecellserver::
 
@@ -83,7 +83,7 @@ Znajdź x takie, że: 3x ≡ 1 (mod 4), 5<x<10
 Ćwiczenie 2.
 """"""""""""
 
-Znajdź x takie, że: 3x+2 ≡ 1 (mod 5)
+Znajdź x takie, że: 3x+2 = 1 (mod 5)
 
 .. sagecellserver::
 
@@ -96,7 +96,7 @@ Oczywiście istnieje nieskończenie takich rozwiązań. Dodatkowo te rozwiązani
 Ćwiczenie 3.
 """"""""""""
 
-Znajdź x takie, że: 3x ≡ 1 (mod 6)
+Znajdź x takie, że: 3x = 1 (mod 6)
 
 .. sagecellserver::
 
@@ -121,11 +121,11 @@ Tabliczka czekolady składa się z mniej niż 100 kawałków. Przy podziale na t
 
 Wiemy, że liczba kawałków czekolady musi spełniać poniższe kongruencje:
 
-x ≡ 1 mod 3,
+x = 1 mod 3,
 
-x ≡ 3 mod 5,
+x = 3 mod 5,
 
-x ≡ 2 mod 7.
+x = 2 mod 7.
 
 .. sagecellserver::
 
@@ -137,11 +137,11 @@ x ≡ 2 mod 7.
 1c. Małe twierdzenie Fermata.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Jeśli** *p* jest liczbą pierwszą oraz *a*, *p* są względnie pierwsze, **wtedy** :math:`a^{p−1} - 1` jest wielokrotnością liczby *p*. Zapisujemy to symbolicznie: :math:`a^{p−1}≡1 (mod \hspace{2mm} p)`.
+**Jeśli** *p* jest liczbą pierwszą oraz *a*, *p* są względnie pierwsze, **wtedy** :math:`a^{p-1} - 1` jest wielokrotnością liczby *p*. Zapisujemy to symbolicznie: :math:`a^{p-1}=1 (mod \hspace{2mm} p)`.
 
 Sprawdźmy poprawność powyższego twierdzenia, dla kolejnych liczb pierwszych, numerycznie z wykorzystaniem języka Python.
 
-Dla a = 35 i p = 3 lub p = 5 liczby nie spełniają założeń twierdzenia. Możemy dodatkowo stwierdzić, że liczba :math:`a^{p−1} - 1` jest podzielna przez p.
+Dla a = 35 i p = 3 lub p = 5 liczby nie spełniają założeń twierdzenia. Możemy dodatkowo stwierdzić, że liczba :math:`a^{p-1} - 1` jest podzielna przez p.
 
 .. sagecellserver::
 
@@ -371,7 +371,7 @@ Generowanie szyfru RSA.
 
 3. Wybieramy dowolną nieparzystą liczbę *e*, taką że::math:`1  < e < f` and :math:`gcd(d,\hspace{2mm} f) = 1`.
 
-4. Wyznaczamy liczbę :math:`d` as: :math:`de≡1 \hspace{1mm} (mod \hspace{1mm} f)`.
+4. Wyznaczamy liczbę :math:`d` as: :math:`de=1 \hspace{1mm} (mod \hspace{1mm} f)`.
 
 Klucz publiczny to para liczb: :math:`(d, n)`.
 

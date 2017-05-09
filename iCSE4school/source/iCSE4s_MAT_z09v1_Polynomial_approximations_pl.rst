@@ -314,7 +314,7 @@ W SageMath możemy łatwo rozwiązać powyższe równanie, wystarczy zastosować
 
 .. math::
 
-    M\v, \hspace{3mm} where \hspace{3mm} M-matrix, \hspace{0.3cm} v-vector \hspace{0.3cm} [y1, y2, y3]
+    M v, \hspace{3mm} where \hspace{3mm} M-matrix, \hspace{0.3cm} v-vector \hspace{0.3cm} [y1, y2, y3]
 
 
 .. sagecellserver::

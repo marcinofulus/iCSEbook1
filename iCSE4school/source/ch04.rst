@@ -127,9 +127,7 @@ The differences are large, what we can see, considering graphs related functions
     show(plt, xmin=xlimits[0], xmax=xlimits[1], ymin=ylimits[0], ymax=ylimits[1], figsize=(4, 3))
   
 **At the end** we go to ``sqrt(2)``.
-  
-.. math::
 
-  \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
+:math:`\verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?`
 
 Is not that strange?
