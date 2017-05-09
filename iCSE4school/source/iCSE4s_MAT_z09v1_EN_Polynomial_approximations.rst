@@ -382,18 +382,16 @@ Here is an example for the function :math:`f(x)=sin(x)`.
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=6
-    sage: f=x
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(1, n):
-              k=2*i+1
-              f=f+(-1)^i*(1/factorial(k))*x^k
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(sin(x),"=",f)
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
-    sage: show(q)
+sage: f=sin(x) # You can change this function
+sage: n=8      # You can change this number
+sage: q=plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)  
+sage: kolor=[]
+sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+sage: g=f(0)    
+sage: for i in range(1, n):
+          g=g+(x^i/factorial(i))* diff(f,i).subs(x=0)
+          q=q+plot(g,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+sage: show(q)
 
 **Exercise for students.**
 
@@ -428,7 +426,6 @@ Use the Taylor-Maclaurin's formula for function :math:`f(x)=e^x`.
     sage: for i in range(0, n):
               k=i+1
               f=f+(1/factorial(k))*x^k
-              #print(f(x))
               q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
     sage: show(e^x,"=",f)
     sage: f=e^x
