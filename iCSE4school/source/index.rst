@@ -6,8 +6,8 @@ iCSE4school - metodologia
 
 
 
-Problems in Mathematics with SageMath
--------------------------------------
+Science Education  with SageMath
+--------------------------------
 
 
 .. toctree::
@@ -15,33 +15,26 @@ Problems in Mathematics with SageMath
 
    wstep.rst
    dlaczego_Sage.rst
-   ch06.rst
    refutacje.rst
+   rozdzial2.rst
 
 
-Testy
------
+Materiały dydaktyczne
+---------------------
+
 .. toctree::
-   :maxdepth: 2
-
-   ch01.rst
-   ch02.rst
-   ch03.rst
-   ch04.rst  
-   ch07.rst
-   ch08.rst
-   ch09.rst
-   ch12.rst
-   ch10.rst
-   linked.rst
-
-Notatniki konwertowane z sws!
------------------------------
-.. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    iCSE4s_FIZ_z01v2_EN_AO_String.rst
    iCSE4s_MAT_z19_Limit_and_continuity_of_a_function_at_a_point_ENG_v0.1.rst
+
+
+Materiały dydaktyczne - wersje niepoprawione
+--------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
    iCSE4s_FIZ_z02v2_EN_AO_SoundWaves.rst
    iCSE4s_FIZ_z03v2_EN_AO_AcEff.rst
    iCSE4s_FIZ_z05v1_PL_AO_Collisions.rst

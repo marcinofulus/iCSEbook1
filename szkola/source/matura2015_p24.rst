@@ -9,5 +9,7 @@ Poniższy kod:
 
 .. sagecellserver::
 
-
+   a = [2,4,7,8,9]
+   b = [2,4,7,8,9,x]
+   solve( mean(a) == mean(b),x),mean(a)
 
