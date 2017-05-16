@@ -21,6 +21,11 @@ Stochastics
 .. toctree::
    :maxdepth: 1
 
+   Problem 1 <blutgruppe>
+   Problem 2 <stoffwechsel>
+   Problem 3 <gewinnspiel>
+   Problem 4 <umfrage>
+
 Geometry
 ........
 
