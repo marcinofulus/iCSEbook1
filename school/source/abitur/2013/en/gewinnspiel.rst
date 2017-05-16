@@ -1,0 +1,89 @@
+Bavarian final secondary-school examinations in mathematics 2013
+----------------------------------------------------------------
+
+.. admonition:: Problem
+
+  In order to earn money for the equipment of the playing area in the
+  children's unit of the hospital a prize draw is offered. After the
+  player payed two euros, three balls are drawn at random without replacement
+  from a container in which there are three red, three green
+  and three blue balls.
+  If the three balls have the same colour, the player wins and is payed off
+  with a certain amount of money; otherwise he loses and receives no payoff.
+  Afterwards, the drawn balls are put back into the container.
+  
+  a) Show that the probability for winning one game equals :math:`\frac{1}{28}`.
+  
+  b) Compute which amount of money, in case of winning, has to be payed out 
+     in order that the average gain of 1.25 euros per game for the equipment
+     of the playing area can be expected.
+
+**Solution of part a**
+
+The probability that three balls with the same colour are drawn can be computed
+as follows. First, there are 9 balls in the container. Now, one ball is drawn
+at random. Consequently, eight balls remain in the container.
+Two of these balls have the same colour as the already drawn ball.
+The probability of drawing one of these two balls in the next turn thus
+is :math:`\frac{2}{8}`. Afterwards, the last ball with the same colour has to
+be drawn from the container with the remaining seven balls. The probability
+of this is :math:`\frac{1}{7}`.
+
+The total probability of winning hence is:
+
+.. math::
+
+  \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{28} \approx 0.0357
+
+This prize draw can be simulated with Sage. For that purpose, we shuffle the balls
+and consider the colour of the first three balls.
+
+.. sagecellserver::
+
+  sage: from random import choice
+  sage: def game():
+  sage:    urn = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
+  sage:    shuffle(urn)
+  sage:    return urn[0] == urn[1] == urn[2]
+
+  sage: games = 100000
+  sage: winnings = 0
+
+  sage: for _ in range(games):
+  sage:    if game():
+  sage:        winnings = winnings+1
+
+  sage: print("In {} of {} cases, the three balls have the same colour.".format(winnings, games))
+
+.. end of output
+
+**Solution of part b**
+
+The expected earnings :math:`E` per game are computed for a stake of 2 euros
+per game and a prize of :math:`x` euro to:
+
+.. math:: 
+
+  E(x) = 2 - \frac{1}{28} \cdot x.
+
+If the earnings per game are to be 1.25 euros, that is :math:`E(x)=1{,}25`, the result
+is :math:`x=21`. The payed out prize hence has to be 21 euros.
+
+With Sage, we can test how a prize of 21 euros has an impact on the earnings per game.
+
+.. sagecellserver::
+
+  sage: games = 100000
+  sage: stake = 2
+  sage: prize = 21
+  sage: earnings = 0
+
+  sage: for _ in range(games):
+  sage:     earnings = earnings+stake
+  sage:     if game():
+  sage:         earnings = earnings-prize
+
+  sage: print("{} games have been played and {} euros have been earned. This corresponds to {:.2f} euros per game.".format(
+  sage:        games, earnings, float(earnings/games)))
+
+.. end of output
