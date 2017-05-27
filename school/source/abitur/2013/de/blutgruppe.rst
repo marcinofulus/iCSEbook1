@@ -149,7 +149,7 @@ bestimmen, dass unter 36 Spendern mindestens ein passender ist.
   sage: erfolge = 0
   sage: for _ in range(wiederholungen):
   sage:     if np.sum(random_sample(n) < p):
-  sage:         erfolge += 1
+  sage:         erfolge = erfolge+1
   sage: print("Wahrscheinlichkeit das bei {} Personen ein passender Spender dabei ist: {:5.2%}".format(n, float(erfolge)/wiederholungen))
 
 .. end of output
