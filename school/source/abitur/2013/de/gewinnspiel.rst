@@ -33,7 +33,7 @@ Die Gesamtwahrscheinlichkeit zu gewinnen ist somit:
 
 .. math::
 
-  \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{28} \approx 0.0357
+  \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{28} \approx 0.0357\,.
 
 Mit Sage kann dieses Glücksspiel simuliert werden. Dazu mischen wir die Kugeln
 und betrachten die Farbe der ersten drei Kugeln.
