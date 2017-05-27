@@ -49,9 +49,9 @@ Bayerisches Abitur in Mathematik 2013
   +-----------+------+-------+-------+-------+-------+-------+-------+--------+--------+
   
   c) Für einen Patienten mit der Blutgruppe B und dem Rhesusfaktor Rh- wird
-     Spendenblut benötigt. Bestimmen Sie, wie viele zufällig ausgewählte
+     Spenderblut benötigt. Bestimmen Sie, wie viele zufällig ausgewählte
      Personen mindestens Blut spenden müssen, damit man mit einer
-     Wahrscheinlichkeit von mehr als 95 % mindesten einen für diesen Patienten
+     Wahrscheinlichkeit von mehr als 95 % mindestens eine für diesen Patienten
      geeignete Blutspende erhält.
   
 
@@ -63,14 +63,14 @@ jeden einzelnen Spender die Blutgruppe A zu haben, ist:
 
 .. math:: 
 
-  P(\mathrm{A}) = P(\mathrm{A, Rh+}) + P(\mathrm{A, Rh-}) = 43 \%
+  P(\mathrm{A}) = P(\mathrm{A, Rh+}) + P(\mathrm{A, Rh-}) = 43 \%\,.
 
 Die gesuchte Wahrscheinlichkeit ergibt sich dann zu:
 
 .. math::
 
   W^{25}_{0,43}(10) =& {25 \choose 10}\cdot0{,}43^{10}\cdot(1-0{,}43)^{15}\\
-  =& \frac{25!}{10!\cdot 15!} 0{,}43^{10} \cdot 0{,}57^{15} \approx 15{,}4 \% 
+  =& \frac{25!}{10!\cdot 15!} 0{,}43^{10} \cdot 0{,}57^{15} \approx 15{,}4 \%\,.
 
 Mit Sage lässt sich dieses Zufallsexperiment simulieren:
 
@@ -118,7 +118,7 @@ Die Wahrscheinlichkeit dafür, den passenden Spender zu finden, beträgt also:
 
 .. math::
 
-  P(\mathrm{0, Rh-}) + P(\mathrm{B, Rh-}) = 8\%
+  P(\mathrm{0, Rh-}) + P(\mathrm{B, Rh-}) = 8\%\,.
 
 Die Wahrscheinlichkeit, dass eine Person kein passender Spender ist beträgt
 also :math:`92\%`. Die Wahrscheinlichkeit, dass unter :math:`n` Personen kein
@@ -149,7 +149,7 @@ bestimmen, dass unter 36 Spendern mindestens ein passender ist.
   sage: erfolge = 0
   sage: for _ in range(wiederholungen):
   sage:     if np.sum(random_sample(n) < p):
-  sage:         erfolge += 1
+  sage:         erfolge = erfolge+1
   sage: print("Wahrscheinlichkeit das bei {} Personen ein passender Spender dabei ist: {:5.2%}".format(n, float(erfolge)/wiederholungen))
 
 .. end of output
