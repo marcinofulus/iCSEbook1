@@ -4,13 +4,14 @@ Bavarian final secondary-school examinations in mathematics 2013
 .. admonition:: Problem
 
   0.074% of newborn children have a specific metabolic disorder. If this disorder
-  is identified early on, a future disease can be prevented by an appropriate treatment.
-  For an early diagnosis, one can conduct a simple test.
-  If test result indicates a metablic disorder, we denote it as positive.
+  is identified at an early stage, a future disease can be prevented by means of
+  an appropriate treatment. For an early diagnosis, one can begin with a simple test.
+  If the test result indicates a metabolic disorder, we call it positive.
   
-  If a newborn child has a metabloic disorder, the test result is positive with a probability of 99.5%. 
-  If a newborn child does not have a metabolic disorder, the probability that the test result is erroneously
-  positive is 0.78%.
+  If a newborn child has a metabolic disorder, the test result is positive with
+  a probability of 99.5%.  If a newborn child does not have a metabolic
+  disorder, the probability that the test result is erroneously positive is
+  0.78%.
   
   The test is conducted with a randomly selected newborn child.
   One considers the following results:
@@ -19,16 +20,16 @@ Bavarian final secondary-school examinations in mathematics 2013
   
   :math:`T`: „The test is positive.“
   
-  a) Describe the event :math:`\overline{S\cup T}` in the factual context.
+  a) Describe the event :math:`\overline{S\cup T}` in the present context.
   
   b) Calculate the probabilities :math:`P(T)` and :math:`P_T (S)`.
-     Interpret the result for :math:`P_T(S)` in the factual context.
+     Interpret the result for :math:`P_T(S)` in the present context.
 
      *(for checking purposes:* :math:`P(T)\approx 0{.}85\%, P_T(S)<0{.}1`\ *)*
   
-  c) In the scope of screening, a huge number of randomly selected newborn children is tested.
-     Determine the in average expected number of children per million tested newborn children
-     who have a metabolic disorder and the test shows a negative result.
+  c) During a screening, a huge number of randomly selected newborn children is tested.
+     Determine the number of children per million tested newborn children expected on
+     average to have a metabolic disorder while the test shows a negative result.
   
 
 **Solution of part a**
@@ -59,9 +60,9 @@ as the probability of a positive test for an ill newborn child.
 
   P_T(S) = \frac{P(S \cap T)}{P(T)} = \frac{0{.}00074\cdot 0{.}995}{0{.}00853} \approx 0{.}0863\,.
 
-This means that, for a positive test, only 8.63% have in fact a metabolic disorder.
+This means that for a positive test, only in 8.63%  of all cases a metabolic disorder is found.
 
-**Lösung zu Teil c**
+**Solution of part c**
 
 The probability that a randomly selected child has a metabolic disorder and is tested positively is:
 
@@ -71,7 +72,7 @@ The probability that a randomly selected child has a metabolic disorder and is t
 
 Thus, for one million tested children this event occurs for about four children.
 
-With sage, we can simulate the test and determine the number of all occuring events.
+With Sage, we can simulate the test and determine the number of all occuring events.
 
 .. sagecellserver::
 
