@@ -41,6 +41,7 @@ und betrachten die Farbe der ersten drei Kugeln.
 .. sagecellserver::
 
   sage: from random import choice
+  sage:
   sage: def spiel():
   sage:    urne = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
   sage:    shuffle(urne)
@@ -53,7 +54,7 @@ und betrachten die Farbe der ersten drei Kugeln.
   sage:    if spiel():
   sage:        erfolge = erfolge+1
 
-  sage: print("In {} von {} Fällen haben die drei Kugeln die gleiche Farbe.".format(erfolge, spiele))
+  sage: print("In {} von {} Fällen hatten die drei Kugeln die gleiche Farbe.".format(erfolge, spiele))
 
 .. end of output
 
