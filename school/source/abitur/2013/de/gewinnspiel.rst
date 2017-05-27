@@ -64,7 +64,7 @@ von 2 Euro pro Spiel und einem Gewinn von :math:`x` Euro nach:
 
 .. math:: 
 
-  E(x) = 2 - \frac{1}{28} \cdot x.
+  E(x) = 2 - \frac{1}{28} \cdot x\,.
 
 Wenn die Einnahmen pro Spiel 1,25 Euro betragen sollen, also
 :math:`E(x)=1{,}25`, folgt :math:`x=21`. Der auszuzahlende Gewinn muss also 21
