@@ -41,7 +41,7 @@ und betrachten die Farbe der ersten drei Kugeln.
 .. sagecellserver::
 
   sage: from random import choice
-  sage:
+
   sage: def spiel():
   sage:    urne = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
   sage:    shuffle(urne)
