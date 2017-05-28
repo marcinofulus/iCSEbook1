@@ -1,8 +1,8 @@
 RSA asymmetric cipher. 
 ======================
 
-1. Introduction.
-^^^^^^^^^^^^^^^^
+Introduction.
+^^^^^^^^^^^^^
 
 In each of the program's window you can change the numbers, text, variables, or the code.
 
@@ -10,8 +10,8 @@ You do not have to worry if the program stops working, because after its refresh
 
 Often next code results from the previous one, so the exercises (algorithms) should be run in their order.  
 
-1a. Definition of congruence relation.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Definition of congruence relation.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Two integers *a* and *b* are said to be  **congruent modulo** *n*, written: :math:`a = b (mod \hspace{2mm} n)`, when: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
@@ -69,8 +69,8 @@ Find x if you know: 3x = 1 (mod 6)
 In the exercise above there is not a number which satisfies the given congruity.
 
 
-1b. The Chinese remainder theorem.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The Chinese remainder theorem.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following exercise can be solved using the Chinese remainder theorem. One of the most important theorems in number theory and cryptography. This theorem allows to share a secret among several people (valid numeric password).
 
@@ -94,8 +94,8 @@ x = 2 mod 7.
             print x
     
 
-1c. Fermet’s Little Theorem.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Fermet’s Little Theorem.
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 If   *p*   is a prime number and   *a*   is not divisible by   *p*,
 
@@ -114,8 +114,8 @@ This code was written and posted the students in the classroom.
         print(p, 35^(p-1) % p)
 
 
-2. Message Encryption.
-^^^^^^^^^^^^^^^^^^^^^^
+Message Encryption.
+^^^^^^^^^^^^^^^^^^^
 
 Cryptography was mentioned in the Antique Times for the first time. So, we can conclude that encryption and writing were invented at the same time. Encryption was used to send military and political messages. During the IT lessons we acquired (or will acquire) the Caesar cipher. It is a simple encryption where letters are substituted. Although the ciphered message is not understandable, but simple to decryption .  Other methods of encryption applied in the Antique Times were much more sophisticated and  more difficult to de cryption .  Until 1960s of the 20th century only symmetric encryptions had been well\-known. They are the encryptions which have just one method of ciphering and deciphering the message.
 
@@ -142,23 +142,23 @@ Below you can find an example of the  number cither:
 
 .. sagecellserver::
 
-    sage: number=1234567   #You can change this number (message). What will be if number larger then n?
-    sage: a=89             #you can change the numbers: a, b, a1, b1
-    sage: b=45
-    sage: a1=98
-    sage: b1=55
-    sage: M=a*b-1
-    sage: e=a1*M+a
-    sage: d=b1*M+b
-    sage: n=(e*d-1)/M
-    sage: print " public key:", (d, n)
-    sage: print "private key:",(e, n)
-    sage: # encryption
-    sage: szyfr = (number*d) % n
-    sage: print "encryption:", szyfr
-    sage: # decryption
-    sage: deszyfr = (szyfr*e) % n
-    sage: print "decryption:", deszyfr
+    number=1234567   #You can change this number (message). What will be if number larger then n?
+    a=89             #you can change the numbers: a, b, a1, b1
+    b=45
+    a1=98
+    b1=55
+    M=a*b-1
+    e=a1*M+a
+    d=b1*M+b
+    n=(e*d-1)/M
+    print " public key:", (d, n)
+    print "private key:",(e, n)
+    # encryption
+    szyfr = (number*d) % n
+    print "encryption:", szyfr
+    # decryption
+    deszyfr = (szyfr*e) % n
+    print "decryption:", deszyfr
  
 
 
@@ -235,26 +235,26 @@ Following the submission of these algorithms we get full algorithm to encrypt an
 
 .. sagecellserver::
 
-    sage: number=0
-    sage: i=0
-    sage: tekst="This is the secret message or anything." #message
-    sage: tekst2=""
-    sage: print "message:", tekst
-    sage: # change text to number
-    sage: for x in tekst:
-    sage:     i=i+1
-    sage:     number=number + ord(x)*128^i
-    sage: print "number:", number
-    sage: print ""
-    sage: # encription
-    sage: szyfr = 0
-    sage: i=0
-    sage: while number>0:
-    sage:     pomoc=number%n
-    sage:     szyfr = szyfr + ((pomoc*d) % n)*n^i
-    sage:     i=i+1
-    sage:     number=int(number/n)
-    sage: print "encription:", szyfr
+    number=0
+    i=0
+    tekst="This is the secret message or anything." #message
+    tekst2=""
+    print "message:", tekst
+    # change text to number
+    for x in tekst:
+        i=i+1
+        number=number + ord(x)*128^i
+    print "number:", number
+    print ""
+    # encription
+    szyfr = 0
+    i=0
+    while number>0:
+        pomoc=number%n
+        szyfr = szyfr + ((pomoc*d) % n)*n^i
+        i=i+1
+        number=int(number/n)
+    print "encription:", szyfr
 
 
 The full algorithm of decryption.
@@ -263,28 +263,28 @@ The full algorithm of decryption.
 
 .. sagecellserver::
 
-    sage: tekst2=""
-    sage: deszyfr = 0
-    sage: i=0
-    sage: print "encription:", szyfr
-    sage: # decription
-    sage: while szyfr>0:
-    sage:     pomoc=szyfr%n
-    sage:     deszyfr = deszyfr + ((pomoc*e) % n)*n^i
-    sage:     i=i+1
-    sage:     szyfr=int(szyfr/n)
-    sage: print "decription: ", deszyfr
-    sage: ## change number to text
-    sage: i=0
-    sage: while deszyfr>0:
-    sage:     i=i+1
-    sage:     deszyfr=int(deszyfr/128)
-    sage:     tekst2 = tekst2 + chr(deszyfr%128)
-    sage: print "message: ", tekst2
+    tekst2=""
+    deszyfr = 0
+    i=0
+    print "encription:", szyfr
+    # decription
+    while szyfr>0:
+        pomoc=szyfr%n
+        deszyfr = deszyfr + ((pomoc*e) % n)*n^i
+        i=i+1
+        szyfr=int(szyfr/n)
+    print "decription: ", deszyfr
+    ## change number to text
+    i=0
+    while deszyfr>0:
+        i=i+1
+        deszyfr=int(deszyfr/128)
+        tekst2 = tekst2 + chr(deszyfr%128)
+    print "message: ", tekst2
  
 
-3. RSA asymmetric cipher.
-^^^^^^^^^^^^^^^^^^^^^^^^^
+RSA asymmetric cipher.
+^^^^^^^^^^^^^^^^^^^^^^
 
 **RSA**  is one of the first and most popular algorithm cryptosystems with a public key. It was designed in 1977 by Ron Rivest,  Adi Szamir and Leonard Adleman (RSA name derives from the first letters of the creators’ surnames).
 
@@ -293,36 +293,18 @@ The security of the RSA cryptosystem  is based on the decomposition of large  co
 Example below.
 """"""""""""""
 
-Choose prime numbers 20-32 digit numbers and multiply them.
-
 .. sagecellserver::
 
-    sage: %time
-    sage: @interact 
-    sage: def _(n=slider( srange(20,32,2))):
-    sage:     a=int(random()*10^n)
-    sage:     a=next_prime(a)
-    sage:     print a
-    sage:     b=int(random()*10^n)
-    sage:     b=next_prime(b)
-    sage:     print b
-    sage:     n=a*b
-    sage:     print(factor(n))
-
-See the predictions for longer numbers.
-
-.. sagecellserver::
-
-    sage: @interact 
-    sage: def _(n=slider( range(34,101,2))):
-    sage:     t=2^((n-34)/2)
-    sage:     print n,"-digits prime numbers, factoring time:", t, "minutes"
-    sage:     if t>100 and t<60*24:
-    sage:         print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
-    sage:     elif t>60*24 and t<60*24*365:
-    sage:         print n,"-digits prime numbers, factoring time:", int(t/60/24), "days"
-    sage:     elif t>60*24*365:
-    sage:         print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
+    @interact 
+    def _(n=slider( range(34,101,2))):
+        t=2^((n-34)/2)
+        print n,"-digits prime numbers, factoring time:", t, "minutes"
+        if t>100 and t<60*24:
+            print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
+        elif t>60*24 and t<60*24*365:
+            print n,"-digits prime numbers, factoring time:", int(t/60/24), "days"
+        elif t>60*24*365:
+            print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
 
 Notice how time-consuming the calculation of the distribution of prime factors.
 
@@ -345,15 +327,15 @@ It is enough to copy the algorithm of cither from previous lessons and substitut
 
 .. sagecellserver::
 
-    sage: los=int(100*random())
-    sage: p=nth_prime(30+los)
-    sage: los=int(100*random())
-    sage: q=nth_prime(30+los)
-    sage: n=p*q
-    sage: f=(p-1)*(q-1)
-    sage: los=int(f*random())
-    sage: e=next_prime(los)
-    sage: print "p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f
+    los=int(100*random())
+    p=nth_prime(30+los)
+    los=int(100*random())
+    q=nth_prime(30+los)
+    n=p*q
+    f=(p-1)*(q-1)
+    los=int(f*random())
+    e=next_prime(los)
+    print "p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f
 
 Determine :math:`e` as: :math:`(d \cdot e) \hspace{1mm} mod f=1`.
 
@@ -363,29 +345,29 @@ My students changed the existing program on the Internet, but not always, does i
 
 .. sagecellserver::
 
-    sage: a = e
-    sage: p0 = 0
-    sage: p1 = 1
-    sage: a0 = a
-    sage: n0 = f
-    sage: q  = int(n0/a0) 
-    sage: r  = n0 % a0
-    sage: while (r > 0):
-    sage:     t = p0 - q * p1
-    sage:     if (t >= 0):
-    sage:         t = t % n
-    sage:     else:
-    sage:         t = n - ((-t) % n)
-    sage:     p0 = p1
-    sage:     p1 = t
-    sage:     n0 = a0
-    sage:     a0 = r
-    sage:     q  = int(n0/a0)
-    sage:     r  = n0 % a0
-    sage: d = p1
-    sage: print "verification : (d*e)%f =", (d*e)%f
-    sage: print " public key:", d, n
-    sage: print "private key:", e, n
+    a = e
+    p0 = 0
+    p1 = 1
+    a0 = a
+    n0 = f
+    q  = int(n0/a0) 
+    r  = n0 % a0
+    while (r > 0):
+        t = p0 - q * p1
+        if (t >= 0):
+            t = t % n
+        else:
+            t = n - ((-t) % n)
+        p0 = p1
+        p1 = t
+        n0 = a0
+        a0 = r
+        q  = int(n0/a0)
+        r  = n0 % a0
+    d = p1
+    print "verification : (d*e)%f =", (d*e)%f
+    print " public key:", d, n
+    print "private key:", e, n
  
 
 The full algorithm of encryption RSA.
@@ -396,26 +378,26 @@ It is enough to copy the algorithm of coding from the previous lessons and subst
 
 .. sagecellserver::
 
-    sage: number=0
-    sage: i=0
-    sage: tekst="This is secret message or anything." #message
-    sage: tekst2=""
-    sage: print "message:", tekst
-    sage: # change text to number
-    sage: for x in tekst:
-    sage:     i=i+1
-    sage:     number=number + ord(x)*128^i
-    sage: print "number:", number
-    sage: print ""
-    sage: # encription
-    sage: szyfr = 0
-    sage: i=0
-    sage: while number>0:
-    sage:     pomoc=number%n
-    sage:     szyfr = szyfr + ((pomoc^d) % n)*n^i
-    sage:     i=i+1
-    sage:     number=int(number/n)
-    sage: print "encription:", szyfr
+    number=0
+    i=0
+    tekst="This is secret message or anything." #message
+    tekst2=""
+    print "message:", tekst
+    # change text to number
+    for x in tekst:
+        i=i+1
+        number=number + ord(x)*128^i
+    print "number:", number
+    print ""
+    # encription
+    szyfr = 0
+    i=0
+    while number>0:
+        pomoc=number%n
+        szyfr = szyfr + ((pomoc^d) % n)*n^i
+        i=i+1
+        number=int(number/n)
+    print "encription:", szyfr
 
 
 The full algorithm of decryption RSA.
@@ -425,25 +407,22 @@ It is enough to copy the algorithm of coding from the previous lessons and subst
 
 .. sagecellserver::
 
-    sage: tekst2=""
-    sage: deszyfr = 0
-    sage: i=0
-    sage: print "encription:", szyfr
-    sage: # decription
-    sage: while szyfr>0:
-    sage:     pomoc=szyfr%n
-    sage:     deszyfr = deszyfr + ((pomoc^e) % n)*n^i
-    sage:     i=i+1
-    sage:     szyfr=int(szyfr/n)
-    sage: print "decription: ", deszyfr
-    sage: ## change number to text
-    sage: i=0
-    sage: while deszyfr>0:
-    sage:     i=i+1
-    sage:     deszyfr=int(deszyfr/128)
-    sage:     tekst2 = tekst2 + chr(deszyfr%128)
-    sage: print "message: ", tekst2
+    tekst2=""
+    deszyfr = 0
+    i=0
+    print "encription:", szyfr
+    # decription
+    while szyfr>0:
+        pomoc=szyfr%n
+        deszyfr = deszyfr + ((pomoc^e) % n)*n^i
+        i=i+1
+        szyfr=int(szyfr/n)
+    print "decription: ", deszyfr
+    ## change number to text
+    i=0
+    while deszyfr>0:
+        i=i+1
+        deszyfr=int(deszyfr/128)
+        tekst2 = tekst2 + chr(deszyfr%128)
+    print "message: ", tekst2
  
-
-
-

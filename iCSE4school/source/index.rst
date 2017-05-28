@@ -38,8 +38,8 @@ Materiały dydaktyczne - wersje niepoprawione
    iCSE4s_FIZ_z02v2_EN_AO_SoundWaves.rst
    iCSE4s_FIZ_z03v2_EN_AO_AcEff.rst
    iCSE4s_FIZ_z05v1_PL_AO_Collisions.rst
-   iCSE4s_MAT_z07v0_Math_of_RSA_cipher.rst
-   iCSE4s_MAT_z07v0_Math_of_RSA_cipher_pl.rst
+   iCSE4s_MAT_z07v2_EN_KJ_Math_of_RSA_cipher.rst
+   iCSE4s_MAT_z07v2_PL_KJ_Math_of_RSA_cipher.rst
    iCSE4s_MAT_z09v1_EN_Polynomial_approximations.rst
    iCSE4s_MAT_z09v1_Polynomial_approximations_pl.rst
    iCSE4s_MAT_z10v1__EN_KO_Approx.rst

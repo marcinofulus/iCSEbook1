@@ -34,13 +34,15 @@ The  **factorial** in SageMath.
 
 The first example counts factorial according to the definition.
 
-.. sagecellserver::
+::
     
    silnia=1
    for i in range(1,6):
         silnia=silnia*i
         print i, '!=', silnia
-        
+
+.. end of output
+
 The second example uses a built-in function in SageMath.
 
 .. sagecellserver::
@@ -382,16 +384,16 @@ Here is an example for the function :math:`f(x)=sin(x)`.
 
 .. sagecellserver::
 
-sage: f=sin(x) # You can change this function
-sage: n=8      # You can change this number
-sage: q=plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)  
-sage: kolor=[]
-sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-sage: g=f(0)    
-sage: for i in range(1, n):
-          g=g+(x^i/factorial(i))* diff(f,i).subs(x=0)
-          q=q+plot(g,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-sage: show(q)
+    f=sin(x) # You can change this function
+    n=8      # You can change this number
+    q=plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)  
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    g=f(0)    
+    for i in range(1, n):
+        g=g+(x^i/factorial(i))* diff(f,i).subs(x=0)
+        q=q+plot(g,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(q)
 
 **Exercise for students.**
 
