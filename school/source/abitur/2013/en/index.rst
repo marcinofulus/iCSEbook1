@@ -26,6 +26,7 @@ Stochastics
    Problem 3 <gewinnspiel>
    Problem 4 <umfrage>
    Problem 5 <nullhypothese>
+   Problem 6 <erwartungswert>
 
 Geometry
 ........
