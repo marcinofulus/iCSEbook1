@@ -3,8 +3,9 @@ Bavarian final secondary-school examinations in mathematics 2013
 
 .. admonition:: Problem
 
-  According to the poll, the candidate of party A would have received about
-  50% of the votes if the election had taken place at the time of the survey.
+  According to the survey, the candidate of party A would have received
+  about 50% of the votes if the election had taken place at the time of
+  the survey.
   A success on the first ballot, for which more than 50% of all votes are 
   required, is hence questionable. Thus, the election campaign consultant
   put in place by party A suggests an additional campaign in the final stage
@@ -18,7 +19,7 @@ Bavarian final secondary-school examinations in mathematics 2013
      associated decision rule.
 
   b) Justify that the choice of the null hypothesis for the described test
-     is in accordance with the concern of the ellection campaign consultant
+     is in accordance with the concern of the election campaign consultant
      to achieve a success in the first ballot.
 
 **Solution of part a**
