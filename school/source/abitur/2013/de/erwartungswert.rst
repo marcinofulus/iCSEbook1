@@ -52,7 +52,7 @@ Einsetzen liefert
   P(1)=\frac{12}{55}\,.
   
 Da die Summe der Wahrscheinlichkeiten gleich Eins sein muss, ergibt sich mit
-den anderen angegebenen Wahrscheinlichkeiten ferne
+den anderen angegebenen Wahrscheinlichkeiten ferner
 
 .. math::
 
