@@ -3,6 +3,8 @@ Analysis
 
 .. toctree::
    :maxdepth: 1
+   
+   Problem 1 <logarithmus>
 
 Stochastics
 ...........
