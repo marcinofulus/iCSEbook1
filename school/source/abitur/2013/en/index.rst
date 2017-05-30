@@ -34,3 +34,5 @@ Geometry
 .. toctree::
    :maxdepth: 1
 
+   Problem 1 <pyramide>
+   Problem 2 <geraden>
