@@ -1,20 +1,52 @@
 .. -*- coding: utf-8 -*-
 
-Polynomial  approximation
-=========================
+Przybliżanie wielomianami.
+==========================
 
-1. Introduction.
-^^^^^^^^^^^^^^^^
+1. Wprowadzenie metodyczne.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In each of the program's window you can change the numbers, text, variables, or the code.
+	Zajęcia odbywały się na dodatkowych godzinach (ICSE4school) w grupie uczniów, które miały rozszerzony poziom nauczania z matematyki i informatyki w drugiej klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony metodą „flip teaching”, czyli uczniowie musieli się przygotować do zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie wielomianu przechodzącego przez dane punkty. Według programu nauczania na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy wielomian przechodzący przez te punkty oraz narysuje to na wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy, mnożeniem macierzy przez wektor i wyznaczaniem jej wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych współczynnikach wielomianu to mieli podać hipotezę, a następnie sprawdzić ją w internecie, czy jest ona prawdziwa.
+    
+	Według mnie zajęcia te mogą być dobrym uzupełnieniem i ugruntowaniem wiedzy uczniów z matematyki w trzeciej klasie liceum na poziomie rozszerzonym lub na zajęciach dodatkowych w klasie drugiej. Ponadto każdy rozdział można traktować niezależnie, czyli przeprowadzać go w czasie przeprowadzania danego materiału na lekcjach matematyki. 
+	
+**Uczniowie powinni znać:**
+funkcję liniową i kwadratową *(4.6–10 mat_p)*, pojęcie wielomianu *(3.6 mat_r)*, definicję silnia *(10.1 mat_r)*.
+    
+Podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*.
 
-You do not have to worry if the program stops working, because after its refreshing it returns to the initial settings.
+**Uczniowie na poniższych zajęciach poznają:**
 
-Often next code results from the previous one, so the exercises (algorithms) should be run in their order.
+- sposoby implementacji i obliczania silni,
 
-2. Factorial. 
-^^^^^^^^^^^^^
-The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the product of all positive integers smaller than or equal *n*.
+- pochodną funkcji i sposoby jej obliczania *(11.2 mat_r)*,
+
+- wyznaczanie prostej, paraboli i wielomianu przechodzącego przez dane punkty *(3.2 mat_p)*,
+
+- wzór Taylora oraz jego interpretację geometryczną.
+
+Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.
+
+*mat_p – matematyka poziom podstawowy,*
+    
+*mat_r – matematyka poziom rozszerzony,*
+    
+*inf_r – informatyka poziom rozszerzony.*   
+
+Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.
+
+    **Uwaga!**
+
+W każdym z okien programu można zmieniać liczby, tekst, zmienne lub cały kod.
+
+Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżeniu powróci do ustawień początkowych.
+
+Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+2. Definicja silni.
+^^^^^^^^^^^^^^^^^^^
+
+**Silnia** z liczby naturalnej *n* to iloczyn wszystkich liczb naturalnych mniejszych lub równej *n*. Symbolicznie zapisujemy *n!*.
     
 .. math::
      
@@ -25,36 +57,35 @@ The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the product of
      \end{array}
      \right.
 
-For example,
+Przykład.
 
 .. math:: 
    \ 4!= 4 \cdot 3! =...= 4 \cdot 3 \cdot 2 \cdot 1 \cdot 1 = 24 
    
-The  **factorial** in SageMath.
+**Silnia** w SageMath.
 
-The first example counts factorial according to the definition.
+Pierwszy przykład liczy silnię zgodnie z definicją.
 
-::
+.. sagecellserver::
     
    silnia=1
    for i in range(1,6):
         silnia=silnia*i
         print i, '!=', silnia
-
-.. end of output
-
-The second example uses a built-in function in SageMath.
+        
+Drugi przykład przy obliczaniu silni korzysta z wbudowanej funkcji w SageMath.
 
 .. sagecellserver::
     
     print 5, '!=', factorial(5)
 
-3. Derivative.
-^^^^^^^^^^^^^^
 
-**Derivative** will be interpreted as a mathematical operation on a function.
+3. Pochodna.
+^^^^^^^^^^^^
 
-**Basic formulas:**
+**Pochodną** będziemy interpretować jako matematyczne działanie na funkcji.
+
+**Podstawowe wzory:**
 
 .. math:: 
 
@@ -63,7 +94,7 @@ The second example uses a built-in function in SageMath.
     \end{array}
 
 
-The following examples in Sage with operation *diff*.
+Poniżej przykłady obliczania pochodnej w SageMath z wykorzystaniem instrukcji *diff*.
 
 .. sagecellserver::
 
@@ -78,25 +109,25 @@ The following examples in Sage with operation *diff*.
     show("f'(x)=",f.diff(x))
  
 
-**Next formulas for the derivative.**
+**Kolejne wzory dotyczące pochodnej funkcji.**
 
-The following formulas for the derivative of the sum, difference, product and quotient of functions.
+Poniżej wzory na pochodną sumy, różnicy, iloczynu i ilorazu funkcji.
 
 .. math:: 
     
     \begin{array}{ll}
-    f, g - functions, \hspace{1cm} c - real \hspace{0,2cm} number\\
+    f, g - funkcje, \hspace{1cm} c - liczba \hspace{0,2cm} rzeczywista\\
     (c \cdot f)' =c \cdot f' \\ (f+g)'= f' + g' \\ (f-g)'= f' - g' \\
     (f \cdot g)' = f' \cdot g + f \cdot g' \\ (f/g)'= (f' \cdot g - f \cdot g')/g^2
     \end{array}
 
-**Comments**
+**Komentarz**
 
-The number before the variable does not change operations on the derivative. 
+Liczba przed zmienną nie zmienia operacji na pochodnej.
 
-Algebraic expressions separated by *+* or *--* count separately.
+Wyrażenia algebraiczne oddzielone *+* lub *-* liczą się oddzielnie.
 
-**Examples**
+**Przykłady**
 
 .. math::
 
@@ -130,18 +161,16 @@ Algebraic expressions separated by *+* or *--* count separately.
     sage: show("f(x)=",f,",      f'(x)=",f.diff(x))
 
 
-**Derivatives of derivatives - Derivatives of higher orders.**
+**Pochodne z pochodnych - pochodne wyższych rzędów.**
 
-We can calculate the derivative of a derivative.
-
-Derivatives of higher orders are written in the following way:
+Oczywiście, możemy obliczyć pochodną z pochodnej. Pochodne wyższego rzędu zapisujemy w następujący sposób:
 
 .. math:: 
 
     f''(x) , \hspace{1,1cm}  f'''(x) , \hspace{1,1cm}  f''''(x),\hspace{1cm}... \\
     f^{(2)}(x) , \hspace{1cm}  f^{(3)}(x) , \hspace{1cm}  f^{(4)}(x),\hspace{1cm}...
 
-Below, the calculations of higher order derivatives of the SageMath:
+Poniżej obliczenia wyższych rzędów pochodnej w SageMath:
 
 .. sagecellserver::
 
@@ -158,12 +187,11 @@ Below, the calculations of higher order derivatives of the SageMath:
     sage: show("f'''(x)=",f.diff(x,3))
     sage: show("f''''(x)=",f.diff(x,4))
     
+**Obliczanie wartości pochodnej w punkcie.**
 
-**Calculating the value of the derivative at the point.**
+Pochodna funkcji jest oczywiście funkcją, więc możemy obliczyć wartość pochodnej dla argumentu.
 
-Derivative of a function is a function so we can calculate the value of the derivative for the argument.
-
-**Below suitable examples.**
+**Przykłady**
 
 .. sagecellserver::
 
@@ -177,18 +205,18 @@ Derivative of a function is a function so we can calculate the value of the deri
     sage: w2=g.diff(x,2).subs(x = 2)
     sage: show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
 
-4. Polynomial.
-^^^^^^^^^^^^^^
+4. Definicja wielomianu.
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Polynomial** of *n* degree and *x* variable is called function:
+**Wielomianem** stopnia n zmiennej x nazywamy funkcję:
 
 .. math::
 
-    W(x)=a_0+a_1 \cdot x +a_2 \cdot x^2 +...+a_n \cdot x^n,  \hspace{1cm} a_0, a_1, a_2, ..., a_n - coefficients.
+    W(x)=a_0+a_1 \cdot x +a_2 \cdot x^2 +...+a_n \cdot x^n,  \hspace{1cm} a_0, a_1, a_2, ..., a_n - współczynniki.
 
-**Conclusion**
+**Wniosek**
 
-Linear function and quadratic function are polynomial.
+Funkcja liniowa i funkcja kwadratowa jest wielomianem.
 
 .. math::
 
@@ -197,24 +225,25 @@ Linear function and quadratic function are polynomial.
     W_2(x)=a_0+a_1 \cdot x +a_2 \cdot x^2    
     \end{array}
 
-5. Line.
-^^^^^^^^
+5. Funkcja liniowa.
+^^^^^^^^^^^^^^^^^^^
 
-We know are line goes through two points. Besides, knowing the coordinates of the points above, we can determine the formula of this line. We should remember that the formula is a linear function:
+Wiemy, że przez dwa punkty przechodzi dokładnie jedna prosta.
+Ponadto znając współrzędne powyższych punktów, możemy określić wzór tej prostej.
+Przypomnijmy, że wzór jest funkcję liniową:
 
 .. math::
 
     y = a x + b 
 
-Directional factor and the intercept can be calculated from these formulas:
+Współczynnik kierunkowy i wyraz wolny możemy obliczyć z poniższych wzorów:
 
 .. math:: 
 
     a=\frac{y_2-y_1}{x_2-x_1} \\
     b=y_1-ax_1  
 
-Typing the appropriate equations, we can draw a straight line through two points.
-
+Wpisując odpowiednie równania, możemy narysować linię prostą przechodzącą przez dwa punkty.
 
 .. sagecellserver::
 
@@ -234,7 +263,7 @@ Typing the appropriate equations, we can draw a straight line through two points
 6. Parabola.
 ^^^^^^^^^^^^
 
-Below, there is an example for three points which are not collinear. Then we can determine the quadratic function, which includes these points. So we have to determine *a, b, c* coefficients from the following equation quadratic function.
+Poniżej znajduje się przykład dotycżący trzech punktów, które nie są współliniowe. Możemy wyznaczyć funkcję kwadratową do której należą te punkty. Więc musimy wyznaczyć z poniższych równań współczynniki *a, b, c* funkcji kwadratowej.
 
 .. math::
 
@@ -244,10 +273,9 @@ Below, there is an example for three points which are not collinear. Then we can
     y_3=ax_3^2+bx_3+c 
     \end{cases} 
 
-This work is tedious, even for a specific example. If we wanted to determine appropriate models as above for the linear function that probably it would probably take us a long time.
+Te obliczenia są żmudne i czasochłonne, nawet dla konkretnego przykładu. Gdybyśmy chcieli wyznaczyć odpowiednie wzory, jak powyżej dla funkcji liniowej, to zajęłoby to nam dużo czasu.
 
-Below we use the capabilities of Sage.
-
+Poniżej wykorzystamy możliwości Sage.
 
 .. sagecellserver::
 
@@ -263,7 +291,7 @@ Below we use the capabilities of Sage.
     sage: show(p1+p2+p3,figsize=3)
 
 
-We calculate the following equations, where he search coefficients: *a, b, c*.
+Obliczamy następujące równania, z których szukamy współczynniki: *a, b, c*.
 
 .. math:: 
 
@@ -273,7 +301,7 @@ We calculate the following equations, where he search coefficients: *a, b, c*.
     y_3=ax_3^2+bx_3+c 
     \end{cases}
 
-Change the above system of equations for the corresponding matrix equation.
+Zamieniamy powyższy układ równań na odpowiednie równanie macierzowe.
 
 .. math:: 
     \begin{bmatrix}
@@ -282,7 +310,7 @@ Change the above system of equations for the corresponding matrix equation.
     \end{bmatrix} 
     \begin{bmatrix} a\\b\\c\end{bmatrix} = \begin{bmatrix} y_1\\y_2\\y_3\end{bmatrix}
 
-In the SageMath we can easily solve this equation is enough to apply the following operation:
+W SageMath możemy łatwo rozwiązać powyższe równanie, wystarczy zastosować poniższe działanie:
 
 .. math::
 
@@ -301,12 +329,12 @@ In the SageMath we can easily solve this equation is enough to apply the followi
     sage: g=plot(f,xmin=-3, xmax=5, color="green")
     sage: show(p1+p2+p3+g,ymin=-7, ymax=8, figsize=4)
 
-7. Polynomial.
-^^^^^^^^^^^^^^
+7. Wielomian.
+^^^^^^^^^^^^^
 
-Here is an example for a few random points. The resulting function is a polynomial.
+Oto przykład dla kilku losowych punktów. Otrzymana funkcja jest wielomianem.
 
-If you specify *n* points, it certainly passes through these points a polynomial of degree less than *n*.
+Jeśli podasz n punktów, to na pewno przechodzi przez te punkty wielomianem stopnia mniejszego od n.
 
 
 .. sagecellserver::
@@ -333,7 +361,7 @@ If you specify *n* points, it certainly passes through these points a polynomial
     sage: show(points,ymin=-2,ymax=6,figsize=4) 
  
 
-For the random points calculate polynomial coefficients.
+Dla losowych punktów obliczamy współczynniki wielomianu.
 
 .. sagecellserver::
 
@@ -343,7 +371,7 @@ For the random points calculate polynomial coefficients.
     sage: show(M)
     sage: show(wynik)
 
-We draw a polynomial that goes passes through the given points.
+Rysujemy wielomian, który przechodzi przez podane punkty.
 
 .. sagecellserver::
 
@@ -356,11 +384,11 @@ We draw a polynomial that goes passes through the given points.
     sage: show("f(x)=",f)
     sage: f=plot(f,xmin=-1, xmax=k, color="green")
     sage: show(points+f,ymin=-7,ymax=8,figsize=6)
-
+   
 8. Taylor's formula.
 ^^^^^^^^^^^^^^^^^^^^
 
-From the mathematical analysis is known below the following formula is known. It approximates any function corresponding polynomial.
+Z analizy matematyczna znany poniższy jest wzór, który przybliża dowolną funkcję pewnym odpowiadającym tej funkcji wielomianem.
 
 **Taylor's formula**
 
@@ -371,7 +399,7 @@ From the mathematical analysis is known below the following formula is known. It
     {\frac  {(x-a)^{n}}{n!}}f^{{(n)}}(a)+\ldots
     \end{aligned}
 
-We can simplify the above formula substituting for a = 0. We get **The Taylor-Maclaurin formula**.
+Możemy uprościć powyższy wzór podstawiajac za a=0. Otrzymujemy **The Taylor-Maclaurin formula**.
 
 .. math::
     
@@ -380,24 +408,26 @@ We can simplify the above formula substituting for a = 0. We get **The Taylor-Ma
     {\frac  {x^{n}}{n!}}f^{{(n)}}(0)+\ldots
     \end{aligned}
 
-Here is an example for the function :math:`f(x)=sin(x)`.
+To jest przykład dla funkcji :math:`f(x)=sin(x)`.
 
 .. sagecellserver::
 
-    f=sin(x) # You can change this function
-    n=8      # You can change this number
-    q=plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)  
-    kolor=[]
-    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    g=f(0)    
-    for i in range(1, n):
-        g=g+(x^i/factorial(i))* diff(f,i).subs(x=0)
-        q=q+plot(g,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    show(q)
+    sage: kolor=[]
+    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    sage: n=6
+    sage: f=x
+    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    sage: for i in range(1, n):
+              k=2*i+1
+              f=f+(-1)^i*(1/factorial(k))*x^k
+              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    sage: show(sin(x),"=",f)
+    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
+    sage: show(q)
 
-**Exercise for students.**
+**Ćwiczenia dla uczniów.**
 
-For the function :math:`f(x)=cos(x)` find the corresponding polynomial formula of Taylor-Maclaurin.
+Dla funkcji :math:`f(x)=cos(x)` znajdź odpowiadający wielomian ze wzoru Taylora-Maclaurina.
 
 .. sagecellserver::
 
@@ -416,7 +446,7 @@ For the function :math:`f(x)=cos(x)` find the corresponding polynomial formula o
     sage: show(q)
 
 
-Use the Taylor-Maclaurin's formula for function :math:`f(x)=e^x`.
+Zastosuj wzór Taylora-Maclaurina dla funkcji :math:`f(x)=e^x`.
 
 .. sagecellserver::
 
@@ -428,13 +458,14 @@ Use the Taylor-Maclaurin's formula for function :math:`f(x)=e^x`.
     sage: for i in range(0, n):
               k=i+1
               f=f+(1/factorial(k))*x^k
+              #print(f(x))
               q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
     sage: show(e^x,"=",f)
     sage: f=e^x
     sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=10, linestyle="--", figsize=5.5)
     sage: show(q)
 
-We already know the Taylor's formula. Now we can simplify our calculations, and use the built-in Taylor's formula in SageMath.
+Znamy już wzór Taylora. Teraz możemy uprościć nasze obliczenia i użyć wbudowanego wzoru Taylora w SageMath.
 
 .. sagecellserver::
 

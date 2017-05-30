@@ -94,8 +94,6 @@ The differences are large, what we can see, considering graphs related functions
   
 **At the end** we go to ``sqrt(2)``.
   
-.. math::
-
-  \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
+:math:`\verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?`
 
 Is not that strange?

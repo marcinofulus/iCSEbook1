@@ -1,21 +1,44 @@
 
-Approximation
+Całkowanie równań ruchu
 -----------------------
 
-.. admonition:: Krzysztof Oleś
+.. admonition:: Adam Ogaza
 
-  Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
+  całkowanie numeryczne równań ruchu :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
 **At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
    
 .. sagecellserver::
 
-  p=2 #change p
-  for n in range(1,6): #change a range
-    p=0.5*(p+2/p)
-    print p
-    print "error =",abs(N(sqrt(2)-p))
-  
+    # Oscylator - położenie i prędkość
+    x0 = 0
+    v0 = 10
+    dt = 0.05
+    totaltime = 10
+    k = 1
+    m = 1
+    t = 0
+    A = v0*sqrt(m/k)
+
+    wykresX = point( [(x0,t)],pointsize=50,figsize=5,color='red')
+    wykresV = point( [(v0,t)],pointsize=50,figsize=5,color='green')
+    for i in range(int(totaltime/dt)):
+        v1  = v0 - k/m*x0*dt        
+        x1 = x0 + v0*dt
+
+        x0,v0 = x1,v1 
+        t += dt
+        wykresX = wykresX +  point( [(t, x1)],pointsize=20,figsize=5, color='purple')
+        wykresV = wykresV +  point( [(t, v1)],pointsize=20,figsize=5, color='green')
+
+    var('t')
+
+    wykresX_exact = plot(A*sin(sqrt(k/m)*t),(t,0,totaltime),color='red')
+    wykresV_exact = plot(A*cos(sqrt(k/m)*t),(t,0,totaltime),color='yellow')
+
+    show(wykresX+wykresX_exact)
+    show(wykresV+wykresV_exact)  
+
 We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
 
 And what's interesting?
@@ -87,8 +110,6 @@ The differences are large, what we can see, considering graphs related functions
   
 **At the end** we go to ``sqrt(2)``.
   
-.. math::
-
-  \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
+:math:`\verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?`
 
 Is not that strange?

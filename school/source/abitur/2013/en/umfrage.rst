@@ -3,7 +3,7 @@ Bavarian final secondary-school examinations in mathematics 2013
 
 .. admonition:: Problem
 
-  In a big city the election of the mayor is right ahead. 12% of the 
+  In a city the election of the mayor is approaching. 12% of the 
   eligible voters are young voters, i.e. persons aged between 18 and 24 years.
   Before the election campaign, a representative poll amongst the eligible voters
   is conducted. According to the poll, 44% of the polled eligible voters have
@@ -12,21 +12,21 @@ Bavarian final secondary-school examinations in mathematics 2013
 
   The following outcomes are considered:
   
-  :math:`J`: "A randomly selected person of the respondents is a young voter."
+  :math:`J`: "A person randomly selected from the respondents is a young voter."
   
-  :math:`K`: "A randomly selected person of the respondents has decided already
+  :math:`K`: "A person randomly selected from the respondents has decided already
   in favour of a candidate."
   
-  a) Make a completly filled fourfold table for the described factual connection.
+  a) Compile a completely filled fourfold table for the context described above.
   
-  b) Show that :math:`P_J(\overline{K})>P_{\overline{J}}(\overline{K})`
-     applies. Justify that, in spite of validity of this inequality, it
+  b) Demonstrate that :math:`P_J(\overline{K})>P_{\overline{J}}(\overline{K})`.
+     Justify that, in spite of validity of this inequality, it
      is not reasonable to concentrate predominantly on young voters in the
      election campaign.
   
   c) On a specific day during his campaign, the candidate of party A speaks to
      48 randomly selected eligible voters. Determine the probability that there
-     are exactly six young voters amongst those.
+     are exactly six young voters amongst them.
 
 **Solution of part a**
 
@@ -59,7 +59,7 @@ in the rows :math:`J` and :math:`\overline{J}` can be completed by subtraction.
 
 **Solution of part b**
 
-To show the inequality we compute :math:`P_J(\overline{K})` and
+To show the inequality, we compute :math:`P_J(\overline{K})` and
 :math:`P_{\overline{J}}(\overline{K})`.
 
 .. math::
@@ -70,16 +70,17 @@ To show the inequality we compute :math:`P_J(\overline{K})` and
   = \frac{48\%}{88\%} \approx 54.5\% \\
 
 The inequality :math:`P_J(\overline{K})>P_{\overline{J}}(\overline{K})` is thus
-fulfilled. Nevertheless, it is not reasonable to concentrate on the young voters
-during the election campaign. For the election result, the total number of the
-voters has to be considered. Even though the older voters have voted percentagewise more
-in favour of a candidate than the young voters, this is not the case for absolute numbers.
-At 8% young voters and 48% older voters, who have not yet decided, the election campaign
-should better focus on older voters.
+fulfilled. Nevertheless, it is not reasonable to concentrate on the young
+voters during the election campaign. For the outcome of the election, the total
+number of voters has to be considered. Even though by percentage, more older
+voters than young voters have already decided in favour of a candidate, this is
+not the case in absolute numbers.  At 8% young voters and 48% older voters, who
+have not yet taken their decision, the election campaign should better focus on
+older voters.
 
 **Solution of part c**
 
-The probability that a eligible voter is a young voter is 12%.
+The probability for an eligible voter to be a young voter is 12%.
 The probability that there are exactly six young voters amongst 48 voters can
 be determined from the binomial distribution:
 

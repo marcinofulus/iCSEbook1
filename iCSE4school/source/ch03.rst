@@ -72,32 +72,18 @@ Wynik
        w=a/(b-c*sqrt(d))
    show(w)
    
-   
-.. sagecellserver::
-   
-if (r>0.5):
-    e=a*(b-c*sqrt(d))
-    f=b*b-c*c*d
-else:
-    e=a*(b+c*sqrt(d))
-    f=b*b-c*c*d
-show("licznik: ",e)
-show("mianownik: ",f)
-show("wynik: ",e/f)
-
+Wynik
 
 .. sagecellserver::
-
-   show("v=s/t")
-   v=int(5*random()+2)
-   t=int(5*random()+2)
-   s=v*t
-   r=random()
-   if (r<0.3):
-       show("v=",v, ", t=", t, ", s=?")
-   else:
-       if (r<0.7):
-           show("v=",v, ", s=", s, ", t=?")
-       else:
-           show("s=",s, ", t=", t, ", v=?")
-           
+   
+    if (r>0.5):
+        e=a*(b-c*sqrt(d))
+        f=b*b-c*c*d
+    else:
+        e=a*(b+c*sqrt(d))
+        f=b*b-c*c*d
+    show("licznik: ",e)
+    show("mianownik: ",f)
+    show("wynik: ",e/f)
+    maxima_calculus('algebraic: true;')
+    w.simplify_rational()

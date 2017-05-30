@@ -8,7 +8,7 @@ Bayerisches Abitur in Mathematik 2013
   Jahren. Vor Beginn des Wahlkampfs wird eine repräsentative Umfrage unter den
   Wahlberechtigten durchgeführt. Der Umfrage zufolge haben sich 44% der
   befragten Wahlberechtigten bereits für einen Kandidaten entschieden. Jeder
-  Siebte derjenigen Befragte, die sich noch nicht für einen Kandidaten
+  Siebte derjenigen Befragten, die sich noch nicht für einen Kandidaten
   entschieden haben, ist Jungwähler.
   
   Betrachtet werden folgende Ereignisse:
@@ -85,8 +85,8 @@ Wähler konzentriert sein.
 
 **Lösung zu Teil c**
 
-Die Wahrscheinlichkeit, dass ein Wahlberechtigter ein Jungwähler ist beträgt 12%.
-Die Wahrscheinlichkeit genau sechs Jungwähler unter 48 Wählern zu haben, lässt
+Die Wahrscheinlichkeit, dass ein Wahlberechtigter ein Jungwähler ist, beträgt 12%.
+Die Wahrscheinlichkeit, genau sechs Jungwähler unter 48 Wählern zu haben, lässt
 sich aus der Binomialverteilung erhalten:
 
 .. math::
@@ -105,7 +105,8 @@ Mit Sage können wir dieses Experiment simulieren.
   sage: p = 0.12
   sage: sechs_jungwaehler = np.sum(random_sample((personen, iterationen)) < p, axis=0) == 6
   sage: treffer = np.sum(sechs_jungwaehler)
-  sage: print("Wahrscheinlichkeit dafür, dass bei {} zufälligen Personen genau {} Jungwähler dabei sind beträgt: {:4.2%}".format(
-  sage:     personen, jungwaehler, float(treffer)/iterationen))
+  sage: print("Wahrscheinlichkeit dafür, dass bei {} zufälligen Personen genau {} "
+              "Jungwähler dabei sind, beträgt: {:4.2%}".format(
+  sage:                     personen, jungwaehler, float(treffer)/iterationen))
 
 .. end of output

@@ -14,8 +14,8 @@ Bavarian final secondary-school examinations in mathematics 2013
    |Rh-    |6%  |6%  |2%  |1%  |
    +-------+----+----+----+----+
   
-  In a hospital 25 people donate blood in a morning. In the following it is
-  assumed that those 25 people represent a random sample from the population.
+  During a morning, 25 people donate blood in a hospital. In the following it shall be
+  assumed that those 25 people represent a random sample of the population.
   
   a) Determine the probability that exactly ten of the donors have blood
      type A.
@@ -60,14 +60,14 @@ have blood type A is:
 
 .. math:: 
 
-  P(\mathrm{A}) = P(\mathrm{A, Rh+}) + P(\mathrm{A, Rh-}) = 43 \%
+  P(\mathrm{A}) = P(\mathrm{A, Rh+}) + P(\mathrm{A, Rh-}) = 43 \%\,.
 
 The desired probability is:
 
 .. math::
 
   W^{25}_{0.43}(10) =& {25 \choose 10}\cdot0{.}43^{10}\cdot(1-0{.}43)^{15}\\
-  =& \frac{25!}{10!\cdot 15!} 0{.}43^{10} \cdot 0{.}57^{15} \approx 15{.}4 \% 
+  =& \frac{25!}{10!\cdot 15!} 0{.}43^{10} \cdot 0{.}57^{15} \approx 15{.}4 \% \,.
 
 This random experiment can be simulated with Sage:
 
@@ -83,15 +83,15 @@ This random experiment can be simulated with Sage:
   sage: for _ in range(repetitions):
   sage:     if np.sum(random_sample(people) < p_a) == people_a:
   sage:         hits = hits+1
-  sage: print("Empirical probability to have 10 people with blood type A from 25 people: {:5.2%}".format(
+  sage: print("Empirical probability to have 10 people with blood type A out of 25 people: {:5.2%}".format(
   sage:        float(hits)/repetitions))
 
 .. end of output
 
 **Solution of part b**
 
-The probability that more than half of the donors have blood type 0 and rhesus factor Rh+ can be easily
-determined with Sage by summing up:
+The probability that more than half of the donors have blood type 0 and rhesus factor Rh+ can easily be
+determined with Sage by summation:
 
 .. sagecellserver:: 
 
@@ -102,20 +102,21 @@ determined with Sage by summing up:
   sage: sum = 0
   sage: for hits in range((people+1)//2, people+1):
   sage:     sum = sum+bernoulli(people, p_0_rhneg, hits)
-  sage: print("Probablity that more than half of the donars have blood type 0 Rh+: {:5.2%}".format(float(sum)))
+  sage: print("Probablity that more than half of the donors have blood type 0 Rh+: {:5.2%}".format(float(sum)))
 
 .. end of output
 
 **Solution of part c**
 
 According to the table, people with blood type 0 Rh- as well as B Rh- can donate to
-a recipient with blood type B and rhesus factor Rh-.
+a recipient with blood type B and rhesus factor Rh-. The probability to find a suitable
+donor thus equals
 
 .. math::
 
-  P(\mathrm{0, Rh-}) + P(\mathrm{B, Rh-}) = 8\%
+  P(\mathrm{0, Rh-}) + P(\mathrm{B, Rh-}) = 8\%\,.
 
-The probability that a person is not a suitable donor then equals: :math:`92\%`.
+The probability that a person is not a suitable donor then equals :math:`92\%`.
 The probability that there is no suitable donor amongst :math:`n` people
 thus amounts to :math:`0.92^n`. 
 We look for the smallest number :math:`n` for which
@@ -132,8 +133,8 @@ Taking the logarithm and bearing in mind that :math:`\ln(0.92)` is negative, one
 
 One hence needs at least 36 donors.
 
-With the help of a random experiment one can approximately determine the probability
-with Sage that amongst 36 donors there is a suitable one.
+With the help of a random experiment one can approximately determine with Sage the probability
+that amongst 36 donors there is at least one suitable donor.
 
 .. sagecellserver:: 
 
@@ -143,7 +144,7 @@ with Sage that amongst 36 donors there is a suitable one.
   sage: hits = 0
   sage: for _ in range(repetitions):
   sage:     if np.sum(random_sample(n) < p):
-  sage:         hits += 1
+  sage:         hits = hist+1
   sage: print("Probability that there is a suitable donor amongst {} people: {:5.2%}".format(n, float(hits)/repetitions))
 
 .. end of output

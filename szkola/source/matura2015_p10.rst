@@ -68,6 +68,9 @@ a. :code:`wyrazenie.show()` - pokaże nam ładną postać matematyczną wzoru.
 
 .. note::
 
-   W Sage jest system pomocy, spróbuj napisać :code:`wyrazenie.expand`
-   i nacisnąć klawisz :code:`TAB` (tabulator).
+   W Sage jest system pomocy, spróbuj napisać
+   :code:`wyrazenie.expand?`. Lista dostępnych metod jest olbrzymia: :code:`dir(wyrazenie)`.
+
+   W notatniku (sagenb lub jupyter) działa klawisz uzupełnienia
+   :code:`TAB` (tabulator) po :code:`wyrazenie.`
 

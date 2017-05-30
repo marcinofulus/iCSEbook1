@@ -33,7 +33,7 @@ Die Gesamtwahrscheinlichkeit zu gewinnen ist somit:
 
 .. math::
 
-  \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{28} \approx 0.0357
+  \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{28} \approx 0.0357\,.
 
 Mit Sage kann dieses Glücksspiel simuliert werden. Dazu mischen wir die Kugeln
 und betrachten die Farbe der ersten drei Kugeln.
@@ -41,6 +41,7 @@ und betrachten die Farbe der ersten drei Kugeln.
 .. sagecellserver::
 
   sage: from random import choice
+
   sage: def spiel():
   sage:    urne = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
   sage:    shuffle(urne)
@@ -53,7 +54,7 @@ und betrachten die Farbe der ersten drei Kugeln.
   sage:    if spiel():
   sage:        erfolge = erfolge+1
 
-  sage: print("In {} von {} Fällen haben die drei Kugeln die gleiche Farbe.".format(erfolge, spiele))
+  sage: print("In {} von {} Fällen hatten die drei Kugeln die gleiche Farbe.".format(erfolge, spiele))
 
 .. end of output
 
@@ -64,7 +65,7 @@ von 2 Euro pro Spiel und einem Gewinn von :math:`x` Euro nach:
 
 .. math:: 
 
-  E(x) = 2 - \frac{1}{28} \cdot x.
+  E(x) = 2 - \frac{1}{28} \cdot x\,.
 
 Wenn die Einnahmen pro Spiel 1,25 Euro betragen sollen, also
 :math:`E(x)=1{,}25`, folgt :math:`x=21`. Der auszuzahlende Gewinn muss also 21

@@ -6,17 +6,16 @@ Prąd stały
 
   Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
   
-**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example be
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+**At the beginning** we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look
+
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
 
 .. sagecellserver::
 
-  w=1
-  for i in range(1,6):
-    w=w*((2*i)/(2*i-1))*((2*i)/(2*i+1))
-    print 2*w     #do you prefer fractions or decimals?
-    print "error =",abs(N(pi-2*w))   print "error =",abs(N(sqrt(2)-p))
-  
+  var('R,E,rw,J,P,U')
+sol = solve([R+rw == E/J,P == U*J,R==U/J],[P,J,U],solution_dict=True)
+show
+ 
 gfakfgalfgalfgalgfalgalgh;zga;gha;gha;gha;gha;gha;
 
 And what's interesting?
@@ -88,8 +87,7 @@ The differences are large, what we can see, considering graphs related functions
   
 **At the end** we go to ``sqrt(2)``.
   
-.. math::
 
-  \verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?
+:math:`\verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?`
 
 Is not that strange?
