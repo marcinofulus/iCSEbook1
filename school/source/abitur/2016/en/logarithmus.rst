@@ -12,7 +12,7 @@ Bavarian final secondary-school examinations in mathematics 2016
 
 **Solution of part a**
 
-The logarithm is only defined for arguments :math:`x>0` and the square root only
+The logarithm is only defined for arguments :math:`x>0`, and the square root only
 for arguments :math:`x\geq0`. For values :math:`x>e`, the logarithm of :math:`x`
 gives values bigger than 1 and thus the argument of the square root would be smaller
 than 0. However, in the range :math:`0<x\leq e`, the logarithm gives values smaller

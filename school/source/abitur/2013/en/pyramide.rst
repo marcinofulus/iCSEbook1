@@ -20,27 +20,27 @@ Bavarian final secondary-school examinations in mathematics 2013
 
      *(possible result:* :math:`E : 4x_2+3x_3-48=0`\ *)*
   
-  c) The interior work of the gazebo requires a as short as possible, thin
+  c) The interior work of the gazebo requires an as short as possible, thin
      bar between the center point of the base and the southern exterior wall.
      Determine at which height above the base the bar has to be attached to the
      exterior wall.
   
   Solar panels are mounted flush on some part of the southern exterior wall.
   In the model, the solar panels cover a triangular surface whose corners are
-  the peak :math:`S`, as well as the centers of the edge :math:`[SB]` and
+  the peak :math:`S`, as well as the centers of the edges :math:`[SB]` and
   :math:`[SC]`.
   
   d) Find the area of the surface covered by the solar panels.
   
-  e) The electric power delivered by the solar panels depends amongst other
-     things on the magnitude of the inclination angle with respect to the
+  e) The electric power delivered by the solar panels, depends amongst other
+     things, on the magnitude of the inclination angle with respect to the
      horizontal. The table gives the percentage of the delivered power compared
      to the maximal possible power in dependence of the inclination angle.
-     Estimate that percentage for the solar panels of the gazebo - after
-     calculation of the inclination angle - using the table.
+     Estimate this percentage for the solar panels of the gazebo - after
+     calculation of the inclination angle - by making use of the table.
   
   ================================ === === === ==== ==== === === === === ===
-  inclination angle                 0°  10° 20° 30°  40°  50° 60° 70° 80° 90°
+  inclination angle                0°  10° 20° 30°  40°  50° 60° 70° 80° 90°
   ================================ === === === ==== ==== === === === === ===
   percentage of maximal power      87% 93% 97% 100% 100% 98% 94% 88% 80% 69%
   ================================ === === === ==== ==== === === === === ===
@@ -131,7 +131,7 @@ If the perpendicular is determined, we can compute the intersection with the pla
 and hence read off the height from its :math:`x_3`-coordinate.
 
 The normal vector :math:`\vec{n}` of the plane was already calculated in part b.
-We define auxiliary line
+We define the auxiliary line
 
 .. math::
 
@@ -184,8 +184,8 @@ We leave the calculations to Sage and obtain
 
 **Solution of part e**
 
-The inclination angle of the plane :math:`E` with respect to the :math:`x_1-x_2`-plane equals the
-angle between the two normals of the planes. For the :math:`x_1-x_2`-plane, the normal vector
+The inclination angle of the plane :math:`E` with respect to the :math:`x_1`-:math:`x_2`-plane equals the
+angle between the two normals of the planes. For the :math:`x_1`-:math:`x_2`-plane, the normal vector
 corresponds to the unit vector along the :math:`x_3`-direction. The normal vector of the plane
 :math:`E` is the vector :math:`\vec n` which was determined in part b. The sought-after angle
 can be computed with the following formula:

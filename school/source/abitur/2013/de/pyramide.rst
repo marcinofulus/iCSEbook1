@@ -188,8 +188,8 @@ berechnen. Wir überlassen die Rechenarbeit Sage und erhalten
 
 **Lösung zu Teil e**
 
-Der Neigungswinkel der Ebene :math:`E` gegenüber der :math:`x_1-x_2`-Ebene ist gleich dem Winkel
-zwischen den beiden Ebenennormalen. Für die :math:`x_1-x_2`-Ebene ist die
+Der Neigungswinkel der Ebene :math:`E` gegenüber der :math:`x_1`-:math:`x_2`-Ebene ist gleich dem Winkel
+zwischen den beiden Ebenennormalen. Für die :math:`x_1`-:math:`x_2`-Ebene ist die
 Normale der Einheitsvektor in :math:`x_3`-Richtung. Der Normalenvektor der Ebene
 :math:`E` ist der in Teil b bestimmte Vektor :math:`\vec n`. Der gesuchte Winkel lässt
 sich nun mit folgender Formel berechnen:

@@ -9,13 +9,13 @@ Bavarian final secondary-school examinations in mathematics 2013
   :math:`h: \vec{X} = \begin{pmatrix}-1\\5\\-9\end{pmatrix} + \mu \cdot 
   \begin{pmatrix}1\\-2\\4\end{pmatrix}`, :math:`\mu \in \mathbb{R}`, are given
   in a cartesian coordinate system.
-  The lines :math:`g` and :math:`h` intersect in the point :math:`T`.
+  The lines :math:`g` and :math:`h` intersect at the point :math:`T`.
 
   a) Determine the coordinates of :math:`T`.
 
      *(result:* :math:`T(2|-1|3)`\ *)*
   
-  b) Give the coordinates of two point :math:`P` and :math:`Q` which lie on 
+  b) Give the coordinates of two points :math:`P` and :math:`Q` which lie on 
      :math:`g` and are at equal distance from :math:`T`.
   
   c) Two points :math:`U` and :math:`V` of the line :math:`h` together with the
@@ -76,11 +76,11 @@ coordinate system with Sage.
 The intersection :math:`T` can be obtained by plugging the value of :math:`\lambda`,
 which was determined in part a, into the equation of the line :math:`g`.
 Now, two points :math:`P` and :math:`Q` which lie on :math:`g` and are at equal
-distance from :math:`T` are sought after. For this, one has to add the same value
-to :math:`\lambda` and substact it from :math:`\lambda`.
+distance from :math:`T` are sought after. For this, one has to add a value
+to :math:`\lambda` and substact the same from :math:`\lambda`.
 
 In part a, we found :math:`\lambda = -2`. The two points :math:`P` and :math:`Q`
-can be obtained by for example plugging the values :math:`\lambda = -1` and
+can be obtained, for example, by plugging the values :math:`\lambda = -1` and
 :math:`\lambda = -3` into the equations of the line. These points are added to the
 coordinate system.
 
@@ -115,15 +115,15 @@ as before yield that the line :math:`h` between the points :math:`U` and :math:`
 is the second diagonal of the rectangle.
 
 To obtain a rectangle from a quadrangle with known diagonals, the diagonals have to have
-the same length and the center of the diagonals has to be intersection of these.
+the same length and the center of the diagonals has to be the intersection of these.
 Thus, the two points :math:`U` and :math:`V` have to be at equal distance from :math:`T`,
 just as the points :math:`P` and :math:`Q`.
 
 With Sage, we first compute the distance between the points :math:`T` and :math:`Q`.
-Subsequently, the value :math:`\mu?` is determined for which the corresponding point on the
+Subsequently, the value :math:`\mu` is determined for which the corresponding point on the
 line :math:`h` is at equal distance from :math:`T` as the point :math:`Q`.
 With this, the points :math:`U` and :math:`V` can be obtained by plugging :math:`\pm\mu`
-into the equation of the line :math:`h`.
+into the equation of line :math:`h`.
 
 .. sagecellserver::
 
