@@ -14,7 +14,7 @@ Bavarian final secondary-school examinations in mathematics 2013
    |Rh-    |6%  |6%  |2%  |1%  |
    +-------+----+----+----+----+
   
-  During a morning, 25 people donate blood in a hsopital. In the following it shall be
+  During a morning, 25 people donate blood in a hospital. In the following it shall be
   assumed that those 25 people represent a random sample of the population.
   
   a) Determine the probability that exactly ten of the donors have blood
