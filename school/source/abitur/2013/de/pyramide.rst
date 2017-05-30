@@ -85,8 +85,8 @@ die sich auch mit Sage leicht auswerten lässt.
 
 **Lösung zu Teil b**
 
-Es soll die Ebene :math:`E` die sich aus den Punkten :math:`B`, :math:`C` und
-:math:`S` ergibt berechnet werden. Die Gleichung für die Ebene soll in
+Es soll die Ebene :math:`E`, die sich aus den Punkten :math:`B`, :math:`C` und
+:math:`S` ergibt, berechnet werden. Die Gleichung für die Ebene soll in
 Normalenform angegeben werden. Den Normalenvektor erhält man, indem man aus den
 Ortsvektoren der Punkte zwei Spannvektoren bildet und diese mit Hilfe des
 Kreuzproduktes multipliziert.
@@ -129,8 +129,8 @@ Lösung.
 **Lösung zu Teil c**
 
 Die Strebe vom Mittelpunkt der Grundfläche :math:`S' (6|6|0)` zur südlichen
-Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene E durch den
-Punkt S' gesucht. Ist das Lot bestimmt, können wir den Schnittpunkt mit der
+Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene :math:`E` durch den
+Punkt :math:`S'` gesucht. Ist das Lot bestimmt, können wir den Schnittpunkt mit der
 Ebene berechnen und daraus anhand der :math:`x_3`-Koordinate die Höhe 
 ablesen.
 
