@@ -45,7 +45,7 @@ We can also verify this root with Sage.
      
 .. end of output
 
-As the graph from Sage suggests, the function goes to :math:`-\infty` for
+As the graph from Sage suggests, the function goes to :math:`-\infty` as
 :math:`x\rightarrow0`. This can also be justified by the fact that on the
 one hand the enumerator goes to :math:`-\infty` and on the other hand
 the denominator of the function goes to :math:`0^+`.

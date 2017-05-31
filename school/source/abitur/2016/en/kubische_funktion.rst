@@ -11,7 +11,7 @@ Bavarian final secondary-school examinations in mathematics 2016
      :math:`f` is a parabola which intersects the :math:`x`-axis at the
      points (1|0) and (4|0) and opens to the top.
 
-  b) Reason that 2.5 is the :math:`x`-coordinate of the inflexion point of
+  b) Reason that 2.5 is the :math:`x`-coordinate of the point of inflection of
      :math:`G_f`.
 
 **Solution of part a**
@@ -30,8 +30,8 @@ the derivative
 
   f'(x) = (x-1)(x-4)
 
-which evidently has the right roots. We now plot the function :math:`f`
-as well as its first and second derivate with Sage and can thereby check the just
+which evidently has the correct roots. We now plot the function :math:`f`,
+as well as its first and second derivate, with Sage and can thereby check the just
 discussed properties of the function :math:`f`.
 
 .. sagecellserver::
@@ -48,7 +48,7 @@ discussed properties of the function :math:`f`.
 
 **Solution of part b**
 
-The inflexion point :math:`x_0` of a graph of the function :math:`f` has to
+The point of inflection :math:`x_0` of a graph of the function :math:`f` has to
 fulfill the condition:
 
 .. math::
@@ -58,19 +58,19 @@ fulfill the condition:
 The derivative of :math:`f` hence has to have an extremum.
 For a parabola, this can only be the case at the vertex. For reasons of
 symmetry, this point is always in the center between two points with the
-same function value. The inflexion point of :math:`f` hence has to be
+same function value. The point of inflection of :math:`f` hence has to be
 centered between the two roots:
 
 .. math::
 
-  x_0 = \frac{1 + 4}{2} = 2{,}5
+  x_0 = \frac{1 + 4}{2} = 2.5\,.
 
-The inflexion point of :math:`f` can be already determined from the
+The point of inflection of :math:`f` can be already determined from the
 plot of part a). However, we can also obtain it by calculations
 with the help of Sage:
 
 .. sagecellserver::
 
-  sage: print "Inflexion point at:", solve(ddf(x) == 0, x)[0]
+  sage: print "Point of inflection at:", solve(ddf(x) == 0, x)[0]
      
 .. end of output

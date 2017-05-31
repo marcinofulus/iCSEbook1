@@ -6,7 +6,7 @@ Bavarian final secondary-school examinations in mathematics 2016
   Give the term and the domain of a function which fulfills the given
   property/properties, respectively.
 
-  a) The point (2|0) is an point of inflecion of the graph of :math:`g`
+  a) The point (2|0) is an point of inflecion of the graph of :math:`g`.
 
   b) The graph of the function :math:`h` is strictly monotonic decreasing
      and concave downward.
