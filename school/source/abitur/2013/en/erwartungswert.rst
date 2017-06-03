@@ -46,7 +46,7 @@ This yields a hypergeometric distribution. With the number of female
   P(X) = \dfrac{\frac{f!}{X!(f-X)!} \frac{m!}{(N-X)!(m-N+X)!}}
                            {\frac{(f+m)!}{N!(f+m-N)!}}\,.
 
-Plugging in yields
+For :math:`X=1` one finds
 
 .. math::
 
@@ -77,7 +77,7 @@ The probabilities can also be easily determined with the help of Sage.
 
 **Solution of part b**
 
-In general, the expected value of the distribution can be computed with the formula
+Generally, the expected value of the distribution can be computed with the formula
 
 .. math::
 
@@ -156,4 +156,4 @@ but the variance is bigger.
 This can already be concluded by means of the figures because the probability
 for :math:`Y` at :math:`k=2` is smaller, while at :math:`k=0` and :math:`k=3`
 it is clearly bigger than for :math:`X`. Hence, the probability distribution
-for :math:`Y` is "broader" and has a bigger variance.
+for :math:`Y` is “broader” and has a bigger variance.
