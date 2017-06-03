@@ -27,7 +27,7 @@ Bayerisches Abitur in Mathematik 2013
   c) Abbildung 2 zeigt die Wahrscheinlichkeitsverteilung einer
      binomialverteilten Zufallsgröße :math:`Y` mit den Parametern :math:`n=3`
      und :math:`p=\frac{2}{3}`. Zeigen Sie rechnerisch, dass :math:`Y` den
-     gleichen Erwartungswert wie die Zufallsgröße :math:`X`, aber eine größer
+     gleichen Erwartungswert wie die Zufallsgröße :math:`X`, aber eine größere
      Varianz als :math:`X` besitzt.
      Erläutern Sie, woran man durch Vergleich der Abbildungen 1 und 2 erkennen
      kann, dass :math:`\mathrm{Var}(Y)>\mathrm{Var}(X)` gilt.
