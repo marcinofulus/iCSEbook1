@@ -12,12 +12,12 @@ Bavarian final secondary-school examinations in mathematics 2016
 
 **Solution of part a**
 
-The logarithm is only defined for arguments :math:`x>0`, and the square root only
-for arguments :math:`x\geq0`. For values :math:`x>e`, the logarithm of :math:`x`
-gives values bigger than 1 and thus the argument of the square root would be smaller
-than 0. However, in the range :math:`0<x\leq e`, the logarithm gives values smaller
-or equal 1 such that the argument of the square root becomes bigger or equal zero.
-The maximal domain is hence given by
+The logarithm is only defined for arguments :math:`x>0`, and the square root
+only for arguments :math:`x\geq0`. For values :math:`x>e`, the logarithm of
+:math:`x` yields values bigger than 1 and thus the argument of the square root
+would be smaller than 0. On the other hand, in the range :math:`0<x\leq e`, the
+logarithm yields values smaller or equal to 1 such that the argument of the square
+root becomes bigger or equal to zero.  The maximal domain is hence given by
 
 .. math::
 
