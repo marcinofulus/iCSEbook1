@@ -6,13 +6,13 @@ Bavarian final secondary-school examinations in mathematics 2013
   According to the survey, the candidate of party A would have received
   about 50% of the votes if the election had taken place at the time of
   the survey.
-  A success on the first ballot, for which more than 50% of all votes are 
+  A success at the first ballot, for which more than 50% of all votes are 
   required, is hence questionable. Thus, the election campaign consultant
   put in place by party A suggests an additional campaign in the final stage
-  of the election battle. However, the treasurer of party A would preferably 
-  like to avoid the high costs connected to an additional campaign.
+  of the election battle. However, the treasurer of party A would prefer
+  to avoid the high costs caused by an additional campaign, if possible.
   
-  a) In order to arrive at a decision about the realization of an additional
+  a) In order to come to a decision on the realization of an additional
      campaign, the null hypothesis "The candidate of party A would currently
      receive at most 50% of all votes." is to be tested by means of a sample
      of 200 eligible voters on a level of significance of 5%. Determine the
@@ -20,7 +20,7 @@ Bavarian final secondary-school examinations in mathematics 2013
 
   b) Justify that the choice of the null hypothesis for the described test
      is in accordance with the concern of the election campaign consultant
-     to achieve a success in the first ballot.
+     to achieve a success already at the first ballot.
 
 **Solution of part a**
 
@@ -49,7 +49,7 @@ use Sage:
 
 .. end of output
 
-Furthermore, we can simulate the survey and check at how many surveys at least
+Furthermore, we can simulate the survey and check in how many surveys at least
 112 people would indicate to vote for candidate A, although the probability
 that a person votes for candidate A is 50%.
 
@@ -61,23 +61,23 @@ that a person votes for candidate A is 50%.
   sage: repetitions = 10000
   sage: p = 0.5
   sage: people = 200
-  sage: treshold = 112
+  sage: threshold = 112
   sage: for_A = random_sample((people, repetitions)) < p
-  sage: above_treshold = np.sum(for_A, axis=0) >= treshold
-  sage: cases = np.sum(above_treshold)
+  sage: above_threshold = np.sum(for_A, axis=0) >= threshold
+  sage: cases = np.sum(above_threshold)
 
   sage: print(("The probability that at a survey of {} people at least "
                "{} people vote for candidate A\nif the probability to "
-               "decide for candidate A is {:2.0%} equals:  {:3.2%} ").format(
-            people, treshold, float(p), float(cases)/repetitions))
+               "decide for candidate A is {:2.0%}, equals:  {:3.2%} ").format(
+            people, threshold, float(p), float(cases)/repetitions))
 
 
 .. end of output
 
 **Solution of part b**
 
-With the chosen null hypothesis one can relativly safely say that with at least
+With the chosen null hypothesis one can relatively safely say that with at least
 112 positive statements the candidate of party A will be elected.
 If the first survey is correct about the candidate receiving only about 50% of the
-votes, the null hypothesis is probably disproven and the funds for an additional
+votes, the null hypothesis will probably be disproven and the funds for an additional
 campaign get approved.
