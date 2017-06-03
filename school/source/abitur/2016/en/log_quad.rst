@@ -6,7 +6,7 @@ Bavarian final secondary-school examinations in mathematics 2016
   The function :math:`f:x\mapsto\frac{\ln x}{x^2}` with maximal domain 
   :math:`\mathbb{D}` is given.
 
-  a) Give :math:`\mathbb{D}`, as well as the roots of :math:`f`, and
+  a) Give :math:`\mathbb{D}` as well as the roots of :math:`f`, and
      determine :math:`\lim\limits_{x\rightarrow0}f(x)`.
 
   b) Determine the :math:`x`-coordinate of the point in which the graph
@@ -15,14 +15,14 @@ Bavarian final secondary-school examinations in mathematics 2016
 **Solution of part a**
 
 The logarithm is defined for arguments :math:`x>0` only. The denominator
-:math:`x^2` has a gap in the domain at :math:`x=0`. The maximal domain
+:math:`x^2` contributes a gap in the domain at :math:`x=0`. The maximal domain
 is hence given by
 
 .. math::
 
   \mathbb{D}=]0;\infty[\,.
 
-We obtain the roots from the roots of the enumerator:
+We obtain the roots from the roots of the numerator:
 
 .. math::
 
@@ -37,7 +37,7 @@ We plot the function with Sage.
      
 .. end of output
 
-We can also verify this root with Sage.
+We can also verify the root with Sage.
 
 .. sagecellserver::
 
@@ -45,8 +45,8 @@ We can also verify this root with Sage.
      
 .. end of output
 
-As the graph from Sage suggests, the function goes to :math:`-\infty` as
-:math:`x\rightarrow0`. This can also be justified by the fact that on the
+As the graph produced by Sage suggests, the function goes to :math:`-\infty` as
+:math:`x\rightarrow0`. This can also be established by the fact that on the
 one hand the enumerator goes to :math:`-\infty` and on the other hand
 the denominator of the function goes to :math:`0^+`.
 
@@ -54,7 +54,7 @@ the denominator of the function goes to :math:`0^+`.
 
 A horizontal tangent line corresponds to an extremum of the function.
 To identify such a point, we have to determine the derivative first and,
-subsequently, set this equal to 0:
+subsequently, set it equal to 0:
 
 .. math::
 
