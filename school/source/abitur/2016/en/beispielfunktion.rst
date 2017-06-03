@@ -4,12 +4,12 @@ Bavarian final secondary-school examinations in mathematics 2016
 .. admonition:: Problem
   
   Give the term and the domain of a function which fulfills the given
-  property/properties, respectively.
+  property/properties.
 
-  a) The point (2|0) is an point of inflecion of the graph of :math:`g`.
+  a) The point (2|0) is a point of inflection of the graph of :math:`g`.
 
-  b) The graph of the function :math:`h` is strictly monotonic decreasing
-     and concave downward.
+  b) The graph of the function :math:`h` is strictly monotonically decreasing
+     and concave.
 
 **Solution of part a**
 
@@ -21,9 +21,9 @@ the following requirements:
   f(2) &= 0\\
   f''(2) &= 0
 
-Furthermore, we require that :math:`f'''(2)\neq0` and in particular
-:math:`f'''(2)=1`.
-The integration under considerations of these requirements yields
+Furthermore, we require that :math:`f'''(2)\neq0` and choose in particular
+:math:`f'''(2)=1`. Taking these requirements into account, the integration
+yields
 
 .. math::
 
@@ -44,9 +44,9 @@ A plot made by Sage can confirm the point of inflection:
 
 **Solution of part b**
 
-The easiest solution for a strictly monotonic increasing and concave upward
-function is the exponential function. With a negative sign, this can turned
-into a strictly monotonic decreasing, concave downward function which can
+The simplest solution for a strictly monotonically increasing and convex
+function is the exponential function. With a negative sign, it is turned
+into a strictly monotonically decreasing, concave function as can
 be confirmed by calculation:
 
 .. math::
@@ -55,7 +55,7 @@ be confirmed by calculation:
   h'(x) &= -e^x < 0	\\
   h''(x) &= -e^x < 0
 
-A drawing by Sage confirms this too:
+A drawing by Sage confirms this:
 
 .. sagecellserver::
 
