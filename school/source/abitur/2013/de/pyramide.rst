@@ -139,7 +139,7 @@ Wir definieren nun die Hilfsgerade
 
 .. math::
 
-  h(t) = x_{S'}+t\vec n = \begin{pmatrix}6\\6\\0\end{pmatrix}
+  \vec h(t) = \vec x_{S'}+t\vec n = \begin{pmatrix}6\\6\\0\end{pmatrix}
   +t\begin{pmatrix}0\\96\\72\end{pmatrix}
 
 und suchen deren Schnittpunkt mit der Ebene :math:`E`. Einsetzen der
