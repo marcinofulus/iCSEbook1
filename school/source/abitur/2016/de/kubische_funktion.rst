@@ -16,7 +16,7 @@ Bayerisches Abitur in Mathematik 2016
 
 **Lösung zu Teil a**
 
-Die Ableitung einer kubischen Funktion ist immer eine Parabel, wobei Extrema
+Im Allgemeinen ist die Ableitung einer kubischen Funktion eine Parabel, wobei Extrema
 der kubischen Funktion Nullstellen der Parabel entsprechen. Da bei :math:`x=1` ein
 Hochpunkt liegen soll, muss die zweite Ableitung der Funktion dort negativ sein,
 während die zweite Ableitung am Tiefpunkt bei :math:`x=4` positiv sein muss. Damit
