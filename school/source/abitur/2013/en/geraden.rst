@@ -3,7 +3,7 @@ Bavarian final secondary-school examinations in mathematics 2013
 
 .. admonition:: Problem
 
-  The lines
+  The straight lines
   :math:`g: \vec{X} = \begin{pmatrix}8\\1\\7\end{pmatrix} + \lambda\cdot
   \begin{pmatrix}3\\1\\2\end{pmatrix}`, :math:`\lambda \in \mathbb{R}`, and
   :math:`h: \vec{X} = \begin{pmatrix}-1\\5\\-9\end{pmatrix} + \mu \cdot 
@@ -20,7 +20,7 @@ Bavarian final secondary-school examinations in mathematics 2013
   
   c) Two points :math:`U` and :math:`V` of the line :math:`h` together with the
      points :math:`P` and :math:`Q` form the rectangle :math:`PUQV`. Describe
-     a method of how to determine the coordinates of :math:`U` and :math:`V`.
+     a method to determine the coordinates of :math:`U` and :math:`V`.
   
 **Solution of part a**
 
@@ -36,7 +36,7 @@ the system of linear equations
 
 
 with the solution :math:`\lambda=-2`, :math:`\mu=3`. Plugging this into the
-equation of the lines gives the given coordinates of the point :math:`T`.
+equation of the lines yields the given coordinates of the point :math:`T`.
 
 The solution can be determined with the help of Sage:
 
@@ -48,7 +48,7 @@ The solution can be determined with the help of Sage:
     sage: result = solve([g[0] == h[0],
     sage:                 g[1] == h[1],
     sage:                 g[2] == h[2]], mu, lamb)
-    sage: print("Values of the intersection: {}".format(result[0]))
+    sage: print("Values at the intersection: {}".format(result[0]))
     sage: t = h.subs(result[0][0])
     sage: print("Intersection at: T = {}".format(t))
 
@@ -73,11 +73,11 @@ coordinate system with Sage.
 
 **Solution of part b**
 
-The intersection :math:`T` can be obtained by plugging the value of :math:`\lambda`,
-which was determined in part a, into the equation of the line :math:`g`.
-Now, two points :math:`P` and :math:`Q` which lie on :math:`g` and are at equal
-distance from :math:`T` are sought after. For this, one has to add a value
-to :math:`\lambda` and substact the same from :math:`\lambda`.
+The intersection :math:`T` can be obtained by plugging the value of
+:math:`\lambda` determined in part a into the equation of line :math:`g`.  Now,
+two points :math:`P` and :math:`Q` are to be determined which lie on :math:`g`
+at equal distance from :math:`T`. To this end, one adds a chosen value to
+:math:`\lambda` and subtracts the same value from :math:`\lambda`.
 
 In part a, we found :math:`\lambda = -2`. The two points :math:`P` and :math:`Q`
 can be obtained, for example, by plugging the values :math:`\lambda = -1` and
@@ -102,16 +102,17 @@ coordinate system.
 
 **Solution of part c**
 
-In the following, a method for finding further points :math:`U` and :math:`V`
-which lie on the line :math:`h` such that :math:`PUQV` forms a rectangle is described.
+In the following, a method is described for finding two points :math:`U`
+and :math:`V` which lie on line :math:`h` such that :math:`PUQV` forms a
+rectangle.
 
-The points :math:`P` and :math:`Q` are opposing corners of the rectangle.
+The points :math:`P` and :math:`Q` are opposite corners of the rectangle.
 It follows that the line :math:`g` between these points is a diagonal of
 the rectangle. Since :math:`T` is exactly the center between those two points,
 it has to be the center of the rectangle as well.
 
 The two other points shall lie on the line :math:`h`. The same considerations
-as before yield that the line :math:`h` between the points :math:`U` and :math:`V`
+as before imply that the line :math:`h` between the points :math:`U` and :math:`V`
 is the second diagonal of the rectangle.
 
 To obtain a rectangle from a quadrangle with known diagonals, the diagonals have to have
@@ -122,7 +123,7 @@ just as the points :math:`P` and :math:`Q`.
 With Sage, we first compute the distance between the points :math:`T` and :math:`Q`.
 Subsequently, the value :math:`\mu` is determined for which the corresponding point on the
 line :math:`h` is at equal distance from :math:`T` as the point :math:`Q`.
-With this, the points :math:`U` and :math:`V` can be obtained by plugging :math:`\pm\mu`
+Then, the points :math:`U` and :math:`V` can be obtained by plugging :math:`\pm\mu`
 into the equation of line :math:`h`.
 
 .. sagecellserver::
