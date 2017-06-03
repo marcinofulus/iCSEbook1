@@ -162,7 +162,7 @@ mit der abstrakt formulierten Ebenengleichung aus Teil b nachvollziehen.
     sage: print(t0)
 
     sage: p = h.subs(t0)
-    sage: print("Höhe der Aufhängung: {}m".format(p[2]))
+    sage: print("Höhe der Aufhängung: {} m = {} m".format(p[2], float(p[2])))
 
 .. end of output
 
