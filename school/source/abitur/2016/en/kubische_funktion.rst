@@ -4,22 +4,22 @@ Bavarian final secondary-school examinations in mathematics 2016
 .. admonition:: Problem
   
   A polynomial function of degree three defined over :math:`\mathbb{R}`
-  is given. Its graph :math:`G_f` has a maximum point at :math:`x=1` and
-  a minimum point at :math:`x=4`.
+  is given. Its graph :math:`G_f` has a maximum at :math:`x=1` and
+  a minimum at :math:`x=4`.
 
-  a) Justify that the graph of the derivative function :math:`f'` of
+  a) Establish that the graph of the derivative :math:`f'` of
      :math:`f` is a parabola which intersects the :math:`x`-axis at the
      points (1|0) and (4|0) and opens to the top.
 
-  b) Reason that 2.5 is the :math:`x`-coordinate of the point of inflection of
+  b) Establish that 2.5 is the :math:`x`-coordinate of the point of inflection of
      :math:`G_f`.
 
 **Solution of part a**
 
-The derivative of a cubic function is always a parabola, and extrema of the cubic
+In general, the derivative of a cubic function is a parabola, and extrema of the cubic
 function correspond to roots of the parabola.
-Since there is a maximum point at :math:`x=1`, the second derivative of the function
-has to be negative at that point, while at the minimum point at :math:`x=4`
+Since there is a maximum at :math:`x=1`, the second derivative of the function
+has to be negative at that point, while at the minimum at :math:`x=4`
 the second derivative has to be positive. Thus, the graph of :math:`f'` is a
 parabola opening to the top.
 
@@ -31,8 +31,8 @@ the derivative
   f'(x) = (x-1)(x-4)
 
 which evidently has the correct roots. We now plot the function :math:`f`,
-as well as its first and second derivate, with Sage and can thereby check the just
-discussed properties of the function :math:`f`.
+as well as its first and second derivate, with Sage and can thereby check the
+properties of the function :math:`f` just discussed.
 
 .. sagecellserver::
 
@@ -66,8 +66,7 @@ centered between the two roots:
   x_0 = \frac{1 + 4}{2} = 2.5\,.
 
 The point of inflection of :math:`f` can be already determined from the
-plot of part a). However, we can also obtain it by calculations
-with the help of Sage:
+plot of part a). However, we can also calculate it with the help of Sage:
 
 .. sagecellserver::
 
