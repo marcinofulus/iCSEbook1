@@ -77,7 +77,7 @@ werden.
 
 **Lösung zu Teil b**
 
-Der Erwartungswert zu einer Verteilung berechnet sich im Allgemeinen mit der
+Der Erwartungswert zu einer Verteilung berechnet sich allgemein mit der
 Formel
 
 .. math::
