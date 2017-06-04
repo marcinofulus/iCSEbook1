@@ -6,10 +6,10 @@ Bayerisches Abitur in Mathematik 2016
   Geben Sie jeweils den Term und den Definitionsbereich einer Funktion an, die
   die angegebene(n) Eigenschaft(en) besitzt.
 
-  a) Der Punkt (2|0) is ein Wendepunkt des Graphen von :math:`g`
+  a) Der Punkt (2|0) is ein Wendepunkt des Graphen von :math:`g`.
 
   b) Der Graph der Funktion :math:`h` ist streng monoton fallend und
-     rechtsgekrümmt
+     rechtsgekrümmt.
 
 **Lösung zu Teil a**
 

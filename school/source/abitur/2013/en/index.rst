@@ -25,6 +25,8 @@ Stochastics
    Problem 2 <stoffwechsel>
    Problem 3 <gewinnspiel>
    Problem 4 <umfrage>
+   Problem 5 <nullhypothese>
+   Problem 6 <erwartungswert>
 
 Geometry
 ........
@@ -32,3 +34,5 @@ Geometry
 .. toctree::
    :maxdepth: 1
 
+   Problem 1 <pyramide>
+   Problem 2 <geraden>

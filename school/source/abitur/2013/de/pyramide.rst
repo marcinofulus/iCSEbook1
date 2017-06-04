@@ -85,8 +85,8 @@ die sich auch mit Sage leicht auswerten lässt.
 
 **Lösung zu Teil b**
 
-Es soll die Ebene :math:`E` die sich aus den Punkten :math:`B`, :math:`C` und
-:math:`S` ergibt berechnet werden. Die Gleichung für die Ebene soll in
+Es soll die Ebene :math:`E`, die sich aus den Punkten :math:`B`, :math:`C` und
+:math:`S` ergibt, berechnet werden. Die Gleichung für die Ebene soll in
 Normalenform angegeben werden. Den Normalenvektor erhält man, indem man aus den
 Ortsvektoren der Punkte zwei Spannvektoren bildet und diese mit Hilfe des
 Kreuzproduktes multipliziert.
@@ -129,8 +129,8 @@ Lösung.
 **Lösung zu Teil c**
 
 Die Strebe vom Mittelpunkt der Grundfläche :math:`S' (6|6|0)` zur südlichen
-Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene E durch den
-Punkt S' gesucht. Ist das Lot bestimmt, können wir den Schnittpunkt mit der
+Außenwand soll möglichst kurz sein. Es ist also das Lot zur Ebene :math:`E` durch den
+Punkt :math:`S'` gesucht. Ist das Lot bestimmt, können wir den Schnittpunkt mit der
 Ebene berechnen und daraus anhand der :math:`x_3`-Koordinate die Höhe 
 ablesen.
 
@@ -139,7 +139,7 @@ Wir definieren nun die Hilfsgerade
 
 .. math::
 
-  h(t) = x_{S'}+t\vec n = \begin{pmatrix}6\\6\\0\end{pmatrix}
+  \vec h(t) = \vec x_{S'}+t\vec n = \begin{pmatrix}6\\6\\0\end{pmatrix}
   +t\begin{pmatrix}0\\96\\72\end{pmatrix}
 
 und suchen deren Schnittpunkt mit der Ebene :math:`E`. Einsetzen der
@@ -162,7 +162,7 @@ mit der abstrakt formulierten Ebenengleichung aus Teil b nachvollziehen.
     sage: print(t0)
 
     sage: p = h.subs(t0)
-    sage: print("Höhe der Aufhängung: {}m".format(p[2]))
+    sage: print("Höhe der Aufhängung: {} m = {} m".format(p[2], float(p[2])))
 
 .. end of output
 
@@ -188,8 +188,8 @@ berechnen. Wir überlassen die Rechenarbeit Sage und erhalten
 
 **Lösung zu Teil e**
 
-Der Neigungswinkel der Ebene :math:`E` gegenüber der :math:`x_1-x_2`-Ebene ist gleich dem Winkel
-zwischen den beiden Ebenennormalen. Für die :math:`x_1-x_2`-Ebene ist die
+Der Neigungswinkel der Ebene :math:`E` gegenüber der :math:`x_1`-:math:`x_2`-Ebene ist gleich dem Winkel
+zwischen den beiden Ebenennormalen. Für die :math:`x_1`-:math:`x_2`-Ebene ist die
 Normale der Einheitsvektor in :math:`x_3`-Richtung. Der Normalenvektor der Ebene
 :math:`E` ist der in Teil b bestimmte Vektor :math:`\vec n`. Der gesuchte Winkel lässt
 sich nun mit folgender Formel berechnen:
