@@ -1,0 +1,365 @@
+.. -*- coding: utf-8 -*-
+
+Zjawiska akustyczne
+===================
+Wstęp
+-----
+Główne cele lekcji są następujące:
+
+- Wyjaśnienie, czym jest echo i pogłos.
+- Zademonstrowanie rezonansu akustycznego.
+- Wyjaśnienie zasady działania instrumentów muzycznych.
+- Wyjaśnienie, czym są dudnienia,
+- Ćwiczenia w tworzeniu wykresów w Pythonie.
+- Ćwiczenia w uzyciu interaktów i suwaków w Pythonie.
+- Ćwiczenia w tworzeniu animacji w Sage
+
+ Uwarunkowania, które trzeba uwzględnić:
+
+- Uczniowie posiadają już podstawową wiedzę o falach w ogólności. W szczególnosci znają równanie fali, koncepcję fali stojącej i rezonansu.
+- Jest to drugi kontakt uczniów z animacjami w Pythonie. Uczestniczyli już w lekcji informatyki specjalnie poświęconej temu zagadnieniu.
+- Należy pamiętać, że uczniowie nie znają matematyki wyższej. Prezentowane rozwiązania programistyczne nie mogą być zbyt wysublimowane.
+- Zalecana jest gradacja trudności. Należy rozpocząć od prostych przykładów i stopniowo je komplikować (na przykład przez dodawanie nowych parametrów lub uzmiennianie stałych).
+
+Materiał przedstawiony poniżej może być zrealizowany podczas 2 godzin lekcyjnych: jedna w pracowni fizycznej, druga w sali zaopatrzonej w wystarczającą ilość komputerów.
+
+Część teoretyczna
+-----------------
+Ćwiczenia w programowaniu zostały poprzedzone lekcją teoretyczną o zjawiskach akustycznych. Wykład został sfilmowany i opublikowany po polsku, ale z napisami w języku angielskim.
+
+`https://youtu.be/jWGTTD5\-mFA <https://youtu.be/jWGTTD5-mFA>`_
+
+Główne zagadnienia dyskutowane na wykładzie:
+
+- Echo
+- Pogłos
+- Rezonns akustyczny
+- Fale stojące (w szczególności w instrumentach)
+- Dudnienia
+
+Nie będę opisywał tutaj szczegółów, ponieważ można je wszystkie zobaczyć na filmie.
+
+Część informatyczna
+-------------------
+Zasadnicze umiejętnosci ćwiczone na lekcji:
+
+- Sterowanie zjawiskami za pomocą suwaków.
+- Wprawianie wykresów w ruch.
+- Badanie ruchu impulsu falowego.
+- Składanie drgań.
+- Badanie fal stojących i dudnień.
+
+Problemy fizyczne dyskutowane w poniższym kodzie i wykresach są następujące:
+
+- Dudnienia \- jak kształt fali złożonej zależy od częstotliwości fal składowych
+- Jak dokonać animacji impulsu falowego i jego odbicia.
+- Pokazanie, że fala stojąca jest naprawdę rezultatem nałożenia się na siebie dwóch fal biegnących w przeciwne strony.
+
+**Dudnienia**
+
+Prosty przykład wykresu z ustalonymi częstotliwościami i fazami początkowymi, które mogą być zmieniane wewnątrz kodu. Rezultaty tych zmian obserwujemy na wykresie.****
+
+
+::
+
+    sage: # **kwarg pozwala na dodanie kolejnych "nazwanych" parametrów
+    sage: # dudnienia to funkcja zwracająca wykres nałożonych na siebie funkcji y1 i y2
+    sage: def dudnienia(omega1=10,omega2=11,A1=1,A2=1,fi=2,t0=0,**kwarg):
+    ....:     y1(t)=A1*sin(omega1*(t-t0))
+    ....:     y2(t)=A2*sin(omega2*(t-t0)+fi)
+    ....:     y(t)=y1(t)+y2(t)
+    ....:     return   plot(y, (t, 0, 10),ymax=A1+A2,ymin=-(A1+A2),**kwarg )
+    sage: dudnienia(figsize=(4,2))
+
+
+.. end of output
+
+Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostoty wszystkie amplitudy sa równe.
+
+
+::
+
+    sage: def envelope(omega1, omega2, a, phase, t0):
+    ....:     f(t) = 2*a*cos((omega1-omega2)*(t-t0)/2-phase/2)
+    ....:     return f
+    sage: def beat(omega1=10, omega2=11, a=1, phase=2, t0=0, plot_envelope=True, **kwargs):
+    ....:     y1(t) = a*sin(omega1*(t-t0))
+    ....:     y2(t) = a*sin(omega2*(t-t0)+phase)
+    ....:     y(t) = y1(t)+y2(t)
+    ....:     title = '$t_0 = %4.2f,\ \omega_1 = %5.2f,\ \omega_2 = %5.2f$' % (t0, omega1, omega2)
+    ....:     range = (t, 0, 10)
+    ....:     plt = plot(y, range, ymin=-2*a, ymax=2*a, title=title, **kwargs)
+    ....:     if plot_envelope:
+    ....:         envelope_func = envelope(omega1, omega2, a, phase, t0)
+    ....:         plt = plt+plot(envelope_func, range, color='red', **kwargs)
+    ....:         plt = plt+plot(-envelope_func, range, color='red', **kwargs)
+    ....:     return plt
+    sage: beat(t0=2.5, figsize=(4, 2))
+
+
+.. end of output
+
+::
+
+    sage: # Suwak zmieniający przesunięcie czasowe
+    sage: @interact
+    sage: def _(t0=slider(0, 2*pi, 0.01, label="$t_0$")):
+    ....:     plt = beat(t0=t0, figsize=(4,2))
+    ....:     show(plt)
+
+
+.. end of output
+
+::
+
+    sage: # Regulacja częstotliwości drugiej fali
+    sage: @interact
+    sage: def _(t0=slider(0, 10, 0.01, label="$t_0$"),
+    ....:       omega2=slider(10, 12, 0.01, label="$\omega_2$")):
+    ....:     plt = beat(t0=t0 , omega2=omega2, figsize=(4,2))
+    ....:     show(plt)
+
+
+.. end of output
+
+::
+
+    sage: # plts - zbiór wykresów dla argumentu czasowego t0 iterowanego w petli.
+    sage: plts = [dudnienia(t0=t0_,figsize=(4,2)) for t0_ in srange(0,6.3,0.2)]
+    sage: # przykładowe dwa wykresy
+    sage: show(plts[0])
+    sage: show(plts[10])
+    sage: # Przygotowanie dla kolejnych obliczeń.
+    sage: anim = animate(plts)
+
+
+.. end of output
+
+::
+
+    sage: plots = [beat(t0=t0, figsize=(4, 2)) for t0 in sxrange(0, 2*pi, pi/10)]
+    sage: graphics_array(plots, ncols=4).show()
+
+
+.. end of output
+
+::
+
+    sage: # Gotowa animacja. Widzimy sekwencję wykresów dla różnych wartości argumentu czasowego.
+    sage: # %time
+    sage: anim.show()
+
+
+.. end of output
+
+Inne podejście wykorzystujące wykresy przygotowane powyżej.
+
+
+::
+
+    sage: animate(plots).show()
+
+
+.. end of output
+
+Animacja wskazująca wpływ drugiej częstotliwości.
+
+
+::
+
+    sage: plots = [beat(omega2=omega2, plot_envelope=False, figsize=(4, 2)) for omega2 in sxrange(5, 15, 0.2)]
+    sage: animate(plots).show()
+
+
+.. end of output
+
+**Odbicie i fala stojąca**
+
+Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniowie mogą manipulować wartościami wszystkich parametrów (co było przedmiotem ćwiczeń).****
+
+
+::
+
+    sage: # Półautomatyczne sterowanie kolorami w pętli
+    sage: A=1
+    sage: omega=6
+    sage: v=13
+    sage: delay=30
+    sage: t_max= 7
+    sage: # This plots show time evolution of standing wave. Students may manipulate the constants
+    sage: sum( [plot(A*sin(omega*(t/delay-x/v))+A*sin(omega*(t/delay+x/v)),(x,0,20),figsize=6,color=hue(t/t_max)) for t in srange(0,t_max,1.0)] )
+
+
+.. end of output
+
+Dla lepszego umaocznienia ewolucji czasowej fali stojącej, warto zastosować animację. Dodatkowy walor dydaktyczny stanowi wyświetlenie fal biegnących. Zastosowano argument w postaci*x\-vt*    zamiast   *t\-x/v*   by uniknąć problemów matematycznych dla prędkości zmierzającej do zera.
+
+
+::
+
+    sage: def running_wave(a=1, omega=1, v=10, t=0):
+    ....:     wave(x) = a*sin(omega*(x-v*t))
+    ....:     return wave
+    sage: range = (x, 0, 20)
+    sage: figsize = (4, 2)
+    sage: v = 2
+    sage: plts = [plot(running_wave(v=v, t=t), range, figsize=figsize)
+    ....:         + plot(running_wave(v=-v, t=t), range, color='green', figsize=figsize)
+    ....:         + plot(running_wave(v=v, t=t)+running_wave(v=-v, t=t), range, color='red', ymin=-2, ymax=2, figsize=figsize)
+    ....:         for t in sxrange(0, 2*pi/v, pi/(10*v))]
+    sage: animate(plts).show()
+
+
+.. end of output
+
+Tablica grafik pomocna do bardziej szczegółowej analizy ewolucji czasowej.
+
+
+::
+
+    sage: graphics_array(plts[0:6], ncols=3).show()
+
+
+.. end of output
+
+**Impuls falowy i jego odbicie**
+
+Ruch impulsu falowego. Zdaję sobie sprawę, że tak zdefiniowany impuls jest niefizyczny z powodu nieciagłości w pochodnej, lecz jest to pierwsze podejście do tego typu animacji. Uczniowie zostali poinformowani o watpliwościach natury fizycznej; przykład ma raczej ilustrować jak radzić sobie z takimi animacjami z punktu widzenia samego programowania.
+
+
+::
+
+    sage: def pulse1(x):
+    ....:     if x>=0 and x<=4*pi:
+    ....:         return A1*sin(x)
+    ....:     else:
+    ....:         return 0.0
+
+
+.. end of output
+
+Dwa impulsy biegnące w przeciwnych kierunkach.
+
+
+
+::
+
+    sage: var('x')
+    sage: A1 = 1
+    sage: c = 1.4
+    sage: nl = 2
+    sage: nL = 4
+    sage: k = 4*pi # 2pi/wavelenght
+    sage: @interact 
+    sage: def _(t=slider(0,10,0.0001,default=1/c*(nL-nl)*2*pi)):
+    ....:     x0 = -nL*2*pi/k
+    ....:     x1 = (nL-nl)*2*pi/k  
+    ....:     plt = Graphics()
+    ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t),(x,x0,1),figsize=(12,4),thickness=1)
+    ....:     plt += plot( lambda x:pulse1(k*(x-x1)+c*t),(x,x0,2),color='red',thickness=1)
+    ....:     
+    ....:     plt.show()
+
+
+.. end of output
+
+Złożenie impulsu biegnącego i odbitego.
+
+
+::
+
+    sage: var('x')
+    sage: A1 = 1
+    sage: c = 3.4
+    sage: nl = 2
+    sage: nL = 4
+    sage: k = 4*pi # 2pi/wavelenght
+    sage: @interact 
+    sage: def _(t=slider(0,10,2*pi/k/64)):
+    ....:     x0 = -nL*2*pi/k
+    ....:     x1 = (nL-nl)*2*pi/k  
+    ....:     plt = Graphics()
+    ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t)+pulse1(k*(x-x1)+c*t),(x,x0,0),figsize=(12,4),thickness=1,ymin=-2,ymax=2)
+    ....:     plt.show()
+
+
+.. end of output
+
+Cyfrowe odbicie fali
+
+
+::
+
+    sage: %time
+    sage: import numpy as np 
+    sage: N = 4048
+    sage: l = 50.
+    sage: dx = float(l)/(N-1)
+    sage: c2 = np.ones(N)
+    sage: dt = 0.005
+    sage: print np.sqrt(np.max(c2))*dt/dx
+    sage: x = np.linspace(0,l,N)
+    sage: u = np.zeros(N)
+    sage: u0 = np.zeros(N)
+    sage: unew = np.zeros(N)
+    sage: ulst=[u.copy()]
+    sage: n=4.
+    sage: T = 1.*l/n
+    sage: for i in range(25000):
+    ....:     unew[1:-1] = 2.*u[1:-1] - u0[1:-1] + dt**2 *(c2[1:-1]/dx**2*np.diff(u,2))
+    ....:     u0=u.copy()
+    ....:     u=unew.copy()
+    ....:     
+    ....:     u[-1] = u[-2]
+    ....:     u[0] = u[1]
+    ....:   
+    ....:     u[-1] = 0
+    ....:     u[0] = 0
+    ....:     
+    ....:     if dt*i/T*2.0*np.pi< 4*np.pi:
+    ....:         u[0] = 0.5*np.sin(dt*i/T*2.0*np.pi)
+    ....:     
+    ....:     if i%50==0:
+    ....:         ulst.append(u.copy())
+    0.4047
+    Traceback (most recent call last):
+    ...
+    TypeError: 'tuple' object is not callable
+
+.. end of output
+
+::
+
+    sage: @interact
+    sage: def _(ith=slider(range(len(ulst)))):
+    ....:     u = ulst[ith]
+    ....:     plt =  line(zip(x,u),figsize=(12,5),ymin=-1,ymax=1) 
+    ....:     plt.show()
+
+
+.. end of output
+
+::
+
+    sage: len(ulst)
+    1
+
+.. end of output
+
+::
+
+    sage: plts = [line(zip(x,u),figsize=(6,2),ymin=-1,ymax=1) for u in ulst[::8]]
+    sage: animate(plts).show()
+
+
+.. end of output
+
+Wnioski
+-------
+Programowanie w Pythonie okazało się interesującym uzupełnieniem lekcji fizyki. Korzyści polegają na możliwości mniej lub bardziej łatwej wizualizacji zjawisk przy zmianie parametrów. Dzięki temu, wzory przedstawione na wykładach stają się mniej abstrakcyjne i każdy mógł się własnoręcznie przekonać, jak wynik np. interferencji fal zależy od ich częstotliwości, kierunku, prędkości itd.
+
+Animacje same w sobie okazały się nowym wyzwaniem dla uczniów. W pierwszych edycjach lekcji prosiłem uczniów o dokonanie prób jakiegokolwiek rozwinięcia przedstawionych idei poprzez ulepszenie kodu. Okazało się to niewykonalne, ponieważ kod jest dla nich zbyt trudny (czasami również dla mnie). Jedyne, do czego byli zdolni, to manipulacja wartościami parametrów \- a to i tak dużo. 
+
+Niemniej przebieg lekcji oceniam wysoko. Uczniowie byli zainteresowani i zaangażowani. Ich kompetencje, zarówno w zakresie fizyki, jak i informatyki, wzrosły.
+
+Adam Ogaza, Gert\-Ludwig Ingold, Marcin Kostur, 2015\-2017

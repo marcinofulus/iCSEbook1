@@ -4,6 +4,19 @@ Jak pracowałem z SAGE'em?
 Warsztaty dla nauczycieli: Katowice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. only:: latex
+          
+    Running above code should give  {b: 10.119, a: 8702.8252} and
+    a plot as in :numref:`hiperbola`.
+
+    .. figure:: refutacje_media/osemka.pdf
+       :width: 70%
+       :name: hiperbola
+
+       The fitted hiperbola and the experimental data
+       
+
+
 .. admonition:: Zafrapować
 
   :math:`\verb+sqrt(2)+=\sqrt{2}\quad\quad\quad\verb+sqrt(2)+\approx\sqrt{2}`

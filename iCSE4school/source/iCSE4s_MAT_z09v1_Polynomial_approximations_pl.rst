@@ -3,17 +3,18 @@
 Przybliżanie wielomianami.
 ==========================
 
-1. Wprowadzenie metodyczne.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wprowadzenie metodyczne.
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-	Zajęcia odbywały się na dodatkowych godzinach (ICSE4school) w grupie uczniów, które miały rozszerzony poziom nauczania z matematyki i informatyki w drugiej klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony metodą „flip teaching”, czyli uczniowie musieli się przygotować do zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie wielomianu przechodzącego przez dane punkty. Według programu nauczania na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy wielomian przechodzący przez te punkty oraz narysuje to na wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy, mnożeniem macierzy przez wektor i wyznaczaniem jej wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych współczynnikach wielomianu to mieli podać hipotezę, a następnie sprawdzić ją w internecie, czy jest ona prawdziwa.
+	Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony metodą „flip teaching”, czyli uczniowie musieli się przygotować do zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie wielomianu przechodzącego przez dane punkty. Według programu nauczania na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy wielomian przechodzący przez te punkty oraz narysuje to na wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy, mnożeniem macierzy przez wektor i wyznaczaniem jej wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych współczynnikach wielomianu to mieli podać hipotezę, a następnie sprawdzić ją w internecie, czy jest ona prawdziwa.
     
 	Według mnie zajęcia te mogą być dobrym uzupełnieniem i ugruntowaniem wiedzy uczniów z matematyki w trzeciej klasie liceum na poziomie rozszerzonym lub na zajęciach dodatkowych w klasie drugiej. Ponadto każdy rozdział można traktować niezależnie, czyli przeprowadzać go w czasie przeprowadzania danego materiału na lekcjach matematyki. 
 	
 **Uczniowie powinni znać:**
-funkcję liniową i kwadratową *(4.6–10 mat_p)*, pojęcie wielomianu *(3.6 mat_r)*, definicję silnia *(10.1 mat_r)*.
+
+    Funkcję liniową i kwadratową *(4.6–10 mat_p)*, pojęcie wielomianu *(3.6 mat_r)*, definicję silnia *(10.1 mat_r)*.
     
-Podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*.
+    Podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*.
 
 **Uczniowie na poniższych zajęciach poznają:**
 
@@ -43,8 +44,8 @@ Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżen
 
 Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
-2. Definicja silni.
-^^^^^^^^^^^^^^^^^^^
+Definicja silni.
+^^^^^^^^^^^^^^^^
 
 **Silnia** z liczby naturalnej *n* to iloczyn wszystkich liczb naturalnych mniejszych lub równej *n*. Symbolicznie zapisujemy *n!*.
     
@@ -80,8 +81,8 @@ Drugi przykład przy obliczaniu silni korzysta z wbudowanej funkcji w SageMath.
     print 5, '!=', factorial(5)
 
 
-3. Pochodna.
-^^^^^^^^^^^^
+Pochodna.
+^^^^^^^^^
 
 **Pochodną** będziemy interpretować jako matematyczne działanie na funkcji.
 
@@ -129,36 +130,17 @@ Wyrażenia algebraiczne oddzielone *+* lub *-* liczą się oddzielnie.
 
 **Przykłady**
 
-.. math::
-
-    \begin{array}{ll}
-    (c \cdot f)' =c \cdot f' \\ (f+g)'= f' + g' \\ (f-g)'= f' - g'
-    \end{array}
-
 .. sagecellserver::
 
-    sage: f=x^3-2*x^2+3*x-4   #you can change this function
-    sage: show("f(x)=",f,",        f'(x)=",f.diff(x))
 
-.. math::
-
-    (f \cdot g)' = f' \cdot g + f \cdot g'
-
-.. sagecellserver::
-
-    sage: f=x*cos(x)
-    sage: show("f(x)=",f,",       f'(x)=",f.diff(x))
-    sage: g=x^2*sin(x)
-    sage: show("g(x)=",g,",       g'(x)=",g.diff(x))
-
-.. math::
-
-    (f \cdot g)' = f' \cdot g + f \cdot g' 
-
-.. sagecellserver::
-
-    sage: f=sin(x)/x
-    sage: show("f(x)=",f,",      f'(x)=",f.diff(x))
+    f=x^3-2*x^2+3*x-4   #you can change this function
+    show("1. f(x)=",f,",        f'(x)=",f.diff(x))
+    f=x*cos(x)
+    show("2. f(x)=",f,",       f'(x)=",f.diff(x))
+    f=x^2*sin(x)
+    show("3. f(x)=",f,",       f'(x)=",f.diff(x))
+    f=sin(x)/x
+    show("4. f(x)=",f,",      f'(x)=",f.diff(x))
 
 
 **Pochodne z pochodnych - pochodne wyższych rzędów.**
@@ -174,18 +156,18 @@ Poniżej obliczenia wyższych rzędów pochodnej w SageMath:
 
 .. sagecellserver::
 
-    sage: f=x^3-3*x^2  #you can change this function
-    sage: show ("      f(x)=",f, "        f'(x)=", f.diff(x))
-    sage: show ("f''(x)=",f.diff(x,2),"         f'''(x)=", f.diff(x,3))
+    f=x^3-3*x^2  #you can change this function
+    show ("      f(x)=",f, "        f'(x)=", f.diff(x))
+    show ("f''(x)=",f.diff(x,2),"         f'''(x)=", f.diff(x,3))
     
 .. sagecellserver::
 
-    sage: f=sin(x)
-    sage: show('f(x)=',f)
-    sage: show("f'(x)=",f.diff(x))
-    sage: show("f''(x)=",f.diff(x,2))
-    sage: show("f'''(x)=",f.diff(x,3))
-    sage: show("f''''(x)=",f.diff(x,4))
+    f=sin(x)
+    show('f(x)=',f)
+    show("f'(x)=",f.diff(x))
+    show("f''(x)=",f.diff(x,2))
+    show("f'''(x)=",f.diff(x,3))
+    show("f''''(x)=",f.diff(x,4))
     
 **Obliczanie wartości pochodnej w punkcie.**
 
@@ -195,18 +177,20 @@ Pochodna funkcji jest oczywiście funkcją, więc możemy obliczyć wartość po
 
 .. sagecellserver::
 
-    sage: f=sin(x) #you can change this function
-    sage: w1=f.diff(x).substitute(x = 0)
-    sage: w2=f.diff(x).substitute(x = pi/3)
-    sage: show("f(x)=", f, ",        f'(x)=",f.diff(x), ",        f'(0)=" , w1, ",        f'(pi/3)=", w2)
+    f=sin(x) #you can change this function
+    w1=f.diff(x).substitute(x = 0)
+    w2=f.diff(x).substitute(x = pi/3)
+    show("f(x)=", f, ",        f'(x)=",f.diff(x), ",        f'(0)=" , w1, ",        f'(pi/3)=", w2)
 
-    sage: g=x^4+3-2*x^3+5*x  #you can change this function
-    sage: w1=g.diff(x,2).subs(x = 1)
-    sage: w2=g.diff(x,2).subs(x = 2)
-    sage: show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
+.. sagecellserver::
 
-4. Definicja wielomianu.
-^^^^^^^^^^^^^^^^^^^^^^^^
+    g=x^4+3-2*x^3+5*x  #you can change this function
+    w1=g.diff(x,2).subs(x = 1)
+    w2=g.diff(x,2).subs(x = 2)
+    show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
+
+Definicja wielomianu.
+^^^^^^^^^^^^^^^^^^^^^
 
 **Wielomianem** stopnia n zmiennej x nazywamy funkcję:
 
@@ -225,8 +209,8 @@ Funkcja liniowa i funkcja kwadratowa jest wielomianem.
     W_2(x)=a_0+a_1 \cdot x +a_2 \cdot x^2    
     \end{array}
 
-5. Funkcja liniowa.
-^^^^^^^^^^^^^^^^^^^
+Funkcja liniowa.
+^^^^^^^^^^^^^^^^
 
 Wiemy, że przez dwa punkty przechodzi dokładnie jedna prosta.
 Ponadto znając współrzędne powyższych punktów, możemy określić wzór tej prostej.
@@ -247,21 +231,29 @@ Wpisując odpowiednie równania, możemy narysować linię prostą przechodząc�
 
 .. sagecellserver::
 
-    sage: x1=-int(random()*4)
-    sage: y1=int(random()*9-4)
-    sage: x2=int(random()*4)+1
-    sage: y2=int(random()*9-4)
-    sage: p1=point((x1,y1),size=10)
-    sage: p2=point((x2,y2),size=10)
-    sage: a=(y2-y1)/(x2-x1)
-    sage: b=y1-a*x1
-    sage: f=a*x+b
-    sage: show ('y=',f)
-    sage: g=plot(a*x+b,xmin=x1-2, xmax=x2+2, color="green")
-    sage: show(p1+p2+g,figsize=4)
+    x1=-int(random()*4)
+    y1=int(random()*9-4)
+    x2=int(random()*4)+1
+    y2=int(random()*9-4)
+    p1=point((x1,y1),size=10)
+    p2=point((x2,y2),size=10)
+    a=(y2-y1)/(x2-x1)
+    b=y1-a*x1
+    f=a*x+b
+    show ('y=',f)
+    g=plot(a*x+b,xmin=x1-2, xmax=x2+2, color="green")
+    show(p1+p2+g,figsize=4)
 
-6. Parabola.
-^^^^^^^^^^^^
+.. only:: latex
+          
+    a plot as in :numref:`f_liniowa`.
+
+    .. figure:: wielomiany_media/w1.pdf
+       :width: 60%
+       :name: f_liniowa 
+
+Parabola.
+^^^^^^^^^
 
 Poniżej znajduje się przykład dotycżący trzech punktów, które nie są współliniowe. Możemy wyznaczyć funkcję kwadratową do której należą te punkty. Więc musimy wyznaczyć z poniższych równań współczynniki *a, b, c* funkcji kwadratowej.
 
@@ -275,20 +267,20 @@ Poniżej znajduje się przykład dotycżący trzech punktów, które nie są wsp
 
 Te obliczenia są żmudne i czasochłonne, nawet dla konkretnego przykładu. Gdybyśmy chcieli wyznaczyć odpowiednie wzory, jak powyżej dla funkcji liniowej, to zajęłoby to nam dużo czasu.
 
-Poniżej wykorzystamy możliwości Sage.
+Poniżej wykorzystamy możliwości SageMath.
 
 .. sagecellserver::
 
-    sage: x1=-1
-    sage: y1=0
-    sage: x2=1
-    sage: y2=4
-    sage: x3=3
-    sage: y3=-1
-    sage: p1=point((x1,y1),size=10)
-    sage: p2=point((x2,y2),size=10)
-    sage: p3=point((x3,y3),size=10)
-    sage: show(p1+p2+p3,figsize=3)
+    x1=-1
+    y1=0
+    x2=1
+    y2=4
+    x3=3
+    y3=-1
+    p1=point((x1,y1),size=10)
+    p2=point((x2,y2),size=10)
+    p3=point((x3,y3),size=10)
+    show(p1+p2+p3,figsize=3)
 
 
 Obliczamy następujące równania, z których szukamy współczynniki: *a, b, c*.
@@ -319,18 +311,27 @@ W SageMath możemy łatwo rozwiązać powyższe równanie, wystarczy zastosować
 
 .. sagecellserver::
 
-    sage: M = matrix(3,3,[[x1^2,x1,1],[x2^2,x2,1],[x3^2,x3,1]])
-    sage: v = vector([y1,y2,y3])
-    sage: wynik = M\v
-    sage: [a,b,c]=wynik
-    sage: show("a=",a,",  b=",b, ",  c=",c)
-    sage: f=a*x^2+b*x+c
-    sage: show('y=',f)
-    sage: g=plot(f,xmin=-3, xmax=5, color="green")
-    sage: show(p1+p2+p3+g,ymin=-7, ymax=8, figsize=4)
+    M = matrix(3,3,[[x1^2,x1,1],[x2^2,x2,1],[x3^2,x3,1]])
+    v = vector([y1,y2,y3])
+    wynik = M\v
+    [a,b,c]=wynik
+    show("a=",a,",  b=",b, ",  c=",c)
+    f=a*x^2+b*x+c
+    show('y=',f)
+    g=plot(f,xmin=-3, xmax=5, color="green")
+    show(p1+p2+p3+g,ymin=-7, ymax=8, figsize=4)
+    
+.. only:: latex
+          
+    a plot as in :numref:`parabola`.
 
-7. Wielomian.
-^^^^^^^^^^^^^
+    .. figure:: wielomiany_media/w2.pdf
+       :width: 60%
+       :name: parabola     
+    
+
+Wielomian.
+^^^^^^^^^^
 
 Oto przykład dla kilku losowych punktów. Otrzymana funkcja jest wielomianem.
 
@@ -339,58 +340,67 @@ Jeśli podasz n punktów, to na pewno przechodzi przez te punkty wielomianem sto
 
 .. sagecellserver::
 
-    sage: points={}
-    sage: vector_x=[]
-    sage: vector_y=[]
-    sage: k=6                 #number of points
-    sage: y=int(random()*7-3)
-    sage: vector_y=[y]
-    sage: points=point((0,y),size=10)
-    sage: print '(',0,',',y,')'
-    sage: for i in range(k-1):
-              vector_x=vector_x+[0]
-    sage: vector_x=vector_x+[1]
-    sage: for n in range(k-1):
-              x=n+1
-              for i in range(k):
-                  vector_x=vector_x+[x^(k-i-1)]
-              y=int(random()*7-3)
-              vector_y=vector_y+[y]
-              print '(',x,',',y,')'
-              points = points + point((x,y),size=10)
-    sage: show(points,ymin=-2,ymax=6,figsize=4) 
+    points={}
+    vector_x=[]
+    vector_y=[]
+    k=6                 #number of points
+    y=int(random()*7-3)
+    vector_y=[y]
+    points=point((0,y),size=10)
+    print '(',0,',',y,')'
+    for i in range(k-1):
+        vector_x=vector_x+[0]
+    vector_x=vector_x+[1]
+    for n in range(k-1):
+        x=n+1
+        for i in range(k):
+            vector_x=vector_x+[x^(k-i-1)]
+        y=int(random()*7-3)
+        vector_y=vector_y+[y]
+        print '(',x,',',y,')'
+        points = points + point((x,y),size=10)
+    show(points,ymin=-2,ymax=6,figsize=4) 
  
 
 Dla losowych punktów obliczamy współczynniki wielomianu.
 
 .. sagecellserver::
 
-    sage: M = matrix(k,k,vector_x)
-    sage: v=vector(vector_y)
-    sage: wynik = M\v
-    sage: show(M)
-    sage: show(wynik)
+    M = matrix(k,k,vector_x)
+    v=vector(vector_y)
+    wynik = M\v
+    show(M)
+    show(wynik)
 
 Rysujemy wielomian, który przechodzi przez podane punkty.
 
 .. sagecellserver::
 
-    sage: var('x')
-    sage: vector_x=[]
-    sage: for i in range(k):
-              vector_x=vector_x+[x^(k-i-1)]
-    sage: w=vector(vector_x)
-    sage: f=w*wynik
-    sage: show("f(x)=",f)
-    sage: f=plot(f,xmin=-1, xmax=k, color="green")
-    sage: show(points+f,ymin=-7,ymax=8,figsize=6)
+    var('x')
+    vector_x=[]
+    for i in range(k):
+        vector_x=vector_x+[x^(k-i-1)]
+    w=vector(vector_x)
+    f=w*wynik
+    show("f(x)=",f)
+    f=plot(f,xmin=-1, xmax=k, color="green")
+    show(points+f,ymin=-7,ymax=8,figsize=6)
+    
+.. only:: latex
+          
+    a plot as in :numref:`wielomian`.
+
+    .. figure:: wielomiany_media/w3.pdf
+       :width: 60%
+       :name: wielomian    
+    
    
-8. Taylor's formula.
-^^^^^^^^^^^^^^^^^^^^
+Taylor's formula.
+^^^^^^^^^^^^^^^^^
 
 Z analizy matematyczna znany poniższy jest wzór, który przybliża dowolną funkcję pewnym odpowiadającym tej funkcji wielomianem.
 
-**Taylor's formula**
+**Wzór Taylora**
 
 .. math::
 
@@ -399,7 +409,7 @@ Z analizy matematyczna znany poniższy jest wzór, który przybliża dowolną fu
     {\frac  {(x-a)^{n}}{n!}}f^{{(n)}}(a)+\ldots
     \end{aligned}
 
-Możemy uprościć powyższy wzór podstawiajac za a=0. Otrzymujemy **The Taylor-Maclaurin formula**.
+Możemy uprościć powyższy wzór podstawiajac za a=0. Otrzymujemy **Wzór Taylora-Maclaurina**.
 
 .. math::
     
@@ -412,18 +422,28 @@ To jest przykład dla funkcji :math:`f(x)=sin(x)`.
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=6
-    sage: f=x
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(1, n):
-              k=2*i+1
-              f=f+(-1)^i*(1/factorial(k))*x^k
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(sin(x),"=",f)
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
-    sage: show(q)
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    n=6
+    f=x
+    q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    for i in range(1, n):
+        k=2*i+1
+        f=f+(-1)^i*(1/factorial(k))*x^k
+        q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(sin(x),"=",f)
+    q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
+    show(q)
+ 
+ 
+.. only:: latex
+          
+    a plot as in :numref:`t_sin`.
+
+    .. figure:: wielomiany_media/t2.pdf
+       :width: 60%
+       :name: t_sin     
+       
 
 **Ćwiczenia dla uczniów.**
 
@@ -431,49 +451,67 @@ Dla funkcji :math:`f(x)=cos(x)` znajdź odpowiadający wielomian ze wzoru Taylor
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=6
-    sage: f=1
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(1, n):
-              k=2*i
-              f=f+(-1)^i*(1/factorial(k))*x^k
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(cos(x),"=",f)    
-    sage: f=cos(x)
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
-    sage: show(q)
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    n=6
+    f=1
+    q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    for i in range(1, n):
+        k=2*i
+        f=f+(-1)^i*(1/factorial(k))*x^k
+        q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(cos(x),"=",f)    
+    f=cos(x)
+    q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
+    show(q)
+
+
+.. only:: latex
+          
+    a plot as in :numref:`t_cos`.
+
+    .. figure:: wielomiany_media/t3.pdf
+       :width: 60%
+       :name: t_cos 
 
 
 Zastosuj wzór Taylora-Maclaurina dla funkcji :math:`f(x)=e^x`.
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=8
-    sage: f=1
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(0, n):
-              k=i+1
-              f=f+(1/factorial(k))*x^k
-              #print(f(x))
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(e^x,"=",f)
-    sage: f=e^x
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=10, linestyle="--", figsize=5.5)
-    sage: show(q)
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    n=8
+    f=1
+    q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    for i in range(0, n):
+        k=i+1
+        f=f+(1/factorial(k))*x^k
+        #print(f(x))
+        q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(e^x,"=",f)
+    f=e^x
+    q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=10, linestyle="--", figsize=5.5)
+    show(q)
+             
 
 Znamy już wzór Taylora. Teraz możemy uprościć nasze obliczenia i użyć wbudowanego wzoru Taylora w SageMath.
 
 .. sagecellserver::
 
-    sage: f=sin(x)*x^2          #your function
-    sage: k=8                   #level iteration
-    sage: t=taylor(f,x,0,k)     #Taylor function in Sage
-    sage: q=plot(t, xmin=-5, xmax=5, ymin=-5, ymax=5, color="red", legend_label=r"Taylor(f, x, 0, %d)" % k)
-    sage: show(f,"=",t)
-    sage: q=q+plot(f, xmin=-5, xmax=5, ymin=-5, ymax=5, linestyle="--", figsize=5.5, legend_label=r"Your function")
-    sage: show(q)
+    f=sin(x)*x^2          #your function
+    k=8                   #level iteration
+    t=taylor(f,x,0,k)     #Taylor function in Sage
+    q=plot(t, xmin=-5, xmax=5, ymin=-5, ymax=5, color="red", legend_label=r"Taylor(f, x, 0, %d)" % k)
+    show(f,"=",t)
+    q=q+plot(f, xmin=-5, xmax=5, ymin=-5, ymax=5, linestyle="--", figsize=5.5, legend_label=r"Your function")
+    show(q)
 
+
+.. only:: latex
+          
+    a plot as in :numref:`t_sin*x^2`.
+
+    .. figure:: wielomiany_media/t1.pdf
+       :width: 60%
+       :name: t_sin*x^2 
