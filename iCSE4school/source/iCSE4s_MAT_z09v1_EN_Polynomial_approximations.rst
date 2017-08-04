@@ -3,8 +3,9 @@
 Polynomial  approximation
 =========================
 
-1. Introduction.
-^^^^^^^^^^^^^^^^
+Introduction.
+^^^^^^^^^^^^^
+*This project is the result of activities at The Stefan Batory High School in Chorzów*
 
 In each of the program's window you can change the numbers, text, variables, or the code.
 
@@ -12,8 +13,8 @@ You do not have to worry if the program stops working, because after its refresh
 
 Often next code results from the previous one, so the exercises (algorithms) should be run in their order.
 
-2. Factorial. 
-^^^^^^^^^^^^^
+Factorial. 
+^^^^^^^^^^
 The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the product of all positive integers smaller than or equal *n*.
     
 .. math::
@@ -34,14 +35,13 @@ The  **factorial** in SageMath.
 
 The first example counts factorial according to the definition.
 
-::
+.. sagecellserver::
     
    silnia=1
    for i in range(1,6):
         silnia=silnia*i
         print i, '!=', silnia
 
-.. end of output
 
 The second example uses a built-in function in SageMath.
 
@@ -49,8 +49,8 @@ The second example uses a built-in function in SageMath.
     
     print 5, '!=', factorial(5)
 
-3. Derivative.
-^^^^^^^^^^^^^^
+Derivative.
+^^^^^^^^^^^
 
 **Derivative** will be interpreted as a mathematical operation on a function.
 
@@ -106,8 +106,8 @@ Algebraic expressions separated by *+* or *--* count separately.
 
 .. sagecellserver::
 
-    sage: f=x^3-2*x^2+3*x-4   #you can change this function
-    sage: show("f(x)=",f,",        f'(x)=",f.diff(x))
+    f=x^3-2*x^2+3*x-4   #you can change this function
+    show("f(x)=",f,",        f'(x)=",f.diff(x))
 
 .. math::
 
@@ -115,10 +115,10 @@ Algebraic expressions separated by *+* or *--* count separately.
 
 .. sagecellserver::
 
-    sage: f=x*cos(x)
-    sage: show("f(x)=",f,",       f'(x)=",f.diff(x))
-    sage: g=x^2*sin(x)
-    sage: show("g(x)=",g,",       g'(x)=",g.diff(x))
+    f=x*cos(x)
+    show("f(x)=",f,",       f'(x)=",f.diff(x))
+    g=x^2*sin(x)
+    show("g(x)=",g,",       g'(x)=",g.diff(x))
 
 .. math::
 
@@ -126,8 +126,8 @@ Algebraic expressions separated by *+* or *--* count separately.
 
 .. sagecellserver::
 
-    sage: f=sin(x)/x
-    sage: show("f(x)=",f,",      f'(x)=",f.diff(x))
+    f=sin(x)/x
+    show("f(x)=",f,",      f'(x)=",f.diff(x))
 
 
 **Derivatives of derivatives - Derivatives of higher orders.**
@@ -145,20 +145,20 @@ Below, the calculations of higher order derivatives of the SageMath:
 
 .. sagecellserver::
 
-    sage: f=x^3-3*x^2  #you can change this function
-    sage: show ("      f(x)=",f, "        f'(x)=", f.diff(x))
-    sage: show ("f''(x)=",f.diff(x,2),"         f'''(x)=", f.diff(x,3))
+    f=x^3-3*x^2  #you can change this function
+    show ("      f(x)=",f, "        f'(x)=", f.diff(x))
+    show ("f''(x)=",f.diff(x,2),"         f'''(x)=", f.diff(x,3))
     
 .. sagecellserver::
 
-    sage: f=sin(x)
-    sage: show('f(x)=',f)
-    sage: show("f'(x)=",f.diff(x))
-    sage: show("f''(x)=",f.diff(x,2))
-    sage: show("f'''(x)=",f.diff(x,3))
-    sage: show("f''''(x)=",f.diff(x,4))
+    f=sin(x)
+    show('f(x)=',f)
+    show("f'(x)=",f.diff(x))
+    show("f''(x)=",f.diff(x,2))
+    show("f'''(x)=",f.diff(x,3))
+    show("f''''(x)=",f.diff(x,4))
     
-
+    
 **Calculating the value of the derivative at the point.**
 
 Derivative of a function is a function so we can calculate the value of the derivative for the argument.
@@ -167,18 +167,18 @@ Derivative of a function is a function so we can calculate the value of the deri
 
 .. sagecellserver::
 
-    sage: f=sin(x) #you can change this function
-    sage: w1=f.diff(x).substitute(x = 0)
-    sage: w2=f.diff(x).substitute(x = pi/3)
-    sage: show("f(x)=", f, ",        f'(x)=",f.diff(x), ",        f'(0)=" , w1, ",        f'(pi/3)=", w2)
+    f=sin(x) #you can change this function
+    w1=f.diff(x).substitute(x = 0)
+    w2=f.diff(x).substitute(x = pi/3)
+    show("f(x)=", f, ",        f'(x)=",f.diff(x), ",        f'(0)=" , w1, ",        f'(pi/3)=", w2)
 
-    sage: g=x^4+3-2*x^3+5*x  #you can change this function
-    sage: w1=g.diff(x,2).subs(x = 1)
-    sage: w2=g.diff(x,2).subs(x = 2)
-    sage: show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
+    g=x^4+3-2*x^3+5*x  #you can change this function
+    w1=g.diff(x,2).subs(x = 1)
+    w2=g.diff(x,2).subs(x = 2)
+    show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
 
-4. Polynomial.
-^^^^^^^^^^^^^^
+Polynomial.
+^^^^^^^^^^^
 
 **Polynomial** of *n* degree and *x* variable is called function:
 
@@ -197,8 +197,8 @@ Linear function and quadratic function are polynomial.
     W_2(x)=a_0+a_1 \cdot x +a_2 \cdot x^2    
     \end{array}
 
-5. Line.
-^^^^^^^^
+Line.
+^^^^^
 
 We know are line goes through two points. Besides, knowing the coordinates of the points above, we can determine the formula of this line. We should remember that the formula is a linear function:
 
@@ -218,21 +218,31 @@ Typing the appropriate equations, we can draw a straight line through two points
 
 .. sagecellserver::
 
-    sage: x1=-int(random()*4)
-    sage: y1=int(random()*9-4)
-    sage: x2=int(random()*4)+1
-    sage: y2=int(random()*9-4)
-    sage: p1=point((x1,y1),size=10)
-    sage: p2=point((x2,y2),size=10)
-    sage: a=(y2-y1)/(x2-x1)
-    sage: b=y1-a*x1
-    sage: f=a*x+b
-    sage: show ('y=',f)
-    sage: g=plot(a*x+b,xmin=x1-2, xmax=x2+2, color="green")
-    sage: show(p1+p2+g,figsize=4)
+    x1=-int(random()*4)
+    y1=int(random()*9-4)
+    x2=int(random()*4)+1
+    y2=int(random()*9-4)
+    p1=point((x1,y1),size=10)
+    p2=point((x2,y2),size=10)
+    a=(y2-y1)/(x2-x1)
+    b=y1-a*x1
+    f=a*x+b
+    show ('y=',f)
+    g=plot(a*x+b,xmin=x1-2, xmax=x2+2, color="green")
+    show(p1+p2+g,figsize=4)
 
-6. Parabola.
-^^^^^^^^^^^^
+
+.. only:: latex
+          
+    a plot as in :numref:`f_liniowa`.
+
+    .. figure:: wielomiany_media/w1.pdf
+       :width: 60%
+       :name: f_liniowa 
+
+
+Parabola.
+^^^^^^^^^
 
 Below, there is an example for three points which are not collinear. Then we can determine the quadratic function, which includes these points. So we have to determine *a, b, c* coefficients from the following equation quadratic function.
 
@@ -251,16 +261,16 @@ Below we use the capabilities of Sage.
 
 .. sagecellserver::
 
-    sage: x1=-1
-    sage: y1=0
-    sage: x2=1
-    sage: y2=4
-    sage: x3=3
-    sage: y3=-1
-    sage: p1=point((x1,y1),size=10)
-    sage: p2=point((x2,y2),size=10)
-    sage: p3=point((x3,y3),size=10)
-    sage: show(p1+p2+p3,figsize=3)
+    x1=-1
+    y1=0
+    x2=1
+    y2=4
+    x3=3
+    y3=-1
+    p1=point((x1,y1),size=10)
+    p2=point((x2,y2),size=10)
+    p3=point((x3,y3),size=10)
+    show(p1+p2+p3,figsize=3)
 
 
 We calculate the following equations, where he search coefficients: *a, b, c*.
@@ -291,18 +301,28 @@ In the SageMath we can easily solve this equation is enough to apply the followi
 
 .. sagecellserver::
 
-    sage: M = matrix(3,3,[[x1^2,x1,1],[x2^2,x2,1],[x3^2,x3,1]])
-    sage: v = vector([y1,y2,y3])
-    sage: wynik = M\v
-    sage: [a,b,c]=wynik
-    sage: show("a=",a,",  b=",b, ",  c=",c)
-    sage: f=a*x^2+b*x+c
-    sage: show('y=',f)
-    sage: g=plot(f,xmin=-3, xmax=5, color="green")
-    sage: show(p1+p2+p3+g,ymin=-7, ymax=8, figsize=4)
+    M = matrix(3,3,[[x1^2,x1,1],[x2^2,x2,1],[x3^2,x3,1]])
+    v = vector([y1,y2,y3])
+    wynik = M\v
+    [a,b,c]=wynik
+    show("a=",a,",  b=",b, ",  c=",c)
+    f=a*x^2+b*x+c
+    show('y=',f)
+    g=plot(f,xmin=-3, xmax=5, color="green")
+    show(p1+p2+p3+g,ymin=-7, ymax=8, figsize=4)
 
-7. Polynomial.
-^^^^^^^^^^^^^^
+
+.. only:: latex
+          
+    a plot as in :numref:`parabola`.
+
+    .. figure:: wielomiany_media/w2.pdf
+       :width: 60%
+       :name: parabola     
+
+
+Polynomial.
+^^^^^^^^^^^
 
 Here is an example for a few random points. The resulting function is a polynomial.
 
@@ -311,54 +331,65 @@ If you specify *n* points, it certainly passes through these points a polynomial
 
 .. sagecellserver::
 
-    sage: points={}
-    sage: vector_x=[]
-    sage: vector_y=[]
-    sage: k=6                 #number of points
-    sage: y=int(random()*7-3)
-    sage: vector_y=[y]
-    sage: points=point((0,y),size=10)
-    sage: print '(',0,',',y,')'
-    sage: for i in range(k-1):
-              vector_x=vector_x+[0]
-    sage: vector_x=vector_x+[1]
-    sage: for n in range(k-1):
-              x=n+1
-              for i in range(k):
-                  vector_x=vector_x+[x^(k-i-1)]
-              y=int(random()*7-3)
-              vector_y=vector_y+[y]
-              print '(',x,',',y,')'
-              points = points + point((x,y),size=10)
-    sage: show(points,ymin=-2,ymax=6,figsize=4) 
+    points={}
+    vector_x=[]
+    vector_y=[]
+    k=6                 #number of points
+    y=int(random()*7-3)
+    vector_y=[y]
+    points=point((0,y),size=10)
+    print '(',0,',',y,')'
+    for i in range(k-1):
+        vector_x=vector_x+[0]
+    vector_x=vector_x+[1]
+    for n in range(k-1):
+        x=n+1
+        for i in range(k):
+            vector_x=vector_x+[x^(k-i-1)]
+        y=int(random()*7-3)
+        vector_y=vector_y+[y]
+        print '(',x,',',y,')'
+        points = points + point((x,y),size=10)
+    show(points,ymin=-2,ymax=6,figsize=4) 
  
 
 For the random points calculate polynomial coefficients.
 
 .. sagecellserver::
 
-    sage: M = matrix(k,k,vector_x)
-    sage: v=vector(vector_y)
-    sage: wynik = M\v
-    sage: show(M)
-    sage: show(wynik)
+    M = matrix(k,k,vector_x)
+    v=vector(vector_y)
+    wynik = M\v
+    show(M)
+    show(wynik)
+
 
 We draw a polynomial that goes passes through the given points.
 
 .. sagecellserver::
 
-    sage: var('x')
-    sage: vector_x=[]
-    sage: for i in range(k):
-              vector_x=vector_x+[x^(k-i-1)]
-    sage: w=vector(vector_x)
-    sage: f=w*wynik
-    sage: show("f(x)=",f)
-    sage: f=plot(f,xmin=-1, xmax=k, color="green")
-    sage: show(points+f,ymin=-7,ymax=8,figsize=6)
+    var('x')
+    vector_x=[]
+    for i in range(k):
+        vector_x=vector_x+[x^(k-i-1)]
+    w=vector(vector_x)
+    f=w*wynik
+    show("f(x)=",f)
+    f=plot(f,xmin=-1, xmax=k, color="green")
+    show(points+f,ymin=-7,ymax=8,figsize=6)
 
-8. Taylor's formula.
-^^^^^^^^^^^^^^^^^^^^
+
+.. only:: latex
+          
+    a plot as in :numref:`wielomian`.
+
+    .. figure:: wielomiany_media/w3.pdf
+       :width: 60%
+       :name: wielomian    
+    
+
+Taylor's formula.
+^^^^^^^^^^^^^^^^^
 
 From the mathematical analysis is known below the following formula is known. It approximates any function corresponding polynomial.
 
@@ -395,54 +426,81 @@ Here is an example for the function :math:`f(x)=sin(x)`.
         q=q+plot(g,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
     show(q)
 
+
+.. only:: latex
+          
+    a plot as in :numref:`t_sin`.
+
+    .. figure:: wielomiany_media/t2.pdf
+       :width: 60%
+       :name: t_sin     
+
 **Exercise for students.**
 
 For the function :math:`f(x)=cos(x)` find the corresponding polynomial formula of Taylor-Maclaurin.
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=6
-    sage: f=1
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(1, n):
-              k=2*i
-              f=f+(-1)^i*(1/factorial(k))*x^k
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(cos(x),"=",f)    
-    sage: f=cos(x)
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
-    sage: show(q)
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    n=6
+    f=1
+    q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    for i in range(1, n):
+        k=2*i
+        f=f+(-1)^i*(1/factorial(k))*x^k
+        q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(cos(x),"=",f)    
+    f=cos(x)
+    q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, linestyle="--", figsize=5.5)
+    show(q)
+
+
+.. only:: latex
+          
+    a plot as in :numref:`t_cos`.
+
+    .. figure:: wielomiany_media/t3.pdf
+       :width: 60%
+       :name: t_cos 
 
 
 Use the Taylor-Maclaurin's formula for function :math:`f(x)=e^x`.
 
 .. sagecellserver::
 
-    sage: kolor=[]
-    sage: kolor=["yellowgreen","green","pink","orange","red","brown","black"]
-    sage: n=8
-    sage: f=1
-    sage: q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
-    sage: for i in range(0, n):
-              k=i+1
-              f=f+(1/factorial(k))*x^k
-              q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
-    sage: show(e^x,"=",f)
-    sage: f=e^x
-    sage: q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=10, linestyle="--", figsize=5.5)
-    sage: show(q)
+    kolor=[]
+    kolor=["yellowgreen","green","pink","orange","red","brown","black"]
+    n=8
+    f=1
+    q=plot(f,xmin=-4,xmax=6, ymin=-3, ymax=3,color="yellow", legend_label="T(0)")
+    for i in range(0, n):
+        k=i+1
+        f=f+(1/factorial(k))*x^k
+        q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=3, color=kolor[(i-1)%7], legend_label=r"T( %d )" % i)
+    show(e^x,"=",f)
+    f=e^x
+    q=q+plot(f,xmin=-5, xmax=7, ymin=-3, ymax=10, linestyle="--", figsize=5.5)
+    show(q) 
+
 
 We already know the Taylor's formula. Now we can simplify our calculations, and use the built-in Taylor's formula in SageMath.
 
 .. sagecellserver::
 
-    sage: f=sin(x)*x^2          #your function
-    sage: k=8                   #level iteration
-    sage: t=taylor(f,x,0,k)     #Taylor function in Sage
-    sage: q=plot(t, xmin=-5, xmax=5, ymin=-5, ymax=5, color="red", legend_label=r"Taylor(f, x, 0, %d)" % k)
-    sage: show(f,"=",t)
-    sage: q=q+plot(f, xmin=-5, xmax=5, ymin=-5, ymax=5, linestyle="--", figsize=5.5, legend_label=r"Your function")
-    sage: show(q)
+    f=sin(x)*x^2          #your function
+    k=8                   #level iteration
+    t=taylor(f,x,0,k)     #Taylor function in Sage
+    q=plot(t, xmin=-5, xmax=5, ymin=-5, ymax=5, color="red", legend_label=r"Taylor(f, x, 0, %d)" % k)
+    show(f,"=",t)
+    q=q+plot(f, xmin=-5, xmax=5, ymin=-5, ymax=5, linestyle="--", figsize=5.5, legend_label=r"Your function")
+    show(q)
 
+
+.. only:: latex
+          
+    a plot as in :numref:`t_sin*x^2`.
+
+    .. figure:: wielomiany_media/t1.pdf
+       :width: 60%
+       :name: t_sin*x^2 

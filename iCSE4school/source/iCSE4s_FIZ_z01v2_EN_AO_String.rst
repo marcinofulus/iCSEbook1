@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Examining vibrations of a string
-================================
+Examining vibrations of a string (old)
+======================================
 
 
 

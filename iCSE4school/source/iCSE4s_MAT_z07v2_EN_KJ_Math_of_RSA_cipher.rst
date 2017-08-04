@@ -3,6 +3,7 @@ RSA asymmetric cipher.
 
 Introduction.
 ^^^^^^^^^^^^^
+*This project is the result of activities at The Stefan Batory High School in Chorzów*
 
 In each of the program's window you can change the numbers, text, variables, or the code.
 
@@ -10,14 +11,13 @@ You do not have to worry if the program stops working, because after its refresh
 
 Often next code results from the previous one, so the exercises (algorithms) should be run in their order.  
 
+
 Definition of congruence relation.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Two integers *a* and *b* are said to be  **congruent modulo** *n*, written: :math:`a = b (mod \hspace{2mm} n)`, when: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
 Examples:
 """""""""
-
 2 = 2 (mod 8), because 2 - 2 = 0, which is a multiple of 8,
 
 3 = 18 (mod 5), because 3 - 18 = -15, which is a multiple of 5,
@@ -28,8 +28,7 @@ Examples:
 
 Exercise 1.
 """""""""""
-
-Find x if you know: 3x = 1 (mod 4), 5<x<10
+Find *x* if you know: :math:`3x = 1 (mod \hspace{2mm} 4), \hspace{2mm} 5<x<10`.
 
 .. sagecellserver::
 
@@ -40,8 +39,7 @@ Find x if you know: 3x = 1 (mod 4), 5<x<10
 
 Exercise 2.
 """""""""""
-
-Find x if you know: 3x+2 = 1 (mod 5)
+Find *x* if you know: :math:`3x+2 = 1 (mod \hspace{2mm} 5)`.
 
 .. sagecellserver::
 
@@ -50,13 +48,11 @@ Find x if you know: 3x+2 = 1 (mod 5)
             print x
 
 
-
 We can realise there are infinitely many solutions. What is more, the solutions determine an arithmetic progression.
 
 Exercise 3.
 """""""""""
-
-Find x if you know: 3x = 1 (mod 6)
+Find *x* if you know: :math:`3x = 1 (mod \hspace{2mm} 6)`.
 
 .. sagecellserver::
 
@@ -76,7 +72,6 @@ The following exercise can be solved using the Chinese remainder theorem. One of
 
 Exercise 4.
 """""""""""
-
 A bar of chocolate consists of less than 100 pieces. While dividing it into three equal parts, there remains 1 piece of chocolate. While dividing it into 5 parts, what remains are 3 pieces of chocolate but when dividing into 7 equal parts, 2 pieces remain.
 
 We know that the number of chocolate pieces must satisfy the below congruence:
@@ -103,7 +98,7 @@ If   *p*   is a prime number and   *a*   is not divisible by   *p*,
 
 Let’s check the correctness of the Fermet’s Little Theorem basing on the Python language.
 
-For a we substitute 35, so p=3 and p=5, the am. theory is not satisfied. We can even state that it must be dividable by p.
+For a we substitute 35, so p=5 and p=7, the am. theory is not satisfied. We can even state that it must be dividable by p.
 
 This code was written and posted the students in the classroom.
 
@@ -139,7 +134,6 @@ The key of the cipher are pairs of numbers: a public key :math:`(d, n)` and a pr
 
 Below you can find an example of the  number cither:
 
-
 .. sagecellserver::
 
     number=1234567   #You can change this number (message). What will be if number larger then n?
@@ -161,7 +155,6 @@ Below you can find an example of the  number cither:
     print "decryption:", deszyfr
  
 
-
 What to do when the number is larger than n?
 """"""""""""""""""""""""""""""""""""""""""""
 
@@ -178,7 +171,7 @@ What to do when the number is larger than n?
 
 .. sagecellserver::
 
-    number=123456567675635352364213879879797996743546789435345241234324234235 #Big number(message)
+    number=123456567675635352364213879879797996743546789435345241 #Big number(message)
     szyfr = 0
     i=0
     while number>0:                           # 5
@@ -209,6 +202,7 @@ Try to decription the number (message) below.
         number=int(number/n)                  # 4
     print szyfr
 
+
 What we usually want to do is to cipher a text not a number, so we have to substitute letters into numbers. We shall use ASCII code. Each letter, symbol is given a number from 1 to 128.
 
 Below, you can find the algorithm of the encryption (this code was written and posted by the students in the classroom).
@@ -230,7 +224,6 @@ Below, you can find the algorithm of the encryption (this code was written and p
 
 The full algorithm of encryption.
 """""""""""""""""""""""""""""""""
-
 Following the submission of these algorithms we get full algorithm to encrypt and decrypt text messages.
 
 .. sagecellserver::
@@ -259,8 +252,6 @@ Following the submission of these algorithms we get full algorithm to encrypt an
 
 The full algorithm of decryption.
 """""""""""""""""""""""""""""""""
-
-
 .. sagecellserver::
 
     tekst2=""
@@ -292,7 +283,6 @@ The security of the RSA cryptosystem  is based on the decomposition of large  co
 
 Example below.
 """"""""""""""
-
 .. sagecellserver::
 
     @interact 
@@ -339,7 +329,6 @@ It is enough to copy the algorithm of cither from previous lessons and substitut
 
 Determine :math:`e` as: :math:`(d \cdot e) \hspace{1mm} mod f=1`.
 
-
 We can use expanded Euclidean algorithm, to find e number.
 My students changed the existing program on the Internet, but not always, does it generate the correct number. Can you improve this code!
 
@@ -372,9 +361,7 @@ My students changed the existing program on the Internet, but not always, does i
 
 The full algorithm of encryption RSA.
 """""""""""""""""""""""""""""""""""""
-
 It is enough to copy the algorithm of coding from the previous lessons and substitute  pomoc*d them pomoc^d.
-
 
 .. sagecellserver::
 
