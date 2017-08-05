@@ -17,7 +17,7 @@ Kolejność dwóch pierwszych punktów może być zamieniona.
 Niniejszy dokument zawiera rozważania o charakterze ogólnym. Szczegóły lekcji doświadczalnej zawarte są w załączonym filmie. Przykładowe prace uczniów znajdują się w oddzielnych plikach.
 
 Część doświadczalna
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 **Pomoce naukowe**
 
@@ -33,6 +33,7 @@ Cały przebieg lekcji, opis eksperymentu oraz oczekiwań dotyczących sposobu op
 Film wyposażony jest w napisy w języku angielskim.
 
 Część informatyczna
+-------------------
 
 Przykładowe obliczanie odchylenia standardowego:
 
@@ -68,7 +69,7 @@ Symulacja danych doświadczalnych i wykres s(t)
 Dopasowanie paraboli do danych
 
 
-::
+.. sagecellserver::
 
     sage: var ('a')
     sage: parabola(x) = a/2*x^2 # Czas oznaczono jako x, aby uniknąć dalej kolizji oznaczeń
@@ -77,14 +78,13 @@ Dopasowanie paraboli do danych
     sage: rys1=plot(parabola.subs(fit), x, 0, 6, color="green", legend_label='dopasowana parabola')
     sage: rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='punkty pomiarowe')
     sage: rys1+rys2
-    {a: 0.19982707112345025}
 
 .. end of output
 
 Prostokąty błędów. Konieczne jest użycie dodatkowej biblioteki. Punkty połączone są łamaną
 
 
-::
+.. sagecellserver::
 
     sage: import matplotlib.pyplot as plt
     sage: plt.clf()
@@ -99,7 +99,7 @@ Prostokąty błędów. Konieczne jest użycie dodatkowej biblioteki. Punkty poł
 Połączenie 2 światów: paraboli dopasowanej do punktów (Python) i prostokątów błędów (matplot):
 
 
-::
+.. sagecellserver::
 
     sage: import matplotlib.pyplot as plt
     sage: import numpy as np 
@@ -119,6 +119,7 @@ Połączenie 2 światów: paraboli dopasowanej do punktów (Python) i prostokąt
 .. end of output
 
 Zadanie domowe
+--------------
 
 Skonstruować dowolny układ do obserwacji ruchu przyspieszonego. Wykonać serie pomiarów czasu przebycia różnych dróg w tym ruchu. Napisać sprawozdanie w notatniku Sage zawierające:
 
@@ -132,4 +133,6 @@ Skonstruować dowolny układ do obserwacji ruchu przyspieszonego. Wykonać serie
 
 5. Dyskusję uzyskanych wyników \- należy rozstrzygnąć różnymi metodami, czy przyspieszenie w obserwowanym ruchu było stałe.
 
+Uwagi o realizacji
+------------------
 

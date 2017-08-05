@@ -147,7 +147,7 @@ Napisz w Sage krótkie sprawozdanie o przeprowadzonym eksperymencie, zawierając
 
 Dane są wspólne dla całej grupy, niemniej sprawozdania musza być napisane niezależnie i indywidualnie. Autorzy najlepszych prac zyskują prawo do ich przetłumaczenia na angielski i opublikowania za dodatkowe punkty. Nauczyciele języka angielskiego są gotowi do pomocy i nadzoru w procesie tłumaczenia
 
-*Uwagi o realizacji*
+Uwagi o realizacji
 --------------------
 Pierwszy raz niniejszą lekcję przeprowadzono w maju 2015. Wszyscy uczniowie wykonali te same pomiary. cała grupa (14 osób) widoczna jest na zamieszczonym zdjęciu. Wprawdzie wszystkie sprawozdania oparte są na tych samych danych, lecz poprosiłem o pracę indywidualną i napisanie w domu unikalnych sprawozdań. Faktycznie, przedstawione do oceny prace różniły sie poziomem i użytymi środkami. Uczniowie zazwyczaj przyznawali, że użycie Sage bardzo im pomogło. Odkryli w tym środowisku wygodne narzędzie do realizacji podobnych zadań.
 

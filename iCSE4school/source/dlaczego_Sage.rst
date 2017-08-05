@@ -213,6 +213,9 @@ Poniższy program dotyczy miejsc zerowych funkcji kwadratowej. Obliczono w nim p
     .. figure:: dlaczego_Sage/kw.pdf
        :width: 40%
        :name: parabola     
+     
+       Parabola !
+
 
 Dzięki instrukcji *region_plot* możemy na wykresie przedstawiać także rozwiązanie układów nierówności.
 
@@ -234,7 +237,8 @@ Dzięki instrukcji *region_plot* możemy na wykresie przedstawiać także rozwi�
     .. figure:: dlaczego_Sage/reg1.pdf
        :width: 40%
        :name: region1   
-
+  
+       Przykład wizualizacji nierówności z pomocą `region_plot`
 
 .. sagecellserver::
 
