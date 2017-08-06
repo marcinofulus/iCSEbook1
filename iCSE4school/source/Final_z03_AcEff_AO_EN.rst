@@ -58,7 +58,7 @@ The physical problems discussed in the code and diagrams below, are the followin
 
 **Beats**
 
- Easy example of plot with fixed frequencies and initial phase, which can be changed inside the code. Results of those changes can be observed on the plot.
+Easy example of plot with fixed frequencies and initial phase, which can be changed inside the code. Results of those changes can be observed on the plot.
 
 .. sagecellserver::
 
@@ -96,9 +96,10 @@ More complex drawing including the parameters of functions and envelope. For sim
 
 .. end of output
 
+A slider controlling the time shift. Enables moving the picture.
+
 .. sagecellserver::
 
-    sage: # A slider controlling the time shift
     sage: @interact
     sage: def _(t0=slider(0, 2*pi, 0.01, label="$t_0$")):
     ....:     plt = beat(t0=t0, figsize=(4,2))
@@ -106,9 +107,10 @@ More complex drawing including the parameters of functions and envelope. For sim
 
 .. end of output
 
+Controlling the frequency of second wave. One can onserve the dependence of pulsation period on the difference between frequencies of component waves.
+
 .. sagecellserver::
 
-    sage: # Controlling the frequency of second wave
     sage: @interact
     sage: def _(t0=slider(0, 10, 0.01, label="$t_0$"),
     ....:       omega2=slider(10, 12, 0.01, label="$\omega_2$")):
@@ -116,6 +118,8 @@ More complex drawing including the parameters of functions and envelope. For sim
     ....:     show(plt)
 
 .. end of output
+
+Creation of graphics array for further animations.
 
 .. sagecellserver::
 
@@ -136,10 +140,11 @@ More complex drawing including the parameters of functions and envelope. For sim
 
 .. end of output
 
+Ready animation. We see the sequence of plots for different time arguments.
+
 .. sagecellserver::
 
-    sage: # Ready animation. We see the sequence of plots for different time arguments.
-    sage: # %time
+    sage: %time
     sage: anim.show()
 
 .. end of output
@@ -152,7 +157,7 @@ Another approach, making use of plots defined above
 
 .. end of output
 
-Animation showing the impact of second frequency
+Animation showing the impact of second frequency on the pulsation period.
 
 .. sagecellserver::
 
@@ -163,7 +168,7 @@ Animation showing the impact of second frequency
 
 **Reflection and standing waves**
 
-Standing wave as an interference of two waves travelling the opposite side. Students can manipulate all the parameters (it was an exercise). ****
+Standing wave as an interference of two waves travelling the opposite side. Students can manipulate all the parameters (it was an exercise).
 
 .. sagecellserver::
 
@@ -178,7 +183,7 @@ Standing wave as an interference of two waves travelling the opposite side. Stud
 
 .. end of output
 
-In order to make the time evolution of the standing wave more apparent, an animation is very useful.It might also be instructive to display the travelling waves.The variable delay seems to be unnecessary and the argument x\-vt  is used instead of t\-x/v so that no problem arises when v goes to zero.
+In order to make the time evolution of the standing wave more apparent, an animation is very useful.It might also be instructive to display the travelling waves.The variable delay seems to be unnecessary and the argument *x\-vt*  is used instead of *t\-x/v* so that no problem arises when v goes to zero.
 
 .. sagecellserver::
 
@@ -325,7 +330,7 @@ Conclusions
 -----------
 Programming in Python became an interesting supplement of physics lesson. The benefit lies in the possibility of (more or less) easy visualisation of processes with the change of parameters. Thank this, the formulae presented during lectures are less abstract and everybody can single\-handed check, how the result of interference depends on frequencies, direction of speed and so on.
 
-Animations itself were a new challenge for students. In the previous version I asked student to develop somehow the code to create some new ideas. It failed, because the code was too difficult for them (and sometimes also for me). All they are able to do is to manipulate the parameters.
+Animations itself were a new challenge for students. In the previous version I asked student to develop somehow the code to create some new ideas. It failed, because the code was too difficult for them. All they are able to do is to manipulate the parameters.
 
 Nevertheless, I judge tis lesson high. Students were very interested and engaged. Their skills, both in physics and informatics, increased.
 

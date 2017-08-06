@@ -95,9 +95,10 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
 
 .. end of output
 
+Suwak zmieniający argument czasowy. Pozwala na ręczne przesuwanie fali.
+
 .. sagecellserver::
 
-    sage: # Suwak zmieniający przesunięcie czasowe
     sage: @interact
     sage: def _(t0=slider(0, 2*pi, 0.01, label="$t_0$")):
     ....:     plt = beat(t0=t0, figsize=(4,2))
@@ -105,9 +106,10 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
 
 .. end of output
 
+Regulacja częstotliwości drugiej fali. Można prześledzić, że im częstotliwości obu fal mniej się różnią, tym większy okres pulsacji.
+
 .. sagecellserver::
 
-    sage: # Regulacja częstotliwości drugiej fali
     sage: @interact
     sage: def _(t0=slider(0, 10, 0.01, label="$t_0$"),
     ....:       omega2=slider(10, 12, 0.01, label="$\omega_2$")):
@@ -115,6 +117,8 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
     ....:     show(plt)
 
 .. end of output
+
+Kolejne obliczenia zbliżają nas krok po kroku do stworzenia animacji.
 
 .. sagecellserver::
 
@@ -128,6 +132,8 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
 
 .. end of output
 
+Tablica wykresów fali dla kolejno zmienianego argumentu t0
+
 .. sagecellserver::
 
     sage: plots = [beat(t0=t0, figsize=(4, 2)) for t0 in sxrange(0, 2*pi, pi/10)]
@@ -135,10 +141,11 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
 
 .. end of output
 
+Gotowa animacja. Widzimy sekwencję wykresów dla różnych wartości argumentu czasowego.
+
 .. sagecellserver::
 
-    sage: # Gotowa animacja. Widzimy sekwencję wykresów dla różnych wartości argumentu czasowego.
-    sage: # %time
+    sage: %time
     sage: anim.show()
 
 .. end of output
@@ -151,7 +158,7 @@ Inne podejście wykorzystujące wykresy przygotowane powyżej.
 
 .. end of output
 
-Animacja wskazująca wpływ drugiej częstotliwości.
+Animacja wskazująca wpływ drugiej częstotliwości na częstość pulsacji.
 
 .. sagecellserver::
 
@@ -162,7 +169,7 @@ Animacja wskazująca wpływ drugiej częstotliwości.
 
 **Odbicie i fala stojąca**
 
-Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniowie mogą manipulować wartościami wszystkich parametrów (co było przedmiotem ćwiczeń).****
+Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniowie mogą manipulować wartościami wszystkich parametrów (co było przedmiotem ćwiczeń).
 
 .. sagecellserver::
 
@@ -258,7 +265,7 @@ Złożenie impulsu biegnącego i odbitego.
 
 .. end of output
 
-Cyfrowe odbicie fali
+Numeryczne odbicie fali
 
 .. sagecellserver::
 
@@ -319,7 +326,7 @@ Wnioski
 -------
 Programowanie w Pythonie okazało się interesującym uzupełnieniem lekcji fizyki. Korzyści polegają na możliwości mniej lub bardziej łatwej wizualizacji zjawisk przy zmianie parametrów. Dzięki temu, wzory przedstawione na wykładach stają się mniej abstrakcyjne i każdy mógł się własnoręcznie przekonać, jak wynik np. interferencji fal zależy od ich częstotliwości, kierunku, prędkości itd.
 
-Animacje same w sobie okazały się nowym wyzwaniem dla uczniów. W pierwszych edycjach lekcji prosiłem uczniów o dokonanie prób jakiegokolwiek rozwinięcia przedstawionych idei poprzez ulepszenie kodu. Okazało się to niewykonalne, ponieważ kod jest dla nich zbyt trudny (czasami również dla mnie). Jedyne, do czego byli zdolni, to manipulacja wartościami parametrów \- a to i tak dużo. 
+Animacje same w sobie okazały się nowym wyzwaniem dla uczniów. W pierwszych edycjach lekcji prosiłem uczniów o dokonanie prób jakiegokolwiek rozwinięcia przedstawionych idei poprzez ulepszenie kodu. Okazało się to niewykonalne, ponieważ kod jest dla nich zbyt trudny. Jedyne, do czego byli zdolni, to manipulacja wartościami parametrów \- a to i tak dużo. 
 
 Niemniej przebieg lekcji oceniam wysoko. Uczniowie byli zainteresowani i zaangażowani. Ich kompetencje, zarówno w zakresie fizyki, jak i informatyki, wzrosły.
 
