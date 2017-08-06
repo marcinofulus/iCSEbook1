@@ -15,7 +15,7 @@ The main aims of this lesson are:
 - Exercising interaction and sliders in Python.
 - Exercising animations in SAGE
 
- Circumstances taken into consideration:
+Circumstances taken into consideration:
 
 - Students have already basic knowledge of waves in general. In particular they know the equantion of wave, idea of standing wave and resonance.
 - It is the second students' contact with animations in Python. They participated in one IT lesson devoted to this problem.
@@ -58,10 +58,9 @@ The physical problems discussed in the code and diagrams below, are the followin
 
 **Beats**
 
- Easy example of plot with fixed frequencies and initial phase, which can be changed inside the code. Results of those changes can be observed on the plot.****
+ Easy example of plot with fixed frequencies and initial phase, which can be changed inside the code. Results of those changes can be observed on the plot.
 
-
-::
+.. sagecellserver::
 
     sage: # **kwarg allows adding additional "called" arguments
     sage: # dudnienia (beats) is a function returning a plot of superimposed functions y1 and y2
@@ -72,13 +71,11 @@ The physical problems discussed in the code and diagrams below, are the followin
     ....:     return   plot(y, (t, 0, 10),ymax=A1+A2,ymin=-(A1+A2),**kwarg )
     sage: dudnienia(figsize=(4,2))
 
-
 .. end of output
 
 More complex drawing including the parameters of functions and envelope. For simplicity the amplitudes are chosen to be equal.
 
-
-::
+.. sagecellserver::
 
     sage: def envelope(omega1, omega2, a, phase, t0):
     ....:     f(t) = 2*a*cos((omega1-omega2)*(t-t0)/2-phase/2)
@@ -97,10 +94,9 @@ More complex drawing including the parameters of functions and envelope. For sim
     ....:     return plt
     sage: beat(t0=2.5, figsize=(4, 2))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # A slider controlling the time shift
     sage: @interact
@@ -108,10 +104,9 @@ More complex drawing including the parameters of functions and envelope. For sim
     ....:     plt = beat(t0=t0, figsize=(4,2))
     ....:     show(plt)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # Controlling the frequency of second wave
     sage: @interact
@@ -120,10 +115,9 @@ More complex drawing including the parameters of functions and envelope. For sim
     ....:     plt = beat(t0=t0 , omega2=omega2, figsize=(4,2))
     ....:     show(plt)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # plts - it is a collection of plots for time argument t0 iterated in a loop.
     sage: plts = [dudnienia(t0=t0_,figsize=(4,2)) for t0_ in srange(0,6.3,0.2)]
@@ -133,44 +127,37 @@ More complex drawing including the parameters of functions and envelope. For sim
     sage: # Preparation for the next box
     sage: anim = animate(plts)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: plots = [beat(t0=t0, figsize=(4, 2)) for t0 in sxrange(0, 2*pi, pi/10)]
     sage: graphics_array(plots, ncols=4).show()
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # Ready animation. We see the sequence of plots for different time arguments.
     sage: # %time
     sage: anim.show()
 
-
 .. end of output
 
 Another approach, making use of plots defined above
 
-
-::
+.. sagecellserver::
 
     sage: animate(plots).show()
-
 
 .. end of output
 
 Animation showing the impact of second frequency
 
-
-::
+.. sagecellserver::
 
     sage: plots = [beat(omega2=omega2, plot_envelope=False, figsize=(4, 2)) for omega2 in sxrange(5, 15, 0.2)]
     sage: animate(plots).show()
-
 
 .. end of output
 
@@ -178,8 +165,7 @@ Animation showing the impact of second frequency
 
 Standing wave as an interference of two waves travelling the opposite side. Students can manipulate all the parameters (it was an exercise). ****
 
-
-::
+.. sagecellserver::
 
     sage: # Semi-automatic color control in the loop
     sage: A=1
@@ -190,13 +176,11 @@ Standing wave as an interference of two waves travelling the opposite side. Stud
     sage: # This plots show time evolution of standing wave. Students may manipulate the constants
     sage: sum( [plot(A*sin(omega*(t/delay-x/v))+A*sin(omega*(t/delay+x/v)),(x,0,20),figsize=6,color=hue(t/t_max)) for t in srange(0,t_max,1.0)] )
 
-
 .. end of output
 
 In order to make the time evolution of the standing wave more apparent, an animation is very useful.It might also be instructive to display the travelling waves.The variable delay seems to be unnecessary and the argument x\-vt  is used instead of t\-x/v so that no problem arises when v goes to zero.
 
-
-::
+.. sagecellserver::
 
     sage: def running_wave(a=1, omega=1, v=10, t=0):
     ....:     wave(x) = a*sin(omega*(x-v*t))
@@ -210,16 +194,13 @@ In order to make the time evolution of the standing wave more apparent, an anima
     ....:         for t in sxrange(0, 2*pi/v, pi/(10*v))]
     sage: animate(plts).show()
 
-
 .. end of output
 
 Graphics array useful for a more detailed analysis.
 
-
-::
+.. sagecellserver::
 
     sage: graphics_array(plts[0:6], ncols=3).show()
-
 
 .. end of output
 
@@ -227,8 +208,7 @@ Graphics array useful for a more detailed analysis.
 
 Motion of wave impulse. I know, that so defined impulse is not physical because of differential discontinuity, but it is the first approach to such kind of animations. Students were informed of the physical doubts.
 
-
-::
+.. sagecellserver::
 
     sage: def pulse1(x):
     ....:     if x>=0 and x<=4*pi:
@@ -236,13 +216,11 @@ Motion of wave impulse. I know, that so defined impulse is not physical because 
     ....:     else:
     ....:         return 0.0
 
-
 .. end of output
 
 Two incoming wave impulses coming from opposite directions
 
-
-::
+.. sagecellserver::
 
     sage: var('x')
     sage: A1 = 1
@@ -257,16 +235,14 @@ Two incoming wave impulses coming from opposite directions
     ....:     plt = Graphics()
     ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t),(x,x0,1),figsize=(12,4),thickness=1)
     ....:     plt += plot( lambda x:pulse1(k*(x-x1)+c*t),(x,x0,2),color='red',thickness=1)
-    ....:     
+     
     ....:     plt.show()
-
 
 .. end of output
 
 Superposition of impuls and its reflection
 
-
-::
+.. sagecellserver::
 
     sage: var('x')
     sage: A1 = 1
@@ -282,13 +258,11 @@ Superposition of impuls and its reflection
     ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t)+pulse1(k*(x-x1)+c*t),(x,x0,0),figsize=(12,4),thickness=1,ymin=-2,ymax=2)
     ....:     plt.show()
 
-
 .. end of output
 
 Numerical wave reflection
 
-
-::
+.. sagecellserver::
 
     sage: %time
     sage: import numpy as np 
@@ -309,24 +283,22 @@ Numerical wave reflection
     ....:     unew[1:-1] = 2.*u[1:-1] - u0[1:-1] + dt**2 *(c2[1:-1]/dx**2*np.diff(u,2))
     ....:     u0=u.copy()
     ....:     u=unew.copy()
-    ....:     
+
     ....:     u[-1] = u[-2]
     ....:     u[0] = u[1]
-    ....:   
+   
     ....:     u[-1] = 0
     ....:     u[0] = 0
-    ....:     
+      
     ....:     if dt*i/T*2.0*np.pi< 4*np.pi:
     ....:         u[0] = 0.5*np.sin(dt*i/T*2.0*np.pi)
-    ....:     
+     
     ....:     if i%50==0:
     ....:         ulst.append(u.copy())
-    0.4047
-    CPU time: 5.31 s,  Wall time: 5.30 s
 
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: @interact
     sage: def _(ith=slider(range(len(ulst)))):
@@ -334,21 +306,18 @@ Numerical wave reflection
     ....:     plt =  line(zip(x,u),figsize=(12,5),ymin=-1,ymax=1) 
     ....:     plt.show()
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: len(ulst)
-    501
 
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: plts = [line(zip(x,u),figsize=(6,2),ymin=-1,ymax=1) for u in ulst[::8]]
     sage: animate(plts).show()
-
 
 .. end of output
 
@@ -360,6 +329,6 @@ Animations itself were a new challenge for students. In the previous version I a
 
 Nevertheless, I judge tis lesson high. Students were very interested and engaged. Their skills, both in physics and informatics, increased.
 
-Adam Ogaza, Gert\-Ludwig Ingold, Marcin Kostur, 2015\-2018
+    Adam Ogaza, Gert\-Ludwig Ingold, Marcin Kostur, 2015\-2017
 
 

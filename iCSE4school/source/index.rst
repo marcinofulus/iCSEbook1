@@ -43,8 +43,13 @@ Materiały dydaktyczne: Fizyka
 .. toctree::
    :maxdepth: 1
 
-   Final_z01_String_AO_EN.rst
    Final_z01_String_AO_PL.rst
+   Final_z01_String_AO_EN.rst
+   Final_z02_SoundWaves_AO_PL.rst
+   Final_z02_SoundWaves_AO_EN.rst
+   Final_z03_AcEff_AO_PL.rst              
+   Final_z03_AcEff_AO_EN.rst                                                   
+   Final_z04_AccMotion_AO_PL.rst
 
 
 Working version final
@@ -53,11 +58,8 @@ Working version final
 .. toctree::
    :maxdepth: 1
 
-   Final_z02_SoundWaves_AO_PL.rst
-   Final_z02_SoundWaves_AO_EN.rst
-   Final_z03_AcEff_AO_EN.rst                                                   
-   Final_z03_AcEff_AO_PL.rst              
-   Final_z04_AccMotion_AO_PL.rst
+   Final_z04_AccMotion_AO_EN.rst
+   Final_z05_Collisions_AO_EN.rst
    iCSE4s_FIZ_z01v2_EN_AO_String.rst
 
 

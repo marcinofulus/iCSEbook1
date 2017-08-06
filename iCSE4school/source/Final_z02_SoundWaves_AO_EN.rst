@@ -16,7 +16,7 @@ The main aims of this lesson are:
 - Showing, that any periodical function can be presented as a linear combination of sine functions.
 - Exercising interaction and sliders in Python.
 
- Preparing this lesson we should take into consideration the following circumstances:
+Preparing this lesson we should take into consideration the following circumstances:
 
 - At high school level pupils cannot integrate. They have heard about integral and its applications, but performing integrations at the level required by Fourier transform is far beyond their abilities. Therefore real calculations must be replaced by simple playing with amplitudes of harmonics.
 - It is the first students' contact with @interact and sliders. Technical problems themselves are heavy to overcome, so there is no point in making the physical side of the topic more difficult.
@@ -48,17 +48,15 @@ The IT part of this lesson was executed in IT laboratory, filmed and published a
 This film, made in 2015, shows the previous version of programming. After some improvement it looks as follows:
 
 
-::
+.. sagecellserver::
 
     sage: wall = 20 # limit of domain = end of space accessible for waves
-
 
 .. end of output
 
 Hypothetical complex wave, defined in a static manner
 
-
-::
+.. sagecellserver::
 
     sage: amplitudes = (1, 1/2, 3/10, 1/5, 1/10)
     sage: WaveComplex(t) = sum(a*sin((n+1)*t) for n, a in enumerate(amplitudes))
@@ -67,25 +65,21 @@ Hypothetical complex wave, defined in a static manner
 
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: plot(WaveComplex, (t, 0, wall))
-
 
 .. end of output
 
 The same as above, but obtained with different tools.
 
-
-::
+.. sagecellserver::
 
     sage: def WaveComplexPlot(amplitudes=(1, 0.5, 0.3, 0.2, 0.1), tmin=0, tmax=20, **kwargs):
     ....:     WaveComplex(t) = sum(a*sin((n+1)*t) for n, a in enumerate(amplitudes))
     ....:     plt = plot(WaveComplex, (t, tmin, tmax), **kwargs)
     ....:     show(plt)
-    ....:     
     sage: WaveComplexPlot(tmax=wall, figsize=(6, 3))
-
 
 .. end of output
 
@@ -93,18 +87,16 @@ Another version of the same function, but the individual amplitudes are now cont
 
 Because students are working on server sage03 with version 6.4.1 of SAGE, we cannot use the ready function histogram. Instead I propose my own version.
 
-
-::
+.. sagecellserver::
 
     sage: def WaveComplexPlot(A1=1, A2=0.5, A3=0.3, A4=0.2, A5=0.1, **kwarg):
     ....:     WaveComplex(t) = A1*sin(t) + A2*sin(t*2) + A3*sin(t*3) + A4*sin(t*4) + A5*sin(t*5)
     ....:     return plot(WaveComplex, t, 0, wall)
     sage: WaveComplexPlot(figsize=(2,1))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: @interact
     sage: def _(A1_=slider(0,1,0.01), A2_=slider(0,1,0.01), A3_=slider(0,1,0.01), A4_=slider(0,1,0.01), A5_=slider(0,1,0.01)):
@@ -113,13 +105,11 @@ Because students are working on server sage03 with version 6.4.1 of SAGE, we can
     ....:     histogram = line([(1,0), (1,A1_)], thickness=10) + line([(2,0), (2,A2_)], thickness=10) + line([(3,0), (3,A3_)], thickness=10) + line([(4,0), (4,A4_)], thickness=10) + line([(5,0), (5,A5_)], thickness=10)
     ....:     show(histogram)
 
-
 .. end of output
 
 Decomposition of an example function with the use of Fourier transform.
 
-
-::
+.. sagecellserver::
 
     sage: f(t) = sum(sin(n*t)/n for n in range(1, 6))
     sage: f = Piecewise([[(0, 2*pi), f]])
@@ -127,21 +117,17 @@ Decomposition of an example function with the use of Fourier transform.
     sage: sine_coeffs = [N(f.fourier_series_sine_coefficient(i, pi), digits=8) for i in range(20)]
     sage: show(bar_chart(sine_coeffs), figsize=(4, 2))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: Piecewise?
-    <html>...</html>
-
 
 .. end of output
 
 Similar analysis extended to a sawtooth\-like function as well as the functions used with the sound generator as shown in the video.
 
-
-::
+.. sagecellserver::
 
     sage: sawtooth(t) = (pi-t)/2
     sage: sawtooth = Piecewise([[(0, 2*pi), sawtooth]])
@@ -149,10 +135,9 @@ Similar analysis extended to a sawtooth\-like function as well as the functions 
     sage: sine_coeffs = [N(sawtooth.fourier_series_sine_coefficient(i, pi), digits=8) for i in range(20)]
     sage: show(bar_chart(sine_coeffs), figsize=(4, 2))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: triangle1(t) = pi/4*t
     sage: triangle2(t) = pi/4*(pi/2-(t-pi/2))
@@ -164,10 +149,9 @@ Similar analysis extended to a sawtooth\-like function as well as the functions 
     sage: sine_coeffs = [N(triangle.fourier_series_sine_coefficient(i, pi), digits=8) for i in range(20)]
     sage: show(bar_chart(sine_coeffs), figsize=(4, 2))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: upper(t) = 1
     sage: lower(t) = -1
@@ -177,18 +161,15 @@ Similar analysis extended to a sawtooth\-like function as well as the functions 
     sage: sine_coeffs = [N(rectangle.fourier_series_sine_coefficient(i, pi), digits=8) for i in range(20)]
     sage: show(bar_chart(sine_coeffs), figsize=(4, 2))
 
-
 .. end of output
 
 With the use of interact, the code segments above could be combined as follows. Students may now play with different input signal forms:
 
-
-::
+.. sagecellserver::
 
     sage: def pw_sawtooth():
     ....:     sawtooth(t) = (pi-t)/2
     ....:     return Piecewise([[(0, 2*pi), sawtooth]])
-    ....:     
     sage: def pw_triangle():
     ....:     triangle1(t) = pi/4*t
     ....:     triangle2(t) = pi/4*(pi/2-(t-pi/2))
@@ -196,7 +177,6 @@ With the use of interact, the code segments above could be combined as follows. 
     ....:     return Piecewise([[(0, pi/2), triangle1],
     ....:                       [(pi/2, 3*pi/2), triangle2],
     ....:                       [(3*pi/2, 2*pi), triangle3]])
-    ....:                       
     sage: def pw_rectangle():
     ....:     upper(t) = 1
     ....:     lower(t) = -1
@@ -212,13 +192,11 @@ With the use of interact, the code segments above could be combined as follows. 
     ....:     sine_coeffs = [N(signal.fourier_series_sine_coefficient(i, pi), digits=8) for i in range(20)]
     ....:     show(bar_chart(sine_coeffs), figsize=(4, 2))
 
-
 .. end of output
 
 We can also control the number of iteration. In the example below, the loop superimposes plots of functions and displays the sum together with the components: 
 
-
-::
+.. sagecellserver::
 
     sage: @interact
     sage: def _(n=slider(1, 10, 1)):
@@ -226,26 +204,22 @@ We can also control the number of iteration. In the example below, the loop supe
     ....:     plt = plt+plot(sum(sin(i*t)/i for i in range(1, n+1)), (t, 0, wall), color='black')
     ....:     show(plt)
 
-
 .. end of output
 
 Now the loop creates a complex wave built with harmonics of amplitudes inversely proportional to their frequencies. The number of iterations is controlled by a slider. The functions shown above are added each to other and the sum is plotted.
 
-
-::
+.. sagecellserver::
 
     sage: @interact
     sage: def _(n=slider(1, 20, 1)):
     ....:     wave(t) = sum(sin(i*t)/i for i in range(1, n+1))
     ....:     plot(wave, (t, 0, wall), figsize=(4, 2)).show()
 
-
 .. end of output
 
 The same effect, but without any interaction.
 
-
-::
+.. sagecellserver::
 
     sage: def WaveCmplx(t):
     ....:         w=0
@@ -253,7 +227,6 @@ The same effect, but without any interaction.
     ....:             w=w+1/i*sin(i*t)
     ....:         return w
     sage: plot(WaveCmplx,  (t, 0, wall), figsize=(4,2))
-
 
 .. end of output
 
@@ -265,8 +238,6 @@ From the other side, the participants of the lesson had an opportunity to learn 
 
 My observation is, that students are happy when using ready tools included in this worksheet, but are not able to develop them. My attempts to encourage students to improve above code as a homework failed.
 
- 
-
-Adam Ogaza, 2015\-2017
+            Adam Ogaza, 2015\-2017
 
 

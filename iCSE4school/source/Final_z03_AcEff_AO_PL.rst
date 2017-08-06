@@ -14,7 +14,7 @@ Główne cele lekcji są następujące:
 - Ćwiczenia w uzyciu interaktów i suwaków w Pythonie.
 - Ćwiczenia w tworzeniu animacji w Sage
 
- Uwarunkowania, które trzeba uwzględnić:
+Uwarunkowania, które trzeba uwzględnić:
 
 - Uczniowie posiadają już podstawową wiedzę o falach w ogólności. W szczególnosci znają równanie fali, koncepcję fali stojącej i rezonansu.
 - Jest to drugi kontakt uczniów z animacjami w Pythonie. Uczestniczyli już w lekcji informatyki specjalnie poświęconej temu zagadnieniu.
@@ -57,10 +57,9 @@ Problemy fizyczne dyskutowane w poniższym kodzie i wykresach są następujące:
 
 **Dudnienia**
 
-Prosty przykład wykresu z ustalonymi częstotliwościami i fazami początkowymi, które mogą być zmieniane wewnątrz kodu. Rezultaty tych zmian obserwujemy na wykresie.****
+Prosty przykład wykresu z ustalonymi częstotliwościami i fazami początkowymi, które mogą być zmieniane wewnątrz kodu. Rezultaty tych zmian obserwujemy na wykresie.
 
-
-::
+.. sagecellserver::
 
     sage: # **kwarg pozwala na dodanie kolejnych "nazwanych" parametrów
     sage: # dudnienia to funkcja zwracająca wykres nałożonych na siebie funkcji y1 i y2
@@ -71,13 +70,11 @@ Prosty przykład wykresu z ustalonymi częstotliwościami i fazami początkowymi
     ....:     return   plot(y, (t, 0, 10),ymax=A1+A2,ymin=-(A1+A2),**kwarg )
     sage: dudnienia(figsize=(4,2))
 
-
 .. end of output
 
 Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostoty wszystkie amplitudy sa równe.
 
-
-::
+.. sagecellserver::
 
     sage: def envelope(omega1, omega2, a, phase, t0):
     ....:     f(t) = 2*a*cos((omega1-omega2)*(t-t0)/2-phase/2)
@@ -96,10 +93,9 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
     ....:     return plt
     sage: beat(t0=2.5, figsize=(4, 2))
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # Suwak zmieniający przesunięcie czasowe
     sage: @interact
@@ -107,10 +103,9 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
     ....:     plt = beat(t0=t0, figsize=(4,2))
     ....:     show(plt)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # Regulacja częstotliwości drugiej fali
     sage: @interact
@@ -119,10 +114,9 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
     ....:     plt = beat(t0=t0 , omega2=omega2, figsize=(4,2))
     ....:     show(plt)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # plts - zbiór wykresów dla argumentu czasowego t0 iterowanego w petli.
     sage: plts = [dudnienia(t0=t0_,figsize=(4,2)) for t0_ in srange(0,6.3,0.2)]
@@ -132,44 +126,37 @@ Bardziej złożony wykres zawierający parametry funkcji i obwiedni. Dla prostot
     sage: # Przygotowanie dla kolejnych obliczeń.
     sage: anim = animate(plts)
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: plots = [beat(t0=t0, figsize=(4, 2)) for t0 in sxrange(0, 2*pi, pi/10)]
     sage: graphics_array(plots, ncols=4).show()
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: # Gotowa animacja. Widzimy sekwencję wykresów dla różnych wartości argumentu czasowego.
     sage: # %time
     sage: anim.show()
 
-
 .. end of output
 
 Inne podejście wykorzystujące wykresy przygotowane powyżej.
 
-
-::
+.. sagecellserver::
 
     sage: animate(plots).show()
-
 
 .. end of output
 
 Animacja wskazująca wpływ drugiej częstotliwości.
 
-
-::
+.. sagecellserver::
 
     sage: plots = [beat(omega2=omega2, plot_envelope=False, figsize=(4, 2)) for omega2 in sxrange(5, 15, 0.2)]
     sage: animate(plots).show()
-
 
 .. end of output
 
@@ -177,8 +164,7 @@ Animacja wskazująca wpływ drugiej częstotliwości.
 
 Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniowie mogą manipulować wartościami wszystkich parametrów (co było przedmiotem ćwiczeń).****
 
-
-::
+.. sagecellserver::
 
     sage: # Półautomatyczne sterowanie kolorami w pętli
     sage: A=1
@@ -189,13 +175,11 @@ Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniow
     sage: # This plots show time evolution of standing wave. Students may manipulate the constants
     sage: sum( [plot(A*sin(omega*(t/delay-x/v))+A*sin(omega*(t/delay+x/v)),(x,0,20),figsize=6,color=hue(t/t_max)) for t in srange(0,t_max,1.0)] )
 
-
 .. end of output
 
-Dla lepszego umaocznienia ewolucji czasowej fali stojącej, warto zastosować animację. Dodatkowy walor dydaktyczny stanowi wyświetlenie fal biegnących. Zastosowano argument w postaci*x\-vt*    zamiast   *t\-x/v*   by uniknąć problemów matematycznych dla prędkości zmierzającej do zera.
+Dla lepszego umaocznienia ewolucji czasowej fali stojącej, warto zastosować animację. Dodatkowy walor dydaktyczny stanowi wyświetlenie fal biegnących. Zastosowano argument w postaci *x\-vt*    zamiast   *t\-x/v*   by uniknąć problemów matematycznych dla prędkości zmierzającej do zera.
 
-
-::
+.. sagecellserver::
 
     sage: def running_wave(a=1, omega=1, v=10, t=0):
     ....:     wave(x) = a*sin(omega*(x-v*t))
@@ -209,16 +193,13 @@ Dla lepszego umaocznienia ewolucji czasowej fali stojącej, warto zastosować an
     ....:         for t in sxrange(0, 2*pi/v, pi/(10*v))]
     sage: animate(plts).show()
 
-
 .. end of output
 
 Tablica grafik pomocna do bardziej szczegółowej analizy ewolucji czasowej.
 
-
-::
+.. sagecellserver::
 
     sage: graphics_array(plts[0:6], ncols=3).show()
-
 
 .. end of output
 
@@ -226,8 +207,7 @@ Tablica grafik pomocna do bardziej szczegółowej analizy ewolucji czasowej.
 
 Ruch impulsu falowego. Zdaję sobie sprawę, że tak zdefiniowany impuls jest niefizyczny z powodu nieciagłości w pochodnej, lecz jest to pierwsze podejście do tego typu animacji. Uczniowie zostali poinformowani o watpliwościach natury fizycznej; przykład ma raczej ilustrować jak radzić sobie z takimi animacjami z punktu widzenia samego programowania.
 
-
-::
+.. sagecellserver::
 
     sage: def pulse1(x):
     ....:     if x>=0 and x<=4*pi:
@@ -235,14 +215,11 @@ Ruch impulsu falowego. Zdaję sobie sprawę, że tak zdefiniowany impuls jest ni
     ....:     else:
     ....:         return 0.0
 
-
 .. end of output
 
 Dwa impulsy biegnące w przeciwnych kierunkach.
 
-
-
-::
+.. sagecellserver::
 
     sage: var('x')
     sage: A1 = 1
@@ -257,16 +234,13 @@ Dwa impulsy biegnące w przeciwnych kierunkach.
     ....:     plt = Graphics()
     ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t),(x,x0,1),figsize=(12,4),thickness=1)
     ....:     plt += plot( lambda x:pulse1(k*(x-x1)+c*t),(x,x0,2),color='red',thickness=1)
-    ....:     
     ....:     plt.show()
-
 
 .. end of output
 
 Złożenie impulsu biegnącego i odbitego.
 
-
-::
+.. sagecellserver::
 
     sage: var('x')
     sage: A1 = 1
@@ -282,13 +256,11 @@ Złożenie impulsu biegnącego i odbitego.
     ....:     plt += plot( lambda x:pulse1(k*(x-x0)-c*t)+pulse1(k*(x-x1)+c*t),(x,x0,0),figsize=(12,4),thickness=1,ymin=-2,ymax=2)
     ....:     plt.show()
 
-
 .. end of output
 
 Cyfrowe odbicie fali
 
-
-::
+.. sagecellserver::
 
     sage: %time
     sage: import numpy as np 
@@ -309,26 +281,18 @@ Cyfrowe odbicie fali
     ....:     unew[1:-1] = 2.*u[1:-1] - u0[1:-1] + dt**2 *(c2[1:-1]/dx**2*np.diff(u,2))
     ....:     u0=u.copy()
     ....:     u=unew.copy()
-    ....:     
     ....:     u[-1] = u[-2]
     ....:     u[0] = u[1]
-    ....:   
     ....:     u[-1] = 0
     ....:     u[0] = 0
-    ....:     
     ....:     if dt*i/T*2.0*np.pi< 4*np.pi:
     ....:         u[0] = 0.5*np.sin(dt*i/T*2.0*np.pi)
-    ....:     
     ....:     if i%50==0:
     ....:         ulst.append(u.copy())
-    0.4047
-    Traceback (most recent call last):
-    ...
-    TypeError: 'tuple' object is not callable
 
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: @interact
     sage: def _(ith=slider(range(len(ulst)))):
@@ -336,21 +300,18 @@ Cyfrowe odbicie fali
     ....:     plt =  line(zip(x,u),figsize=(12,5),ymin=-1,ymax=1) 
     ....:     plt.show()
 
-
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: len(ulst)
-    1
-
+ 
 .. end of output
 
-::
+.. sagecellserver::
 
     sage: plts = [line(zip(x,u),figsize=(6,2),ymin=-1,ymax=1) for u in ulst[::8]]
     sage: animate(plts).show()
-
 
 .. end of output
 
