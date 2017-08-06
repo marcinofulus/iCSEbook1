@@ -50,6 +50,7 @@ Materiały dydaktyczne: Fizyka
    Final_z03_AcEff_AO_PL.rst              
    Final_z03_AcEff_AO_EN.rst                                                   
    Final_z04_AccMotion_AO_PL.rst
+   Final_z05_Collisions_AO_PL.rst
 
 
 Materiały dydaktyczne w realizacji
@@ -59,7 +60,6 @@ Materiały dydaktyczne w realizacji
    :maxdepth: 1
 
    Final_z04_AccMotion_AO_EN.rst
-   Final_z05_Collisions_AO_PL.rst
    Final_z05_Collisions_AO_EN.rst
 
 

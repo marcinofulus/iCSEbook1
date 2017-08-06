@@ -3,9 +3,6 @@
 Examining vibrations of a string
 ================================
 
-
-*Teaching materials for teachers*
-
 Introduction
 ------------
 **The aims of lesson:**
@@ -146,4 +143,4 @@ I will not describe the individual student’s conclusions, because they are all
 
 The last edition (in April 2017) was the most successfull. Next generation of students became skilled in attaching errorbars to graphs, using Numpy library. Some of them brought their own professional music equipment and made really serious scientific investigation. Like one year earlier, I qualified the best works for translation, which students did on their own perfect. The best homeworks are attached in separate files.
 
-
+    Adam Ogaza, 2015-17

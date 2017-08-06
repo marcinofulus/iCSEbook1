@@ -165,5 +165,4 @@ Nie będę opisywać indywidualnych wniosków uczniów, ponieważ są one wszyst
 
 Ostatnia edycja tej lekcji (kwiecień 2017) odniosła największy sukces. Kolejny rocznik uczniów posiadł umiejętność dodawania do wykresu prostokątów błędów przy użyciu biblioteki numpy. Niektórzy uczniowie przyniesli na lekcję swój profesjonalny sprzęt muzyczny i przeprowadzili naprawdę poważne badania naukowe. Podobnie jak rok wcześniej, zakwalifikowałem najlepsze prace do tłumaczenia, z którego uczniowie wywiązali się doskonale. Najlepsze prace domowe zawarte są w oddzielnych plikach.
 
-
-
+    Adam Ogaza 2015-17
