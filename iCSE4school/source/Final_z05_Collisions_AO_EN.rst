@@ -7,46 +7,46 @@ Collisions
 Description of the problem
 --------------------------
 
-Przedstawiony w niniejszym dokumencie eksperyment realizowany był na zajęciach pozalekcyjnych i miał status zadania dodatkowego. Zainteresowani uczniowie mogli go przeprowadzić, sfilmować i opisać w formie sprawozdania, za które mogli otrzymać dodatkową ocenę.
+The experiment presented in this document has been accomplished during facultative activities and has the status of optional task. Interested pupils might conduct it, film it and describe in a report, additionally evaluated.
 
-Eksperyment polega na przeanalizowaniu zderzenia centralnego 2 ciał o znanych masach na torze powietrznym. Oryginalne slizgacze na torze wyposażone były w spężyste metalowe zderzaki. Ponieważ zauważyłem, że podczas zderzeń część energii rozprasza się, powodując trwałe odkształcenia zderzaków, zastąpiłem je odpychającymi się magnesami neodymowymi. Można więc oczekiwać, że obecnie zderzenia będą doskonale sprężyste, a więc zachowany będzie zarówno pęd, jak i energia kinetyczna. Tak zaprojektowany eksperyment stwarza również możliwość dokładniejszego zbadania charakteru siły magnetycznej.
+The task is to analyze a central collision of 2 bodies of known masses on air truck. The original gliders of air track were equipped with elastic metal bumpers. Because I noticed, that during collisions part of the energy dissipates, causing permanent deformations of bumpers, I replaced them by repelling neodymium magnets. One can expect, that now the collisions will be perfectly elastic, so that both momentum and kinetic energy will be conserved. Such experiment gives also opportunity for detailed investigation the nature of magnetic forces.
 
-Zderzenia trwały około 3 sekund i zostały sfilmowane kamerami HD. Przykładowy film znajduje się pod adresem: https://youtu.be/JSpKctrX_YM
+Collisions lasted about 3 seconds and were filmed using HD cameras. Exemplary film is available here: https://youtu.be/JSpKctrX_YM
 
-Zadaniem uczniów było odczytywanie (klatka po klatce) położenia obydwu ślizgaczy na tle skali toru powietrznego. Ślizgaczy było kilka do wyboru, każdy o innej masie. Zmienne :math:`x_1` i :math:`x_2` oznaczają współrzędne konców podstawy ślizgaczy zwróconych ku sobie. Przyklejone do ślizgaczy magnesy wystawały o :math:`d_1` i :math:`d_2`, tak więc odległość między ich biegunami była mniejsza od :math:`|x_2-x_1|` o :math:`d_1+d_2`. Zbiór danych eksperymentalnych jest więc następujący:
+The pupil's task was to read out (frame by frame) positions of both gliders from the air track's scale. There were a few gliders to choose from, each of different mass. The variables :math:`x_1` and :math:`x_2` denote coordinates of the ends of gliders' grounds turned to each other. The magnets glued to gliders jutted by :math:`d_1` and :math:`d_2`, so that the distance between poles was less from :math:`|x_2-x_1|` by :math:`d_1+d_2`. The set of experimental data was the following:
 
-- Masy ślizgaczy: :math:`m_1` i :math:`m_2` od około 0,17 kg do ponad 0,4 kg
+- Gliders' masses: :math:`m_1` and :math:`m_2` from about 0,17 kg to over 0,4 kg
 
-- Rozmiary magnesów i ich mocowania: :math:`d_1` i :math:`d_2`, około 0,01 m
+- Sizes of magnets and their fastening: :math:`d_1` and :math:`d_2`, about 0,01 m
 
-- Czas był obliczany iteracyjnie i, w zależności od kamery, narastał z krokiem 1/25 s lub 1/30 s
+- Time was calculated iteratively and, depending on the camera, was increasing with the step 1/25 s or 1/30 s
 
-- Współrzędne ślizgaczy :math:`x_1(t)` i :math:`x_2(t)` odczytywane z filmu i wyrażone w metrach. Jeśli ślizgacze poruszały się w kierunku malejących wartości na skali, ich prędkości i pędy są ujemne.
+- Gliders' coordinates :math:`x_1(t)` i :math:`x_2(t)` red out from the film and expressed in meters. If gliders were moving towards decreasing values on the scale, their velocities and momentums were negative.
 
-Na podstawie powyższych danych należało wykonać i zinterpretować następujące wykresy:
+On the basis of above data, one should draw and interpret the following charts:
 
-- :math:`x_1(t)` i :math:`x_2(t)` - położenia ślizgaczy w funkcji czasu
+- :math:`x_1(t)` and :math:`x_2(t)` - gliders' positions as a function of time.
 
-- :math:`v_1(t)` i :math:`v_2(t)` - prędkości chwilowe ślizgaczy w poszczególnych klatkach. Jesli punkty wykresu tworzyły  chaotyczną chmurę (zaszumienie danych), radziłem, by uśredniać prędkości z 2 sąsiednich klatek.
+- :math:`v_1(t)` and :math:`v_2(t)` - gliders' instantaneous velocities in particular frames. When points of charts created a chaotic cloud (data noising), I advised to take averages from 2 neighbor frames.
 
-- :math:`p_1(t), p_2(t)` i :math:`p_c(t)` - pędy poszczególnych ślizgaczy i całego układu. Należało zbadać, czy pęd układu został zachowany.
+- :math:`p_1(t), p_2(t)` and :math:`p_c(t)` - momentums of particular gliders and the whole system. One should check, whether the total momentum was conserved.
 
-- :math:`E_1(t), E_2(t)` i :math:`E_c(t)` - energie kinetyczne ślizgaczy i ich suma. Należało zbadać, czy energia kinetyczna jest zachowana.
+- :math:`E_1(t), E_2(t)` and :math:`E_c(t)` - gliders' kinetic energies and their sum. One should check, whether the total kinetic energy was conserved.
 
-- :math:`a_1(t)` i :math:`a_2(t)` - przyspieszenia, jakim podlegają ślizgacze.
+- :math:`a_1(t)` and :math:`a_2(t)` - gliders' accelerations.
 
-- :math:`F_1(t)` i :math:`F_2(t)` - siły działające na ślizgacze
+- :math:`F_1(t)` and :math:`F_2(t)` - forces applied to gliders.
 
-- :math:`F(r)` - zależność siły magnetycznej od odległości między biegunami (z uwzględnieniem rozmiarów wystających z wózków magnesów).
+- :math:`F(r)` - dependence of magnetic force on the distance between poles.
 
-Uwagi o realizacji
-------------------
+Remarks concerning implementation
+---------------------------------
 
-**Dane pierwszego ucznia** 
+**Data of first student** 
 
-Było to pionierskie wykonanie tego doświadczenia w czerwcu 2015 przez pojedynczego ochotnika z pierwszego rocznika uczniów realizujących projekt.
+It was a trailblazing performance of this experiment in April 2016, done by a single volunteer from the firs age-group of pupils involved in the project.
 
-Wyniki pomiarów i wykresy :math:`x_1(t)` i :math:`x_2(t)`
+Results of measurements and charts :math:`x_1(t)` and :math:`x_2(t)`:
 
 .. sagecellserver::
 
@@ -65,7 +65,7 @@ Wyniki pomiarów i wykresy :math:`x_1(t)` i :math:`x_2(t)`
 
 .. end of output
 
-Wykresy :math:`v_1(t)` i :math:`v_2(t)` 
+Charts :math:`v_1(t)` and :math:`v_2(t)`: 
 
 .. sagecellserver::
 
@@ -78,7 +78,8 @@ Wykresy :math:`v_1(t)` i :math:`v_2(t)`
 
 .. end of output
 
-Widać na nich duży szum spowodowany ograniczoną rozdzielczością odczytu położenia i czasu. Wystarczą niewielkie fluktuacje przyrostów położenia w poszczególnych klatkach filmu, niewidoczne na wykresach z położeniem, a wykresy prędkości rozsypują się. Szum danych przenosi się (i potęguje) na wykresach pędów, enegii kinetycznych (tu mamy kwadrat prędkości!), przyspieszeń i sił. Poradziłem więc uśredniać prędkości na dwóch sąsiednich przedziałach (klatkach filmu):
+
+We see a big noise caused by a limited resolution in reading out the coordinates in time. A small fluctuations of position increases in respective frames, invisible on position charts, are enough to spill the chart of velocity. The data noise devolves (and increases) into charts of momentums, kinetic energies (here we have a square of speed), accelerations and forces. I advised to take average speed for every two neighbor frames:
 
 .. sagecellserver::
 
@@ -91,15 +92,15 @@ Widać na nich duży szum spowodowany ograniczoną rozdzielczością odczytu po�
 
 .. end of output
 
-Szum się zmmiejszył, ale zmalała też ilość punktów wykresu i w ogóle rozdzielczość czasowa, z jaką badamy zjawisko. A najbardziej interesujące procesy zachodzą w krótkiej chwili największego zbliżenia ślizgaczy.
+The noise decreased, but it refers also to the amount of chart points and time resolution of investigated phenomenon. We lose the most interesting processes going on in a short while during the closest gliders' approach.
 
-Uczeń sporządził pozostałe wykresy, napisał sprawozdanie i wyciągnął wnioski, ale w chmurze punktów pomiarowych trudno było dopatrzyć się ciekawych szczegółów. Dane można odszumić, stosując bardziej zaawansowane metody matematyczne, daleko wykraczające poza możliwości ucznia szkoły średniej.
+The pupil made the rest of charts, wrote the report and drew conclusions, but in the cloud of measurement points it was difficult to discern any interesting details. The noise can be reduced by advanced mathematical means, far away from high school pupil's capabilities.
 
-**Dane drugiego ucznia** 
+**Data of second student** 
 
-W październiku 2016 roku cała grupa kolejnego rocznika uczniów sfilmowała swoje zderzenia. Starano się zbadać odmienne przypadki, zmieniając masy wózków, wartości i zwroty predkości lub ustawiając jeden ze ślizgaczy nieruchomo (jako tarczę). Przytaczam dane autora najlepszego opracowania (dotyczą filmu cytowanego wyżej).
+In October 2016 the whole group of next pupils age-group filmed their collisions. They tried to investigate different cases, varying the gliders' masses, values and senses of velocity or putting one glider motionless (as a target). I dish up data from the best elaboration (referring to film quoted above).
 
-Wyniki pomiarów i wykresy :math:`x_1(t)` i :math:`x_2(t)`
+Results of measurements and charts :math:`x_1(t)` and :math:`x_2(t)`
 
 .. sagecellserver::
 
@@ -127,9 +128,9 @@ Wyniki pomiarów i wykresy :math:`x_1(t)` i :math:`x_2(t)`
   xt
 .. end of output
 
-Wykresy :math:`v_1(t)` i :math:`v_2(t)`
+Charts :math:`v_1(t)` and :math:`v_2(t)`
 
-Od razu zastosowano uśrednianie po sąsiednich klatkach, by zmniejszyć szum.
+The averaging over neighbor frames was applied immediately, to reduce the noise.
 
 .. sagecellserver::
 
@@ -143,14 +144,14 @@ Od razu zastosowano uśrednianie po sąsiednich klatkach, by zmniejszyć szum.
 
 Nie będę przedstawiał sposobu tworzenia dalszych wykresów, gdyż z punktu widzenia technik programowania nie ma w nich niczego odkrywczego. Uczniowie są w stanie samodzielnie napisać kod pozostałych komórek. Wystarczy umieć posługiwać się pętlą, znać instrukcje tworzenia wykresów i dopasowywania prostej do punktów pomiarowych. Ewentualne wątpliwości rozwieje oryginalna praca domowa ucznia:
 
-wersja polska: https://sage01.icse.us.edu.pl/home/pub/146/
+Polish version: https://sage01.icse.us.edu.pl/home/pub/146/
 
-wersja angielska: https://sage01.icse.us.edu.pl/home/pub/147/ 
+English version: https://sage01.icse.us.edu.pl/home/pub/147/ 
 
 Dodam tylko, że nie w pełni zgadzam się z przedstawionymi tam wnioskami końcowymi. Ponadto, moim zdaniem, uczeń zupełnie niepotrzebnie dopasowywał wielomiany 12 stopnia do wykresów prędkości. Nie wiem, czemu to miało służyć.
 
-Wnioski
--------
+Conclusions
+-----------
 
 Przedstawione doświadczenie było jednym z ciekawszych w mojej karierze zawodowej. Ze względu na mnogość różnych sytuacji (dowolne prędkości, kilka mas ślizgaczy do wyboru), można było uzyskać zupełnie różne rezultaty. Uczniowie mieli też swobodę w wyciąganiu wniosków, była to ich samodzielna praca badawcza. Na przykład w cytowanej pracy, na wykresie energii kinetycznej widać wyraźne minimum w chwili największego zbliżenia wózków. Uczeń zinterpretował to jako błąd pomiarowy spowodowany zbyt szybko zmieniającymi się prędkościami. Moim zdaniem jest to moment, w którym energia kinetyczna częściowo zamieniła sie w energię oddziaływań magnetycznych. Ale dlaczego, w takim razie, widać też załamanie na wykresie pędu całkowitego?
 

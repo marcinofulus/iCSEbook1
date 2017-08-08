@@ -41,7 +41,7 @@ Uwagi o realizacji
 
 **Dane pierwszego ucznia** 
 
-Było to pionierskie wykonanie tego doświadczenia w czerwcu 2015 przez pojedynczego ochotnika z pierwszego rocznika uczniów realizujących projekt.
+Było to pionierskie wykonanie tego doświadczenia w kwietniu 2016 przez pojedynczego ochotnika z pierwszego rocznika uczniów realizujących projekt.
 
 Wyniki pomiarów i wykresy :math:`x_1(t)` i :math:`x_2(t)`
 
@@ -153,7 +153,7 @@ Przedstawione doświadczenie było jednym z ciekawszych w mojej karierze zawodow
 
 Doświadczenie dotyczyło w zasadzie czystej mechaniki, ale przy okazji dało sposobność zbadania charakteru siły magnetycznej. Uczniowie mogli dopasowywać do wykresu :math:`F(r)` dowolne krzywe - nie narzucałem tutaj rozwiązań. Należało spojrzeć na dane i domyślić się, jakiego typu krzywa będzie najbardziej odpowiednia.
 
-Jak widać z powyższej analizy, kluczowe znaczenie ma precyzyjny odczyt położeń ślizgaczy na poszczególnych klatkach filmu. Nie jest to łatwe i wymaga zastosowania kamery o dobrych parametrach. Szum danych można częśiowo usunąć, ale odbywa sie to kosztem obniżenia rozdzielczości, z jaką widzimy całe zjawisko.
+Jak widać z powyższej analizy, kluczowe znaczenie ma precyzyjny odczyt położeń ślizgaczy na poszczególnych klatkach filmu. Nie jest to łatwe i wymaga zastosowania kamery o dobrych parametrach. Szum danych można częściowo usunąć, ale odbywa sie to kosztem obniżenia rozdzielczości, z jaką widzimy całe zjawisko.
 
 Wartością dodatkową była owocna współpraca z anglistami, pod okiem których autorzy najlepszych prac dokonali ich tłumaczenia. Uczniowie klas ścisłych realizują w naszej szkole dodatkowy przedmiot o nazwie *język angielski dla inżynierów*. Doświadczenie z fizyki stworzyło możliwość przećwiczenia języka technicznego na żywym przykładzie i otrzymania dodatkowej oceny z tego przedmiotu.
 

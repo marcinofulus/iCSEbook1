@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Examining vibrations of a string
-================================
+Examining string vibrations 
+===========================
 
 Introduction
 ------------
@@ -142,5 +142,13 @@ This lesson was a great success. Students liked it very much. I managed to integ
 I will not describe the individual student’s conclusions, because they are all included in the original works.
 
 The last edition (in April 2017) was the most successfull. Next generation of students became skilled in attaching errorbars to graphs, using Numpy library. Some of them brought their own professional music equipment and made really serious scientific investigation. Like one year earlier, I qualified the best works for translation, which students did on their own perfect. The best homeworks are attached in separate files.
+
+Work 1, Polish version: https://sage01.icse.us.edu.pl/home/pub/184/
+
+Work 1, English version: https://sage01.icse.us.edu.pl/home/pub/179/
+
+Work 2, Polish version: https://sage01.icse.us.edu.pl/home/pub/170/
+
+Work 2, English version: https://sage01.icse.us.edu.pl/home/pub/172/
 
     Adam Ogaza, 2015-17
