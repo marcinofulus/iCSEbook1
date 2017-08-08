@@ -142,23 +142,23 @@ The averaging over neighbor frames was applied immediately, to reduce the noise.
   vt
 .. end of output
 
-Nie będę przedstawiał sposobu tworzenia dalszych wykresów, gdyż z punktu widzenia technik programowania nie ma w nich niczego odkrywczego. Uczniowie są w stanie samodzielnie napisać kod pozostałych komórek. Wystarczy umieć posługiwać się pętlą, znać instrukcje tworzenia wykresów i dopasowywania prostej do punktów pomiarowych. Ewentualne wątpliwości rozwieje oryginalna praca domowa ucznia:
+I will not depict the way of creating further charts, because from the IT point of view there is nothing revelatory in it. Pupils are able to write the proper code by themselves. It is enough to know, how loops work, how to create charts and fit functions to measurement points. In case of doubts, the original student's homework will help:
 
 Polish version: https://sage01.icse.us.edu.pl/home/pub/146/
 
 English version: https://sage01.icse.us.edu.pl/home/pub/147/ 
 
-Dodam tylko, że nie w pełni zgadzam się z przedstawionymi tam wnioskami końcowymi. Ponadto, moim zdaniem, uczeń zupełnie niepotrzebnie dopasowywał wielomiany 12 stopnia do wykresów prędkości. Nie wiem, czemu to miało służyć.
+I will add only, that I do not share all the presented there final conclusions. Furthermore, in my opinion, the author quite unnecessary fitted 12th degree polynomials to the charts of velocity. I do not know, what was it for.
 
 Conclusions
 -----------
 
-Przedstawione doświadczenie było jednym z ciekawszych w mojej karierze zawodowej. Ze względu na mnogość różnych sytuacji (dowolne prędkości, kilka mas ślizgaczy do wyboru), można było uzyskać zupełnie różne rezultaty. Uczniowie mieli też swobodę w wyciąganiu wniosków, była to ich samodzielna praca badawcza. Na przykład w cytowanej pracy, na wykresie energii kinetycznej widać wyraźne minimum w chwili największego zbliżenia wózków. Uczeń zinterpretował to jako błąd pomiarowy spowodowany zbyt szybko zmieniającymi się prędkościami. Moim zdaniem jest to moment, w którym energia kinetyczna częściowo zamieniła sie w energię oddziaływań magnetycznych. Ale dlaczego, w takim razie, widać też załamanie na wykresie pędu całkowitego?
+The presented experiment was one of most interesting in my professional career. Because of the multiplicity of different situations (arbitrary velocities, more gliders to choose, one could obtain quite different results. Students had freedom in drawing conclusions, it was their independed research work. For example, in the quoted work, at the chart of kinetic energy there is an evident minimum at the moment of closest approach of gliders. Student interpretent it as a measuring error caused by too rapid change of speeds. In my opinion, it is a moment, when kinetic energy partially remolded into energy of magnetic interactions. But why, in such case, there is also a visible small breakdown at the total momentum chart?
 
-Doświadczenie dotyczyło w zasadzie czystej mechaniki, ale przy okazji dało sposobność zbadania charakteru siły magnetycznej. Uczniowie mogli dopasowywać do wykresu :math:`F(r)` dowolne krzywe - nie narzucałem tutaj rozwiązań. Należało spojrzeć na dane i domyślić się, jakiego typu krzywa będzie najbardziej odpowiednia.
+This experiment basically pertained to pure mechanics, but by the way it gave an opportunity to explore the nature of magnetic force. Students could fit any curves to the chart :math:`F(r)` - I did not impose ready solutions. One should look at the data and figure out, what type of curve will be the most suitable.
 
-Jak widać z powyższej analizy, kluczowe znaczenie ma precyzyjny odczyt położeń ślizgaczy na poszczególnych klatkach filmu. Nie jest to łatwe i wymaga zastosowania kamery o dobrych parametrach. Szum danych można częśiowo usunąć, ale odbywa sie to kosztem obniżenia rozdzielczości, z jaką widzimy całe zjawisko.
+How it can be seen from above analysis, the precision in reading out the positions of gliders at individual frames, is essential. It is not easy and requires use of good camera. The data noise may be partially removed, but it decreases the resolution, in which we see the whole phenomenon.
 
-Wartością dodatkową była owocna współpraca z anglistami, pod okiem których autorzy najlepszych prac dokonali ich tłumaczenia. Uczniowie klas ścisłych realizują w naszej szkole dodatkowy przedmiot o nazwie *język angielski dla inżynierów*. Doświadczenie z fizyki stworzyło możliwość przećwiczenia języka technicznego na żywym przykładzie i otrzymania dodatkowej oceny z tego przedmiotu.
+The added value of the whole enterprise was a fruitful cooperation with English teachers. They supervised translations done by authors of the best homeworks. Students in science profile classes realize an additional subject called *English for engineers*. Experiment in physics created opportunity to exercise technical language on living example and get additional assessment for it.
 
     Adam Ogaza, 2017.

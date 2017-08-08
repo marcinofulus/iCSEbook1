@@ -52,14 +52,6 @@ Materiały dydaktyczne: Fizyka
    Final_z04_AccMotion_AO_PL.rst
    Final_z04_AccMotion_AO_EN.rst
    Final_z05_Collisions_AO_PL.rst
-
-
-Materiały dydaktyczne w realizacji
----------------------
-
-.. toctree::
-   :maxdepth: 1
-
    Final_z05_Collisions_AO_EN.rst
 
 
@@ -69,7 +61,6 @@ Materiały dydaktyczne - wersje niepoprawione
 .. toctree::
    :maxdepth: 1
 
-   iCSE4s_FIZ_z05v1_PL_AO_Collisions.rst
    iCSE4s_MAT_z10v1__EN_KO_Approx.rst
    iCSE4s_MAT_z12_absx.rst
    iCSE4s_MAT_z13v0_EN_integration.rst
