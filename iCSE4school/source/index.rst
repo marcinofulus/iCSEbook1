@@ -28,8 +28,9 @@ Materiały dydaktyczne: Matematyka
    :maxdepth: 1
  
    iCSE4s_MAT_z19_Limit_and_continuity_of_a_function_at_a_point_ENG_v0.1.rst
-   refutacje_EN.rst
-   refutacje_PL.rst
+   from_point_to_point.rst
+   od_punktu_do_punktu.rst
+   amazing_approximation.rst
    fraktal.rst
    iCSE4s_MAT_z07v2_EN_KJ_Math_of_RSA_cipher.rst
    iCSE4s_MAT_z07v2_PL_KJ_Math_of_RSA_cipher.rst
@@ -61,7 +62,6 @@ Materiały dydaktyczne - wersje niepoprawione
 .. toctree::
    :maxdepth: 1
 
-   iCSE4s_MAT_z10v1__EN_KO_Approx.rst
    iCSE4s_MAT_z12_absx.rst
    iCSE4s_MAT_z13v0_EN_integration.rst
    iCSE4s_MAT_z18v0.1_Differential_equations_ENG.rst
