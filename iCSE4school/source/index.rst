@@ -31,6 +31,7 @@ Materiały dydaktyczne: Matematyka
    from_point_to_point.rst
    od_punktu_do_punktu.rst
    amazing_approximation.rst
+   zadziwiajace_przyblizenie.rst
    fraktal.rst
    iCSE4s_MAT_z07v2_EN_KJ_Math_of_RSA_cipher.rst
    iCSE4s_MAT_z07v2_PL_KJ_Math_of_RSA_cipher.rst

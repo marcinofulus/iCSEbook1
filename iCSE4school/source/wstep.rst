@@ -5,7 +5,7 @@ Wstęp
 
 
 
-Oddajemy Państwu materiały edukacyjne będące wytworem projektu
+Oddajemy Państwu materiały edukacyjne będące produktem projektu
 „Zintegrowane nauczanie przedmiotów ścisłych z perspektywą
 obliczeniową - iCSE4school„
 
