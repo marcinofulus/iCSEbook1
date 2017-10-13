@@ -60,8 +60,8 @@ Mission: Creating a viable free open source alternative to Magma, Maple, Mathema
 
 
 
-Modele nauczania HS
--------------------
+Modele nauczania
+----------------
 
 Z punktu widzenia aktywności ucznia modele nauczania można podzielić na
 grupy:
@@ -106,8 +106,8 @@ skutecznie przygotowuje do samodzielności i uczenia się przez całe życie
 (LLL), zatem jest uniwersalna, niezależnie od przedmiotu na którym jest
 stosowana.
 
-Metody nauczania  HS
---------------------
+Metody nauczania
+----------------
 
 W literaturze przedmiotu możemy napotkać wiele sposobów podziału
 metod nauczania. Dla przykładu Franciszek Szlosek proponuje podział

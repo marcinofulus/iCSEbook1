@@ -1,112 +1,11 @@
-refutacje EN
+From point to point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *This project is the result of activities at The Stefan Batory High School in Chorzów*
 
+Let's think about a graph connected with a function, i.e. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.   That's of cource a continuous line. Really?  
 
-Workshops for teachers: Wroclaw 2017 - I
-++++++++++++++++++++++++++++++++++++++++
-
-Let's see a simple example to work with reStructuredText.
-
-.. admonition:: Starting point
-
-  Let's think about :math:`\sqrt{2}`. How much is it? Perhaps you answer that about :math:`1.41`.   Really?
-  
-At the beginning we recall that :math:`\sqrt{2}` is an irrational number - we can only get close to it. Look at the example below.  
-   
-.. sagecellserver::
-
-  p=2 #change p
-  for n in range(1,6): #change a range
-      p=0.5*(p+2/p)
-      print p
-      print "error =",abs(N(sqrt(2)-p))
-  
-We've used a square-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method):  https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method Perhaps you should change p and a range?
-
-And what's interesting?
-Let's try to transform a formula that has :math:`\sqrt{2}`, for instance
-
-.. math::
-
-  \left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\right)^3.
-
-Everyone has heard about the transformation of expressions that contain numbers that are not rational, so let's get to the tedious work...
-
-.. math::
-
-  \left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\right)^3=\left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\cdot\frac{\sqrt{2}-1}{\sqrt{2}-1}\right)^3=\left(\sqrt{2}-1\right)^6,
-
-
-but
-
-.. math::
-
-  \left(\sqrt{2}-1\right)^6=\left(\left(\sqrt{2}-1\right)^2\right)^3=\left(3-2\sqrt{2}\right)^3,
-  
-and  
-
-.. math::
-
-  \left(\sqrt{2}-1\right)^6=\left(\left(\sqrt{2}-1\right)^3\right)^2=\left(5\sqrt{2}-7\right)^2,
-
-and finally
-
-.. math::
-
-  \left(\sqrt{2}-1\right)^6=\left(5\sqrt{2}-7\right)^2=99-70\sqrt{2}.
-  
-Let
-
-.. math::
-
-  w_1=99-70\sqrt{2},\quad w_2=\left(5\sqrt{2}-7\right)^2,\quad w_3=\left(3-2\sqrt{2}\right)^3,\quad w_4=\left(\sqrt{2}-1\right)^6,\quad w_5=\left(\frac{\sqrt{2}-1}{\sqrt{2}+1}\right)^3.
-
-Of course :math:`w_1=w_2=w_3=w_4=w_5`, but: are there any difference among :math:`w_1,\dots,w_5` when we approach the square-root of two? Let's see...
-We'll assume that the square root of two is equal to :math:`1.44` and you should change this value. 
-
-.. sagecellserver::
-
-  p=1.44     #change p, don't forget about sqrt(2)
-  print 'apr=',p
-  print 'w_1=',N(99-70*p)
-  print 'w_2=',N((5*p-7)^2)
-  print 'w_3=',N((3-2*p)^3)
-  print'w_4=',N((p-1)^6)
-  print 'w_5=',N(((p-1)/(p+1))^3)
-  
-It turns out that the differences among approximations are big, if we accept the square-root of two as :math:`1.41` (and yet many people think of approximations only to parts hundredths). What about the approximations we got by Babylonian method above? Try them!
-
-The differences are large, what we can see, considering graphs related functions connected with :math:`w_1,\dots,w_5`. 
-
-.. sagecellserver::
-
-  @interact
-  def _(xlimits=range_slider(0.5, 2.5, 0.1, default=(0.5, 2.5), label="horizontal range"),
-      ylimits=range_slider(-10, 10, 0.1, default=(-10, 10), label="vertical range")):
-      plt = plot(99-70*x, xlimits, color="red")
-      plt = plt+plot((5*x-7)^2, xlimits, color="blue")
-      plt = plt+plot((3-2*x)^3, xlimits, color="green")
-      plt = plt+plot((x-1)^6, xlimits, color="orange")
-      plt = plt+plot(((x-1)/(x+1))^3, xlimits, color="purple")
-      show(plt, xmin=xlimits[0], xmax=xlimits[1], ymin=ylimits[0], ymax=ylimits[1], figsize=(4, 3))
-  
-At the end we go to ``sqrt(2)``.
-  
-:math:`\verb+sqrt(2)+=\sqrt{2}\quad\textrm{ or }\quad\verb+sqrt(2)+\approx\sqrt{2}?`
-
-Is not that strange?
-
-
-Workshops for teachers: Wroclaw 2017 -  II 
-++++++++++++++++++++++++++++++++++++++++++
-
-.. admonition:: Starting point. Again?!
-
-  Let's think about a graph connected with a function, i.e. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.   That's of cource a continuous line. Really?
-  
 Using SAGE for the preparation of drawings, we can rely on:
 
 1. the description of the function
@@ -116,14 +15,25 @@ Using SAGE for the preparation of drawings, we can rely on:
   a=-2 #change it
   plot(x^2, (x, a, 10))
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/1.png
+       :width: 45%
+         
 2. equation, which we can call "entangled"
 
 .. sagecellserver::
 
   var('y')
   a=3 #change it
-  implicit_plot(((x^2)+(y^2))^2==2*(a^2)*((x^2)-(y^2)),(x,-10,10),(y,-10,10))
+  implicit_plot(((x^2)+(y^2))^2==2*(a^2)*((x^2)-(y^2)),(x,-10,10),
+                (y,-10,10))
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/2.png
+       :width: 45%
+
 3. polar formula
 
 .. sagecellserver::
@@ -131,14 +41,12 @@ Using SAGE for the preparation of drawings, we can rely on:
   a=2 #change it
   polar_plot(a*x, (x, 0, 2*pi))
   
-Sometimes we can see some similarities among the effects of using these different approaches (compare the following example with the second one).
-
-.. sagecellserver::
-
-  a=1 #change it
-  polar_plot((2*(a^2)*cos(2*(x)))^(1/2),(x,0,2*pi))
+.. only:: latex
+          
+    .. figure:: refutacje_media/3.png
+       :width: 45%
   
-In each of these cases, a set of points appears on computer screen - it is fitted in more or less complex formula, but sometimes it leads to an error (like in example above).
+Sometimes we can see some similarities among the effects of using these different approaches: in each of these cases a set of points appears on computer screen - it is fitted in more or less complex formula.
 
 Maybe should we use the simplest method: from point to point? Using recursion?
 
@@ -151,20 +59,30 @@ So we start by placing the point on the screen.
   fig=point((1,3))
   fig
   
-Apparently nothing - so let's put on the screen five points ...
+.. only:: latex
+          
+    .. figure:: refutacje_media/4.png
+       :width: 50%
+
+Apparently nothing - so let's put on the screen five points...
 
 .. sagecellserver::
 
   fig=point((1,3),(1,4),(1,5),(1,6),(1,5))
   fig
   
-After this small error we try to add points.
+After this small planned error we try to add points.
 
 .. sagecellserver::
 
   fig=point((1,3))+point((1,4))+point((1,5))+point((1,6))+point((1,7))
   fig
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/5.png
+       :width: 50%
+
 Note that even with ctr+c+ctrl+v it takes time and it's scary to think about boredom of the placement in this way a hundred points - in a situation where we can see a certain **REGULARITY** in the second coordinate points considered. Therefore, let's use it.
 
 .. sagecellserver::
@@ -173,7 +91,12 @@ Note that even with ctr+c+ctrl+v it takes time and it's scary to think about bor
   for i in range(4,105):
       fig=fig+point((1,i))
   fig
-  
+    
+.. only:: latex
+          
+    .. figure:: refutacje_media/6.png
+       :width: 50%
+
 Change the point size, playing tinge.
 
 .. sagecellserver::
@@ -184,6 +107,12 @@ Change the point size, playing tinge.
       fig=fig+point((1,n),rgbcolor=(0,n/105,0),size=s)
   fig
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/7.png
+       :width: 50%
+       
+
 Do not forget about the possibility of placing the loop in the loop.
 
 .. sagecellserver::
@@ -198,13 +127,18 @@ Do not forget about the possibility of placing the loop in the loop.
           fig=fig+point((n,k),rgbcolor=(0,n/c,0),size=d)
   fig
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/8.png
+       :width: 50%
+
 Looking at the obtained effect we see a problem with the "left" apex of a triangle - try to remove it properly manipulating numbers.
 
 If we did, then we can go to the draw.  
 
 .. sagecellserver::
 
-  n=101 #change it
+  n=1001 #change it
   a=10*random() #why do we use multiplication?
   b=10*random()
   fig=point((a,b))
@@ -214,68 +148,33 @@ If we did, then we can go to the draw.
       fig=fig+point((a,b),color=((1/8)*k,2*k,k)) #change the way of coloring
   fig
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/9.png
+       :width: 40%
+
 In the example above, you can see a kind of chaos... Can you control over the points?
 
-Imagine a situation in which the specified starting point :math:`(a,b)` is transformed in one of eight randomly selected transformations. Each of them consists of two parts: a linear operation on the first coordinate (three numbers :math:`a_i,b_i,c_i`), and linear operations on the second coordinate (three numbers :math:`d_i,e_i,f_i`). After the transformation we obtain a new point :math:`(a,b)`, which is thrown into the described formulas again - and of course, not satisfied with two points, we (computer?) repeat it a hundred times.
+Imagine a situation in which the specified starting point :math:`(a,b)` is transformed in one of eight randomly selected transformations. Each of them consists of two parts: a linear operation on the first coordinate (three numbers :math:`a_i,b_i,c_i`), and linear operations on the second coordinate (three numbers :math:`d_i,e_i,f_i`). After the transformation we obtain a new point :math:`(a,b)`, which is thrown into the described formulas again - and of course, not satisfied with two points, we (computer?) repeat it hundreds of times.
 
-Let look carefully at the source code (especially on records starting with #).  
+Let look carefully at the source code (specially on lines containing #).  
 
 .. sagecellserver::
 
   a=0 #the first coordinate of the starting point
   b=0 #the second coordinate of the starting point
-  d=100 #number of repetitions
-  a1=0.333 #a lengthy list of factors...
-  b1=0
-  c1=-0.333
-  d1=0
-  e1=0.333
-  f1=0.333
-  a2=0.333
-  b2=0
-  c2=0
-  d2=0
-  e2=0.333
-  f2=0.333
-  a3=0.333
-  b3=0
-  c3=0.333
-  d3=0
-  e3=0.333
-  f3=0.333
-  a4=0.333
-  b4=0
-  c4=0.333
-  d4=0
-  e4=0.333
-  f4=0
-  a5=0.333
-  b5=0
-  c5=0.333
-  d5=0
-  e5=0.333
-  f5=-0.333
-  a6=0.333
-  b6=0
-  c6=0
-  d6=0
-  e6=0.333
-  f6=-0.333
-  a7=0.333
-  b7=0
-  c7=-0.333
-  d7=0
-  e7=0.333
-  f7=-0.333
-  a8=0.333
-  b8=0
-  c8=-0.333
-  d8=0
-  e8=0.333
-  f8=0 #and finally the end of the list
+  d=1001 #number of repetitions and lengthy list of factors below...
+  a1=0.333;b1=0;c1=-0.333;d1=0;e1=0.333;f1=0.333
+  a2=0.333;b2=0;c2=0;d2=0;e2=0.333;f2=0.333
+  a3=0.333;b3=0;c3=0.333;d3=0;e3=0.333;f3=0.333
+  a4=0.333;b4=0;c4=0.333;d4=0;e4=0.333;f4=0
+  a5=0.333;b5=0;c5=0.333;d5=0;e5=0.333;f5=-0.333
+  a6=0.333;b6=0;c6=0;d6=0;e6=0.333;f6=-0.333
+  a7=0.333;b7=0;c7=-0.333;d7=0;e7=0.333;f7=-0.333
+  a8=0.333;b8=0;c8=-0.333;d8=0;e8=0.333;f8=0 #and finally the end of the list
   r=point((a,b),axes=False, frame=False,size=0) 
   for c in range(1,d):
-    n=randint(1,8) #draw one of the eight maps
+    n=randint(1,8) #select one of the eight maps
     if n==1:
         a=(a1*a)+(b1*b)+c1
         b=(d1*a)+(e1*b)+f1
@@ -310,7 +209,12 @@ Let look carefully at the source code (especially on records starting with #).
         r=r+point((a,b),axes=False, frame=False,size=5,color='black')     
   show (r, figsize=(8.75,8))
   
-With a hundred repetitions figure seems chaotic - therefore repeat our experiment more times (change d=1000,d=10000 and so on).
+With a hundred repetitions figure seems chaotic - therefore we've repeated our experiment more times (you should change d again).
+
+.. only:: latex
+          
+    .. figure:: refutacje_media/10.png
+       :width: 40%
 
 Do our points put us in something familiar?
 
@@ -323,13 +227,13 @@ But let's try to experiment and answer the following not easy questions:
 * What happens to the built figure, if one of the eight maps we exclude - how can we quickly in the   source code do it?
 * Why is carpet colored in such a way and not another?
 
-We believe that the answers to these questions - based on tested assumptions - will be surprising ...
+We believe that the answers to these questions - based on tested assumptions - will be surprising...
 
 Perhaps more than a carpet fascinates us known (almost all) leaf. 
 
 .. sagecellserver::
 
-  c=100 #number of repetitions
+  c=10001 #number of repetitions
   a=0 #the first coordinate of the starting point
   b=0 #the second coordinate of the starting point
   p=7 #the width of the picture
@@ -359,6 +263,11 @@ Perhaps more than a carpet fascinates us known (almost all) leaf.
         r=r+point((a,b), axes=false, frame=false,color='purple', size=1) 
   show(r, figsize=(p,q))
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/11.png
+       :width: 40%
+
 Perhaps the carpet and the leaf **ATTRACT** us to further experiment, in which we will try to arrange the coefficients in the tables (various methods for introducing the coefficients in the above two examples encourage such arrangement). 
 
 .. sagecellserver::
@@ -372,7 +281,7 @@ Perhaps the carpet and the leaf **ATTRACT** us to further experiment, in which w
   a7=[-0.33,-0.34,-0.54,-0.33,0.34,0.39]
   c=1
   d=1
-  t=100
+  t=10001
   r=point((c,d),axes=False, frame=False,size=0.1,)
   for u in range(1,t):
     n=randint(1,7)
@@ -420,7 +329,12 @@ Perhaps the carpet and the leaf **ATTRACT** us to further experiment, in which w
         r=r+point((c,d),axes=False, frame=False,size=1,color='brown')
   r
   
-Let's go back to the Sierpinski's carpet. Or is it rather a kind of line or something like connected squares? Is repeating iterations indefinitely (in our head ...) move closer to a more normal squares? What does "more" mean?
+.. only:: latex
+          
+    .. figure:: refutacje_media/12.png
+       :width: 50%
+
+Let's go back to the Sierpinski's carpet. Or is it rather a kind of line or something like connected squares? Is repeating iterations indefinitely (in our head...) move closer to a more normal squares? What does "more" mean?
 
 Look at the blue line below - we want to measure it with a green ruler.
 
@@ -428,6 +342,11 @@ Look at the blue line below - we want to measure it with a green ruler.
 
   plot(x * sin(x), (x, -2, 10), axes=false)+line([(4.1,4.1*sin(4.1)), (5.1,5.1*sin(5.1))], color='darkgreen', thickness=2)
   
+.. only:: latex
+          
+    .. figure:: refutacje_media/13.png
+       :width: 50%
+
 Let's estimate the length of the blue line.
 Let :math:`M(\epsilon)` means the length of the measured curve by a ruler legth of :math:`\epsilon`, and :math:`L(\epsilon)` number of touchdowns rulers into the curve. Note that the smaller :math:`\epsilon`, the estimation more accurate. Note that :math:`M(\epsilon)\approx\epsilon\cdot L(\epsilon)` and 
 
