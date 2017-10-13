@@ -10,7 +10,7 @@ Wybór najlepszego narzędzia informatycznego na lekcję matematyki lub fizyki?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Od wielu lat czynione są próby stosowania narzędzi informatycznych i
-nawet programowania na lekcjach przedmiotów ściśłych. Najczęściej
+nawet programowania na lekcjach przedmiotów ścisłych. Najczęściej
 zostaje wybierane przez fachowców w jednej dziedzinie specjalistyczne
 oprogramowanie. Bywa, że wybór jest lobbowany przez producenta danego
 systemu. W efekcie prowadzi to do nieskoordynowanych działań o
@@ -23,7 +23,7 @@ poszczególnych zadań. Co jeśli istnieje wspólne narzędzie i język w
 których praktycznie bezkompromisowo można zastosować do całego
 spektrum zagadnień w szkolnej (i nie tylko) edukacji?
 
-Zastanówmy się jakie cechy powinien mieć system komputerowy by
+Zastanówmy się, jakie cechy powinien mieć system komputerowy, by
 przełamać powyższy stereotyp? Poszukajmy rozwiązania jednocześnie
 spełniającego następujące cechy:
 
@@ -31,7 +31,7 @@ spełniającego następujące cechy:
    programowania szerokiego przeznaczenia.
 
    Języki programowania szerokiego przeznaczenia mogą być wykorzystane
-   go tworzenia gier komputerowych jak i aplikacji naukowych czy
+   go tworzenia gier komputerowych, jak i aplikacji naukowych czy
    edukacji. Z drugiej strony istnieje wiele tak zwanych `języków
    dziedzinowych
    <https://pl.wikipedia.org/wiki/J%C4%99zyk_dziedzinowy>`_
@@ -43,7 +43,7 @@ spełniającego następujące cechy:
    wykonanie wszystkich `zadań
    <https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html>`_
    które są właściwe dla Matlab, jednak ich specyfika pozwala na
-   zostosowanie ich m.in do nauczania informatyki.  Ważną cechą
+   zostosowanie ich m.in. do nauczania informatyki.  Ważną cechą
    systemu jest uniknięcie `uzależnienia od dostawcy
    <https://pl.wikipedia.org/wiki/Uzale%C5%BCnienie_od_dostawcy>`_, to
    ma często miejsce w przypadku stosowania języków dziedzinowych.
@@ -51,7 +51,7 @@ spełniającego następujące cechy:
 #. INTERACT: Język programowania powinien umożliwiać pracę interaktywną.
 
    Takie żądanie praktycznie eliminuje języki kompilowane
-   (C/C++). Chcąc wykorzystać system komputerowy interaktywnie
+   (C/C++). Chcąc wykorzystać system komputerowy interaktywnie,
    najstosowniejsze wydają się języki z dynamicznym typowaniem i
    mechanizmami typu introspekcja. Wymaganie to spełnia więszkość
    języków dziedzinowych dostarczanych przez producentów systemów
@@ -61,7 +61,7 @@ spełniającego następujące cechy:
    Nieskrępowana dostępność do systemu jest najlepiej zagrawantowana
    przez oprogramowanie otwarte. Dodatkowo oprogramowanie takie daję
    możliwość wglądu w każdy zastosowany algorytm co ma znaczenie
-   zarówno w nauce jak i posiada walory edukacyjne. Dostępność jest
+   zarówno w nauce, jak i posiada walory edukacyjne. Dostępność jest
    również związana z technicznymi aspektami związanymi z instalacja
    oprogramowania. Możliwość skorzystania z pracy w "chmurze" z
    pośrednictwem jedynie przeglądarki internetowej jest bardzo
@@ -72,9 +72,9 @@ spełniającego następujące cechy:
    przedmiotach ścisłych.
 
    Takie wymaganie eliminuje języki, które nie są na tyle
-   rozpowszechnione by były w nich zaimplementowane wszystkie
+   rozpowszechnione, by były w nich zaimplementowane wszystkie
    najważniejsze metody obliczeniowe lub wizualizacyjne. Python jest
-   szczególnie interesującym przykładem, ponieważ instnieje w nim
+   szczególnie interesującym przykładem, ponieważ istnieje w nim
    powszechnie wykorzystywana łatwość do tworzenia interfaceów
    przeróżnych bibliotek napisanych w innych językach. Z tej cechy
    korzysta system SageMath, który zawiera w sobie setki bibliotek
@@ -82,19 +82,19 @@ spełniającego następujące cechy:
    Python-a.
 
    
-#. PROF System powinien umożliwiać płynne przejście od pracy na
-   lekcjach w szkole to profesjonalnych zastosowań w badaniach
+#. PROF - System powinien umożliwiać płynne przejście od pracy na
+   lekcjach w szkole do profesjonalnych zastosowań w badaniach
    naukowych czy w przemyśle.
 
-   Nie ma żadnego powodu by w szkole uczyć na "małym" systemie a na
+   Nie ma żadnego powodu, by w szkole uczyć na "małym" systemie, a na
    studiach czy w pracy poznawać dopiero ten "duży". Z powodzeniem
    można użyć nawet w szkole podstawowej tego samego języka i systemu,
-   który jest używany przez naukowców oczywiście ograniczając się to
-   wykorzystanie jego niewielkiej części. Oszczędza to dużo czasu i
+   który jest używany przez naukowców oczywiście ograniczając się do
+   wykorzystania jego niewielkiej części. Oszczędza to dużo czasu i
    wyrabia od razu dobre nawyki od najwcześniejszego okresu nauki.
    Należy podkreślić, że często koszty licencji oprogramowania dla
    systemów stosowanych profesjonalnie są znacznie wyższe od
-   dedykowanych systemów edukacyjnych. Problem ten nie istnieje gdy
+   dedykowanych systemów edukacyjnych. Problem ten nie istnieje, gdy
    wybierze się oprogramowanie otwarte.
    
 
@@ -117,11 +117,11 @@ spełniającego następujące cechy:
 
 
 Z powyższej analizy wynika, że rozwiązania oparte o język Python
-spełniają wszystkie wymagania. Co więcej Python jest językiem o
+spełniają wszystkie wymagania. Co więcej, Python jest językiem o
 rosnącym znaczeniu w przemyśle. Zarówno stosowanie standardowego
-interpretera Python jak i systemu algebry komputerowej SageMath może
+interpretera Python, jak i systemu algebry komputerowej SageMath może
 dać takie same efekty. Zdecydowanie na lekcji matematyki czy fizyki
-system SageMath będzie - jako system algebry komputerowej oferował
+system SageMath będzie - jako system algebry komputerowej - oferował
 krótszą drogę do rozwiązania. Zanim omówimy te systemy odpowiedzmy
 sobie na pytanie co to jest system algebry komputerowej?
 
@@ -527,5 +527,5 @@ całek i wielu innych działań matematycznych.
 
 To bardzo dobre i bogate narzędzie programistyczne, dzięki któremu
 możemy łączyć przedmioty ścisłe: informatykę, programowanie,
-matematykę, fizykę, chemię. Czy istnieją ograniczenia dla Sage"a? Tak,
+matematykę, fizykę, chemię. Czy istnieją ograniczenia dla Sage'a? Tak,
 ale pewnie wcześniej natrafimy na ograniczenia naszej wyobraźni.

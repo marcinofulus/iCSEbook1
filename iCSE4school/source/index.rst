@@ -27,6 +27,7 @@ Materiały dydaktyczne: Matematyka
 .. toctree::
    :maxdepth: 1
  
+   Malinowski.rst
    iCSE4s_MAT_z19_Limit_and_continuity_of_a_function_at_a_point_ENG_v0.1.rst
    from_point_to_point.rst
    od_punktu_do_punktu.rst
