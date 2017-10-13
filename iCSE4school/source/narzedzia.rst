@@ -11,7 +11,7 @@ oparty na języku Python i oferuje pełne spektrum interfejsów dostępu,
 zarówno oparty o terminal tekstowy jak i graficzny wykorzystujący
 przeglądarkę internetową.
 
-
+`Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
 
 
 
