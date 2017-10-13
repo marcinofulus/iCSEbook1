@@ -1,13 +1,10 @@
 Od punktu do punktu
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *Niniejszy projekt jest wynikiem zajęć prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie*
 
-Pomyślmy przez chwilę o wykresie funkcji,
-np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.
-To oczywiście ciągła linia, którą wyobrażamy sobie bez jakiegokolwiek
-problemu. Czyżby?
+Pomyślmy przez chwilę o wykresie funkcji, np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.   To oczywiście ciągła linia, którą wyobrażamy sobie bez jakiegokolwiek problemu. Czyżby?
 
 Stosując w naszych matematycznych podróżach SAGE'a, użyć możemy m.in.:
 
@@ -49,19 +46,11 @@ Stosując w naszych matematycznych podróżach SAGE'a, użyć możemy m.in.:
     .. figure:: refutacje_media/3.png
        :width: 42%
   
-Czasem dostrzegamy pewne podobieństwa w wymienionych tu powyżej
-podejściach: w każdym z przypadków na ekranie komputera pojawia się
-zestaw punktów - jest on jednak ukryty w mniej lub bardziej
-skomplikowanej formule.
+Czasem dostrzegamy pewne podobieństwa w wymienionych tu powyżej podejściach: w każdym z przypadków na ekranie komputera pojawia się zestaw punktów - jest on jednak ukryty w mniej lub bardziej skomplikowanej formule.
 
-A może powinniśmy użyć najprostszej metody: od pukntu do punktu?
-Korzystając z rekurencji?
+A może powinniśmy użyć najprostszej metody: od pukntu do punktu? Korzystając z rekurencji?
 
-Pomyślmy o punkcie umieszczonym w układzie współrzędnych - da nam to
-możliwość połączenia geometrii z rozważaniami numerycznymi. Ważne będą
-dla nas możliwości eksperymentowania i komputerowych zabaw -
-prezentowane przykłady nie będą natomiast programistycznie
-skomplikowane.
+Pomyślmy o punkcie umieszczonym w układzie współrzędnych - da nam to możliwość połączenia geometrii z rozważaniami numerycznymi. Ważne będą dla nas możliwości eksperymentowania i komputerowych zabaw - prezentowane przykłady nie będą natomiast programistycznie skomplikowane. 
 
 Rozpocznijmy więc od umieszczenia na ekranie jednego punktu.
 

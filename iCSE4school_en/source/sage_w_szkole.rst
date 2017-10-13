@@ -293,7 +293,7 @@ Praca indywidualna wyrabia też nawyk sumiennego wykonania powierzonego
 zadania, odpowiedzialności za siebie, za swoją wiedzę i umiejętności.
 
 Zastosowania SageMath w fizyce
-------------------------------
+--------------------------
 
 Fizyka w szkołach realizujących Program Dyplomowy Matury Międzynarodowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -859,9 +859,9 @@ tekście naukowym nadzorowanym przez fizyka.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W ramach takich projektów uczniowie wykonują modele umożliwiające
-przeprowadzenie symulacji działania w rzeczywistej sytuacji. Symulacje
-w matematyce, fizyce, przedsiębiorczości, biologii, socjologii i
-innych dziedzinach.
+przeprowadzenie symulacji\ :sup:``[s] <#cmnt19>`__` działania w
+rzeczywistej sytuacji. Symulacje w matematyce, fizyce,
+przedsiębiorczości, biologii, socjologii i innych dziedzinach.
 
 Informatyka
 ^^^^^^^^^^^

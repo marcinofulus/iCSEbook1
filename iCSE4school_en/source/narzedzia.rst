@@ -54,7 +54,7 @@ wymaga logowania się co znakomicie deleguje tą technologie to zastosowań jako
 
  
 
-free open-source mathematics software system licensed under the GPL. It builds on top of many existing open-source packages: NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R and many more. Access their combined power through a common, Python-based language or directly via interfaces or wrappers.
+ free open-source mathematics software system licensed under the GPL. It builds on top of many existing open-source packages: NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R and many more. Access their combined power through a common, Python-based language or directly via interfaces or wrappers.
 Mission: Creating a viable free open source alternative to Magma, Maple, Mathematica and Matlab.
 
 
