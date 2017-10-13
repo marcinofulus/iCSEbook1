@@ -47,6 +47,34 @@ Materiały dydaktyczne: Fizyka
    przyspieszony.rst
    zderzenia.rst
 
+Zadania maturalne z Sagem
+-------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   matura2015_p01
+   matura2015_p02
+   matura2015_p04
+   matura2015_p05
+   matura2015_p07
+   matura2015_p09
+   matura2015_p10
+   matura2015_p11
+   matura2015_p12
+   matura2015_p14
+   matura2015_p15
+   matura2015_p16
+   matura2015_p17
+   matura2015_p18_19
+   matura2015_p20
+   matura2015_r01
+   matura2015_r02
+   matura2015_r08
+   matura2015_r09
+   matura2015_r10
+
 
 Materiały dydaktyczne - wersje niepoprawione
 --------------------------------------------
