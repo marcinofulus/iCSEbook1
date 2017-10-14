@@ -117,12 +117,12 @@ spełniającego następujące cechy:
 
 Z powyższej analizy wynika, że rozwiązania oparte o język Python
 spełniają wszystkie wymagania. Co więcej, Python jest językiem o
-rosnącym znaczeniu w przemyśle. Zarówno stosowanie standardowego
-interpretera Python, jak i systemu algebry komputerowej SageMath może
-dać takie same efekty. Zdecydowanie na lekcji matematyki czy fizyki
-system SageMath będzie - jako system algebry komputerowej - oferował
-krótszą drogę do rozwiązania. Zanim omówimy te systemy odpowiedzmy
-sobie na pytanie co to jest system algebry komputerowej?
+rosnącym znaczeniu w braży informatycznej. Zarówno stosowanie
+standardowego interpretera Python, jak i systemu algebry komputerowej
+SageMath może dać takie same efekty. Zdecydowanie na lekcji matematyki
+czy fizyki system SageMath będzie - jako system algebry komputerowej -
+oferował krótszą drogę do rozwiązania. Zanim jednak omówimy te systemy
+odpowiedzmy sobie na pytanie co to jest system algebry komputerowej?
 
 System algebry komputerowej
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -140,8 +140,9 @@ symboliczne. Rozważmy na przykład poniższy kod w języku Python:
    print ( (a/34+1/b)**2 )
 
 Program ten wypisze na ekranie przybliżoną wartość wyrażenia po
-podstawieniu zmiennych :math:`a=23,b=3` :1.0197. Gdyby nie wykonać
-dwóch pierwszych podstawień to interpreter zasygnalizował by błąd.
+podstawieniu zmiennych :math:`a=23,b=3` liczbę :math:`1.0197`.
+Niewykonanie dwóch pierwszych podstawień zastutkuje błędem
+interpretera Python.
 
 Nieco inaczej sytuacja wygląda w przypadku systemu CAS. Tutaj jedynie
 informujemy system, że zmienne :math:`a,b` będą symbolami i możemy
@@ -196,8 +197,9 @@ szkół. Uczniowie zdobywają kolejne certyfikaty powierdzające
 umiejętność programowania na danym poziomie.
 
 
-Ekosystem Scipy 
+Ekosystem Scipy
 ^^^^^^^^^^^^^^^
+
 Python jest językiem intensywnie używanym do pracy naukowej i
 edukacji. Zestaw najbardziej powszechnych narzędzi zwany jest
 `ekosystemem scipy <https://www.scipy.org/>`_. W zakres wchodzą m.in.:
@@ -238,22 +240,22 @@ widzianą w punktu widzenia matematyka (czy fizyka). Uchuchamiając
 system SageMath mamy do dyspozycji interpreter Pythona 2.7 z dwoma
 kluczowymi różnicami:
 
- #. Każde polecenie jest przerabiane przez tzw. preparser zanim
-    zostanie wysłane do interpretera Pythona. Preparser zmienia m.in.:
+#. Każde polecenie jest przerabiane przez tzw. preparser zanim
+   zostanie wysłane do interpretera Pythona. Preparser zmienia m.in.:
 
-    - zapis potęgi `2^3` na zgodny ze składnią Pythona `2**3`
-    - napis `1` na `Integer(1)`
-    - napis `1.0` na `RealNumber(1.0)`
+    - zapis potęgi :code:`2^3` na zgodny ze składnią Pythona :code:`2**3`
+    - napis :code:`1` na :code:`Integer(1)`
+    - napis :code:`1.0` na :code:`RealNumber(1.0)`
 
 #. Automatycznie wczytywane jest ok. 2000 pożytecznych funkcji takich
-   jak `plot`, `simplify`, itp. oraz definiowana jest zmienna
-   symboliczna `x`.
+   jak :code:`plot`, :code:`simplify`, itp. oraz definiowana jest zmienna
+   symboliczna :code:`x`.
 
 Dlatego by np. rozwiązać równanie kwadratowe w SageMath, wystarczy
-napisać `solve(x^2+2*x+1==0,x)` i otrzymamy odpowiedź. Korzytając z
-podejścia prezentowanego przez ekosystem scipy należałoby wybrać i
-załadować odpowiedni moduł, zdefiniować zmienną i dopiero wtedy
-przystąpić do właściwego rozwiązywania.
+napisać :code:`solve(x^2+2*x+1==0,x)` i otrzymamy
+odpowiedź. Korzytając z podejścia prezentowanego przez ekosystem scipy
+należałoby wybrać i załadować odpowiedni moduł, zdefiniować zmienną i
+dopiero wtedy przystąpić do właściwego rozwiązywania.
 
 Powyższe zalety SageMath skłoniły nas do zastosowania właśnie tego
 systemu na lekcjach fizyki, matematyki i chemii. Należy jednak
@@ -263,16 +265,12 @@ umiejętność na lekcjach informatyki to jedyną dodatkową niezbędną
 wiedzą są dwa powyższe punkty. W efekcie rozwiązanie oparte na
 systemie SageMath dostarczą o wiele bardziej efektywnego narzędzia a z
 drugiej strony nie nakłada praktycznie żadnych dodatkowych wymagań na
-ucznia, który uczył się Pythona na informatyce.
-
-
+ucznia, który uczył się Pythona na informatyce.
 
 
 
 SageMath w pigułce
 ------------------
-
-
 
 
 Bogaty i szybki kalkulator naukowy.
@@ -297,7 +295,7 @@ Pierwszy przykład pokazuje możliwości rachunkowe Sage'a. Można używać
 go do sprawdzania: przeprowadzonych rachunków, zadań domowych przez
 uczniów. Jeżeli nauczyciel pozna powyższy język programowania, to może
 stworzyć kod, który umożliwia rozwiązywanie zadań rachunkowych "krok
-po kroku".
+po kroku". 
 
 .. sagecellserver::
     :linked: false
@@ -308,18 +306,43 @@ po kroku".
     print "(sqrt(8)-sqrt(2))^2 =", (sqrt(8)-sqrt(2))^2
     print "5! =", factorial(5)
     print "NWD(354,222) =", gcd(354, 222)
-    
+
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. code:: python
+
+      (4/3+5/5)-(5/2-4/6) = 1/2
+      (3^15-3^13)/(3^13+3^14) = 2
+      1001 = 7 * 11 * 13
+      (sqrt(8)-sqrt(2))^2 = 2
+      5! = 120
+      NWD(354,222) = 6
+
+          
 SageMath ma wbudowane różne systemy arytmetyczne i może np.
 przybliżać liczby niewymierne z dowolną precyzją. Te możliwości
-wykorzystaliśmy w naszym projekcie, przed wszystkim w Szyfrowaniu RSA
-oraz w w rozdziale dotyczących przybliżeń wyrażeń niewymiernych.
+wykorzystaliśmy w naszym projekcie, przed wszystkim w szyfrowaniu RSA
+oraz w rozdziale dotyczących przybliżeń wyrażeń niewymiernych.
 
 .. sagecellserver::
     :linked: false
 
-    show(sqrt(2), "=", N(sqrt(2), digits=70))
-    show(pi, "=", N(pi, digits=80))
-    show(2^288+5^80)
+    show(sqrt(2), "=", N(sqrt(2), digits=60))
+    show(pi, "=", N(pi, digits=60))
+    show(2^168+5^80)
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      \sqrt{2} = 1.41421356237309504880168872420969807856967187537694807317668 \\
+      \pi=3.14159265358979323846264338327950288419716939937510582097494 \\
+      82718435399721924198287929350313460725034243008818892481
 
     
 Działania na wyrażeniach algebraicznych.
@@ -335,7 +358,7 @@ wyprowadzać wzory -- ogólne rozwiązania. Poniżej pokazane są proste
 przykłady dotyczące wzorów skróconego mnożenia oraz wyrażeń
 wymiernych.
 
-Wzory skróconego mnożenia.
+**Wzory skróconego mnożenia.**
 
 .. sagecellserver::
     :linked: false
@@ -356,7 +379,23 @@ Wzory skróconego mnożenia.
     show (wzor2, "=", wzor2.canonicalize_radical())
     show (wzor3, "=", wzor3.canonicalize_radical())
 
-Zamiana postaci wyrażenia algebraicznego.
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+
+      {\left(a + b\right)}^{2} \text{\texttt{=}} a^{2} + 2 \, a b + b^{2} \\
+      {\left(a - b\right)}^{2} \text{\texttt{=}} a^{2} - 2 \, a b + b^{2} \\
+      {\left(a + b\right)} {\left(a - b\right)} \text{\texttt{=}} a^{2} - b^{2} \\
+      {\left(\sqrt{3} + 2\right)}^{2} \text{\texttt{=}} 4 \, \sqrt{3} + 7 \\
+      {\left(\sqrt{3} - 2\right)}^{2} \text{\texttt{=}} -4 \, \sqrt{3} + 7 \\
+      {\left(\sqrt{3} + 2\right)} {\left(\sqrt{3} - 2\right)} \text{\texttt{=}} -1
+
+      
+    
+**Zamiana postaci wyrażenia algebraicznego.**
 
 .. sagecellserver:: 
 
@@ -365,7 +404,17 @@ Zamiana postaci wyrażenia algebraicznego.
     show ("n=2")
     show(wyr," = ", wyr.canonicalize_radical()," = ",wyr.substitute(n = 2))
 
-Zamiana postaci wyrażenia wymiernego.
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      \text{\texttt{n=2}} \\
+      -{\left(n - 1\right)}^{3} + n^{3} \text{\texttt{{ }={ }}} 3 \, n^{2} - 3 \, n + 1 \text{\texttt{{ }={ }}} 7 
+
+
+**Zamiana postaci wyrażenia wymiernego.**
 
 .. sagecellserver::    :linked: false
 
@@ -375,13 +424,27 @@ Zamiana postaci wyrażenia wymiernego.
     show (wyr.canonicalize_radical())
     show (wyr.subs(z=x+1))
     show (wyr.subs(z=2))
+
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      \frac{z^{2} + 3 \, z}{z} \\
+      z + 3 \\
+      \frac{{\left(x + 1\right)}^{2} + 3 \, x + 3}{x + 1} \\
+      5
  
+
+    
 Rozwiązywanie równań i układów równań.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Największą ilość zadań z przedmiotów ścisłych jaką uczeń musi wykonać to rozwiązywanie równań i układów równań. Oczywiście żadne narzędzie nie zastąpi samodzielnego rozwiązywania zadań przez uczniów, ale może być bardzo przydatne do ćwiczeń, sprawdzania wyników, czy też rozwiązywania równań, które uczeń musi samodzielnie wyprowadzić na podstawie zadań tekstowych. Powyższy język umożliwia rozwiązywanie nawet trudnych równań i układów równań przy pomocy jednej instrukcji -- *solve*. Poniżej przykłady, które demonstrują użycie instrukcji na podstawie równania kwadratowego oraz prostego układu równań z dwoma niewiadomymi. Dla nauczycieli prowadzących zajęcia dodatkowe z matematyki dla uczniów zdolnych nie bez znaczenia będzie fakt, ze Sage rozwiązuje równania w zbiorze liczb zespolonych oraz macierzowe.
 
-Równanie kwadratowe.
+**Równanie kwadratowe.**
 
 .. sagecellserver::
     :linked: false
@@ -394,20 +457,41 @@ Równanie kwadratowe.
     c = -5
     r_kwadr = a*x^2 + b*x + c == 0
     show (solve(r_kwadr, x))
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      \left[x = -\frac{b + \sqrt{b^{2} - 4 \, a c}}{2 \, a}, x = -\frac{b - \sqrt{b^{2} - 4 \, a c}}{2 \, a}\right] \\
+      \left[x = \left(-5\right), x = 1\right]
+
     
-Układ równań z dwoma niewiadomymi.    
-    
+**Układ równań z dwoma niewiadomymi.**
+
+
 .. sagecellserver::
     :linked: false
 
     var('x','y')
     solve([x-3*y==2, x-2*y==8],x,y)
-    
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      [[x == 20, y == 6]]
+
+
+             
 Wizualizacja.
 ^^^^^^^^^^^^^    
   
-Uczniowie dzięki stroną internetowym, platformą społecznościowym, MMS
-itp. odbierają świat "obrazkowo", czyli wiążą krótkie informacje z
+Uczniowie dzięki stronom internetowym czy platformom społecznościowym
+odbierają świat "obrazkowo", czyli wiążą krótkie informacje z
 odpowiednim obrazkiem, zdjęciem, wykresem. Dlatego też wizualizacja
 dla obecnego pokolenia młodzieży jest bardzo ważna. Sage umożliwia
 rysowanie wykresów funkcji w prosty sposób. Zatem możemy szybko
@@ -450,19 +534,21 @@ zaznaczono wyróżnione punkty.
     p3 = point((0, c), color="green", size=35)
     q = plot(f(x),(x,xmin,xmax))
     show(p1+p2+p3+q, figsize=4)
+
     
 .. only:: latex
           
-    a plot as in :numref:`parabola`.
+    Wynikiem działania powyższego kodu jest wykres  :numref:`parabola`.
 
     .. figure:: dlaczego_Sage/kw.pdf
-       :width: 40%
+       :width: 50%
        :name: parabola     
      
-       Parabola !
+       Parabola z miejscami zerowymi. 
 
 
-Dzięki instrukcji *region_plot* możemy na wykresie przedstawiać także rozwiązanie układów nierówności.
+Dzięki instrukcji :code:`region_plot` możemy na wykresie przedstawiać
+także rozwiązanie układów nierówności.
 
 .. sagecellserver::
     :linked: false
@@ -478,7 +564,7 @@ Dzięki instrukcji *region_plot* możemy na wykresie przedstawiać także rozwi�
     
 .. only:: latex
           
-    a plot as in :numref:`region1`.
+    Wynikiem działania powyższego kodu jest wykres :numref:`region1`.
 
     .. figure:: dlaczego_Sage/reg1.pdf
        :width: 40%
@@ -505,13 +591,63 @@ Dzięki instrukcji *region_plot* możemy na wykresie przedstawiać także rozwi�
 
 .. only:: latex
           
-    a plot as in :numref:`region2`.
+    Wynikiem działania powyższego kodu jest wykres   :numref:`region2`.
 
     .. figure:: dlaczego_Sage/reg2.pdf
        :width: 40%
        :name: region2
 
        Wizualizacja rozwiązania nierówności za pomocą `region_plot`. 
+
+
+Interakcja
+^^^^^^^^^^    
+
+Duże walory edukacyjne mają programy komputerowe pozwalające wykonać
+animację lub dynamicznie zmieniać parametr i obserwować jak wpływa on
+na rozwiązanie. Tego typu elementy, najczęściej wykonane są w
+technologii Flash lub javascript i są atrakcyjną cyfrową pomocą
+naukową. System SageMath pozwala pojść jeden krok dalej - pozwala na
+bardzo łatwe tworzenie tych elementów. Przeanalizujmy następujący przykład.
+Chcemy zwizualizować rozwiązanie zadania:
+
+Ile ma rozwiązań równanie :math:`x^2=x-a` dla :math:`a\in(0,\frac{1}{2})`?
+
+W SageMath możemy narysować wykresy zarówno prostej :math:`y=x-a` jak
+i paraboli :math:`y=x^2` i zaznaczyć na nich pierwiastki równania
+:math:`x^2=x-a`.  Wystarczy taki stworzony kod programu opakować w
+funkcję i dodać tzw. dekorator :code:`@interact`. SageMath wygeneruje
+nam interaktywną aplikację, w której będzie można zmieniać myszką
+wartość parametru i obserwować jak zmienia się wykres.
+
+
+
+.. sagecellserver::
+    :linked: false
+
+    @interact
+    def fun(a=slider(0,1/2,0.01)):
+        p = plot([x^2,x-a],(x,-1,1),figsize=5,ymax=1,ymin=-1)
+        assume(x,'real')
+        pkt = [(x.subs(s),x.subs(s)-a) for s in solve(x^2==x-a,x)]
+        if pkt:
+             p += point(pkt,size=40,color='red')
+        else:
+             print "Nie ma pierwiastkow"
+        show(p)
+
+
+.. only:: latex
+          
+    Wynikiem działania powyższego kodu jest  :numref:`interact`.
+
+    .. figure:: dlaczego_Sage/interact.png
+       :width: 60%
+       :name: interact
+
+       Interaktywna ilustracja równania :math:`x^2=x-a`.
+
+
 
 
 Sage – interdyscyplinarność.

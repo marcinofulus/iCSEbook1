@@ -53,15 +53,43 @@ Autorytet – kto to jest?
 
 
 
-Zanim opiszemy, w jaki sposób metoda sokratejska może przydać się we współczesnej szkole, wróćmy do źródła. Według Słownika Języka Polskiego pod redakcją W. Doroszewskiego autorytet to *osoba, instytucja, pismo itp. cieszące się szczególnym uznaniem* [#autorytet]_.  Wikipedia podaje, że autorytet to <<osoba lub instytucja ciesząca się uznaniem, mająca kredyt zaufania co do profesjonalizmu, prawdomówności i bezstronności, w ocenie jakiegoś zjawiska lub wydarzenia.>>. Natomiast chętnie odwiedzany przez uczniów portal o dość wymownej nazwie Ściąga.pl podaje następujące opisy: <<Autorytetem jest osoba godna naśladowania>> oraz <<Autorytetem może być sławna osoba, ktoś bliski, przyjaciel. Jest nim osoba czyniąca dobro, kochająca innych. Człowiekowi potrzebny jest taki przywódca - osoba mogąca poprowadzić do walki, pracy, poświęcenia, dążenia do doskonałości.>>. 
+Zanim opiszemy, w jaki sposób metoda sokratejska może przydać się we
+współczesnej szkole, wróćmy do źródła. Według Słownika Języka
+Polskiego pod redakcją W. Doroszewskiego autorytet to *osoba,
+instytucja, pismo itp. cieszące się szczególnym uznaniem*
+[#autorytet]_.  Wikipedia podaje, że autorytet to <<osoba lub
+instytucja ciesząca się uznaniem, mająca kredyt zaufania co do
+profesjonalizmu, prawdomówności i bezstronności, w ocenie jakiegoś
+zjawiska lub wydarzenia.>>. Natomiast chętnie odwiedzany przez uczniów
+portal o dość wymownej nazwie Ściąga.pl podaje następujące opisy:
+<<Autorytetem jest osoba godna naśladowania>> oraz <<Autorytetem może
+być sławna osoba, ktoś bliski, przyjaciel. Jest nim osoba czyniąca
+dobro, kochająca innych. Człowiekowi potrzebny jest taki przywódca -
+osoba mogąca poprowadzić do walki, pracy, poświęcenia, dążenia do
+doskonałości.>>.
 
 
 
-Już z powyższych cytatów i definicji wyraźnie wynika, że autorytet to ktoś szczególny, niezwykły i raczej rzadko spotykany. Kim więc są autorytety współczesnej młodzieży? Z badania Jarosława Domalewskiego z 2013 r. „System wartości młodzieży gimnazjalnej” wynika, że najczęściej jako autorytet wymieniani są rodzice (ponad 70% odpowiedzi) i inni członkowie rodziny (45% wskazań). Następnie jako autorytet wskazywane są osoby sławne: sportowcy, piosenkarze i muzycy (ponad 30% wskazań dla obu tych grup). Nauczyciele są autorytetami dla ok 1/3 badanych nastolatków (Domalewski 2013: 25), a autor badań komentuje to w sposób następujący:
+Już z powyższych cytatów i definicji wyraźnie wynika, że autorytet to
+ktoś szczególny, niezwykły i raczej rzadko spotykany. Kim więc są
+autorytety współczesnej młodzieży? Z badania Jarosława Domalewskiego z
+2013 r. „System wartości młodzieży gimnazjalnej” wynika, że
+najczęściej jako autorytet wymieniani są rodzice (ponad 70%
+odpowiedzi) i inni członkowie rodziny (45% wskazań). Następnie jako
+autorytet wskazywane są osoby sławne: sportowcy, piosenkarze i muzycy
+(ponad 30% wskazań dla obu tych grup). Nauczyciele są autorytetami dla
+ok 1/3 badanych nastolatków (Domalewski 2013: 25), a autor badań
+komentuje to w sposób następujący:
 
 
 
-        Nauczyciele okazują się być rzadziej autorytetem dla młodzieży gimnazjalnej aniżeli sportowcy czy muzycy. Fakt ten stanowi chyba jedno z najpoważniejszych wyzwań przed jakimi stoi system edukacji w Polsce. Nauczyciele nie posiadają umiejętności wypracowywania sobie autorytetu wśród młodzieży szkolnej. Powstaje pytanie, na ile w warunkach braku autorytetu nauczycieli proces dydaktyczny jest efektywny?
+        Nauczyciele okazują się być rzadziej autorytetem dla młodzieży
+        gimnazjalnej aniżeli sportowcy czy muzycy. Fakt ten stanowi
+        chyba jedno z najpoważniejszych wyzwań przed jakimi stoi
+        system edukacji w Polsce. Nauczyciele nie posiadają
+        umiejętności wypracowywania sobie autorytetu wśród młodzieży
+        szkolnej. Powstaje pytanie, na ile w warunkach braku
+        autorytetu nauczycieli proces dydaktyczny jest efektywny?
 
 
 
@@ -69,7 +97,11 @@ Już z powyższych cytatów i definicji wyraźnie wynika, że autorytet to ktoś
 
 
 
-Cytat przedstawiony powyżej daje nam asumpt do rozważań dwojakiego rodzaju: po pierwsze, w jaki sposób i za pomocą jakich środków mieliby nauczyciele wypracowywać sobie autorytet wśród młodzieży oraz po drugie, jaki jest związek między byciem autorytetem dla młodzieży, a skutecznością procesu dydaktycznego. 
+Cytat przedstawiony powyżej daje nam asumpt do rozważań dwojakiego
+rodzaju: po pierwsze, w jaki sposób i za pomocą jakich środków mieliby
+nauczyciele wypracowywać sobie autorytet wśród młodzieży oraz po
+drugie, jaki jest związek między byciem autorytetem dla młodzieży, a
+skutecznością procesu dydaktycznego.
 
 
 
