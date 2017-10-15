@@ -606,13 +606,20 @@ Interakcja
 Duże walory edukacyjne mają programy komputerowe pozwalające wykonać
 animację lub dynamicznie zmieniać parametr i obserwować jak wpływa on
 na rozwiązanie. Tego typu elementy, najczęściej wykonane są w
-technologii Flash lub javascript i są atrakcyjną cyfrową pomocą
-naukową. System SageMath pozwala pojść jeden krok dalej - pozwala na
-bardzo łatwe tworzenie tych elementów. Przeanalizujmy następujący przykład.
-Chcemy zwizualizować rozwiązanie zadania:
+technologii Flash lub javascript są atrakcyjną cyfrową pomocą
+naukową. Zazwyczaj jednak uczeń ograniczony jest jedynie do interakcji
+z takim programem. System SageMath pozwala pojść jeden krok dalej -
+pozwala na bardzo łatwe tworzenie tych elementów. Korzystając z
+prostych funkcji uczeń może samodzielnie stworzyć interaktywną
+applikację, która może ilustrować badane zagadnienie.
 
-Ile ma rozwiązań równanie :math:`x^2=x-a` dla :math:`a\in(0,\frac{1}{2})`?
+Zilustrujemy na przykładzie następującego problemu:
 
+.. admonition:: Zadanie 
+
+   Zbadaj ile ma rozwiązań równanie :math:`x^2=x-a` w zależności od parametru :math:`a\in(0,\frac{1}{2})`?
+
+   
 W SageMath możemy narysować wykresy zarówno prostej :math:`y=x-a` jak
 i paraboli :math:`y=x^2` i zaznaczyć na nich pierwiastki równania
 :math:`x^2=x-a`.  Wystarczy taki stworzony kod programu opakować w

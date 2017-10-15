@@ -6,10 +6,10 @@ Technologiczne aspekty korzystania z SageMath
 ---------------------------------------------
 
 
-SageMath is a wolnym i otwartym oprogramowaniem matematycznym. Jest
-oparty na języku Python i oferuje pełne spektrum interfejsów dostępu,
-zarówno oparty o terminal tekstowy jak i graficzny wykorzystujący
-przeglądarkę internetową.
+Pakiet SageMath jest wolnym i otwartym oprogramowaniem
+matematycznym. Został on oparty na języku Python i oferuje pełne
+spektrum interfejsów dostępu, począwszy od terminala tekstowego po
+interfejs graficzny wykorzystujący przeglądarkę internetową.
 
 `Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
 
@@ -18,14 +18,24 @@ przeglądarkę internetową.
 Linia poleceń
 ~~~~~~~~~~~~~
 
-Terminal tekstowy jest tradycyjną metodą korzystania z systemów komputerowych.
+Terminal tekstowy jest tradycyjną metodą korzystania z systemów
+komputerowych. Pomimo, że terminal jest technologią sięgającą swych
+początków w latach siedemdziesiątych XX wieku, to sposób pracy
+ugruntował sobie miejsce w nowoczesnych świecie technologii
+informatycznych. Współczesnie, terminal to tak zwany softwarowy
+emulator terminala tekstowego. Sposób korzystania jest oparty na
+koncepcji edycji pojedyńczej linii i wysłania jej do wykonania
+programowi, który jest uruchomiony. Przykładem może być powłoka
+systemu operacyjnego (windows shell, bash) lub interpreter Pythona lub
+SageMath. Praca w takim trybie jest szczególnie przydatna podczas
+eksploracji naukowych i jest powszechnie stosowania na całym świecie.
 
 
 .. figure:: ./figs/cli_sage.png
        :align: center
        :width: 60%
                
-       Przykładowa sersja w linii poleceń w systemie SageMath.
+       Przykładowa sesja w linii poleceń w systemie SageMath.
 
 
 
@@ -33,7 +43,25 @@ Terminal tekstowy jest tradycyjną metodą korzystania z systemów komputerowych
 Notatnik
 ~~~~~~~~
 
-Notatnik SageMath w tym projekcie został zastosowany
+System typu notatnik łączy w sobie dwie koncepcje. Pierwszą jest
+dokument zawierający bogaty (np. ilustrowany) sformatowany tekst oraz
+kod programu komputerowego. Ponadto tzw. wyjscie programu może być
+zarówno tekstem (jak w przypadku terminala tekstowego) jak i formułą,
+obrazkiem czy też interaktywnych elementem (np. suwakiem). Drugą
+koncepcją jest system dostępny przez przeglądarkę internetową
+pozwalającą na edycję powyższego dokumentu i wykonywanie zawartych w
+mim bloków kodu.
+
+.. figure:: ./figs/notebook_sage.png
+       :align: center
+       :width: 60%
+       :name: notebook_sage
+              
+       Przykładowy notebook  w systemie SageMath.
+
+
+
+W projekcje iCSE4school notatnik SageMath był podstawowym narzędziem pracy. 
 
  - praca w "chmurze" - korzystanie ze wspólnego serwera
  - praca na własnej kopii
