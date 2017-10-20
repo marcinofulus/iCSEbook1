@@ -21,8 +21,13 @@ Przedmioty ścisłe z SageMath
    warunki_wdrozenia.rst
 
 
-Materiały dydaktyczne: Matematyka
----------------------------------
+Materiały dydaktyczne
+---------------------
+
+ad ad fasf 
+
+Matematyka
+++++++++++
 
 .. toctree::
    :maxdepth: 1
@@ -35,8 +40,8 @@ Materiały dydaktyczne: Matematyka
    przyblizanie_wielomianami.rst
 
 
-Materiały dydaktyczne: Fizyka
------------------------------
+Fizyka
+++++++
 
 .. toctree::
    :maxdepth: 1

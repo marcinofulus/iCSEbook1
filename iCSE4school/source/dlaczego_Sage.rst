@@ -164,6 +164,7 @@ rozwinąć wyrażenie algebraiczne zawierające te symbole. Wykonująć:
 .. only:: html
 
    Otrzymamy w wyniku wzór algebraiczny.
+   
 
 Współczesne systemy algebry komputerowej nie ograniczają się do
 manipulacji wzorami matematycznymi. Z reguły są wyposażone w system
@@ -271,8 +272,6 @@ ucznia, który uczył się Pythona na informatyce.
 
 SageMath w pigułce
 ------------------
-
-
 Bogaty i szybki kalkulator naukowy.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

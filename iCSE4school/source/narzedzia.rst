@@ -142,7 +142,7 @@ pełnej funkcjonalności SageMath z pośrednictwem dowolnego urządzenia.
        poniżej wynik jego działania: interaktywny suwak i wykres. Po
        prawej stronie rysunku widzimy możliwość stworzenia linku
        zawierającego powyższy program. Kod QR zawiera ten sam
-       link. Link występuje w dwóch postaciach, krótkiej i dlugiej -
+       link. Link występuje w dwóch postaciach, krótkiej i długiej -
        zawierającej w url spakowany cały kod. 
 
 
@@ -184,11 +184,50 @@ celów. Można wyróżnić następujace rodzaje pracy:
 
 
 Trzecia metoda interakcji z SageMath - cell server była stosowana
-podczas tworzenia materiałów - takich jak na przykład ten manuskrypt.
+podczas tworzenia materiałów - takich jak na przykład ten manuskrypt. 
 
+Należy zdecydowanie stwierdzić, że centralna instalacja serwera
+notatników jest bardzo przydatnym rozwiązaniem. Wpisująca się
+najnowsze trendy praca w "chmurze" ma następujące zalety dla
+użytkowników:
 
+ - Wszechobecność materiałów. Można pracować w systemie SageMath
+   wszędzie tam gdzie jest przeglądarka internetowa. Dzięki
+   dostępności taniego internetu mobilnego jest to warunek spełniony
+   praktycznie wszędzie.
+ - Mniejsze ryzyko utraty danych przez zwykłe zgubienie lub awarię dysku
+   twardego. Oczywiście to tego niezbędny jest sprawny system kopii
+   zapasowowych działający na instalacji chmurowej. W naszym przypadku
+   zastosowano rozwiązanie umożliwiające zapis codziennego stanu
+   serwera. W przypadku całkowitego zniszczenia serweru lub
+   np. skasowania danych przez złośliwe oprogramowanie czy cyberatak,
+   można było odtworzyć stan dokumentów z dowolnego dnia przed tym
+   wydarzeniem.
+ - System notatnik 'sagenb' ma cechy systemu e-learningowego,
+   umożliwia dystrybuję materiałów, możliwy jest wgląd nauczyciela w
+   pracę ucznia oraz tzw. publikacja materiałów przez zarówno uczniów
+   jak i nauczycieli. Zaobserwowano intesywne wykorzystywanie tych
+   możliwości podczas projektu.
 
+ - Warto zauważyć, że największa obawa przed korzystaniem z rozwiązań
+   chmurowych czyli wyciek danych nie stanowi problemu w przypadku
+   używania SageMath w pracy. Z reguły bowiem treści notatników nie sa
+   poufne. Jedynym zagrożeniem jest utrata danych, która może być
+   praktycznie wyeliminowana poprzez stosowanie systemu kopii
+   zapasowych.
 
+Notatnik oparty na przeglądarce internetowej jest technologią, która
+jest intensywnie rozwijana w świecie nauki. Najnowocześniejszym
+rozwiązaniem jest tzw. Jupyter notebook [#jupyter]_. Został on
+włączony do projektu SageMath i w najnowszych wersjach zastępuje
+klasyczny notatnik sagenb. W trakcie projektu Jupyter notebook nie
+oferował jeszcze krytycznych dla realizacji dydaktyki cech takich jak
+uwspólnianie dokumentów czy ich publikacja. Dlatego projekt został
+przeprowadzony na poprzednim rozwiązaniu.
+
+.. [#jupyter] Projekt ma stronę internetową http://jupyter.org
+
+              
 Modele nauczania
 ----------------
 
