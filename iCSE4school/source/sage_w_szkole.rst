@@ -36,63 +36,6 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 
 
 
-+----------------------------------------------------------------------------------------+
-| **Klasa 1**                                                                            |
-+--------------------------------+-------------------------------------------------------+ 
-|                                |                                                       |
-|Logika. Zbiory.  Zbiory liczbowe|Przy pomocy pakietu SageMath uczeń może poznać i       | 
-|                                |utrwalić podstawowe prawa logiki, takie jak negacja    |
-|                                |alternatywy i negacja koniunkcji, ocenić wartość       |
-|                                |logiczną zdań złożonych oraz zastosować poznane prawa  |
-|                                |logiczne.  Uczeń może również nauczyć się wyznaczać    |
-|                                |część wspólną, sumę i różnicę zbiorów oraz dopełnienie |
-|                                |zbioru.                                                |
-+--------------------------------+-------------------------------------------------------+
-|                                |                                                       |
-|Działania w zbiorach liczbowych |Ponieważ SageMath może służyć jako kalkulator, uczeń   |
-|                                |wykorzystując ten pakiet może osiągnąć wszystkie cele  |
-|                                |edukacyjne i zdobyć wszystkie umiejętności zakładane w |
-|                                |tym dziale.                                            |
-+--------------------------------+-------------------------------------------------------+
-|                                |                                                       |
-|Wyrażenia algebraiczne          |Ponieważ w SageMath można wykonywać obliczenia         |
-|                                |symboliczne, uczeń wykorzystując ten pakiet może       |
-|                                |osiągnąć wszystkie cele edukacyjne i zdobyć wszystkie  |
-|                                |umiejętności zakładane w tym dziale.                   |
-+--------------------------------+-------------------------------------------------------+
-|                                |                                                       |
-|Geometria płaska - pojęcia      |Przy pomocy środowiska SageMath uczeń może wizualizować|
-|wstępne                         |obiekty geometryczne, badać ich wzajemne zależności    |
-|                                |oraz może rozwiązywać zadania dotyczące własności figur|
-|                                |geometrycznych wykorzystując poznane w tym dziale      |
-|                                |twierdzenia.                                           |
-+--------------------------------+-------------------------------------------------------+
-|Geometria płaska - trójkąty     |                                                       |
-+--------------------------------+-------------------------------------------------------+
-|Geometria płaska - pole koła,   |Wykorzystując środowisko SageMath uczeń może utrwalić  |
-|pole trójkąta                   |swoje umiejętności m.  in. w zakresie korzystania z    |
-|                                |przybliżonych wartości funkcji trygonometrycznych,     |
-|                                |rozwiązywania zadań geometrycznych z wykorzystaniem    |
-|                                |funkcji trygonometrycznych kąta ostrego w trójkącie    |
-|                                |prostokątnym oraz zastosowania twierdzenia sinusów i   |
-|                                |twierdzenia cosinusów.                                 |
-+--------------------------------+-------------------------------------------------------+
-|Trygonometria                   |                                                       |
-|                                |                                                       |
-|                                |                                                       |
-|                                |                                                       |
-|                                |                                                       |
-|                                |                                                       |
-|                                |                                                       |
-+--------------------------------+-------------------------------------------------------+
-|Funkcja i jej własności         |Przy pomocy środowiska SageMath uczeń może osiągnąć    |
-|                                |wszystkie cele edukacyjne i zdobyć wszystkie           |
-|                                |umiejętności zakładane w tych działach.                |
-|                                |                                                       |
-+--------------------------------+-------------------------------------------------------+
-|Przekształcanie wykresów funkcji|                                                       |
-+--------------------------------+-------------------------------------------------------+
-
 
 
 
@@ -450,19 +393,43 @@ aplikację w trakcie realizacji zajęć z zakresu Physics Standard/Higher
 Level w XXXIII Liceum Ogólnokształcącym Dwujęzycznym im. Mikołaja
 Kopernika w Warszawie:
 
-.. admonition:: Measurements and  uncertainties (5h)
-                   
+
+Measurements and  uncertainties (5h)
+....................................
+
  - 1.1 - Measurements  in physics         
  - 1.2 - Uncertainties and  errors             
- - 1.3 - Vectors and  scalars            
+ - 1.3 - Vectors and  scalars
 
- .. admonition:: Zastosowanie Python/SageMath
+.. admonition:: Zastosowanie Python/SageMath
 
-    Obliczanie niepewności pomiarowych,  operacje na wektorach.               
+   Obliczanie niepewności pomiarowych, operacje na
+   wektorach. Przykładem może być scenariusz lekcji "Badanie ruchu
+   przyśpieszonego" :ref:`przyspieszony`. Operacje na wektorach mogą
+   być efektywnie realizowane w SageMath wykorzystują podsystem
+   algebry liniowej. Do dyspozycji są funkcje wizualizujące
+   :code:`vector_plot` i :code:`arrow`.
+
+
+Mechanics
+.........
+
+ - 2.1 - Motion
+ - 2.2 - Forces
+ - 2.3 - Work, energy and power
+ - 2.4 - Momentum and impulse            
+
+.. admonition:: Zastosowanie Python/SageMath
+
+  Sporządzanie wykresów zależności drogi, szybkości i przyśpieszenia
+  od czasu. Modelowanie torów ruchu, rozwiązywanie kinematycznego
+  równania ruchu metodami numerycznymi.
 
 
 
 
+
+  
 
 +-----------------------+-----+-------------------------------------+
 |     Nazwa działu.     |godz.|Przykładowe zastosowania             |
@@ -496,6 +463,11 @@ Kopernika w Warszawie:
 |                       |     |                                     |
 | 2.4 - Momentum and    |     |                                     |
 | impulse               |     |                                     |
+|                       |     |                                     |
+|                       |     |                                     |
+|                       |     |                                     |
+|                       |     |                                     |
+|                       |     |                                     |
 |                       |     |                                     |
 +-----------------------+-----+-------------------------------------+
 | Thermal physics       | 11  |Modelowanie stanu gazu doskonałego.  |

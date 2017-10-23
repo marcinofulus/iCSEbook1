@@ -1,8 +1,10 @@
 .. -*- coding: utf-8 -*-
 
 
+
 Badanie ruchu przyspieszonego
 =============================
+
 
 Wstęp
 -----
@@ -37,6 +39,7 @@ Mówiąc w skrócie, sugerowana metoda doświadczalna polega na zaznaczeniu na r
 
 Z wykonanego doświadcznia należy sporządzić sprawozdanie według ogólnych zaleceń, opublikowanych w formie PDF na stronie internetowej szkoły.
 
+.. _przyspieszony:
 
 Część informatyczna
 -------------------
