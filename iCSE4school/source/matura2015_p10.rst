@@ -1,5 +1,5 @@
-Zadanie 10 - o konstrukcji złożonych poleceń z pomocą metod
------------------------------------------------------------
+O konstrukcji złożonych poleceń z pomocą metod
+----------------------------------------------
 
 Funkcja liniowa określona wzorem :math:`f(x)=2 x +b` ma takie samo
 miejsce zerowe, jakie ma funkcja liniowa :math:`g(x) = -3x + 4`. Stąd
@@ -22,6 +22,11 @@ otrzymać wynik:
    f.subs(solve(g,x)[0]).solve(b)[0].show()
 
 
+.. only:: latex
+
+    Otrzymujemy :math:`b=-\frac{8}{3}`.
+    
+
 Co oznacza wyrażenie :code:`f.subs(solve(g,x)[0]).solve(b)[0].show()`?
 W bezpośrednim przekładzie z Pythona na Polski:
 
@@ -37,15 +42,12 @@ W bezpośrednim przekładzie z Pythona na Polski:
    rozwiązań lub jednoelementowa.
 
 
-
-
 .. admonition:: Jak to działa?  -  metody i funkcje. 
 
    Językiem systemu algebry komputerowej Sage jest Python. W Python-ie
    wszystkie zmienne są objektami i posiadają, prócz danych takich jak
    np. wartość zmiennej, tak zwane metody. Metodami są funkcje, które
    wywołujemy taką składnią:   :code:`nazwa_objektu.funkcja()`. 
-
 
 
 Wypróbuj sam działanie metod. Weż na przykład wyrażenie algebraiczne

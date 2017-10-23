@@ -1,5 +1,5 @@
-Zadanie 9 - o tym jak technologia :code:`@interact` pomoże rozwiązać równanie z parametrem
-------------------------------------------------------------------------------------------
+O tym jak technologia :code:`@interact` pomoże rozwiązać równanie z parametrem
+------------------------------------------------------------------------------
 
 Na wykresie funkcji liniowej określonej wzorem :math:`f(x)=(m-1)x +3`
 leży punkt :math:`S = (5,-2)`. Zatem:
@@ -19,6 +19,11 @@ Korzystając z algebry komputerowej wynik otrzymujemy natychmiast:
    show(rownanie)
    show(rownanie.subs({x:5,y:-2}).solve(m))
 
+
+.. only:: latex
+
+    Otrzymujemy :math:`m=1`
+    
 
 Ponieważ mamy do sprawdzenia tylko cztery możliwości można też pokusić
 się o narysowanie graficznej reprezentacji w każdym z przypadków:
@@ -44,6 +49,4 @@ się o narysowanie graficznej reprezentacji w każdym z przypadków:
    argument innej funkcji, która generuje dla nas wygodne przyciski i
    po ich nacisnięciu wywołuje funkcje :code:`rysuj` z wybraną
    wartością parametru.
-
-
 

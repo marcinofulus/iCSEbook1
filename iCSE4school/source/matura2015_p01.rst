@@ -18,6 +18,12 @@ z nim poradzi. Wpisujemy i od razu mamy wynik:
    solve([-4<=x-1,x-1<=4],x)
 
 
+.. only:: latex
+    
+    +---------------------------------------+
+    | [[-3 < x, x < 5], [x == -3], [x == 5]]|
+    +---------------------------------------+
+
 ... ale czy nie jest on bardziej skomplikowany od zadania? 
 
 
@@ -33,6 +39,11 @@ procedurę :code:`region_plot`:
    region_plot([-4<=x-1,x-1<=4],(x,-10,10),(y,-1,1) )
 
 
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p01_1.pdf
+       :width: 100%
+       :name: matura2015_p01_1
 
 
 .. admonition:: :code:`==` czy :code:`=`?

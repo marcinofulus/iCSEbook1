@@ -1,5 +1,5 @@
-Zadanie 4 - o tym jak :code:`solve` wykona pracę za nas i kiedy nas zawiedzie
------------------------------------------------------------------------------
+O tym jak :code:`solve` wykona pracę za nas i kiedy nas zawiedzie
+-----------------------------------------------------------------
 
 
 Czy równość: 
@@ -64,3 +64,4 @@ jest poprawna:
 
    for m in [5, 4, 1, -5]:
        print  (m/(5-sqrt(5))).n(),"=",((5+sqrt(5))/5).n()
+

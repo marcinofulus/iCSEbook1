@@ -2,12 +2,9 @@ Wstęp
 -----
 
 
-
-
-
 Oddajemy Państwu materiały edukacyjne, będące produktem projektu
 „Zintegrowane nauczanie przedmiotów ścisłych z perspektywą
-obliczeniową - iCSE4school„
+obliczeniową - iCSE4school„.
 
 Przedmiotem projektu była nauka programowania w języku Python z
 użyciem środowiska Sage oraz wykorzystanie tej umiejętności do

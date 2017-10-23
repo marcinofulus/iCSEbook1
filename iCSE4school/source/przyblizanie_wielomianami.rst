@@ -99,6 +99,17 @@ Pierwszy przykład liczy silnię zgodnie z definicją.
         silnia=silnia*i
         print i, '!=', silnia
         
+.. only:: latex
+
+    .. code:: python
+
+        1!= 1
+        2!= 2
+        3!= 6
+        4!= 24
+        5!= 120
+    
+    
 Drugi przykład przy obliczaniu silni korzysta z wbudowanej funkcji w SageMath.
 
 .. sagecellserver::

@@ -24,7 +24,6 @@ Przedmioty ścisłe z SageMath
 Materiały dydaktyczne
 ---------------------
 
-ad ad fasf 
 
 Matematyka
 ++++++++++

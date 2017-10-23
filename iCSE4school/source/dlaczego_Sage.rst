@@ -382,17 +382,36 @@ wymiernych.
 
     Wykonując ten kod otrzymamy następujący wynik:
    
-   .. math::
-
-
-      {\left(a + b\right)}^{2} \text{\texttt{=}} a^{2} + 2 \, a b + b^{2} \\
-      {\left(a - b\right)}^{2} \text{\texttt{=}} a^{2} - 2 \, a b + b^{2} \\
-      {\left(a + b\right)} {\left(a - b\right)} \text{\texttt{=}} a^{2} - b^{2} \\
-      {\left(\sqrt{3} + 2\right)}^{2} \text{\texttt{=}} 4 \, \sqrt{3} + 7 \\
-      {\left(\sqrt{3} - 2\right)}^{2} \text{\texttt{=}} -4 \, \sqrt{3} + 7 \\
-      {\left(\sqrt{3} + 2\right)} {\left(\sqrt{3} - 2\right)} \text{\texttt{=}} -1
-
+    .. math::
+       
+       {\left(a + b\right)}^{2} \text{\texttt{=}} a^{2} + 2 \, a b + b^{2}
+       
+       
+    .. math::
+    
+       {\left(a - b\right)}^{2} \text{\texttt{=}} a^{2} - 2 \, a b + b^{2} 
+   
+   
+    .. math::    
       
+       {\left(a + b\right)} {\left(a - b\right)} \text{\texttt{=}} a^{2} - b^{2}
+    
+    
+    .. math::
+    
+       {\left(\sqrt{3} + 2\right)}^{2} \text{\texttt{=}} 4 \, \sqrt{3} + 7 
+       
+       
+    .. math::
+     
+       {\left(\sqrt{3} - 2\right)}^{2} \text{\texttt{=}} -4 \, \sqrt{3} + 7
+       
+       
+    .. math::
+      
+       {\left(\sqrt{3} + 2\right)} {\left(\sqrt{3} - 2\right)} \text{\texttt{=}} -1
+       
+            
     
 **Zamiana postaci wyrażenia algebraicznego.**
 
@@ -406,10 +425,15 @@ wymiernych.
 .. only:: latex
 
     Wykonując ten kod otrzymamy następujący wynik:
-   
+
+
+   .. math::
+      
+      n=2
+      
+      
    .. math::
 
-      \text{\texttt{n=2}} \\
       -{\left(n - 1\right)}^{3} + n^{3} \text{\texttt{{ }={ }}} 3 \, n^{2} - 3 \, n + 1 \text{\texttt{{ }={ }}} 7 
 
 
@@ -431,9 +455,20 @@ wymiernych.
    
    .. math::
 
-      \frac{z^{2} + 3 \, z}{z} \\
-      z + 3 \\
-      \frac{{\left(x + 1\right)}^{2} + 3 \, x + 3}{x + 1} \\
+      \frac{z^{2} + 3 \, z}{z} 
+      
+      
+   .. math::
+   
+      z + 3 
+      
+   
+   .. math::
+   
+      \frac{{\left(x + 1\right)}^{2} + 3 \, x + 3}{x + 1} 
+      
+   .. math::   
+      
       5
  
 

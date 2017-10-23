@@ -1,5 +1,5 @@
-Zadanie 11 - pojedynek  funkcji kwadratowej z :code:`solve`
------------------------------------------------------------
+Pojedynek  funkcji kwadratowej z :code:`solve`
+----------------------------------------------
 
 Funkcja kwadratowa określona wzorem :math:`f(x)=x^2 + x + c`. Jeżeli
 :math:`f(3) = 4` to:
@@ -18,6 +18,11 @@ Korzystając z algebry komputerowej mamy wynik od razu:
    f(x) = x^2 + x + c
    f(1).subs(solve(f(3)==4,c)[0])
    
+
+.. only:: latex
+
+    Otrzymujemy :math:`-6`.
+
 
 Pozostaje jeszcze przetłumaczyć :code:`f(1).subs(solve(f(3)==4,c)[0])`
 z Pythona na Polski:

@@ -75,7 +75,12 @@ Znajdź *x* takie, że: :math:`3x = 1 (mod \hspace{2mm} 4), \hspace{2mm} 5<x<10`
     for x in range(5,11):        #You can change this range
         if (3*x - 1) % 4 == 0:   #You can change this equation
             print "x=",x
-            
+
+
+.. only:: latex
+
+    x=7
+
             
 Ćwiczenie 2.
 """"""""""""
@@ -87,12 +92,18 @@ Znajdź *x* takie, że: :math:`3x+2 = 1 (mod \hspace{2mm} 5)`.
         if (3*x+2 - 1) % 5 == 0:
             print x
 
+.. only:: latex
+
+    .. code:: python
+    
+        3 8 13 18 23 28 33 38
+
 
 Oczywiście istnieje nieskończenie takich rozwiązań. Dodatkowo te rozwiązania wyznaczają ciąg arytmetyczny.
 
 Ćwiczenie 3.
 """"""""""""
-Znajdź *x* takie, że: 3x = 1 (mod \hspace{2mm} 6).
+Znajdź *x* takie, że: 3x = 1 (mod 6).
 
 .. sagecellserver::
 
@@ -127,7 +138,11 @@ x = 2 mod 7.
     for x in range(100):
         if (x-1) % 3 == 0 and (x-3) % 5 == 0 and (x-2) % 7 == 0:
             print x
-    
+
+.. only:: latex
+
+    Otrzymujemy 58.
+
 
 Małe twierdzenie Fermata.
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -187,7 +202,16 @@ Otrzymujemy parę kluczy, klucz publiczny: :math:`(d, n)` i klucz prywatny: :mat
     # decryption
     deszyfr = (szyfr*e) % n
     print "decryption:", deszyfr
- 
+
+.. only:: latex
+
+    .. code:: python
+    
+        public key: (220265, 21590866)
+        private key: (392481, 21590866)
+        encryption: 16533851
+        decryption: 1234567
+
 
 **Co zrobić gdy liczba jest więsza od n?**
 
@@ -287,6 +311,15 @@ Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i d
     print "encription:", szyfr
 
 
+.. only:: latex
+
+    .. code:: python
+
+        message: This is the secret message or anything.
+        number: 7104621192355001949587695523335056785587592902 56842999253022836498080435596626110976
+        encription: 247771732970102709758504535275676311805105 6145804692906609710645765611862711721717856778
+
+
 Pełny algorytm deszyfrujący.
 """"""""""""""""""""""""""""
 
@@ -311,6 +344,15 @@ Pełny algorytm deszyfrujący.
         tekst2 = tekst2 + chr(deszyfr%128)
     print "message: ", tekst2
  
+
+.. only:: latex
+
+    .. code:: python
+
+        encription: 24777173297010270975850453527567631180510 56145804692906609710645765611862711721717856778
+        decription: 71046211923550019495876955233350567855875 9290256842999253022836498080435596626110976
+        message:  This is the secret message or anything.
+
 
 Szyfrowanie asymetryczne RSA.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

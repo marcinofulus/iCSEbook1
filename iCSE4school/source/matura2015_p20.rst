@@ -1,9 +1,8 @@
-Zadanie 20 - punkty odbicia i działania na wektorach 
-----------------------------------------------------
+Punkty odbicia i działania na wektorach 
+---------------------------------------
 
 .. image:: matura2015/matura2015_p20.png
    :align: center
-
 
 
 Zadanie to można łatwo sformułować w języku operacji na wektorach
@@ -36,3 +35,9 @@ Poniższy kod rozwiązuje i ilustruje nasze zadanie:
     plt += point(-1/2*(p1+p2),size=40,color='green')
     plt.show()
 
+
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p20_1.pdf
+       :width: 60%
+       :name: matura2015_p20_1

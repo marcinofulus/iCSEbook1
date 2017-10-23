@@ -1,5 +1,5 @@
-Zadanie 17 - kąty, radiany i szacowanie funkcji sinus 
--------------------
+Kąty, radiany i szacowanie funkcji sinus 
+----------------------------------------
 
 .. image:: matura2015/matura2015_p17.png
    :align: center
@@ -25,6 +25,12 @@ Mając do dyspozycji Sage rozwiązanie otrzymujemy natychmiast:
 .. sagecellserver::
 
    solve(4*sin(x)==1,x)[0].rhs().n()*180/pi.n()
+   
+   
+.. only:: latex
+
+   Otrzymujemy 14.4775121859299.
+
 
 Gotowe!
 
@@ -62,6 +68,13 @@ Punkt :math:`(30^\circ,\frac{1}{2})` należy do wykresu funkcji sinus:
     p
 
 
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p17_1.pdf
+       :width: 50%
+       :name: matura2015_p17_1
+
+
 Zauważmy, że dla kątów mniejszych od :math:`30^\circ` funkcja sinus
 może być całkiem nieźle przybliżona przez liniową:
 
@@ -72,6 +85,14 @@ może być całkiem nieźle przybliżona przez liniową:
     p += point( [30,1/2])    
     p += plot( x/180*pi, (x,0,90),color='red')
     p
+
+
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p17_2.pdf
+       :width: 50%
+       :name: matura2015_p17_2
+
 
 Ponadto widać, że wykres sinusa leży pod prostą:
 
@@ -103,4 +124,9 @@ przybliżenie:
     p
 
 
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p17_3.pdf
+       :width: 50%
+       :name: matura2015_p17_3
 

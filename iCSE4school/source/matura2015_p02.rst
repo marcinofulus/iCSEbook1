@@ -13,13 +13,19 @@ policzyć iloczyn.
 Wystarczy poprosić system algebry komputerowej i od razu mamy wynik:
 
 
-
 .. sagecellserver::
 
     a = 1/27
     b = log(64,base=1/4)
     c = log(27,base=1/3)
     show(a*b*c)
+
+
+.. only:: latex 
+
+    Otrzymujemy wynik :math:`\frac{1}{3}`.
+
+
 
 .. admonition:: Jak to działa?
 
@@ -33,5 +39,3 @@ Wystarczy poprosić system algebry komputerowej i od razu mamy wynik:
       show(  log(64,base=1/4) )
 
 
-
- 

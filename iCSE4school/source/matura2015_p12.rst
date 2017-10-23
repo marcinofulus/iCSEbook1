@@ -1,5 +1,5 @@
-Zadanie 12 - o brutalnej metodzie i pętli :code:`for` przyrządzonej na dwa sposoby
-----------------------------------------------------------------------------------
+O brutalnej metodzie i pętli :code:`for` przyrządzonej na dwa sposoby
+---------------------------------------------------------------------
 
 Ile liczb całkowitych spełnia nierówność :math:`\frac{2}{7}<\frac{x}{14}<\frac{4}{3}`?
 
@@ -22,6 +22,12 @@ Uczyńmy to więc:
    liczby = [x for x in range(-1000,1000) if 2/7<x/14<4/3]
    print len(liczby),":",liczby
 
+.. only:: latex
+
+    +--------------------------------------------------------+
+    |14 : [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]|
+    +--------------------------------------------------------+
+ 
  
 Oczywiście każdy matematyk zaprotestuje, nie mamy pewności czy nie ma
 liczb całkowytych poza przedziałem, które spełniają te nierówności. W
@@ -34,6 +40,12 @@ rzeczywistych:
    var('x')
    solve([2/7<x/14,x/14<4/3],x)
 
+
+.. only:: latex
+
+    +---------------------+
+    |[[4 < x, x < (56/3)]]|
+    +---------------------+
 
 
 Ponieważ wykonaliśmy sprawdzenie każdej liczby z osobna, można również
@@ -68,3 +80,9 @@ pętlą :code:`for`:
        if 2/7<x/14<4/3:
            i+=1
    print i
+   
+   
+.. only:: latex
+
+    Otrzymujemy 14.
+

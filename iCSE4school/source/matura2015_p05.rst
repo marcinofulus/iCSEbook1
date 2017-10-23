@@ -1,5 +1,5 @@
-Zadanie 5 - jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
---------------------------------------------------------------------------------------------
+Jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
+--------------------------------------------------------------------------------
 
 Pytanie jest o liczbę rozwiązań układu równań. Ponownie możemy uzyskać
 odpowiedź od systemu rozkazując komputerowi rozwiązać nasz układ:
@@ -8,7 +8,13 @@ odpowiedź od systemu rozkazując komputerowi rozwiązać nasz układ:
 
    var('x,y,m')
    solve( [x-y==3,2*x+0.5*y==4],[x,y])
+   
+.. only:: latex
 
+   +----------------------------+ 
+   |[[x == (11/5), y == (-4/5)]]| 
+   +----------------------------+
+   
 
 Jednak ponieważ nie potrzebne są nam wartości pierwiastków tego układu
 równań, to możemy posłużyć się metodą graficzną! Rozwiązania układu
@@ -24,6 +30,11 @@ odpowiedzi:
    p += implicit_plot(2*x+0.5*y==4,(x,-3,3),(y,-3,3),color='red')
    p.show()
 
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p05_0.pdf
+       :width: 60%
+       :name: matura2015_p05_0
 
 
 .. admonition:: Dlaczego :code:`implicit_plot`?
@@ -59,6 +70,12 @@ funkcji jednej zmiennej:
    p = plot(x-3,(x,-3,3)) 
    p += plot(-4*x+8,(x,-3,3),color='red')
    p.show()
+
+.. only:: latex
+          
+    .. figure:: matura2015/matura2015_p05_1.pdf
+       :width: 60%
+       :name: matura2015_p05_1
 
 
 Ale zaraz! Wyszły inne wykresy! A może się nam to wydaje? Zmieńmy
