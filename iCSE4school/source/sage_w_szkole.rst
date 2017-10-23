@@ -450,6 +450,20 @@ aplikację w trakcie realizacji zajęć z zakresu Physics Standard/Higher
 Level w XXXIII Liceum Ogólnokształcącym Dwujęzycznym im. Mikołaja
 Kopernika w Warszawie:
 
+.. admonition:: Measurements and  uncertainties (5h)
+                   
+ - 1.1 - Measurements  in physics         
+ - 1.2 - Uncertainties and  errors             
+ - 1.3 - Vectors and  scalars            
+
+ .. admonition:: Zastosowanie Python/SageMath
+
+    Obliczanie niepewności pomiarowych,  operacje na wektorach.               
+
+
+
+
+
 +-----------------------+-----+-------------------------------------+
 |     Nazwa działu.     |godz.|Przykładowe zastosowania             |
 |                       |     |oprogramowania Python/Sage.          |
@@ -492,7 +506,7 @@ Kopernika w Warszawie:
 | 3.2 - Modelling a     |     |                                     |
 | gas                   |     |                                     |
 +-----------------------+-----+-------------------------------------+
-| Waves                 | 15  |Sporządzanie zależności wychylenia,  |
+|  Waves                | 15  |Sporządzanie zależności wychylenia,  |
 |                       |     |prędkości i przyspieszenia danego    |
 | 4.1 - Oscillations    |     |ciała w ruchu drgającym, modelowanie |
 |                       |     |fali poprzecznej i podłużnej.        |
@@ -508,7 +522,7 @@ Kopernika w Warszawie:
 | 4.5 - Standing        |     |                                     |
 | waves                 |     |                                     |
 +-----------------------+-----+-------------------------------------+
-| Electricity and       | 15  |Rozwiązywanie równań opisujących     |
+|  Electricity and      | 15  |Rozwiązywanie równań opisujących     |
 | Magnetim              |     |obwód prądu za pomocą pierwszego  i  |
 |                       |     |drugiego prawa Kirchhoffa.           |
 | 5.1 - Electric        |     |Modelowanie pola wektorowego.        |
@@ -525,7 +539,7 @@ Kopernika w Warszawie:
 | effects of            |     |                                     |
 | electric currents     |     |                                     |
 +-----------------------+-----+-------------------------------------+
-| Circular motion       | 5   |Numeryczne rozwiązywanie równania    |
+|  Circular motion      | 5   |Numeryczne rozwiązywanie równania    |
 | and gravitation       |     |różniczkowego opisującego II Zasadę  |
 |                       |     |Dynamiki Newtona dla dowolnego punktu|
 | 6.1 - Circular        |     |materialnego w danym polu wektorowym.|

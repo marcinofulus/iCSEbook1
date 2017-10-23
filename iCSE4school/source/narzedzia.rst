@@ -228,8 +228,10 @@ przeprowadzony na poprzednim rozwiązaniu.
 .. [#jupyter] Projekt ma stronę internetową http://jupyter.org
 
               
-Modele nauczania
-----------------
+Modele i metody nauczania z wykorzystaniem SageMath
+---------------------------------------------------
+
+
 
 Z punktu widzenia aktywności ucznia modele nauczania można podzielić na
 grupy:
@@ -275,7 +277,7 @@ skutecznie przygotowuje do samodzielności i uczenia się przez całe życie
 stosowana.
 
 Metody nauczania
-----------------
+~~~~~~~~~~~~~~~~
 
 W literaturze przedmiotu możemy napotkać wiele sposobów podziału
 metod nauczania. Dla przykładu Franciszek Szlosek proponuje podział
@@ -290,17 +292,18 @@ metod nauczania na pięć głównych grup:
 -  Praktyczne: ćwiczenia przedmiotowe, ćwiczenia laboratoryjne,
    warsztaty, eksperymenty, metoda projektów.
 
+
 Przykłady zastosowań poszczególnych metod
 -----------------------------------------
 
 Prezentacja i pokaz możliwości zastosowań SageMath
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Metody eksponujące w postaci pokazów, prezentacji i demonstracji zostały
 wykorzystane jako pierwszy kontakt uczniów z  aplikacją SageMath. Miały na
 celu zaciekawienie uczniów, zaintrygowanie ich a także przekonanie, że z
 SageMath będą w stanie sprawdzić każdą pracę domową z matematyki, czy innego
-przedmiotu,  wymagającą obliczeń czy wykresów.
+przedmiotu, wymagającą obliczeń czy wykresów.
 
 W LO M. Kopernika w Warszawie uczniowie mogli zobaczyć różnorodne
 możliwości SageMath podczas pierwszych zaplanowanych dla uczniów uczestników
@@ -320,21 +323,22 @@ Uwaga metodyczna:
 Warto zadbać aby uczniowie na początku cyklu zajęć widzieli ich cel w
 postaci zadania, jakie stawia przed nimi nauczyciel. Równie ważne jest
 aby uczniowie zobaczyli jakim sposobem ten cel można osiągnąć a także
-zainteresowali się twórczo  nowo poznawanym tematem. Jeśli chodzi o nowe
-technologie czy narzędzia informatyczne bardzo ważne jest aby nauczyciel
-zapytał uczniów jakie oni sami  mieliby pomysły na zastosowanie i
-wykorzystanie nowego narzędzia. Uczniowie wówczas mogą się wykazać
-czasem zaskakującą kreatywnością, czasem bardzo praktycznym podejściem.
+zainteresowali się twórczo nowo poznawanym tematem. Jeśli chodzi o
+nowe technologie czy narzędzia informatyczne bardzo ważne jest aby
+nauczyciel zapytał uczniów jakie oni sami mieliby pomysły na
+zastosowanie i wykorzystanie nowego narzędzia. Uczniowie wówczas mogą
+się wykazać czasem zaskakującą kreatywnością, czasem bardzo
+praktycznym podejściem.
 
 Warsztaty - ćwiczenia praktyczne z wykorzystaniem SageMath
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Warsztaty umożliwiają kształtowanie umiejętności zastosowania wiedzy w
 praktyce. Polegają przykładowo na rozwiązywaniu zadań, wykonywaniu
-doświadczeń i eksperymentów,   planowaniu i wykonywaniu pomiarów,
+doświadczeń i eksperymentów, planowaniu i wykonywaniu pomiarów,
 obliczeń oraz interpretowaniu wyników badań, wykonywaniu symulacji
-praktycznych i teoretycznych, analizowaniu  i praktycznym
-poznawaniu zjawisk z różnych dziedzin nauki.
+praktycznych i teoretycznych, analizowaniu i praktycznym
+poznawaniu zjawisk z różnych dziedzin nauki.
 
 Warsztaty służą kształtowaniu umiejętności twórczego wykorzystania
 wiedzy w praktyce (np. samodzielne poznawanie cech konstrukcji,
@@ -363,7 +367,7 @@ domowych, projektów czy przyszłych zastosowań. Uczniowie wypowiadali się
 także temat sposobu przeprowadzenia zajęć. Wszyscy wypowiedzieli się za
 tym, aby więcej było zadań do samodzielnego wykonania w grupach.
 
-Uwaga metodyczna:
+*Uwaga metodyczna:*
 
 Podczas warsztatów takie polecenia dla ucznia, które są w formie
 powtarzania poleceń wykonywanych przez nauczyciela nie mogą trwać długo,
@@ -371,8 +375,8 @@ ponieważ uczniowie poczują się znudzeni. Takie zajęcia muszą być
 przeplatane aktywnym zadaniem dla ucznia, wymagającym od niego
 kreatywności. Uczniowie preferują pracę w grupach podczas warsztatów.
 
-Metoda projektu, projekty grupowe HS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Metoda projektu, projekty grupowe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Spośród metod praktycznych stosowanych podczas zajęć szkolnych, na
 szczególną uwagę zasługuje metoda projektów. Aktywizuje ucznia do

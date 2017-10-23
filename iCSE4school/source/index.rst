@@ -3,7 +3,14 @@ iCSE4school - metodologia
 =========================
  
 
+Wstęp
+-----
 
+.. toctree::
+   :maxdepth: 1
+
+   wstep.rst
+   sokrates.rst
 
 
 Przedmioty ścisłe z SageMath
@@ -13,16 +20,21 @@ Przedmioty ścisłe z SageMath
 .. toctree::
    :maxdepth: 2
 
-   wstep.rst
    dlaczego_Sage.rst
-   sokrates.rst
+   sage_w_pigulce.rst
    narzedzia.rst
    sage_w_szkole.rst
-   warunki_wdrozenia.rst
 
 
 Materiały dydaktyczne
 ---------------------
+
+
+.. toctree::
+   :maxdepth: 1
+ 
+   proces.rst
+
 
 
 Matematyka
@@ -78,6 +90,16 @@ Zadania maturalne z Sagem
    matura2015_r08
    matura2015_r09
    matura2015_r10
+
+
+Zakończenie
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   warunki_wdrozenia.rst
+
 
 
 Materiały dydaktyczne - wersje niepoprawione

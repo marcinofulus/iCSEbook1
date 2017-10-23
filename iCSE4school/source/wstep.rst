@@ -1,5 +1,5 @@
-Wstęp
------
+O książce
+---------
 
 
 Oddajemy Państwu materiały edukacyjne, będące produktem projektu
