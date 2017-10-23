@@ -1,0 +1,415 @@
+Narzędzia i metody pracy
+========================
+
+
+Technologiczne aspekty korzystania z SageMath
+---------------------------------------------
+
+
+SageMath is a wolnym i otwartym oprogramowaniem matematycznym. Jest
+oparty na języku Python i oferuje pełne spektrum interfejsów dostępu,
+zarówno oparty o terminal tekstowy jak i graficzny wykorzystujący
+przeglądarkę internetową.
+
+`Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
+
+
+
+Linia poleceń
+~~~~~~~~~~~~~
+
+Terminal tekstowy jest tradycyjną metodą korzystania z systemów komputerowych.
+
+
+.. figure:: ./figs/cli_sage.png
+       :align: center
+       :width: 60%
+               
+       Przykładowa sersja w linii poleceń w systemie SageMath.
+
+
+
+
+Notatnik
+~~~~~~~~
+
+Notatnik SageMath w tym projekcie został zastosowany
+
+ - praca w "chmurze" - korzystanie ze wspólnego serwera
+ - praca na własnej kopii
+
+
+ 
+
+
+Interaktywne strony internetowe: System cell-server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Oprogramowanie cell-server umożliwia umieszczenie na dowolnej stronie
+internetowej okienka z kodem w SageMath z możliwością jego
+interaktywnego uruchamiania przez użytkowników. Wykonanie kodu nie
+wymaga logowania się co znakomicie deleguje tą technologie to zastosowań jako element w materiałach interaktywnych umieszcznych online.
+
+ - schemat
+
+ 
+
+ free open-source mathematics software system licensed under the GPL. It builds on top of many existing open-source packages: NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R and many more. Access their combined power through a common, Python-based language or directly via interfaces or wrappers.
+Mission: Creating a viable free open source alternative to Magma, Maple, Mathematica and Matlab.
+
+
+
+
+Modele nauczania
+----------------
+
+Z punktu widzenia aktywności ucznia modele nauczania można podzielić na
+grupy:
+
+-  podający (uczeń jest biernym słuchaczem),
+-  podający interaktywny, (uczy myślenia logicznego, wnioskowania),
+-  bezpośredni (uczeń wykonuje ćwiczenia, poznaje algorytmy i procedury,
+   dyskutuje),
+-  poszukujący (twórcze rozwiązywanie problemów),
+-  współpracy z innymi, w tym uczenie innych.
+
+Flipped Classroom (Flipped Teaching) - model odwróconej szkoły (klasy)    KS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Odwrócone uczenie, bardzo ogólnie, stanowi zamianę tego, co tradycyjnie
+przekazywane było uczniom w postaci wykładu oraz dyrektywnych
+instrukcji, do czasu poza lekcją. Uczniowie w dowolnym czasie (rano,
+wieczorem, w podróży, itp.) zapoznają się ze wskazanymi przez
+nauczyciela  materiałami multimedialnymi (filmy edukacyjne, nagrane
+wykłady, prezentacje, podcasty, ebooki, itp.) zamieszczonymi w
+Internecie, analizują je dyskutując w razie potrzeby z rówieśnikami, a
+czas lekcyjny poświęca się na dodatkowe wyjaśnienia nauczyciela oraz
+wykonywanie ćwiczeń pogłębiających wiedzę i utrwalających umiejętności.
+Uczniowie uczący się szybko mogą w krótszym czasie zgłębić daną wiedzę,
+z kolei uczniowie pracujący powoli mogą dostosować naukę do swojego
+tempa (zapoznając się z materiałami w Internecie mogą zatrzymać
+nauczyciela, cofnąć nagranie, przewinąć je wielokrotnie).   Podczas
+lekcji uczniowie pracują w oparciu o przeanalizowany wcześniej materiał
+zachęcani przez nauczyciela do myślenia na wyższym poziomie. Czas
+lekcyjny przy zastosowaniu metody Flipped Teaching można dzięki temu
+wykorzystać mądrzej i bardziej wartościowo, dopasowując go do
+indywidualnych potrzeb uczniów. Nauczyciele stosujący metodę wskazują na
+nietypowy wygląd takich lekcji, podczas których każdy z uczniów pracuje
+we własnym tempie. Dla obserwatora mogą one stwarzać wrażenie chaosu,
+choć jest to zamierzone i dla indywidualnych uczniów efektywne. Metoda
+ta to przykład „blended learningu”, kiedy wiedza teoretyczna dostarczona
+w postaci e-contentu poprzedza warsztat z trenerem. Podczas stosowania
+metody Flipped Teaching uczniowie wyposażeni są w narzędzia, umiejętność
+myślenia, analizowania i przetwarzania informacji oraz rozwiązywania
+problemów, niezależnie od tego, co w przyszłości będą robić. Metoda ta
+skutecznie przygotowuje do samodzielności i uczenia się przez całe życie
+(LLL), zatem jest uniwersalna, niezależnie od przedmiotu na którym jest
+stosowana.
+
+Metody nauczania
+----------------
+
+W literaturze przedmiotu możemy napotkać wiele sposobów podziału
+metod nauczania. Dla przykładu Franciszek Szlosek proponuje podział
+metod nauczania na pięć głównych grup:
+
+-  Podające: wykład, opis, wyjaśnienia.
+-  Eksponujące: prezentacja, pokaz, demonstracja, film, ekspozycja.
+-  Programowane: z użyciem edukacyjnego programu komputerowego,
+   podręcznika interaktywnego lub programowanych urządzeń dydaktycznych.
+-  Problemowe: wykład problemowy, wykład konwersatoryjny, klasyczna
+   metoda problemowa, symulacje, metody aktywizujące.
+-  Praktyczne: ćwiczenia przedmiotowe, ćwiczenia laboratoryjne,
+   warsztaty, eksperymenty, metoda projektów.
+
+Przykłady zastosowań poszczególnych metod
+-----------------------------------------
+
+Prezentacja i  pokaz możliwości zastosowań SAGE HS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metody eksponujące w postaci pokazów, prezentacji i demonstracji zostały
+wykorzystane jako pierwszy kontakt uczniów z  aplikacją SAGE. Miały na
+celu zaciekawienie uczniów, zaintrygowanie ich a także przekonanie, że z
+SAGE będą w stanie sprawdzić każdą pracę domową z matematyki, czy innego
+przedmiotu,  wymagającą obliczeń czy wykresów.
+
+W LO M. Kopernika w Warszawie uczniowie mogli zobaczyć różnorodne
+możliwości SAGE podczas pierwszych zaplanowanych dla uczniów uczestników
+projektu Erasmus+ zajęć. Zajęcia trwały jedną godzinę, wybrane do
+prezentacji zagadnienia w sposób bardzo atrakcyjny pokazywały kolorowe
+wykresy i animacje, ciekawe problemy rozwiązane z wykorzystaniem
+narzędzi SAGE - problem “wilki i króliki”, szyfr RSA czy symulacje z
+fizyki. Ale co najważniejsze, uczniowie mogli ze swoich telefonów
+komórkowych czy tabletów sprawdzić sami i wykonać polecenia w SAGE.
+
+Na tych zajęciach został także zaprezentowany szkolny serwer SAGE,
+uczniowie otrzymali konta,  omówione zostały kolejne zajęcia a także
+projekt do samodzielnego wykonania na serwerze SAGE.
+
+Uwaga metodyczna:
+
+Warto zadbać aby uczniowie na początku cyklu zajęć widzieli ich cel w
+postaci zadania, jakie stawia przed nimi nauczyciel. Równie ważne jest
+aby uczniowie zobaczyli jakim sposobem ten cel można osiągnąć a także
+zainteresowali się twórczo  nowo poznawanym tematem. Jeśli chodzi o nowe
+technologie czy narzędzia informatyczne bardzo ważne jest aby nauczyciel
+zapytał uczniów jakie oni sami  mieliby pomysły na zastosowanie i
+wykorzystanie nowego narzędzia. Uczniowie wówczas mogą się wykazać
+czasem zaskakującą kreatywnością, czasem bardzo praktycznym podejściem.
+
+Warsztaty - ćwiczenia praktyczne z wykorzystaniem SAGE HS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Warsztaty umożliwiają kształtowanie umiejętności zastosowania wiedzy w
+praktyce. Polegają przykładowo na rozwiązywaniu zadań, wykonywaniu
+doświadczeń i eksperymentów,   planowaniu i wykonywaniu pomiarów,
+obliczeń oraz interpretowaniu wyników badań, wykonywaniu symulacji
+praktycznych i teoretycznych, analizowaniu  i praktycznym
+poznawaniu zjawisk z różnych dziedzin nauki.
+
+Warsztaty służą kształtowaniu umiejętności twórczego wykorzystania
+wiedzy w praktyce (np. samodzielne poznawanie cech konstrukcji,
+systemów, procesów, zjawisk), co zmusza ucznia do odkrywania,
+analizowania, pomysłowości, rozwija naturalną ciekawość,  zadawanie
+pytań i poszukiwanie odpowiedzi.
+
+W LO im. M. Kopernika w Warszawie metoda warsztatów została wykorzystana
+jako kolejne zajęcia po prezentacji możliwości SAGE. Posłużyła do nauki
+praktycznego wykorzystania i sprawdzenia przez uczniów prezentowanych
+możliwości. Nauczyciel wybrał najpierw zestaw poleceń do wykonania przez
+uczniów jednocześnie prezentując na ekranie z rzutnika ich wykonanie.
+Następnie nauczyciel przedstawił uczniom zestaw zagadnień do
+samodzielnego wykonania. Takie zajęcia odbywały się zarówno podczas
+zajęć lekcyjnych jak i pozalekcyjnych dla grupy uczniów uczestników
+projektu Erasmus+. Zajęcia warsztatowe zostały również przeprowadzone do
+nauki tworzenia skryptów Python, które były uruchamiane w środowisku
+SAGE.
+
+Zakres godzinowy i tematyczny zajęć warsztatowych był różnorodny, były
+prowadzone w wielu grupach. Zajęcia zostały poddane ewaluacji. W
+ankietach ewaluacyjnych zostały zbadane poszczególne elementy
+warsztatów: trudność zagadnień, przystępność materiałów dla ucznia,
+przydatność SAGE z punktu widzenia wykorzystania jego narzędzi do prac
+domowych, projektów czy przyszłych zastosowań. Uczniowie wypowiadali się
+także temat sposobu przeprowadzenia zajęć. Wszyscy wypowiedzieli się za
+tym, aby więcej było zadań do samodzielnego wykonania w grupach.
+
+Uwaga metodyczna:
+
+Podczas warsztatów takie polecenia dla ucznia, które są w formie
+powtarzania poleceń wykonywanych przez nauczyciela nie mogą trwać długo,
+ponieważ uczniowie poczują się znudzeni. Takie zajęcia muszą być
+przeplatane aktywnym zadaniem dla ucznia, wymagającym od niego
+kreatywności. Uczniowie preferują pracę w grupach podczas warsztatów.
+
+Metoda projektu, projekty grupowe HS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spośród metod praktycznych stosowanych podczas zajęć szkolnych, na
+szczególną uwagę zasługuje metoda projektów. Aktywizuje ucznia do
+kreatywnych poszukiwań i rozwiązywania problemów, uczy współpracy i
+odpowiedzialności oraz dokumentowania i prezentowania wyników prac.
+Dlatego warto sięgać po tę metodę na każdym etapie edukacyjnym.
+
+Potrzeby społeczne są niżej w piramidzie potrzeb i dlatego każda praca w
+grupie angażuje ucznia bardziej niż praca indywidualna, każdej pracy w
+grupie towarzyszą emocje, a emocje z kolei sprawiają, że uczenie się
+nabiera innego oblicza, dlatego uczniowie często nie określają swojej
+pracy w projekcie jako „uczenie się”.  
+
+Metoda projektów powstała w latach 20-tych, jako przeciwwaga do
+nauczania przedmiotowego i systemu klasowo-lekcyjnego Taki system
+nauczania zrywał z przedmiotowym układem, skupiał naukę z różnych
+dziedzin w jeden problem do rozwiązania zagadnień np. badawczych i
+wiązał działalność praktyczną z pracą intelektualną. Twórcą metody
+projektów był W. H. Kilpatrick, którego ideą było uczenie się przez
+działanie. Obecnie nauczanie zintegrowane, które jest wykorzystywane w
+wielu szkołach niepublicznych,  nawiązuje do tej metody.
+
+Założeniem metody projektów jest wdrażanie uczniów do twórczego i
+problemowego myślenia i działania. Pomaga przygotowywać uczniów do
+rozwiązywania realnych problemów, korzystania z różnorodnych źródeł
+informacji, pozwala dostrzegać związki pomiędzy różnymi dyscyplinami
+nauki,  pomaga łączyć teorię i praktykę oraz myślenie i działanie - daje
+możliwość uczenia się za pomocą wielu aktywności.
+
+-  Metoda projektów stwarza pole do działań ucznia:
+-  rozpoznanie i opis sytuacji problemowej,
+-  formułowanie celów i zadań,
+-  kreatywność, generowanie pomysłów,
+-  integrowanie wiedzy z różnych przedmiotów nauczania,
+-  uruchamianie wyobraźni,
+-  odpowiedzialność, samodzielność,
+-  planowanie zadań, ocena złożoności i trudności zadań,
+-  wytrwałość w poszukiwaniu rozwiązań i realizacji zadań,
+-   samokształcenie,
+-  przygotowanie i prowadzenie publicznych wystąpień,
+
+W zakresie zdobywania informacji:
+
+-  korzystanie z różnych źródeł informacji,
+-  analizowanie jakości informacji i ocena ich wiarygodności,
+-  klasyfikowanie przydatności informacji z punktu widzenia celów,
+-  wykorzystanie informacji zgodnie z prawem autorskim,
+-  prezentowanie informacji.
+
+Projekty grupowe pozwalają dodatkowo kształtować umiejętności
+współdziałania:
+
+-  komunikowania się, (także elektronicznego),
+-  planowania i organizowania własnej pracy i pracy w grupie,
+-  wymiany zasobów, (np. elektronicznej)
+-  wyrażanie własnych opinii i korzystania z opinii wyrażanych
+   przez innych członków grupy,
+-  rozwiązywanie konfliktów.
+
+Założeniem metody projektów jest wdrażanie uczniów do twórczego i
+problemowego myślenia i działania. Polega na planowaniu i wykonywaniu
+przez uczniów zadań określonych w ramach projektu (np. w instrukcji do
+projektu), poprzez samodzielne poszukiwanie i rozwiązywanie problemów
+pod opieką nauczyciela. Opiera się na praktycznym działaniu:
+rozpoznawaniu problemów, stawianiu tez i pytań, dowodzeniu, poszukiwaniu
+odpowiedzi przez obserwacje, badania, analizy, obliczenia, symulacje,
+eksperymenty czy inne aktywności, np. działania lokalne, społeczne.
+Uczestnicy realizują temat projektu rozłożony w czasie, pracują
+samodzielnie lub w zespołach, czy grupach np. klasy, szkoły, z innych
+szkół czy krajów.
+
+Przygotowanie  przez nauczyciela projektu przedmiotowego (lub
+międzyprzedmiotowego)  obejmuje:
+
+-  wybór zagadnienia do realizacji z wykorzystaniem metody projektów na
+   podstawie analizy efektów kształcenia i ewentualnych możliwości
+   podejmowania działań międzyprzedmiotowych,
+-  przygotowanie instrukcji dla uczniów, zawierającej: określenie celów,
+   metod pracy, terminy realizacji poszczególnych etapów i całości,
+   zadań uczniów, wymagań co do rezultatu pracy,  sposobu prezentacji
+   wykonanych zadań i kryteria oceniania,
+-  przygotowanie uczniów do pracy metodą projektów, szczególnie jeśli
+   wcześniej nie wykonywali projektów, omówienie z uczniami zadań i
+   wyników prac,
+-  motywowanie uczniów do zaangażowania się w projekt, podanie
+   przykładów tematów projektów, badań wykonanych przez uczniów,
+   odpowiedzi na pytania problemowe, pokazanie opisów projektów,
+   prezentacji, sprawozdań czy filmów zrealizowanych przez innych
+   uczniów.
+-  wprowadzenie uczniów w wybrane zagadnienie wzbudzenie ich
+   zainteresowania, wskazanie możliwych do rozważenia problemów,
+   przykłady narzędzi, które można użyć do realizacji projektu.
+-  przygotowanie planu doboru grup do realizacji projektów – nauczyciel
+   wybiera sposób podziału na grupy, szczególnie jeśli chciałby
+   zbalansować grupy według wybranego kryterium. Mogą to być:
+
+-  grupy jednorodne ze względu na wybrane kryterium np. osiągnięcia
+   szkolne, aktywność, umiejętności  lub zainteresowania,
+-  grupy o pełnym zróżnicowaniu - każda grupa ma pełny zbiór wg
+   założonego kryterium,    
+-  grupy koleżeńskie, chętnie wybierane przez uczniów, ale trudniejsze
+   do zarządzania przez nauczyciela i niekiedy powodujące problemy
+   integracyjne klasy,
+-  grupy doboru celowego lub zadaniowego,
+-  grupy według kolejności na liście klasy,
+-  grupy losowe
+
+Metoda projektów wymaga od nauczyciela wcielenia się w nieco inną rolę.
+Z osoby dominującej, wyznaczającej tok pracy ucznia oraz głównego źródła
+informacji (szczególnie jeśli nauczyciel pracuje najczęściej metodami
+podającymi, mało zostawiając miejsca na aktywność i samodzielność
+uczniów) - nauczyciel powinien się zmienić w dyskretnego przewodnika,
+obserwatora i pomocnika. Warto tak zorganizować projekt, aby lwia część
+prac została wykonana jako praca domowa uczniów i poświęcić np. 15 minut
+kilku lekcji na pokaz postępów prac. Uczniowie mogą zaplanować wspólne
+spotkania w szkole, poza szkołą, albo wykorzystać techniki informacyjne
+i komunikacyjne. Nauczyciel monitoruje postępy realizacji projektu,
+zgłasza uwagi i doradza.
+
+
+Z moich obserwacji wynika, że zarówno praca w grupach dwuosobowych, jak
+i praca w większych grupach jest przez uczniów bardzo chętnie
+podejmowana. Uczniowie lubią wyzwania, inspirują się wzajemnie, uczą się
+od siebie, poddają pomysły krytycznej ocenie, w grupie są bardziej
+aktywni i twórczy. Ale z punktu widzenia nauczyciela praca grupowa
+uczniów jest trudniejsza do przygotowania i zarządzania, wymaga
+wnikliwej analizy przy wyborze celów i przemyśleń sposobu ich
+realizowania.
+
+Wielokrotnie namawiam do współpracy w projekcie międzyprzedmiotowym
+ nauczycieli innych przedmiotów. Dopytuję ich, czy realizują projekty na
+swoich lekcjach i niestety z przykrością muszę stwierdzić, że nie jest
+to metoda chętnie wybierana przez nauczycieli. Na pytanie „dlaczego
+nie?”, odpowiadają najczęściej,  że „projekty zabierają wiele godzin,
+które powinni wykorzystać na realizację materiału” lub, że „projekty
+niczego nie uczą i na takie zabawy nie mają czasu” albo, że uczniowie
+znajdują jednego pracowitego ucznia w grupie, który wszystko zrobi a
+reszta nie robi nic, albo też, że nauczyciel przesuwa termin oddania
+projektu po raz kolejny, uczniowie się tłumaczą, że część projektu
+jeszcze nie jest gotowa, ponieważ ktoś był chory albo ma angielski po
+południu i nie mogli się spotkać. Nauczyciele uważają tę metodę za zbyt
+pracochłonną i trudną do realizacji. Dlatego niezbyt chętnie  sięgają po
+metodę projektu.  Rzeczywiście to niełatwe i wymaga wnikliwych
+przemyśleń, a sama metoda ma też wady i pułapki, czyhające zarówno na
+nauczyciela, jak i na uczniów.  
+
+Najczęściej podnoszone jest pytanie, czy metodę projektów da się
+zastosować do  skutecznej realizacji obowiązkowego programu nauczania
+czyli zawartej w nim wiedzy (pojęć, faktów). Szczególnie w kontekście
+wielu godzin poświęconych na omawianie, wykonywanie i prezentowanie
+projektów. Wątpliwości budzi także mała skuteczność zdobywania wiedzy
+przez ucznia na podstawie prezentacji projektów wykonanych przez inne
+grupy czy innych uczniów.
+
+Ale chyba największy problem jest taki, że duża część nauczycieli jest
+przywiązana do tradycyjnych metod nauczania i rzadziej wybiera metody
+aktywne podczas zajęć.
+
+Na obronę metody projektów należy podkreślić, że większości zagrożeń da
+się uniknąć, jeśli się je zna.
+
+W LO im. M. Kopernika w Warszawie metoda projektu została wykorzystana
+podczas zajęć informatyki. Projekty zostały wykonane w trzech grupach
+uczniów z klasy drugiej, tematem projektu było badanie funkcji.
+
+Opis realizacji tego projektu znajduje się w rozdziale “Projekt grupowy
+- ewaluacja”
+
+Zaprezentowane zostały materiały w postaci instrukcji do projektu, opisu
+przeprowadzonych zajęć i przykładowych prac uczniów. Ponadto realizacja
+projektu w trzech grupach została zaplanowana tak, aby posłużyła do
+wykonania badań ewaluacyjnych porównujących wykorzystane metody. To
+badanie pokazało, że projekt został bardzo dobrze oceniony przez
+uczniów, uznali, że dużo się nauczyli przydatnych rzeczy i była to dla
+nich twórcze zadanie.
+
+Uwaga metodyczna:
+
+SAGE ma bardzo bogate możliwości, które mogą posłużyć nauczycielowi do
+zaplanowania zadań o szerszym charakterze, niż pojedyncza lekcja czy
+cykl lekcji. Można zaplanować długoterminowe  prace o charakterze
+problemowym, kiedy uczniowie sami dochodzą do zbadania lub udowodnienia
+teorii, praw czy zasad. Sformułowane problemy, pytania, zagadnienia,
+łącznie z poznaniem teorii można zlecić uczniom  jako tematy do
+odwróconych lekcji czy prac grupowych lub projektów indywidualnych.
+ Ponadto w oddziałach, w których uczniowie znają język Python można
+zaplanować zagadnienia wymagające napisania skryptów, które pozwolą na
+realizację zaplanowanego algorytmu do rozwiązania problemu.  W ten
+sposób można zrealizować wiele celów zarówno dotyczących realizacji
+materiału jak i dać uczniom okazję do kreatywności. Warto nabywać
+doświadczeń i w każdym kolejnym projekcie eliminować  napotkane
+problemy. Zaś zdobywane przez ucznia umiejętności podczas pracy metodą
+projektów są ogromnie istotne w procesie nauczania jako całości.  
+
+Podsumowanie tego rozdziału
+---------------------------
+
+Nasze doświadczenia pokazują, że znajomość możliwości SAGE pozwala na
+zorganizowanie ciekawych zajęć zarówno lekcyjnych, jak i pozalekcyjnych,
+w formie warsztatów, pracy problemowej, w formie odwróconej lekcji czy
+projektów przedmiotowych, międzyprzedmiotowych, indywidualnych i
+grupowych. Jeśli nauczyciel chciałby urozmaicać metody dydaktyczne,
+sięgać po nowe technologie oparte na doświadczeniach innych nauczycieli
+aby stale rozwijać zainteresowania uczniów -  z pewnością znajdzie w
+proponowanej metodyce i przygotowanych materiałach (rezultatach naszego
+projektu) cenne inspiracje wzbogacające jego warsztat pracy.
+
+

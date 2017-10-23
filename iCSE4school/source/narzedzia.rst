@@ -5,27 +5,59 @@ Narzędzia i metody pracy
 Technologiczne aspekty korzystania z SageMath
 ---------------------------------------------
 
-
-SageMath is a wolnym i otwartym oprogramowaniem matematycznym. Jest
-oparty na języku Python i oferuje pełne spektrum interfejsów dostępu,
-zarówno oparty o terminal tekstowy jak i graficzny wykorzystujący
-przeglądarkę internetową.
+Oprogramowanie SageMath
+~~~~~~~~~~~~~~~~~~~~~~~
 
 
+Pakiet SageMath jest wolnym i otwartym (GNU GPL) oprogramowaniem
+matematycznym. Został on oparty na języku Python i oferuje pełne
+spektrum interfejsów dostępu, począwszy od terminala tekstowego po
+interfejs graficzny wykorzystujący przeglądarkę internetową.
+
+SageMath jest dystrybuowany jako dość pokaźny pakiet instalacyjny (ok
+1GB), zawierający następujące narzędzia:
+
+- Python 2.7
+- NumPy
+- SciPy
+- matplotlib
+- Sympy
+- Maxima
+- GAP
+- FLINT
+- R
+
+
+Ambicją grupy programistów tworzących SageMath jest stworzenie
+pełnowartościowej otwartej alternatywy dla komercyjnych pakietów:
+Magma, Maple, Mathematica oraz Matlab.
+
+
+`Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
 
 
 
 Linia poleceń
 ~~~~~~~~~~~~~
 
-Terminal tekstowy jest tradycyjną metodą korzystania z systemów komputerowych.
+Terminal tekstowy jest tradycyjną metodą korzystania z systemów
+komputerowych. Pomimo, że terminal jest technologią sięgającą swych
+początków w latach siedemdziesiątych XX wieku, to sposób pracy
+ugruntował sobie miejsce w nowoczesnych świecie technologii
+informatycznych. Współczesnie, terminal to tak zwany softwarowy
+emulator terminala tekstowego. Sposób korzystania jest oparty na
+koncepcji edycji pojedyńczej linii i wysłania jej do wykonania
+programowi, który jest uruchomiony. Przykładem może być powłoka
+systemu operacyjnego (windows shell, bash) lub interpreter Pythona lub
+SageMath. Praca w takim trybie jest szczególnie przydatna podczas
+eksploracji naukowych i jest powszechnie stosowania na całym świecie.
 
 
 .. figure:: ./figs/cli_sage.png
        :align: center
        :width: 60%
                
-       Przykładowa sersja w linii poleceń w systemie SageMath.
+       Przykładowa sesja w linii poleceń w systemie SageMath.
 
 
 
@@ -33,35 +65,171 @@ Terminal tekstowy jest tradycyjną metodą korzystania z systemów komputerowych
 Notatnik
 ~~~~~~~~
 
-Notatnik SageMath w tym projekcie został zastosowany
+System typu notatnik łączy w sobie dwie koncepcje. Pierwszą jest
+dokument zawierający bogaty (np. ilustrowany) sformatowany tekst oraz
+kod programu komputerowego. Ponadto tzw. wyjscie programu może być
+zarówno tekstem (jak w przypadku terminala tekstowego) jak i formułą,
+rysunkiem czy też interaktywnych elementem (np. suwakiem). Drugą
+koncepcją jest system dostępny przez przeglądarkę internetową
+pozwalającą na edycję powyższego dokumentu i wykonywanie zawartych w
+mim bloków kodu.
 
- - praca w "chmurze" - korzystanie ze wspólnego serwera
- - praca na własnej kopii
+
+.. figure:: ./figs/notebook_sage.png
+       :align: center
+       :width: 60%
+       :name: notebook_sage
+              
+       Przykładowy notebook  w systemie SageMath.
 
 
- 
+
+W projekcje iCSE4school notatnik SageMath (tzw. sagenb) był
+podstawowym narzędziem pracy. Jako aplikacja "webowa" oferował on dwa
+sposoby pracy:
+
+ - praca w "chmurze" - korzystanie ze wspólnego serwera notatników
+   skonfigurowanego dla szkół partnerskich.
+ - praca lokalna na na własnej instalacji SageMath zawierająca notatnik sagenb.
+
+Pierwszy sposób pracy oferuje oprócz samego notatnika system
+logowania, uwspólniania dokumentów oraz zarządzania kontami. Okazało
+się to bardzo przydatne w pracy na lekcji. Uczeń i nauczyciel mając
+jakiekolwiek urządzenie z dostępem do internetu mógł bez wykonywania
+żadnych instalacji oprogramowania w dowolnej chwili rozpocząć pracę z
+SageMath. Podandto bradzo przydatną cechą była możliwość uwspólniania
+notatników i ich publikacji. Na przykład można podejrzeć listę
+tzw. opublikowanych prac nauczycieli i uczniów na serwerach:
+
+ - `<https://sage01.icse.us.edu.pl/pub/>`_.
+ - `<https://sage03.icse.us.edu.pl/pub/>`_.
 
 
-Interaktywne strony internetowe: System cell-server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Oprogramowanie cell-server umożliwia umieszczenie na dowolnej stronie
+
+Interaktywne strony internetowe: system SageMathCell
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Oprogramowanie SageMathCell umożliwia umieszczenie na dowolnej stronie
 internetowej okienka z kodem w SageMath z możliwością jego
-interaktywnego uruchamiania przez użytkowników. Wykonanie kodu nie
-wymaga logowania się co znakomicie deleguje tą technologie to zastosowań jako element w materiałach interaktywnych umieszcznych online.
+interaktywnego uruchamiania przez użytkowników (patrz
+rys. :numref:`cell_sage2`.). Wykonanie kodu nie wymaga logowania się co
+znakomicie deleguje tą technologie to zastosowań jako element w
+materiałach interaktywnych umieszcznych online. W przeciwieństwie do
+większości rozwiązań w których obliczenia wykonywane są po stronie
+klienta, SageMathCell korzysta z zainstalowanej centralnie instancji
+SageMath. Zaletą takiego rozwiązania jest bezkompromisowy dostęp do
+pełnej funkcjonalności SageMath z pośrednictwem dowolnego urządzenia.
 
- - schemat
 
+
+.. figure:: ./figs/cell_sage2.png
+       :align: center
+       :width: 70%
+       :name: cell_sage2
+              
+       Przykładowa strona (dla przykładu stworzona w google sites)
+       zawierająca `iframe` z zanurzonyą komórką SageMathCell.
+
+       
+.. figure:: ./figs/cell_sage.png
+       :align: center
+       :width: 70%
+       :name: cell_sage
+              
+       Przykładowy element typu *interact* uruchomiony w systemie
+       cell-server. Widoczne jest pojedyńcze okno z kodem programu a
+       poniżej wynik jego działania: interaktywny suwak i wykres. Po
+       prawej stronie rysunku widzimy możliwość stworzenia linku
+       zawierającego powyższy program. Kod QR zawiera ten sam
+       link. Link występuje w dwóch postaciach, krótkiej i długiej -
+       zawierającej w url spakowany cały kod. 
+
+
+
+SageMathCell różni się tym od notatnika SageMath, że nie posiada
+możliwości zapisu edytowanego kodu. Istnieje jednak możliwość
+odtworzenia całej komórki wraz z kodem za pomocą linka (patrz
+rys. :numref:`cell_sage`). Przekazanie takiego linka może odbyć się za
+pomocą kodu QR i wystarczy telefon komórkowy z dostępem do internetu
+by moć kod ten wykonać i edytować.
  
 
- free open-source mathematics software system licensed under the GPL. It builds on top of many existing open-source packages: NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R and many more. Access their combined power through a common, Python-based language or directly via interfaces or wrappers.
-Mission: Creating a viable free open source alternative to Magma, Maple, Mathematica and Matlab.
+
+Stosowanie SageMath w praktyce szkolnej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Podczas pracy z SageMath w trakcie projektu iCSE4school,
+wykrystalizowało się kilka sposobów jego użycia. Po pierwsze dostęp
+przez konsolę - jako najbardziej zaawansowany - nie został
+użyty. Powszechnie stosowano notatnik *sagenb*. Spotkał się on z
+bardzo pozytywnym przyjęciem przez zarówno uczniów jak i
+nauczycieli. W naturalny sposób nauczyciele używali go do różnych
+celów. Można wyróżnić następujace rodzaje pracy:
+
+ - Praca wyłącznie z komórkami z kodem Sage lub Python. W tym trybie
+   notatnik praktycznie pełnił rolę oprogramowania znanego pod nazwą
+   IDE (Integrated Development Environment). Jest to oprogramowie
+   umożliwiające pisanie i wykonywanie kodu.
+
+ - Intensywne użycie komórek tekstowych i narzędzi formatowania
+   tekstu. W tym trybie zdarzało się wykorzystywać notatnik Sage jako
+   edytor tekstu. Przydatną cechą okazała się możliwość opublikowania
+   i uwspólniania dokumetnów na serwerze.
+   
+ - Stosowanie zarówno komórek tekstowych ji kodu. Duża część
+   notatników zapisanych przez uczniów zalicza się do tej
+   kategorii. Jednym z przykładów takiego użycia są sprawozdania z
+   pracowni fizycznej.
 
 
+Trzecia metoda interakcji z SageMath - cell server była stosowana
+podczas tworzenia materiałów - takich jak na przykład ten manuskrypt. 
 
+Należy zdecydowanie stwierdzić, że centralna instalacja serwera
+notatników jest bardzo przydatnym rozwiązaniem. Wpisująca się
+najnowsze trendy praca w "chmurze" ma następujące zalety dla
+użytkowników:
 
-Modele nauczania HS
--------------------
+ - Wszechobecność materiałów. Można pracować w systemie SageMath
+   wszędzie tam gdzie jest przeglądarka internetowa. Dzięki
+   dostępności taniego internetu mobilnego jest to warunek spełniony
+   praktycznie wszędzie.
+ - Mniejsze ryzyko utraty danych przez zwykłe zgubienie lub awarię dysku
+   twardego. Oczywiście to tego niezbędny jest sprawny system kopii
+   zapasowowych działający na instalacji chmurowej. W naszym przypadku
+   zastosowano rozwiązanie umożliwiające zapis codziennego stanu
+   serwera. W przypadku całkowitego zniszczenia serweru lub
+   np. skasowania danych przez złośliwe oprogramowanie czy cyberatak,
+   można było odtworzyć stan dokumentów z dowolnego dnia przed tym
+   wydarzeniem.
+ - System notatnik 'sagenb' ma cechy systemu e-learningowego,
+   umożliwia dystrybuję materiałów, możliwy jest wgląd nauczyciela w
+   pracę ucznia oraz tzw. publikacja materiałów przez zarówno uczniów
+   jak i nauczycieli. Zaobserwowano intesywne wykorzystywanie tych
+   możliwości podczas projektu.
+
+ - Warto zauważyć, że największa obawa przed korzystaniem z rozwiązań
+   chmurowych czyli wyciek danych nie stanowi problemu w przypadku
+   używania SageMath w pracy. Z reguły bowiem treści notatników nie sa
+   poufne. Jedynym zagrożeniem jest utrata danych, która może być
+   praktycznie wyeliminowana poprzez stosowanie systemu kopii
+   zapasowych.
+
+Notatnik oparty na przeglądarce internetowej jest technologią, która
+jest intensywnie rozwijana w świecie nauki. Najnowocześniejszym
+rozwiązaniem jest tzw. Jupyter notebook [#jupyter]_. Został on
+włączony do projektu SageMath i w najnowszych wersjach zastępuje
+klasyczny notatnik sagenb. W trakcie projektu Jupyter notebook nie
+oferował jeszcze krytycznych dla realizacji dydaktyki cech takich jak
+uwspólnianie dokumentów czy ich publikacja. Dlatego projekt został
+przeprowadzony na poprzednim rozwiązaniu.
+
+.. [#jupyter] Projekt ma stronę internetową http://jupyter.org
+
+              
+Modele nauczania
+----------------
 
 Z punktu widzenia aktywności ucznia modele nauczania można podzielić na
 grupy:
@@ -73,8 +241,8 @@ grupy:
 -  poszukujący (twórcze rozwiązywanie problemów),
 -  współpracy z innymi, w tym uczenie innych.
 
-Flipped Classroom (Flipped Teaching) - model odwróconej szkoły (klasy)    KS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Flipped Classroom (Flipped Teaching) - model odwróconej szkoły (klasy)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Odwrócone uczenie, bardzo ogólnie, stanowi zamianę tego, co tradycyjnie
 przekazywane było uczniom w postaci wykładu oraz dyrektywnych
@@ -106,8 +274,8 @@ skutecznie przygotowuje do samodzielności i uczenia się przez całe życie
 (LLL), zatem jest uniwersalna, niezależnie od przedmiotu na którym jest
 stosowana.
 
-Metody nauczania  HS
---------------------
+Metody nauczania
+----------------
 
 W literaturze przedmiotu możemy napotkać wiele sposobów podziału
 metod nauczania. Dla przykładu Franciszek Szlosek proponuje podział
@@ -125,27 +293,27 @@ metod nauczania na pięć głównych grup:
 Przykłady zastosowań poszczególnych metod
 -----------------------------------------
 
-Prezentacja i  pokaz możliwości zastosowań SAGE HS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prezentacja i pokaz możliwości zastosowań SageMath
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Metody eksponujące w postaci pokazów, prezentacji i demonstracji zostały
-wykorzystane jako pierwszy kontakt uczniów z  aplikacją SAGE. Miały na
+wykorzystane jako pierwszy kontakt uczniów z  aplikacją SageMath. Miały na
 celu zaciekawienie uczniów, zaintrygowanie ich a także przekonanie, że z
-SAGE będą w stanie sprawdzić każdą pracę domową z matematyki, czy innego
+SageMath będą w stanie sprawdzić każdą pracę domową z matematyki, czy innego
 przedmiotu,  wymagającą obliczeń czy wykresów.
 
 W LO M. Kopernika w Warszawie uczniowie mogli zobaczyć różnorodne
-możliwości SAGE podczas pierwszych zaplanowanych dla uczniów uczestników
+możliwości SageMath podczas pierwszych zaplanowanych dla uczniów uczestników
 projektu Erasmus+ zajęć. Zajęcia trwały jedną godzinę, wybrane do
 prezentacji zagadnienia w sposób bardzo atrakcyjny pokazywały kolorowe
 wykresy i animacje, ciekawe problemy rozwiązane z wykorzystaniem
-narzędzi SAGE - problem “wilki i króliki”, szyfr RSA czy symulacje z
+narzędzi SageMath - problem “wilki i króliki”, szyfr RSA czy symulacje z
 fizyki. Ale co najważniejsze, uczniowie mogli ze swoich telefonów
-komórkowych czy tabletów sprawdzić sami i wykonać polecenia w SAGE.
+komórkowych czy tabletów sprawdzić sami i wykonać polecenia w SageMath.
 
-Na tych zajęciach został także zaprezentowany szkolny serwer SAGE,
+Na tych zajęciach został także zaprezentowany szkolny serwer SageMath,
 uczniowie otrzymali konta,  omówione zostały kolejne zajęcia a także
-projekt do samodzielnego wykonania na serwerze SAGE.
+projekt do samodzielnego wykonania na serwerze SageMath.
 
 Uwaga metodyczna:
 
@@ -158,8 +326,8 @@ zapytał uczniów jakie oni sami  mieliby pomysły na zastosowanie i
 wykorzystanie nowego narzędzia. Uczniowie wówczas mogą się wykazać
 czasem zaskakującą kreatywnością, czasem bardzo praktycznym podejściem.
 
-Warsztaty - ćwiczenia praktyczne z wykorzystaniem SAGE HS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Warsztaty - ćwiczenia praktyczne z wykorzystaniem SageMath
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Warsztaty umożliwiają kształtowanie umiejętności zastosowania wiedzy w
 praktyce. Polegają przykładowo na rozwiązywaniu zadań, wykonywaniu
@@ -175,7 +343,7 @@ analizowania, pomysłowości, rozwija naturalną ciekawość,  zadawanie
 pytań i poszukiwanie odpowiedzi.
 
 W LO im. M. Kopernika w Warszawie metoda warsztatów została wykorzystana
-jako kolejne zajęcia po prezentacji możliwości SAGE. Posłużyła do nauki
+jako kolejne zajęcia po prezentacji możliwości SageMath. Posłużyła do nauki
 praktycznego wykorzystania i sprawdzenia przez uczniów prezentowanych
 możliwości. Nauczyciel wybrał najpierw zestaw poleceń do wykonania przez
 uczniów jednocześnie prezentując na ekranie z rzutnika ich wykonanie.
@@ -184,13 +352,13 @@ samodzielnego wykonania. Takie zajęcia odbywały się zarówno podczas
 zajęć lekcyjnych jak i pozalekcyjnych dla grupy uczniów uczestników
 projektu Erasmus+. Zajęcia warsztatowe zostały również przeprowadzone do
 nauki tworzenia skryptów Python, które były uruchamiane w środowisku
-SAGE.
+SageMath.
 
 Zakres godzinowy i tematyczny zajęć warsztatowych był różnorodny, były
 prowadzone w wielu grupach. Zajęcia zostały poddane ewaluacji. W
 ankietach ewaluacyjnych zostały zbadane poszczególne elementy
 warsztatów: trudność zagadnień, przystępność materiałów dla ucznia,
-przydatność SAGE z punktu widzenia wykorzystania jego narzędzi do prac
+przydatność SageMath z punktu widzenia wykorzystania jego narzędzi do prac
 domowych, projektów czy przyszłych zastosowań. Uczniowie wypowiadali się
 także temat sposobu przeprowadzenia zajęć. Wszyscy wypowiedzieli się za
 tym, aby więcej było zadań do samodzielnego wykonania w grupach.
@@ -383,7 +551,7 @@ nich twórcze zadanie.
 
 Uwaga metodyczna:
 
-SAGE ma bardzo bogate możliwości, które mogą posłużyć nauczycielowi do
+SageMath ma bardzo bogate możliwości, które mogą posłużyć nauczycielowi do
 zaplanowania zadań o szerszym charakterze, niż pojedyncza lekcja czy
 cykl lekcji. Można zaplanować długoterminowe  prace o charakterze
 problemowym, kiedy uczniowie sami dochodzą do zbadania lub udowodnienia
@@ -402,7 +570,7 @@ projektów są ogromnie istotne w procesie nauczania jako całości.  
 Podsumowanie tego rozdziału
 ---------------------------
 
-Nasze doświadczenia pokazują, że znajomość możliwości SAGE pozwala na
+Nasze doświadczenia pokazują, że znajomość możliwości SageMath pozwala na
 zorganizowanie ciekawych zajęć zarówno lekcyjnych, jak i pozalekcyjnych,
 w formie warsztatów, pracy problemowej, w formie odwróconej lekcji czy
 projektów przedmiotowych, międzyprzedmiotowych, indywidualnych i
