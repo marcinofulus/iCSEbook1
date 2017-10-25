@@ -119,7 +119,7 @@ Zakończenie
    :maxdepth: 1
 
    warunki_wdrozenia.rst
-
+   swot.rst
 
 
 Materiały dydaktyczne - wersje niepoprawione

@@ -249,11 +249,59 @@ wymiernych.
       5
  
 
+Upraszczanie wyrażeń zawierających funkcje trygonometryczne wymaga
+użycia metod :code:`.trig_simplify`. Na przykład aby wykorzystać
+jedynkę trygonometryczą należy wykonać:
+
+.. sagecellserver::
+   :linked: false
+
+   ( sin(x)^2+cos(x)^2 ).trig_simplify()
+
+
+Jeśli chcemy udowodnić tożsamość trygonometryczną lepiej użyć
+:code:`bool` niż próbować uprościć jedną ze stron by przypominała
+drugą:
+
+
+   .. sagecellserver::
+   :linked: false
+
+
+   expr = (2*sin(x)^2-1)/(sin(x)*cos(x)) == tan(x)-cot(x)  
+   show(expr)
+   bool(expr)
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+   .. math::
+
+      \newcommand{\Bold}[1]{\mathbf{#1}}\frac{2 \, \sin\left(x\right)^{2} - 1}{\cos\left(x\right) \sin\left(x\right)} = -\cot\left(x\right) + \tan\left(x\right) 
+
+    True
+
+
     
 Rozwiązywanie równań i układów równań.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Największą ilość zadań z przedmiotów ścisłych jaką uczeń musi wykonać to rozwiązywanie równań i układów równań. Oczywiście żadne narzędzie nie zastąpi samodzielnego rozwiązywania zadań przez uczniów, ale może być bardzo przydatne do ćwiczeń, sprawdzania wyników, czy też rozwiązywania równań, które uczeń musi samodzielnie wyprowadzić na podstawie zadań tekstowych. Powyższy język umożliwia rozwiązywanie nawet trudnych równań i układów równań przy pomocy jednej instrukcji -- *solve*. Poniżej przykłady, które demonstrują użycie instrukcji na podstawie równania kwadratowego oraz prostego układu równań z dwoma niewiadomymi. Dla nauczycieli prowadzących zajęcia dodatkowe z matematyki dla uczniów zdolnych nie bez znaczenia będzie fakt, ze Sage rozwiązuje równania w zbiorze liczb zespolonych oraz macierzowe.
+Największą ilość zadań z przedmiotów ścisłych jaką uczeń musi wykonać
+to rozwiązywanie równań i układów równań. Oczywiście żadne narzędzie
+nie zastąpi samodzielnego rozwiązywania zadań przez uczniów, ale może
+być bardzo przydatne do ćwiczeń, sprawdzania wyników, czy też
+rozwiązywania równań, które uczeń musi samodzielnie wyprowadzić na
+podstawie zadań tekstowych. Powyższy język umożliwia rozwiązywanie
+nawet trudnych równań i układów równań przy pomocy jednej instrukcji
+-- :code:`solve`.
+
+Poniżej zamieszczamy przykłady, które demonstrują
+użycie instrukcji na podstawie równania kwadratowego oraz prostego
+układu równań z dwoma niewiadomymi. Dla nauczycieli prowadzących
+zajęcia dodatkowe z matematyki dla uczniów zdolnych nie bez znaczenia
+będzie fakt, ze Sage rozwiązuje równania w zbiorze liczb zespolonych
+oraz macierzowe.
 
 **Równanie kwadratowe.**
 
@@ -296,7 +344,8 @@ Największą ilość zadań z przedmiotów ścisłych jaką uczeń musi wykonać
 
       [[x == 20, y == 6]]
 
-
+   
+      
 .. _wykresy:
              
 Wizualizacja.
