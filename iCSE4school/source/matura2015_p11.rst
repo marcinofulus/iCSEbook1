@@ -1,3 +1,5 @@
+.. _matura2015_p11.rst:
+
 Pojedynek  funkcji kwadratowej z :code:`solve`
 ----------------------------------------------
 

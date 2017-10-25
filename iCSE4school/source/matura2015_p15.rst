@@ -1,3 +1,5 @@
+.. _matura2015_p15.rst:
+
 O tożsamości trygonometrycznej i założeniach
 --------------------------------------------
 

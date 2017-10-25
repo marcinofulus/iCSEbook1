@@ -1,3 +1,5 @@
+.. _matura2015_r10.rst:
+
 Czworokąt wpisany w okrąg z wykorzystaniem algebry komputerowej
 ---------------------------------------------------------------
 

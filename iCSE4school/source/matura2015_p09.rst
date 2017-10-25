@@ -1,3 +1,5 @@
+.. _matura2015_p09.rst:
+
 O tym jak technologia :code:`@interact` pomoże rozwiązać równanie z parametrem
 ------------------------------------------------------------------------------
 

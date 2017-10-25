@@ -1,3 +1,5 @@
+.. _matura2015_r09.rst:
+
 Solve and substitute
 --------------------
 

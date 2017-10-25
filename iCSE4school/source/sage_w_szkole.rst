@@ -42,34 +42,45 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 | **Klasa 1**                                                                            |
 +--------------------------------+-------------------------------------------------------+ 
 |                                |                                                       |
-|Logika. Zbiory.  Zbiory liczbowe|Przy pomocy pakietu SageMath uczeń może poznać i       | 
+|Logika. Zbiory.  Zbiory liczbowe|                                                       | 
+|                                |                                                       |
+|                                |Przy pomocy pakietu SageMath uczeń może poznać i       |
 |                                |utrwalić podstawowe prawa logiki, takie jak negacja    |
 |                                |alternatywy i negacja koniunkcji, ocenić wartość       |
 |                                |logiczną zdań złożonych oraz zastosować poznane prawa  |
-|                                |logiczne.  Uczeń może również nauczyć się wyznaczać    |
-|                                |część wspólną, sumę i różnicę zbiorów oraz dopełnienie |
-|                                |zbioru.                                                |
+|                                |logiczne (patrz np.: :ref:`logika` Uczeń może również  |
+|                                |nauczyć się wyznaczać część wspólną, sumę i różnicę    |
+|                                |zbiorów oraz dopełnienie zbioru patrz np.  zadanie     |
+|                                |:ref:`matura2015_p01.rst` czy :ref:`matura2015_r01.rst`|
 +--------------------------------+-------------------------------------------------------+
 |                                |                                                       |
-|Działania w zbiorach liczbowych |Ponieważ SageMath może służyć jako kalkulator, uczeń   |
-|                                |wykorzystując ten pakiet może osiągnąć wszystkie cele  |
-|                                |edukacyjne i zdobyć wszystkie umiejętności zakładane w |
-|                                |tym dziale.                                            |
+|Działania w zbiorach liczbowych |                                                       |
+|                                |                                                       |
+|                                |Ponieważ SageMath może służyć jako kalkulator, uczeń   |
+|                                |wykorzystując ten pakiet może eksperymentować w        |
+|                                |większościa zagadnień. Wiele przykładów podano w       |
+|                                |rozdziale :ref:`arytmetyka`                            |
 +--------------------------------+-------------------------------------------------------+
 |                                |                                                       |
-|Wyrażenia algebraiczne          |Ponieważ w SageMath można wykonywać obliczenia         |
+|Wyrażenia algebraiczne          |                                                       |
+|                                |                                                       |
+|                                |                                                       |
+|                                |Ponieważ w SageMath można wykonywać obliczenia         |
 |                                |symboliczne, uczeń wykorzystując ten pakiet może       |
-|                                |osiągnąć wszystkie cele edukacyjne i zdobyć wszystkie  |
-|                                |umiejętności zakładane w tym dziale.                   |
+|                                |_osiągnąć wszystkie cele edukacyjne w tym dziale.      |
+|                                |Przykładami mogą być: rozdział :ref:`algebra` oraz     |
+|                                |zadania:                                               |
 +--------------------------------+-------------------------------------------------------+
 |                                |                                                       |
 |Geometria płaska - pojęcia      |Przy pomocy środowiska SageMath uczeń może wizualizować|
 |wstępne                         |obiekty geometryczne, badać ich wzajemne zależności    |
 |                                |oraz może rozwiązywać zadania dotyczące własności figur|
 |                                |geometrycznych wykorzystując poznane w tym dziale      |
-|                                |twierdzenia.                                           |
+|                                |twierdzenia.  Przykładem mogą być zadania              |
+|                                | :ref:`matura2015_r10.rst` czy                         |
+|                                |:ref:`matura2015_r09.rst`                              |
 +--------------------------------+-------------------------------------------------------+
-|Geometria płaska - trójkąty     |                                                       |
+|Geometria płaska - trójkąty     |  jw.                                                  |
 +--------------------------------+-------------------------------------------------------+
 |Geometria płaska - pole koła,   |Wykorzystując środowisko SageMath uczeń może utrwalić  |
 |pole trójkąta                   |swoje umiejętności m.  in. w zakresie korzystania z    |
@@ -79,9 +90,9 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 |                                |prostokątnym oraz zastosowania twierdzenia sinusów i   |
 |                                |twierdzenia cosinusów.                                 |
 +--------------------------------+-------------------------------------------------------+
-|Trygonometria                   |                                                       |
-|                                |                                                       |
-|                                |                                                       |
+|Trygonometria                   | SageMath jest niezwykle przydatny w zarówno obliczaniu|
+|                                |wartości arytmetycznych funkcji trygonometrycznych jak |
+|                                |i upraszczniu tożsamości oraz rysowaniu wykresów.      |
 |                                |                                                       |
 |                                |                                                       |
 |                                |                                                       |
@@ -89,80 +100,97 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 +--------------------------------+-------------------------------------------------------+
 |Funkcja i jej własności         |Przy pomocy środowiska SageMath uczeń może osiągnąć    |
 |                                |wszystkie cele edukacyjne i zdobyć wszystkie           |
-|                                |umiejętności zakładane w tych działach.                |
-|                                |                                                       |
+|                                |umiejętności zakładane w tych działach. Typowymi       |
+|                                |cechami SageMath są rysowanie wykresów funkcji,        |
+|                                |obliczanie pochodnych i badanie przebiegu funkcji.     |
 +--------------------------------+-------------------------------------------------------+
-|Przekształcanie wykresów funkcji|                                                       |
+|Przekształcanie wykresów funkcji|W sytemie algebry komputerowej jest bardzo łatwo       |
+|                                |napisać :code:`plot(f(-x),(x,0,1))` i zastąpić znak    |
+|                                |minus np. pomnożeniem przez liczbę czy dodać wartość   |
+|                                |bezwzględną. Takie operacje są przydatne w budowaniu   |
+|                                |intuicji np. czy odejmując jeden od argumentu wykres   |
+|                                |przsunie się w lewo czy w prawo?                       |
 +--------------------------------+-------------------------------------------------------+
 
 
 
-+---------------------------------------------------+
-|**Klasa 2**                                        |
-|                                                   |
-|                                                   |
-|                                                   |
-|                                                   |
-|                                                   |
-|                                                   |
-+-------------------------+-------------------------+
-|Funkcja liniowa          |Przy pomocy środowiska   |
-|                         |SageMath uczeń może      |
-|                         |osiągnąć wszystkie cele  |
-|                         |edukacyjne i zdobyć      |
-|                         |wszystkie umiejętności   |
-|                         |zakładane w tych         |
-|                         |działach.                |
-+-------------------------+-------------------------+
-|Funkcja kwadratowa       |                         |
-+-------------------------+-------------------------+
-|Geometria płaska -       |Przy pomocy środowiska   |
-|czworokąty               |SageMath uczeń może      |
-|                         |wizualizować obiekty     |
-|                         |geometryczne, badać ich  |
-|                         |wzajemne zależności oraz |
-|                         |może rozwiązywać zadania |
-|                         |dotyczące własności figur|
-|                         |geometrycznych           |
-|                         |wykorzystując poznane w  |
-|                         |tym dziale twierdzenia.  |
-+-------------------------+-------------------------+
-|Geometria płaska - pole  |                         |
-|czworokąta               |                         |
-+-------------------------+-------------------------+
-|Wielomiany. Funkcje      |Uczeń może osiągnąć      |
-|wielomianowe             |wszystkie cele oraz      |
-|                         |zdobyć wszystkie         |
-|                         |zakładane w tych działach|
-|                         |umiejętności             |
-|                         |wykorzystując możliwości |
-|                         |środowiska SageMath      |
-|                         |takie, jak obliczenia    |
-|                         |symboliczne, rysowanie   |
-|                         |wykresów funkcji,        |
-|                         |obliczanie granic ciągów.|
-+-------------------------+-------------------------+
-|Ułamki                   |                         |
-|algebraiczne. Funkcje    |                         |
-|wymierne                 |                         |
-+-------------------------+-------------------------+
-|Ciągi                    |                         |
-+-------------------------+-------------------------+
-|Trygonometria            |Wykorzystując środowisko |
-|                         |SageMath uczeń może      |
-|                         |utrwalić swoje           |
-|                         |umiejętności m.  in. w   |
-|                         |zakresie określania      |
-|                         |własności funkcji        |
-|                         |trygonometrycznych na    |
-|                         |podstawie ich wykresów,  |
-|                         |przekształcania wykresów |
-|                         |funkcji                  |
-|                         |trygonometrycznych oraz  |
-|                         |rozwiązywania równań i   |
-|                         |nierówności              |
-|                         |trygonometrycznych.      |
-+-------------------------+-------------------------+
++------------------------------------------------------+
+|**Klasa 2**                                           |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
+|                                                      |
++-------------------------+----------------------------+
+|Funkcja liniowa          |Przy pomocy środowiska      |
+|                         |SageMath uczeń może         |
+|                         |osiągnąć wszystkie cele     |
+|                         |edukacyjne i zdobyć         |
+|                         |wszystkie umiejętności      |
+|                         |zakładane w tych            |
+|                         |działach.  Przykładem       |
+|                         |może być:                   |
+|                         |:ref:`matura2015_p05.rst`   |
++-------------------------+----------------------------+
+|Funkcja kwadratowa       |SageMath znakomicie         |
+|                         |nadaje się do analizy       |
+|                         |funkcji kwadratowej,        |
+|                         |przykładem może być         |
+|                         |rozdział :ref:`wykresy`     |
++-------------------------+----------------------------+
+|Geometria płaska -       |Przy pomocy środowiska      |
+|czworokąty               |SageMath uczeń może         |
+|                         |wizualizować obiekty        |
+|                         |geometryczne, badać ich     |
+|                         |wzajemne zależności oraz    |
+|                         |może rozwiązywać zadania    |
+|                         |dotyczące własności figur   |
+|                         |geometrycznych              |
+|                         |wykorzystując poznane w     |
+|                         |tym dziale twierdzenia.     |
++-------------------------+----------------------------+
+|Geometria płaska - pole  |:ref:`matura2015_p05.rst`   |
+|czworokąta               |:ref:`matura2015_r10.rst`   |
++-------------------------+----------------------------+
+|Wielomiany. Funkcje      |Uczeń może osiągnąć         |
+|wielomianowe             |wszystkie cele oraz zdobyć  |
+|                         |wszystkie zakładane w tych  |
+|                         |działach umiejętności       |
+|                         |wykorzystując możliwości    |
+|                         |środowiska SageMath takie,  |
+|                         |jak obliczenia symboliczne, |
+|                         |rysowanie wykresów funkcji, |
+|                         |obliczanie granic ciągów.   |
+|                         |Przykład:                   |
+|                         |:ref:`matura2015_p08.rst`   |
+|                         |                            |
++-------------------------+----------------------------+
+|Ułamki                   |                            |
+|algebraiczne. Funkcje    |Rysowanie wykresu funkcji   |
+|wymierne                 |wymiernej jest              |
+|                         |zademonstrowane w zadaniu:  |
+|                         |:ref:`matura2015_p07.rst`   |
++-------------------------+----------------------------+
+|Ciągi                    |Ciągi liczbowe wykorzystane |
+|                         |są w scenariuszu            |
+|                         |:ref:`granica`              |
++-------------------------+----------------------------+
+|Trygonometria            |Wykorzystując środowisko    |
+|                         |SageMath uczeń może         |
+|                         |utrwalić swoje              |
+|                         |umiejętności m.  in. w      |
+|                         |zakresie określania         |
+|                         |własności funkcji           |
+|                         |trygonometrycznych na       |
+|                         |podstawie ich wykresów,     |
+|                         |przekształcania wykresów    |
+|                         |funkcji                     |
+|                         |trygonometrycznych oraz     |
+|                         |rozwiązywania równań i      |
+|                         |nierówności                 |
+|                         |trygonometrycznych.         |
++-------------------------+----------------------------+
 
 
 
@@ -452,7 +480,7 @@ Kopernika w Warszawie:
 
  :ref:`tabela_sage_fiz`
 
-.. list-table:: Zakres zastosowania SageMath w fizyce
+.. list-table:: Zakres potencjalnego zastosowania SageMath w fizyce z przykładami.
    :widths: 15 4 30
    :header-rows: 1
    :name: tabela_sage_fiz
@@ -517,8 +545,14 @@ Kopernika w Warszawie:
      - Rozwiązywanie równań opisujących obwód prądu za pomocą
        pierwszego i drugiego prawa Kirchhoffa. Równania takie można
        rozwiązywać za pomocą algebry liniowej lub algebry symbolicznen
-       wykorzystując funkcję :code:`solve`.  Sage Modelowanie pola
-       wektorowego. :ref:`matura2015_p01.rst`
+       wykorzystując funkcję :code:`solve`, zob.:. . 
+           - :ref:`matura2015_p01.rst`
+           - :ref:`matura2015_p02.rst`
+           - :ref:`matura2015_r09.rst`
+           - :ref:`matura2015_r10.rst`
+
+       Modelowanie pola wektorowego może być zilustrowane funkcjami
+       :code:`vector_plot` i :code:`arrow`.
 
    * - Circular motion and gravitation:
 
@@ -527,7 +561,9 @@ Kopernika w Warszawie:
      - 5h
      - Numeryczne rozwiązywanie równania różniczkowego opisującego II
        Zasadę Dynamiki Newtona dla dowolnego punktu materialnego w
-       danym polu wektorowym.
+       danym polu wektorowym. Można rozszerzyć metody zaprezentowane w
+       `<http://visual.icse.us.edu.pl/szkola/rzut_ukosny.html>`_.
+
 
    * - Atomic, nuclear and particle Physics:
 
@@ -535,8 +571,12 @@ Kopernika w Warszawie:
         - 7.2 - Nuclear reactions
         - 7.3 - The structure of matter
      - 14h
-     - Modelowanie krzywych zaniku promieniotwórczego .  Obliczanie
-       czasów półtrwania izotopów.
+     - Modelowanie krzywych zaniku promieniotwórczego.  Obliczanie
+       czasów półtrwania izotopów. Przydatnym narzędziem może okazać
+       się zarówno numeryczne jak i algebraiczne rozwiązywanie równań
+       różniczkowych: :code:`desolve`. Pomocna może okazać się
+       wizualizacja funkcji :ref:`wykresy` z rozdziału
+       :ref:`sage_w_pigulce`.
 
    * - Energy production:
 
@@ -544,8 +584,10 @@ Kopernika w Warszawie:
         - 8.2 - Thermal energy transfer
      - 8h 
      - Sporządzanie wykresów zależności długości emitowanej fali
-       elektromagnetyczne j od temperatury: prawo Viena.  Proawo
-       zaniku wykładniczego temperatury.
+       elektromagnetyczne j od temperatury: prawo Viena.  Prawo
+       zaniku wykładniczego temperatury. Pomocna może okazać się
+       wizualizacja funkcji :ref:`wykresy` z rozdziału
+       :ref:`sage_w_pigulce`.
 
    * - Wave phenomena:
 
@@ -557,7 +599,9 @@ Kopernika w Warszawie:
      - 17h
      - Model zależności natężenia światła od kąta ugięcia dla
        pojedynczej szczeliny, podwójnej szczelny (doświadczenie
-       Younga) oraz dla układu szczelin.
+       Younga) oraz dla układu szczelin. Można łatwo rozszerzyć
+       przykład paczki falowej z :ref:`wykresy` do pokazania tych
+       zjawisk.
 
    * - Fields:
 
@@ -573,14 +617,17 @@ Kopernika w Warszawie:
      - 16h
      - Sporządzanie zależności strumienie wektora indukcji
        magnetycznej od czasu i obliczanie pierwszej pochodnej (prawo
-       indukcji Faradaya).
+       indukcji Faradaya). Zob. przykład oblicznia pochodnej w zadaniu
+       :ref:`matura2015_r08.rst`.
 
    * - Quantum and nuclear Physics:
 
         - 12.1 - The interaction of matter with radiation
         - 12.2 - Nuclear physics
      - 16h
-     - Modelowanie kształtów orbitali atomowych.
+     - Modelowanie kształtów orbitali atomowych. Możliwe jest
+       wykorzystanie :code:`implicit_plot3d` do narysowania orbitali
+       atomowych.
 
 
 

@@ -1,3 +1,5 @@
+.. _matura2015_p07.rst:
+
 O tym jak nakłonić funkcję :code:`plot` do współpracy
 -----------------------------------------------------
 

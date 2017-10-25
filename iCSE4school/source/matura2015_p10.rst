@@ -1,3 +1,5 @@
+.. _matura2015_p10.rst:
+
 O konstrukcji złożonych poleceń z pomocą metod
 ----------------------------------------------
 

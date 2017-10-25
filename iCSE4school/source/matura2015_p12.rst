@@ -1,3 +1,5 @@
+.. _matura2015_p12.rst:
+
 O brutalnej metodzie i pętli :code:`for` przyrządzonej na dwa sposoby
 ---------------------------------------------------------------------
 

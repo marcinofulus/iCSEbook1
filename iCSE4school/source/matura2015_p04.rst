@@ -1,3 +1,5 @@
+.. _matura2015_p04.rst:
+
 O tym jak :code:`solve` wykona pracę za nas i kiedy nas zawiedzie
 -----------------------------------------------------------------
 

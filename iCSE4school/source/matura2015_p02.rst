@@ -1,3 +1,5 @@
+.. _matura2015_p02.rst:
+
 O logarytmach i upraszczaniu
 ----------------------------
 

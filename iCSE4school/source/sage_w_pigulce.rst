@@ -1,5 +1,10 @@
+.. _sage_w_pigulce:
+
 SageMath w pigułce
 ------------------
+
+.. _arytmetyka:
+
 Bogaty i szybki kalkulator naukowy.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -71,6 +76,50 @@ oraz w rozdziale dotyczących przybliżeń wyrażeń niewymiernych.
       \pi=3.14159265358979323846264338327950288419716939937510582097494 \\
       82718435399721924198287929350313460725034243008818892481
 
+.. _logika:
+
+Działania na wyrażeniach logicznych.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SageMath a także sam język Python, umożliwia wykonanie działań na
+wyrazeniach logicznych. Może się do okazać przydatne w wielu
+dziedzinach. Dla przykładu rozważmy zagadkę:
+
+.. admonition:: Zagadka o kłamcach
+
+    Sa dwa rodzaje ludzi - jeden zawsze kłamie a jeden mówi zawsze
+    prawdę. Ala i Bolek należą do jednej z tych kategorii. Ala
+    powiedziała: ja i Bolek jesteśmy kłamcami. Kto jest kłamcą a kto
+    mówi prawdę?
+
+Stosując SageMath możemy przyjąć następującą interpretacje: niech
+:math:`a` będzie prawdą jeśli Ala jest prawdomówna a :math:`b` będzie
+prawdą jeśli Bolek jest prawdomówny. Wtedy możemy w Sage zapisać:
+
+.. sagecellserver::
+    :linked: false
+
+     f = propcalc.formula("a&(~a&~b) | ~a&(~(~a&~b))")
+     show(f)
+     print(f.truthtable())
+
+.. only:: latex
+
+    Wykonując ten kod otrzymamy następujący wynik:
+   
+    .. code::
+       
+        a      b      value
+        False  False  False  
+        False  True   True   
+        True   False  False  
+        True   True   False 
+
+Od razu widać, że jedynym rozwiązaniem jest takie w którym Ala kłamie
+a Bolek mówi prawdę.
+
+
+.. _algebra:
     
 Działania na wyrażeniach algebraicznych.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,3 +1,5 @@
+.. _matura2015_p05.rst:
+
 Jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
 --------------------------------------------------------------------------------
 

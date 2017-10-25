@@ -1,4 +1,4 @@
-.. -*- coding: utf-8 -*-
+.. _granica:
 
 Granica i ciągłość funkcji w punkcie
 ====================================
