@@ -3,38 +3,9 @@
 Przybliżanie wielomianami.
 ==========================
 
-Wprowadzenie metodyczne.
-^^^^^^^^^^^^^^^^^^^^^^^^
+Wstęp.
+^^^^^^
 
-Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school
-w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem
-zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej
-klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony
-metodą „flip teaching”, czyli uczniowie musieli się przygotować do
-zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone
-silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie
-wielomianu przechodzącego przez dane punkty. Według programu nauczania
-na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków
-na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy
-da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to
-uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania
-przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy
-wielomian przechodzący przez te punkty oraz narysuje to na
-wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy,
-mnożeniem macierzy przez wektor i wyznaczaniem jej
-wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji
-wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów
-uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych
-funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych
-współczynnikach wielomianu to mieli podać hipotezę, a następnie
-sprawdzić ją w internecie, czy jest ona prawdziwa.
-    
-Według mnie zajęcia te mogą być dobrym uzupełnieniem i ugruntowaniem
-wiedzy uczniów z matematyki w trzeciej klasie liceum na poziomie
-rozszerzonym lub na zajęciach dodatkowych w klasie drugiej. Ponadto
-każdy rozdział można traktować niezależnie, czyli przeprowadzać go w
-czasie przeprowadzania danego materiału na lekcjach matematyki.
-	
 **Uczniowie powinni znać:**
 
     Funkcję liniową i kwadratową *(4.6–10 mat_p)*, pojęcie wielomianu *(3.6 mat_r)*, definicję silnia *(10.1 mat_r)*.
@@ -59,7 +30,7 @@ Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.
     
 *inf_r – informatyka poziom rozszerzony.*   
 
-Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.
+**Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.**
 
     **Uwaga!**
 
@@ -69,19 +40,22 @@ Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżen
 
 Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
-Definicja silni.
-^^^^^^^^^^^^^^^^
 
-**Silnia** z liczby naturalnej *n* to iloczyn wszystkich liczb naturalnych mniejszych lub równej *n*. Symbolicznie zapisujemy *n!*.
-    
-.. math::
-     
-     \left\{
-     \begin{array}{ll}
-     0!=1  & {} \\ 
-     n!=n \cdot (n-1)!, & {} n>0 \\
-     \end{array}
-     \right.
+Część teoretyczna.
+^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Definicja silni.
+
+    **Silnia** z liczby naturalnej *n* to iloczyn wszystkich liczb naturalnych mniejszych lub równej *n*. Symbolicznie zapisujemy *n!*.
+
+    .. math::
+
+         \left\{
+         \begin{array}{ll}
+         0!=1  & {} \\ 
+         n!=n \cdot (n-1)!, & {} n>0 \\
+         \end{array}
+         \right.
 
 Przykład.
 
@@ -117,18 +91,17 @@ Drugi przykład przy obliczaniu silni korzysta z wbudowanej funkcji w SageMath.
     print 5, '!=', factorial(5)
 
 
-Pochodna.
-^^^^^^^^^
+.. admonition::
 
-**Pochodną** będziemy interpretować jako matematyczne działanie na funkcji.
+    **Pochodną** będziemy interpretować jako matematyczne działanie na funkcji.
 
-**Podstawowe wzory:**
+    **Podstawowe wzory:**
 
-.. math:: 
+    .. math:: 
 
-    \begin{array}{ll}
-    n'=0 \\ x'=1 \\ (x^n)'= n \cdot x^{n-1}, & {} n>1 \\ (sin(x))'=cos(x) \\ (cos(x))'=-sin(x)
-    \end{array}
+        \begin{array}{ll}
+        n'=0 \\ x'=1 \\ (x^n)'= n \cdot x^{n-1}, & {} n>1 \\ (sin(x))'=cos(x) \\ (cos(x))'=-sin(x)
+        \end{array}
 
 
 Poniżej przykłady obliczania pochodnej w SageMath z wykorzystaniem instrukcji *diff*.
@@ -146,23 +119,25 @@ Poniżej przykłady obliczania pochodnej w SageMath z wykorzystaniem instrukcji 
     show("f'(x)=",f.diff(x))
  
 
-**Kolejne wzory dotyczące pochodnej funkcji.**
+.. admonition:: **Kolejne wzory dotyczące pochodnej funkcji.**
 
-Poniżej wzory na pochodną sumy, różnicy, iloczynu i ilorazu funkcji.
+    Poniżej wzory na pochodną sumy, różnicy, iloczynu i ilorazu funkcji.
 
-.. math:: 
+    .. math:: 
+
+        \begin{array}{ll}
+        f, g - funkcje, \hspace{1cm} c - liczba \hspace{0,2cm} rzeczywista\\
+        (c \cdot f)' =c \cdot f' \\ (f+g)'= f' + g' \\ (f-g)'= f' - g' \\
+        (f \cdot g)' = f' \cdot g + f \cdot g' \\ (f/g)'= (f' \cdot g - f \cdot g')/g^2
+        \end{array}
+
+
+.. note:: 
+
+    Liczba przed zmienną nie zmienia operacji na pochodnej.
+
+    Wyrażenia algebraiczne oddzielone *+* lub *-* liczą się oddzielnie.
     
-    \begin{array}{ll}
-    f, g - funkcje, \hspace{1cm} c - liczba \hspace{0,2cm} rzeczywista\\
-    (c \cdot f)' =c \cdot f' \\ (f+g)'= f' + g' \\ (f-g)'= f' - g' \\
-    (f \cdot g)' = f' \cdot g + f \cdot g' \\ (f/g)'= (f' \cdot g - f \cdot g')/g^2
-    \end{array}
-
-**Komentarz**
-
-Liczba przed zmienną nie zmienia operacji na pochodnej.
-
-Wyrażenia algebraiczne oddzielone *+* lub *-* liczą się oddzielnie.
 
 **Przykłady**
 
@@ -225,36 +200,39 @@ Pochodna funkcji jest oczywiście funkcją, więc możemy obliczyć wartość po
     w2=g.diff(x,2).subs(x = 2)
     show("g(x)=", g, ",      g''(x)=",g.diff(x,2), ",      g''(1)=" , w1, ",      g''(2)=", w2)
 
-Definicja wielomianu.
-^^^^^^^^^^^^^^^^^^^^^
 
-**Wielomianem** stopnia n zmiennej x nazywamy funkcję:
+.. admonition:: **Definicja wielomianu.**
 
-.. math::
+    **Wielomianem** stopnia n zmiennej x nazywamy funkcję:
 
-    W(x)=a_0+a_1 \cdot x +a_2 \cdot x^2 +...+a_n \cdot x^n,  \hspace{1cm} a_0, a_1, a_2, ..., a_n - współczynniki.
+    .. math::
 
-**Wniosek**
+        W(x)=a_0+a_1 \cdot x +a_2 \cdot x^2 +...+a_n \cdot x^n,  \hspace{1cm} a_0, a_1, a_2, ..., a_n - współczynniki.
 
-Funkcja liniowa i funkcja kwadratowa jest wielomianem.
+.. note::
 
-.. math::
+    Funkcja liniowa i funkcja kwadratowa jest wielomianem.
 
-    \begin{array}{ll}
-    W_1(x)=a_0+a_1 \cdot x  \\
-    W_2(x)=a_0+a_1 \cdot x +a_2 \cdot x^2    
-    \end{array}
+    .. math::
 
-Funkcja liniowa.
-^^^^^^^^^^^^^^^^
+        \begin{array}{ll}
+        W_1(x)=a_0+a_1 \cdot x  \\
+        W_2(x)=a_0+a_1 \cdot x +a_2 \cdot x^2    
+        \end{array}
 
-Wiemy, że przez dwa punkty przechodzi dokładnie jedna prosta.
-Ponadto znając współrzędne powyższych punktów, możemy określić wzór tej prostej.
-Przypomnijmy, że wzór jest funkcję liniową:
 
-.. math::
+Informatyczne obliczanie wielomianów.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    y = a x + b 
+.. note:: Funkcja liniowa.
+
+    Wiemy, że przez dwa punkty przechodzi dokładnie jedna prosta.
+    Ponadto znając współrzędne powyższych punktów, możemy określić wzór tej prostej.
+    Przypomnijmy, że wzór jest funkcję liniową:
+
+    .. math::
+
+        y = a x + b 
 
 Współczynnik kierunkowy i wyraz wolny możemy obliczyć z poniższych wzorów:
 
@@ -288,18 +266,19 @@ Wpisując odpowiednie równania, możemy narysować linię prostą przechodząc�
        :width: 60%
        :name: f_liniowa 
 
-Parabola.
-^^^^^^^^^
 
-Poniżej znajduje się przykład dotycżący trzech punktów, które nie są współliniowe. Możemy wyznaczyć funkcję kwadratową do której należą te punkty. Więc musimy wyznaczyć z poniższych równań współczynniki *a, b, c* funkcji kwadratowej.
+.. note:: Parabola.
 
-.. math::
+    Poniżej znajduje się przykład dotycżący trzech punktów, które nie są współliniowe. Możemy wyznaczyć funkcję kwadratową do której należą te punkty. Więc musimy wyznaczyć z poniższych równań współczynniki *a, b, c* funkcji kwadratowej.
 
-    \begin{cases}
-    y_1=ax_1^2+bx_1+c \\
-    y_2=ax_2^2+bx_2+c \\ 
-    y_3=ax_3^2+bx_3+c 
-    \end{cases} 
+    .. math::
+
+        \begin{cases}
+        y_1=ax_1^2+bx_1+c \\
+        y_2=ax_2^2+bx_2+c \\ 
+        y_3=ax_3^2+bx_3+c 
+        \end{cases} 
+        
 
 Te obliczenia są żmudne i czasochłonne, nawet dla konkretnego przykładu. Gdybyśmy chcieli wyznaczyć odpowiednie wzory, jak powyżej dla funkcji liniowej, to zajęłoby to nam dużo czasu.
 
@@ -436,23 +415,25 @@ Taylor's formula.
 
 Z analizy matematyczna znany poniższy jest wzór, który przybliża dowolną funkcję pewnym odpowiadającym tej funkcji wielomianem.
 
-**Wzór Taylora**
+.. admonition:: **Wzór Taylora**
 
-.. math::
+    .. math::
 
-    \begin{aligned}
-    f(x)=f(a)+{\frac  {x-a}{1!}}f^{{(1)}}(a)+{\frac  {(x-a)^{2}}{2!}}f^{{(2)}}(a)+\ldots +
-    {\frac  {(x-a)^{n}}{n!}}f^{{(n)}}(a)+\ldots
-    \end{aligned}
+        \begin{aligned}
+        f(x)=f(a)+{\frac  {x-a}{1!}}f^{{(1)}}(a)+{\frac  {(x-a)^{2}}{2!}}f^{{(2)}}(a)+\ldots +
+        {\frac  {(x-a)^{n}}{n!}}f^{{(n)}}(a)+\ldots
+        \end{aligned}
 
-Możemy uprościć powyższy wzór podstawiajac za a=0. Otrzymujemy **Wzór Taylora-Maclaurina**.
+Możemy uprościć powyższy wzór podstawiajac za a=0.
 
-.. math::
-    
-    \begin{aligned}
-    f(x)&=f(0)+{\frac  {x}{1!}}f^{{(1)}}(0)+{\frac  {x^{2}}{2!}}f^{{(2)}}(0)+\ldots +
-    {\frac  {x^{n}}{n!}}f^{{(n)}}(0)+\ldots
-    \end{aligned}
+.. admonition:: **Wzór Taylora-Maclaurina**.
+
+    .. math::
+
+        \begin{aligned}
+        f(x)&=f(0)+{\frac  {x}{1!}}f^{{(1)}}(0)+{\frac  {x^{2}}{2!}}f^{{(2)}}(0)+\ldots +
+        {\frac  {x^{n}}{n!}}f^{{(n)}}(0)+\ldots
+        \end{aligned}
 
 To jest przykład dla funkcji :math:`f(x)=sin(x)`.
 
@@ -551,3 +532,36 @@ Znamy już wzór Taylora. Teraz możemy uprościć nasze obliczenia i użyć wbu
     .. figure:: wielomiany_media/t1.pdf
        :width: 60%
        :name: t_sin*x^2 
+
+
+Podsumowanie.
+^^^^^^^^^^^^^
+
+Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school
+w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem
+zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej
+klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony
+metodą „flip teaching”, czyli uczniowie musieli się przygotować do
+zajęć z wykorzystaniem internetu. Pierwsze zajęcia były poświęcone
+silni i pochodnej funkcji. Drugie zajęcia to wielomiany i wyznaczanie
+wielomianu przechodzącego przez dane punkty. Według programu nauczania
+na lekcjach matematyki podobne zadania dotyczą szczególnych przypadków
+na prostej i paraboli. Ja sam spotkałem się z pytaniami uczniów, czy
+da się wyznaczyć odpowiednie wzory dotyczące paraboli i czy da się to
+uogólnić na dowolną ilość punktów. Tak więc powstała idea napisania
+przeze mnie programu w SageMath, który przy zadanych punktach wyznaczy
+wielomian przechodzący przez te punkty oraz narysuje to na
+wykresie. Praca domowa uczniów to zapoznanie się z pojęciem macierzy,
+mnożeniem macierzy przez wektor i wyznaczaniem jej
+wyznacznika. Trzecie zajęcia to wyznaczanie przybliżenia funkcji
+wielomianem przy użyciu wzoru Taylora. Po omówieniu moich przykładów
+uczniowie mieli w podobny sposób wyznaczyć wielomiany dla podanych
+funkcji. Jeżeli zauważyli pewną prawidłowość w kolejnych
+współczynnikach wielomianu to mieli podać hipotezę, a następnie
+sprawdzić ją w internecie, czy jest ona prawdziwa.
+    
+Według mnie zajęcia te mogą być dobrym uzupełnieniem i ugruntowaniem
+wiedzy uczniów z matematyki w trzeciej klasie liceum na poziomie
+rozszerzonym lub na zajęciach dodatkowych w klasie drugiej. Ponadto
+każdy rozdział można traktować niezależnie, czyli przeprowadzać go w
+czasie przeprowadzania danego materiału na lekcjach matematyki.

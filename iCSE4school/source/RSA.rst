@@ -1,13 +1,8 @@
 RSA szyfrowanie asymetryczne. 
 =============================
 
-Wprowadzenie metodyczne.
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-    Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej klasie liceum. Powyższy temat nadaje się również jako praca projektowa, która łączy wiedzę matematyczno-informatyczną. Język SageMath umożliwia pracę na dużych liczbach przekraczających zakres zmiennych typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę imponująca. Jak wiadomo powyższe elementy są istotne w dziedzinie kryptografii, która łączy teorię liczb z praktyką programistyczną. Nie przekracza to zakresu materiału przewidzianego na rozszerzeniu z informatyki liceum lub technikum. Dlatego też postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania wiadomości **RSA**.
-
-    Materiał dla uczniów jest podzielony na trzy rozdziały. Pierwszy z nich wprowadza pojęcia kongruencji oraz istotne matematyczne twierdzenia, które są wykorzystywane w kryptografii. Co prawda dowody i szczegóły zagadnień są pominięte, ale zainteresowani uczniowie bez problemu znajdą te informacje w internecie. Drugi rozdział to szczegółowe wprowadzenie szyfrowania asymetrycznego stosowanego na początku lat 70 poprzedniego stulecia (obecnie stosowanego już tylko w celach dydaktycznych). Trzeci rozdział to już pełne szyfrowanie RSA. W każdej części są wyszczególnione ćwiczenia i zadania dla uczniów.  
-    
+Wstęp.
+^^^^^^  
     
 **Uczniowie powinni znać i  rozumieć:**
 
@@ -36,7 +31,7 @@ Wprowadzenie metodyczne.
 mat_p – matematyka poziom podstawowy, inf_r – informatyka poziom rozszerzony.   
 
 
-Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe. 
+**Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.**
 
 
     **Uwaga!**
@@ -47,13 +42,15 @@ Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżen
 
 Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
+Część teoretyczna.
+^^^^^^^^^^^^^^^^^^
 
-Definicja kongruencji.
-^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Definicja kongruencji.
 
-Dwie liczby całkowite : :math:`a, b` przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
+    Dwie liczby całkowite : :math:`a, b` przystają do siebie **modulo** *n*, jeśli: :math:`(a-b) \cdot k=n,\hspace{2mm} k \in Z.`
 
-Kongruencję zapisujemy symbolicznie: :math:`a = b (mod \hspace{2mm} n)`.
+    Kongruencję zapisujemy symbolicznie: :math:`a = b (mod \hspace{2mm} n)`.
+    
 
 Przykłady:
 """"""""""
@@ -116,10 +113,9 @@ Znajdź *x* takie, że: 3x = 1 (mod 6).
 W powyższym ćwiczeniu nie istnieje żadna liczba, która spełnia powyższą kongruencję.
 
 
-Chińskie twierdzenie o resztach.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: Chińskie twierdzenie o resztach.
 
-Poniższe ćwiczenie można rozwiązać przy użyciu chińskiego twierdzenia o resztach. Jedno z najważniejszych twierdzeń z teorii liczb i kryptografii. Twierdzenie to pozwala dzielić sekret wśród kilku osób (ważne hasło liczbowe).
+    Poniższe ćwiczenie można rozwiązać przy użyciu chińskiego twierdzenia o resztach. Jedno z najważniejszych twierdzeń z teorii liczb i kryptografii. Twierdzenie to pozwala dzielić sekret wśród kilku osób (ważne hasło liczbowe).
 
 Ćwiczenie 4.
 """"""""""""
@@ -144,10 +140,9 @@ x = 2 mod 7.
     Otrzymujemy 58.
 
 
-Małe twierdzenie Fermata.
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Małe twierdzenie Fermata.
 
-**Jeśli** *p* jest liczbą pierwszą oraz *a*, *p* są względnie pierwsze, **wtedy** :math:`a^{p-1} - 1` jest wielokrotnością liczby *p*. Zapisujemy to symbolicznie: :math:`a^{p-1}=1 (mod \hspace{2mm} p)`.
+    **Jeśli** *p* jest liczbą pierwszą oraz *a*, *p* są względnie pierwsze, **wtedy** :math:`a^{p-1} - 1` jest wielokrotnością liczby *p*. Zapisujemy to symbolicznie: :math:`a^{p-1}=1 (mod \hspace{2mm} p)`.
 
 Sprawdźmy poprawność powyższego twierdzenia, dla kolejnych liczb pierwszych, numerycznie z wykorzystaniem języka Python.
 
@@ -160,14 +155,18 @@ Dla a = 35 i p = 5 lub p = 7 liczby nie spełniają założeń twierdzenia. Moż
         print(p, 35^(p-1) % p)
 
 
-Szyfrowanie wiadomości.
-^^^^^^^^^^^^^^^^^^^^^^^
+Część informatyczna.
+^^^^^^^^^^^^^^^^^^^^
 
-Pierwsze wzmianki o kryptografii pochodzą już ze starożytności. Można stwierdzić, że szyfrowanie powstało równocześnie z wynalezieniem pisma. Szyfrowanie było stosowne przy przekazywaniu wiadomości wojskowych lub politycznych. Na lekcjach informatyki poznaliśmy (lub poznamy) szyfr Cezara. Jest to prosty szyfr, w którym zamieniamy litery. Co prawda zaszyfrowana wiadomość jest niezrozumiała, ale także prosta do odszyfrowania. Inne metody starożytnych były bardziej wyrafinowane i trudniejsze do odszyfrowania. Do lat sześćdziesiatych dwudziestego wieku znane były tylko szyfry symetryczne, to znaczy takie, które mają jeden klucz (jedną metodę) dzięki, któremu szyfrujemy i deszyfrujemy wiadomości.
 
-W latach siedemdziesiątych dwudziestego wieku kryptografowie dzięki informatyzacji, zwiększeniu mocy obliczeniowej komputerów oraz potrzebie zabezpieczenia danych wymyślili szyfr asymetryczny, czyli taki, w którym używamy dwóch różnych kluczy – jeden do zaszyfrowania, a drugi do odszyfrowania (kolejność kluczy jest nieważna). Jeden z kluczy udostępniamy osobie, która ma przesłać nam tajną wiadomość. Możemy nawet udostępnić klucz na naszej stronie internetowej (dostępny dla wszystkich - klucz publiczny). Drugi klucz jest tajny (klucz prywatny) znamy go tylko my i nie możemy go nikomu udostępnić. Tylko i wyłącznie dzięki kluczowi prywatnemu możemy odszyfrować wiadomość.
+.. note:: Szyfrowanie wiadomości.
+
+    Pierwsze wzmianki o kryptografii pochodzą już ze starożytności. Można stwierdzić, że szyfrowanie powstało równocześnie z wynalezieniem pisma. Szyfrowanie było stosowne przy przekazywaniu wiadomości wojskowych lub politycznych. Na lekcjach informatyki poznaliśmy (lub poznamy) szyfr Cezara. Jest to prosty szyfr, w którym zamieniamy litery. Co prawda zaszyfrowana wiadomość jest niezrozumiała, ale także prosta do odszyfrowania. Inne metody starożytnych były bardziej wyrafinowane i trudniejsze do odszyfrowania. Do lat sześćdziesiatych dwudziestego wieku znane były tylko szyfry symetryczne, to znaczy takie, które mają jeden klucz (jedną metodę) dzięki, któremu szyfrujemy i deszyfrujemy wiadomości.
+
+    W latach siedemdziesiątych dwudziestego wieku kryptografowie dzięki informatyzacji, zwiększeniu mocy obliczeniowej komputerów oraz potrzebie zabezpieczenia danych wymyślili szyfr asymetryczny, czyli taki, w którym używamy dwóch różnych kluczy – jeden do zaszyfrowania, a drugi do odszyfrowania (kolejność kluczy jest nieważna). Jeden z kluczy udostępniamy osobie, która ma przesłać nam tajną wiadomość. Możemy nawet udostępnić klucz na naszej stronie internetowej (dostępny dla wszystkich - klucz publiczny). Drugi klucz jest tajny (klucz prywatny) znamy go tylko my i nie możemy go nikomu udostępnić. Tylko i wyłącznie dzięki kluczowi prywatnemu możemy odszyfrować wiadomość.
 
 Poniżej opiszemy prosty szyfr asymetryczny, który można złamać (czyli znając liczby d, n można szybko znaleść liczbę e). Będzie to Wasze zadanie dodatkowe.
+
 
 **Jak matematycznie stworzyć szyfr asymetryczny?**
 
@@ -517,3 +516,11 @@ Wystarczy skopiować algorytm deszyfrowania z punktu 2 i zamienić: pomoc*d na p
         tekst2 = tekst2 + chr(deszyfr%128)
     print "message: ", tekst2
  
+Wnioski.
+^^^^^^^^
+
+Uczniowie naszej szkoły przed projektem iCSE mogli usłyszeć wykład o metodach szyfrowania. Wykazali oni duże zainteresowanie tą sprawą. Dlatego zdecydowałem się zorganizować lekcje z asymetrycznego szyfrowania przy użyciu języka programowania Python. Język SageMath umożliwia pracę na dużych liczbach przekraczających zakres zmiennych typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę imponująca. W ten sposób uczniowie mieli możliwość praktycznego sposobu szyfrowania i deszyfrowania wiadomości przy użyciu publicznych i prywatnych kluczy. Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej klasie liceum. Powyższy temat nadaje się również jako praca projektowa, która łączy wiedzę matematyczno-informatyczną. Jak wiadomo powyższe elementy są istotne w dziedzinie kryptografii, która łączy teorię liczb z praktyką programistyczną. Nie przekracza to zakresu materiału przewidzianego na rozszerzeniu z informatyki liceum lub technikum. Dlatego też postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania wiadomości **RSA**.
+
+Materiał dla uczniów jest podzielony na trzy rozdziały (trzy godziny dydaktyczne). Pierwszy z nich wprowadza pojęcia kongruencji oraz istotne matematyczne twierdzenia, które są wykorzystywane w kryptografii. Co prawda dowody i szczegóły zagadnień są pominięte, ale zainteresowani uczniowie bez problemu znajdą te informacje w internecie. Drugi rozdział to szczegółowe wprowadzenie szyfrowania asymetrycznego stosowanego na początku lat 70 poprzedniego stulecia (obecnie stosowanego już tylko w celach dydaktycznych). Trzeci rozdział to już pełne szyfrowanie RSA. W każdej części są wyszczególnione ćwiczenia i zadania dla uczniów.  
+
+Zadaniem uczniów było uzyskanie matematycznej znajomości kongruencji, małego twierdzenia Fermata i algorytmu euklidesowego. Te kwestie zostały zaprezentowane na początku, a uczniowie rozwiązywali swoje zadania podczas warsztatów. Każdy uczeń wygenerował własną parę kluczy, szyfrował i deszyfrował własne wiadomości. Pomimo wiedzy teoretycznej uczniów, było dość zaskakujące dla nich, że nie można odszyfrować wiadomości z tym samym kluczem i że klucze można zamienić. Oznacza to, że prywatny klucz może stać się publicznym i odwrotnie. Największą niespodzianką dla uczniów była symulacja złamania hasła RSA - dla liczby dwustucyfrowej szacowany podział na czynniki pierwsze dla szybkiego komputera zająłby to ponad 3000 lat.
