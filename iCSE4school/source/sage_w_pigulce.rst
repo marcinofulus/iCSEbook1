@@ -422,14 +422,19 @@ wartość parametru i obserwować jak zmienia się wykres.
 Sage = interdyscyplinarność.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Podsumowując SageMath umożliwia: szybkie i dokładne obliczenia nawet
-dowolnie dużych liczb, przeprowadzanie obliczeń na wyrażeniach
-algebraicznych, rozwiązywanie równań i układów równań, wizualizację
-rozwiązań, rysowanie wykresów, rozwiązywanie równań w zbiorze liczb
-zespolonych, rozwiązywanie równań macierzowych, obliczanie pochodnych,
-całek i wielu innych działań matematycznych.
+Podsumowując SageMath umożliwia:
 
-To bardzo dobre i bogate narzędzie programistyczne, dzięki któremu
-możemy łączyć przedmioty ścisłe: informatykę, programowanie,
-matematykę, fizykę, chemię. Czy istnieją ograniczenia dla Sage'a? Tak,
-ale pewnie wcześniej natrafimy na ograniczenia naszej wyobraźni.
+ 1. Szybkie i dokładne obliczenia nawet
+    dowolnie dużych liczb.
+ 2. Przeprowadzanie obliczeń na wyrażeniach algebraicznych.
+    rozwiązywanie równań w zbiorze liczb zespolonych, rozwiązywanie
+    układów równań i nierówności.
+ 3. Wizualizację rozwiązań na wykresach, rysowanie wykresów funkcji.
+ 4. Obliczanie pochodnych, całek i wielu innych działań
+    matematycznych.
+
+Podanto SageMath to bardzo dobre i bogate narzędzie programistyczne,
+dzięki któremu możemy łączyć przedmioty ścisłe: informatykę,
+programowanie, matematykę, fizykę, chemię. Czy istnieją ograniczenia
+dla Sage'a? Tak, ale pewnie wcześniej natrafimy na ograniczenia naszej
+wyobraźni.

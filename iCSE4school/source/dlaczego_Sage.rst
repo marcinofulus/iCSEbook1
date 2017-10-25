@@ -1,5 +1,5 @@
-Wybór najlepszego narzędzia informatycznego
-===========================================
+Wybór  narzędzia
+================
 
 Systemy komputerowe dla nauczania przedmiotów ścisłych
 ------------------------------------------------------

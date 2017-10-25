@@ -38,6 +38,63 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 
 
 
++----------------------------------------------------------------------------------------+
+| **Klasa 1**                                                                            |
++--------------------------------+-------------------------------------------------------+ 
+|                                |                                                       |
+|Logika. Zbiory.  Zbiory liczbowe|Przy pomocy pakietu SageMath uczeń może poznać i       | 
+|                                |utrwalić podstawowe prawa logiki, takie jak negacja    |
+|                                |alternatywy i negacja koniunkcji, ocenić wartość       |
+|                                |logiczną zdań złożonych oraz zastosować poznane prawa  |
+|                                |logiczne.  Uczeń może również nauczyć się wyznaczać    |
+|                                |część wspólną, sumę i różnicę zbiorów oraz dopełnienie |
+|                                |zbioru.                                                |
++--------------------------------+-------------------------------------------------------+
+|                                |                                                       |
+|Działania w zbiorach liczbowych |Ponieważ SageMath może służyć jako kalkulator, uczeń   |
+|                                |wykorzystując ten pakiet może osiągnąć wszystkie cele  |
+|                                |edukacyjne i zdobyć wszystkie umiejętności zakładane w |
+|                                |tym dziale.                                            |
++--------------------------------+-------------------------------------------------------+
+|                                |                                                       |
+|Wyrażenia algebraiczne          |Ponieważ w SageMath można wykonywać obliczenia         |
+|                                |symboliczne, uczeń wykorzystując ten pakiet może       |
+|                                |osiągnąć wszystkie cele edukacyjne i zdobyć wszystkie  |
+|                                |umiejętności zakładane w tym dziale.                   |
++--------------------------------+-------------------------------------------------------+
+|                                |                                                       |
+|Geometria płaska - pojęcia      |Przy pomocy środowiska SageMath uczeń może wizualizować|
+|wstępne                         |obiekty geometryczne, badać ich wzajemne zależności    |
+|                                |oraz może rozwiązywać zadania dotyczące własności figur|
+|                                |geometrycznych wykorzystując poznane w tym dziale      |
+|                                |twierdzenia.                                           |
++--------------------------------+-------------------------------------------------------+
+|Geometria płaska - trójkąty     |                                                       |
++--------------------------------+-------------------------------------------------------+
+|Geometria płaska - pole koła,   |Wykorzystując środowisko SageMath uczeń może utrwalić  |
+|pole trójkąta                   |swoje umiejętności m.  in. w zakresie korzystania z    |
+|                                |przybliżonych wartości funkcji trygonometrycznych,     |
+|                                |rozwiązywania zadań geometrycznych z wykorzystaniem    |
+|                                |funkcji trygonometrycznych kąta ostrego w trójkącie    |
+|                                |prostokątnym oraz zastosowania twierdzenia sinusów i   |
+|                                |twierdzenia cosinusów.                                 |
++--------------------------------+-------------------------------------------------------+
+|Trygonometria                   |                                                       |
+|                                |                                                       |
+|                                |                                                       |
+|                                |                                                       |
+|                                |                                                       |
+|                                |                                                       |
+|                                |                                                       |
++--------------------------------+-------------------------------------------------------+
+|Funkcja i jej własności         |Przy pomocy środowiska SageMath uczeń może osiągnąć    |
+|                                |wszystkie cele edukacyjne i zdobyć wszystkie           |
+|                                |umiejętności zakładane w tych działach.                |
+|                                |                                                       |
++--------------------------------+-------------------------------------------------------+
+|Przekształcanie wykresów funkcji|                                                       |
++--------------------------------+-------------------------------------------------------+
+
 
 
 +---------------------------------------------------+
@@ -393,43 +450,131 @@ aplikację w trakcie realizacji zajęć z zakresu Physics Standard/Higher
 Level w XXXIII Liceum Ogólnokształcącym Dwujęzycznym im. Mikołaja
 Kopernika w Warszawie:
 
+ :ref:`tabela_sage_fiz`
 
-Measurements and  uncertainties (5h)
-....................................
+.. list-table:: Zakres zastosowania SageMath w fizyce
+   :widths: 15 4 30
+   :header-rows: 1
+   :name: tabela_sage_fiz
+           
+   * - Przedmiot
+     - godz.
+     - Potencjalne użycie Python/SageMath
+   * - Measurements and  uncertainties
+        - 1.1 - Measurements  in physics         
+        - 1.2 - Uncertainties and  errors             
+        - 1.3 - Vectors and  scalars
+     - 5h
+     - Obliczanie niepewności pomiarowych, operacje na
+       wektorach. Przykładem może być scenariusz lekcji "Badanie ruchu
+       przyśpieszonego" :ref:`przyspieszony`. Operacje na wektorach
+       mogą być efektywnie realizowane w SageMath wykorzystują
+       podsystem algebry liniowej. Do dyspozycji są funkcje
+       wizualizujące :code:`vector_plot` i :code:`arrow`.
+   * - Mechanics
+        - 2.1 - Motion
+        - 2.2 - Forces
+        - 2.3 - Work, energy and power
+        - 2.4 - Momentum and impulse
+     - 22h
+     - Sporządzanie wykresów zależności drogi, szybkości i
+       przyśpieszenia od czasu. Modelowanie torów ruchu -
+       wykorzystanie funkcji :code:`parametric_plot`. Rozwiązywanie
+       kinematycznego równania ruchu metodami numerycznymi.
+   * - Thermal physics
+        - 3.1 - Thermal concepts
+        - 3.2 - Modelling a gas                 
+     -  11h
+     - Modelowanie stanu gazu doskonałego. Sporządzanie wykresów w
+       dowolnej przemianie gazowej.
+   * - Waves 
+        - 4.1 - Oscillations
+        - 4.2 - Travelling waves
+        - 4.3 - Wave characteristics
+        - 4.4 - Wave behaviour
+        - 4.5 - Standing 
+     - 15h
+     - Sporządzanie zależności wychylenia, prędkości i przyspieszenia
+       danego ciała w ruchu drgającym, modelowanie fali poprzecznej i
+       podłużnej.  Superpozycja w ruchu harmonicznym.
+   * - Electricity and Magnetism 
+        - 5.1 - Electric fields
+        - 5.2 - Heating effect of electric currents
+        - 5.3 - Electric cells
+        - 5.4 - Magnetic effects of electric currents
+     - 15h
+     - Rozwiązywanie równań opisujących obwód prądu za pomocą
+       pierwszego i drugiego prawa Kirchhoffa.  Modelowanie pola
+       wektorowego.
 
- - 1.1 - Measurements  in physics         
- - 1.2 - Uncertainties and  errors             
- - 1.3 - Vectors and  scalars
+   * - Circular motion and gravitation
+        - 6.1 - Circular motion
+        - 6.2 - Newton’s law of gravitation
+     - 5h
+     - Numeryczne rozwiązywanie równania różniczkowego opisującego II
+       Zasadę Dynamiki Newtona dla dowolnego punktu materialnego w
+       danym polu wektorowym.
 
-.. admonition:: Zastosowanie Python/SageMath
+   * - Atomic, nuclear and particle Physics
+        - 7.1 - Discrete energy and radioactivity
+        - 7.2 - Nuclear reactions
+        - 7.3 - The structure of matter
+     - 14h
+     - Modelowanie krzywych zaniku promieniotwórczego .  Obliczanie
+       czasów półtrwania izotopów.
 
-   Obliczanie niepewności pomiarowych, operacje na
-   wektorach. Przykładem może być scenariusz lekcji "Badanie ruchu
-   przyśpieszonego" :ref:`przyspieszony`. Operacje na wektorach mogą
-   być efektywnie realizowane w SageMath wykorzystują podsystem
-   algebry liniowej. Do dyspozycji są funkcje wizualizujące
-   :code:`vector_plot` i :code:`arrow`.
+   * - Energy production
+        - 8.1 - Energy sources
+        - 8.2 - Thermal energy transfer
+     - 8h 
+     - Sporządzanie wykresów zależności długości emitowanej fali
+       elektromagnetyczne j od temperatury: prawo Viena.  Proawo
+       zaniku wykładniczego temperatury.
+
+   * - Wave phenomena 
+        - 9.1 - Simple harmonic motion
+        - 9.2 - Single-slit diffraction
+        - 9.3 - Interference
+        - 9.4 - Resolution
+        - 9.5 - Doppler effect
+     - 17h
+     - Model zależności natężenia światła od kąta ugięcia dla
+       pojedynczej szczeliny, podwójnej szczelny (doświadczenie
+       Younga) oraz dla układu szczelin.
+
+   * - Fields 
+        - 10.1 - Describing fields
+        - 10.2 - Fields at work
+     - 11h
+     - Modelowanie pola wektorowego.
+   * - Electromagnetic induction
+        - 11.1 - Electromagnetic induction
+        - 11.2 - Power generation and transmission
+        - 11.3 - Capacitance
+     - 16h
+     - Sporządzanie zależności strumienie wektora indukcji
+       magnetycznej od czasu i obliczanie pierwszej pochodnej (prawo
+       indukcji Faradaya).
+
+   * - Quantum and nuclear Physics (16h)
+        - 12.1 - The interaction of matter with radiation
+        - 12.2 - Nuclear physics
+     - 16h
+     - Modelowanie kształtów orbitali atomowych. :ref:`tabelaQ`
 
 
-Mechanics
-.........
 
- - 2.1 - Motion
- - 2.2 - Forces
- - 2.3 - Work, energy and power
- - 2.4 - Momentum and impulse            
+       
 
-.. admonition:: Zastosowanie Python/SageMath
+:Temat: Isaac Newton
+:Zagadnienia: Here we insert more
+   text to show the effect of
+   many lines.
+:SageMath:
+  Model zależności natężenia światła od kąta ugięcia dla
+  pojedynczej szczeliny, podwójnej szczelny (doświadczenie Younga)
+  oraz dla układu szczelin.  Start on the next line.
 
-  Sporządzanie wykresów zależności drogi, szybkości i przyśpieszenia
-  od czasu. Modelowanie torów ruchu, rozwiązywanie kinematycznego
-  równania ruchu metodami numerycznymi.
-
-
-
-
-
-  
 
 +-----------------------+-----+-------------------------------------+
 |     Nazwa działu.     |godz.|Przykładowe zastosowania             |

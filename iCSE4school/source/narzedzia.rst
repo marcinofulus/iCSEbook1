@@ -5,8 +5,8 @@ Narzędzia i metody pracy
 Technologiczne aspekty korzystania z SageMath
 ---------------------------------------------
 
-Oprogramowanie SageMath
-~~~~~~~~~~~~~~~~~~~~~~~
+Czym jest SageMath
+~~~~~~~~~~~~~~~~~~
 
 
 Pakiet SageMath jest wolnym i otwartym (GNU GPL) oprogramowaniem
@@ -33,7 +33,7 @@ pełnowartościowej otwartej alternatywy dla komercyjnych pakietów:
 Magma, Maple, Mathematica oraz Matlab.
 
 
-`Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
+.. `Teaching numerical methods with IPython notebooks  <http://repository.kaust.edu.sa/kaust/bitstream/10754/346689/1/ketcheson.pdf>`_
 
 
 
@@ -305,20 +305,21 @@ celu zaciekawienie uczniów, zaintrygowanie ich a także przekonanie, że z
 SageMath będą w stanie sprawdzić każdą pracę domową z matematyki, czy innego
 przedmiotu, wymagającą obliczeń czy wykresów.
 
-W LO M. Kopernika w Warszawie uczniowie mogli zobaczyć różnorodne
-możliwości SageMath podczas pierwszych zaplanowanych dla uczniów uczestników
-projektu Erasmus+ zajęć. Zajęcia trwały jedną godzinę, wybrane do
-prezentacji zagadnienia w sposób bardzo atrakcyjny pokazywały kolorowe
-wykresy i animacje, ciekawe problemy rozwiązane z wykorzystaniem
-narzędzi SageMath - problem “wilki i króliki”, szyfr RSA czy symulacje z
-fizyki. Ale co najważniejsze, uczniowie mogli ze swoich telefonów
-komórkowych czy tabletów sprawdzić sami i wykonać polecenia w SageMath.
+W XXXIII LO M. Kopernika w Warszawie uczniowie mogli zobaczyć
+różnorodne możliwości SageMath podczas pierwszych zaplanowanych dla
+uczniów uczestników projektu Erasmus+ zajęć. Zajęcia trwały jedną
+godzinę, wybrane do prezentacji zagadnienia w sposób bardzo atrakcyjny
+pokazywały kolorowe wykresy i animacje, ciekawe problemy rozwiązane z
+wykorzystaniem narzędzi SageMath - problem “wilki i króliki”, szyfr
+RSA czy symulacje z fizyki. Ale co najważniejsze, uczniowie mogli ze
+swoich telefonów komórkowych czy tabletów sprawdzić sami i wykonać
+polecenia w SageMath.
 
 Na tych zajęciach został także zaprezentowany szkolny serwer SageMath,
 uczniowie otrzymali konta,  omówione zostały kolejne zajęcia a także
 projekt do samodzielnego wykonania na serwerze SageMath.
 
-Uwaga metodyczna:
+*Uwaga metodyczna:*
 
 Warto zadbać aby uczniowie na początku cyklu zajęć widzieli ich cel w
 postaci zadania, jakie stawia przed nimi nauczyciel. Równie ważne jest
@@ -346,7 +347,7 @@ systemów, procesów, zjawisk), co zmusza ucznia do odkrywania,
 analizowania, pomysłowości, rozwija naturalną ciekawość,  zadawanie
 pytań i poszukiwanie odpowiedzi.
 
-W LO im. M. Kopernika w Warszawie metoda warsztatów została wykorzystana
+W XXXIII LO im. M. Kopernika w Warszawie metoda warsztatów została wykorzystana
 jako kolejne zajęcia po prezentacji możliwości SageMath. Posłużyła do nauki
 praktycznego wykorzystania i sprawdzenia przez uczniów prezentowanych
 możliwości. Nauczyciel wybrał najpierw zestaw poleceń do wykonania przez
@@ -538,7 +539,7 @@ aktywne podczas zajęć.
 Na obronę metody projektów należy podkreślić, że większości zagrożeń da
 się uniknąć, jeśli się je zna.
 
-W LO im. M. Kopernika w Warszawie metoda projektu została wykorzystana
+W XXX III LO im. M. Kopernika w Warszawie metoda projektu została wykorzystana
 podczas zajęć informatyki. Projekty zostały wykonane w trzech grupach
 uczniów z klasy drugiej, tematem projektu było badanie funkcji.
 
@@ -553,7 +554,7 @@ badanie pokazało, że projekt został bardzo dobrze oceniony przez
 uczniów, uznali, że dużo się nauczyli przydatnych rzeczy i była to dla
 nich twórcze zadanie.
 
-Uwaga metodyczna:
+*Uwaga metodyczna:*
 
 SageMath ma bardzo bogate możliwości, które mogą posłużyć nauczycielowi do
 zaplanowania zadań o szerszym charakterze, niż pojedyncza lekcja czy

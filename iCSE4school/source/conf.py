@@ -171,7 +171,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'iCSE_school.tex', u'Metodologia nauczania przedmiotów ścisłych z perspektywą obliczeniową',
-   u'praca zbiorowa pod redakcją Marcina Kostura', 'manual'),
+   u'praca zbiorowa pod redakcją dr hab. Marcina Kostura', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
