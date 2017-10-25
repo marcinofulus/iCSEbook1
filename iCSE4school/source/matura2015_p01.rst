@@ -1,3 +1,4 @@
+.. _matura2015_p01.rst:
 
 O graficznym i algebraicznym rozwiązywaniu nierówności
 ------------------------------------------------------
@@ -5,12 +6,12 @@ O graficznym i algebraicznym rozwiązywaniu nierówności
 
 .. image:: matura2015/matura2015_p01.png
    :align: center
-
+   :width: 76%
 
 Mamy rozwiązań nierówność: :math:`-4\le x-1\le4`. Jest to dość proste
 zadanie, ale możemy zobaczyć czy system algebry komputerowej też sobie
 z nim poradzi. Wpisujemy i od razu mamy wynik:
-
+b
 
 .. sagecellserver::
    :linked: false

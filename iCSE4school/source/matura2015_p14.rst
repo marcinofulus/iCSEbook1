@@ -1,5 +1,5 @@
-Zadanie 14 - jak skomplikować proste i popaść w kłopoty z funkcją tangens
--------------------------------------------------------------------------
+Jak skomplikować proste i popaść w kłopoty z funkcją tangens
+------------------------------------------------------------
 
 .. image:: matura2015/matura2015_p14.png
    :align: center
@@ -51,7 +51,9 @@ wykresu dorysujemy też siatkę z lini pionowych i poziomych
     
     tanphi=-sqrt(3)/3 
     phi = arctan(tanphi )
-    point ( (r*cos(phi),r*sin(phi) ),size=20,ymin=-6,ymax=6,xmin=-6,xmax=6,gridlines=[range(-5,6),range(-5,6)]) 
+    point ( (r*cos(phi),r*sin(phi) ),size=20,\
+      ymin=-6,ymax=6,xmin=-6,xmax=6,\
+      gridlines=[range(-5,6),range(-5,6)]) 
    
 
 No to mamy już nasz program gotowy, dodajemy jeszcze :code:`@interact`
@@ -64,14 +66,16 @@ by sprawdzać odpowiedzi kliknięciem w odpowiedni klawisz:
     @interact
     def _(tanphi=[-sqrt(3)/3,-4/5,-1,-5/4]):
         phi = arctan(tanphi )
-        plt = point ( (r*cos(phi),r*sin(phi) ),size=20,ymin=-6,ymax=6,xmin=-6,xmax=6,gridlines=[range(-5,6),range(-5,6)])
+        plt = point ( (r*cos(phi),r*sin(phi) ),size=20,\
+          ymin=-6,ymax=6,xmin=-6,xmax=6,\
+          gridlines=[range(-5,6),range(-5,6)])
         plt.show()
 
 
 Co się okazuje, **żadna** odpowiedź daje punktu w tym samym miejscu
 jak w zadaniu? Co poszło nie tak?
 
-Okazuje się że zawiniła włanośc funkcji :math:`\tan`. Jej okres to
+Okazuje się że zawiniła właność funkcji :math:`\tan`. Jej okres to
 :math:`\pi` - a nie :math:`2 \pi` jak u poczciwego
 *sinusa*. Oznacza to, że jeżeli:
 
@@ -100,7 +104,9 @@ Dodajmy więc do naszego rysunku drugi punkt dlą kąta :math:`\phi+\pi`:
     @interact
     def _(tanphi=[-sqrt(3)/3,-4/5,-1,-5/4]):
         phi = arctan(tanphi )
-        plt = point ( (r*cos(phi),r*sin(phi) ),size=20,ymin=-6,ymax=6,xmin=-6,xmax=6,gridlines=[range(-5,6),range(-5,6)]) 
+        plt = point ( (r*cos(phi),r*sin(phi) ),size=20,\
+          ymin=-6,ymax=6,xmin=-6,xmax=6,\
+          gridlines=[range(-5,6),range(-5,6)]) 
         phi += pi
         plt += point ( (r*cos(phi),r*sin(phi) ),size=20 )
         plt.show()
@@ -128,16 +134,3 @@ z tych punktów jest ten z rysunku w zadaniu.
      - :code:`gridlines=[[1,2,5],[]]` - trzy linie pionowe 
      - :code:`gridlines=[ range(1,20),[3]]` - 19 lini pionowych i jedna pozioma
    
-
-
-.. admonition:: Dodatek specjalny: Metody dowodzenia twierdzeń matematycznych.
-
-     - dowód przez ogląd (łatwo widać),
-     - dowód przez połechtanie ambicji słuchaczy (to dla Państwa jest proste),
-     - dowód iluzjonistyczny (zrobimy teraz taką małą sztuczkę),
-     - dowód spychologiczny (Państwo sprawdzą sami),
-     - dowód przez kalendarz (to było w zeszłym roku),
-     - dowód przez zastraszenie (albo Państwo uwierzą na słowo, albo będę przez trzy godziny dowodził),
-     - dowód przez sztućce (a nuż wyjdzie),
-     - dowód teologiczny (diabli wiedzą, jak to udowodnić),
-     - dowód przez założenie tezy.

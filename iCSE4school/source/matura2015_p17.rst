@@ -5,7 +5,10 @@ Kąty, radiany i szacowanie funkcji sinus
    :align: center
 
 
-Jeżeli obwód rombu wynosi :math:`8` to jego bok jest cztery razy mniejszy czyli ma ma długość :math:`a=2`. Z drugiej strony pole rombu to :math:`P=a^2 \sin (\alpha)`. Możemy więc wyznaczyć kąt :math:`\alpha` z równania:
+Jeżeli obwód rombu wynosi :math:`8` to jego bok jest cztery razy
+mniejszy czyli ma ma długość :math:`a=2`. Z drugiej strony pole rombu
+to :math:`P=a^2 \sin (\alpha)`. Możemy więc wyznaczyć kąt
+:math:`\alpha` z równania:
 
 .. math::
 

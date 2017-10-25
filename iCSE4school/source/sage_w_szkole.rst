@@ -456,22 +456,25 @@ Kopernika w Warszawie:
    :widths: 15 4 30
    :header-rows: 1
    :name: tabela_sage_fiz
+   :class: longtable
            
    * - Przedmiot
      - godz.
      - Potencjalne użycie Python/SageMath
-   * - Measurements and  uncertainties
-        - 1.1 - Measurements  in physics         
-        - 1.2 - Uncertainties and  errors             
-        - 1.3 - Vectors and  scalars
+   * - Measurements and uncertainties:
+      
+        - 1.1 - Measurements in physics 
+        - 1.2 - Uncertainties and errors 
+        - 1.3 - Vectors and scalars
      - 5h
      - Obliczanie niepewności pomiarowych, operacje na
        wektorach. Przykładem może być scenariusz lekcji "Badanie ruchu
        przyśpieszonego" :ref:`przyspieszony`. Operacje na wektorach
-       mogą być efektywnie realizowane w SageMath wykorzystują
+       mogą być efektywnie realizowane w SageMath wykorzystując
        podsystem algebry liniowej. Do dyspozycji są funkcje
        wizualizujące :code:`vector_plot` i :code:`arrow`.
-   * - Mechanics
+   * - Mechanics:
+
         - 2.1 - Motion
         - 2.2 - Forces
         - 2.3 - Work, energy and power
@@ -480,14 +483,19 @@ Kopernika w Warszawie:
      - Sporządzanie wykresów zależności drogi, szybkości i
        przyśpieszenia od czasu. Modelowanie torów ruchu -
        wykorzystanie funkcji :code:`parametric_plot`. Rozwiązywanie
-       kinematycznego równania ruchu metodami numerycznymi.
-   * - Thermal physics
+       kinematycznego równania ruchu metodami numerycznymi. Przykładem
+       takiego podejścia może być modelowanie rzutu ukośnego:
+          - `<http://visual.icse.us.edu.pl/szkola/rzut_ukosny.html>`_.
+   * - Thermal physics:
+
         - 3.1 - Thermal concepts
         - 3.2 - Modelling a gas                 
      -  11h
      - Modelowanie stanu gazu doskonałego. Sporządzanie wykresów w
-       dowolnej przemianie gazowej.
-   * - Waves 
+       dowolnej przemianie gazowej. W dużą rolę odgrywa tu rysowanie
+       wykresów funkcji np. rozdział :ref:`wykresy`
+   * - Waves:
+
         - 4.1 - Oscillations
         - 4.2 - Travelling waves
         - 4.3 - Wave characteristics
@@ -496,18 +504,24 @@ Kopernika w Warszawie:
      - 15h
      - Sporządzanie zależności wychylenia, prędkości i przyspieszenia
        danego ciała w ruchu drgającym, modelowanie fali poprzecznej i
-       podłużnej.  Superpozycja w ruchu harmonicznym.
-   * - Electricity and Magnetism 
+       podłużnej.  Superpozycja w ruchu harmonicznym. dobrym
+       przykładem jest scenaiusz :ref:`fale` oraz przykład paczki
+       falowej z :ref:`wykresy`. 
+   * - Electricity and Magnetism:
+ 
         - 5.1 - Electric fields
         - 5.2 - Heating effect of electric currents
         - 5.3 - Electric cells
         - 5.4 - Magnetic effects of electric currents
      - 15h
      - Rozwiązywanie równań opisujących obwód prądu za pomocą
-       pierwszego i drugiego prawa Kirchhoffa.  Modelowanie pola
-       wektorowego.
+       pierwszego i drugiego prawa Kirchhoffa. Równania takie można
+       rozwiązywać za pomocą algebry liniowej lub algebry symbolicznen
+       wykorzystując funkcję :code:`solve`.  Sage Modelowanie pola
+       wektorowego. :ref:`matura2015_p01.rst`
 
-   * - Circular motion and gravitation
+   * - Circular motion and gravitation:
+
         - 6.1 - Circular motion
         - 6.2 - Newton’s law of gravitation
      - 5h
@@ -515,7 +529,8 @@ Kopernika w Warszawie:
        Zasadę Dynamiki Newtona dla dowolnego punktu materialnego w
        danym polu wektorowym.
 
-   * - Atomic, nuclear and particle Physics
+   * - Atomic, nuclear and particle Physics:
+
         - 7.1 - Discrete energy and radioactivity
         - 7.2 - Nuclear reactions
         - 7.3 - The structure of matter
@@ -523,7 +538,8 @@ Kopernika w Warszawie:
      - Modelowanie krzywych zaniku promieniotwórczego .  Obliczanie
        czasów półtrwania izotopów.
 
-   * - Energy production
+   * - Energy production:
+
         - 8.1 - Energy sources
         - 8.2 - Thermal energy transfer
      - 8h 
@@ -531,7 +547,8 @@ Kopernika w Warszawie:
        elektromagnetyczne j od temperatury: prawo Viena.  Proawo
        zaniku wykładniczego temperatury.
 
-   * - Wave phenomena 
+   * - Wave phenomena:
+
         - 9.1 - Simple harmonic motion
         - 9.2 - Single-slit diffraction
         - 9.3 - Interference
@@ -542,12 +559,14 @@ Kopernika w Warszawie:
        pojedynczej szczeliny, podwójnej szczelny (doświadczenie
        Younga) oraz dla układu szczelin.
 
-   * - Fields 
+   * - Fields:
+
         - 10.1 - Describing fields
         - 10.2 - Fields at work
      - 11h
      - Modelowanie pola wektorowego.
-   * - Electromagnetic induction
+   * - Electromagnetic induction:
+
         - 11.1 - Electromagnetic induction
         - 11.2 - Power generation and transmission
         - 11.3 - Capacitance
@@ -556,193 +575,17 @@ Kopernika w Warszawie:
        magnetycznej od czasu i obliczanie pierwszej pochodnej (prawo
        indukcji Faradaya).
 
-   * - Quantum and nuclear Physics (16h)
+   * - Quantum and nuclear Physics:
+
         - 12.1 - The interaction of matter with radiation
         - 12.2 - Nuclear physics
      - 16h
-     - Modelowanie kształtów orbitali atomowych. :ref:`tabelaQ`
+     - Modelowanie kształtów orbitali atomowych.
 
 
 
        
 
-:Temat: Isaac Newton
-:Zagadnienia: Here we insert more
-   text to show the effect of
-   many lines.
-:SageMath:
-  Model zależności natężenia światła od kąta ugięcia dla
-  pojedynczej szczeliny, podwójnej szczelny (doświadczenie Younga)
-  oraz dla układu szczelin.  Start on the next line.
-
-
-+-----------------------+-----+-------------------------------------+
-|     Nazwa działu.     |godz.|Przykładowe zastosowania             |
-|                       |     |oprogramowania Python/Sage.          |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Measurements and      | 5   |Obliczanie niepewności pomiarowych,  |
-| uncertainties         |     |operacje na wektorach.               |
-|                       |     |                                     |
-| 1.1 - Measurements    |     |                                     |
-| in physics            |     |                                     |
-|                       |     |                                     |
-| 1.2 -                 |     |                                     |
-| Uncertainties and     |     |                                     |
-| errors                |     |                                     |
-|                       |     |                                     |
-| 1.3 - Vectors and     |     |                                     |
-| scalars               |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Mechanics             | 22  |Sporządzanie wykresów zależności     |
-|                       |     |drogi, szybkości i przyśpieszenia od |
-| 2.1 - Motion          |     |czasu. Modelowanie torów ruchu,      |
-|                       |     |rozwiązywanie kinematycznego równania|
-| 2.2 - Forces          |     |ruchu metodami numerycznymi.         |
-|                       |     |                                     |
-| 2.3 - Work, energy    |     |                                     |
-| and power             |     |                                     |
-|                       |     |                                     |
-| 2.4 - Momentum and    |     |                                     |
-| impulse               |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Thermal physics       | 11  |Modelowanie stanu gazu doskonałego.  |
-|                       |     |Sporządzanie wykresów w dowolnej     |
-| 3.1 - Thermal         |     |przemianie gazowej.                  |
-| concepts              |     |                                     |
-|                       |     |                                     |
-| 3.2 - Modelling a     |     |                                     |
-| gas                   |     |                                     |
-+-----------------------+-----+-------------------------------------+
-|  Waves                | 15  |Sporządzanie zależności wychylenia,  |
-|                       |     |prędkości i przyspieszenia danego    |
-| 4.1 - Oscillations    |     |ciała w ruchu drgającym, modelowanie |
-|                       |     |fali poprzecznej i podłużnej.        |
-| 4.2 - Travelling      |     |Superpozycja w ruchu harmonicznym.   |
-| waves                 |     |                                     |
-|                       |     |                                     |
-| 4.3 - Wave            |     |                                     |
-| characteristics       |     |                                     |
-|                       |     |                                     |
-| 4.4 - Wave            |     |                                     |
-| behaviour             |     |                                     |
-|                       |     |                                     |
-| 4.5 - Standing        |     |                                     |
-| waves                 |     |                                     |
-+-----------------------+-----+-------------------------------------+
-|  Electricity and      | 15  |Rozwiązywanie równań opisujących     |
-| Magnetim              |     |obwód prądu za pomocą pierwszego  i  |
-|                       |     |drugiego prawa Kirchhoffa.           |
-| 5.1 - Electric        |     |Modelowanie pola wektorowego.        |
-| fields                |     |                                     |
-|                       |     |                                     |
-| 5.2 - Heating         |     |                                     |
-| effect of electric    |     |                                     |
-| currents              |     |                                     |
-|                       |     |                                     |
-| 5.3 - Electric        |     |                                     |
-| cells                 |     |                                     |
-|                       |     |                                     |
-| 5.4 - Magnetic        |     |                                     |
-| effects of            |     |                                     |
-| electric currents     |     |                                     |
-+-----------------------+-----+-------------------------------------+
-|  Circular motion      | 5   |Numeryczne rozwiązywanie równania    |
-| and gravitation       |     |różniczkowego opisującego II Zasadę  |
-|                       |     |Dynamiki Newtona dla dowolnego punktu|
-| 6.1 - Circular        |     |materialnego w danym polu wektorowym.|
-| motion                |     |                                     |
-|                       |     |                                     |
-| 6.2 - Newton’s law    |     |                                     |
-| of gravitation        |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Atomic, nuclear       | 14  |Modelowanie krzywych zaniku          |
-| and particle          |     |promieniotwórczego .  Obliczanie     |
-| Physics               |     |czasów półtrwania izotopów.          |
-|                       |     |                                     |
-| 7.1 - Discrete        |     |                                     |
-| energy and            |     |                                     |
-| radioactivity         |     |                                     |
-|                       |     |                                     |
-| 7.2 - Nuclear         |     |                                     |
-| reactions             |     |                                     |
-|                       |     |                                     |
-| 7.3 - The             |     |                                     |
-| structure of          |     |                                     |
-| matter                |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Energy production     | 8   |Sporządzanie wykresów zależności     |
-|                       |     |długości emitowanej fali             |
-| 8.1 - Energy          |     |elektromagnetyczne j od temperatury: |
-| sources               |     |prawo Viena.  Proawo zaniku          |
-|                       |     |wykładniczego temperatury.           |
-| 8.2 - Thermal         |     |                                     |
-| energy transfer       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-|                       |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Wave phenomena        | 17  |Model zależności natężenia światła od|
-|                       |     |kąta ugięcia dla pojedynczej         |
-| 9.1 - Simple          |     |szczeliny, podwójnej szczelny        |
-| harmonic motion       |     |(doświadczenie Younga) oraz dla      |
-|                       |     |układu szczelin.                     |
-| 9.2 - Single-slit     |     |                                     |
-| diffraction           |     |                                     |
-|                       |     |                                     |
-| 9.3 - Interference    |     |                                     |
-|                       |     |                                     |
-| 9.4 - Resolution      |     |                                     |
-|                       |     |                                     |
-| 9.5 - Doppler effect  |     |                                     |
-|                       |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Fields                | 11  |Modelowanie pola wektorowego.        |
-|                       |     |                                     |
-| 10.1 - Describing     |     |                                     |
-| fields                |     |                                     |
-|                       |     |                                     |
-| 10.2 - Fields at      |     |                                     |
-| work                  |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Electromagnetic       | 16  |Sporządzanie zależności strumienie   |
-| induction             |     |wektora indukcji magnetycznej od     |
-|                       |     |czasu i obliczanie pierwszej         |
-| 11.1 -                |     |pochodnej (prawo indukcji Faradaya). |
-| Electromagnetic       |     |                                     |
-| induction             |     |                                     |
-|                       |     |                                     |
-| 11.2 - Power          |     |                                     |
-| generation and        |     |                                     |
-| transmission          |     |                                     |
-|                       |     |                                     |
-| 11.3 - Capacitance    |     |                                     |
-+-----------------------+-----+-------------------------------------+
-| Quantum and           | 16  |Modelowanie kształtów orbitali       |
-| nuclear Physics       |     |atomowych.                           |
-|                       |     |                                     |
-| 12.1 - The            |     |                                     |
-| interaction of        |     |                                     |
-| matter with           |     |                                     |
-| radiation             |     |                                     |
-|                       |     |                                     |
-| 12.2 - Nuclear        |     |                                     |
-| physics               |     |                                     |
-+-----------------------+-----+-------------------------------------+
 
 Fizyka w szkołach realizujących polską podstawę programową
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,6 +1,12 @@
 O brutalnej metodzie i pętli :code:`for` przyrządzonej na dwa sposoby
 ---------------------------------------------------------------------
 
+
+.. image:: matura2015/matura2015_p12.png
+   :align: center
+   :width: 76%
+
+
 Ile liczb całkowitych spełnia nierówność :math:`\frac{2}{7}<\frac{x}{14}<\frac{4}{3}`?
 
 Zadanie może się wydawać zbyt łatwym by traktować je komputerem, ale

@@ -1,6 +1,10 @@
 O tym jak :code:`solve` wykona pracę za nas i kiedy nas zawiedzie
 -----------------------------------------------------------------
 
+.. image:: matura2015/matura2015_p04.png
+   :align: center
+   :width: 76%
+
 
 Czy równość: 
 

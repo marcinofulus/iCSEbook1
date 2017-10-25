@@ -1,14 +1,10 @@
 O konstrukcji złożonych poleceń z pomocą metod
 ----------------------------------------------
 
-Funkcja liniowa określona wzorem :math:`f(x)=2 x +b` ma takie samo
-miejsce zerowe, jakie ma funkcja liniowa :math:`g(x) = -3x + 4`. Stąd
-wynika, że
- 
-A. :math:`b=4`
-#. :math:`b=-\frac{3}{2}`
-#. :math:`b=-\frac{8}{3}`
-#. :math:`b=\frac{3}{4}`
+
+.. image:: matura2015/matura2015_p10.png
+   :align: center
+   :width: 76%
 
 
 Korzystając z algebry komputerowej możemy praktycznie w jednej linijce

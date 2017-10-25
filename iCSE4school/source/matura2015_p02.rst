@@ -1,8 +1,10 @@
 O logarytmach i upraszczaniu
 ----------------------------
 
+
 .. image:: matura2015/matura2015_p02.png
    :align: center
+   :width: 76%
 
 
 Dane są liczby: :math:`a= \frac{1}{27}`,

@@ -248,6 +248,7 @@ Największą ilość zadań z przedmiotów ścisłych jaką uczeń musi wykonać
       [[x == 20, y == 6]]
 
 
+.. _wykresy:
              
 Wizualizacja.
 ^^^^^^^^^^^^^    
@@ -360,6 +361,40 @@ także rozwiązanie układów nierówności.
        :name: region2
 
        Wizualizacja rozwiązania nierówności za pomocą `region_plot`. 
+
+
+
+W systemie SageMath rysowaną funkcję możemy stworzyć również
+algorytmicznie. Wyobraźmy sobie, że chcemy zobaczyć jak wygląda wykres:
+
+.. math::
+
+   f(x) = \sum_{i=0}^{N}\sin(\omega_i x)
+
+dla dużych wartosci N. W systemie Sage możemy zsumować wiele funkcji
+wykorzystując pętlę. Tworzenie takich złożonych funkcji ma
+zastosowanie na lekcjach fizyki podczas omawiania zjawisk
+falowych. Poniższy kod doda fale o zbliżonych częstościach:
+
+.. sagecellserver::
+    :linked: false
+
+      f = sum([sin(w*x) for w in srange(0.9,1.101,0.02)])
+      plot(f,(x,-200,200),figsize=(10,2),thickness=0.5)
+
+
+.. only:: latex
+          
+    Wynikiem działania powyższego kodu jest wykres   :numref:`paczka_fig`.
+
+    .. figure:: dlaczego_Sage/paczka.pdf
+       :width: 100%
+       :name: paczka_fig
+
+       Wizualizacja paczki falowej. 
+
+
+
 
 
 Interakcja

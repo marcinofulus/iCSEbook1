@@ -1,6 +1,12 @@
 Jak `implicit_plot` pomoże  graficznie zinterpretować rozwiązania  układu równań 
 --------------------------------------------------------------------------------
 
+.. image:: matura2015/matura2015_p05.png
+   :align: center
+   :width: 76%
+
+
+
 Pytanie jest o liczbę rozwiązań układu równań. Ponownie możemy uzyskać
 odpowiedź od systemu rozkazując komputerowi rozwiązać nasz układ:
 

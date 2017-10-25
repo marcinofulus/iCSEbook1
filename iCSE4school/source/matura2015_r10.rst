@@ -1,5 +1,5 @@
-Zadanie 10 - od czworokątu wpisnego w okrąg do baz Gröbnera
------------------------------------------------------------
+Czworokąt wpisany w okrąg z wykorzystaniem algebry komputerowej
+---------------------------------------------------------------
 
 .. image:: matura2015/matura2015_r10.png
    :align: center
@@ -26,7 +26,16 @@ równania:
    var('a,b,alpha,c,d,x')
    eq1 = a^2 + b^2 - 2*a*b*cos(alpha) == x^2 
    eq2 = c^2 + d^2 - 2*c*d*cos(pi-alpha) == x^2
-   html.table([[eq1],[eq2]])
+   table([[eq1],[eq2]])
+
+
+.. only:: latex
+
+    Otrzymujemy: 
+
+      - :math:`-2 \, a b \cos\left(\alpha\right) + a^{2} + b^{2} = x^{2}`
+      - :math:`-2 \, c d \cos\left(\pi - \alpha\right) + c^{2} + d^{2} = x^{2}`
+
 
 Drugie równanie można uprościć i otrzymamy układ równań z dwoma
 niewiadomymi:
@@ -34,7 +43,16 @@ niewiadomymi:
 .. sagecellserver::
 
    eq2 = eq2.simplify()
-   html.table([[eq1],[eq2]])
+   table([[eq1],[eq2]])
+
+.. only:: latex
+
+    Otrzymujemy: 
+
+      - :math:`-2 \, a b \cos\left(\alpha\right) + a^{2} + b^{2} = x^{2}`
+      - :math:`2 \, c d \cos\left(\alpha\right) + c^{2} + d^{2} = x^{2}`
+
+
 
 Ponieważ interesuje nas tylko wartość długości przekątnej :math:`x`
 możemy wyeliminować z powyższych równań :math:`\cos \alpha`. Wynik
@@ -43,6 +61,13 @@ otrzymamy natychmiast:
 .. sagecellserver::
 
    (eq1*c*d + eq2*a*b).solve(x)[1].rhs().subs({a:2,b:3,c:4,d:5})
+
+
+.. only:: latex
+
+    Otrzymujemy: `sqrt(253/13)`
+
+
 
 .. admonition:: Jak to działa?
 
@@ -90,65 +115,41 @@ Wszyskie te rówania zapiszemy od razu w Sage:
     (x0-x3)^2+(y0-y3)^2==5^2,\
     y0==0]
 
-   html.table(list(enumerate(eqs)))
+   table(list(enumerate(eqs)))
 
 
+.. only:: latex
+
+    Otrzymujemy:
+
+       - :math:` x_{0}^{2} + y_{0}^{2} = r^{2} `,
+       - :math:` x_{1}^{2} + y_{1}^{2} = r^{2} `,
+       - :math:` x_{2}^{2} + y_{2}^{2} = r^{2} `,
+       - :math:` x_{3}^{2} + y_{3}^{2} = r^{2} `,
+       - :math:` {\left(x_{0} - x_{1}\right)}^{2} + {\left(y_{0} - y_{1}\right)}^{2} = 4 `,
+       - :math:` {\left(x_{1} - x_{2}\right)}^{2} + {\left(y_{1} - y_{2}\right)}^{2} = 9 `,
+       - :math:` {\left(x_{2} - x_{3}\right)}^{2} + {\left(y_{2} - y_{3}\right)}^{2} = 16 `,
+       - :math:` {\left(x_{0} - x_{3}\right)}^{2} + {\left(y_{0} - y_{3}\right)}^{2} = 25 `,
+       - :math:` y_{0} = 0 `
+
+  
 Pozostaje rozwiązać układ dziewięciu równań wielomianowych i otrzymamy
 rozwiązanie zadania. Bez pomocy algebry komputerowej powyższy układ
 równań nie wygląda zachęcająco. Okazuje się, że nawet dla komputera
-jest on problemem - poniższa komenda potrzebuje okolo pół minuty by
-podać wynik:
+jest on problemem i wymaga dość wyroafinowanych technik. Jednak po
+chwili otrzymamy wynik:
 
 .. sagecellserver::
 
    sols = solve(eqs,[x0,y0,x1,y1,x2,y2,x3,y3,r],solution_dict=True)
    print ((x0-x2)^2+(y0-y2)^2).subs(sols[0]).canonicalize_radical() 
 
-Co gorsza, gdybyśmy inaczej poukładali równania, to komputer "męczył"
-by się z tym układem jeszcze dłużej. Sugeruje to, że proste zadanie
-maturalne jest wyczerpujące dla komputera. Hmmm - a może po prostu
-nieumiejętnie go używamy? Zauważmy, że komenda :code:`solve` jest
-procedurą rozwiązującą (a przynajmniej próbującą rozwiązać) dowolny
-układ równań. My mamy wszystkie równania w postaci wielomianów -
-niewiadome występują tylko w pierwszej i drugiej potędze w
-mianowniku. Czy nie ma lepszych - wyspecjalizowanych metod w tym
-przypadku?
 
-Bazy Gröbnera
-~~~~~~~~~~~~~~
+.. only:: latex
 
-Istnieje bardzo potężne narzędzie umożliwiające uproszczenie układu
-równań wielomianowych zwane Bazą Gröbnera. Okazuje się, że z użyciem
-algorytmu `Buchbergera
-<https://en.wikipedia.org/wiki/Buchberger%27s_algorithm>`_ można
-doprowadzić układ wielomianów do takiego, w którym znalezienie
-rozwiązania jest bardzo łatwe. Algorytm ten można traktować jako
-uogólnienie eliminacji Gaussa dla równań liniowych, na przypadek
-wielomianów. Przekonajmy się sami:
+    Otrzymujemy: `253/13`
 
 
-.. sagecellserver::
-
-   v = [x0,y0,x1,y1,x2,y2,x3,y3,r]
-   R, vP = PolynomialRing(RationalField(), len(v), v).objgens()
-   B = R.ideal(eqs).groebner_basis( ) 
-   html.table(list(enumerate(B)))
+Udało nam się otrzymać rozwiązanie (ściśle mówiąc kwadrat rozwiązania)!
 
 
-Teraz, można wykonać podstawienia, lub nawet poprosić :code:`solve` do
-rozwiązania układu równań, co zostanie wykonane w bardzo krótkim
-czasie:
-
-.. sagecellserver::
-
-   sol = solve(map(SR,B),map(SR,vP) ,solution_dict=True)[0]
-   print ((x2-x0)^2+(y2-y0)^2).subs(sol).canonicalize_radical()
-
-   pkts = [vector((vars()['x%d'%i].subs(sol),vars()['y%d'%i].subs(sol))) for i in range(4)]
-   plt = circle( (0,0), r.subs(sol))
-   plt += point( [(vars()['x%d'%i].subs(sol),vars()['y%d'%i].subs(sol)) for i in range(4)],color='red' ,size=30)
-
-   plt += sum([ line( [(0,0), 1/2*(pkts[i]+pkts[(i+1)%4])],color='brown') for i in range(4)] )
-   plt += sum([ line( [pkts[i],pkts[(i+1)%4]],color='gray') for i in range(4)] )
-   plt += line( [pkts[0],pkts[2]],color='green',thickness=2) 
-   plt

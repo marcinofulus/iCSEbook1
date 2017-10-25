@@ -1,5 +1,5 @@
-Zadanie 16 - o kątach i rysowaniu 
----------------------------------
+O kątach i rysowaniu
+--------------------
 
 .. image:: matura2015/matura2015_p16.png
    :align: center
@@ -18,7 +18,10 @@ I mamy nasze rozwiązanie!
 
 Ale możemy pokusić się o geometryczną konstrukcje, wykorzystująca w
 Sage możliwość rysowania lini przechodzącej przez zadane punkty
-:code:`line` i okręgów :code:`circle`.  Załóżmy, że okrąg ma promien jeden to do narysowania kąta środkowego potrzebujemy wzorów na współrzędne punktu na okręgu. Z pomocą przychodzą definicje sinusa i cosinusa i mamy:
+:code:`line` i okręgów :code:`circle`.  Załóżmy, że okrąg ma promien
+jeden to do narysowania kąta środkowego potrzebujemy wzorów na
+współrzędne punktu na okręgu. Z pomocą przychodzą definicje sinusa i
+cosinusa i mamy:
 
 .. math::
 
@@ -33,6 +36,7 @@ Czyli współrzędne punktu na okręgu jednostkowym będącego pod kątem
 
 
 .. sagecellserver::
+    :linked: false
 
     var('x')
     def dwa_katy(phi0= 1.23):
@@ -46,6 +50,13 @@ Czyli współrzędne punktu na okręgu jednostkowym będącego pod kątem
     def _(phi0=slider(0,180,1)):
         dwa_katy(phi0/180*pi).show(figsize=5)
 
+
+.. only:: latex
+          
+    .. figure:: matura2015/qr_2015p16.png
+       :width: 30%
+
+       Wynik jest interaktywny, najlepiej samemu wykonać kod:
 
 
 Hmmm, a co z drugą połową wykresu? Oczywiście mamy symetrię

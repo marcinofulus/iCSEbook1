@@ -1,13 +1,10 @@
 Pojedynek  funkcji kwadratowej z :code:`solve`
 ----------------------------------------------
 
-Funkcja kwadratowa określona wzorem :math:`f(x)=x^2 + x + c`. Jeżeli
-:math:`f(3) = 4` to:
- 
-A. :math:`f(1)=-6`
-#. :math:`f(1)=0`
-#. :math:`f(1)=6`
-#. :math:`f(1)=18`
+
+.. image:: matura2015/matura2015_p11.png
+   :align: center
+   :width: 76%
 
 
 Korzystając z algebry komputerowej mamy wynik od razu:

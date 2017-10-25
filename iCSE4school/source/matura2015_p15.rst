@@ -1,5 +1,5 @@
-Zadanie 15 - o tożsamości trygonometrycznej i założeniach
----------------------------------------------------------
+O tożsamości trygonometrycznej i założeniach
+--------------------------------------------
 
 .. image:: matura2015/matura2015_p15.png
    :align: center
@@ -30,7 +30,8 @@ pomoże to w tym przypadku  otrzymać rozwiązanie, ale zasugeruje,
 
 .. sagecellserver::
 
-   p = plot([tan(x),2*sin(x)],(x,0,pi),ymax=5,ymin=-5,detect_poles='show',figsize=3)
+   p = plot([tan(x),2*sin(x)],(x,0,pi),\
+         ymax=5,ymin=-5,detect_poles='show')
    p.show()
 
 

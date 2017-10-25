@@ -38,10 +38,10 @@ Materiały dydaktyczne
 
 
 Matematyka
-++++++++++
+----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
  
    granica.rst
    od_punktu_do_punktu.rst
@@ -52,10 +52,10 @@ Matematyka
 
 
 Fizyka
-++++++
+------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    struna.rst
    fale.rst
@@ -63,8 +63,28 @@ Fizyka
    przyspieszony.rst
    zderzenia.rst
 
+
 Zadania maturalne z Sagem
 -------------------------
+
+
+W tym rozdziale prezentujemy Państwu przykład zastosowania SageMath do
+rozwiązania kilkunastu zadań maturalnych z matematyki. Wiele zadań
+można by rozwiązać przez wpisanie :code:`solve(..)` co demonstruje
+użyteczność oprogramowania, ale jednocześnie nie jest
+pouczające. Dlatego oprócz prezentacji rozwiązania, do zadań został
+dodany komentarz opisujący wybraną funkcjonalność SageMath a w
+niektórych przypadkach zadanie zostało wzbogacone o fakultatywne
+elementy. W efekcie poniższe materiały mogą służyć jako swoista
+książka przepisów "cookbook" w SageMath.
+
+W trakcie trwania projektu iCSE4school zostało opracowanych wiele
+zadań z Bawarskiej matury z matematyki i są one w języku
+niemieckim i angielskim dostepne na stronie
+
+`<http://visual.icse.us.edu.pl/school/abitur/>`_.
+
+
 
 .. toctree::
    :maxdepth: 2

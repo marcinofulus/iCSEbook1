@@ -1,6 +1,12 @@
 O tym jak nakłonić funkcję :code:`plot` do współpracy
 -----------------------------------------------------
 
+
+.. image:: matura2015/matura2015_p07.png
+   :align: center
+   :width: 76%
+
+
 Równanie :math:`\frac{x-1}{x+1}==x-1` aż się prosi by je  rozwiązać  za
 pomocą algebry komputerowej. Rzeczywiście, wynik otrzymujemy natychmiast:
 
@@ -22,7 +28,8 @@ lewej strony powyższej równości:
 
 .. sagecellserver::
 
-   plot([(x-1)/(x+1),x-1],(x,-2,2),detect_poles='show',ymin=-2,ymax=2,figsize=4)
+   plot([(x-1)/(x+1),x-1],(x,-2,2),detect_poles='show',\
+    ymin=-2,ymax=2,figsize=4)
 
 
 .. only:: latex

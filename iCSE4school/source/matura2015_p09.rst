@@ -1,13 +1,11 @@
 O tym jak technologia :code:`@interact` pomoże rozwiązać równanie z parametrem
 ------------------------------------------------------------------------------
 
-Na wykresie funkcji liniowej określonej wzorem :math:`f(x)=(m-1)x +3`
-leży punkt :math:`S = (5,-2)`. Zatem:
 
-A. :math:`m=-1`
-#. :math:`m=0`
-#. :math:`m=1`
-#. :math:`m=2`
+.. image:: matura2015/matura2015_p09.png
+   :align: center
+   :width: 76%
+
 
 
 Korzystając z algebry komputerowej wynik otrzymujemy natychmiast:
