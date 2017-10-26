@@ -1,8 +1,28 @@
 Od punktu do punktu
 ~~~~~~~~~~~~~~~~~~~
 
+*Krzysztof Oleś*
 
-*Niniejszy projekt jest wynikiem zajęć prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie*
+Wstęp
+^^^^^^
+
+W roku 2005 wydawnictwo TIKKUN zaprezentowało Polakom książkę, która w roku 1976 zdobyła światowy rozgłos
+(ze względów politycznych – w Polsce była rodzajem podziemnej klasyki dla matematyków). Piszemy tutaj
+o „Dowodach i refutacjach” Imre Lakatosa, w których pokazano, istotność powątpiewania i stawiania hipotez. 
+Wspomniany rok 1976 pojawia się także jeszcze w innym kontekście. Otóż właśnie w tym roku na łamach New York Timesa pojawiła się informacja o udowodnieniu (?) twierdzenia o czterech barwach – wykorzystano programy komputerowe i ostateczne wyniki pochodziły
+z zaprogramowanych obliczeń. Można oczywiście dyskutować nad tego typu dowodem. Wydaje się jednak, że nad potrzebą wykorzystywania komputera do stawiania hipotez dyskutować nie trzeba. I to chcemy naszym wychowankom pokazać, łącząc matematykę z całkowicie dla nich naturalnym środowiskiem komputerowym.
+**Powątpiewanie może być twórcze**, a zabawa (!) może wywoływać uśmiech odkrywania.
+
+Prezentowany scenariusz jest wynikiem zajęć prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z części), przy czym - co pokazały m.in. szkolne testowania na grupach uczniów oraz warszaty prowadzone dla grup nauczycieli - bardzo istotna jest możliwość przedyskutowania efektów zmian przedstawionych w części drugiej kodów.
+Struktura materiału jest swoistym dialogiem z uczestnikami zajęć, dopuszczamy więc podejście typu nieformalnego - najważniejsza jest dla nas bowiem możliwość eksperymentowania.
+
+Przedstawiamy ponadto dodatek, który może być punktem wyjścia do rozważań związanych z próbą definiowania wymiaru obiektów fraktalnych.
+
+Scenariusz zajęć
+^^^^^^^^^^^^^^^^^
+
+Część pierwsza
+"""""""""""""""
 
 Pomyślmy przez chwilę o wykresie funkcji,
 np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.
@@ -94,7 +114,7 @@ Po tym małym zaplanowanym błędzie punkty próbujemy dodać.
     .. figure:: refutacje_media/5.png
        :width: 50%
 
-Zauważmy, że nawet przy użyciu ctr+c+ctrl+v zabiera to sporo czasu i aż ciężko jest nam myśleć o umieszczaniu na ekranie takim sposobem stu punktów - tym bardziej w sytuacji, w której możemy znaleźć pewną **REGULARNOŚĆ** w opisie ich drugich współrzędnych. Zatem: użyjmy jej.
+Zauważmy, że nawet przy użyciu ctr+c+ctrl+v zabiera to sporo czasu i aż ciężko jest nam myśleć o umieszczaniu na ekranie takim sposobem stu punktów - tym bardziej w sytuacji, w której możemy znaleźć pewną **regularność** w opisie ich drugich współrzędnych. Zatem: użyjmy jej.
 
 .. sagecellserver::
 
@@ -145,7 +165,10 @@ Nie zapominajmy o możliwości umieszczenia pętli w pętli.
 
 Patrząc na uzyskany efet, zauważamy pewien problem w "lewym" wierzchołku trójkąta - usuńmy go, poprawnie manipulując liczbami.
 
-Jeśli się nam udało, to możemy przejść do losowania.  
+Część druga
+""""""""""""
+
+Przejdźmy do losowania.  
 
 .. sagecellserver::
 
@@ -165,7 +188,6 @@ Jeśli się nam udało, to możemy przejść do losowania.
        :width: 40%
 
 W powyższym przykładzie zauważamy specyficzny rodzaj chaosu... Czy możemy jednak punkty bardziej kontrolować?
-
 
 Wyobraźmy sobie sytuację, w którym określony punkt początkowy :math:`(a,b)` przekształcany jest w wybranym losowo jednym z ośmiu przekształceń. Każde z nich składa się z dwóch części: liniowej operacji na pierwszej współrzędnej (trzy liczby :math:`a_i,b_i,c_i`) oraz liniowej operacji na drugiej współrzędnej (trzy liczby :math:`d_i,e_i,f_i`). Po przekształceniu otrzymujemy nowy punkt :math:`(a,b)` który przetwarzamy analogicznie - oczywiście nie poprzestajemy na dwóch punktach, komputer dokona setek powtórzeń.
 
@@ -282,7 +304,7 @@ Być może ciekawszym od dywanu będzie znany (prawie wszystkim) liść.
     .. figure:: refutacje_media/11.png
        :width: 40%
 
-Przypuszczalnie dywan i liść **POCIĄGNĄ** nas do dalszego eksperymentu, w którym spróbujemy zapisać współczynniki w tabelach (poprzednie sposoby zapisu zachęcają do takiego rozwiązania). 
+Przypuszczalnie dywan i liść **pociągną** nas do dalszego eksperymentu, w którym spróbujemy zapisać współczynniki w tabelach (poprzednie sposoby zapisu zachęcają do takiego rozwiązania). 
 
 .. sagecellserver::
 
@@ -347,6 +369,11 @@ Przypuszczalnie dywan i liść **POCIĄGNĄ** nas do dalszego eksperymentu, w kt
           
     .. figure:: refutacje_media/12.png
        :width: 50%
+
+A może warto teraz w powyższych przykładach dokonać dużych współczynnikowych zmian, obserwując ich efekty? Eksperymentujmy!
+
+Dodatek
+^^^^^^^^
 
 Wróćmy do dywanu Sierpińskiego. Czy jest to raczej rodzaj linii lub też coś w rodzaju połączonych kwadratów? Czy nieustanne (w naszej głowie) powtarzanie iteracji zbliża nas do bardziej normalnych kwadratów? Co oznacza "bardziej"?
 
@@ -413,7 +440,7 @@ może zapiszmy to tak:
 (czy jest jakiś błąd w zamiennym użyciu znaków: :math:`\sim, \approx,=`?).
 
 Wygląda to dość dramatycznie - zobaczmy jak zadziała w przypadku dywanu Sierpińskiego.
-Figurę tą możemy (**NA PEWNO**?!) pokryć 1 kwadratem o boku długości 1, 8 kwadratami o boku dłogości :math:`\frac{1}{3}`, 64 kwadratami o boku długości :math:`\frac{1}{9}`,..., :math:`8^n` kwadratami o boku długości :math:`\left(\frac{1}{3}\right)^n` i
+Figurę tą możemy (**na pewno**?!) pokryć 1 kwadratem o boku długości 1, 8 kwadratami o boku dłogości :math:`\frac{1}{3}`, 64 kwadratami o boku długości :math:`\frac{1}{9}`,..., :math:`8^n` kwadratami o boku długości :math:`\left(\frac{1}{3}\right)^n` i
 
 .. math::
 
@@ -421,17 +448,15 @@ Figurę tą możemy (**NA PEWNO**?!) pokryć 1 kwadratem o boku długości 1, 8 
 
 Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - przy okazji - zbliżyliśmy się trochę do pojęcia wymiaru...
 
-.. rubric:: Podsumowanie
+Podsumowanie
+^^^^^^^^^^^^^^
 
 W powyższym tekście trzy wyrażenia zapisaliśmy czcionką pogrubioną - chcielibyśmy do nich powrócić.
-
-**REGULARNOŚĆ**
+**Regularność**
 Działania wspomagane SAGE'em mogą uczniom pomóc w badaniu rekurencji (pewnej regularności powtarzanej wielokrotnie, dzięki komputerom bardzo wiele razy).
-
-**POCIĄGNĄ**
+**Pociągną**
 Warto naszym zdaniem pociągnąć (angielskie "to attract") uczniów do koncepcji atraktora: fraktale to często atraktory - komputer może przecież pomóc w małych matematycznych odkryciach.
-
-**NA PEWNO**
+**Na pewno**
 Należy podkreślić, że powyższe rozważania dotyczące wymiaru są tylko zasygnalizowaniem problemu - ale mogą budować uczniowską intuicję (która nie powinna być natychmiast zafrapowana problemem istnienia :math:`\lim_{\epsilon\to0}\dots`).
 
 A przy okazji - na samym końcu - warto postawić pytanie: gdzie jest granica między intuicyjną zabawą ucznia a poważnym rozumowaniem matematycznym? 

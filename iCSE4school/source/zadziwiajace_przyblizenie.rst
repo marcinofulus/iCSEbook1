@@ -1,19 +1,30 @@
 Zadziwiające przybliżenie
 ========================================
 
-*Niniejszy projekt jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie*
+*Krzysztof Oleś*
 
-Spróbujmy użyć komputera do zilustrowania PROSTEGO problemu, używając PODSTAWOWEGO programowania.
+Wstęp
+^^^^^^
 
-- Dlaczego PODSTAWOWEGO?
+Matematyka, coraz częściej uznawana za jedną z podstaw kształcenia, jest przedmiotem diagnozy związanej
+z osiągnięciami wychowanków wszystkich poziomów nauczania. Przeprowadzane także i w Polsce badania
+w ramach Programu Międzynarodowej Oceny Umiejętności Uczniów OECD PISA sugerują, że nierzadko polscy słabsi uczniowie radzą sobie z zadaniami lepiej niż słabsi uczniowie krajów OECD; lepsi uczniowie polscy jednak rozwiązują zadania gorzej niż lepsi uczniowie OECD. Tego typu sytuacja dotyczy najczęściej zadań o średnim poziomie trudności. Konieczną potrzebą jest więc budowanie i pogłębianie aparatu matematycznego, tak by nabywane umiejętności mogły być solidnym fundamentem rozwiązywania problemów matematycznych – przede wszystkim tych, które rozszerzają przewidziane w podstawie programowej treści nauczania. Komputer może naszym zdaniem w pozytywny sposób wpływać na analizowanie pojęć i struktur wprowadzanych na lekcjach klasycznych - prowadzonych (niestety?) jedynie za pomocą przysłowiowych: kredy i tablicy...
 
-Nie znamy się bowiem na SAGE'u zbyt dobrze.
+Prezentowany scenariusz jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z części).
 
-- Dlaczego PROSTEGO?
+Struktura materiału jest swego rodzaju rozmową z uczestnikiem zajęć: dopuszczamy więc podejście - także językowe - typu nieformalnego. Użyjemy komputera do zilustrowania **prostego** problemu, używając **podstawowego** programowania.
 
-Chcemy bowiem zafrapować zagadnieniem matematycznym uważanym za nudne... Większość ludzi nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb...
+- Dlaczego podstawowego?
+Nie znamy się bowiem na Sage'u zbyt dobrze.
 
-**Część 1.**
+- Dlaczego prostego?
+Chcemy bowiem **zafrapować** zagadnieniem matematycznym uważanym za nudne. Większość uczniów nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb.
+
+Scenariusz zajęć
+^^^^^^^^^^^^^^^^^
+
+Część pierwsza
+"""""""""""""""
 
 Rozpocznijmy przybliżaniem pierwiastka kwadratowego liczby 2. Wykorzystamy  algorytm (oparty na metodzie Newtona znajdowania miejsc zerowych funkcji) znany pod hasłem: metoda babilońska.
 
@@ -119,10 +130,11 @@ Możemy teraz porównać szybkość pierwszego i drugiego algorytmu oraz zadać 
 
 - Czy kiedykolwiek zastanawialiśmy się nad tym, jak nasz kalkulator przybliża liczby?
 - Może kalkulator kolegi robi to lepiej? Co znaczy "lepiej"?
-- Obliczaliśmy błędy - SAGE musiał pierwiastek kwadratowy liczby 2 oraz :math:`\pi` przybliżyć (nie są to liczby wymierne): czy SAGE popełnił błąd? Jak duży?
+- Obliczaliśmy błędy - Sage musiał pierwiastek kwadratowy liczby 2 oraz :math:`\pi` przybliżyć (nie są to liczby wymierne): czy Sage popełnił błąd? Jak duży?
 
 
-**Część 2.**
+Część druga
+""""""""""""
 
 No dobrze, ale kto jest zainteresowany różnicami w przybliżeniach np. na piętnastym miejscu po przecinku?
 
@@ -355,7 +367,8 @@ I znowu - powinniśmy zmieniać  :math:`p`: 1,414; 1,4142; 1,41421; 1,414213;  n
 
 I po raz kolejny: czy to nie dziwne? Może nie (?!), ale powyższy przykład pokazuje, jak bardzo należy uważać, wykorzystując w rachunkach przybliżenia.
 
-.. rubric:: Podsumowanie
+Podsumowanie
+^^^^^^^^^^^^^
 
 Chcieliśmy pokazać, jak ważna jest różnica w użyciu wyrażenia algebraicznego w rodzaju
 
@@ -364,13 +377,9 @@ Chcieliśmy pokazać, jak ważna jest różnica w użyciu wyrażenia algebraiczn
     \frac{\sqrt{2}-1}{2\sqrt{2}+2}
 
 
-a jego przybliżeń.
+a jego przybliżeń. Dlaczego?
 
-Dlaczego?
-
-Po pierwsze: ponieważ używamy liczb, które nie są wymierne, a oznacza to konieczność ich przybliżania. Próbowaliśmy pokazać dwa różne - jeśli chodzi o liczbę koniecznych do odpowiedniego przybliżenia powtórzeń - algorytmy. Zasugerowaliśmy znalezienie niemałej liczby koniecznych powtórzeń, by uzyskać przybliżenia liczby :math:`\pi` przysłowiowym 3,14. Ponieważ jednak dziesiętne przybliżenia mogą nie wydawać się interesujące - zdecydowaliśmy się zobaczyć (!) ich wagę w problemie geometrycznym, w którym szczególną rolę odegrały przybliżenia pierwiastka kwadratowego liczby 2.
-
-Po drugie: ponieważ w szkołach polskich mamy do czynienia z przewagą rozwiązań (np. równań) w postaci algebraicznej. Oznacza to, że maturalne rozwiązanie równania
+Po pierwsze: ponieważ używamy liczb, które nie są wymierne, a oznacza to konieczność ich przybliżania. Próbowaliśmy pokazać dwa różne - jeśli chodzi o liczbę koniecznych do odpowiedniego przybliżenia powtórzeń - algorytmy. Zasugerowaliśmy znalezienie niemałej liczby koniecznych powtórzeń, by uzyskać przybliżenia liczby :math:`\pi` przysłowiowym 3,14. Ponieważ jednak dziesiętne przybliżenia mogą nie wydawać się interesujące - zdecydowaliśmy się zobaczyć (!) ich wagę w problemie geometrycznym, w którym szczególną rolę odegrały przybliżenia pierwiastka kwadratowego liczby 2. Po drugie: ponieważ w szkołach polskich mamy do czynienia z przewagą rozwiązań (np. równań) w postaci algebraicznej. Oznacza to, że maturalne rozwiązanie równania
 
 .. MATH::
 
@@ -391,7 +400,7 @@ Wydaje się, że warto czasem zwrócić uwagę na mentalną przepaść pomiędzy
     x_1\approx -4,78303;\quad  x_2\approx 0,92589.
 
 
-Być może cały ten projekt dotyczy jedynie różnic między znakami
+Być może nasze rozważania dotyczą jedynie (?) różnic między znakami
 
 .. MATH::
 
