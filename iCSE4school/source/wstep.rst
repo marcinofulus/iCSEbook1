@@ -1,10 +1,85 @@
+
+
+
 O książce
 ---------
 
 
-Oddajemy Państwu materiały edukacyjne, będące produktem projektu
-„Zintegrowane nauczanie przedmiotów ścisłych z perspektywą
-obliczeniową - iCSE4school„.
+
+Współczesne formy wykorzystania w pracy nauczyciela przedmiotów
+matematyczno-przyrodniczych elementów technologii informacyjnej i
+komunikacyjnej nie stanowi tylko prawnego obowiązku, ale przede
+wszystkim ma za zadanie urozmaicać lekcję i stanowić w jej odbiorze
+użyteczne narzędzie oraz element korygujący odbiór toku logicznego
+zajęć. Nowoczesny nauczyciel nie może wyobrażać sobie pracy, bez
+użycia współczesnych, co warte podkreślenia, aktualnie kształconym
+pokoleniom, technik informatycznych. Na bieżąco musi doskonalić swoje
+umiejętności obsługi programów komputerowych i języków
+programowania. Choć wiele realizowanych tematów będzie mu znanych,
+ponieważ w trakcie studiów magisterskich lub doktoranckich realizuje
+się zajęcia z języków programowania użytkowanych w chemii i fizyce, to
+jednak nabycie nowych umiejętności aplikacji komend językowych do
+rozwiązywania problemów natury rachunkowej, niedostępnych uczniom
+realizujących polską podstawę programową matematyki, nawet w zakresie
+rozszerzonym pozostaje wciąż w jego gestii. W codziennej, szkolnej
+pracy, nauczyciel wykorzystuje technologię komputerową głównie do
+tworzenia różnorodnych testów użytkowych, diagnoz, narzędzi badawczych
+i ankiet. Dzięki specjalistycznemu oprogramowaniu komercyjnemu, tworzy
+zaproszenia, plakaty, informatory szkolne oraz kreuje scenariusze
+lekcji lub apeli. Dzięki technologii komputerowej dokumentacja działań
+nauczyciela prowadzona jest przejrzyście, estetycznie i
+czytelnie. Własny warsztat pracy jest uporządkowany i na bieżąco
+udoskonalany, również dzięki zastosowaniu aplikacji i programów
+dziennika elektronicznego lub oprogramowania do tworzenia świadectw
+szkolnych. Wszystkie te programy i aplikacje charakteryzuje stosunkowo
+intuicyjna i oparta o proste relacje metoda ich konstrukcji, a co za
+tym brak możliwości zmian i wykonywania w nich innych niż umożliwione
+przez producenta operacji. Zarówno z punktu widzenia nauczyciela, jak
+i ucznia, będącego podmiotem procesu nauczania nie bez znaczenia
+pozostaje możliwość rozwiązywania problemów określonych w podstawie
+programowej oraz wykraczających poza jej ramy, w oparciu o szerokie
+spektrum metod znajdujących zastosowanie zarówno z punktu widzenia
+uczącego, jak i nauczanego. Nauczyciel podejmujący analizę zagadnień
+obecne oraz powstającej na skutek planowanej reformy systemu oświaty
+podstawy programowej przedmiotów takich jak fizyka i chemia napotyka
+na wiele treści, których zrozumienie wymaga zastosowania złożonego
+rachunku z elementami analizy matematycznej. Do popularnych dziś metod
+kształcenia należy podawanie bez udowadniania zależności opisujących
+dane zjawisko lub przedstawianie wykresów omawianych zależności bez
+prezentacji równań opisujących przestawiane krzywe. Dla ucznia
+oczekującego pełnego wyjaśnienia danego zjawiska i jego interpretacji,
+stanowi to jedno z ważniejszych utrudnień w przyswojeniu i w
+powiązaniu rozważań teoretycznych z interpretacją
+matematyczną. Większość zastosowań technologii informacyjnej w
+dydaktyce sprowadza się do pobierania danych lub ich wprowadzania i
+zautomatyzowanej obróbki, co stanowi skuteczne więzy dla rozwoju
+percepcji współczesnego ucznia. Środowisko języka programowania Python
+i Sage jest uwolnieniem podmiotu nauczania od narzuconych mu więzów,
+zaś umiejętności programowania nabywane przez ucznia w trakcie procesu
+nauczania skutecznie rozwijają jego zdolności konkludowania i
+ewaluowania w trakcie powyższego procesu. Zastosowanie proponowanego
+środowiska programowania pozwala sprowadzać złożone zależności i
+równania z poziomu wiedzy akademickiej, do poziomu niewiele
+wykraczającego ponad obowiązujące podstawy programowe nauczania
+przedmiotów ścisłych i jest w pełni aprobowane i zalecane jako
+narzędzie pracy, zarówno przez Ministerstwo Edukacji Narodowej, jak i
+Ministerstwo Cyfryzacji.
+
+Niniejsza metodologia jest wynikiem działań, związanych z projektem
+“icse4school - Zintegrowane nauczanie z perspektywą obliczeniową”
+realizowanego w latach 2014-2017.  realizowany jest w ramach Programu
+Erasmus+, akcja 2 Partnerstwa strategiczne.  Projekt zrealizowano w
+międzynarodowej współpracy międzysektorowej, obejmującej instytucje
+szkolnictwa wyższego (Uniwersytet Śląski w Katowicach, Uniwersytet w
+Augsburgu, Simula School of Research and Innovation), szkoły
+ponadgimnazjalne ((2 AZSO w Chorzowie oraz 117 ZS - XXXIII LO w
+Warszawie) oraz organizację pozarządową (Fundacja na rzecz rozwoju
+Śląskiego Międzyuczelnianego Centrum Edukacji i Badań
+Interdyscyplinarnych). Celem głównym było opracowanie w ponadnarodowym
+konsorcjum metodyki zintegrowanego z informatyką nauczania matematyki
+i fizyki w szkołach ponadgimnazjalnych na podstawie realizacji
+pilotażowego programu zajęć w wybranych szkołach.
+
 
 Przedmiotem projektu była nauka programowania w języku Python z
 użyciem środowiska Sage oraz wykorzystanie tej umiejętności do
@@ -16,8 +91,9 @@ wiedzy pokazującej brak informacji na temat jednego z najczęściej na
 świecie używanych języków programowania Python. Ponadto obserwacje
 nauczycieli - zarówno akademickich, jak i prowadzących klasy o
 rozszerzonym programie nauczania matematyki, informatyki i fizyki w
-szkołach ponadgimnazjalnych wskazywały na bezradność uczniów i studentów w stosowaniu technologii informacyjnej i metod numerycznych w trakcie rozwiązywania
-problemów z pogranicza zagadnień naukowych.
+szkołach ponadgimnazjalnych wskazywały na bezradność uczniów i
+studentów w stosowaniu technologii informacyjnej i metod numerycznych
+w trakcie rozwiązywania problemów z pogranicza zagadnień naukowych.
 
 Chcąc wykorzystać nasze materiały oraz nie mając podstawowych
 umiejętności w zakresie obsługi języka Python, proponujemy zacząć od

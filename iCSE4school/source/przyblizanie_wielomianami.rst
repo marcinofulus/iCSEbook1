@@ -3,8 +3,32 @@
 Przybliżanie wielomianami.
 ==========================
 
-Wstęp.
-^^^^^^
+O scenariuszu
+^^^^^^^^^^^^^
+
+Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
+lekcyjnych. 
+
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w III Liceum
+Ogólnokształcącym im. Stefana Batorego w Chorzowie przez Krzysztofa
+Jarczewskiego.
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+Wstęp
+^^^^^
+
 
 **Uczniowie powinni znać:**
 
@@ -15,30 +39,20 @@ Wstęp.
 **Uczniowie na poniższych zajęciach poznają:**
 
 - sposoby implementacji i obliczania silni,
-
 - pochodną funkcji i sposoby jej obliczania *(11.2 mat_r)*,
-
 - wyznaczanie prostej, paraboli i wielomianu przechodzącego przez dane punkty *(3.2 mat_p)*,
-
 - wzór Taylora oraz jego interpretację geometryczną.
 
 Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.
 
-*mat_p – matematyka poziom podstawowy,*
-    
-*mat_r – matematyka poziom rozszerzony,*
-    
-*inf_r – informatyka poziom rozszerzony.*   
+  *mat_p – matematyka poziom podstawowy,*
 
-**Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.**
+  *mat_r – matematyka poziom rozszerzony,*
+ 
+  *inf_r – informatyka poziom rozszerzony.*   
 
-    **Uwaga!**
 
-W każdym z okien programu można zmieniać liczby, tekst, zmienne lub cały kod.
 
-Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżeniu powróci do ustawień początkowych.
-
-Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
 
 Część teoretyczna.
@@ -410,8 +424,8 @@ Rysujemy wielomian, który przechodzi przez podane punkty.
        :name: wielomian    
     
    
-Taylor's formula.
-^^^^^^^^^^^^^^^^^
+Wzór Taylora
+^^^^^^^^^^^^
 
 Z analizy matematyczna znany poniższy jest wzór, który przybliża dowolną funkcję pewnym odpowiadającym tej funkcji wielomianem.
 
@@ -534,10 +548,10 @@ Znamy już wzór Taylora. Teraz możemy uprościć nasze obliczenia i użyć wbu
        :name: t_sin*x^2 
 
 
-Podsumowanie.
-^^^^^^^^^^^^^
+Podsumowanie Autora
+^^^^^^^^^^^^^^^^^^^
 
-Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school
+Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE4school
 w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem
 zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej
 klasie liceum. Powyższy temat w drugiej grupie testowej był prowadzony

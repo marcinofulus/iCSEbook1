@@ -1,6 +1,72 @@
 Wybór  narzędzia
 ================
 
+
+
+
+Innowacyjność metodologii
+-------------------------
+
+
+Innowacyjność projektu wpisuje się w ogólnoświatowe trendy
+dydaktyczne. W ostatnich latach zostało przeprowadzonych wiele
+projektów komputeryzujących nauczanie przedmiotów ścisłych. Warto
+nadmienić np. Compadre, Open Source Physics, finansowane przez NSF w
+USA.
+
+Komunikat dyrektora Centralnej Komisji Egzaminacyjnej z 9 września
+2016 r. w sprawie listy systemów operacyjnych, programów użytkowych
+oraz języków programowania w przypadku egzaminu maturalnego z
+informatyki w 2017 roku zawiera zapis: „Od roku szkolnego 2017/2018 na
+maturze z informatyki nie będzie już możliwości wyboru języka
+programowania Pascal, natomiast od roku 2018/2019 będzie można wybrać
+język programowania Python”. Poszerzenie zakresu wiedzy i umiejętności
+uczniów w trakcie realizacji projektu iCSE4school o naukę programowania w
+języku Python wyprzedziło ustalenia dyrektora Centralnej Komisji
+Egzaminacyjnej. Wyprzedziło także zmiany w nauczaniu informatyki na
+poziomie rozszerzonym w szkołach kończących się maturą w
+Polsce. Więcej czasu poświęconego na naukę programowania oraz
+dodatkowe działania uczniów podczas rozwiązywania problemów
+matematycznych, fizycznych i informatycznych z użyciem języka Python
+spowodowały pełniejszą interioryzację wiedzy, pogłębiły umiejętności
+związane z posługiwaniem się językiem Python i przygotowały uczniów do
+efektywnego zmierzenia się z wymaganiami egzaminu maturalnego z
+informatyki na poziomie rozszerzonym od 2018/2019 roku. Miały one
+również wpływ na wcześniejsze podjęcie kroków przez nauczycieli
+zaangażowanych w projekt, mających na celu własne doskonalenie
+zawodowe w zakresie znajomości języka Python.
+
+Realizacji projektu towarzyszyło zastosowanie jednej ze współcześnie
+uznawanych teorii uczenia się, poznawania i zdobywania wiedzy jaką
+jest konstruktywizm pedagogiczny. Filozofia konstruktywizmu osadzona w
+poznawczej koncepcji człowieka zakłada, że uczeń jest samodzielnym i
+aktywnym podmiotem, który korzystając z różnych źródeł informacji
+konstruuje swój własny system wiedzy i swoją osobowość. Konstruktywizm
+uważa, że zdobywanie wiedzy to proces, który odbywa się w interakcji
+ze środowiskiem edukacyjnym, że nauczyciel nie może przekazać uczniom
+pojęć poprzez samo ich objaśnianie, że nauczanie nie polega na tym, iż
+nauczyciel podaje gotową wiedzę, a uczeń ma się tego nauczyć,
+zapamiętać i potem odtwarzać, tylko w możliwie dużym stopniu wiedza
+powinna być odkrywana przez ucznia. Następuje odrzucenie werbalnego
+przekazywania wiedzy przez nauczyciela (między innymi wykładu) jako
+metody nieskutecznej i niezgodnej z naturą przyswajania wiedzy. Według
+konstruktywistów wiedza to nie tylko fakty i informacje, to także
+umiejętność wykorzystania ich w praktyce. Uczący się sami tworzą
+wiedzę, która w nich rezyduje i dlatego wiedza osobista ma charakter
+tak indywidualny, jak różne są osobowości uczących się. Wśród głównych
+założeń konstruktywizmu istotna jest zmiana relacji
+nauczyciel-uczeń. Nauczyciel przestaje być źródłem wiedzy i
+"mentorem", bliżej mu do trenera, tutora czy "coacha". Nauczyciel
+przygotowuje dla ucznia sytuację dydaktyczną, zadanie, problem, które
+musi wymagać twórczego i samodzielnego myślenia. Ingerowanie
+nauczyciela w proces rozwiązywania zadania sprowadza się do wskazówek
+i jest ograniczone do minimum. Podejście konstruktywistyczne należy do
+nurtu pedagogiki, który kładzie nacisk na aktywność osoby uczącej się,
+co miało zastosowanie podczas realizacji zadań w projekcie iCSE4school.
+
+
+
+
 Systemy komputerowe dla nauczania przedmiotów ścisłych
 ------------------------------------------------------
 

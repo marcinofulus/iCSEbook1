@@ -217,12 +217,12 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
    +-----------------------------------------------------------------------------------------------------------------------+
    |**Klasa 3**                                                                                                            |
    +-------------------------+---------------------------------------------------------------------------------------------+
-   |Funkcja wykładnicza i    |Uczeń wykorzystując środowisko SageMath może rozwiązywać zadania opisujące zjawiska          |
-   |funkcja logarytmiczna    |fizyczne, chemiczne i biologiczne oraz modelować zagadnienia z kontekstem                    |
-   |                         |rzeczywistym posługując się funkcjami wykładniczymi i funkcjami                              |
-   |                         |logarytmicznymi.                                                                             |
+   |Funkcja wykładnicza i    |Uczeń wykorzystując środowisko SageMath może rozwiązywać zadania opisujące zjawiska fizyczne,|
+   |funkcja logarytmiczna    |chemiczne i biologiczne oraz modelować zagadnienia z kontekstem rzeczywistym posługując się  |
+   |                         |funkcjami wykładniczymi i funkcjami logarytmicznymi. Przykładem może być zadanie -           |
+   |                         |:ref:`matura2015_p02.rst`                                                                    |
    |                         |                                                                                             |
-   |                         | - `Sphinx Home <http://sphinx.pocoo.org>`_                                                  |
+   |                         |                                                                                             |
    |                         |                                                                                             |
    |                         |                                                                                             |
    |                         |                                                                                             |
@@ -902,8 +902,8 @@ przedmiot o nazwie język angielski techniczny. Udział w projekcie był
 dla nich okazją, by zastosować nauczane słownictwo i zwroty w żywym
 tekście naukowym nadzorowanym przez fizyka.
 
-4.3.3. Projekty koncepcyjne (HS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Projekty koncepcyjne
+~~~~~~~~~~~~~~~~~~~~
 
 W ramach takich projektów uczniowie wykonują modele umożliwiające
 przeprowadzenie symulacji działania w rzeczywistej sytuacji. Symulacje
@@ -945,8 +945,8 @@ Informatyka + biologia
 Symulacja zmian w populacji ludzi przy zadanych warunkach lub wybranych
 gatunków zwierząt (lisy i króliki).
 
-4.3.4. Projekty praktyczne
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Projekty praktyczne
+~~~~~~~~~~~~~~~~~~~
 
 Uczniowie opracowują rozwiązania problemów praktycznych dla szkoły lub
 społeczności lokalnej, Przykłady tematów: przygotowanie pomocy
@@ -954,8 +954,8 @@ dydaktycznych, plan wysadzenia krzewów na szkolnym terenie,
 zorganizowanie zawodów szachowych, zorganizowanie warsztatów “Przykłady
 wykorzystania SageMath w matematyce” dla młodszych kolegów.
 
-4.3.5. Uwagi metodyczne do realizacji metody projektów (HS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uwagi metodyczne do realizacji metody projektów
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Najlepiej podjąć decyzję o wprowadzeniu metody projektów już  na
 początku semestru czy roku szkolnego. Przy braku doświadczeń z
@@ -1035,8 +1035,8 @@ zaplanować realizację materiału, żeby znalazło się miejsce na projekt,
 Jest to metoda trudna do organizacji dla nauczyciela, ale obserwowanie
 twórczości uczniów zawsze przynosi nauczycielowi wiele satysfakcji.
 
-4.3.6. Dobre praktyki HS
-~~~~~~~~~~~~~~~~~~~~~~~~
+Dobre praktyki
+~~~~~~~~~~~~~~
 
 #. Projekt indywidualny Badanie funkcji
 
@@ -1093,17 +1093,11 @@ Trzecia grupa oceniała SageMath z punktu widzenia przydatności i
 oszczędności czasu. Czwarta grupa dodatkowo wypowiadała się na temat
 pakietu Latex.
 
-4.4. Lekcje, czy kółka zainteresowań?
--------------------------------------
 
-{...}
+Praca z uczniem zdolnym
+-----------------------
 
-4.5. Praca z uczniem zdolnym
-----------------------------
 
-{...}
-
-fragment tekstu ŁG
 
 Głównym celem wprowadzenia elementów języka programowania Python i SageMath
 w szkole średniej, jest kształtowanie umiejętności pisania przez
@@ -1166,8 +1160,8 @@ miejsc zerowych złożonych funkcji, optymalizacja czy też obliczanie
 pochodnych lub całek skomplikowanych wyrażeń będących opisem
 matematycznym danych zjawisk fizykochemicznych. 
 
-4.6. Samodzielne zdobywanie wiedzy i umiejętności przez ucznia
---------------------------------------------------------------
+Samodzielne zdobywanie wiedzy i umiejętności przez ucznia
+---------------------------------------------------------
 
 Nauka matematyki dla większości uczniów nie jest łatwym zadaniem,
 ponieważ proces ten wymaga od nich znajomości abstrakcyjnych pojęć i

@@ -1,10 +1,11 @@
+.. _od_punktu:
+
 Od punktu do punktu
 ~~~~~~~~~~~~~~~~~~~
 
-*Krzysztof Oleś*
 
 Wstęp
-^^^^^^
+^^^^^
 
 W roku 2005 wydawnictwo TIKKUN zaprezentowało Polakom książkę, która w roku 1976 zdobyła światowy rozgłos
 (ze względów politycznych – w Polsce była rodzajem podziemnej klasyki dla matematyków). Piszemy tutaj
@@ -22,7 +23,35 @@ Scenariusz zajęć
 ^^^^^^^^^^^^^^^^^
 
 Część pierwsza
-"""""""""""""""
+""""""""""""""
+
+O scenariuszu
+^^^^^^^^^^^^^
+
+Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
+lekcyjnych. 
+
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w III Liceum
+Ogólnokształcącym im. Stefana Batorego w Chorzowie.
+
+Lekcje prowadził Krzysztof Oleś
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+.. rubric:: Od punktu do punktu
+
+
 
 Pomyślmy przez chwilę o wykresie funkcji,
 np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.
@@ -448,8 +477,10 @@ Figurę tą możemy (**na pewno**?!) pokryć 1 kwadratem o boku długości 1, 8 
 
 Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - przy okazji - zbliżyliśmy się trochę do pojęcia wymiaru...
 
-Podsumowanie
-^^^^^^^^^^^^^^
+
+
+.. rubric:: Podsumowanie
+
 
 W powyższym tekście trzy wyrażenia zapisaliśmy czcionką pogrubioną - chcielibyśmy do nich powrócić.
 **Regularność**
