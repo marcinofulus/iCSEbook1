@@ -1,28 +1,47 @@
 RSA szyfrowanie asymetryczne. 
 =============================
 
+
+O scenariuszu
+^^^^^^^^^^^^^
+
+Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
+lekcyjnych. 
+
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w III Liceum
+Ogólnokształcącym im. Stefana Batorego w Chorzowie przez Krzysztofa
+Jarczewskiego.
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+
 Wstęp.
 ^^^^^^  
     
 **Uczniowie powinni znać i  rozumieć:**
 
 - działania na potęgach, NWD, dzielenie z resztą. *(1.1, 1.4, 1.5 mat_p)*,
-
 - podstawowy algorytm Euklidesa a najlepiej rozszerzoną jego wersję, *(1.0-II-5.11.a inf_r)*,
-
 - podstawowe komendy programistyczne w SageMath: działania, funkcję warunkową, pętle *(1.0-II-5.22-23 inf_r)*,
-
 - potrzebę szyfrowania wiadomości *(1.0-II-2.5, 1.0-II-5.11.e inf_r)*,
-
 - kodowanie znaków ASCI *(1.0-II-5.11.d inf_r)*.
 
 
 **Uczniowie na poniższych zajęciach poznają:**
     
 - własności działania modulo (kongruencję), chińskie twierdzenie o resztach,
-
 - małe twierdzenie Fermata, proste szyfrowanie asymetryczne,
-
 - szyfrowanie asymetryczne RSA – oparte na liczbach pierwszych *(1.0-II-5.11.e inf_r)*.
 
 
@@ -31,19 +50,10 @@ Wstęp.
 mat_p – matematyka poziom podstawowy, inf_r – informatyka poziom rozszerzony.   
 
 
-**Ilość godzin prowadzenia zajęć 3 + zadania dodatkowe.**
 
 
-    **Uwaga!**
-
-W każdym z okien programu można zmieniać liczby, tekst, zmienne lub cały kod.
-
-Nie musisz się martwić, jeśli program przestanie działać, bo po odświeżeniu powróci do ustawień początkowych.
-
-Często następny kod wynika z poprzedniego, więc należy ćwiczenia (algorytmy) wykonywać według kolejności.
-
-Część teoretyczna.
-^^^^^^^^^^^^^^^^^^
+Część teoretyczna
+^^^^^^^^^^^^^^^^^
 
 .. admonition:: Definicja kongruencji.
 
@@ -68,10 +78,10 @@ Przykłady:
 Znajdź *x* takie, że: :math:`3x = 1 (mod \hspace{2mm} 4), \hspace{2mm} 5<x<10`.
 
 .. sagecellserver::
-
+    
     for x in range(5,11):        #You can change this range
         if (3*x - 1) % 4 == 0:   #You can change this equation
-            print "x=",x
+            print "x =",x
 
 
 .. only:: latex
@@ -104,10 +114,12 @@ Znajdź *x* takie, że: 3x = 1 (mod 6).
 
 .. sagecellserver::
 
+    odp  = "?"
     for x in range(100):
         if (3*x-1) % 6 == 0:
-            print x
-    print "?"
+            odp = x
+    print odp
+
 
 
 W powyższym ćwiczeniu nie istnieje żadna liczba, która spełnia powyższą kongruencję.
@@ -115,11 +127,18 @@ W powyższym ćwiczeniu nie istnieje żadna liczba, która spełnia powyższą k
 
 .. note:: Chińskie twierdzenie o resztach.
 
-    Poniższe ćwiczenie można rozwiązać przy użyciu chińskiego twierdzenia o resztach. Jedno z najważniejszych twierdzeń z teorii liczb i kryptografii. Twierdzenie to pozwala dzielić sekret wśród kilku osób (ważne hasło liczbowe).
+    Poniższe ćwiczenie można rozwiązać przy użyciu chińskiego
+    twierdzenia o resztach. Jedno z najważniejszych twierdzeń z teorii
+    liczb i kryptografii. Twierdzenie to pozwala dzielić sekret wśród
+    kilku osób (ważne hasło liczbowe).
 
 Ćwiczenie 4.
 """"""""""""
-Tabliczka czekolady składa się z mniej niż 100 kawałków. Przy podziale na trzy równe części, pozostaje 1 kawałek czekolady. Dzieląc na 5 równych części, zostają 3 kawałki czekolady, a przy podziale na 7 równych części, pozostają 2 kawałki.
+
+Tabliczka czekolady składa się z mniej niż 100 kawałków. Przy podziale
+na trzy równe części, pozostaje 1 kawałek czekolady. Dzieląc na 5
+równych części, zostają 3 kawałki czekolady, a przy podziale na 7
+równych części, pozostają 2 kawałki.
 
 Wiemy, że liczba kawałków czekolady musi spełniać poniższe kongruencje:
 
@@ -184,16 +203,16 @@ Otrzymujemy parę kluczy, klucz publiczny: :math:`(d, n)` i klucz prywatny: :mat
 
 .. sagecellserver::
 
-    number=1234567   #You can change this number (message). What will be if number larger then n?
-    a=89             #you can change the numbers: a, b, a1, b1
-    b=45
-    a1=98
-    b1=55
-    M=a*b-1
-    e=a1*M+a
-    d=b1*M+b
-    n=(e*d-1)/M
-    print " public key:", (d, n)
+    number = 1234567   #You can change this number (message). What will be if number larger then n?
+    a = 89             #you can change the numbers: a, b, a1, b1
+    b = 45
+    a1 = 98
+    b1 = 55
+    M = a*b-1
+    e = a1*M+a
+    d = b1*M+b
+    n = (e*d-1)/M
+    print "public key:", (d, n)
     print "private key:",(e, n)
      # encryption
     szyfr = (number*d) % n
@@ -231,10 +250,10 @@ Otrzymujemy parę kluczy, klucz publiczny: :math:`(d, n)` i klucz prywatny: :mat
     szyfr = 0
     i=0
     while number>0:                           # 5
-        pomoc=number%n                        # 1 
+        pomoc = number%n                      # 1 
         szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
-        number=int(number/n)                  # 4
+        number = int(number/n)                # 4
     print szyfr
 
 
@@ -251,11 +270,11 @@ Spróbuj poniżej odszyfrować liczbę:
 .. sagecellserver::
 
     i=0
-    while number>0:                           # 5
-        pomoc=number%n                        # 1 
-        szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
+    while number>0:                             # 5
+        pomoc = number%n                        # 1 
+        szyfr = szyfr + ((pomoc*d) % n)*n^i     # 2, 3
         i=i+1
-        number=int(number/n)                  # 4
+        number = int(number/n)                  # 4
     print szyfr
 
 
@@ -281,22 +300,22 @@ Poniżej algorytm szyfrowania wiadomości tekstowej (ten kod został napisany i 
     print "number =", number
   
 
-Pełny algorytm szyfrujący.
-""""""""""""""""""""""""""
+Pełny algorytm szyfrujący
+"""""""""""""""""""""""""
 
 Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i deszyfrowania wiadomości tekstowych.
 
 .. sagecellserver::
 
-    number=0
-    i=0
-    tekst="This is the secret message or anything." #message
-    tekst2=""
+    number = 0
+    i = 0
+    tekst = "This is the secret message or anything." #message
+    tekst2 = ""
     print "message:", tekst
     # change text to number
     for x in tekst:
-        i=i+1
-        number=number + ord(x)*128^i
+        i = i + 1
+        number = number + ord(x)*128^i
     print "number:", number
     print ""
     # encription
@@ -305,8 +324,8 @@ Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i d
     while number>0:
         pomoc=number%n
         szyfr = szyfr + ((pomoc*d) % n)*n^i
-        i=i+1
-        number=int(number/n)
+        i = i + 1
+        number = int(number/n)
     print "encription:", szyfr
 
 
@@ -319,27 +338,27 @@ Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i d
         encription: 247771732970102709758504535275676311805105 6145804692906609710645765611862711721717856778
 
 
-Pełny algorytm deszyfrujący.
-""""""""""""""""""""""""""""
+Pełny algorytm deszyfrujący
+"""""""""""""""""""""""""""
 
 .. sagecellserver::
 
-    tekst2=""
+    tekst2 = ""
     deszyfr = 0
-    i=0
+    i = 0
     print "encription:", szyfr
     # decription
     while szyfr>0:
-        pomoc=szyfr%n
+        pomoc = szyfr%n
         deszyfr = deszyfr + ((pomoc*e) % n)*n^i
-        i=i+1
-        szyfr=int(szyfr/n)
+        i = i+1
+        szyfr = int(szyfr/n)
     print "decription: ", deszyfr
     ## change number to text
-    i=0
+    i = 0
     while deszyfr>0:
-        i=i+1
-        deszyfr=int(deszyfr/128)
+        i = i+1
+        deszyfr = int(deszyfr/128)
         tekst2 = tekst2 + chr(deszyfr%128)
     print "message: ", tekst2
  
@@ -353,8 +372,8 @@ Pełny algorytm deszyfrujący.
         message:  This is the secret message or anything.
 
 
-Szyfrowanie asymetryczne RSA.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Szyfrowanie asymetryczne RSA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **RSA** jeden z pierwszych i najpopularniejszy asymetryczny algorytm kryptograficzny z kluczem publicznym, zaprojektowany w 1977 przez Rona Rivesta, Adi Szamira oraz Leonarda Adlemana (jego nazwa pochodzi od pierwszych liter nazwisk jego twórców).
 
@@ -373,13 +392,13 @@ Poniżej przykład
     %time
     @interact 
     def _(n=slider( srange(20,32,2))):
-        a=int(random()*10^n)
-        a=next_prime(a)
+        a = int(random()*10^n)
+        a = next_prime(a)
         print a
-        b=int(random()*10^n)
-        b=next_prime(b)
+        b = int(random()*10^n)
+        b = next_prime(b)
         print b
-        n=a*b
+        n = a*b
         print(factor(n))
 
 
@@ -389,7 +408,7 @@ Poniżej przykład
 
     @interact 
     def _(n=slider( range(34,101,2))):
-        t=2^((n-34)/2)
+        t = 2^((n-34)/2)
         print n,"-digits prime numbers, factoring time:", t, "minutes"
         if t>100 and t<60*24:
             print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
@@ -399,8 +418,8 @@ Poniżej przykład
             print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
 
 
-Generowanie szyfru RSA.
-"""""""""""""""""""""""
+Generowanie szyfru RSA
+""""""""""""""""""""""
 
 1. Wybieramy dwie duże liczby pierwsze: :math:`p, q` (w praktyce wykorzystuje się liczby ponad stocyfrowe, ale dla naszych porzeb wystarczą liczby trzycyfrowe).
 
@@ -417,14 +436,14 @@ Klucz prywatny to para liczb:  :math:`(e, n)`.
 
 .. sagecellserver::
 
-    los=int(100*random())
-    p=nth_prime(30+los)
-    los=int(100*random())
-    q=nth_prime(30+los)
-    n=p*q
-    f=(p-1)*(q-1)
-    los=int(f*random())
-    e=next_prime(los)
+    los = int(100*random())
+    p = nth_prime(30+los)
+    los = int(100*random())
+    q = nth_prime(30+los)
+    n = p*q
+    f = (p-1)*(q-1)
+    los = int(f*random())
+    e = next_prime(los)
     print "p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f
 
 
@@ -461,63 +480,64 @@ Spróbuj poprawić ten kod!
     print "private key:", e, n
 
  
-Pełny algorytm szyfrowania RSA.
-"""""""""""""""""""""""""""""""
+Pełny algorytm szyfrowania RSA
+""""""""""""""""""""""""""""""
 
 Wystarczy skopiować algorytm szyfrowania z punktu 2 i zamienić: pomoc*d na pomoc^d.
 
 .. sagecellserver::
 
-    number=0
-    i=0
-    tekst="This is secret message or anything." #message
-    tekst2=""
+    number = 0
+    i = 0
+    tekst = "This is secret message or anything." #message
+    tekst2 = ""
     print "message:", tekst
     # change text to number
     for x in tekst:
-        i=i+1
-        number=number + ord(x)*128^i
+        i = i+1
+        number = number + ord(x)*128^i
     print "number:", number
     print ""
     # encription
     szyfr = 0
-    i=0
+    i = 0
     while number>0:
-        pomoc=number%n
+        pomoc = number%n
         szyfr = szyfr + ((pomoc^d) % n)*n^i
-        i=i+1
-        number=int(number/n)
+        i = i + 1
+        number = int(number/n)
     print "encription:", szyfr
 
 
-Pełen algorym deszyfrujący RSA.
-"""""""""""""""""""""""""""""""
+Pełen algorym deszyfrujący RSA
+""""""""""""""""""""""""""""""
 
 Wystarczy skopiować algorytm deszyfrowania z punktu 2 i zamienić: pomoc*d na pomoc^d.
 
 .. sagecellserver::
 
-    tekst2=""
+    tekst2 = ""
     deszyfr = 0
-    i=0
+    i = 0
     print "encription:", szyfr
     # decription
     while szyfr>0:
-        pomoc=szyfr%n
+        pomoc = szyfr%n
         deszyfr = deszyfr + ((pomoc^e) % n)*n^i
-        i=i+1
-        szyfr=int(szyfr/n)
+        i = i + 1
+        szyfr = int(szyfr/n)
     print "decription: ", deszyfr
     ## change number to text
-    i=0
+    i = 0
     while deszyfr>0:
-        i=i+1
-        deszyfr=int(deszyfr/128)
+        i = i + 1
+        deszyfr = int(deszyfr/128)
         tekst2 = tekst2 + chr(deszyfr%128)
     print "message: ", tekst2
  
-Wnioski.
-^^^^^^^^
+
+Wnioski
+^^^^^^^
 
 Uczniowie naszej szkoły przed projektem iCSE mogli usłyszeć wykład o metodach szyfrowania. Wykazali oni duże zainteresowanie tą sprawą. Dlatego zdecydowałem się zorganizować lekcje z asymetrycznego szyfrowania przy użyciu języka programowania Python. Język SageMath umożliwia pracę na dużych liczbach przekraczających zakres zmiennych typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę imponująca. W ten sposób uczniowie mieli możliwość praktycznego sposobu szyfrowania i deszyfrowania wiadomości przy użyciu publicznych i prywatnych kluczy. Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej klasie liceum. Powyższy temat nadaje się również jako praca projektowa, która łączy wiedzę matematyczno-informatyczną. Jak wiadomo powyższe elementy są istotne w dziedzinie kryptografii, która łączy teorię liczb z praktyką programistyczną. Nie przekracza to zakresu materiału przewidzianego na rozszerzeniu z informatyki liceum lub technikum. Dlatego też postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania wiadomości **RSA**.
 

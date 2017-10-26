@@ -543,9 +543,6 @@ W XXX III LO im. M. Kopernika w Warszawie metoda projektu została wykorzystana
 podczas zajęć informatyki. Projekty zostały wykonane w trzech grupach
 uczniów z klasy drugiej, tematem projektu było badanie funkcji.
 
-Opis realizacji tego projektu znajduje się w rozdziale “Projekt grupowy
-- ewaluacja”
-
 Zaprezentowane zostały materiały w postaci instrukcji do projektu, opisu
 przeprowadzonych zajęć i przykładowych prac uczniów. Ponadto realizacja
 projektu w trzech grupach została zaplanowana tak, aby posłużyła do

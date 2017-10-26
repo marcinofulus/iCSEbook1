@@ -1,8 +1,35 @@
+.. _od_punktu:
+
 Od punktu do punktu
 ~~~~~~~~~~~~~~~~~~~
 
 
-*Niniejszy projekt jest wynikiem zajęć prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie*
+O scenariuszu
+^^^^^^^^^^^^^
+
+Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
+lekcyjnych. 
+
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w III Liceum
+Ogólnokształcącym im. Stefana Batorego w Chorzowie.
+
+Lekcje prowadził Krzysztof Oleś
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+.. rubric:: Od punktu do punktu
+
 
 Pomyślmy przez chwilę o wykresie funkcji,
 np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.
@@ -420,6 +447,7 @@ Figurę tą możemy (**NA PEWNO**?!) pokryć 1 kwadratem o boku długości 1, 8 
   d=\lim_{n\to\infty}\frac{\log8^n}{\log3^n}=\frac{\log8}{\log3}\approx1.893.
 
 Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - przy okazji - zbliżyliśmy się trochę do pojęcia wymiaru...
+
 
 .. rubric:: Podsumowanie
 

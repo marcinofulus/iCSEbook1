@@ -26,36 +26,28 @@ Przedmioty ścisłe z SageMath
    sage_w_szkole.rst
 
 
-Materiały dydaktyczne
----------------------
-
-
-.. toctree::
-   :maxdepth: 1
- 
-   proces.rst
 
 
 
 Matematyka
-~~~~~~~~~~
+----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
  
    granica.rst
    od_punktu_do_punktu.rst
-   zadziwiajace_przyblizenie.rst
    fraktal.rst
+   zadziwiajace_przyblizenie.rst
    RSA.rst
    przyblizanie_wielomianami.rst
 
 
 Fizyka
-~~~~~~
+------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    struna.rst
    fale.rst
@@ -122,6 +114,7 @@ Zakończenie
 
    warunki_wdrozenia.rst
    swot.rst
+   ewaluacja.rst
 
 
 Materiały dydaktyczne - wersje niepoprawione

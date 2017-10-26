@@ -4,7 +4,31 @@ Granica i ciągłość funkcji w punkcie
 ====================================
 
 
-*Mirosław Malinowski*
+O scenariuszu
+-------------
+
+Scenariusz ten jest materiałem do przeprowadzenie 2h zajęć
+lekcyjnych. 
+
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w XXXIII LO M. Kopernika w Warszawie.
+
+Opracowanie scenariusza i prowadzenie lekcji:  Mirosław Malinowski.
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+
+
 
 
 Ciągi liczbowe - powtórzenie
@@ -160,9 +184,9 @@ Zbadaj, czy funkcja  :math:`f(x) = \begin{cases}x^2 -4 & \text{dla } x< x_0 \\ \
      a = limit(fl(x), x = x0, dir = 'left')
      b = limit(fr(x), x = x0, dir = 'right')
      if a == b == f(x0):
-         print("Funkcja jest ciągła w punkcie ",x0)
+         print("Funkcja jest ciagla w punkcie ",x0)
      else:
-         print("Funkcja NIE JEST ciągła w punkcie ",x0)
+         print("Funkcja NIE JEST ciagla w punkcie ",x0)
      plt = plot (fl, (x, x0-5, x0), axes_labels=['$x$','$f(x)$'], ymin = -5, ymax = 15, figsize = (6, 4), color = 'green', legend_label="$y =$ $%s$"%latex(fl(x)))
      plt += plot (fr, (x, x0, x0+5), color = 'red', legend_label="$y=$ $%s$"%latex(fr(x))) + point((x0, f(x0)), color = 'red', size = 48)
      plt

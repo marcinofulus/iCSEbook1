@@ -1,9 +1,32 @@
 Zadziwiające przybliżenie
-========================================
+=========================
 
-*Niniejszy projekt jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie*
 
-Spróbujmy użyć komputera do zilustrowania PROSTEGO problemu, używając PODSTAWOWEGO programowania.
+O scenariuszu
+^^^^^^^^^^^^^
+
+Niniejszy projekt jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Został on opracowany w ramach projektu iCSE4school na podstawie lekcji prowadzonych tej szkole. 
+
+Scenariusz ten stanowi  materiał do przeprowadzenie 2h zajęć lekcyjnych. 
+
+
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu trony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
+
+
+Wstęp
+^^^^^
+
+
+Spróbujmy użyć komputera do zilustrowania PROSTEGO problemu, używając
+PODSTAWOWEGO programowania.
 
 - Dlaczego PODSTAWOWEGO?
 
@@ -13,7 +36,9 @@ Nie znamy się bowiem na SAGE'u zbyt dobrze.
 
 Chcemy bowiem zafrapować zagadnieniem matematycznym uważanym za nudne... Większość ludzi nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb...
 
-**Część 1.**
+
+Część 1
+^^^^^^^
 
 Rozpocznijmy przybliżaniem pierwiastka kwadratowego liczby 2. Wykorzystamy  algorytm (oparty na metodzie Newtona znajdowania miejsc zerowych funkcji) znany pod hasłem: metoda babilońska.
 
@@ -122,7 +147,8 @@ Możemy teraz porównać szybkość pierwszego i drugiego algorytmu oraz zadać 
 - Obliczaliśmy błędy - SAGE musiał pierwiastek kwadratowy liczby 2 oraz :math:`\pi` przybliżyć (nie są to liczby wymierne): czy SAGE popełnił błąd? Jak duży?
 
 
-**Część 2.**
+Część 2
+^^^^^^^
 
 No dobrze, ale kto jest zainteresowany różnicami w przybliżeniach np. na piętnastym miejscu po przecinku?
 
@@ -355,7 +381,8 @@ I znowu - powinniśmy zmieniać  :math:`p`: 1,414; 1,4142; 1,41421; 1,414213;  n
 
 I po raz kolejny: czy to nie dziwne? Może nie (?!), ale powyższy przykład pokazuje, jak bardzo należy uważać, wykorzystując w rachunkach przybliżenia.
 
-.. rubric:: Podsumowanie
+Podsumowanie
+^^^^^^^^^^^^
 
 Chcieliśmy pokazać, jak ważna jest różnica w użyciu wyrażenia algebraicznego w rodzaju
 
@@ -368,9 +395,19 @@ a jego przybliżeń.
 
 Dlaczego?
 
-Po pierwsze: ponieważ używamy liczb, które nie są wymierne, a oznacza to konieczność ich przybliżania. Próbowaliśmy pokazać dwa różne - jeśli chodzi o liczbę koniecznych do odpowiedniego przybliżenia powtórzeń - algorytmy. Zasugerowaliśmy znalezienie niemałej liczby koniecznych powtórzeń, by uzyskać przybliżenia liczby :math:`\pi` przysłowiowym 3,14. Ponieważ jednak dziesiętne przybliżenia mogą nie wydawać się interesujące - zdecydowaliśmy się zobaczyć (!) ich wagę w problemie geometrycznym, w którym szczególną rolę odegrały przybliżenia pierwiastka kwadratowego liczby 2.
+Po pierwsze: ponieważ używamy liczb, które nie są wymierne, a oznacza
+to konieczność ich przybliżania. Próbowaliśmy pokazać dwa różne -
+jeśli chodzi o liczbę koniecznych do odpowiedniego przybliżenia
+powtórzeń - algorytmy. Zasugerowaliśmy znalezienie niemałej liczby
+koniecznych powtórzeń, by uzyskać przybliżenia liczby :math:`\pi`
+przysłowiowym 3,14. Ponieważ jednak dziesiętne przybliżenia mogą nie
+wydawać się interesujące - zdecydowaliśmy się zobaczyć (!) ich wagę w
+problemie geometrycznym, w którym szczególną rolę odegrały
+przybliżenia pierwiastka kwadratowego liczby 2.
 
-Po drugie: ponieważ w szkołach polskich mamy do czynienia z przewagą rozwiązań (np. równań) w postaci algebraicznej. Oznacza to, że maturalne rozwiązanie równania
+Po drugie: ponieważ w szkołach polskich mamy do czynienia z przewagą
+rozwiązań (np. równań) w postaci algebraicznej. Oznacza to, że
+maturalne rozwiązanie równania
 
 .. MATH::
 
