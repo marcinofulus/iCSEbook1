@@ -3,39 +3,49 @@
 Od punktu do punktu
 ~~~~~~~~~~~~~~~~~~~
 
+O scenariuszu
+^^^^^^^^^^^^^
+
+Prezentowany scenariusz jest wynikiem zajęć prowadzonych w III Liceum
+Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest
+do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z
+części), przy czym - co pokazały m.in. szkolne testowania na grupach
+uczniów oraz warszaty prowadzone dla grup nauczycieli - bardzo istotna
+jest możliwość przedyskutowania efektów zmian przedstawionych w części
+drugiej kodów.  Struktura materiału jest swoistym dialogiem z
+uczestnikami zajęć, dopuszczamy więc podejście typu nieformalnego -
+najważniejsza jest dla nas bowiem możliwość eksperymentowania.
+
+Lekcje prowadził Krzysztof Oleś
+
 
 Wstęp
 ^^^^^
 
-W roku 2005 wydawnictwo TIKKUN zaprezentowało Polakom książkę, która w roku 1976 zdobyła światowy rozgłos
-(ze względów politycznych – w Polsce była rodzajem podziemnej klasyki dla matematyków). Piszemy tutaj
-o „Dowodach i refutacjach” Imre Lakatosa, w których pokazano, istotność powątpiewania i stawiania hipotez. 
-Wspomniany rok 1976 pojawia się także jeszcze w innym kontekście. Otóż właśnie w tym roku na łamach New York Timesa pojawiła się informacja o udowodnieniu (?) twierdzenia o czterech barwach – wykorzystano programy komputerowe i ostateczne wyniki pochodziły
-z zaprogramowanych obliczeń. Można oczywiście dyskutować nad tego typu dowodem. Wydaje się jednak, że nad potrzebą wykorzystywania komputera do stawiania hipotez dyskutować nie trzeba. I to chcemy naszym wychowankom pokazać, łącząc matematykę z całkowicie dla nich naturalnym środowiskiem komputerowym.
-**Powątpiewanie może być twórcze**, a zabawa (!) może wywoływać uśmiech odkrywania.
+W roku 2005 wydawnictwo TIKKUN zaprezentowało Polakom książkę, która w
+roku 1976 zdobyła światowy rozgłos (ze względów politycznych – w
+Polsce była rodzajem podziemnej klasyki dla matematyków). Piszemy
+tutaj o „Dowodach i refutacjach” Imre Lakatosa, w których pokazano,
+istotność powątpiewania i stawiania hipotez.  Wspomniany rok 1976
+pojawia się także jeszcze w innym kontekście. Otóż właśnie w tym roku
+na łamach New York Timesa pojawiła się informacja o udowodnieniu (?)
+twierdzenia o czterech barwach – wykorzystano programy komputerowe i
+ostateczne wyniki pochodziły z zaprogramowanych obliczeń. Można
+oczywiście dyskutować nad tego typu dowodem. Wydaje się jednak, że nad
+potrzebą wykorzystywania komputera do stawiania hipotez dyskutować nie
+trzeba. I to chcemy naszym wychowankom pokazać, łącząc matematykę z
+całkowicie dla nich naturalnym środowiskiem komputerowym.
+**Powątpiewanie może być twórcze**, a zabawa (!) może wywoływać
+uśmiech odkrywania.
 
-Prezentowany scenariusz jest wynikiem zajęć prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z części), przy czym - co pokazały m.in. szkolne testowania na grupach uczniów oraz warszaty prowadzone dla grup nauczycieli - bardzo istotna jest możliwość przedyskutowania efektów zmian przedstawionych w części drugiej kodów.
-Struktura materiału jest swoistym dialogiem z uczestnikami zajęć, dopuszczamy więc podejście typu nieformalnego - najważniejsza jest dla nas bowiem możliwość eksperymentowania.
 
-Przedstawiamy ponadto dodatek, który może być punktem wyjścia do rozważań związanych z próbą definiowania wymiaru obiektów fraktalnych.
+Przedstawiamy ponadto dodatek, który może być punktem wyjścia do
+rozważań związanych z próbą definiowania wymiaru obiektów fraktalnych.
 
-Scenariusz zajęć
-^^^^^^^^^^^^^^^^^
 
 Część pierwsza
-""""""""""""""
+^^^^^^^^^^^^^^
 
-O scenariuszu
-^^^^^^^^^^^^^
-
-Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
-lekcyjnych. 
-
-Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
-prowadzonych w latach 2015-2017 w III Liceum
-Ogólnokształcącym im. Stefana Batorego w Chorzowie.
-
-Lekcje prowadził Krzysztof Oleś
 
 
 .. only:: html
@@ -192,10 +202,12 @@ Nie zapominajmy o możliwości umieszczenia pętli w pętli.
     .. figure:: refutacje_media/8.png
        :width: 50%
 
-Patrząc na uzyskany efet, zauważamy pewien problem w "lewym" wierzchołku trójkąta - usuńmy go, poprawnie manipulując liczbami.
+Patrząc na uzyskany efet, zauważamy pewien problem w "lewym"
+wierzchołku trójkąta - usuńmy go, poprawnie manipulując liczbami.
+
 
 Część druga
-""""""""""""
+^^^^^^^^^^^
 
 Przejdźmy do losowania.  
 
@@ -216,11 +228,19 @@ Przejdźmy do losowania.
     .. figure:: refutacje_media/9.png
        :width: 40%
 
-W powyższym przykładzie zauważamy specyficzny rodzaj chaosu... Czy możemy jednak punkty bardziej kontrolować?
+W powyższym przykładzie zauważamy specyficzny rodzaj chaosu... Czy
+możemy jednak punkty bardziej kontrolować?
 
-Wyobraźmy sobie sytuację, w którym określony punkt początkowy :math:`(a,b)` przekształcany jest w wybranym losowo jednym z ośmiu przekształceń. Każde z nich składa się z dwóch części: liniowej operacji na pierwszej współrzędnej (trzy liczby :math:`a_i,b_i,c_i`) oraz liniowej operacji na drugiej współrzędnej (trzy liczby :math:`d_i,e_i,f_i`). Po przekształceniu otrzymujemy nowy punkt :math:`(a,b)` który przetwarzamy analogicznie - oczywiście nie poprzestajemy na dwóch punktach, komputer dokona setek powtórzeń.
+Wyobraźmy sobie sytuację, w którym określony punkt początkowy
+:math:`(a,b)` przekształcany jest w wybranym losowo jednym z ośmiu
+przekształceń. Każde z nich składa się z dwóch części: liniowej
+operacji na pierwszej współrzędnej (trzy liczby :math:`a_i,b_i,c_i`)
+oraz liniowej operacji na drugiej współrzędnej (trzy liczby
+:math:`d_i,e_i,f_i`). Po przekształceniu otrzymujemy nowy punkt
+:math:`(a,b)` który przetwarzamy analogicznie - oczywiście nie
+poprzestajemy na dwóch punktach, komputer dokona setek powtórzeń.
 
-Spójrzmy uważnie na kod źródłowy (szczególnie na linie zawierające #).  
+Spójrzmy uważnie na kod źródłowy (szczególnie na linie zawierające #).
 
 .. sagecellserver::
 
@@ -272,7 +292,9 @@ Spójrzmy uważnie na kod źródłowy (szczególnie na linie zawierające #).
         r=r+point((a,b),axes=False, frame=False,size=5,color='black')     
   show (r, figsize=(8.75,8))
   
-Przy stu powtórzeniach otrzymana figura wydaje się chaotyczna, dlatego też wykonaliśmy większą liczbę powtórzeń (proponujemy dalsze zwiększanie liczby d).
+Przy stu powtórzeniach otrzymana figura wydaje się chaotyczna, dlatego
+też wykonaliśmy większą liczbę powtórzeń (proponujemy dalsze
+zwiększanie liczby d).
 
 .. only:: latex
           
@@ -284,15 +306,18 @@ Czy układ punktów nie zaczyna nam czegoś przypominać?
 Gdzieś w głowie powinien pojawić się nam dywan Sierpińskiego.
 
 
-
-Poeksperymentujmy z tym tworem i spróbujmy odpowiedzieć na niełatwe pytania:
+Poeksperymentujmy z tym tworem i spróbujmy odpowiedzieć na niełatwe
+pytania:
 
 * Czy generowana figura zależy od doboru punktu startowego?
 * Co stanie się, gdy zmieniać będziemy liczby :math:`a_i,b_i,c_i,d_i,e_i,f_i`?
-* Co stanie się, jeśli np. jedno z ośmiu przekształceń "wyłączymy" i czy na pewno umiemy to w kodzie żródłowym zrobić?
+* Co stanie się, jeśli np. jedno z ośmiu przekształceń "wyłączymy" i
+  czy na pewno umiemy to w kodzie żródłowym zrobić?
 * Dlaczego dywan pokolorowany jest w taki a nie inny sposób?
 
-Wydaje się, że odpowiedzi na te pytania (oparte na pewnych założeniach) będą zaskakujące, ale komputer się nie męczy - stawiajmy więc hipotezy...
+Wydaje się, że odpowiedzi na te pytania (oparte na pewnych
+założeniach) będą zaskakujące, ale komputer się nie męczy - stawiajmy
+więc hipotezy...
 
 Być może ciekawszym od dywanu będzie znany (prawie wszystkim) liść.
 
@@ -333,7 +358,9 @@ Być może ciekawszym od dywanu będzie znany (prawie wszystkim) liść.
     .. figure:: refutacje_media/11.png
        :width: 40%
 
-Przypuszczalnie dywan i liść **pociągną** nas do dalszego eksperymentu, w którym spróbujemy zapisać współczynniki w tabelach (poprzednie sposoby zapisu zachęcają do takiego rozwiązania). 
+Przypuszczalnie dywan i liść **pociągną** nas do dalszego
+eksperymentu, w którym spróbujemy zapisać współczynniki w tabelach
+(poprzednie sposoby zapisu zachęcają do takiego rozwiązania).
 
 .. sagecellserver::
 
@@ -399,12 +426,16 @@ Przypuszczalnie dywan i liść **pociągną** nas do dalszego eksperymentu, w kt
     .. figure:: refutacje_media/12.png
        :width: 50%
 
-A może warto teraz w powyższych przykładach dokonać dużych współczynnikowych zmian, obserwując ich efekty? Eksperymentujmy!
+A może warto teraz w powyższych przykładach dokonać dużych
+współczynnikowych zmian, obserwując ich efekty? Eksperymentujmy!
 
 Dodatek
-^^^^^^^^
+^^^^^^^
 
-Wróćmy do dywanu Sierpińskiego. Czy jest to raczej rodzaj linii lub też coś w rodzaju połączonych kwadratów? Czy nieustanne (w naszej głowie) powtarzanie iteracji zbliża nas do bardziej normalnych kwadratów? Co oznacza "bardziej"?
+Wróćmy do dywanu Sierpińskiego. Czy jest to raczej rodzaj linii lub
+też coś w rodzaju połączonych kwadratów? Czy nieustanne (w naszej
+głowie) powtarzanie iteracji zbliża nas do bardziej normalnych
+kwadratów? Co oznacza "bardziej"?
 
 Popatrzmy na niebieską linię poniżej - chciejmy ją zmierzyć zieloną linijką.
 
@@ -417,8 +448,11 @@ Popatrzmy na niebieską linię poniżej - chciejmy ją zmierzyć zieloną linijk
     .. figure:: refutacje_media/13.png
        :width: 50%
 
-Oszacujmy długość niebieskiej linii.
-Niech :math:`M(\epsilon)` oznacza długość mierzonej krzywej linijką długości :math:`\epsilon` oraz :math:`L(\epsilon)` przyłożeń tejże linijki. Zauważmy, że im mniejsze :math:`\epsilon` tym szacowanie dokładniejsze. Zauważmy, że :math:`M(\epsilon)\approx\epsilon\cdot L(\epsilon)` i 
+Oszacujmy długość niebieskiej linii.  Niech :math:`M(\epsilon)`
+oznacza długość mierzonej krzywej linijką długości :math:`\epsilon`
+oraz :math:`L(\epsilon)` przyłożeń tejże linijki. Zauważmy, że im
+mniejsze :math:`\epsilon` tym szacowanie dokładniejsze. Zauważmy, że
+:math:`M(\epsilon)\approx\epsilon\cdot L(\epsilon)` i
 
 .. math::
   L(\epsilon)\sim\frac{1}{\epsilon} 
@@ -479,17 +513,34 @@ Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - pr
 
 
 
-.. rubric:: Podsumowanie
+Podsumowanie
+^^^^^^^^^^^^
 
 
-W powyższym tekście trzy wyrażenia zapisaliśmy czcionką pogrubioną - chcielibyśmy do nich powrócić.
+W powyższym tekście trzy wyrażenia zapisaliśmy czcionką pogrubioną -
+chcielibyśmy do nich powrócić.
+
 **Regularność**
-Działania wspomagane SAGE'em mogą uczniom pomóc w badaniu rekurencji (pewnej regularności powtarzanej wielokrotnie, dzięki komputerom bardzo wiele razy).
-**Pociągną**
-Warto naszym zdaniem pociągnąć (angielskie "to attract") uczniów do koncepcji atraktora: fraktale to często atraktory - komputer może przecież pomóc w małych matematycznych odkryciach.
-**Na pewno**
-Należy podkreślić, że powyższe rozważania dotyczące wymiaru są tylko zasygnalizowaniem problemu - ale mogą budować uczniowską intuicję (która nie powinna być natychmiast zafrapowana problemem istnienia :math:`\lim_{\epsilon\to0}\dots`).
 
-A przy okazji - na samym końcu - warto postawić pytanie: gdzie jest granica między intuicyjną zabawą ucznia a poważnym rozumowaniem matematycznym? 
+Działania wspomagane SAGE'em mogą uczniom pomóc w badaniu rekurencji
+(pewnej regularności powtarzanej wielokrotnie, dzięki komputerom
+bardzo wiele razy).
+
+**Pociągną**
+
+Warto naszym zdaniem pociągnąć (angielskie "to attract") uczniów do
+koncepcji atraktora: fraktale to często atraktory - komputer może
+przecież pomóc w małych matematycznych odkryciach.
+
+**Na pewno**
+
+Należy podkreślić, że powyższe rozważania dotyczące wymiaru są tylko
+zasygnalizowaniem problemu - ale mogą budować uczniowską intuicję
+(która nie powinna być natychmiast zafrapowana problemem istnienia
+:math:`\lim_{\epsilon\to0}\dots`).
+
+A przy okazji - na samym końcu - warto postawić pytanie: gdzie jest
+granica między intuicyjną zabawą ucznia a poważnym rozumowaniem
+matematycznym?
 
   
