@@ -492,6 +492,37 @@ falowych. Poniższy kod doda fale o zbliżonych częstościach:
        Wizualizacja paczki falowej. 
 
 
+Ciekawym przykładem wizualizacji jest graficzne przedstawianie pól
+wektorowych. Podczas lekcji fizyki, można wykorzystać możliwości
+SagaMath do rysowania pół wektorowych. Poniżej zamieszczony jest
+przykład pola pochodządzego od dipola magnetycznego. Pole jest
+trójwymiarowe, w przykładzie przedstawiony jest przekrój takiego pola
+przez płaszczyznę :math:`x=0`
+
+
+.. sagecellserver::
+    :linked: false
+
+    var('x y z',domain='real')
+    m = 1 
+    r = sqrt(x^2+y^2+z^2+1e-6)
+    Bx = 3*m*x*z/(r^5)
+    By = 3*m*y*z/(r^5)
+    Bz = 3*m*z^2/(r^5)-m/r^3
+    B = vector( [Bx,By,Bz])
+    Bmod = B.subs(x==0)[1:].norm()
+    plot_vector_field(B.subs(x==0)[1:]/Bmod,(y,-2,2),(z,-2,2))
+
+.. only:: latex
+          
+    Wynikiem działania powyższego kodu jest wykres   :numref:`pole_vec_fig`.
+
+    .. figure:: figs/pole_vec.pdf
+       :width: 70%
+       :name: pole_vec_fig
+
+       Wizualizacja pola wektorowego. 
+
 
 
 

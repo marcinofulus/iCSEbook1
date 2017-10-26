@@ -66,11 +66,11 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
    +-------------------------+-------------------------------------------------------+
    |                         |Ponieważ w SageMath można wykonywać obliczenia         |
    |Wyrażenia algebraiczne   |symboliczne, uczeń wykorzystując ten pakiet może       |
-   |                         |_osiągnąć wszystkie cele edukacyjne w tym dziale.      |
-   |                         |Przykładami mogą być: rozdział :ref:`algebra` oraz     |
+   |                         |osiągnąć wszystkie cele edukacyjne w tym dziale.       |
+   |                         |Przykładami mogą być rozdział :ref:`algebra` oraz      |
    |                         |zadania:                                               |
-   |                         |                                                       |
-   |                         |                                                       |
+   |                         |  - :ref:`matura2015_p04.rst`                          |
+   |                         |  - :ref:`matura2015_r10.rst`                          |
    |                         |                                                       |
    |                         |                                                       |
    +-------------------------+-------------------------------------------------------+
@@ -95,10 +95,10 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
    +-------------------------+-------------------------------------------------------+
    |Trygonometria            |SageMath jest niezwykle przydatny w zarówno obliczaniu |
    |                         |wartości arytmetycznych funkcji trygonometrycznych jak |
-   |                         |i upraszczniu tożsamości :ref:algebra. Należy zwrócić  |
-   |                         |uwagę na szczególną przydatność Sage w rysowaniu       |
-   |                         |wykresów, zwracają uwagę na typowe problemy związane nz|
-   |                         |rozbieżnościami - patrz:                               |
+   |                         |i upraszczniu tożsamości, patrze np.:                  |
+   |                         |:ref:`algebra`. Należy zwrócić uwagę na szczególną     |
+   |                         |przydatność Sage w rysowaniu wykresów, zwracają uwagę  |
+   |                         |na typowe problemy związane z rozbieżnościami - patrz: |
    |                         |   - :ref:`matura2015_p07.rst`                         |
    |                         |   - :ref:`matura2015_p14.rst`                         |
    |                         |   - :ref:`matura2015_p15.rst`                         |
@@ -128,7 +128,7 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 .. table:: Zakres potencjalnego zastosowania SageMath:  matematyka klasa 2 liceum.
    :widths: 10 30
    :name: tabela_sage_mat1
-   :class: longtable
+
 
 
    +-------------------------------------+----------------------------------------------+
@@ -208,70 +208,71 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 
 
 .. table:: Zakres potencjalnego zastosowania SageMath:  matematyka klasa 3 liceum.
-   :widths: 10 30
+   :widths: 15 30
    :name: tabela_sage_mat1
-   :class: longtable
 
 
-+------------------------------------------------------------------------------------------------------+
-|**Klasa 3**                                                                                           |
-+-------------------------+----------------------------------------------------------------------------+
-|Funkcja wykładnicza i    |Uczeń wykorzystując środowisko SageMath może rozwiązywać                    |
-|funkcja logarytmiczna    |zadania opisujące zjawiska fizyczne, chemiczne i biologiczne                |
-|                         |oraz modelować zagadnienia z kontekstem rzeczywistym                        |
-|                         |posługując się funkcjami wykładniczymi i funkcjami                          |
-|                         |logarytmicznymi.                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-+-------------------------+----------------------------------------------------------------------------+
-|Geometria analityczna    |Z pomocą SageMath można wykonać precyzyjne rysunki, animacje i interakcje   |
-|                         |obejmujące zagadnienia omawiane w tym dziale. Przykłady:                    |
-|                         |                                                                            |
-|                         |     - :ref:`matura2015_p16.rst`                                            |
-|                         |     - :ref:`matura2015_p18_19.rst`                                         |
-|                         |     - :ref:`matura2015_p20.rst`                                            |
-|                         |     - :ref:`matura2015_r10.rst`                                            |
-|                         |     - :ref:`matura2015_r09.rst`                                            |
-|                         |                                                                            |
-+-------------------------+----------------------------------------------------------------------------+
-|Kombinatoryka i rachunek |Wykorzystując środowisko SageMath można skonstruować symulacje procesów     |
-|prawdopodobieństwa       |losowych i przyprowadzić eksperymenty numeryczne. Przykłady:                |
-|                         |                                                                            |
-|                         | - Podejmowanie decyzji:                                                    |
-|                         |`<http://visual.icse.us.edu.pl/szkola/iCSE_2_Demokracja_CubeProject.html>`__|
-|                         |- Paradoks Monty-Halla                                                      |
-|                         |`<http://visual.icse.us.edu.pl/szkola/iCSE_4_MontyHall_CubeProject.html>`_  |
-|                         |                                                                            |
-+-------------------------+----------------------------------------------------------------------------+
-|Elementy statystyki      | System SageMath posiada wiele funkcji pozwalający na obliczanie            |
-|opisowej                 |statystycznych wielkości np. wartości średnie czy histogram.                |
-+-------------------------+----------------------------------------------------------------------------+
-|Geometria przestrzenna   |Wykorzystując możliwości graficzne pakietu SageMath uczeń                   |
-|                         |może ułatwić sobie rozwiązywanie zadań z geometrii                          |
-|                         |przestrzennej poprzez wizualizację obiektów geometrycznych                  |
-|                         |opisywanych w tych zadaniach.                                               |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-+-------------------------+----------------------------------------------------------------------------+
-|Elementy analizy         |Wszystkie zagadnienia omawiane w tym dziale uczeń może                      |
-|matematycznej            |opanować i utrwalić wykorzystując możliwości jakie daje                     |
-|                         |środowisko SageMath oraz język programowania Python.                        |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-|                         |                                                                            |
-+-------------------------+----------------------------------------------------------------------------+
+
+
+   +-----------------------------------------------------------------------------------------------------------------------+
+   |**Klasa 3**                                                                                                            |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Funkcja wykładnicza i    |Uczeń wykorzystując środowisko SageMath może rozwiązywać zadania opisujące zjawiska          |
+   |funkcja logarytmiczna    |fizyczne, chemiczne i biologiczne oraz modelować zagadnienia z kontekstem                    |
+   |                         |rzeczywistym posługując się funkcjami wykładniczymi i funkcjami                              |
+   |                         |logarytmicznymi.                                                                             |
+   |                         |                                                                                             |
+   |                         | - `Sphinx Home <http://sphinx.pocoo.org>`_                                                  |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Geometria analityczna    |Z pomocą SageMath można wykonać precyzyjne rysunki, animacje i interakcje                    |
+   |                         |obejmujące zagadnienia omawiane w tym dziale. Przykłady:                                     |
+   |                         |                                                                                             |
+   |                         |     - :ref:`matura2015_p16.rst`                                                             |
+   |                         |     - :ref:`matura2015_p18_19.rst`                                                          |
+   |                         |     - :ref:`matura2015_p20.rst`                                                             |
+   |                         |     - :ref:`matura2015_r10.rst`                                                             |
+   |                         |     - :ref:`matura2015_r09.rst`                                                             |
+   |                         |                                                                                             |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Kombinatoryka i rachunek |Wykorzystując środowisko SageMath można skonstruować symulacje procesów losowych i           |
+   |prawdopodobieństwa       |przyprowadzić eksperymenty numeryczne. Przykładem mogą być materiały ze strony               |
+   |                         |`http://visual.icse.us.edu.pl/szkola`: `Podejmowanie decyzji w grupie                        |
+   |                         |<http://visual.icse.us.edu.pl/szkola/iCSE_2_Demokracja_CubeProject.html>`_ oraz `Paradoks    |
+   |                         |Monty-Halla                                                                                  |
+   |                         |<http://visual.icse.us.edu.pl/szkola/iCSE_4_MontyHall_CubeProject.html>`_. Histogram został  |
+   |                         |również wykorzystany w scenariuszu :ref:`fale`.                                              |
+   |                         |                                                                                             |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Elementy statystyki      |System SageMath posiada wiele funkcji pozwalający na obliczanie statystycznych wielkości     |
+   |opisowej                 |np. wartości średnie czy histogram.                                                          |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Geometria przestrzenna   |Wykorzystując możliwości graficzne pakietu SageMath uczeń                                    |
+   |                         |może ułatwić sobie rozwiązywanie zadań z geometrii                                           |
+   |                         |przestrzennej poprzez wizualizację obiektów geometrycznych                                   |
+   |                         |opisywanych w tych zadaniach.                                                                |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   +-------------------------+---------------------------------------------------------------------------------------------+
+   |Elementy analizy         |Wszystkie zagadnienia omawiane w tym dziale uczeń może                                       |
+   |matematycznej            |opanować i utrwalić wykorzystując możliwości jakie daje                                      |
+   |                         |środowisko SageMath oraz język programowania Python.                                         |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   |                         |                                                                                             |
+   +-------------------------+---------------------------------------------------------------------------------------------+
 
 
 
@@ -290,25 +291,25 @@ kilka sposobów:
 
 #. Podczas zajęć w szkole
 
-#. prezentacja - za pomocą komputera i rzutnika multimedialnego
+#. Prezentacja - za pomocą komputera i rzutnika multimedialnego
    nauczyciel prezentuje uczniom przygotowany wcześniej statyczny pokaz,
-#. prezentacja interaktywna - nauczyciel prezentuje uczniom dynamiczny
+#. Prezentacja interaktywna - nauczyciel prezentuje uczniom dynamiczny
    pokaz (wykorzystując elementy interaktywne przygotowane przez siebie
    lub znalezione w Internecie),
-#. prezentacja interaktywna z udziałem uczniów - nauczyciel prezentuje
+#. Prezentacja interaktywna z udziałem uczniów - nauczyciel prezentuje
    dynamiczny pokaz, w którym niektóre czynności wykonują wybrani
    uczniowie,
-#. zajęcia w pracowni komputerowej - uczniowie pracują indywidualnie
+#. Zajęcia w pracowni komputerowej - uczniowie pracują indywidualnie
    przy komputerach lub, w przypadku niewystarczającej liczby dostępnych
    komputerów, są podzieleni na niewielkie grupy.
 
 2. Podczas pracy własnej ucznia w domu
 
-#. uczeń logując się do serwera SageMath pracuje z notatnikiem przygotowanym
-   i udostępnionym mu przez nauczyciela, zawierającym teoretyczne
-   opracowanie zagadnienie, które uczeń jest zobowiązany opanować
-   (statycznie),
-#. uczeń po zalogowaniu się do serwera SageMath uzyskuje dostęp do
+#. Uczeń logując się do serwera SageMath pracuje z notatnikiem
+   przygotowanym i udostępnionym mu przez nauczyciela, zawierającym
+   teoretyczne opracowanie zagadnienie, które uczeń jest zobowiązany
+   opanować (statycznie),
+#. Uczeń po zalogowaniu się do serwera SageMath uzyskuje dostęp do
    notatnika, w którym - aby opanować określone zagadnienie - musi
    zapoznać się z teorią na ten temat, przeanalizować rozwiązane
    przykłady oraz modyfikować je w celu rozwiązania zadanych przez
@@ -317,24 +318,116 @@ kilka sposobów:
 Z wyborem metod nauczania ściśle wiąże się odpowiedni dobór form
 organizacji procesu edukacyjnego:
 
-#. Praca w grupach - w oczywisty sposób przebiegająca głównie podczas
+#. Praca w grupach - w oczywisty sposób przebiegająca głównie podczas
    lekcji w szkole, polegająca na podziale klasy na kilkuosobowe zespoły
    i przydzieleniu im problemu do rozwiązania.
-#. Praca indywidualna - każdy uczeń pracuje samodzielnie, pod kierunkiem
+#. Praca indywidualna - każdy uczeń pracuje samodzielnie, pod kierunkiem
    nauczyciela podczas lekcji lub samodzielnie w domu. Korzyści są
    następujące:
 
-#. uczeń może we właściwym dla siebie tempie samodzielnie uzyskać
+#. Uczeń może we właściwym dla siebie tempie samodzielnie uzyskać
    odpowiedzi na postawione pytania poprzez analizę problemu i
    potencjalnych metod jego rozwiązania,
-#. uczeń może w większym stopniu utrwalić zdobytą wiedzę,
-#. uczeń nabywa i utrwala umiejętność samodzielnego zdobywania wiedzy.
+#. Uczeń może w większym stopniu utrwalić zdobytą wiedzę,
+#. Uczeń nabywa i utrwala umiejętność samodzielnego zdobywania wiedzy.
 
 Praca indywidualna wyrabia też nawyk sumiennego wykonania powierzonego
 zadania, odpowiedzialności za siebie, za swoją wiedzę i umiejętności.
 
 Zastosowania SageMath w fizyce
 ------------------------------
+
+
+
+       
+
+
+Fizyka w szkołach realizujących polską podstawę programową
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Polska podstawa programowa do fizyki nie zawiera w ogóle słowa
+“komputer”. Nie formułuje ona żadnych bezpośrednich sugestii stosowania
+TI w procesie nauczania tego przedmiotu. Nie oznacza to jednak, że
+stosowanie komputerów w dydaktyce fizyki jest zabronione.
+
+Spójrzmy na wymagania przekrojowe dla zakresu rozszerzonego w IV etapie
+edukacyjnym (LO), zawarte w części 12. podstawy programowej:
+
+Oprócz wiedzy z wybranych działów fizyki, uczeń:
+
+1) przedstawia jednostki wielkości fizycznych wymienionych w podstawie
+programowej, opisuje ich związki z jednostkami podstawowymi;
+
+2) samodzielnie wykonuje poprawne wykresy (właściwe oznaczenie i opis
+osi, wybór skali, oznaczenie niepewności punktów pomiarowych);
+
+3)  przeprowadza złożone obliczenia liczbowe, posługując się
+kalkulatorem;
+
+4) interpoluje, ocenia orientacyjnie wartość pośrednią (interpolowaną)
+między danymi w tabeli, także za pomocą wykresu;
+
+5) dopasowuje prostą y = ax + b do wykresu i ocenia trafność tego
+postępowania; oblicza wartości współczynników a i b (ocena ich
+niepewności nie jest wymagana);
+
+6) opisuje podstawowe zasady niepewności pomiaru (szacowanie niepewności
+pomiaru, obliczanie niepewności względnej, wskazywanie wielkości, której
+pomiar ma decydujący wkład na niepewność otrzymanego wyniku wyznaczanej
+wielkości fizycznej);
+
+7) szacuje wartość spodziewanego wyniku obliczeń, krytycznie analizuje
+realność otrzymanego wyniku;
+
+8) przedstawia własnymi słowami główne tezy poznanego artykułu
+popularnonaukowego z dziedziny fizyki lub astronomii.
+
+Poza punktem pierwszym i ostatnim, wymagania te idealnie wpisują się w
+możliwości oferowane przez środowisko SageMath. Python w środowisku SageMath
+oferuje wspaniałe możliwości graficzne. Format dowolnych elementów
+wykresów może być programowo zmieniany w szerokim zakresie. Same dane do
+wykresów mogą pochodzić ze skomplikowanych obliczeń na dużych zbiorach
+danych, do przeprowadzania których Python nadaje się bez porównania
+lepiej niż sugerowany przez podstawę programową kalkulator prosty.
+Przykładowo, użycie pętli do obliczeń zwalnia ucznia z mozolnych,
+nudnych i mało twórczych, wielokrotnie powtarzanych czynności.
+Zaoszczędzony czas uczeń może poświęcić na myślenie koncepcyjne, twórczą
+zabawę z parametrami i obserwację skutków tej zabawy.
+
+Jedną z najczęściej wykorzystywanych na lekcjach fizyki opcji Pythona
+jest dopasowywanie nie tylko prostej, ale też dowolnej krzywej do
+punktów pomiarowych. Podstawa programowa zakłada, że uczeń powinien
+umieć “na oko” tak przyłożyć linijkę do wykresu, aby jak najlepiej
+wpasować się w widoczny na wykresie trend, po czym narysować prostą i z
+rysunku określić jej parametry liczbowe. Bezpośrednie stosowanie metody
+najmniejszych kwadratów w celu obliczenia współczynników prostej daleko
+wykracza poza wymagania programowe (nie wspominając już o odniesieniu
+jej do krzywych). Tymczasem w Pythonie wystarczą dwie proste linijki
+kodu, aby dopasować do danych dowolną krzywą. Uczeń wcale nie musi
+rozumieć, jak program to robi - dostaje skuteczne narzędzie do
+precyzyjnego wyliczenia wszystkich potrzebnych współczynników.
+
+Kolejną często wykorzystywaną opcją jest szacowanie błędów pomiarowych.
+Uczniowie wprawdzie znają pojęcie odchylenia standardowego i procedurę
+jego obliczania, niemniej jest to żmudne i mało twórcze. Python pozwala
+rozwiązywać takie problemy jedną komendą.
+
+Największe pole do nieskrępowanej twórczości naukowej Python daje chyba
+w dziedzinie symulowania i animowania zjawisk fizycznych. Pewne efekty z
+pogranicza matematyki i fizyki są bez komputera zupełnie nie do
+ogarnięcia. Na przykład licealiście trudno “na słowo” uwierzyć, że suma
+dwóch sinusów o mało różniących się okresach daje w efekcie dudnienia. W
+SageMath możemy to łatwo pokazać, umożliwiając dodatkowo łatwą interaktywną
+zmianę amplitud, częstotliwości i przesunięć fazowych za pomocą suwaków.
+Podobnie łatwo możemy pokazać, czym jest transformata Fouriera. Zabawa
+suwakami czy kodem źródłowym pozwala uczniom łatwo przyswoić sobie sens
+pojęć, których wytłumaczenie za pomocą czystego wykładu z matematyki
+byłoby kompletnie niemożliwe, nieskuteczne i bezcelowe. Python umożliwia
+o wiele szersze stosowanie matematyki w fizyce i bezpośrednie oglądanie
+efektów swojej pracy na żywo.
+
+
 
 Fizyka w szkołach realizujących Program Dyplomowy Matury Międzynarodowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -380,82 +473,87 @@ umożliwiają uczniowi samodzielnej konstrukcji a co za tym idzie
 zrozumienia metodologii rozwiązywania omawianych procesów i zjawisk
 fizycznych.
 
-Dalszą aplikacją wykorzystania SageMath na lekcjach fizyki jest automatyczne
-prowadzenie pomiarów ”on line”  w czasie doświadczeń
-za pomocą przetworników analogowo - cyfrowych i opracowywanie danych w
-środowisku SageMath na bieżąco, zarówno przez uczniów jak i nauczyciela.
-Przykładem tego typu zastosowania jest wykonanie doświadczenia ujętego
-podstawą programową (Core) polegającego na badaniu słuszności prawa
-stygnięcia. Trudna interpretacja matematyczna polegająca na wprowadzeniu
-równań różniczkowych nie objętych programem podstawy matematyki zostaje
-zamieniona przez grupę badawczą na przykład w interpretację numeryczną,
-łatwą do wykonania w Sage. Z drugiej strony środowisko to umożliwia
-szybkie rozwiązanie równania różniczkowego, bez nadmiernej analizy
-teoretycznych aspektów samego rozwiązania. Środowisko SageMath pozwala
-również na szybką obróbkę wielkości mierzonych w układzie doświadczalnym
-i przejrzystą prezentację obliczonych wielkości pochodnych w postaci
-tabel, grafów lub wykresów. Zwalnia to uczniów od żmudnej i kłopotliwej
-pracy obliczeniowej, nieistotnej dla zrozumienia problemu, pozwala
-natomiast skoncentrować uwagę na fizycznej treści analizowanych zjawisk.
-Wyniki otrzymane w kilku seriach pomiarowych można opracować w sposób
+Dalszą aplikacją wykorzystania SageMath na lekcjach fizyki jest
+automatyczne prowadzenie pomiarów ”on line” w czasie doświadczeń za
+pomocą przetworników analogowo - cyfrowych i opracowywanie danych w
+środowisku SageMath na bieżąco, zarówno przez uczniów jak i
+nauczyciela.  Przykładem tego typu zastosowania jest wykonanie
+doświadczenia ujętego podstawą programową (Core) polegającego na
+badaniu słuszności prawa stygnięcia. Trudna interpretacja matematyczna
+polegająca na wprowadzeniu równań różniczkowych nie objętych programem
+podstawy matematyki zostaje zamieniona przez grupę badawczą na
+przykład w interpretację numeryczną, łatwą do wykonania w Sage. Z
+drugiej strony środowisko to umożliwia szybkie rozwiązanie równania
+różniczkowego, bez nadmiernej analizy teoretycznych aspektów samego
+rozwiązania. Środowisko SageMath pozwala również na szybką obróbkę
+wielkości mierzonych w układzie doświadczalnym i przejrzystą
+prezentację obliczonych wielkości pochodnych w postaci tabel, grafów
+lub wykresów. Zwalnia to uczniów od żmudnej i kłopotliwej pracy
+obliczeniowej, nieistotnej dla zrozumienia problemu, pozwala natomiast
+skoncentrować uwagę na fizycznej treści analizowanych zjawisk.  Wyniki
+otrzymane w kilku seriach pomiarowych można opracować w sposób
 statystyczny, co pozwala ocenić na ile określona metoda i przyrządy są
-dokładne.  Najbardziej okazałym przykładem zalecanym podczas realizacji
-nauczania fizyki w Programie Dyplomowym Matury Międzynarodowej może być
-zestaw ćwiczeń z mechaniki podczas którego uczniowie sporządzają wykresy
-ruchów, rozwiązują kinematyczne równanie ruchu, czy też wyznaczają
-maksymalną wysokość na którą może wznieść się ciało. W tym przypadku
-szybkość prowadzenia obliczeń jest dość istotna, gdyż przeważnie
-dotychczas na lekcjach ograniczonych czasem na wykonanie kilku serii
-pomiarowych i dokonanie obliczeń, nie wspominając już o analizie i
-wyciągnięciu wniosków z doświadczenia często rezygnowano z możliwości
-programowania bezpośrednio przez ucznia ścieżki rozwiązania. Szybkość
-obliczeniową SageMath można wykorzystać do rozwiązywania problemów bardzo
-skomplikowanych np. ruch wirującego bąka czy też bardziej
-skomplikowanych obliczeń  z zakresu fizykochemii ciała stałego,
-stanowiących część podstawy programowej w klasach z Programem Dyplomowym
-Matury Międzynarodowej. Wykonując doświadczenia przy pomocy SageMath
-uczniowie mogą sami ocenić, że stosunkowo szybko i sprawnie
-przeprowadzić nawet bardzo skomplikowane obliczenia.
+dokładne.  Najbardziej okazałym przykładem zalecanym podczas
+realizacji nauczania fizyki w Programie Dyplomowym Matury
+Międzynarodowej może być zestaw ćwiczeń z mechaniki podczas którego
+uczniowie sporządzają wykresy ruchów, rozwiązują kinematyczne równanie
+ruchu, czy też wyznaczają maksymalną wysokość na którą może wznieść
+się ciało. W tym przypadku szybkość prowadzenia obliczeń jest dość
+istotna, gdyż przeważnie dotychczas na lekcjach ograniczonych czasem
+na wykonanie kilku serii pomiarowych i dokonanie obliczeń, nie
+wspominając już o analizie i wyciągnięciu wniosków z doświadczenia
+często rezygnowano z możliwości programowania bezpośrednio przez
+ucznia ścieżki rozwiązania. Szybkość obliczeniową SageMath można
+wykorzystać do rozwiązywania problemów bardzo skomplikowanych np. ruch
+wirującego bąka czy też bardziej skomplikowanych obliczeń  z zakresu
+fizykochemii ciała stałego, stanowiących część podstawy programowej w
+klasach z Programem Dyplomowym Matury Międzynarodowej. Wykonując
+doświadczenia przy pomocy SageMath uczniowie mogą sami ocenić, że
+stosunkowo szybko i sprawnie przeprowadzić nawet bardzo skomplikowane
+obliczenia.
 
-Nadrzędnym celem modelowania procesów fizycznych jest wyrobienie poglądu
-na ich strukturę wewnętrzną (powiązania pomiędzy poszczególnymi
-elementami), poznanie praw rządzących ich przebiegiem, wyjaśnienie
-przyczyn występowania zjawisk towarzyszących określonemu procesowi, a
-także możliwość przewidywania odpowiedzi procesu na dowolne warunki.
-Osobnym zagadnieniem jest pojęcie modelu wymaganego w procesach
-poznawczych według zaleceń International Baccalaureate Organization,
-przez który rozumieć należy materialnie zrealizować układ, który,
-odzwierciedlając lub odtwarzając przedmiot badania, zdolny jest
-zastępować go tak, że jego badanie dostarcza nam nowej informacji o tym
-przedmiocie. Modele matematyczne procesów fizycznych konstruuje się na
-podstawie ogólnych zasad i praw fizyki poznawanych w cyklu nauczania.
-Przyjmuje się przy tym pewne założenia upraszczające strukturę
-wewnętrzną modelowanych procesów oraz ich powiązania z otoczeniem.
-Skonstruowany model może dostarczyć określonej wiedzy o modelowanym
-procesie, jeżeli jest modelem zasadnym dla danego procesu, to znaczy,
-jeśli odwzorowuje on przebieg procesu z zadowalającą dokładnością.
-Dysponując modelem zasadnym dla danego procesu fizycznego oraz
-wartościami wszystkich jego parametrów, można na tej podstawie
-przewidywać odpowiedz procesu na dowolne wymuszenie. Możliwość ta ma
-istotne znaczenie dla symulacji przebiegu procesów fizycznych. W
-nauczaniu fizyki w szkole korzysta się z gotowych, zasadnych modeli
-matematycznych dla analizowanych w czasie lekcji procesów fizycznych.
-Problemem, który pozwala zniwelować użycie SageMath jest poziom abstrakcji
-matematycznej, często niezrozumiały przez większość uczniów, na przykład
-zagadnienie warunków brzegowych, czy ograniczeń wynikających z zasięgu
+Nadrzędnym celem modelowania procesów fizycznych jest wyrobienie
+poglądu na ich strukturę wewnętrzną (powiązania pomiędzy
+poszczególnymi elementami), poznanie praw rządzących ich przebiegiem,
+wyjaśnienie przyczyn występowania zjawisk towarzyszących określonemu
+procesowi, a także możliwość przewidywania odpowiedzi procesu na
+dowolne warunki.  Osobnym zagadnieniem jest pojęcie modelu wymaganego
+w procesach poznawczych według zaleceń International Baccalaureate
+Organization, przez który rozumieć należy materialnie zrealizować
+układ, który, odzwierciedlając lub odtwarzając przedmiot badania,
+zdolny jest zastępować go tak, że jego badanie dostarcza nam nowej
+informacji o tym przedmiocie. Modele matematyczne procesów fizycznych
+konstruuje się na podstawie ogólnych zasad i praw fizyki poznawanych w
+cyklu nauczania.  Przyjmuje się przy tym pewne założenia upraszczające
+strukturę wewnętrzną modelowanych procesów oraz ich powiązania z
+otoczeniem.  Skonstruowany model może dostarczyć określonej wiedzy o
+modelowanym procesie, jeżeli jest modelem zasadnym dla danego procesu,
+to znaczy, jeśli odwzorowuje on przebieg procesu z zadowalającą
+dokładnością.  Dysponując modelem zasadnym dla danego procesu
+fizycznego oraz wartościami wszystkich jego parametrów, można na tej
+podstawie przewidywać odpowiedz procesu na dowolne
+wymuszenie. Możliwość ta ma istotne znaczenie dla symulacji przebiegu
+procesów fizycznych. W nauczaniu fizyki w szkole korzysta się z
+gotowych, zasadnych modeli matematycznych dla analizowanych w czasie
+lekcji procesów fizycznych.  Problemem, który pozwala zniwelować
+użycie SageMath jest poziom abstrakcji matematycznej, często
+niezrozumiały przez większość uczniów, na przykład zagadnienie
+warunków brzegowych, czy ograniczeń wynikających z zasięgu
 oddziaływań. Dostępne są więc wszystkie informacje, niezbędne do
-symulowania z wykorzystaniem komputera, przebiegu analizowanych procesów
-fizycznych. Możliwość modelowania zjawisk fizycznych za Sage,
-analizującego dane zjawisko metodą numeryczną ”krok po, kroku” należy do
+symulowania z wykorzystaniem komputera, przebiegu analizowanych
+procesów fizycznych. 
+
+Możliwość modelowania zjawisk fizycznych za SageMath, analizującego
+dane zjawisko metodą numeryczną ”krok po, kroku” należy do
 najcenniejszych z dydaktycznego punktu widzenia. W przeciwieństwie do
 opisu analitycznego model numeryczny kieruje uwagę bardziej na sposób
 rozwiązania problemu niż na formę rozwiązania. To pozwala łatwiej
-dostrzec związek między różnymi fenomenologicznie zjawiskami fizycznymi,
-ale opisywanymi przez podobne modele np. w takich zjawiskach jak:
-wymuszone drgania ciężarka na sprężynie, rozładowanie kondensatora,
-Modelowanie ukazuje związki pomiędzy procesem, a jego modelem
-matematycznym, natomiast symulacja dotyczy związków między modelem
-matematycznym procesu fizycznego i procesem mu równoważnym,
+dostrzec związek między różnymi fenomenologicznie zjawiskami
+fizycznymi, ale opisywanymi przez podobne modele np. w takich
+zjawiskach jak: wymuszone drgania ciężarka na sprężynie, rozładowanie
+kondensatora, Modelowanie ukazuje związki pomiędzy procesem, a jego
+modelem matematycznym, natomiast symulacja dotyczy związków między
+modelem matematycznym procesu fizycznego i procesem mu równoważnym,
 przeprowadzonym na podstawie tego modelu na komputerze. Modelowanie
 ukazuje związki pomiędzy procesem, a jego modelem matematycznym,
 natomiast symulacja dotyczy związków między modelem matematycznym
@@ -469,14 +567,13 @@ doświadczeń fizycznych stanowi rozszerzenie zagadnienia modelowania.
 Modelowanie ukazuje związki pomiędzy procesem, a jego modelem
 matematycznym, natomiast symulacja dotyczy związków między modelem
 matematycznym procesu fizycznego i procesem mu równoważnym,
-przeprowadzonym na podstawie tego modelu na
-komputerze. Określenie
+przeprowadzonym na podstawie tego modelu na komputerze. Określenie
 związków pomiędzy procesem fizycznym, a procesem mu równoważnym nazywa
 się identyfikacją procesu fizycznego. Symulacja komputerowa procesu
-fizycznego ma więc na celu wytworzenie wiarygodnej odpowiedzi procesu na
-dane wymuszenie i w przypadku pisania samodzielnie przez ucznia komend
-języka programowania pozwala na zagłębienie się w istotę procesu a co za
-tym idzie jego głębsze zrozumienie.
+fizycznego ma więc na celu wytworzenie wiarygodnej odpowiedzi procesu
+na dane wymuszenie i w przypadku pisania samodzielnie przez ucznia
+komend języka programowania pozwala na zagłębienie się w istotę
+procesu a co za tym idzie jego głębsze zrozumienie.
 
 W oddziałach realizujących Program Dyplomowy Matury Międzynarodowej w
 ramach określonej przez International Baccalaureate Organization 4-ej
@@ -491,7 +588,7 @@ aplikację w trakcie realizacji zajęć z zakresu Physics Standard/Higher
 Level w XXXIII Liceum Ogólnokształcącym Dwujęzycznym im. Mikołaja
 Kopernika w Warszawie:
 
- :ref:`tabela_sage_fiz`
+ 
 
 .. list-table:: Zakres potencjalnego zastosowania SageMath w fizyce z przykładami.
    :widths: 15 4 30
@@ -621,7 +718,11 @@ Kopernika w Warszawie:
         - 10.1 - Describing fields
         - 10.2 - Fields at work
      - 11h
-     - Modelowanie pola wektorowego.
+     - Modelowanie pola wektorowego. W rozdziale :ref:`wykresy`
+       znajduje się przykład wizualizacji pola wektorowego. Należy
+       zwrócić uwagę, ze rozszerzenie tego przykładu na np. pole
+       pochodzące od układu dipoli jest stosunkowo proste, stosując
+       technikę analogiczną do tej przy rysowaniu paczki falowej.
    * - Electromagnetic induction:
 
         - 11.1 - Electromagnetic induction
@@ -643,94 +744,6 @@ Kopernika w Warszawie:
        atomowych.
 
 
-
-       
-
-
-Fizyka w szkołach realizujących polską podstawę programową
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-Polska podstawa programowa do fizyki nie zawiera w ogóle słowa
-“komputer”. Nie formułuje ona żadnych bezpośrednich sugestii stosowania
-TI w procesie nauczania tego przedmiotu. Nie oznacza to jednak, że
-stosowanie komputerów w dydaktyce fizyki jest zabronione.
-
-Spójrzmy na wymagania przekrojowe dla zakresu rozszerzonego w IV etapie
-edukacyjnym (LO), zawarte w części 12. podstawy programowej:
-
-Oprócz wiedzy z wybranych działów fizyki, uczeń:
-
-1) przedstawia jednostki wielkości fizycznych wymienionych w podstawie
-programowej, opisuje ich związki z jednostkami podstawowymi;
-
-2) samodzielnie wykonuje poprawne wykresy (właściwe oznaczenie i opis
-osi, wybór skali, oznaczenie niepewności punktów pomiarowych);
-
-3)  przeprowadza złożone obliczenia liczbowe, posługując się
-kalkulatorem;
-
-4) interpoluje, ocenia orientacyjnie wartość pośrednią (interpolowaną)
-między danymi w tabeli, także za pomocą wykresu;
-
-5) dopasowuje prostą y = ax + b do wykresu i ocenia trafność tego
-postępowania; oblicza wartości współczynników a i b (ocena ich
-niepewności nie jest wymagana);
-
-6) opisuje podstawowe zasady niepewności pomiaru (szacowanie niepewności
-pomiaru, obliczanie niepewności względnej, wskazywanie wielkości, której
-pomiar ma decydujący wkład na niepewność otrzymanego wyniku wyznaczanej
-wielkości fizycznej);
-
-7) szacuje wartość spodziewanego wyniku obliczeń, krytycznie analizuje
-realność otrzymanego wyniku;
-
-8) przedstawia własnymi słowami główne tezy poznanego artykułu
-popularnonaukowego z dziedziny fizyki lub astronomii.
-
-Poza punktem pierwszym i ostatnim, wymagania te idealnie wpisują się w
-możliwości oferowane przez środowisko SageMath. Python w środowisku SageMath
-oferuje wspaniałe możliwości graficzne. Format dowolnych elementów
-wykresów może być programowo zmieniany w szerokim zakresie. Same dane do
-wykresów mogą pochodzić ze skomplikowanych obliczeń na dużych zbiorach
-danych, do przeprowadzania których Python nadaje się bez porównania
-lepiej niż sugerowany przez podstawę programową kalkulator prosty.
-Przykładowo, użycie pętli do obliczeń zwalnia ucznia z mozolnych,
-nudnych i mało twórczych, wielokrotnie powtarzanych czynności.
-Zaoszczędzony czas uczeń może poświęcić na myślenie koncepcyjne, twórczą
-zabawę z parametrami i obserwację skutków tej zabawy.
-
-Jedną z najczęściej wykorzystywanych na lekcjach fizyki opcji Pythona
-jest dopasowywanie nie tylko prostej, ale też dowolnej krzywej do
-punktów pomiarowych. Podstawa programowa zakłada, że uczeń powinien
-umieć “na oko” tak przyłożyć linijkę do wykresu, aby jak najlepiej
-wpasować się w widoczny na wykresie trend, po czym narysować prostą i z
-rysunku określić jej parametry liczbowe. Bezpośrednie stosowanie metody
-najmniejszych kwadratów w celu obliczenia współczynników prostej daleko
-wykracza poza wymagania programowe (nie wspominając już o odniesieniu
-jej do krzywych). Tymczasem w Pythonie wystarczą dwie proste linijki
-kodu, aby dopasować do danych dowolną krzywą. Uczeń wcale nie musi
-rozumieć, jak program to robi - dostaje skuteczne narzędzie do
-precyzyjnego wyliczenia wszystkich potrzebnych współczynników.
-
-Kolejną często wykorzystywaną opcją jest szacowanie błędów pomiarowych.
-Uczniowie wprawdzie znają pojęcie odchylenia standardowego i procedurę
-jego obliczania, niemniej jest to żmudne i mało twórcze. Python pozwala
-rozwiązywać takie problemy jedną komendą.
-
-Największe pole do nieskrępowanej twórczości naukowej Python daje chyba
-w dziedzinie symulowania i animowania zjawisk fizycznych. Pewne efekty z
-pogranicza matematyki i fizyki są bez komputera zupełnie nie do
-ogarnięcia. Na przykład licealiście trudno “na słowo” uwierzyć, że suma
-dwóch sinusów o mało różniących się okresach daje w efekcie dudnienia. W
-SageMath możemy to łatwo pokazać, umożliwiając dodatkowo łatwą interaktywną
-zmianę amplitud, częstotliwości i przesunięć fazowych za pomocą suwaków.
-Podobnie łatwo możemy pokazać, czym jest transformata Fouriera. Zabawa
-suwakami czy kodem źródłowym pozwala uczniom łatwo przyswoić sobie sens
-pojęć, których wytłumaczenie za pomocą czystego wykładu z matematyki
-byłoby kompletnie niemożliwe, nieskuteczne i bezcelowe. Python umożliwia
-o wiele szersze stosowanie matematyki w fizyce i bezpośrednie oglądanie
-efektów swojej pracy na żywo.
 
 Projekty międzyprzedmiotowe
 ---------------------------

@@ -18,7 +18,7 @@ Przedmioty ścisłe z SageMath
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    dlaczego_Sage.rst
    sage_w_pigulce.rst
@@ -38,10 +38,10 @@ Materiały dydaktyczne
 
 
 Matematyka
-----------
+~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
  
    granica.rst
    od_punktu_do_punktu.rst
@@ -52,10 +52,10 @@ Matematyka
 
 
 Fizyka
-------
+~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    struna.rst
    fale.rst
@@ -87,7 +87,7 @@ niemieckim i angielskim dostepne na stronie
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    matura2015_p01
@@ -115,7 +115,9 @@ niemieckim i angielskim dostepne na stronie
 Zakończenie
 -----------
 
+
 .. toctree::
+
    :maxdepth: 1
 
    warunki_wdrozenia.rst
