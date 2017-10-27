@@ -127,7 +127,7 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
    
 .. table:: Zakres potencjalnego zastosowania SageMath:  matematyka klasa 2 liceum.
    :widths: 10 30
-   :name: tabela_sage_mat1
+   :name: tabela_sage_mat2
 
 
 
@@ -209,7 +209,7 @@ autorstwa Marcina Kurczaba, Elżbiety Kurczab i Elżbiety Świdy
 
 .. table:: Zakres potencjalnego zastosowania SageMath:  matematyka klasa 3 liceum.
    :widths: 15 30
-   :name: tabela_sage_mat1
+   :name: tabela_sage_mat3
 
 
 
@@ -862,8 +862,52 @@ punkt, lub grupa punktów stanowią dane do tematów: 
 Ten projekt został zrealizowany w wielu oddziałach, uczniowie tworzyli
 strony internetowe ze sprawozdaniami z wirtualnych podróży.
 
-Fizyka + język angielski {AO}
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Fizyka, matematyka + język angielski
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Wykorzystanie rezultatów pozwala na rozwój umiejętności leksykalnych w
+obrębie języka angielskiego inżynieryjno-technicznego. Współczesne
+formy wykorzystania w pracy ucznia przedmiotów
+matematyczno-przyrodniczych elementów technologii informacyjnej i
+komunikacyjnej nie stanowi tylko prawnego obowiązku, ale przede
+wszystkim ma za zadanie urozmaicać przygotowanie do konkursów/olimpiad
+i stanowić w jej odbiorze użyteczne narzędzie oraz element korygujący
+odbiór toku logicznego zajęć.
+
+Może to być wykorzystywane jako forma pracy z uczniem zdolnym. Uczeń -
+olimpijczyk nie może wyobrażać sobie pracy, bez użycia współczesnych,
+co warte podkreślenia, aktualnie kształconym pokoleniom, technik
+informatycznych. Na bieżąco musi doskonalić swoje umiejętności obsługi
+programów komputerowych i języków programowania. Choć wiele
+realizowanych tematów będzie mu nieznanych, ponieważ dopiero w trakcie
+studiów magisterskich lub doktoranckich realizuje się zajęcia z
+języków programowania użytkowanych w chemii i fizyce, to jednak
+nabycie nowych umiejętności aplikacji komend językowych do
+rozwiązywania problemów natury rachunkowej, niedostępnych uczniom
+realizujących polską podstawę programową matematyki, nawet w zakresie
+rozszerzonym pozostaje wciąż w ich gestii.
+
+W codziennej, szkolnej pracy, uczeń wykorzystuje technologię
+komputerową głównie do tworzenia różnorodnych testów użytkowych,
+diagnoz, narzędzi badawczych i ankiet. Własny warsztat pracy jest
+uporządkowany i na bieżąco udoskonalany. Wszystkie te programy i
+aplikacje charakteryzuje stosunkowo intuicyjna i oparta o proste
+relacje metoda ich konstrukcji, a co za tym brak możliwości zmian i
+wykonywania w nich innych niż umożliwione przez producenta
+operacji. Zarówno z punktu widzenia nauczyciela, jak i ucznia,
+będącego podmiotem procesu nauczania nie bez znaczenia pozostaje
+możliwość rozwiązywania problemów określonych w podstawie programowej
+oraz wykraczających poza jej ramy, w oparciu o szerokie spektrum metod
+znajdujących zastosowanie zarówno z punktu widzenia uczącego, jak i
+nauczanego. Olimpijczyk podejmujący analizę zagadnień obecnej oraz
+powstającej na skutek planowanej reformy systemu oświaty podstawy
+programowej przedmiotów takich jak fizyka i chemia i napotyka na wiele
+treści, których zrozumienie wymaga zastosowania złożonego rachunku z
+elementami analizy matematycznej. Zajęcia te zdecydowanie ułatwią mu
+pozyskiwanie wiedzy olimpijskiej z użyciem współczesnych metod rozwoju
+wiedzy.
+
+
 
 Realizacja projektu pozwoliła też (co nie było pierwotnym zamierzeniem
 pomysłodawców całego przedsięwzięcia) na integrację między przedmiotami
@@ -901,6 +945,16 @@ standardowego języka angielskiego, prowadzą oni w klasach ścisłych
 przedmiot o nazwie język angielski techniczny. Udział w projekcie był
 dla nich okazją, by zastosować nauczane słownictwo i zwroty w żywym
 tekście naukowym nadzorowanym przez fizyka.
+
+
+
+
+
+
+
+
+
+
 
 Projekty koncepcyjne
 ~~~~~~~~~~~~~~~~~~~~

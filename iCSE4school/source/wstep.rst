@@ -81,6 +81,31 @@ i fizyki w szkołach ponadgimnazjalnych na podstawie realizacji
 pilotażowego programu zajęć w wybranych szkołach.
 
 
+Wypracowane w projekcie icse4school rezultaty pracy intelektualnej
+stanowią pomoc w realizacji podstawy programowej narodowej jak i
+przypisanej dla uczestników Programu Dyplomowego Matury
+Międzynarodowej. Jakościowo, stanowią rozszerzenie bazowej wiedzy
+ucznia, dostosowując zdolności rachunkowe uczestnika do wymaganego
+podczas udziału w konkursach i olimpiadach wykraczających poza obie
+podstawy programowe. Nakierowują uczestnika na innowacyjne metody
+rozwiązywania klasycznych problemów i zagadnień naukowych z dziedziny
+matematyki, informatyki i fizyki. W przypadku uczniów realizujących
+zajęcia w szkolnych laboratoriach badawczych z dziedziny fizyki lub
+chemii stanowią ułatwienie podczas procesu opracowywania danych
+laboratoryjnych, zgromadzonych podczas zajęć. Obrazują mniej
+rozpowszechnione metody takie jak metody numeryczne czy rozwiązywanie
+skomplikowanych równań różniczkowych, które nie są objęta obiema
+podstawami programowymi. Innowacyjność projektu polega na wskazaniu
+zastosowania powyższych metod do rozwiązywania klasycznych problemów
+nie wyłączając z nich zadań egzaminacyjnych. Istotą rezultatów
+intelektualnych winien być wzrost poziomu wynikowego egzaminów
+realizowanych przez uczestników oraz większa pula osiąganych tytułów
+finalistów i laureatów konkursów przedmiotowych z zakresu nauk
+przyrodniczych i ścisłych, wśród czynnych odbiorców projektu.
+
+
+
+
 Przedmiotem projektu była nauka programowania w języku Python z
 użyciem środowiska Sage oraz wykorzystanie tej umiejętności do
 rozwiązywania problemów, dotyczących przedmiotów: matematyka, fizyka,
@@ -155,8 +180,21 @@ jest także obserwowane ostatnio zapotrzebowanie na naukę programowania
 (kodowania) oraz świadomość znacznego braku ludzi potrafiących
 programować na rynku pracy.  Zachęcając do wykorzystania opracowanych
 w projekcie ICSE4 materiałów dydaktycznych, zapraszamy do zgłaszania
-uwag.  
+uwag.
 
+
+W projekcie oraz tworzeniu niniejszej metodologii wzięli udział
+przedstawiciele następujących instytucji:
+
+ - Nauczyciele: Jolanta Drogoń, Łukasz Głaz, Krzysztof Jarczewski,
+   Mirosław Malinowski, Justyna Matejczyk, Adam Ogaza, Krzysztof Oleś,
+   Katarzyna Sikora, Hanna Stachera, Mariola Strojny,
+ - Jonas van den Brink, Vigdis Holta, Marie Roald, Freyja Jørgensen,
+   z Simula School of Research and Innovation, Oslo
+ - Manuel Milling, Severin Wünsch i profesor Gert Ingold z Uniwersytetu w Augsburgu
+ - Marcin Kostur, Uniwersytet Śląski
+ - Magdalena Hampel, Joanna Klekowska i Marta Margiel z Funcacji EduRes 
+            
 Autorzy!
 
 

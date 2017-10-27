@@ -10,10 +10,15 @@ Prezentowany scenariusz jest wynikiem zajęć (zainspirowanych podręcznikiem "M
 Struktura materiału jest swego rodzaju rozmową z uczestnikiem zajęć: dopuszczamy więc podejście - także językowe - typu nieformalnego. Użyjemy komputera do zilustrowania **prostego** problemu, używając **podstawowego** programowania.
 
 - Dlaczego podstawowego?
+
 Nie znamy się bowiem na Sage'u zbyt dobrze.
 
 - Dlaczego prostego?
-Chcemy bowiem **zafrapować** zagadnieniem matematycznym uważanym za nudne. Większość uczniów nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb.
+
+Chcemy bowiem **zafrapować** zagadnieniem matematycznym uważanym za
+nudne. Większość uczniów nie lubi rachunków - my spróbujemy więc użyć
+komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one
+do zasygnalizowania pewnych nieporozumień w używaniu liczb.
 
 
 .. only:: html
