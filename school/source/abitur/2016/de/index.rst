@@ -16,6 +16,10 @@ Stochastik
 
 .. toctree::
    :maxdepth: 1
+   
+   Aufgabe 1 <baumdiagramme>
+   Aufgabe 2 <muenzwurf>
+   Aufgabe 3 <pseminar>
 
 Geometrie
 .........
@@ -23,3 +27,6 @@ Geometrie
 .. toctree::
    :maxdepth: 1
 
+   Aufgabe 1 <wuerfel>
+   Aufgabe 2 <geraden>
+   Aufgabe 3 <ebenen>
