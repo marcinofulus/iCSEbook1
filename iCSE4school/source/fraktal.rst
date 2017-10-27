@@ -26,7 +26,8 @@ Olesia.
       kolejności występowania.
 
 
-.. rubric:: Wstęp - generacja samopodobnych objektów
+Wstęp - generacja samopodobnych objektów
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 Do dalszej analizy potrzebujemy algorytmów do generacji samopodobnych
@@ -166,7 +167,7 @@ objekcie wymiarze rówwym jeden
 
 
 Wymiar pudełkowy (Mińkowskiego)
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Wymiar Mińkowskiego można okresli rozważając jak długość zależy od
 skali, tzn. "linijki", którą przeprowadzamy pomiar:
@@ -271,7 +272,7 @@ postępowania jest jego niezależność od źródła danych.
 
 
 Box counting
-------------
+^^^^^^^^^^^^
 
 Wyobraźmy sobie, ze robimy zdjęcie naszego objektu aparatem cyfrowym o
 pewnej roździelczości. Potem zliczamy tylko te pixele, na których
@@ -347,7 +348,7 @@ dowolnej kolejności. Np. takie generowane w grze w chaos.
 
 
 Podsumowanie
-------------
+^^^^^^^^^^^^
 
 
 Powyższe przykłady zachęcają do przeprowadzenie eksperymetnów z
@@ -356,6 +357,4 @@ brzegowej czy rzek i zbadać ich wymiar fraktalny. Szczególnie prostą i
 uniwersalną wydaje się metodą "Box counting", która w języku Python,
 korzystając z bibliotek zawartych w SageMath zawiera się w kilku
 liniach kodu.
-
-
 
