@@ -193,7 +193,7 @@ przedstawiciele następujących instytucji:
    z Simula School of Research and Innovation, Oslo
  - Manuel Milling, Severin Wünsch i profesor Gert Ingold z Uniwersytetu w Augsburgu
  - Marcin Kostur, Uniwersytet Śląski
- - Magdalena Hampel, Joanna Klekowska i Marta Margiel z Funcacji EduRes 
+ - Magdalena Hampel, Joanna Klekowska i Marta Margiel z Fundacji EduRes 
             
 Autorzy!
 

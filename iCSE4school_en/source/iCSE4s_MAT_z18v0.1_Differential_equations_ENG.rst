@@ -1,15 +1,18 @@
 .. -*- coding: utf-8 -*-
 
-Please write a title for this worksheet!
-========================================
+First order differential equations
+==================================
 
-**FIRST ORDER DIFFERENTIAL EQUATIONS**
 
-**Lesson Plan**
 
-**Miroslaw Malinowski**
+Lesson Plan
+-----------
 
-Based on the book C. Quinn, C. Sangwin, R. Haese. M. Haese, "Mathematics for the international student. Mathematics HL (Option): Calculus, Haese and Harris Publications 2013.
+
+
+Based on the book C. Quinn, C. Sangwin, R. Haese. M. Haese,
+"Mathematics for the international student. Mathematics HL (Option):
+Calculus, Haese and Harris Publications 2013.
 
 We will only consider differential equations of the form:
 
@@ -19,7 +22,8 @@ These are known as first order differential equations since there is only one de
 
 **A function**   :math:`y=y(x)`  **is said to be a solution**  of a differential equation if it satisfies the differential equation for all values of  :math:`x`  **  in the domain of  :math:`y` .
 
-**SLOPE FIELDS**
+SLOPE FIELDS
+------------
 
 Given any first order differential equation of the form  :math:`\normalsize f(x,y) \Large \frac{dy}{dx} \normalsize +g(x,y)=0`, where  :math:`\normalsize y=y(x)`  we can write
 
@@ -89,7 +93,8 @@ b) Sketch the isocline corresponding to:
 
 
 
-**SEPARABLE DIFFERENTIAL EQUATIONS**
+SEPARABLE DIFFERENTIAL EQUATIONS
+--------------------------------
 
 **Differential equations which can be written in the form  :math:`\large \frac{dy}{dx} \normalsize = \large \frac{f(x)}{g(y)}`, where  :math:` y=y(x)`, are known as separable differential equations.**
 
@@ -145,7 +150,8 @@ d)  :math:`x \Large \frac{dy}{dx} \normalsize = \cos^2(y)`,   :math:`y(e) = \lar
 
 
 
-**HOMOGENEOUS DIFFERENTIAL EQUATIONS**
+HOMOGENEOUS DIFFERENTIAL EQUATIONS
+----------------------------------
 
 **Differential equations of the form  :math:` \large \frac{dy}{dx} \normalsize = f\large \left ( \frac{y}{x} \right)`, where  :math:`\normalsize y=y(x)` are known as homogeneous differential equations .**
 
@@ -176,7 +182,8 @@ Use the substitution  :math:`y=vx`, where  :math:`v=v(x)`, to find general solut
 
 .. end of output
 
-**THE INTEGRATING FACTOR METHOD**
+THE INTEGRATING FACTOR METHOD
+-----------------------------
 
 Suppose a first order linear differential equation is of the form  :math:`\Large \frac{dy}{dx} \normalsize +P(x)y=Q(x)`, where  :math:`\normalsize y=y(x)`.
 

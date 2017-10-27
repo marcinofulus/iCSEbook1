@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Please write a title for this worksheet!
-========================================
+Absolute value
+==============
 
 O ne of the most important term referring to real numbers is absolute value. The definition says that the absolute value of real number a (denoted by \|a\|) we call:
 

@@ -141,7 +141,8 @@ prostoty wszystkie amplitudy sa równe.
          y1(t) = a*sin(omega1*(t-t0))
          y2(t) = a*sin(omega2*(t-t0)+phase)
          y(t) = y1(t)+y2(t)
-         title = '$t_0 = %4.2f,\ \omega_1 = %5.2f,\ \omega_2 = %5.2f$' % (t0, omega1, omega2)
+         title = '$t_0 = %4.2f,\ \omega_1 = %5.2f,\ \omega_2 = %5.2f$'%\
+             (t0, omega1, omega2)
          range = (t, 0, 10)
          plt = plot(y, range, ymin=-2*a, ymax=2*a, title=title, **kwargs)
          if plot_envelope:
@@ -239,7 +240,8 @@ Animacja wskazująca wpływ drugiej częstotliwości na częstość pulsacji.
 
 .. sagecellserver::
 
-     plots = [beat(omega2=omega2, plot_envelope=False, figsize=(4, 2)) for omega2 in sxrange(5, 15, 0.2)]
+     plots = [beat(omega2=omega2, plot_envelope=False, figsize=(4, 2)) \
+      for omega2 in sxrange(5, 15, 0.2)]
      animate(plots).show()
 
 .. end of output
@@ -257,8 +259,8 @@ Fala stojąca jako złożenie dwóch fal biegnących w przeciwne strony. Uczniow
      delay=30
      t_max= 7
      sum( [plot(A*sin(omega*(t/delay-x/v))+\
-          A*sin(omega*(t/delay+x/v)),(x,0,20),figsize=6,color=hue(t/t_max)) \
-          for t in srange(0,t_max,1.0)] )
+      A*sin(omega*(t/delay+x/v)),(x,0,20),figsize=6,color=hue(t/t_max))\
+       for t in srange(0,t_max,1.0)] )
 
 .. end of output
 
@@ -361,7 +363,9 @@ Złożenie impulsu biegnącego i odbitego.
          x0 = -nL*2*pi/k
          x1 = (nL-nl)*2*pi/k  
          plt = Graphics()
-         plt += plot( lambda x:pulse1(k*(x-x0)-c*t)+pulse1(k*(x-x1)+c*t),(x,x0,0),figsize=(12,4),thickness=1,ymin=-2,ymax=2)
+         plt += plot( lambda x:pulse1(k*(x-x0)-c*t)+\
+          pulse1(k*(x-x1)+c*t),(x,x0,0),figsize=(12,4),\
+          thickness=1,ymin=-2,ymax=2)
          plt.show()
 
 .. end of output
