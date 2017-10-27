@@ -117,13 +117,6 @@ Zakończenie
    ewaluacja.rst
 
 
-Materiały dydaktyczne - wersje niepoprawione
---------------------------------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   modulx.rst
 
 
 
