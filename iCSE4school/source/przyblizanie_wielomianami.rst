@@ -1,12 +1,12 @@
 .. -*- coding: utf-8 -*-
 
-Przybliżanie wielomianami.
+Przybliżanie wielomianami
 ==========================
 
 O scenariuszu
 ^^^^^^^^^^^^^
 
-Scenariusz ten jest materiałem do przeprowadzenie 3h zajęć
+Scenariusz ten jest materiałem do przeprowadzenia 3h zajęć
 lekcyjnych. 
 
 Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
@@ -21,7 +21,7 @@ Jarczewskiego.
 
       W każdym z okien programu można zmieniać liczby, tekst, zmienne
       lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
+      działać, bo po odświeżeniu strony powróci do ustawień
       początkowych.  Często następny kod wynika z poprzedniego, więc
       należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
@@ -55,7 +55,7 @@ Powyżej w nawiasach jest wpisany szczegółowy zakres nauczanych treści.
 
 
 
-Część teoretyczna.
+Część teoretyczna
 ^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Definicja silni.
@@ -235,7 +235,7 @@ Pochodna funkcji jest oczywiście funkcją, więc możemy obliczyć wartość po
         \end{array}
 
 
-Informatyczne obliczanie wielomianów.
+Informatyczne obliczanie wielomianów
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: Funkcja liniowa.
@@ -359,7 +359,7 @@ W SageMath możemy łatwo rozwiązać powyższe równanie, wystarczy zastosować
        :name: parabola2     
     
 
-Wielomian.
+Wielomian
 ^^^^^^^^^^
 
 Oto przykład dla kilku losowych punktów. Otrzymana funkcja jest wielomianem.
@@ -548,8 +548,8 @@ Znamy już wzór Taylora. Teraz możemy uprościć nasze obliczenia i użyć wbu
        :name: t_sin*x^2 
 
 
-Podsumowanie Autora
-^^^^^^^^^^^^^^^^^^^
+Wnioski
+^^^^^^^^
 
 Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE4school
 w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem

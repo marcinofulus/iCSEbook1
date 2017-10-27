@@ -1,4 +1,4 @@
-RSA szyfrowanie asymetryczne. 
+RSA szyfrowanie asymetryczne
 =============================
 
 
@@ -20,13 +20,13 @@ Jarczewskiego.
 
       W każdym z okien programu można zmieniać liczby, tekst, zmienne
       lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
+      działać, bo po odświeżeniu strony powróci do ustawień
       początkowych.  Często następny kod wynika z poprzedniego, więc
       należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
 
 
-Wstęp.
+Wstęp
 ^^^^^^  
     
 **Uczniowie powinni znać i  rozumieć:**
@@ -174,7 +174,7 @@ Dla a = 35 i p = 5 lub p = 7 liczby nie spełniają założeń twierdzenia. Moż
         print(p, 35^(p-1) % p)
 
 
-Część informatyczna.
+Część informatyczna
 ^^^^^^^^^^^^^^^^^^^^
 
 

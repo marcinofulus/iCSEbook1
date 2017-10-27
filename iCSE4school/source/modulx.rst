@@ -1,185 +1,208 @@
-.. -*- coding: utf-8 -*-
+Wartość bezwzględna
+~~~~~~~~~~~~~~~~~~~~~
 
-Absolute value
-==============
+O scenariuszu
+^^^^^^^^^^^^^
 
-O ne of the most important term referring to real numbers is absolute value. The definition says that the absolute value of real number a (denoted by \|a\|) we call:
+Scenariusz ten jest materiałem do przeprowadzenia 1 godziny zajęć lekcyjnych. 
 
-• Number a, if a isn’t negative
+Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
+prowadzonych w latach 2015-2017 w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie przez Mariolę Strojny.
 
-• The additive inverse of a number a, if a is negative
+.. only:: html
 
-The symbolic notation
+   .. admonition::  Uwaga!
 
-\|a\|= a dla a>=0
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu strony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
-\-a dla a<0
-
- 
-
-Let’s follow some examples which show us how the graphs containing the modulus are developed.
-
-The linear function is a good object to depict how the transformations of the function compositions work.
-
-Let f(x)=x
-
-
-::
-
-    sage: var('x')
-    sage: f(x)=x
-    sage: plot(f,x,-10,10,color='green',thickness=2)
+Wstęp
+^^^^^
 
 
-.. end of output
+Jednym z ważnych pojęć dnoszących się do liczb rzeczywistych jest wartość bezwzględna. Jej definicja mówi, wartość bezwzględna liczby rzeczywistej :math:`a` jest równa:
 
-We are creating the graph of function f(x)=\|x\|. According to definition of absolute value, part of the graph with the negative values reflects above, the rest of graph doesn’t change.
+• liczbie :math:`a`, jeśli :math:`a` jest nieujemna,
 
+• liczbie przeciwnej do :math:`a`, jeśli :math:`a` jest ujemna;
 
-::
+co symbolicznie wyrażamy w następujący sposób
 
-    sage: var ('x')
-    sage: f(x)=abs(x)
-    sage: plot(f,x,-10,10, color='green',thickness=2)
+.. math:: 
 
-
-.. end of output
-
-The graph f(x)=\|x\|, we are translating by a vector [0, \-2], now we are receiving function f(x)=\|x\|\-2.
-
-
-::
-
-    sage: var ('x')
-    sage: f(x)=abs(x)-2
-    sage: plot(f,x,-10,10, color='green',thickness=2)
+    |a|= \left\{
+    \begin{array}{cl}
+    a & \textrm{ dla } a >= 0,\\
+    -a & \textrm{ dla } a<0
+    \end{array}
+    \right..
 
 
-.. end of output
 
-On this graph once again we are putting the absolute value and now we have f(x)=\|\|x\|\-2\|.
+Zobaczmy to!
+^^^^^^^^^^^^
 
 
-::
+Przyjrzyjmy się przykładom, które pokazują nam, jak tworzone są wykresy funkcji zawierających wartość bezwzględną.
 
-    sage: var ('x')
-    sage: f(x)=abs(abs(x)-2)
-    sage: plot(f,x,-10,10, color='green',thickness=2)
+Funkcja liniowa jest dobrym obiektem do zobrazowania przekształcenia, niech :math:`f(x)=x`.
+
+
+.. sagecellserver::
+
+    var('x')
+    f(x)=x
+    plot(f,x,-10,10,color='green',thickness=2, figsize=4)
 
 
 .. end of output
 
-It can be seen that translation by a vector, whose second coordinate is negative and putting on another modulus change the function’s graph and in consequence its properties.
-
-It is worth taking a glance at quadratic function f(x)=x <sup>2, </sup> which is translated by a vector [0, \-2] and than it is transformed to a form:  f(x)=\|x <sup>2</sup>  – 2\|.
-
-Now we can also change the value of parameter 'm' and fallow it on the graph.
+Sporządźmy wykres funkcji :math:`f(x)=|x|`. Zgodnie z definicją wartości bezwzględnej, odpowiedniemu odbiciu podlega część wykresu funkcji liniowej (położona poniżej osi :math:`OX`).
 
 
-::
+.. sagecellserver::
 
-    sage: var('x')
-    sage: m=10
-    sage: f(x)=abs(abs(x^2)-2)
-    sage: g(x)=m 
-    sage: wykres_f=plot(f,x,-10,10,color='green',thickness=2)
-    sage: wykres_g=plot(g,x,-10,10,color='red',thickness=2,linestyle="--")
-    sage: show(wykres_f+wykres_g)
+    var ('x')
+    f(x)=abs(x)
+    plot(f,x,-10,10, color='green',thickness=2, figsize=4)
 
 
 .. end of output
 
-On one graph we showed some of the basic trigonometric functions f(x)=sinx, g(x)=cosx.
+Następnie: wykres funkcji :math:`f(x)=|x|` przesuńmy o wektor :math:`[0, -2]`- otrzymamy wykres funkcji :math:`f(x)=|x|-2`.
 
 
-::
+.. sagecellserver::
 
-    sage: var ('x')
-    sage: f(x)=sin(x)
-    sage: g(x)=cos(x)
-    sage: wykres_f=plot(f,x,-5,5, color='green',thickness=2, linestyle=":")
-    sage: wykres_g=plot(g,x,-5,5, color='red', thickness=2, linestyle="--")
-    sage: h(x)=abs(sin(x))
-    sage: t(x)=abs(cos(x))
-    sage: wykres_h=plot(h,x,-5,5, color='yellowgreen', thickness=2)
-    sage: wykres_t=plot(t,x,-5,5, color='pink', thickness=2)
-    sage: show(wykres_f+wykres_g+wykres_h+wykres_t)
+    var ('x')
+    f(x)=abs(x)-2
+    plot(f,x,-10,10, color='green',thickness=2, figsize=4)
 
 
 .. end of output
 
-The function which students learn at high school is logarithmic function, which range of the function is set of the real numbers. We can observe how its graph changes when we have f(x)=lnx and g(x)=\|lnx\|.
+
+Ponownie zastosujmy wartość bezwzględną - otrzymamy wykres funkcji :math:`f(x)=||x|-2|`.
 
 
-::
+.. sagecellserver::
 
-    sage: var ('x')
-    sage: f(x)=abs(ln(x))
-    sage: wykres_f=plot(f,x,0,8,color='green',thickness=3)
-    sage: g(x)=ln(x)
-    sage: wykres_g=plot(g,x,0,8,color='yellowgreen', thickness=3, linestyle='--')
-    sage: show(wykres_f+wykres_g)
-
-
-.. end of output
-
-And now some other searches of “school” functions. When we drew g(x)=\|x <sup>2</sup> \| we see that nothing changes, but what it we have g(x)=\|x <sup>3</sup> \|?
-
-
-::
-
-    sage: var ('x')
-    sage: f(x)=abs(x^2)
-    sage: wykres_f=plot(f, x, -5,5, color='orange', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
-    sage: g(x)=abs(x^3)
-    sage: wykres_g=plot(g, x, -5,5, color='green', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
-    sage: h(x)=x^3
-    sage: wykres_h=plot(h, x, -5,5, color='yellowgreen', linestyle=':', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
-    sage: show(wykres_f+wykres_g+wykres_h)
+    var ('x')
+    f(x)=abs(abs(x)-2)
+    plot(f,x,-10,10, color='green',thickness=2, figsize=4)
 
 
 .. end of output
 
-Let’s move into the next part of our lesson. It is the interactive element – very useful for the students.
 
-Here we have a graph with a table where we can choose one of two functions: sin(x) or cos(x). We can also create a range of our function and observe how the graph changes. It is a great experiment to learn how trigonometric functions works.
-
-
-::
-
-    sage: @interact
-    sage: def para(n1= selector (values =(sin(x),cos(x))),n2 = slider(1,5,1,default = 1)):
-    ...       var('x')
-    ...       p = plot((n1)^n2,-6,6,color='green',thickness=2)
-    ...       
-    ...       show(p)
-    <html>...</html>
+Warto przyjrzeć się wykresowi funkcji kwadratowej :math:`f(x)=x^2`, przesuniętemu o wektor :math:`[0, -2]` po zastosowaniu wartości bezwzględnej - otrzymujemy :math:`f(x)=|x^2– 2|`. Możemy również zmieniać wartość parametru :math:`m`.
 
 
-.. end of output
+.. sagecellserver::
 
-The next graph is a bit more complicated but it has more functions and options which allow students to see different transformations. We can take trigonometric, logarithmic function or square root of ‘x’ and then put on a absolute value. What is more we can choose an exponent, angular coefficient  or y\-intercept. Let’s try it for yourselves.
-
-
-::
-
-    sage: @interact
-    sage: def para_(n2=selector(values =(sin(x),cos(x),ln(x),sqrt(x),(x),), label="choose the funktion"), 
-    ...             n3=selector(values =((x),abs(x)), label="change function on the absolut value"),
-    ...             n1=slider(-1,5,1,default = 1, label="choose the exponent of function ")):
-    ...       
-    ...       var('x')
-    ...       p=n3(n2)^n1
-    ...       
-    ...       p1= plot(p,-10,10, color='orange', thickness=3) 
-    ...      
-    ...       show(p1)
-    ...       print (p)
-    <html>...</html>
+    var('x')
+    m=10
+    f(x)=abs(abs(x^2)-2)
+    g(x)=m 
+    wykres_f=plot(f,x,-10,10,color='green',thickness=2)
+    wykres_g=plot(g,x,-10,10,color='red',thickness=2,linestyle="--")
+    show(wykres_f+wykres_g, figsize=4)
 
 
 .. end of output
 
-Mariola Strojny , 19th October 2016
+Rozważmy w tym samym ukladzie współrzędnych wykresy podstawowych funkcji trygonometrycznych: :math:`f(x)=\sin x` oraz :math:`g(x)=\cos x`.
+
+
+.. sagecellserver::
+
+    var ('x')
+    f(x)=sin(x)
+    g(x)=cos(x)
+    wykres_f=plot(f,x,-5,5, color='green',thickness=2, linestyle=":")
+    wykres_g=plot(g,x,-5,5, color='red', thickness=2, linestyle="--")
+    h(x)=abs(sin(x))
+    t(x)=abs(cos(x))
+    wykres_h=plot(h,x,-5,5, color='yellowgreen', thickness=2)
+    wykres_t=plot(t,x,-5,5, color='pink', thickness=2)
+    show(wykres_f+wykres_g+wykres_h+wykres_t, figsize=4)
+
+
+.. end of output
+
+
+Kolejną z funkcji, które poznają uczniowie w szkole średniej, jest funkcja logarytmiczna  :math:`f(x)=\log x`. Po zastosowaniu wartości bezwzględnej - otrzymujemy wykres funkcji :math:`g(x)=|\log x|`.
+
+
+.. sagecellserver::
+
+    var ('x')
+    f(x)=abs(log(x))
+    wykres_f=plot(f,x,0,8,color='green',thickness=3)
+    g(x)=log(x)
+    wykres_g=plot(g,x,0,8,color='yellowgreen', thickness=3, linestyle='--')
+    show(wykres_f+wykres_g, figsize=4)
+
+
+.. end of output
+
+Narysujmy wykresy innych funkcji "szkolnych": :math:`g(x)=|x^2|` oraz :math:`g(x)=|x^3|`.
+
+
+.. sagecellserver::
+
+    var ('x')
+    f(x)=abs(x^2)
+    wykres_f=plot(f, x, -5,5, color='orange', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
+    g(x)=abs(x^3)
+    wykres_g=plot(g, x, -5,5, color='green', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
+    h(x)=x^3
+    wykres_h=plot(h, x, -5,5, color='yellowgreen', linestyle=':', xmin=-5, xmax=5, ymin=-10, ymax=10, thickness=2)
+    show(wykres_f+wykres_g+wykres_h, figsize=4)
+
+
+.. end of output
+
+
+Przejdźmy do następnej części naszej lekcji: wykorzystamy element interaktywny.
+
+Oto wykres z tabelą, w której możemy wybrać jedną z dwóch funkcji: :math:`\sin x` or :math:`\cos x`. Możemy również stworzyć zakres naszej funkcji i obserwować jak zmienia się wykres. To świetny eksperyment, aby dowiedzieć się, jak działają funkcje trygonometryczne.
+
+
+.. sagecellserver::
+
+    @interact
+    def para(n1= selector (values =(sin(x),cos(x))),n2 = slider(1,5,1,default = 1)):
+        p = plot((n1)^n2,-6,6,color='green',thickness=2)
+        show(p, figsize=4)
+
+.. end of output
+
+Następny wykres jest trochę bardziej skomplikowany, ale ma więcej funkcji i opcji, które pozwalają uczniom zobaczyć różne modyfikacje funkcji: trygonometrycznych, logarytmicznych lub pierwiastka kwadratowego.
+
+
+.. sagecellserver::
+
+      @interact
+    def para_(n2=selector(values =(sin(x),cos(x),ln(x),sqrt(x),(x),), label="wybierz funkcję"),
+    n3=selector(values =((x),abs(x)), label="zastosuj wartość bezwzględną"), n1=slider(-1,5,1,default = 1, label="wybierz wykładnik potęgi ")):
+        var('x')
+        p=n3(n2)^n1
+        p1= plot(p,-10,10, color='orange', thickness=3)
+        show(p1, figsize=4)
+        print (p)
+
+
+.. end of output
+
+
+Podsumowanie
+^^^^^^^^^^^^^
+
+???
+
 
 

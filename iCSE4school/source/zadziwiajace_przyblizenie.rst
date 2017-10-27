@@ -5,9 +5,15 @@ Zadziwiające przybliżenie
 O scenariuszu
 ^^^^^^^^^^^^^
 
-Niniejszy projekt jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Został on opracowany w ramach projektu iCSE4school na podstawie lekcji prowadzonych tej szkole. 
+Prezentowany scenariusz jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z części).
 
-Scenariusz ten stanowi  materiał do przeprowadzenie 2h zajęć lekcyjnych. 
+Struktura materiału jest swego rodzaju rozmową z uczestnikiem zajęć: dopuszczamy więc podejście - także językowe - typu nieformalnego. Użyjemy komputera do zilustrowania **prostego** problemu, używając **podstawowego** programowania.
+
+- Dlaczego podstawowego?
+Nie znamy się bowiem na Sage'u zbyt dobrze.
+
+- Dlaczego prostego?
+Chcemy bowiem **zafrapować** zagadnieniem matematycznym uważanym za nudne. Większość uczniów nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb.
 
 
 .. only:: html
@@ -16,33 +22,19 @@ Scenariusz ten stanowi  materiał do przeprowadzenie 2h zajęć lekcyjnych.
 
       W każdym z okien programu można zmieniać liczby, tekst, zmienne
       lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
+      działać, bo po odświeżeniu strony powróci do ustawień
       początkowych.  Często następny kod wynika z poprzedniego, więc
       należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
+Lekcje prowadził Krzysztof Oleś.
 
 Wstęp
 ^^^^^
-
-
-Spróbujmy użyć komputera do zilustrowania PROSTEGO problemu, używając
-PODSTAWOWEGO programowania.
-
 
 Matematyka, coraz częściej uznawana za jedną z podstaw kształcenia, jest przedmiotem diagnozy związanej
 z osiągnięciami wychowanków wszystkich poziomów nauczania. Przeprowadzane także i w Polsce badania
 w ramach Programu Międzynarodowej Oceny Umiejętności Uczniów OECD PISA sugerują, że nierzadko polscy słabsi uczniowie radzą sobie z zadaniami lepiej niż słabsi uczniowie krajów OECD; lepsi uczniowie polscy jednak rozwiązują zadania gorzej niż lepsi uczniowie OECD. Tego typu sytuacja dotyczy najczęściej zadań o średnim poziomie trudności. Konieczną potrzebą jest więc budowanie i pogłębianie aparatu matematycznego, tak by nabywane umiejętności mogły być solidnym fundamentem rozwiązywania problemów matematycznych – przede wszystkim tych, które rozszerzają przewidziane w podstawie programowej treści nauczania. Komputer może naszym zdaniem w pozytywny sposób wpływać na analizowanie pojęć i struktur wprowadzanych na lekcjach klasycznych - prowadzonych (niestety?) jedynie za pomocą przysłowiowych: kredy i tablicy...
 
-Prezentowany scenariusz jest wynikiem zajęć (zainspirowanych podręcznikiem "Matematyka się liczy" pod redakcją prof. Wacława Zawadowskiego) prowadzonych w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Przeznaczony jest do realizacji na dwóch godzinach lekcyjnych (po jednej na każdą z części).
-
-Struktura materiału jest swego rodzaju rozmową z uczestnikiem zajęć: dopuszczamy więc podejście - także językowe - typu nieformalnego. Użyjemy komputera do zilustrowania **prostego** problemu, używając **podstawowego** programowania.
-
-- Dlaczego podstawowego?
-Nie znamy się bowiem na Sage'u zbyt dobrze.
-
-
-- Dlaczego prostego?
-Chcemy bowiem **zafrapować** zagadnieniem matematycznym uważanym za nudne. Większość uczniów nie lubi rachunków - my spróbujemy więc użyć komputera do powtórzeń żmudnych obliczeń. Być może doprowadzą nas one do zasygnalizowania pewnych nieporozumień w używaniu liczb.
 
 Scenariusz zajęć
 ^^^^^^^^^^^^^^^^

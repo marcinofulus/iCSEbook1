@@ -16,8 +16,17 @@ drugiej kodów.  Struktura materiału jest swoistym dialogiem z
 uczestnikami zajęć, dopuszczamy więc podejście typu nieformalnego -
 najważniejsza jest dla nas bowiem możliwość eksperymentowania.
 
-Lekcje prowadził Krzysztof Oleś
+Lekcje prowadził Krzysztof Oleś.
 
+.. only:: html
+
+   .. admonition::  Uwaga!
+
+      W każdym z okien programu można zmieniać liczby, tekst, zmienne
+      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
+      działać, bo po odświeżeniu strony powróci do ustawień
+      początkowych.  Często następny kod wynika z poprzedniego, więc
+      należy ćwiczenia (algorytmy) wykonywać według kolejności.
 
 Wstęp
 ^^^^^
@@ -43,25 +52,11 @@ Przedstawiamy ponadto dodatek, który może być punktem wyjścia do
 rozważań związanych z próbą definiowania wymiaru obiektów fraktalnych.
 
 
+Scenariusz zajęć
+^^^^^^^^^^^^^^^^
+
 Część pierwsza
-^^^^^^^^^^^^^^
-
-
-
-.. only:: html
-
-   .. admonition::  Uwaga!
-
-      W każdym z okien programu można zmieniać liczby, tekst, zmienne
-      lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
-      początkowych.  Często następny kod wynika z poprzedniego, więc
-      należy ćwiczenia (algorytmy) wykonywać według kolejności.
-
-
-.. rubric:: Od punktu do punktu
-
-
+===============
 
 Pomyślmy przez chwilę o wykresie funkcji,
 np. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.
@@ -207,7 +202,7 @@ wierzchołku trójkąta - usuńmy go, poprawnie manipulując liczbami.
 
 
 Część druga
-^^^^^^^^^^^
+============
 
 Przejdźmy do losowania.  
 
@@ -426,8 +421,33 @@ eksperymentu, w którym spróbujemy zapisać współczynniki w tabelach
     .. figure:: refutacje_media/12.png
        :width: 50%
 
-A może warto teraz w powyższych przykładach dokonać dużych
-współczynnikowych zmian, obserwując ich efekty? Eksperymentujmy!
+A można by jakoś te nużące zapisy skrócić? Może np. tak:
+
+.. sagecellserver::
+
+    A = [[0.05,0,-0.06,0,0.4,-0.47],
+     [-0.05,0,-0.06,0,-0.4,-0.47],
+     [0.03,-0.14,-0.16,0,0.26,-0.01],
+     [-0.03,0.14,-0.16,0,-0.26,-0.01],
+     [0.56,0.44,0.3,-0.37,0.51,0.15],
+     [0.19,0.07,-0.2,-0.1,0.15,0.28],
+     [-0.33,-0.34,-0.54,-0.33,0.34,0.39]]
+    c = 1
+    d = 1
+    t = 100001
+    pkt_lst = []
+    for u in range(1,t):
+      n = randint(0,6)
+      a = A[n]
+      i = (a[0]*c)+(a[1]*d)+a[2]
+      o = (a[3]*c)+(a[4]*d)+a[5]
+      c = i
+      d = o
+      pkt_lst.append( (c,d) )
+
+    point(pkt_lst,axes=False, frame=False,size=1,color='red')
+
+Eksperymentujmy!
 
 Dodatek
 ^^^^^^^
@@ -509,7 +529,7 @@ Figurę tą możemy (**na pewno**?!) pokryć 1 kwadratem o boku długości 1, 8 
 
   d=\lim_{n\to\infty}\frac{\log8^n}{\log3^n}=\frac{\log8}{\log3}\approx1.893.
 
-Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - przy okazji - zbliżyliśmy się trochę do pojęcia wymiaru...
+Dywan Sierpińskiego jest czymś między linią a powierzchnią: być może - przy okazji - zbliżyliśmy się trochę do pojęcia wymiaru... Rozwinięcie powyższej  idei można znaleźć w scenariuszu :ref:`wymiar`.
 
 
 
@@ -522,7 +542,7 @@ chcielibyśmy do nich powrócić.
 
 **Regularność**
 
-Działania wspomagane SAGE'em mogą uczniom pomóc w badaniu rekurencji
+Działania wspomagane Sage'em mogą uczniom pomóc w badaniu rekurencji
 (pewnej regularności powtarzanej wielokrotnie, dzięki komputerom
 bardzo wiele razy).
 
