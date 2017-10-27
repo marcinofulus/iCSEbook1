@@ -21,7 +21,7 @@ Ogólnokształcącym im. Stefana Batorego w Chorzowie przez Adama Ogazę.
 
       W każdym z okien programu można zmieniać liczby, tekst, zmienne
       lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
+      działać, bo po odświeżeniu strony powróci do ustawień
       początkowych.  Często następny kod wynika z poprzedniego, więc
       należy ćwiczenia (algorytmy) wykonywać według kolejności.
 

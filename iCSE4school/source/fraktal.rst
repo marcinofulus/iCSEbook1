@@ -1,3 +1,5 @@
+.. _wymiar:
+
 Wymiar fraktalny
 ================
 
@@ -5,8 +7,8 @@ Wymiar fraktalny
 O scenariuszu
 ^^^^^^^^^^^^^
 
-Scenariusz ten jest materiałem do przeprowadzenie 1h zajęć
-lekcyjnych i jest materiałem uzupełniających do scenariusza :ref:`od_punktu`.
+Scenariusz ten jest materiałem do przeprowadzenia jednej godziny zajęć
+lekcyjnych i jest uzupełnieniem do scenariusza :ref:`od_punktu`.
 
 Został on opracowany w ramach projektu iCSE4school na podstawie lekcji
 prowadzonych w latach 2015-2017 w III Liceum
@@ -20,7 +22,7 @@ Olesia.
 
       W każdym z okien programu można zmieniać liczby, tekst, zmienne
       lub cały kod.  Nie trzeba się martwić, jeśli program przestanie
-      działać, bo po odświeżeniu trony powróci do ustawień
+      działać, bo po odświeżeniu strony powróci do ustawień
       początkowych.  W tym przypadku komórki korzystają w poprzednich
       definicji, więc należy ćwiczenia (algorytmy) wykonywać według
       kolejności występowania.
@@ -30,11 +32,8 @@ Wstęp - generacja samopodobnych objektów
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Do dalszej analizy potrzebujemy algorytmów do generacji samopodobnych
-objektów geometrycznych. Rozważymy trzy objekty, chociaż dalsza część
-scenariusza może badać dowolne dane, zarówno pomiarowe jak i sztucznie
-wygenerowane. Analiza poniższych algorytmów nie jest celem tego
-ćwiczenia, więc poprzestaniemy na wypróbowaniu ich działania.
+W dalszej analizie potrzebujemy algorytmów do generacji samopodobnych
+obiektów geometrycznych. Rozważymy trzy obiekty, chociaż przedstawione rozwiązania mogą służyć badaniu dowolnych danych, zarówno pomiarowych jak i sztucznie wygenerowanych. Ponieważ analiza poniższych algorytmów nie jest dla nas celem, to poprzestaniemy na wypróbowaniu ich działania.
 
 .. sagecellserver::
 
@@ -90,11 +89,10 @@ wygenerowane. Analiza poniższych algorytmów nie jest celem tego
         return xy
 
 Wypróbujmy działanie tych funkcji. Na początek możemy narysować krzywą
-Kocha. Algorytm jej tworzenia jest druetapowy. Najpierw należy odcinek
-podzielić na trzy równe częście. Następnie środkową zastąpić dwoma
-bokami trójkąta rownobocznego. Powtarzając wiele razy otrzymujemy
-nieskończenie długą linię mieszczącą się w skończonym
-obszarze. Narysujmy pierwsza, druga i szóstą iterację:
+Kocha. Algorytm jej tworzenia jest dwuetapowy. Najpierw należy odcinek
+podzielić na trzy równe części. Następnie środkową zastąpić dwoma
+bokami trójkąta równobocznego. Powtarzając wiele razy wspomnianą operację, otrzymujemy
+nieskończenie długą linię mieszczącą się w obszarze o skończonym polu. Narysujmy pierwszą, drugą i szóstą iterację.
 
 .. sagecellserver:: 
 
@@ -116,18 +114,18 @@ obszarze. Narysujmy pierwsza, druga i szóstą iterację:
 Widzimy, że każde kolejne zwiększenie liczby iteracji (argumentu)
 powoduje skomplikowanie wykresu.
 
-Należy pamiętać, że ilość danych rośnie potęgowo z liczbą pokoleń więc
-badzo łatwo przekroczyć zasoby komputera na którym wykonujemy powyższy
+Należy pamiętać, że ilość danych rośnie potęgowo z liczbą pokoleń, więc
+badzo łatwo przekroczyć zasoby komputera, na którym wykonujemy powyższy
 algorytm. Warto sprawdzić ile czasu zajmuje wyenerowanie danej
-krzywej:
+krzywej.
 
 .. sagecellserver:: python
 
     %%time
     data_koch = koch(9)
 
-Podobnie spróbujmy z krzywą Hilberta, narysujmy pierwsza, druga i
-szóstą iterację:
+Podobnie z krzywą Hilberta - narysujmy pierwszą, drugą i
+szóstą iterację.
 
 .. sagecellserver:: 
 
@@ -156,7 +154,7 @@ szóstą iterację:
    
 
 Na samym końcu wygenerujemy dane będące punktami na okręgu - czyli
-objekcie wymiarze rówwym jeden
+obiekcie wymiarze równym jeden.
 
 
 .. sagecellserver:: python
@@ -169,55 +167,53 @@ objekcie wymiarze rówwym jeden
 Wymiar pudełkowy (Mińkowskiego)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wymiar Mińkowskiego można okresli rozważając jak długość zależy od
+Wymiar Minkowskiego można określić rozważając to, jak długość zależy od
 skali, tzn. "linijki", którą przeprowadzamy pomiar:
 
 .. math::  l(\epsilon) \sim e^{ (1-d)},
 
-gdzie :math:`d` jest wymiarem objektu.
+gdzie :math:`d` jest wymiarem obiektu.
 
- Dla naszych trzech przypadków można otrzymać dokładne wyniki, znając
-procedurę ich tworzenia. I tak dla:
+Ponieważ znamy procedurę tworzenia niektórych obiektów, to możemy dla nich otrzymać dokładne wyniki. I tak dla:
 
  - Krzywej Kocha:
 
    .. math::  d = \frac{\log(4)}{\log(3)}\simeq 1.2618
 
- - Okręgu:
+ - okręgu:
 
    .. math:: d=1
 
  - Krzywej Hilberta:
 
-   .. math:: d=2 
+   .. math:: d=2.
 
 
-Spróbujmy obliczyć wymiar objektu zapominając skąd mamy dane. Postąpimy tak. Weżmiemy
-dane (np. 1mln. punktów leżących na krzywej Kocha) i zmierzymy długość
-łamanej. Następnie wyrzucimy co drugi punkt i powtórzymy pomiar.  Taką
-procedurę możemy zastosować dla dowolnego objektu będącego krzywą
-łamaną.
+Spróbujmy obliczyć wymiar obiektu, zapominając skąd mamy dane: weźmy
+je (np. 1 milion punktów leżących na krzywej Kocha) i zmierzmy długość
+łamanej. Następnie wyrzućmy co drugi punkt i powtórzmy pomiar.  Taką
+procedurę możemy zastosować dla dowolnego obiektu będącego łamaną.
 
 
 .. admonition:: Operacje na tablicach:
 
-    pozornie skomplikowana linijka w Python/Sage
+    Pozornie skomplikowana linijka w Python/Sage
     :code:`np.mean(np.sqrt(np.sum(np.diff(l,axis=0)**2,axis=1)))` jest
     równoznaczna z matematycznym zapisem:
 
-    .. math:: \frac{1}{N} \sum_{i=0}^{N-1} \sqrt{ \sum_{j=1}^{2} (l_{i,j}- l_{i-1,j})^2}
+    .. math:: \frac{1}{N} \sum_{i=0}^{N-1} \sqrt{ \sum_{j=1}^{2} (l_{i,j}- l_{i-1,j})^2},
 
     a :code:`np.sum(np.sqrt(np.sum(np.diff(l,axis=0)**2,axis=1)))` 
 
     oznacza:
 
-    .. math:: \sum_{i=0}^{N-1} \sqrt{ \sum_{j=1}^{2} (l_{i,j}- l_{i-1,j})^2}
+    .. math:: \sum_{i=0}^{N-1} \sqrt{ \sum_{j=1}^{2} (l_{i,j}- l_{i-1,j})^2}.
 
 
 .. note:: 
   
    W poniższej komórce można "odkomentować" inne przypadki, powtórzyć
-   obliczenia i przeanalizować wyniki
+   obliczenia i przeanalizować wyniki.
 
 .. sagecellserver:: python
 
@@ -239,7 +235,7 @@ procedurę możemy zastosować dla dowolnego objektu będącego krzywą
 
 
 Wystarczy dopasować tak otrzymane dane do modelu :math:`l(\epsilon)
-\sim e^{ (1-d)}` i powinnismy otrzymać przybliżenie wymiaru :
+\sim e^{ (1-d)}` i powinniśmy otrzymać przybliżenie wymiaru.
 
 .. sagecellserver:: python
 
@@ -249,7 +245,7 @@ Wystarczy dopasować tak otrzymane dane do modelu :math:`l(\epsilon)
     fit = find_fit(scal_sel,model)
     fit
 
-Narysujmy dopasowanie:
+Narysujmy dopasowanie.
 
 .. sagecellserver:: python
 
@@ -267,26 +263,28 @@ Narysujmy dopasowanie:
        Wykres w skali logarytmicznej (tzw. log-log) długości łamanej od średniej dlugości segmentu. 
 
 
-Wychodzi liczba zbliżona do wyniku dokładnego. Zaletą tego
+Otrzymujemy liczbę zbliżoną do wyniku dokładnego. Zaletą tego
 postępowania jest jego niezależność od źródła danych.
+
 
 
 Box counting
 ^^^^^^^^^^^^
 
-Wyobraźmy sobie, ze robimy zdjęcie naszego objektu aparatem cyfrowym o
-pewnej roździelczości. Potem zliczamy tylko te pixele, na których
-widać objekt.  Jak zmienia się liczba pikseli na których znajduje się
-nasz objekt z rozmiarem piksela aparatu? Taka procedura nazywa się
-"box - counting". 
+
+Wyobraźmy sobie, ze robimy zdjęcie naszego obiektu aparatem cyfrowym o
+pewnej rozdzielczości i zliczamy tylko te piksele, na których
+widać obiekt.  Jak zmienia się liczba pikseli, na których znajduje się
+nasz obiekt z rozmiarem piksela aparatu? Taka procedura nazywa się
+box-counting. 
 
 Wykorzystujemy histogram wbudowany w numpy: ``np.histogramdd``
 
-Pixel - lub voxel (3d) może być n-wymiarowym pudełkiem, jednak takim by
-mogły pokrywać one cały objekt. Czyli dla krzywej Kocha bierzemy do najmniej pixele 2d.
+Piksel - lub voxel (3d) - może być n-wymiarowym pudełkiem, jednak takim, by
+mógł on pokrywać cały obiekt: np. dla krzywej Kocha musimy rozważyć co najmniej piksele 2d.
 
-Zaletą box countingu jest to, że  wystarczy mieć punkty należące do objektu w
-dowolnej kolejności. Np. takie generowane w grze w chaos.
+Zaletą box-countingu jest to, że  wystarczy dysponować punktami należącymi do obiektu w
+dowolnej kolejności, np. takimi jak te generowane w grze w chaos.
 
 .. sagecellserver:: python
 
@@ -307,7 +305,7 @@ dowolnej kolejności. Np. takie generowane w grze w chaos.
 
 .. only:: latex
           
-    W wynikiem działania powyższego kodu  otrzymamy liczby pixeli (boxów):
+    W wyniku działania powyższego kodu otrzymamy następujące liczby pikseli (boxów):
 
     .. code::
 
@@ -343,18 +341,17 @@ dowolnej kolejności. Np. takie generowane w grze w chaos.
        :width: 70%
        :name: box_koch
      
-       Wykres w skali logarytmicznej liczby pixeli którą zajmuje
-       objekt do całkowitej liczby pixeli (lub liczby boxów).
+       Wykres w skali logarytmicznej liczby pikseli, którą zajmuje
+       obiekt do całkowitej liczby pikseli (lub liczby boxów).
 
 
 Podsumowanie
 ^^^^^^^^^^^^
 
-
-Powyższe przykłady zachęcają do przeprowadzenie eksperymetnów z
-własnymi danymi. Można na przykład wykorzystac dane geodezyjne linii
-brzegowej czy rzek i zbadać ich wymiar fraktalny. Szczególnie prostą i
-uniwersalną wydaje się metodą "Box counting", która w języku Python,
-korzystając z bibliotek zawartych w SageMath zawiera się w kilku
+Powyższe przykłady zachęcają do przeprowadzania eksperymetnów z
+własnymi danymi. Można na przykład wykorzystać dane geodezyjne linii
+brzegowej rzek i zbadać ich wymiar fraktalny. Szczególnie prostą i
+uniwersalną wydaje się metoda box-counting, która w języku Python -
+wykorzystującym biblioteki zawarte w SageMath - zawiera się w kilku
 liniach kodu.
 
