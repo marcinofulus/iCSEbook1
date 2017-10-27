@@ -99,9 +99,9 @@ prawdą jeśli Bolek jest prawdomówny. Wtedy możemy w Sage zapisać:
 .. sagecellserver::
     :linked: false
 
-     f = propcalc.formula("a&(~a&~b) | ~a&(~(~a&~b))")
-     show(f)
-     print(f.truthtable())
+    f = propcalc.formula("a&(~a&~b) | ~a&(~(~a&~b))")
+    show(f)
+    print(f.truthtable())
 
 .. only:: latex
 
@@ -259,18 +259,19 @@ jedynkę trygonometryczą należy wykonać:
    ( sin(x)^2+cos(x)^2 ).trig_simplify()
 
 
+
 Jeśli chcemy udowodnić tożsamość trygonometryczną lepiej użyć
 :code:`bool` niż próbować uprościć jedną ze stron by przypominała
 drugą:
 
 
-   .. sagecellserver::
-   :linked: false
+.. sagecellserver::
+    :linked: false
 
+    expr = (2*sin(x)^2-1)/(sin(x)*cos(x)) == tan(x)-cot(x)  
+    show(expr)
+    bool(expr)
 
-   expr = (2*sin(x)^2-1)/(sin(x)*cos(x)) == tan(x)-cot(x)  
-   show(expr)
-   bool(expr)
 
 .. only:: latex
 

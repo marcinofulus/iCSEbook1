@@ -1,5 +1,5 @@
 RSA szyfrowanie asymetryczne
-=============================
+============================
 
 
 O scenariuszu
@@ -27,7 +27,7 @@ Jarczewskiego.
 
 
 Wstęp
-^^^^^^  
+^^^^^
     
 **Uczniowie powinni znać i  rozumieć:**
 
@@ -175,7 +175,7 @@ Dla a = 35 i p = 5 lub p = 7 liczby nie spełniają założeń twierdzenia. Moż
 
 
 Część informatyczna
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 
 .. note:: Szyfrowanie wiadomości.
@@ -539,8 +539,45 @@ Wystarczy skopiować algorytm deszyfrowania z punktu 2 i zamienić: pomoc*d na p
 Wnioski
 ^^^^^^^
 
-Uczniowie naszej szkoły przed projektem iCSE mogli usłyszeć wykład o metodach szyfrowania. Wykazali oni duże zainteresowanie tą sprawą. Dlatego zdecydowałem się zorganizować lekcje z asymetrycznego szyfrowania przy użyciu języka programowania Python. Język SageMath umożliwia pracę na dużych liczbach przekraczających zakres zmiennych typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę imponująca. W ten sposób uczniowie mieli możliwość praktycznego sposobu szyfrowania i deszyfrowania wiadomości przy użyciu publicznych i prywatnych kluczy. Zajęcia odbywały się na dodatkowych godzinach w ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania matematyki i informatyki w drugiej klasie liceum. Powyższy temat nadaje się również jako praca projektowa, która łączy wiedzę matematyczno-informatyczną. Jak wiadomo powyższe elementy są istotne w dziedzinie kryptografii, która łączy teorię liczb z praktyką programistyczną. Nie przekracza to zakresu materiału przewidzianego na rozszerzeniu z informatyki liceum lub technikum. Dlatego też postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania wiadomości **RSA**.
+Uczniowie naszej szkoły przed projektem iCSE mogli usłyszeć wykład o
+metodach szyfrowania. Wykazali oni duże zainteresowanie tą
+sprawą. Dlatego zdecydowałem się zorganizować lekcje z asymetrycznego
+szyfrowania przy użyciu języka programowania Python. Język SageMath
+umożliwia pracę na dużych liczbach przekraczających zakres zmiennych
+typu float, double, a jednocześnie szybkość obliczeniowa jest naprawdę
+imponująca. W ten sposób uczniowie mieli możliwość praktycznego
+sposobu szyfrowania i deszyfrowania wiadomości przy użyciu publicznych
+i prywatnych kluczy. Zajęcia odbywały się na dodatkowych godzinach w
+ramach iCSE for school w III Liceum Ogólnokształcącym im. Stefana
+Batorego w Chorzowie. Celem zajęć było rozszerzenie nauczania
+matematyki i informatyki w drugiej klasie liceum. Powyższy temat
+nadaje się również jako praca projektowa, która łączy wiedzę
+matematyczno-informatyczną. Jak wiadomo powyższe elementy są istotne w
+dziedzinie kryptografii, która łączy teorię liczb z praktyką
+programistyczną. Nie przekracza to zakresu materiału przewidzianego na
+rozszerzeniu z informatyki liceum lub technikum. Dlatego też
+postanowiłem przeprowadzić lekcje dotyczące asymetrycznego szyfrowania
+wiadomości **RSA**.
 
-Materiał dla uczniów jest podzielony na trzy rozdziały (trzy godziny dydaktyczne). Pierwszy z nich wprowadza pojęcia kongruencji oraz istotne matematyczne twierdzenia, które są wykorzystywane w kryptografii. Co prawda dowody i szczegóły zagadnień są pominięte, ale zainteresowani uczniowie bez problemu znajdą te informacje w internecie. Drugi rozdział to szczegółowe wprowadzenie szyfrowania asymetrycznego stosowanego na początku lat 70 poprzedniego stulecia (obecnie stosowanego już tylko w celach dydaktycznych). Trzeci rozdział to już pełne szyfrowanie RSA. W każdej części są wyszczególnione ćwiczenia i zadania dla uczniów.  
+Materiał dla uczniów jest podzielony na trzy rozdziały (trzy godziny
+dydaktyczne). Pierwszy z nich wprowadza pojęcia kongruencji oraz
+istotne matematyczne twierdzenia, które są wykorzystywane w
+kryptografii. Co prawda dowody i szczegóły zagadnień są pominięte, ale
+zainteresowani uczniowie bez problemu znajdą te informacje w
+internecie. Drugi rozdział to szczegółowe wprowadzenie szyfrowania
+asymetrycznego stosowanego na początku lat 70 poprzedniego stulecia
+(obecnie stosowanego już tylko w celach dydaktycznych). Trzeci
+rozdział to już pełne szyfrowanie RSA. W każdej części są
+wyszczególnione ćwiczenia i zadania dla uczniów.
 
-Zadaniem uczniów było uzyskanie matematycznej znajomości kongruencji, małego twierdzenia Fermata i algorytmu euklidesowego. Te kwestie zostały zaprezentowane na początku, a uczniowie rozwiązywali swoje zadania podczas warsztatów. Każdy uczeń wygenerował własną parę kluczy, szyfrował i deszyfrował własne wiadomości. Pomimo wiedzy teoretycznej uczniów, było dość zaskakujące dla nich, że nie można odszyfrować wiadomości z tym samym kluczem i że klucze można zamienić. Oznacza to, że prywatny klucz może stać się publicznym i odwrotnie. Największą niespodzianką dla uczniów była symulacja złamania hasła RSA - dla liczby dwustucyfrowej szacowany podział na czynniki pierwsze dla szybkiego komputera zająłby to ponad 3000 lat.
+Zadaniem uczniów było uzyskanie matematycznej znajomości kongruencji,
+małego twierdzenia Fermata i algorytmu euklidesowego. Te kwestie
+zostały zaprezentowane na początku, a uczniowie rozwiązywali swoje
+zadania podczas warsztatów. Każdy uczeń wygenerował własną parę
+kluczy, szyfrował i deszyfrował własne wiadomości. Pomimo wiedzy
+teoretycznej uczniów, było dość zaskakujące dla nich, że nie można
+odszyfrować wiadomości z tym samym kluczem i że klucze można
+zamienić. Oznacza to, że prywatny klucz może stać się publicznym i
+odwrotnie. Największą niespodzianką dla uczniów była symulacja
+złamania hasła RSA - dla liczby dwustucyfrowej szacowany podział na
+czynniki pierwsze dla szybkiego komputera zająłby to ponad 3000 lat.

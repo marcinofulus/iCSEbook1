@@ -90,8 +90,8 @@ formalnie i nieformalnie w tym zakresie.
 
 
 
-Pokolenie Y i jego potrzeby
----------------------------
+.. rubric:: Pokolenie Y i jego potrzeby
+
 
 
 Obecna młodzież to tzw. pokolenie Y (Generation Y), noszące też inną
