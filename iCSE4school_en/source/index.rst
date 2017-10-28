@@ -9,11 +9,29 @@ iCSE4school - methodology
 Science Education  with SageMath
 --------------------------------
 
-
 .. toctree::
    :maxdepth: 2
 
-   wstep.rst
+   intro.rst
+
+
+
+
+
+
+.. only:: html
+
+        .. raw:: html
+
+             <center> <iframe
+            width="560" height="315"
+            src="https://www.youtube.com/embed/X18jt2lVmJY?rel=0"
+            frameborder="0" allowfullscreen></iframe> </center>
+            <center> <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/TQ31Md9KPRM?rel=0"
+            frameborder="0" allowfullscreen></iframe> </center>
+
+
 
 
 
@@ -28,8 +46,6 @@ Teaching materials: Mathematics
    amazing_approximation.rst
    iCSE4s_MAT_z07v2_EN_KJ_Math_of_RSA_cipher.rst
    iCSE4s_MAT_z09v1_EN_Polynomial_approximations.rst
-   iCSE4s_MAT_z12_absx.rst
-   iCSE4s_MAT_z13v0_EN_integration.rst
    iCSE4s_MAT_z18v0.1_Differential_equations_ENG.rst
 
 
@@ -52,6 +68,10 @@ Problems in Math
 ----------------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    abitur/index.rst
+
+
+..   iCSE4s_MAT_z12_absx.rst
+..   iCSE4s_MAT_z13v0_EN_integration.rst

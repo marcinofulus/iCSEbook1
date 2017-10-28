@@ -27,17 +27,17 @@ SLOPE FIELDS
 
 Given any first order differential equation of the form  :math:`\normalsize f(x,y) \Large \frac{dy}{dx} \normalsize +g(x,y)=0`, where  :math:`\normalsize y=y(x)`  we can write
 
-:math:` \Large \frac{dy}{dx} = \frac{-g(x,y)}{f(x,y)}\normalsize =h(x,y)`
+:math:`\Large \frac{dy}{dx} = \frac{-g(x,y)}{f(x,y)}\normalsize =h(x,y)`
 
 We may therefore deduce the gradient of the solution curves to the differential equation at any point  :math:`(x,y)`in the plane where  :math:`h(x,y)`is defined, and hence the equations of the tangents to the solution curves.
 
-**The set of tangents at all points  :math:`(x,y)`****is called the slope field of the differential equation** .
+**The set of tangents at all points  :math:`(x,y)` is called the slope field of the differential equation** .
 
 By representing the gradients at many different grid points as line segments, we obtain a slope field of the tangents to the solution curves. Now the tangent to a curve approximates that curve at and near the points of tangency. Therefore, by following the direction given by the slope field at a given point, we can approximate solution curves of the differential equation.
 
  ***Example 1** :* 
 
-Consider the differential equation  :math:` \Large \frac{dy}{dx} \normalsize =x(y-1)`.
+Consider the differential equation  :math:`\Large \frac{dy}{dx} \normalsize =x(y-1)`.
 
 a) Construct the slope field using integer grid points for  :math:`x, y \in [-4, 4]`.
 
@@ -48,7 +48,7 @@ c) An  **isocline**  is the set of all points on a slope field at which the tang
 ***Solution:***
 
 
-::
+.. sagecellserver::
 
     sage: a,b,x,x0,y0 = var('a b x x0 y0')
     sage: y = function('y', x)
@@ -62,8 +62,6 @@ c) An  **isocline**  is the set of all points on a slope field at which the tang
     sage: p1 = plot_slope_field(a*(1-b), (a,-2,2), (b,-2,3), figsize = (6,4), headaxislength = 3, headlength = 3)
     sage: p2 = plot (particular, (x, -2, 2))
     sage: p1+p2
-    <html>...</html>
-    <html>...</html>
 
 .. end of output
 
@@ -71,7 +69,7 @@ c) An  **isocline**  is the set of all points on a slope field at which the tang
 
 Using SAGE solve the following problems. You can modify the procedure given above or write your own.
 
-1. Consider the differential equation  :math:` \Large \frac{dy}{dx} \normalsize =2x-y`.
+1. Consider the differential equation  :math:`\Large \frac{dy}{dx} \normalsize =2x-y`.
 
 a) Find the general solution to the differential equation.
 
@@ -79,17 +77,17 @@ b) Construct the slope field of the differential equation.
 
 c) Find the solution curve which passes through  :math:`P(0, 1)` and its equation.
 
-2. Consider the differential equation  :math:` \Large \frac{dy}{dx} \normalsize =10y \tan(x)`, where  :math:`x` is measured in degrees. Draw the slope field using integer grid points, where  :math:`x, y \in [-2, 2]`.
+2. Consider the differential equation  :math:`\Large \frac{dy}{dx} \normalsize =10y \tan(x)`, where  :math:`x` is measured in degrees. Draw the slope field using integer grid points, where  :math:`x, y \in [-2, 2]`.
 
-3. Draw the slope field for the differential equation  :math:` \Large \frac{dy}{dx} \normalsize  = \Large \frac{-1+x^2+4y^2}{y-5x+10}`.
+3. Draw the slope field for the differential equation  :math:`\Large \frac{dy}{dx} \normalsize  = \Large \frac{-1+x^2+4y^2}{y-5x+10}`.
 
 a) Sketch the particular solution curve passing through the origin.
 
 b) Sketch the isocline corresponding to:
 
-(i)  :math:` \Large \frac{dy}{dx}` being undefined.
+(i)  :math:`\Large \frac{dy}{dx}` being undefined.
 
-(ii)  :math:` \Large \frac{dy}{dx} \normalsize =0`.
+(ii)  :math:`\Large \frac{dy}{dx} \normalsize =0`.
 
 
 
@@ -115,7 +113,7 @@ c)  :math:`(x_0, y_0) = (-2,1)`
  ***Solution:*** 
 
 
-::
+.. sagecellserver::
 
     sage: x, x0, y0 = var('x x0 y0')
     sage: y = function('y', x)
@@ -128,8 +126,7 @@ c)  :math:`(x_0, y_0) = (-2,1)`
     sage: html('The particular solution of the equation is $y=$'"$%s$"%latex(particular) + '.' + "$")
     sage: p1 = plot (particular, x, xmin = -3, xmax = 4, ymin = -10, ymax = 10, axes_labels=['$x$','$f(x)$'], exclude = [-1], detect_poles = 'show', figsize = (6, 4), color = 'blue', legend_label="$y =$ $%s$"%latex(particular))
     sage: p1
-    <html>...</html>
-    <html>...</html>
+
 
 .. end of output
 
@@ -166,7 +163,7 @@ Use the substitution  :math:`y=vx`, where  :math:`v=v(x)`, to find general solut
  ***Solution:*** 
 
 
-::
+.. sagecellserver::
 
     sage: x = var('x')
     sage: y = function('y',x)
@@ -177,8 +174,6 @@ Use the substitution  :math:`y=vx`, where  :math:`v=v(x)`, to find general solut
     sage: html('The particular solution of the equation is $y=$'"$%s$"%latex(particular) + '.' + "$")
     sage: p1 = plot (particular, x, xmin = -3, xmax = 4, ymin = -3, ymax = 10, axes_labels=['$x$','$f(x)$'], detect_poles = 'show', figsize = (6, 4), color = 'blue', legend_label="$y =$ $%s$"%latex(particular))
     sage: p1
-    <html>...</html>
-    <html>...</html>
 
 .. end of output
 
@@ -202,7 +197,7 @@ Solve the differential equation  :math:`\Large \frac{dy}{dx} \normalsize +3x^2y=
  ***Solution:*** 
 
 
-::
+.. sagecellserver::
 
     sage: var('x y C')
     sage: var('dy,dx')
@@ -224,12 +219,6 @@ Solve the differential equation  :math:`\Large \frac{dy}{dx} \normalsize +3x^2y=
     sage: y0 = 1
     sage: particular = desolve(de, [Y,x], [x0,y0]).expand()
     sage: html('The particular solution of the equation for $y=$ '+latex(y0)+ ' when $x=$ ' +latex(x0)+ 'is $y=$'"$%s$"%latex(particular) + '.' + "$")
-    <html>...</html>
-    <html>...</html>
-    <html>...</html>
-    <html>...</html>
-    <html>...</html>
-    <html>...</html>
 
 .. end of output
 
