@@ -1,4 +1,3 @@
-
 Dlaczego Sage?
 ==============
 
@@ -7,7 +6,7 @@ Wybór najlepszego narzędzia informatycznego na lekcję matematyki lub fizyki?
 ----------------------------------------------------------------------------
 
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Od wielu lat czynione są próby stosowania narzędzi informatycznych i
 nawet programowania na lekcjach przedmiotów ścisłych. Najczęściej

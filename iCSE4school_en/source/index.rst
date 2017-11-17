@@ -1,21 +1,17 @@
-=========================
-iCSE4school - methodology
-=========================
+===============================================================
+Methodology of teaching sciences with computational perspective
+===============================================================
  
 
 
 
-
-Science Education  with SageMath
---------------------------------
+Introduction
+------------
 
 .. toctree::
    :maxdepth: 2
 
    intro.rst
-
-
-
 
 
 
@@ -32,6 +28,22 @@ Science Education  with SageMath
             frameborder="0" allowfullscreen></iframe> </center>
 
 
+
+Science Education with SageMath
+-------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   why_Sage.rst
+   sage_in_nutshell.rst
+..   narzedzia.
+   rst
+..   sage_w_szkole.rst
+
+
+           
 
 
 
