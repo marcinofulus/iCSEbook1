@@ -1,5 +1,5 @@
-About this book
----------------
+About iCSE4school project
+-------------------------
 
 
 

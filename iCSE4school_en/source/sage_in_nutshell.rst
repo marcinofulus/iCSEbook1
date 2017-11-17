@@ -291,7 +291,8 @@ checking the results, or too solving too complex equations. SageMath
 allows for solving difficult equations and  systems of  equations with one
 instruction - :code:`solve`.
 
-Here are some examples that demonstrate use  this functionality in two cases: quadratic eqaution and system of eqautions
+Here are some examples that demonstrate use this functionality in two
+cases: quadratic eqaution and system of eqautions.
 
 **Quadratic equation.**
     
@@ -350,7 +351,7 @@ existing code program and analyze the functions. This can be
 used not only in mathematics but also in other science subjects.
 
 The following program address a classical problem of calculating zeros
-of a quadratic function. Shor program allows not only for obtaining
+of a quadratic function. Short program allows not only for obtaining
 numerical result but also for its graphical visualization.
 
 
@@ -457,10 +458,12 @@ function. Let us imagine that we want to plot a following expression:
 
    f(x) = \sum_{i=0}^{N}\sin(\omega_i x)
 
-for large values of of :dla dużych wartosci N. W systemie Sage możemy zsumować wiele funkcji
-wykorzystując pętlę. Tworzenie takich złożonych funkcji ma
-zastosowanie na lekcjach fizyki podczas omawiania zjawisk
-falowych. Poniższy kod doda fale o zbliżonych częstościach:
+for large values of of :math:`N`. It is clear that it it very
+difficult task without a computer.  In SageMath we can easily make use
+of a loop and construct above sum. In physics, many wave and aoustic
+phenomema are connecteed with sums of signals of various frequencies
+and therefore plotting such function is not only an academic
+excercise.  It can serve as an example of e.g. a wave packet. 
 
 .. sagecellserver::
     :linked: false
@@ -471,21 +474,19 @@ falowych. Poniższy kod doda fale o zbliżonych częstościach:
 
 .. only:: latex
           
-    Wynikiem działania powyższego kodu jest wykres   :numref:`paczka_fig`.
+    Executing this code one obtains the plot:   :numref:`paczka_fig`.
 
     .. figure:: dlaczego_Sage/paczka.pdf
        :width: 100%
        :name: paczka_fig
 
-       Wizualizacja paczki falowej. 
+       Wave packet visualization. 
 
 
-Ciekawym przykładem wizualizacji jest graficzne przedstawianie pól
-wektorowych. Podczas lekcji fizyki, można wykorzystać możliwości
-SagaMath do rysowania pół wektorowych. Poniżej zamieszczony jest
-przykład pola pochodządzego od dipola magnetycznego. Pole jest
-trójwymiarowe, w przykładzie przedstawiony jest przekrój takiego pola
-przez płaszczyznę :math:`x=0`
+Another interesting example is a graphical presentation of vector
+fields. It can have potantial applical for physics lessons. Below, we
+present a plot of magnetic field of a magnetic dipole. It is possible
+to draw in 3d, but here we plot a section at :math:`x=0`:
 
 
 .. sagecellserver::
@@ -502,44 +503,42 @@ przez płaszczyznę :math:`x=0`
     plot_vector_field(B.subs(x==0)[1:]/Bmod,(y,-2,2),(z,-2,2))
 
 .. only:: latex
-          
-    Wynikiem działania powyższego kodu jest wykres   :numref:`pole_vec_fig`.
+
+    Executing this code one obtains the plot:    :numref:`pole_vec_fig`.
 
     .. figure:: figs/pole_vec.pdf
        :width: 70%
        :name: pole_vec_fig
 
-       Wizualizacja pola wektorowego. 
+       Vector field from dipole.
 
 
 
 
-Interakcja
-^^^^^^^^^^    
+Interaction
+^^^^^^^^^^^
 
-Duże walory edukacyjne mają programy komputerowe pozwalające wykonać
-animację lub dynamicznie zmieniać parametr i obserwować jak wpływa on
-na rozwiązanie. Tego typu elementy, najczęściej wykonane są w
-technologii Flash lub javascript są atrakcyjną cyfrową pomocą
-naukową. Zazwyczaj jednak uczeń ograniczony jest jedynie do interakcji
-z takim programem. System SageMath pozwala pojść jeden krok dalej -
-pozwala na bardzo łatwe tworzenie tych elementów. Korzystając z
-prostych funkcji uczeń może samodzielnie stworzyć interaktywną
-applikację, która może ilustrować badane zagadnienie.
+Large educational values have computer programs able to produce
+animation of a given phenomena and/or allowing for  dynamical change
+some  parameters.  This class of programms are, most often made in Flash or javascript technologies, are an
+attractive digital help in teaching. Usually, however, the student is
+limited to interacting with such a program. SageMath lets you go one
+step further - it makes it very easy to create these elements. Using
+relatively simple  functions student can create an interactive  application
+that can illustrate a given  problem.
 
-Zilustrujemy na przykładzie następującego problemu:
+We will illustrate the following problem:
 
-.. admonition:: Zadanie 
+.. admonition:: Intersections 
 
-   Zbadaj ile ma rozwiązań równanie :math:`x^2=x-a` w zależności od parametru :math:`a\in(0,\frac{1}{2})`?
+   How many solution has the equation  :math:`x^2=x-a` as a function of parameter :math:`a\in(0,\frac{1}{2})`?
 
    
-W SageMath możemy narysować wykresy zarówno prostej :math:`y=x-a` jak
-i paraboli :math:`y=x^2` i zaznaczyć na nich pierwiastki równania
-:math:`x^2=x-a`.  Wystarczy taki stworzony kod programu opakować w
-funkcję i dodać tzw. dekorator :code:`@interact`. SageMath wygeneruje
-nam interaktywną aplikację, w której będzie można zmieniać myszką
-wartość parametru i obserwować jak zmienia się wykres.
+In SageMath we can easily plot as line :math:`y=x-a` and parabola
+:math:`y=x^2` and grafically inspect if they have intersections. We
+can also calculate analytically (using Sage or not) solution and plot
+them in the same figure. If we then use decorator :code:`@interact`
+SageMath will generate us an interactive application:
 
 
 
@@ -554,39 +553,35 @@ wartość parametru i obserwować jak zmienia się wykres.
         if pkt:
              p += point(pkt,size=40,color='red')
         else:
-             print "Nie ma pierwiastkow"
+             print "No roots"
         show(p)
 
 
 .. only:: latex
           
-    Wynikiem działania powyższego kodu jest  :numref:`interact`.
+    The above code will produce interactive element  :numref:`interact`.
 
     .. figure:: dlaczego_Sage/interact.png
        :width: 60%
        :name: interact
 
-       Interaktywna ilustracja równania :math:`x^2=x-a`.
+       An interactive illustration of an equation with parameter:  :math:`x^2=x-a`.
 
 
 
 
-Sage = interdyscyplinarność.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SageMath = interdisciplinarity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Podsumowując SageMath umożliwia:
 
- 1. Szybkie i dokładne obliczenia nawet
-    dowolnie dużych liczb.
- 2. Przeprowadzanie obliczeń na wyrażeniach algebraicznych.
-    rozwiązywanie równań w zbiorze liczb zespolonych, rozwiązywanie
-    układów równań i nierówności.
- 3. Wizualizację rozwiązań na wykresach, rysowanie wykresów funkcji.
- 4. Obliczanie pochodnych, całek i wielu innych działań
-    matematycznych.
+In summary, SageMath gives an excellent tool following operations in a classroom:
 
-Podanto SageMath to bardzo dobre i bogate narzędzie programistyczne,
-dzięki któremu możemy łączyć przedmioty ścisłe: informatykę,
-programowanie, matematykę, fizykę, chemię. Czy istnieją ograniczenia
-dla Sage'a? Tak, ale pewnie wcześniej natrafimy na ograniczenia naszej
-wyobraźni.
+  1. Quick and accurate calculations with arbitrarily large numbers.
+  2. Manipulate algebraic expressions, Solving equations in complex
+     numbers, solving systems of equations and inequalities.
+  3. Visualization of solutions on graphs, drawing graphs of functions.
+  4. Calculation of derivatives, integrals, and many other mathematical  operations.
+
+Moreover SageMath is a very good and rich programming tool, thanks to
+which we can combine computer science with mathematics, physics,
+chemistry. 

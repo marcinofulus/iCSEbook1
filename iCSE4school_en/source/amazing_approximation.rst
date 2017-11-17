@@ -1,7 +1,33 @@
 Amazing approximation
-========================================
+=====================
 
-*This project is the result of activities (inspired by the textbook "Matematyka się liczy" edited by prof. Wacław Zawadowski) at The Stefan Batory High School in Chorzów*
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
+
+It was prepared by  Krzysztof Oleś based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
+
+*This project is the result of activities (inspired by the textbook "Matematyka się liczy" edited by prof. Wacław Zawadowski) *
+
+Introduction
+------------
+
 
 We want to use a computer to illustrate a SIMPLE problem by using BASIC programs.
 
@@ -13,7 +39,9 @@ Because we don't know if we are familiar enough with SAGE.
 
 Because we are keen on making some people surprised by this part of mathematics which is told to be boring... Most of people don't like counting, so we'll repeat not exciting calculations and computer will lead us (perhaps) to some misunderstandings in using numbers...
 
-**Part 1**
+
+Part 1
+------
 
 Let's start with approximation of square\-root of two. We'll use square\-root algorithm (which is based on Newton's method for finding zeros of a function, this case is known as Babylonian method).
 
@@ -122,7 +150,8 @@ Now we can compare the speed of the first and second algorithm and ask very awkw
 - We counted some errors \- SAGE had to approximate square\-root of two and  :math:`\pi` (these numbers are not rational): did SAGE make a mistake? How big?
 
 
-**Part 2**
+Part 2
+------
 
 Okay, but who is interested in differences in approximations of numbers, for example on the fifteenth decimal place?
 
@@ -355,7 +384,9 @@ Again \- you should change  :math:`p`: 1.414, 1.4142, 1.41421, 1.414213;  don't 
 
 And again: is not that strange? Perhaps not, but considered above example shows how much we have to be careful using approximations.
 
-.. rubric:: Summary
+
+Summary
+-------
 
 We wanted to show how important is the difference between manipulating algebraic expression in kind
 

@@ -3,19 +3,33 @@
 Polynomial  approximation
 =========================
 
-Introduction.
-^^^^^^^^^^^^^
-*This project is the result of activities at The Stefan Batory High School in Chorzów*
 
-In each of the program's window you can change the numbers, text, variables, or the code.
+About this lesson plan
+^^^^^^^^^^^^^^^^^^^^^^
 
-You do not have to worry if the program stops working, because after its refreshing it returns to the initial settings.
+This is a lesson plan for indented for realization during  2h lesson activities. 
 
-Often next code results from the previous one, so the exercises (algorithms) should be run in their order.
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
 
-Factorial. 
-^^^^^^^^^^
-The  **factorial**  of a integer   *n*  , denoted by   *n*  !, is the product of all positive integers smaller than or equal *n*.
+It was prepared by  Krzysztof Jarczewski based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
+Factorial
+^^^^^^^^^
+
+The **factorial** of a integer *n* , denoted by *n* !, is the product
+of all positive integers smaller than or equal *n*.
     
 .. math::
      
@@ -49,8 +63,8 @@ The second example uses a built-in function in SageMath.
     
     print 5, '!=', factorial(5)
 
-Derivative.
-^^^^^^^^^^^
+Derivative
+^^^^^^^^^^
 
 **Derivative** will be interpreted as a mathematical operation on a function.
 

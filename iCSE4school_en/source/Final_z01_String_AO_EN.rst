@@ -3,8 +3,31 @@
 Examining string vibrations 
 ===========================
 
+
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
+
+It was prepared by  Adam Ogaza based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
 Introduction
 ------------
+
 **The aims of lesson:**
 
 -  Experimental determination the dependence of frequency on the length of the string.
@@ -151,4 +174,4 @@ Work 2, Polish version: https://sage01.icse.us.edu.pl/home/pub/170/
 
 Work 2, English version: https://sage01.icse.us.edu.pl/home/pub/172/
 
-    Adam Ogaza, 2015-17
+  

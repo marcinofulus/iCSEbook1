@@ -4,10 +4,31 @@ First order differential equations
 ==================================
 
 
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at XXXIII LO M. Kopernika w Warszawie.
+
+It was prepared by   Mirosław Malinowski based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
+      
 
 Lesson Plan
 -----------
-
 
 
 Based on the book C. Quinn, C. Sangwin, R. Haese. M. Haese,
@@ -94,15 +115,18 @@ b) Sketch the isocline corresponding to:
 SEPARABLE DIFFERENTIAL EQUATIONS
 --------------------------------
 
-**Differential equations which can be written in the form  :math:`\large \frac{dy}{dx} \normalsize = \large \frac{f(x)}{g(y)}`, where  :math:` y=y(x)`, are known as separable differential equations.**
+Differential equations which can be written in the form  :math:`\large \frac{dy}{dx} \normalsize = \large \frac{f(x)}{g(y)}`, where  :math:`y=y(x)`, are known as separable differential equations.
 
-We can notice that if  :math:` \Large \frac{dy}{dx} \normalsize = \Large \frac{f(x)}{g(y)}`, then  :math:` \normalsize g(y) \Large \frac{dy}{dx} \normalsize = f(x)`. Now, integrating both sides of the equation with respect to  :math:`x` we get  :math:` \large \int g(y) \large \frac{dy}{dx} \normalsize dx =\int f(x)dx` and by the Chain Rule we can reduce the problem of solving the differential equation to the problem of finding two separate integrals
+We can notice that if  :math:`\Large \frac{dy}{dx} \normalsize = \Large \frac{f(x)}{g(y)}`, then  :math:`\normalsize g(y) \Large \frac{dy}{dx} \normalsize = f(x)`. Now, integrating both sides of the equation with respect to  :math:`x` we get  :math:`\large \int g(y) \large \frac{dy}{dx} \normalsize dx =\int f(x)dx` and by the Chain Rule we can reduce the problem of solving the differential equation to the problem of finding two separate integrals
 
-:math:` \large \int g(y)dy =\int f(x)dx`.
+.. math::
 
- ***Example 2:*** 
+   \large \int g(y)dy =\int f(x)dx
 
-Find the general solution of the differential equation  :math:` \Large \frac{dy}{dx} \normalsize = \Large \frac{x^2y+y}{x^2-1}`. Verify your results with SAGE and sketch the solution curve passing through the point  :math:`P(x_0, y_0)` if:
+   
+***Example 2:*** 
+
+Find the general solution of the differential equation  :math:`\Large \frac{dy}{dx} \normalsize = \Large \frac{x^2y+y}{x^2-1}`. Verify your results with SAGE and sketch the solution curve passing through the point  :math:`P(x_0, y_0)` if:
 
 a)  :math:`(x_0, y_0) = (2,3)`
 
@@ -110,7 +134,7 @@ b)  :math:`(x_0, y_0) = (0,0)`
 
 c)  :math:`(x_0, y_0) = (-2,1)`
 
- ***Solution:*** 
+***Solution:*** 
 
 
 .. sagecellserver::
@@ -135,22 +159,22 @@ c)  :math:`(x_0, y_0) = (-2,1)`
 
 1. Solve the following initial value problems:
 
-a)  :math:` (2-x)\Large \frac{dy}{dx} \normalsize = 1`,   :math:`y(4) = 3`.
+a)  :math:`(2-x)\Large \frac{dy}{dx} \normalsize = 1`,   :math:`y(4) = 3`.
 
-b)  :math:` \Large \frac{dy}{dx} \normalsize - 3x \sec(x) = 0`,   :math:`y(1) = 0`.
+b)  :math:`\Large \frac{dy}{dx} \normalsize - 3x \sec(x) = 0`,   :math:`y(1) = 0`.
 
-c)  :math:` e^y(2x^2 + 4x +1)\Large \frac{dy}{dx} \normalsize = (x+1)(e^y +3)`,   :math:`y(0)=2`.
+c)  :math:`e^y(2x^2 + 4x +1)\Large \frac{dy}{dx} \normalsize = (x+1)(e^y +3)`,   :math:`y(0)=2`.
 
 d)  :math:`x \Large \frac{dy}{dx} \normalsize = \cos^2(y)`,   :math:`y(e) = \large \frac {\pi}{4}`.
 
-2. Solve  :math:` \Large \frac{dy}{dx} \normalsize = \Large \frac{3y-xy}{x^2-1}`,   :math:`y(0) = 1`.
+2. Solve  :math:`\Large \frac{dy}{dx} \normalsize = \Large \frac{3y-xy}{x^2-1}`,   :math:`y(0) = 1`.
 
 
 
 HOMOGENEOUS DIFFERENTIAL EQUATIONS
 ----------------------------------
 
-**Differential equations of the form  :math:` \large \frac{dy}{dx} \normalsize = f\large \left ( \frac{y}{x} \right)`, where  :math:`\normalsize y=y(x)` are known as homogeneous differential equations .**
+Differential equations of the form  :math:`\large \frac{dy}{dx} \normalsize = f\large \left ( \frac{y}{x} \right)`, where  :math:`\normalsize y=y(x)` are known as homogeneous differential equations .
 
 They can be solved using the substitution  :math:`y=vx`, where  :math:`v=v(x)`. The substitution will always reduce the differential equation to a separable differentiable equation.
 
@@ -158,7 +182,7 @@ They can be solved using the substitution  :math:`y=vx`, where  :math:`v=v(x)`. 
 
 ***Example 3:***
 
-Use the substitution  :math:`y=vx`, where  :math:`v=v(x)`, to find general solution of the differential equation  :math:` \Large \frac{dy}{dx} \normalsize = \Large \frac{x+2y}{x}`. Verify your results with SAGE and find the particular solution if  :math:`y=\large \frac{3}{2}` when  :math:`x=3`.
+Use the substitution  :math:`y=vx`, where  :math:`v=v(x)`, to find general solution of the differential equation  :math:`\Large \frac{dy}{dx} \normalsize = \Large \frac{x+2y}{x}`. Verify your results with SAGE and find the particular solution if  :math:`y=\large \frac{3}{2}` when  :math:`x=3`.
 
  ***Solution:*** 
 

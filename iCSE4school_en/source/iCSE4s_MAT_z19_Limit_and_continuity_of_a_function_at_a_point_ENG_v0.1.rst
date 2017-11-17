@@ -4,11 +4,30 @@ Limit and continuity of a function at a point
 =============================================
 
 
-*Mirosław Malinowski*
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at XXXIII LO M. Kopernika w Warszawie.
+
+It was prepared by   Mirosław Malinowski based on his lesson.
 
 
-Number sequences \- review
---------------------------
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
+
+Number sequences - review
+-------------------------
 
 a) What do we call a number sequence?
 

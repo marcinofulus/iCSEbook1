@@ -1,8 +1,31 @@
 From point to point
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 
-*This project is the result of activities at The Stefan Batory High School in Chorzów*
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
+
+It was prepared by  Krzysztof Oleś based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
+From point to point
+-------------------
+
 
 Let's think about a graph connected with a function, i.e. :math:`f(x)=\log_x\left|4\sin\left(\frac{\pi}{2}-3x\right)-6\right|`.   That's of cource a continuous line. Really?  
 
@@ -407,7 +430,8 @@ This figure we can (**SURELY**?!) cover by 1 square with a side length of 1, 8 s
 
 Sierpinski's carpet is something between a line and a square - perhaps we came a little closer to the concept of dimension...
 
-.. rubric:: Summary
+Summary
+-------
 
 In the text above three words are bold. Finally, we would like to return to them.
 

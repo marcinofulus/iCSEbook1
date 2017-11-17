@@ -1,15 +1,28 @@
-RSA asymmetric cipher. 
+RSA asymmetric cipher.
 ======================
 
-Introduction.
-^^^^^^^^^^^^^
-*This project is the result of activities at The Stefan Batory High School in Chorzów*
 
-In each of the program's window you can change the numbers, text, variables, or the code.
+About this lesson plan
+^^^^^^^^^^^^^^^^^^^^^^
 
-You do not have to worry if the program stops working, because after its refreshing it returns to the initial settings.
+This is a lesson plan for indented for realization during  2h lesson activities. 
 
-Often next code results from the previous one, so the exercises (algorithms) should be run in their order.  
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
+
+It was prepared by  Krzysztof Jarczewski based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to  return to the original version  refresh
+      the webpage.  Sometimes the next code depends on variables defined from the previous one,
+      so one has to execute cells in order of apperance.
+
+
 
 
 Definition of congruence relation.
@@ -148,11 +161,11 @@ Below you can find an example of the  number cither:
     print " public key:", (d, n)
     print "private key:",(e, n)
     # encryption
-    szyfr = (number*d) % n
-    print "encryption:", szyfr
+    encrypted = (number*d) % n
+    print "encryption:", encrypted
     # decryption
-    deszyfr = (szyfr*e) % n
-    print "decryption:", deszyfr
+    decrypted = (encrypted*e) % n
+    print "decryption:", decrypted
  
 
 What to do when the number is larger than n?
@@ -172,14 +185,14 @@ What to do when the number is larger than n?
 .. sagecellserver::
 
     number=123456567675635352364213879879797996743546789435345241 #Big number(message)
-    szyfr = 0
+    encrypted = 0
     i=0
     while number>0:                           # 5
         pomoc=number%n                        # 1 
-        szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
+        encrypted = encrypted + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
         number=int(number/n)                  # 4
-    print szyfr
+    print encrypted
 
 
 In the similar way the message is decripted.
@@ -187,7 +200,7 @@ In the similar way the message is decripted.
 Help:
 
 ============== =============== ======
-number → szyfr szyfr → deszyfr d→e
+number → encrypted encrypted → decrypted d→e
 ============== =============== ======
 
 Try to decription the number (message) below.
@@ -197,10 +210,10 @@ Try to decription the number (message) below.
     i=0
     while number>0:                           # 5
         pomoc=number%n                        # 1 
-        szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
+        encrypted = encrypted + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
         number=int(number/n)                  # 4
-    print szyfr
+    print encrypted
 
 
 What we usually want to do is to cipher a text not a number, so we have to substitute letters into numbers. We shall use ASCII code. Each letter, symbol is given a number from 1 to 128.
@@ -240,14 +253,14 @@ Following the submission of these algorithms we get full algorithm to encrypt an
     print "number:", number
     print ""
     # encription
-    szyfr = 0
+    encrypted = 0
     i=0
     while number>0:
         pomoc=number%n
-        szyfr = szyfr + ((pomoc*d) % n)*n^i
+        encrypted = encrypted + ((pomoc*d) % n)*n^i
         i=i+1
         number=int(number/n)
-    print "encription:", szyfr
+    print "encription:", encrypted
 
 
 The full algorithm of decryption.
@@ -255,22 +268,22 @@ The full algorithm of decryption.
 .. sagecellserver::
 
     tekst2=""
-    deszyfr = 0
+    decrypted = 0
     i=0
-    print "encription:", szyfr
+    print "encription:", encrypted
     # decription
-    while szyfr>0:
-        pomoc=szyfr%n
-        deszyfr = deszyfr + ((pomoc*e) % n)*n^i
+    while encrypted>0:
+        pomoc=encrypted%n
+        decrypted = decrypted + ((pomoc*e) % n)*n^i
         i=i+1
-        szyfr=int(szyfr/n)
-    print "decription: ", deszyfr
+        encrypted=int(encrypted/n)
+    print "decription: ", decrypted
     ## change number to text
     i=0
-    while deszyfr>0:
+    while decrypted>0:
         i=i+1
-        deszyfr=int(deszyfr/128)
-        tekst2 = tekst2 + chr(deszyfr%128)
+        decrypted=int(decrypted/128)
+        tekst2 = tekst2 + chr(decrypted%128)
     print "message: ", tekst2
  
 
@@ -377,39 +390,40 @@ It is enough to copy the algorithm of coding from the previous lessons and subst
     print "number:", number
     print ""
     # encription
-    szyfr = 0
+    encrypted = 0
     i=0
     while number>0:
         pomoc=number%n
-        szyfr = szyfr + ((pomoc^d) % n)*n^i
+        encrypted = encrypted + ((pomoc^d) % n)*n^i
         i=i+1
         number=int(number/n)
-    print "encription:", szyfr
+    print "encription:", encrypted
 
 
 The full algorithm of decryption RSA.
 """""""""""""""""""""""""""""""""""""
 
-It is enough to copy the algorithm of coding from the previous lessons and substitute  pomoc*e them pomoc^e.
+It is enough to copy the algorithm of coding from the previous lessons
+and substitute pomoc*e them pomoc^e.
 
 .. sagecellserver::
 
     tekst2=""
-    deszyfr = 0
+    decrypted = 0
     i=0
-    print "encription:", szyfr
+    print "encription:", encrypted
     # decription
-    while szyfr>0:
-        pomoc=szyfr%n
-        deszyfr = deszyfr + ((pomoc^e) % n)*n^i
+    while encrypted>0:
+        pomoc=encrypted%n
+        decrypted = decrypted + ((pomoc^e) % n)*n^i
         i=i+1
-        szyfr=int(szyfr/n)
-    print "decription: ", deszyfr
+        encrypted=int(encrypted/n)
+    print "decription: ", decrypted
     ## change number to text
     i=0
-    while deszyfr>0:
+    while decrypted>0:
         i=i+1
-        deszyfr=int(deszyfr/128)
-        tekst2 = tekst2 + chr(deszyfr%128)
+        decrypted=int(decrypted/128)
+        tekst2 = tekst2 + chr(decrypted%128)
     print "message: ", tekst2
  

@@ -1,3 +1,4 @@
+
 Dlaczego Sage?
 ==============
 
@@ -6,6 +7,23 @@ Wybór najlepszego narzędzia informatycznego na lekcję matematyki lub fizyki?
 ----------------------------------------------------------------------------
 
 
+For many years, attempts have been made to use ICT tools and
+even programming in science classes. Most Generally
+is selected by professionals in one specialized field
+software. Sometimes the choice is lobbied by the manufacturer of the given
+system. As a result, this leads to uncoordinated activities
+limited to individual subjects. A student learns in lessons
+Informatics tools and languages ​​not useful in others
+items. The lessons of physics and math are enriched with dedicated
+software that is not used in computer science. This way
+The action is not bad in itself - we use the right tools to
+individual tasks. What if there is a common tool and language in
+They can be practically uncompromising to the whole
+A spectrum of issues in school (and not just) education?
+
+Let's consider what features a computer system should have
+Break the stereotype above? Let's find a solution at once
+having the following characteristics:
 
 
 Od wielu lat czynione są próby stosowania narzędzi informatycznych i
