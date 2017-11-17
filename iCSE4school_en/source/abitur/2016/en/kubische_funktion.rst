@@ -42,7 +42,7 @@ properties of the function :math:`f` just discussed.
   sage: p1 = plot(f(x), (-3, 6), color='red', legend_label="$f(x)$")
   sage: p2 = plot(df(x), (-3, 6), color='green', legend_label="$f'(x)$")
   sage: p3 = plot(ddf(x), (-3, 6), color='blue', legend_label="$f''(x)$")
-  sage: plot(p1+p2+p3, figsize=(4, 2.8), ymin=-10, ymax=10)
+  sage: show(p1+p2+p3, figsize=(4, 2.8), ymin=-10, ymax=10)
      
 .. end of output
 

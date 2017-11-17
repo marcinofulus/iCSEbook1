@@ -4,6 +4,29 @@
 Accelerated motion
 ==================
 
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at The Stefan Batory High School in
+Chorzów.
+
+It was prepared by  Adam Ogaza based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to return to the original version refresh
+      the webpage.  Sometimes the next code depends on variables
+      defined from the previous one, so one has to execute cells in
+      order of apperance.
+
+
 Introduction
 ------------
 
@@ -30,7 +53,7 @@ Experimental part
 
 3. Set of devices measuring time. Student's smartphones are good for this purpose.
 
-**Run of lesson**
+**The course of the lesson**
 
 The whole course of lesson, description of experiment and expectation towards the way of data processing are contained in the film: `https://youtu.be/deTJ4i1V0dg <https://youtu.be/deTJ4i1V0dg>`_ In particular it shows the pattern of measuring chart, tips on the way of conducting the experiment and formulas necessary for calculations. Presented calculation methods basically exceeds the Curriculum, but thanks to Python they are very easy in use and students immediately gain spectacular results without any need of deep understanding all the mechanisms.
 
@@ -48,12 +71,12 @@ Exemplary calculation of standard deviation. Traditional calculation is arduous,
 .. sagecellserver::
     :linked: false  
 
-    sage: anydata = (3.4, 3.6, 3.3, 3.3, 3.5, 3.7, 3.6, 3.6, 3.6, 3.5) # przykładowe dane
-    sage: mean_data = mean(anydata) # mean value
-    sage: std_data = std(anydata) # standard deviation
-    sage: print anydata
-    sage: print "Mean value = ", N(mean_data, digits=3)
-    sage: print "Std deviation = ", N(std_data, digits=3)
+    anydata = (3.4, 3.6, 3.3, 3.3, 3.5, 3.7, 3.6, 3.6, 3.6, 3.5) # przykładowe dane
+    mean_data = mean(anydata) # mean value
+    std_data = std(anydata) # standard deviation
+    print anydata
+    print "Mean value = ", N(mean_data, digits=3)
+    print "Std deviation = ", N(std_data, digits=3)
  
 
 .. end of output
@@ -63,12 +86,12 @@ Measuring data simulation and plot :math:`s(t)`
 
 .. sagecellserver::
 
-    sage: s = (0, 0.03, 0.1, 0.39, 0.88, 1.62, 2.44, 3.55)
-    sage: t = (0, 0.5, 1.01, 2.1, 2.97, 3.88, 5.02, 5.95)
-    sage: delta_s = (0, 0.02, 0.02, 0.02, 0.05, 0.05, 0.05, 0.1)
-    sage: delta_t = (0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.2, 0.3)
-    sage: pkt = zip(t, s)
-    sage: point(pkt, gridlines=True, size=25, color='red', axes_labels=['l', 'y'], legend_label='s(t)')
+    s = (0, 0.03, 0.1, 0.39, 0.88, 1.62, 2.44, 3.55)
+    t = (0, 0.5, 1.01, 2.1, 2.97, 3.88, 5.02, 5.95)
+    delta_s = (0, 0.02, 0.02, 0.02, 0.05, 0.05, 0.05, 0.1)
+    delta_t = (0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.2, 0.3)
+    pkt = zip(t, s)
+    point(pkt, gridlines=True, size=25, color='red', axes_labels=['l', 'y'], legend_label='s(t)')
 
 
 .. end of output
@@ -77,13 +100,13 @@ Fitting parabola to data. Without Sage environment it is absolutely infeasible f
 
 .. sagecellserver::
 
-    sage: var ('a')
-    sage: parabola(x) = a/2*x^2 # Time is marked as x, to avoid collision in variables
-    sage: fit = find_fit(pkt, parabola,solution_dict=True)
-    sage: print fit
-    sage: rys1=plot(parabola.subs(fit), x, 0, 6, color="green", legend_label='fitted parabola')
-    sage: rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='measurement points')
-    sage: rys1+rys2
+    var ('a')
+    parabola(x) = a/2*x^2 # Time is marked as x, to avoid collision in variables
+    fit = find_fit(pkt, parabola,solution_dict=True)
+    print fit
+    rys1=plot(parabola.subs(fit), x, 0, 6, color="green", legend_label='fitted parabola')
+    rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='measurement points')
+    rys1+rys2
 
 .. end of output
 
@@ -92,12 +115,12 @@ Python is not equipped with mechanisms for automatic drawing error-bars. Additio
 
 .. sagecellserver::
 
-    sage: import matplotlib.pyplot as plt
-    sage: plt.clf()
-    sage: plt.errorbar(t, s, xerr=delta_t, yerr=delta_s, fmt='o-')
-    sage: plt.xlabel("t [s]")
-    sage: plt.ylabel("s [m]")
-    sage: plt.savefig('1.png')
+    import matplotlib.pyplot as plt
+    plt.clf()
+    plt.errorbar(t, s, xerr=delta_t, yerr=delta_s, fmt='o-')
+    plt.xlabel("t [s]")
+    plt.ylabel("s [m]")
+    plt.savefig('1.png')
 
 
 .. end of output
@@ -106,19 +129,19 @@ Unfortunately, mentioned library does not draw function plots. To put on one plo
 
 .. sagecellserver::
 
-    sage: import matplotlib.pyplot as plt
-    sage: import numpy as np 
-    sage: plt.clf()
-    sage: plt.errorbar(t, s, xerr=delta_t, yerr=delta_s, fmt='o')
-    sage: plt.xlabel("Czas [s]")
-    sage: plt.ylabel("Droga [m]")
-    sage: t_ = np.linspace(0,t[7],100)
-    sage: plt.plot(t_,a.subs(fit)/2*t_**2)
-    sage: plt.grid()
-    sage: plt.xlim(0, 6.2)
-    sage: plt.ylim(0, 4)
-    sage: plt.savefig('1.png')
-    sage: plt.savefig('1.pdf')
+    import matplotlib.pyplot as plt
+    import numpy as np 
+    plt.clf()
+    plt.errorbar(t, s, xerr=delta_t, yerr=delta_s, fmt='o')
+    plt.xlabel("Czas [s]")
+    plt.ylabel("Droga [m]")
+    t_ = np.linspace(0,t[7],100)
+    plt.plot(t_,a.subs(fit)/2*t_**2)
+    plt.grid()
+    plt.xlim(0, 6.2)
+    plt.ylim(0, 4)
+    plt.savefig('1.png')
+    plt.savefig('1.pdf')
 
 
 .. end of output
@@ -157,4 +180,3 @@ English version: https://sage01.icse.us.edu.pl/home/pub/177/
 
 Features of good report: http://3lo.edu.pl/?p=306
 
-                                                            Adam Ogaza

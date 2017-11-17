@@ -199,9 +199,9 @@ In the similar way the message is decripted.
 
 Help:
 
-============== =============== ======
+================== ===================== ===
 number → encrypted encrypted → decrypted d→e
-============== =============== ======
+================== ===================== ===
 
 Try to decription the number (message) below.
 

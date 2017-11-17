@@ -180,7 +180,7 @@ Animation showing the impact of second frequency
 
 **Reflection and standing waves**
 
-Standing wave as an interference of two waves travelling the opposite side. Students can manipulate all the parameters (it was an exercise). ****
+Standing wave as an interference of two waves travelling the opposite side. Students can manipulate all the parameters (it was an exercise).
 
 
 ::

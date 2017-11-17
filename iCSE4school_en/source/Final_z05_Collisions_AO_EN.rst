@@ -4,6 +4,30 @@
 Collisions
 ==========
 
+
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at The Stefan Batory High School in
+Chorzów.
+
+It was prepared by  Adam Ogaza based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to return to the original version refresh
+      the webpage.  Sometimes the next code depends on variables
+      defined from the previous one, so one has to execute cells in
+      order of apperance.
+
+
 Description of the problem
 --------------------------
 
@@ -50,18 +74,18 @@ Results of measurements and charts :math:`x_1(t)` and :math:`x_2(t)`:
 
 .. sagecellserver::
 
-    sage: m1=0.1793
-    sage: m2=0.3197
-    sage: d1=0.01
-    sage: d2=0.011
-    sage: delta_t=1/30
-    sage: t=[(i*delta_t) for i in range(0,100)]
-    sage: x1=[1.005,1.005,1.005,1.005,1.006,1.006,1.006,1.006,1.007,1.007,1.007,1.007,1.008,1.008,1.008,1.008,1.009,1.009,1.009,1.009,1.010,1.010,1.010,1.010,1.011,1.011,1.011,1.011,1.012,1.012,1.012,1.012,1.013,1.013,1.013,1.013,1.014,1.014,1.014,1.014,1.015,1.015,1.015,1.016,1.016,1.015,1.012,1.007,0.994,0.978,0.963,0.948,0.931,0.914,0.899,0.882,0.863,0.846,0.830,0.817,0.800,0.783,0.765,0.749,0.733,0.716,0.700,0.684,0.668,0.652,0.636,0.620,0.605,0.590,0.575,0.559,0.543,0.528,0.512,0.496,0.481,0.466,0.450,0.434,0.419,0.403,0.387,0.373,0.357,0.342,0.326,0.311,0.296,0.282,0.266,0.251,0.238,0.224,0.208,0.200]
-    sage: x2=[1.720,1.710,1.695,1.680,1.665,1.650,1.635,1.620,1.605,1.589,1.573,1.559,1.545,1.530,1.515,1.501,1.486,1.472,1.458,1.443,1.429,1.415,1.400,1.388,1.375,1.362,1.347,1.332,1.319,1.304,1.291,1.277,1.264,1.249,1.235,1.221,1.208,1.195,1.183,1.169,1.156,1.143,1.130,1.117,1.100,1.090,1.079,1.068,1.057,1.047,1.040,1.036,1.034,1.030,1.026,1.022,1.019,1.015,1.011,1.008,1.004,1.000,0.997,0.994,0.991,0.987,0.984,0.981,0.978,0.974,0.970,0.966,0.962,0.960,0.956,0.953,0.950,0.946,0.942,0.938,0.935,0.931,0.928,0.925,0.922,0.919,0.915,0.911,0.908,0.904,0.899,0.895,0.891,0.887,0.885,0.881,0.878,0.874,0.871,0.868]
-    sage: x1t=[(t[i],x1[i]) for i in range(0,100)]
-    sage: x2t=[(t[i],x2[i]) for i in range(0,100)]
-    sage: xt=point(x1t,color="red",legend_label='x1(t)')+point(x2t,color="blue",legend_label='x2(t)')
-    sage: xt
+    m1=0.1793
+    m2=0.3197
+    d1=0.01
+    d2=0.011
+    delta_t=1/30
+    t=[(i*delta_t) for i in range(0,100)]
+    x1=[1.005,1.005,1.005,1.005,1.006,1.006,1.006,1.006,1.007,1.007,1.007,1.007,1.008,1.008,1.008,1.008,1.009,1.009,1.009,1.009,1.010,1.010,1.010,1.010,1.011,1.011,1.011,1.011,1.012,1.012,1.012,1.012,1.013,1.013,1.013,1.013,1.014,1.014,1.014,1.014,1.015,1.015,1.015,1.016,1.016,1.015,1.012,1.007,0.994,0.978,0.963,0.948,0.931,0.914,0.899,0.882,0.863,0.846,0.830,0.817,0.800,0.783,0.765,0.749,0.733,0.716,0.700,0.684,0.668,0.652,0.636,0.620,0.605,0.590,0.575,0.559,0.543,0.528,0.512,0.496,0.481,0.466,0.450,0.434,0.419,0.403,0.387,0.373,0.357,0.342,0.326,0.311,0.296,0.282,0.266,0.251,0.238,0.224,0.208,0.200]
+    x2=[1.720,1.710,1.695,1.680,1.665,1.650,1.635,1.620,1.605,1.589,1.573,1.559,1.545,1.530,1.515,1.501,1.486,1.472,1.458,1.443,1.429,1.415,1.400,1.388,1.375,1.362,1.347,1.332,1.319,1.304,1.291,1.277,1.264,1.249,1.235,1.221,1.208,1.195,1.183,1.169,1.156,1.143,1.130,1.117,1.100,1.090,1.079,1.068,1.057,1.047,1.040,1.036,1.034,1.030,1.026,1.022,1.019,1.015,1.011,1.008,1.004,1.000,0.997,0.994,0.991,0.987,0.984,0.981,0.978,0.974,0.970,0.966,0.962,0.960,0.956,0.953,0.950,0.946,0.942,0.938,0.935,0.931,0.928,0.925,0.922,0.919,0.915,0.911,0.908,0.904,0.899,0.895,0.891,0.887,0.885,0.881,0.878,0.874,0.871,0.868]
+    x1t=[(t[i],x1[i]) for i in range(0,100)]
+    x2t=[(t[i],x2[i]) for i in range(0,100)]
+    xt=point(x1t,color="red",legend_label='x1(t)')+point(x2t,color="blue",legend_label='x2(t)')
+    xt
 
 .. end of output
 
@@ -69,12 +93,12 @@ Charts :math:`v_1(t)` and :math:`v_2(t)`:
 
 .. sagecellserver::
 
-    sage: v1=[((x1[i+1]-x1[i])/(delta_t)) for i in range(0,99)]
-    sage: v2=[((x2[i+1]-x2[i])/(delta_t)) for i in range(0,99)]
-    sage: v1t=[(t[i],v1[i]) for i in range(0,99)]
-    sage: v2t=[(t[i],v2[i]) for i in range(0,99)]
-    sage: vt=point(v1t,color="red",legend_label='v1(t)')+point(v2t,color="blue",legend_label='v2(t)')
-    sage: vt
+    v1=[((x1[i+1]-x1[i])/(delta_t)) for i in range(0,99)]
+    v2=[((x2[i+1]-x2[i])/(delta_t)) for i in range(0,99)]
+    v1t=[(t[i],v1[i]) for i in range(0,99)]
+    v2t=[(t[i],v2[i]) for i in range(0,99)]
+    vt=point(v1t,color="red",legend_label='v1(t)')+point(v2t,color="blue",legend_label='v2(t)')
+    vt
 
 .. end of output
 
@@ -83,12 +107,12 @@ We see a big noise caused by a limited resolution in reading out the coordinates
 
 .. sagecellserver::
 
-    sage: v1=[((x1[i+1]-x1[i-1])/(2*delta_t)) for i in range(1,99,2)]
-    sage: v2=[((x2[i+1]-x2[i-1])/(2*delta_t)) for i in range(1,99,2)]
-    sage: v1t=[(t[2*i],v1[i]) for i in range(0,49)]
-    sage: v2t=[(t[2*i],v2[i]) for i in range(0,49)]
-    sage: vt=point(v1t,color="red",legend_label='v1(t)')+point(v2t,color="blue",legend_label='v2(t)')
-    sage: vt
+    v1=[((x1[i+1]-x1[i-1])/(2*delta_t)) for i in range(1,99,2)]
+    v2=[((x2[i+1]-x2[i-1])/(2*delta_t)) for i in range(1,99,2)]
+    v1t=[(t[2*i],v1[i]) for i in range(0,49)]
+    v2t=[(t[2*i],v2[i]) for i in range(0,49)]
+    vt=point(v1t,color="red",legend_label='v1(t)')+point(v2t,color="blue",legend_label='v2(t)')
+    vt
 
 .. end of output
 
@@ -161,4 +185,4 @@ How it can be seen from above analysis, the precision in reading out the positio
 
 The added value of the whole enterprise was a fruitful cooperation with English teachers. They supervised translations done by authors of the best homeworks. Students in science profile classes realize an additional subject called *English for engineers*. Experiment in physics created opportunity to exercise technical language on living example and get additional assessment for it.
 
-    Adam Ogaza, 2017.
+

@@ -56,7 +56,7 @@ We may therefore deduce the gradient of the solution curves to the differential 
 
 By representing the gradients at many different grid points as line segments, we obtain a slope field of the tangents to the solution curves. Now the tangent to a curve approximates that curve at and near the points of tangency. Therefore, by following the direction given by the slope field at a given point, we can approximate solution curves of the differential equation.
 
- ***Example 1** :* 
+ ***Example 1*** 
 
 Consider the differential equation  :math:`\Large \frac{dy}{dx} \normalsize =x(y-1)`.
 

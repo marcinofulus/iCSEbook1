@@ -95,13 +95,13 @@ characteristics:
 +--------------+--------+--------+------+----------+--------+
 |Python/Scipy  |  YES   |  YES   |YES   |  YES     |    YES |
 +--------------+--------+--------+------+----------+--------+
-|Mathematica   | YES    |  YES   |NO   |   YES    |    YES |
+|Mathematica   | YES    |  YES   |NO    |   YES    |    YES |
 +--------------+--------+--------+------+----------+--------+
-|C/C++         |    YES |  NO   |YES   | YES/NO  |    YES |
+|C/C++         |    YES |  NO    |YES   | YES/NO   |    YES |
 +--------------+--------+--------+------+----------+--------+
-|Geogebra      |    NO |  YES   |  YES |   NO    |    NO |
+|Geogebra      |    NO  |  YES   |  YES |   NO     |    NO  |
 +--------------+--------+--------+------+----------+--------+
-|Java          |    YES |  NO   | YES  | YES/NO  |    YES |
+|Java          |    YES |  NO    | YES  | YES/NO   |    YES |
 +--------------+--------+--------+------+----------+--------+
 
 The above analysis shows that solutions based on Python meet all

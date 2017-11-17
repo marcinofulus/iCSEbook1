@@ -53,8 +53,8 @@ The first example counts factorial according to the definition.
     
    silnia=1
    for i in range(1,6):
-        silnia=silnia*i
-        print i, '!=', silnia
+       silnia=silnia*i
+       print i, '!=', silnia
 
 
 The second example uses a built-in function in SageMath.

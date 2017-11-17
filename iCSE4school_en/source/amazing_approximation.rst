@@ -22,8 +22,9 @@ It was prepared by  Krzysztof Oleś based on his lesson.
       so one has to execute cells in order of apperance.
 
 
+*This project is the result of activities (inspired by the textbook
+ "Matematyka się liczy" edited by prof. Wacław Zawadowski)*
 
-*This project is the result of activities (inspired by the textbook "Matematyka się liczy" edited by prof. Wacław Zawadowski) *
 
 Introduction
 ------------

@@ -2,9 +2,40 @@
 
 Sound Waves
 ===========
+
+
+About this lesson plan
+----------------------
+
+This is a lesson plan for indented for realization during  2h lesson activities. 
+
+It has been developed during work in iCSE4school project based on
+lesson carried out in 2015-2017 at  The Stefan Batory High School in Chorzów.
+
+It was prepared by  Adam Ogaza based on his lesson.
+
+
+.. only:: html
+
+   .. admonition::  Attention!
+
+      In each of the "code" cells you can change any number, text or
+      instruction. In order to return to the original version refresh
+      the webpage.  Sometimes the next code depends on variables
+      defined from the previous one, so one has to execute cells in
+      order of apperance.
+
+      
+
 Introduction
 ------------
-The lesson described below was tested three times on students learning physics at advanced level (age 17). In 2015 the numerical amount of group was 14, in 2016: 21 and in 2017: 16. This lesson was preceded by a short course of programming in Python and consists of two parts: theoretical introduction and IT laboratory. Both parts were filmed in 2015 and published on Youtube with English subtitles.
+
+The lesson described below was tested three times on students learning
+physics at advanced level (age 17). In 2015 the numerical amount of
+group was 14, in 2016: 21 and in 2017: 16. This lesson was preceded by
+a short course of programming in Python and consists of two parts:
+theoretical introduction and IT laboratory. Both parts were filmed in
+2015 and published on Youtube with English subtitles.
 
 The main aims of this lesson are:
 
@@ -13,25 +44,39 @@ The main aims of this lesson are:
 - Defining all physical and physiological quantities describing sound.
 - Giving a basic knowledge of sound spectrum.
 - Exercising in plotting diagrams in Python.
-- Showing, that any periodical function can be presented as a linear combination of sine functions.
+- Showing, that any periodical function can be presented as a linear
+  combination of sine functions.
 - Exercising interaction and sliders in Python.
 
 Preparing this lesson we should take into consideration the following circumstances:
 
-- At high school level pupils cannot integrate. They have heard about integral and its applications, but performing integrations at the level required by Fourier transform is far beyond their abilities. Therefore real calculations must be replaced by simple playing with amplitudes of harmonics.
-- It is the first students' contact with @interact and sliders. Technical problems themselves are heavy to overcome, so there is no point in making the physical side of the topic more difficult.
-- This lesson (like any other) should be attractive, so spectacular results should be reached by relatively simple means.
-- The level of difficulties of the examples should gradually grow during this lesson. A good idea is to show different solutions for the same problem.
+- At high school level pupils cannot integrate. They have heard about
+  integral and its applications, but performing integrations at the
+  level required by Fourier transform is far beyond their
+  abilities. Therefore real calculations must be replaced by simple
+  playing with amplitudes of harmonics.
+- It is the first students' contact with @interact and
+  sliders. Technical problems themselves are heavy to overcome, so
+  there is no point in making the physical side of the topic more
+  difficult.
+- This lesson (like any other) should be attractive, so spectacular
+  results should be reached by relatively simple means.
+- The level of difficulties of the examples should gradually grow
+  during this lesson. A good idea is to show different solutions for
+  the same problem.
 
 Theoretical part
 ----------------
+
 Exercises in programming were preceded by a theoretical lecture about sound waves, published at: `https://youtu.be/dp\-ajKHs6WU <https://youtu.be/dp-ajKHs6WU>`_
 
 Main problems discussed in this lecture are the following:
 
 - Definition of sound wave.
-- Announcement, that some ideas from this lecture will be developed further during IT lesson with the use of SAGE and Python
-- Definition of acoustics and explanation the essence of physical and physiological acoustics.
+- Announcement, that some ideas from this lecture will be developed
+  further during IT lesson with the use of SAGE and Python
+- Definition of acoustics and explanation the essence of physical and
+  physiological acoustics.
 - Infrasounds and ultrasounds.
 - Frequency / wavelength and their relation to the tone
 - Spectrum of sound and its relation to the timbre.
@@ -39,7 +84,12 @@ Main problems discussed in this lecture are the following:
 - Sound intensity level and its relation to the loudness (audiogram).
 - Phase of the sound wave and its relation to the spatial impressions.
 
-During this lesson a software acoustic generator is used to demonstrate the tone output with respect to the frequency. It can also show, how changes of shape of signal influences the sound spectrum and timbre of voice. Students are informed, that they will use Python to illustrate the shape of complex signal with respect to the amplitudes of individual harmonics.
+During this lesson a software acoustic generator is used to
+demonstrate the tone output with respect to the frequency. It can also
+show, how changes of shape of signal influences the sound spectrum and
+timbre of voice. Students are informed, that they will use Python to
+illustrate the shape of complex signal with respect to the amplitudes
+of individual harmonics.
 
 IT part
 -------
@@ -238,6 +288,6 @@ From the other side, the participants of the lesson had an opportunity to learn 
 
 My observation is, that students are happy when using ready tools included in this worksheet, but are not able to develop them. My attempts to encourage students to improve above code as a homework failed.
 
-            Adam Ogaza, 2015\-2017
+
 
 

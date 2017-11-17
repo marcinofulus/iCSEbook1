@@ -3,8 +3,8 @@ Bavarian final secondary-school examinations in mathematics 2014
 
 .. admonition:: Problem
 
-  Given are the functions :math:`g_{a,c}: x\mapsto \sin(ax)+c`
-  defined on :math:`\mathbb{R}` with :math:`a,c\in \mathbb{R}^+_0`.
+   Given are the functions :math:`g_{a,c}: x\mapsto \sin(ax)+c`
+   defined on :math:`\mathbb{R}` with :math:`a,c\in \mathbb{R}^+_0`.
 
     a) For each of the following two properties find a possible value for
        :math:`a` and a possible value for :math:`c` such that the corresponding
@@ -16,6 +16,7 @@ Bavarian final secondary-school examinations in mathematics 2014
     b) Determine as a function of :math:`a` the possible values of the
        derivative of :math:`g_{a,c}`.
 
+       
 **Solution of part a**
 
 The parameter :math:`a` determines the period of the sine but does not influence
