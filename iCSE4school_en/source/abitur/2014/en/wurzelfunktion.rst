@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2014
-----------------------------------------------------------------
+Properties of the square root function
+======================================
 
 .. admonition:: Problem 1
 

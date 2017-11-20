@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2016
-----------------------------------------------------------------
+Lines and points in 3d
+======================
 
 .. admonition:: Problem
 

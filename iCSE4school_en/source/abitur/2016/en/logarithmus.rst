@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2016
-----------------------------------------------------------------
+Domain and values of the lograrithm
+===================================
 
 .. admonition:: Problem
 

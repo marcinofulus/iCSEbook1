@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2015
-================================================================
+Properties of sin(2x)
+=====================
 
 .. admonition:: Problem
 

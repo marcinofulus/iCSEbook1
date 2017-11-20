@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2016
-----------------------------------------------------------------
+Graphical integration
+=====================
 
 .. admonition:: Problem
 

@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2013
-----------------------------------------------------------------
+Maximal domain and tangent of the square root function
+======================================================
 
 .. admonition:: Problem
 

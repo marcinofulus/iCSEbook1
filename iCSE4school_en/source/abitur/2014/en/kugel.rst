@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2014
-----------------------------------------------------------------
+The sphere
+==========
 
 .. admonition:: Problem
 

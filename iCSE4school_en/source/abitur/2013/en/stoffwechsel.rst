@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2013
-----------------------------------------------------------------
+Statistics of a medical test
+============================
 
 .. admonition:: Problem
 

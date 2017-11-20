@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2013
-----------------------------------------------------------------
+Straight lines in 3d
+====================
 
 .. admonition:: Problem
 

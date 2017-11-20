@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2016
-----------------------------------------------------------------
+Tossing a coin
+==============
 
 .. admonition:: Problem
 

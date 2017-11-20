@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2015
-================================================================
+Pyramid and vectors
+===================
 
 .. admonition:: Problem
 

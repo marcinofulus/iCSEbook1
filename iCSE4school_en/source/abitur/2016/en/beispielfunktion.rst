@@ -1,5 +1,5 @@
-Bavarian final secondary-school examinations in mathematics 2016
-----------------------------------------------------------------
+The construction of functions given set of properties
+=====================================================
 
 .. admonition:: Problem
   
