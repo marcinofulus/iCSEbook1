@@ -513,8 +513,8 @@ We already know the Taylor's formula. Now we can simplify our calculations, and 
 
 .. only:: latex
           
-    a plot as in :numref:`t_sin*x^2`.
+    a plot as in :numref:`t_sinx2`.
 
     .. figure:: wielomiany_media/t1.pdf
        :width: 60%
-       :name: t_sin*x^2 
+       :name: t_sinx2 

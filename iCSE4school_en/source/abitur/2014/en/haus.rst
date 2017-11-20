@@ -122,7 +122,7 @@ can be calculated by means of the cosine rule:
 
   \cos{\alpha} = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}
 
-By means of this formula, Sage yields a value of about :math:`37^°`.
+By means of this formula, Sage yields a value of about :math:`37^\circ`.
 The house thus is in accordance with the charter.
 
 .. sagecellserver::
@@ -211,10 +211,8 @@ for the plane :math:`F` yields
 
 .. math::
 
-  \begin{gather}
   3(4.8+6\mu)+4(7.4-\mu)-49.6 = 14\mu-5.6 = 0\\
   \Rightarrow\, \mu = 0.4
-  \end{gather}
 
 By insertion into the equation for the straight line :math:`m`, one obtains the
 point :math:`N(7.2|8|7)`, and by shifting by :math:`-1.4` in the :math:`x_3`

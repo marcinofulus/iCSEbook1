@@ -22,7 +22,7 @@ the ball movement as well as the final content of urn A are displayed for each o
 four sequences.
 
   1. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
-     \overset{\color{red}{\bullet}}{\underset{\color{\red}{\bullet}}{\rightleftarrows}}
+     \overset{\color{red}{\bullet}}{\underset{\color{red}{\bullet}}{\rightleftarrows}}
      \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
      \quad\Rightarrow
      \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ`

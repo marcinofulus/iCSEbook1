@@ -334,11 +334,11 @@ the above condition can be transformed into
 
 .. math::
 
-  \frac{P(A\cap B)}{P(B)}& > &\frac{P(A)-P(A\cap B)}{P(\bar{B})}\\
-  P(A\cap B)P(\bar{B})& > &P(A)P(B)-P(A\cap B)P(B)\\
-  P(A\cap B)[P(\bar{B})+P(B)]& > &P(A)P(B)\\
-  P(A\cap B)& > &P(A)P(B)\\
-  P(A\cap B)& > &0.495\cdot0.47
+  \frac{P(A\cap B)}{P(B)} > \frac{P(A)-P(A\cap B)}{P(\bar{B})}\\
+  P(A\cap B)P(\bar{B}) > P(A)P(B)-P(A\cap B)P(B)\\
+  P(A\cap B)[P(\bar{B})+P(B)] > P(A)P(B)\\
+  P(A\cap B) > P(A)P(B)\\
+  P(A\cap B) > 0.495\cdot0.47
 
 Out of 200 adolescents, at least 23.3% must own a smart phone and a stationary
 game console for the hypothesis formulated in the problem to hold. This

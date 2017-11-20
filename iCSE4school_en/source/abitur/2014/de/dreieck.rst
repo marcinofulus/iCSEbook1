@@ -116,10 +116,8 @@ Ebenengleichung ein:
 
 .. math::
 
-  \begin{gather}
   2 -\lambda + 2 -\lambda + 3 -4\lambda = 7-6\lambda \overset{!}{=} 4\\
   \rightarrow \lambda = \frac{1}{2}.
-  \end{gather}
 
 Der Schnittpunkt ergibt sich dadurch als
 

@@ -353,10 +353,10 @@ heart-shaped figure by reflection, we will proceed as follows:
 
      .. math::
 
-       & \mathrm{I} & \qquad &k(0)=h(0)\\
-       & \mathrm{II} & &k'(0)=h'(0)\\
-       & \mathrm{III} & &k(-2)=h(-2)\\
-       & \mathrm{IV} & &k'(-2)=h'(-2)\\
+        \mathrm{I}  \qquad k(0)=h(0)\\
+        \mathrm{II}  k'(0)=h'(0)\\
+        \mathrm{III}  k(-2)=h(-2)\\
+        \mathrm{IV}  k'(-2)=h'(-2)\\
 
      Explain, why the conditions I, II and III are reasonable. Make plausible
      that the condition IV leads to a better description of the leaf edge near the

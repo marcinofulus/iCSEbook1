@@ -38,7 +38,7 @@ This result can be confirmed by means of Sage by inserting :math:`-\infty` for :
 
 .. sagecellserver::
 
-  sage: print("f(-∞) = " + str(f(-infinity)))
+  sage: print("f(-inf) = " + str(f(-infinity)))
 
 .. end of output
 

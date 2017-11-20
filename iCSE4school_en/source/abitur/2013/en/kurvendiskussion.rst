@@ -92,9 +92,9 @@ In order to prove the point-symmetry of :math:`G_f` we need to demonstrate
 
 .. math::
   
-  f(x) + f(-x) & = 2x \cdot e^{-0.5x^2} + 2(-x) \cdot e^{-0.5(-x)^2}\\
-  &= 2x \cdot e^{-0.5x^2} - 2 x \cdot e^{-0.5x^2}\\
-  &= 0
+  f(x) + f(-x)  = 2x \cdot e^{-0.5x^2} + 2(-x) \cdot e^{-0.5(-x)^2}\\
+  = 2x \cdot e^{-0.5x^2} - 2 x \cdot e^{-0.5x^2}\\
+  = 0
 
 This result can easily be checked by means of Sage:
 
@@ -161,10 +161,10 @@ Inserting :math:`x_1` and :math:`x_2` yields:
 
 .. math::
 
-  f''(x_1) &= f''(-1) &= -2 \cdot (-1)\cdot e^{-0.5\cdot(-1)^2}\left(3-(-1)^2\right)
-  &= 4 \cdot e^{-0.5} &> 0\\
-  f''(x_2) &= f''(1) &= -2 \cdot 1\cdot e^{-0.5 \cdot 1^2}\left(3-1^2\right)
-  &= -4 \cdot e^{-0.5} &< 0
+  f''(x_1) = f''(-1) = -2 \cdot (-1)\cdot e^{-0.5\cdot(-1)^2}\left(3-(-1)^2\right)\\
+  = 4 \cdot e^{-0.5} > 0\\
+  f''(x_2) = f''(1) = -2 \cdot 1\cdot e^{-0.5 \cdot 1^2}\left(3-1^2\right)\\
+  = -4 \cdot e^{-0.5} < 0
 
 Therefore, :math:`x_1` is a minimum while :math:`x_2` is a maximum. This result
 is confirmed by figure 2.
@@ -282,7 +282,7 @@ By means of Sage the limit is obtained as follows:
 
 .. sagecellserver::
 
-  sage: print("A(∞) = " + str(limit(a(u), u=Infinity)))
+  sage: print("A(inf) = " + str(limit(a(u), u=Infinity)))
 
 .. end of output
 
@@ -297,11 +297,11 @@ Additional intersections are obtained by equating the two functions.
 
 .. math::
 
-  \frac{2}{e^2}\cdot x &= 2x \cdot e^{-0.5x^2} &\left| \cdot \frac{e^2}{2x}\right. \\
-  1 &= e^{-0.5x^2 + 2} &\left| \ln()\right. \\
-  0 &= -0.5x^2 + 2 \qquad&\left| -2\right.\\
-  4 &= x^2 &\left| \sqrt{\ } \right. \\
-  x_{2/ 3} &= \pm 2
+  \frac{2}{e^2}\cdot x = 2x \cdot e^{-0.5x^2} \left| \cdot \frac{e^2}{2x}\right. \\
+  1 = e^{-0.5x^2 + 2} \left| \ln()\right. \\
+  0 = -0.5x^2 + 2 \qquad \left| -2\right.\\
+  4 = x^2 \left| \sqrt{\ } \right. \\
+  x_{2/ 3} = \pm 2 \\
 
 With the help of Sage, the intersections can be obtained as follows:
 
@@ -381,7 +381,7 @@ we find :math:`\lim\limits_{x\rightarrow+\infty}g_c(x) = c`.
 
 .. sagecellserver::
 
-  sage: print(u"g_c(c, ∞) = " + str(limit(gc(c, x), x=Infinity)))
+  sage: print(u"g_c(c, inf) = " + str(limit(gc(c, x), x=Infinity)))
 
 **Solution of part b**
 

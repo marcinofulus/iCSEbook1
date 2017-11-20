@@ -25,7 +25,7 @@ zwei Schritte hat, betrachten wir vier mögliche Abläufe des Experiments, bei d
 wir die jeweils verschobenen Kugeln und den Endinhalt der Urne A betrachten:
 
   1. :math:`\color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ
-     \overset{\color{red}{\bullet}}{\underset{\color{\red}{\bullet}}{\rightleftarrows}}
+     \overset{\color{red}{\bullet}}{\underset{\color{red}{\bullet}}{\rightleftarrows}}
      \color{red}{\bullet} \color{red}{\bullet} \color{red}{\bullet} \circ \circ
      \quad\Rightarrow
      \mathrm{A}: \color{red}{\bullet} \color{red}{\bullet} \circ \circ \circ`

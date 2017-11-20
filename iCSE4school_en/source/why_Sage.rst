@@ -26,19 +26,19 @@ characteristics:
 
 #. WIDE: The system should be based on popular and open language
    wide-ranging programming.
-
-   Wide-ranging programming languages ​​can be used make computer games
+   
+   Wide-ranging programming languages can be used make computer games
    as well as scientific applications or education. On the other hand,
    there are many so-called `domain-specific languages
    <https://en.wikipedia.org/wiki/Domain-specific_language>`_ created
    for a single application. Such languages do a great job, but they
    are not good at all other tasks. An example is the Matlab language,
    which despite its own popularity is not the solution adopted in
-   teaching computer science. Languages ​​like Python allow practically
+   teaching computer science. Languages like Python allow practically
    perform all tasks which are specific to Matlab, but their
    specificity allows admit them to teach computer science (see
    `<https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html>`_). Important
-   feature of the system is avoiding `vendor lock-in 
+   feature of the system is avoiding `vendor lock-in
    <https://en.wikipedia.org/wiki/Vendor_lock-in>`_, which is often
    the case when using domain specyfic languages.
    
@@ -46,10 +46,10 @@ characteristics:
 
    Such a claim virtually eliminates compiled languages (C/C++). In
    order to use the computer system interactively, the most adequate
-   ​​seem to be languages with dynamic typing and introspection. This
-   requirement is met by the most of domain specific languages ​​provided
-   by Computer Algebra Systems, but also many general-purpose languages
-   ​​such as Python.
+   seem to be languages with dynamic typing and introspection. This
+   requirement is met by the most of domain specific languages
+   provided by Computer Algebra Systems, but also many general-purpose
+   languages such as Python.
    
 #. FREE - The system should be widely available.
 
@@ -64,7 +64,7 @@ characteristics:
 #. POWER - The capabilities of the system should allow to deploy it
    uncompromisingly for all scientific subjects.
 
-   Such a requirement eliminates languages ​​that are not enough
+   Such a requirement eliminates languages that are not enough
    widespread, and do not have large enought set of implemetned tools
    and libraries. Python is an interesting example, because it is
    known for its ease of creating interfaces various libraries written

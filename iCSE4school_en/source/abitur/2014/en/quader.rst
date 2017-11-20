@@ -30,9 +30,9 @@ all of them vanish.
 
 .. math::
 
-  \vec{a}\cdot\vec{b} &= 2\cdot(-1) + 1\cdot2 + 2\cdot0 &= 0\\
-  \vec{a}\cdot\vec{c} &= 2\cdot4t + 1\cdot2t + 2\cdot(-5t) &= 0\\
-  \vec{b}\cdot\vec{c} &= (-1)\cdot4t + 2\cdot2t + 0\cdot(-5t) &= 0\\
+  \vec{a}\cdot\vec{b} = 2\cdot(-1) + 1\cdot2 + 2\cdot0 = 0\\
+  \vec{a}\cdot\vec{c} = 2\cdot4t + 1\cdot2t + 2\cdot(-5t) = 0\\
+  \vec{b}\cdot\vec{c} = (-1)\cdot4t + 2\cdot2t + 0\cdot(-5t) = 0\\
 
 The fact that every inner product vanishes proves that the generated body 
 is a cuboid for any value of :math:`t`. The inner products can also be calculated with Sage:
@@ -55,12 +55,12 @@ The volume of a cuboid can be calculated with the scalar triple product:
 
 .. math::
 
-  V &= \left\vert\vec{a}\cdot(\vec{b}\times\vec{c})\right\vert\\
-    &=\left\vert\left(\begin{matrix} 2\\1\\2 \end{matrix} \right)
+  V = \left\vert\vec{a}\cdot(\vec{b}\times\vec{c})\right\vert\\
+    =\left\vert\left(\begin{matrix} 2\\1\\2 \end{matrix} \right)
   \cdot\left(\begin{matrix} 2\cdot(-5t)-0\cdot2t \\ 0\cdot4t-(-1)\cdot(-5t) \\ (-1)\cdot2t-2\cdot4t
   \end{matrix}\right)\right\vert \\
-  &=\left\vert 2\cdot(-10t) + 1\cdot(-5t)+2\cdot(-10t) \right\vert\\
-  &= 45\left\vert t \right\vert.
+  =\left\vert 2\cdot(-10t) + 1\cdot(-5t)+2\cdot(-10t) \right\vert\\
+  = 45\left\vert t \right\vert.
   
 Together with the condition that the cuboid's volume should be equal to 15, we obtain
 

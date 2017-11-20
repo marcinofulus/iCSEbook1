@@ -44,8 +44,8 @@ Introduction
 **Used methods:**
 
 -  Preliminary computer exercises in drawing plots in Python and fitting straits and curves to experimental data.
--  Lecture – as a theoretical introduction.
--  Exercises in groups – measurements of vibration frequencies for string of different lengths.
+-  Lecture - as a theoretical introduction.
+-  Exercises in groups - measurements of vibration frequencies for string of different lengths.
 
 This lesson is addressed to students of age 17, learning at advanced level. It fulfills the following requirements included in National Curriculum:
 
@@ -136,25 +136,71 @@ Tabular output of data (instead of print)
 
 Experimental Part
 -----------------
-At the beginning the teacher ask pupils to recall the ideas of standing waves, frequency, wave length and phase velocity. Next, he derives the formula   *f* (  *l*  ), where  *l*  is the length of string. It shows, that this two variables are inversely proportional. Checking this dependence is the main aim of this lesson.
 
-Next, students are divided into groups. Each group chooses one instrument. It may be a string stretched on a ruler, string stretched on a resonance box or any real music string instrument. Groups move far away each from other to minimize the mutual disturbance.
+At the beginning the teacher ask pupils to recall the ideas of
+standing waves, frequency, wave length and phase velocity. Next, he
+derives the formula *f* ( *l* ), where *l* is the length of string. It
+shows, that this two variables are inversely proportional. Checking
+this dependence is the main aim of this lesson.
 
-In each group somebody is responsible for putting the string into vibrations. Simultaneously, somebody else generates sound using software generator. It has a property of fluent adjusting the frequency. When the group judge, that the tone coming out from the loudspeaker is the same as from the string, they note the length of string and frequency. This measurement is repeated for different length of the oscillator, in the most possible range. Alternatively, students may make independent measurements, using software applications in their smartphones.
+Next, students are divided into groups. Each group chooses one
+instrument. It may be a string stretched on a ruler, string stretched
+on a resonance box or any real music string instrument. Groups move
+far away each from other to minimize the mutual disturbance.
 
-All collected data are noted in a table in notebooks. Students are encouraged to make photos. The teacher announces, that this data and photos will be used in a homework.
+In each group somebody is responsible for putting the string into
+vibrations. Simultaneously, somebody else generates sound using
+software generator. It has a property of fluent adjusting the
+frequency. When the group judge, that the tone coming out from the
+loudspeaker is the same as from the string, they note the length of
+string and frequency. This measurement is repeated for different
+length of the oscillator, in the most possible range. Alternatively,
+students may make independent measurements, using software
+applications in their smartphones.
+
+All collected data are noted in a table in notebooks. Students are
+encouraged to make photos. The teacher announces, that this data and
+photos will be used in a homework.
 
 Homework
 --------
-Write in SAGE a short report of the executed experiment, including description of the essence of the matter, measuring system (with photo), used tools, performed activities, obtained results and inferences. In particular, the report should prove or refute the hypothesis, that frequency of vibrations is reciprocally proportional to the length of string.
 
-The data are shared for the whole groups, but all reports must be independent and individual. The authors of best reports will have the right to translate their works into English and publish them, gaining additional points for it. English teachers are ready to assist and supervise pupils in translation.
+Write in SAGE a short report of the executed experiment, including
+description of the essence of the matter, measuring system (with
+photo), used tools, performed activities, obtained results and
+inferences. In particular, the report should prove or refute the
+hypothesis, that frequency of vibrations is reciprocally proportional
+to the length of string.
+
+The data are shared for the whole groups, but all reports must be
+independent and individual. The authors of best reports will have the
+right to translate their works into English and publish them, gaining
+additional points for it. English teachers are ready to assist and
+supervise pupils in translation.
 
 Evaluation Report
 -----------------
-At first time this lesson was carried out in the spring 2015. All students made the same measurement. The whole group (14 person) is visible in the above picture. All homeworks were based on the same set of data, but I asked students to work individually at home and create unique reports. In fact, obtained reports differed in level and tools used. Students usually admitted, that using Sage helped them much. They discovered that Sage is a convenient environment for that tasks.
 
-The second edition of the lesson   *Examining String Vibrations* was accomplished 5 <sup><span style="font-size: x-small;">th</span></sup> April 2016 (both IT and experimental parts). Students were divided into 5 groups of four people each. One girl brought her own violin, somebody else used her own guitar. The remaining 3 groups were equipped with instruments from my laboratory, i.e. a string stretched on resonance box and two strings stretched on a ruler. All groups were equipped with software acoustic generators and applications measuring the dominant frequency of heared sound. Some groups stayed in the classroom, whereas the others went to corridor to carry out their measurements far away from noises generated by other groups.
+At first time this lesson was carried out in the spring 2015. All
+students made the same measurement. The whole group (14 person) is
+visible in the above picture. All homeworks were based on the same set
+of data, but I asked students to work individually at home and create
+unique reports. In fact, obtained reports differed in level and tools
+used. Students usually admitted, that using Sage helped them
+much. They discovered that Sage is a convenient environment for that
+tasks.
+
+The second edition of the lesson *Examining String Vibrations* was
+accomplished 5-th April 2016 (both IT and experimental
+parts). Students were divided into 5 groups of four people each. One
+girl brought her own violin, somebody else used her own guitar. The
+remaining 3 groups were equipped with instruments from my laboratory,
+i.e. a string stretched on resonance box and two strings stretched on
+a ruler. All groups were equipped with software acoustic generators
+and applications measuring the dominant frequency of heared
+sound. Some groups stayed in the classroom, whereas the others went to
+corridor to carry out their measurements far away from noises
+generated by other groups.
 
 After tentative calculations it occurred, that 4 groups succeeded in their measurements, whereas one encountered disturbances by voices coming from the neighbor group. They asked me to repeat this experiment during additional classes. Finally, all students obtained reasonable results and wrote quite good reports.
 
