@@ -131,8 +131,20 @@ student. An important factor in mobilizing pupils for action and
 learning is also the recent need for learning programming (coding) and
 awareness of the significant shortage of people able to program in the
 labor market. By encouraging the use of didactic materials developed
-in the ICSE4 project, we invite you to comment.
+in the iCSE4school project, we invite you to comment.
 
+This methodology is a collaboration between representatives of the following institutions:
+
+
+ - High school teachers: Jolanta Drogoń, Łukasz Głaz, Krzysztof Jarczewski,
+   Mirosław Malinowski, Justyna Matejczyk, Adam Ogaza, Krzysztof Oleś,
+   Katarzyna Sikora, Hanna Stachera, Mariola Strojny,
+ - Jonas van den Brink, Vigdis Holta, Marie Roald, Freyja Jørgensen,
+   from  Simula School of Research and Innovation, Oslo
+ - Manuel Milling, Severin Wünsch and  professor Gert Ingold from Uniwersity of Augsburg
+ - Marcin Kostur, Uniwersytet Śląski
+ - Magdalena Hampel, Joanna Klekowska i Marta Margiel from The Foundation EduRes
+            
 
 
 
