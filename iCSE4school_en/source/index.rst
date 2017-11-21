@@ -9,10 +9,10 @@ Introduction
 ------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    intro.rst
-
+   digital_era.rst
 
 
 .. only:: html
