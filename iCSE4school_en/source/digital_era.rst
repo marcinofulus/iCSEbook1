@@ -71,7 +71,7 @@ to support his students in the useful use of new technology must keep
 his or her hand on the pulse and continue to formally and informally
 learn in this area.
  
-Generation Y and his needs
+Generation Y and its needs
 ==========================
 
 The youth are so-called Y generation (Generation Y), also known as

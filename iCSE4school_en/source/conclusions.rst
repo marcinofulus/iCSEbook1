@@ -1,7 +1,7 @@
 
-================================================================================
- Conclusions  - conditions for project’s methodology  successful implementation
-================================================================================
+=============================================
+How to successfully implement the methodology
+=============================================
 
 Implementation of the presented project under Polish education
 circumstances, consultation with the academic community as well as the

@@ -74,12 +74,13 @@ helplessness of students and students in applying information
 technology and numerical methods in solving problems on the borderline
 of scientific issues.
 
-Using our materials and not having the basic skills to support Python,
-we recommend that you start by learning the language and the SageMath
-environment available at SageMath.org. In the Sage environment, the
-student has the opportunity, apart from programming, to do exercises
-on the sample materials contained there, with the possibility of
-modifying the source texts.
+Using our materials and without basic skills in Python programming is
+in large extent possible, but, we recommend that you start by learning
+the language and the SageMath environment available at
+SageMath.org. In the Sage environment, the student has the
+opportunity, apart from programming, to do exercises on the sample
+materials contained there, with the possibility of modifying the
+source texts.
 
 The scripts developed in the project using Python are recommended for
 use in a variety of ways, depending on the needs and capabilities of
@@ -110,7 +111,7 @@ opportunities for teachers and young people, but also effectively uses
 classroom scenarios using Python in working with younger learners at
 earlier stages of education.
 
-The materials from the iCSE4 project can be used in e-learning,
+The materials from the iCSE4school project can be used in e-learning,
 blended-learning, and m-learning, using computers or other devices (eg
 smartphones, tablets); with access to the internet or off-line.
 

@@ -202,6 +202,18 @@ latex_documents = [
    u'Collective work edited by dr hab. Marcin Kostur', 'manual'),
 ]
 
+latex_documents_o1 = [
+  ('index_o1', 'iCSE_school_O1_en.tex', u'O1: Teaching and learning materials in mathematics and physics',
+   u'Collective work edited by dr hab. Marcin Kostur', 'manual'),
+]
+
+latex_documents_o2 = [
+  ('index_o2', 'iCSE_school_O2_en.tex', u'O2: Report  - Methodology of integrating computer science methodes with science subjects',
+   u'Collective work edited by dr hab. Marcin Kostur', 'manual'),
+]
+
+latex_documents = latex_documents_o2
+
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
