@@ -50,12 +50,12 @@ These results may be checked by means of Sage:
 
 .. sagecellserver::
 
-    sage: f1(t) = sqrt(1 - (t - 1)^2)
-    sage: f2(t) = sqrt(1 - (t + 1)^2)
-    sage: f = Piecewise([[(-2, 0), f2], [(0, 2), f1]], t)
-    sage: print("F(0) = " + str(integrate(f, t, 0, 0)))
-    sage: print("F(2) = " + str(integrate(f, t, 0, 2)))
-    sage: print("F(-2) = " + str(integrate(f, t, 0, -2)))
+     f1(t) = sqrt(1 - (t - 1)^2)
+     f2(t) = sqrt(1 - (t + 1)^2)
+     f = Piecewise([[(-2, 0), f2], [(0, 2), f1]], t)
+     print("F(0) = " + str(integrate(f, t, 0, 0)))
+     print("F(2) = " + str(integrate(f, t, 0, 2)))
+     print("F(-2) = " + str(integrate(f, t, 0, -2)))
 
 .. end of output
 
@@ -67,15 +67,15 @@ are able to display the function :math:`f` and its antiderivative.
 
 .. sagecellserver::
 
-    sage: x = var('x')
-    sage: assume(x > 0)
-    sage: F1(x) = integrate(f1, t, 0, x)
-    sage: forget()
-    sage: assume(x < 0)
-    sage: F2(x) = integrate(f2, t, 0, x)
-    sage: F = Piecewise([[(-2, 0), F2], [(0, 2), F1]], x)
-    sage: pf = plot(f)
-    sage: pF = plot(F, color='red')
-    sage: show(pf + pF, aspect_ratio=1, figsize=4)
+     x = var('x')
+     assume(x > 0)
+     F1(x) = integrate(f1, t, 0, x)
+     forget()
+     assume(x < 0)
+     F2(x) = integrate(f2, t, 0, x)
+     F = Piecewise([[(-2, 0), F2], [(0, 2), F1]], x)
+     pf = plot(f)
+     pF = plot(F, color='red')
+     show(pf + pF, aspect_ratio=1, figsize=4)
 
 .. end of output

@@ -32,8 +32,8 @@ We plot the function with Sage.
 
 .. sagecellserver::
 
-  sage: f(x) = ln(x)/x**2
-  sage: plot(f(x), (0, 4), ymin=-2, figsize=(4, 2.8))
+   f(x) = ln(x)/x**2
+   plot(f(x), (0, 4), ymin=-2, figsize=(4, 2.8))
      
 .. end of output
 
@@ -41,7 +41,7 @@ We can also verify the root with Sage.
 
 .. sagecellserver::
 
-  sage: solve(f(x)==0, x)
+   solve(f(x)==0, x)
      
 .. end of output
 
@@ -71,12 +71,12 @@ which we add to the sketch of the function:
 
 .. sagecellserver::
 
-  sage: df = derivative(f, x)
-  sage: x0 = solve(df(x) == 0, x)[0].right()
-  sage: print "Horizontal tangent line at", x0, "=", float(x0)
-  sage: p1 = plot(f(x), (0, 4), x, ymin=0,  exclude=[0])
-  sage: p2 = plot(f(x0), (0, 4), x, color='red')
-  sage: show(p1+p2, figsize=(4, 2.8))
+   df = derivative(f, x)
+   x0 = solve(df(x) == 0, x)[0].right()
+   print "Horizontal tangent line at", x0, "=", float(x0)
+   p1 = plot(f(x), (0, 4), x, ymin=0,  exclude=[0])
+   p2 = plot(f(x0), (0, 4), x, color='red')
+   show(p1+p2, figsize=(4, 2.8))
      
 .. end of output
 

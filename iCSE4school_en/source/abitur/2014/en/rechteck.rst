@@ -49,13 +49,13 @@ by asking for a zero of the derivative of the area.
 
 .. sagecellserver::
 
-     sage: f(x) = -ln(x)
-     sage: a(x) = x*f(x)
-     sage: da(x) = a.derivative(x).log_simplify()
-     sage: x0 = solve(da(x)==0, x)[0].rhs()
-     sage: print 'width :', x0
-     sage: print 'height:', f(x0)
-     sage: print 'area  :', a(x0)
+      f(x) = -ln(x)
+      a(x) = x*f(x)
+      da(x) = a.derivative(x).log_simplify()
+      x0 = solve(da(x)==0, x)[0].rhs()
+      print 'width :', x0
+      print 'height:', f(x0)
+      print 'area  :', a(x0)
 
 .. end of output
 
@@ -65,15 +65,15 @@ a function of the variable width :math:`x_0`.
 
 .. sagecellserver::
 
-     sage: @interact
-     sage: def _(x0=slider(0.1, 1.)):
-     sage:     f(x) = -ln(x)
-     sage:     a(x) = -x*ln(x)
-     sage:     p1 = plot(f(x), x, (0.1, 1), color='blue')
-     sage:     p1 = p1+polygon([(0, 0), (0, f(x0)), (x0, f(x0)), (x0, 0)], color = 'green')
-     sage:     p2 = plot(a(x), x, (0, 1), color='blue')
-     sage:     p2 = p2+point((x0, a(x0)), size=40, color='green')
-     sage:     G = graphics_array([p1, p2], nrows=1)
-     sage:     G.show(figsize=[7, 3])
+      @interact
+      def _(x0=slider(0.1, 1.)):
+          f(x) = -ln(x)
+          a(x) = -x*ln(x)
+          p1 = plot(f(x), x, (0.1, 1), color='blue')
+          p1 = p1+polygon([(0, 0), (0, f(x0)), (x0, f(x0)), (x0, 0)], color = 'green')
+          p2 = plot(a(x), x, (0, 1), color='blue')
+          p2 = p2+point((x0, a(x0)), size=40, color='green')
+          G = graphics_array([p1, p2], nrows=1)
+          G.show(figsize=[7, 3])
 
 ..  end of output

@@ -23,11 +23,11 @@ This can also be checked with Sage
 
 .. sagecellserver::
 
-  sage: f(x) = x^2*sin(x)
-  sage: if f(-x) == -f(x):
-  ...       print "The function is odd."
-  sage: else:
-  ...       print "The function is not odd."
+   f(x) = x^2*sin(x)
+   if f(-x) == -f(x):
+       print "The function is odd."
+   else:
+       print "The function is not odd."
    
 .. end of output
 
@@ -35,7 +35,7 @@ and is confirmed by the shape of the graph of the function:
 
 .. sagecellserver::
 
-  sage: plot(f(x), (-pi, pi), figsize=(4, 2.8))
+   plot(f(x), (-pi, pi), figsize=(4, 2.8))
 
 .. end of output
 
@@ -46,6 +46,6 @@ Sage can confirm that:
 
 .. sagecellserver::
 
-  sage: print "Value of the integral:", integral(f, x, -pi, pi)
+   print "Value of the integral:", integral(f, x, -pi, pi)
 
 .. end of output

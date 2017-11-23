@@ -38,12 +38,12 @@ can obtain this result also with the help of Sage.
 
 .. sagecellserver::
 
-  sage: H = vector([0, 0, 0])
-  sage: E = vector([2, 0, 0])
-  sage: D = vector([0, 0, -2])
-  sage: EH = E-H
-  sage: DH = D-H
-  sage: print "Point A:", EH+DH
+   H = vector([0, 0, 0])
+   E = vector([2, 0, 0])
+   D = vector([0, 0, -2])
+   EH = E-H
+   DH = D-H
+   print "Point A:", EH+DH
 
 
 **Solution of part b**
@@ -90,15 +90,15 @@ Alternatively we can determine the intersection point with Sage:
  
 .. sagecellserver::
 
-  sage: var("Lambda")
-  sage: H = vector([0,0,0])
-  sage: F = vector([2,2,0])
-  sage: B = vector([2,2,-2])
-  sage: BF = B-F
-  sage: edge = F+Lambda*BF
-  sage: solutions = solve(edge*edge == 3^2, Lambda, solution_dict=True)
-  sage: if 0 <= solutions[0][Lambda] <= 1:
-  sage:     solution = solutions[0]
-  sage: else:
-  sage:     solution = solutions[1]
-  sage: print "Point P:", edge.substitute(solution)
+   var("Lambda")
+   H = vector([0,0,0])
+   F = vector([2,2,0])
+   B = vector([2,2,-2])
+   BF = B-F
+   edge = F+Lambda*BF
+   solutions = solve(edge*edge == 3^2, Lambda, solution_dict=True)
+   if 0 <= solutions[0][Lambda] <= 1:
+       solution = solutions[0]
+   else:
+       solution = solutions[1]
+   print "Point P:", edge.substitute(solution)

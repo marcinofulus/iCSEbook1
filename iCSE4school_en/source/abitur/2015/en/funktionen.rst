@@ -27,11 +27,11 @@ of Sage:
 
 .. sagecellserver::
 
-    sage: ranges = {'xmin': -2, 'xmax': 2.5, 'ymin': -2.5, 'ymax': 2.5}
-    sage: p = sum([plot(x^2-x+1, color='blue', **ranges),
-    ...            plot(x^3-x+1, color='red', **ranges),
-    ...            plot(x^4+x^2+1, color='green', **ranges)])
-    sage: p.show(figsize=(2.7, 3))
+     ranges = {'xmin': -2, 'xmax': 2.5, 'ymin': -2.5, 'ymax': 2.5}
+     p = sum([plot(x^2-x+1, color='blue', **ranges),
+              plot(x^3-x+1, color='red', **ranges),
+              plot(x^4+x^2+1, color='green', **ranges)])
+     p.show(figsize=(2.7, 3))
 
 .. end of output
 
@@ -52,10 +52,10 @@ and continue by evaluating the required definite integral:
 
 .. sagecellserver::
 
-    sage: h(x) = x^4+x^2+1
-    sage: dh(x) = diff(h, x)
-    sage: print 'Derivative of h(x):', dh
-    sage: print 'Value of the definite integral:', integrate(dh(x), x, 0, 1)
+     h(x) = x^4+x^2+1
+     dh(x) = diff(h, x)
+     print 'Derivative of h(x):', dh
+     print 'Value of the definite integral:', integrate(dh(x), x, 0, 1)
 
 .. end of output
 
@@ -64,7 +64,7 @@ subtracting the function taken at the limits of integration:
 
 .. sagecellserver::
 
-    sage: h(x) = x^4+x^2+1
-    sage: h(1)-h(0)
+     h(x) = x^4+x^2+1
+     h(1)-h(0)
 
 .. end of output

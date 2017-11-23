@@ -84,30 +84,30 @@ can be modified in the list ``probabilities``.
 
 .. sagecellserver::
 
-    sage: var('p_c p_cb p_d_if_c p_db_if_c p_d_if_cb p_db_if_cb')
-    sage: var('p_c_and_d p_c_and_db p_cb_and_d p_cb_and_db')
-    sage: probabilities = [p_d_if_c==3/5,
-    sage:                         p_c_and_d==2/5,
-    sage:                         p_cb_and_d==1/10]
-    sage: equations = [p_c+p_cb==1,
-    sage:                p_d_if_c+p_db_if_c==1,
-    sage:                p_d_if_cb+p_db_if_cb==1,
-    sage:                p_d_if_c*p_c==p_c_and_d,
-    sage:                p_db_if_c*p_c==p_c_and_db,
-    sage:                p_d_if_cb*p_cb==p_cb_and_d,
-    sage:                p_db_if_cb*p_cb==p_cb_and_db]
-    sage: solution = solve(probabilities+equations,
-    ...                   p_c, p_cb,
-    ...                   p_d_if_c, p_db_if_c, p_d_if_cb, p_db_if_cb,
-    ...                   p_c_and_d, p_c_and_db, p_cb_and_d, p_cb_and_db,
-    ...                   solution_dict=True)[0]
-    sage: print 'P(C) =', solution[p_c]
-    sage: print '   P(D|C) =', solution[p_d_if_c],
-    sage: print '   P(D∩C) =', solution[p_c_and_d]
-    sage: print '   P(D̅|C) =', solution[p_db_if_c],
-    sage: print '   P(D̅∩C) =', solution[p_c_and_db]
-    sage: print 'P(C̅) =', solution[p_cb]
-    sage: print '   P(D|C̅) =', solution[p_d_if_cb],
-    sage: print '   P(D∩C̅) =', solution[p_cb_and_d]
-    sage: print '   P(D̅|C̅) =', solution[p_db_if_cb],
-    sage: print '   P(D̅∩C̅) =', solution[p_cb_and_db]
+     var('p_c p_cb p_d_if_c p_db_if_c p_d_if_cb p_db_if_cb')
+     var('p_c_and_d p_c_and_db p_cb_and_d p_cb_and_db')
+     probabilities = [p_d_if_c==3/5,
+                             p_c_and_d==2/5,
+                             p_cb_and_d==1/10]
+     equations = [p_c+p_cb==1,
+                    p_d_if_c+p_db_if_c==1,
+                    p_d_if_cb+p_db_if_cb==1,
+                    p_d_if_c*p_c==p_c_and_d,
+                    p_db_if_c*p_c==p_c_and_db,
+                    p_d_if_cb*p_cb==p_cb_and_d,
+                    p_db_if_cb*p_cb==p_cb_and_db]
+     solution = solve(probabilities+equations,
+                     p_c, p_cb,
+                     p_d_if_c, p_db_if_c, p_d_if_cb, p_db_if_cb,
+                     p_c_and_d, p_c_and_db, p_cb_and_d, p_cb_and_db,
+                     solution_dict=True)[0]
+     print 'P(C) =', solution[p_c]
+     print '   P(D|C) =', solution[p_d_if_c],
+     print '   P(D∩C) =', solution[p_c_and_d]
+     print '   P(D̅|C) =', solution[p_db_if_c],
+     print '   P(D̅∩C) =', solution[p_c_and_db]
+     print 'P(C̅) =', solution[p_cb]
+     print '   P(D|C̅) =', solution[p_d_if_cb],
+     print '   P(D∩C̅) =', solution[p_cb_and_d]
+     print '   P(D̅|C̅) =', solution[p_db_if_cb],
+     print '   P(D̅∩C̅) =', solution[p_cb_and_db]

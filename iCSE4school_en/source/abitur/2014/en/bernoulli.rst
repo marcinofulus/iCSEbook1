@@ -41,10 +41,10 @@ of the given probability.
 
 .. sagecellserver::
 
-  sage: p = 0.9
-  sage: q = 0.1
-  sage: p_E = p^20 + 20*q*p^19
-  sage: print "Probability p(E) =", p_E
+   p = 0.9
+   q = 0.1
+   p_E = p^20 + 20*q*p^19
+   print "Probability p(E) =", p_E
 
 .. end of output
 
@@ -56,21 +56,21 @@ result.
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: threshold_value = 19
-  sage: frequency_e = np.zeros(21)
-  sage: iterations = 50000
-  sage: for _ in range(iterations):
-  ...       hits = sum(np.random.random(20) < p)
-  ...       frequency_e[hits] = frequency_e[hits]+1
-  sage: probabilities = frequency_e/iterations
-  sage: headline = ' Hit  probability'
-  sage: print headline
-  sage: print "-"*len(headline)
-  sage: for hits, p_of_e in enumerate(probabilities):
-  ...       print "%6i       %g" % (hits, p_of_e)
-  sage: p_geq_19 = probabilities[19]+probabilities[20]
-  sage: print "Approximation of the probability p(E) =", p_geq_19
+   import numpy as np
+   threshold_value = 19
+   frequency_e = np.zeros(21)
+   iterations = 50000
+   for _ in range(iterations):
+       hits = sum(np.random.random(20) < p)
+       frequency_e[hits] = frequency_e[hits]+1
+   probabilities = frequency_e/iterations
+   headline = ' Hit  probability'
+   print headline
+   print "-"*len(headline)
+   for hits, p_of_e in enumerate(probabilities):
+       print "%6i       %g" % (hits, p_of_e)
+   p_geq_19 = probabilities[19]+probabilities[20]
+   print "Approximation of the probability p(E) =", p_geq_19
 
 .. end of output
 

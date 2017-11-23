@@ -39,21 +39,21 @@ and consider the colour of the first three balls.
 
 .. sagecellserver::
 
-  sage: from random import choice
+   from random import choice
 
-  sage: def game():
-  sage:    urn = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
-  sage:    shuffle(urn)
-  sage:    return urn[0] == urn[1] == urn[2]
+   def game():
+      urn = ['r', 'r', 'r', 'g', 'g', 'g', 'b', 'b', 'b']
+      shuffle(urn)
+      return urn[0] == urn[1] == urn[2]
 
-  sage: games = 100000
-  sage: winnings = 0
+   games = 100000
+   winnings = 0
 
-  sage: for _ in range(games):
-  sage:    if game():
-  sage:        winnings = winnings+1
+   for _ in range(games):
+      if game():
+          winnings = winnings+1
 
-  sage: print("In {} of {} cases, the three balls had the same colour.".format(winnings, games))
+   print("In {} of {} cases, the three balls had the same colour.".format(winnings, games))
 
 .. end of output
 
@@ -74,18 +74,18 @@ earnings per game.
 
 .. sagecellserver::
 
-  sage: games = 100000
-  sage: stake = 2
-  sage: prize = 21
-  sage: earnings = 0
+   games = 100000
+   stake = 2
+   prize = 21
+   earnings = 0
 
-  sage: for _ in range(games):
-  sage:     earnings = earnings+stake
-  sage:     if game():
-  sage:         earnings = earnings-prize
+   for _ in range(games):
+       earnings = earnings+stake
+       if game():
+           earnings = earnings-prize
 
-  sage: print("{} games have been played and {} euros have been earned. "
+   print("{} games have been played and {} euros have been earned. "
               "This corresponds to {:.2f} euros per game.".format(
-  sage:                      games, earnings, float(earnings/games)))
+                        games, earnings, float(earnings/games)))
 
 .. end of output

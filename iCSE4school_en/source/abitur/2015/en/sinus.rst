@@ -16,6 +16,6 @@ We can check these statements by means of Sage:
 
 .. sagecellserver::
 
-     sage: plot(sin(2*x), (0, 2*pi), figsize=(4, 2.5))
+      plot(sin(2*x), (0, 2*pi), figsize=(4, 2.5))
 
 .. end of output

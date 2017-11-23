@@ -37,8 +37,8 @@ Zero at :math:`x=2`:
 
 .. sagecellserver::
 
-    sage: k(x) = ((x-2)/(x+3))^2
-    sage: plot(k, xmin=0, xmax=4, ymin=-0.1, ymax=0.5, figsize=(4, 2.5))
+     k(x) = ((x-2)/(x+3))^2
+     plot(k, xmin=0, xmax=4, ymin=-0.1, ymax=0.5, figsize=(4, 2.5))
 
 .. end of output
 
@@ -46,8 +46,8 @@ Pole at :math:`x=-3` without change of sign:
 
 .. sagecellserver::
 
-    sage: k(x) = ((x-2)/(x+3))^2
-    sage: plot(k, xmin=-6, xmax=0, ymin=0, ymax=1000, figsize=(4, 2.5))
+     k(x) = ((x-2)/(x+3))^2
+     plot(k, xmin=-6, xmax=0, ymin=0, ymax=1000, figsize=(4, 2.5))
 
 .. end of output
 
@@ -56,11 +56,11 @@ Asymptotic approach to the straight line :math:`y=1` for
 
 .. sagecellserver::
 
-    sage: k(x) = ((x-2)/(x+3))^2
-    sage: xmax = 1000
-    sage: xmin = -xmax
-    sage: p = plot(k, xmin=xmin, xmax=xmax, ymin=0.5, ymax=1.5)
-    sage: p = p+line([(xmin, 1), (xmax, 1)], linestyle='dashed')
-    sage: p.show(figsize=(4, 2.5))
+     k(x) = ((x-2)/(x+3))^2
+     xmax = 1000
+     xmin = -xmax
+     p = plot(k, xmin=xmin, xmax=xmax, ymin=0.5, ymax=1.5)
+     p = p+line([(xmin, 1), (xmax, 1)], linestyle='dashed')
+     p.show(figsize=(4, 2.5))
 
 .. end of output

@@ -48,8 +48,8 @@ Evaluating this expression by means of Sage, one finds
 
 .. sagecellserver::
 
-  sage: print "The probability to obtain five different pictures is given by {:4.1%}.".format(
-  ...         float(200*199*198*197*196/200**5))
+   print "The probability to obtain five different pictures is given by {:4.1%}.".format(
+         float(200*199*198*197*196/200**5))
 
 .. end of output
 
@@ -57,15 +57,15 @@ This value can be confirmed empirically through a simulation using Sage:
 
 .. sagecellserver::
 
-  sage: from numpy.random import randint
-  sage: iterations = 100000
-  sage: different = 0
-  sage: for _ in range(iterations):
-  ...       a = set(randint(200, size=5))
-  ...       if len(a) == 5:
-  ...           different +=1
-  sage: print "Empirical probability to obtain five different pictures: {:4.1%}".format(
-  ...         float(different)/iterations)
+   from numpy.random import randint
+   iterations = 100000
+   different = 0
+   for _ in range(iterations):
+       a = set(randint(200, size=5))
+       if len(a) == 5:
+           different +=1
+   print "Empirical probability to obtain five different pictures: {:4.1%}".format(
+         float(different)/iterations)
 
 .. end of output
 
@@ -89,7 +89,7 @@ By means of Sage we can evaluate this expression
 
 .. sagecellserver::
 
-  sage: print "Probability to obtain no new picture: {:4.1%}".format(float((37/40)**10))
+   print "Probability to obtain no new picture: {:4.1%}".format(float((37/40)**10))
 
 .. end of output
 
@@ -97,15 +97,15 @@ and verify it by means of a simulation
 
 .. sagecellserver::
 
-  sage: iterations = 100000
-  sage: property = set(range(185))
-  sage: no_new = 0
-  sage: for _ in range(iterations):
-  ...       pictures = set(randint(200, size=10))
-  ...       if pictures.issubset(property):
-  ...           no_new = no_new+1
-  sage: print "Empirical probability for not obtaining a new picture: {:4.1%}".format(
-  ...         float(no_new/iterations))
+   iterations = 100000
+   property = set(range(185))
+   no_new = 0
+   for _ in range(iterations):
+       pictures = set(randint(200, size=10))
+       if pictures.issubset(property):
+           no_new = no_new+1
+   print "Empirical probability for not obtaining a new picture: {:4.1%}".format(
+         float(no_new/iterations))
 
 .. end of output
 
@@ -143,16 +143,16 @@ We again use Sage to check this result by a simulation.
 
 .. sagecellserver::
 
-  sage: nr_packages = 9
-  sage: pictures_per_package = 5
-  sage: iterations = 100000
-  sage: threeD_pictures = set(range(20))
-  sage: threeD_found = 0
-  sage: for _ in range(iterations):
-  ...       mypictures = set(randint(200, size=nr_packages*pictures_per_package))
-  ...       if not mypictures.isdisjoint(threeD_pictures):
-  ...           threeD_found = threeD_found+1
-  sage: print "Empirical probability to obtain at least one 3D picture: {:4.1%}".format(
-  ...         float(threeD_found/iterations))
+   nr_packages = 9
+   pictures_per_package = 5
+   iterations = 100000
+   threeD_pictures = set(range(20))
+   threeD_found = 0
+   for _ in range(iterations):
+       mypictures = set(randint(200, size=nr_packages*pictures_per_package))
+       if not mypictures.isdisjoint(threeD_pictures):
+           threeD_found = threeD_found+1
+   print "Empirical probability to obtain at least one 3D picture: {:4.1%}".format(
+         float(threeD_found/iterations))
 
 .. end of output

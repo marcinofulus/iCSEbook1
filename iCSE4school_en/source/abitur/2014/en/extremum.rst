@@ -13,8 +13,8 @@ We first employ Sage to obtain an overview of the given function.
 
 .. sagecellserver::
 
-   sage: p = plot(x/ln(x), xmin=0, xmax=10, ymin=-2, ymax=5, color='blue', detect_poles='show')
-   sage: p.show(figsize=(4, 2.8))
+    p = plot(x/ln(x), xmin=0, xmax=10, ymin=-2, ymax=5, color='blue', detect_poles='show')
+    p.show(figsize=(4, 2.8))
 
 .. end of output
 
@@ -29,9 +29,9 @@ which can easily be verified by means of Sage:
 
 .. sagecellserver::
 
-   sage: f(x) = x/ln(x)
-   sage: df(x) = f.derivative(x).log_simplify()
-   sage: print df(x)
+    f(x) = x/ln(x)
+    df(x) = f.derivative(x).log_simplify()
+    print df(x)
 
 .. end of output
 
@@ -40,8 +40,8 @@ Setting the derivative equal to zero yields the only extremum at
 
 .. sagecellserver::
 
-   sage: x0 = solve(df(x)==0, x)[0].lhs()
-   sage: print 'extremum at (', x0, '|', f(x0), ')'
+    x0 = solve(df(x)==0, x)[0].lhs()
+    print 'extremum at (', x0, '|', f(x0), ')'
 
 .. end of output
 
@@ -62,9 +62,9 @@ This result can again be verified by means of Sage:
 
 .. sagecellserver::
 
-   sage: ddf(x) = df.derivative(x).log_simplify()
-   sage: print ddf(x)
-   sage: print ddf(x0)
+    ddf(x) = df.derivative(x).log_simplify()
+    print ddf(x)
+    print ddf(x0)
 
 .. end of output
 

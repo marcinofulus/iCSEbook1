@@ -67,16 +67,16 @@ holds, which can easily be evaluated with Sage.
 
 .. sagecellserver::
 
-    sage: a = vector([12, 0, 0])
-    sage: d = vector([0, 0, 0])
-    sage: c = vector([0, 12, 0])
-    sage: s = vector([6, 6, 8])
+     a = vector([12, 0, 0])
+     d = vector([0, 0, 0])
+     c = vector([0, 12, 0])
+     s = vector([6, 6, 8])
 
-    sage: b = a + c
-    sage: print("B = {}".format(b))
+     b = a + c
+     print("B = {}".format(b))
 
-    sage: v = 1/3 * a.cross_product(b) * s
-    sage: print("The volume of the pyramid is {}m³.".format(v))
+     v = 1/3 * a.cross_product(b) * s
+     print("The volume of the pyramid is {}m³.".format(v))
 
 .. end of output
 
@@ -111,11 +111,11 @@ With Sage, one obtains this result as follows:
 
 .. sagecellserver::
 
-    sage: var("x_1, x_2, x_3")
-    sage: n = (c-b).cross_product(s-b)
-    sage: print("Normal vector: {}".format(n))
-    sage: E = n.dot_product(vector([x_1, x_2, x_3])-b) == 0
-    sage: print("E : {}".format(E))
+     var("x_1, x_2, x_3")
+     n = (c-b).cross_product(s-b)
+     print("Normal vector: {}".format(n))
+     E = n.dot_product(vector([x_1, x_2, x_3])-b) == 0
+     print("E : {}".format(E))
 
 .. end of output
 
@@ -148,17 +148,17 @@ in part b.
 
 .. sagecellserver::
 
-    sage: var("t")
-    sage: h = vector([6, 6, 0]) + n * t
-    sage: intersection_equation = n.dot_product(h-b) == 0
-    sage: print(intersection_equation)
+     var("t")
+     h = vector([6, 6, 0]) + n * t
+     intersection_equation = n.dot_product(h-b) == 0
+     print(intersection_equation)
 
-    sage: result = solve(intersection_equation, t)
-    sage: t0 = result[0]
-    sage: print(t0)
+     result = solve(intersection_equation, t)
+     t0 = result[0]
+     print(t0)
 
-    sage: p = h.subs(t0)
-    sage: print("Height of attachment: {} m = {} m".format(p[2], float(p[2])))
+     p = h.subs(t0)
+     print("Height of attachment: {} m = {} m".format(p[2], float(p[2])))
 
 .. end of output
 
@@ -175,10 +175,10 @@ We leave the calculations to Sage and obtain
 
 .. sagecellserver::
 
-    sage: sb2 = (s-b)/2
-    sage: sc2 = (s-c)/2
-    sage: F = abs(sb2.cross_product(sc2))/2
-    sage: print("F = {}m²".format(F))
+     sb2 = (s-b)/2
+     sc2 = (s-c)/2
+     F = abs(sb2.cross_product(sc2))/2
+     print("F = {}m²".format(F))
     
 .. end of output
 
@@ -196,8 +196,8 @@ can be computed by means of the following formula:
   
 .. sagecellserver::
 
-    sage: x_3 = vector([0,0,1])
-    sage: print("Inclination angle: {}°".format((arccos(n*x_3/n.norm()) * 180/pi).n(digits=3)))
+     x_3 = vector([0,0,1])
+     print("Inclination angle: {}°".format((arccos(n*x_3/n.norm()) * 180/pi).n(digits=3)))
     
 .. end of output
 

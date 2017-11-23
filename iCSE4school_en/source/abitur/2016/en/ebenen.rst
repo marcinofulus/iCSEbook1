@@ -32,19 +32,19 @@ We can check this graphically with Sage:
 
 .. sagecellserver::
   
-  sage: def E(x1, x2, x3):
-  sage:     return 2*x1 + x2 + 2*x3 - 6
+   def E(x1, x2, x3):
+       return 2*x1 + x2 + 2*x3 - 6
 
-  sage: P = vector([1, 0, 2])
-  sage: Q = vector([5, 2, 6])
+   P = vector([1, 0, 2])
+   Q = vector([5, 2, 6])
   
-  sage: p1 = implicit_plot3d(E, (-1, 7), (-4, 4), (-1, 7), color="blue")
-  sage: p2 = line([P, Q], color="red", thickness=2)
-  sage: labeloffset = vector([0, 0, 0.3])
-  sage: p3 = point(P, size=10)+text3d("P", P+labeloffset, color="black", horizontal_alignment="right")
-  sage: p4 = point(Q, size=10)+text3d("Q", P+labeloffset, color="black", horizontal_alignment="right")
+   p1 = implicit_plot3d(E, (-1, 7), (-4, 4), (-1, 7), color="blue")
+   p2 = line([P, Q], color="red", thickness=2)
+   labeloffset = vector([0, 0, 0.3])
+   p3 = point(P, size=10)+text3d("P", P+labeloffset, color="black", horizontal_alignment="right")
+   p4 = point(Q, size=10)+text3d("Q", P+labeloffset, color="black", horizontal_alignment="right")
   
-  sage: show(p1+p2+p3+p4, aspect_ratio=1)
+   show(p1+p2+p3+p4, aspect_ratio=1)
 
 **Solution of part b**
 
@@ -76,8 +76,8 @@ This can again be verified by means of a 3D graphic:
 
 .. sagecellserver::
 
-  sage: def F(x1, x2, x3):
-  sage:     return 2*x1 + x2 + 2*x3 - 15
+   def F(x1, x2, x3):
+       return 2*x1 + x2 + 2*x3 - 15
 
-  sage: p5 = implicit_plot3d(F, (-1, 7), (-4, 4), (-1, 7), color="green")
-  sage: show(p1+p2+p3+p4+p5, aspect_ratio=1) 
+   p5 = implicit_plot3d(F, (-1, 7), (-4, 4), (-1, 7), color="green")
+   show(p1+p2+p3+p4+p5, aspect_ratio=1) 

@@ -64,14 +64,14 @@ The probabilities can also be easily determined with the help of Sage.
 
 .. sagecellserver::
 
-  sage: def hypergeometric(M, N, n, k):
-  sage:     return binomial(M, k) * binomial(N - M, n - k) / binomial(N, n)
+   def hypergeometric(M, N, n, k):
+       return binomial(M, k) * binomial(N - M, n - k) / binomial(N, n)
 
-  sage: f = 8
-  sage: m = 4
-  sage: N = 3
-  sage: for X in range(N+1):
-  sage:     print("P(X={}) = {}".format(X, hypergeometric(f, m+f, N, X)))
+   f = 8
+   m = 4
+   N = 3
+   for X in range(N+1):
+       print("P(X={}) = {}".format(X, hypergeometric(f, m+f, N, X)))
 
 .. end of output
 
@@ -112,9 +112,9 @@ With Sage, we can determine these results easily as well.
 
 .. sagecellserver::
 
-  sage: E_X = sum(hypergeometric(f, m+f, N, k)*k for k in range(N+1))
-  sage: E_X2 = sum(hypergeometric(f, m+f, N, k)*k^2 for k in range(N+1))
-  sage: print(u"E(X) = {} \nVar(X) = {}".format(E_X, E_X2-E_X^2))
+   E_X = sum(hypergeometric(f, m+f, N, k)*k for k in range(N+1))
+   E_X2 = sum(hypergeometric(f, m+f, N, k)*k^2 for k in range(N+1))
+   print(u"E(X) = {} \nVar(X) = {}".format(E_X, E_X2-E_X^2))
 
 .. end of output
 
@@ -132,17 +132,17 @@ help of Sage.
 
 .. sagecellserver::
 
-  sage: def bernoulli(N, p, k):
-  sage:     return p^k*(1-p)^(N-k)*binomial(N, k)
+   def bernoulli(N, p, k):
+       return p^k*(1-p)^(N-k)*binomial(N, k)
 
-  sage: N = 3
-  sage: p = 2/3
-  sage: for k in range(N+1):
-  sage:     print("P(X={}) = {}".format(k, bernoulli(N, p, k)))
+   N = 3
+   p = 2/3
+   for k in range(N+1):
+       print("P(X={}) = {}".format(k, bernoulli(N, p, k)))
     
-  sage: E_Y = sum(bernoulli(N, p, k)*k for k in range(N+1))
-  sage: E_Y2 = sum(bernoulli(N, p, k)*k^2 for k in range(N+1))
-  sage: print(u"E(Y) = {} \nVar(Y) = {}".format(E_Y, E_Y2-E_Y^2))
+   E_Y = sum(bernoulli(N, p, k)*k for k in range(N+1))
+   E_Y2 = sum(bernoulli(N, p, k)*k^2 for k in range(N+1))
+   print(u"E(Y) = {} \nVar(Y) = {}".format(E_Y, E_Y2-E_Y^2))
 
 .. end of output
 

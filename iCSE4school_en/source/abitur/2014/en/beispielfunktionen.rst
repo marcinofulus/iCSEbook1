@@ -26,11 +26,11 @@ the sine function (blue) and its reflection (red).
 
 .. sagecellserver::
 
-     sage: f(x) = sin(x)
-     sage: g(x) = -sin(x)
-     sage: p1 = plot(f(x), x, (-2*pi,2*pi), color='blue')     
-     sage: p2 = plot(g(x), x, (-2*pi,2*pi), color='red')
-     sage: (p1+p2).show(figsize=(4, 2.5))
+      f(x) = sin(x)
+      g(x) = -sin(x)
+      p1 = plot(f(x), x, (-2*pi,2*pi), color='blue')     
+      p2 = plot(g(x), x, (-2*pi,2*pi), color='red')
+      (p1+p2).show(figsize=(4, 2.5))
 
 .. end of output
 
@@ -46,8 +46,8 @@ We check the codomain of the function by means of Sage:
 
 .. sagecellserver::
 
-     sage: h(x) = sin(x) + 2
-     sage: plot(h(x), x, (-2*pi,2*pi), figsize=(4, 2.5))
+      h(x) = sin(x) + 2
+      plot(h(x), x, (-2*pi,2*pi), figsize=(4, 2.5))
 
 .. end of output
 
@@ -64,9 +64,9 @@ period is represented in red.
 
 .. sagecellserver::
 
-     sage: k(x) = sin(2*x)
-     sage: p1 = plot(k(x), x, (-2*pi, 2*pi), color='blue')
-     sage: p2 = plot(k(x), x, (0, pi), color='red')
-     sage: (p1+p2).show(figsize=(4, 2.5))
+      k(x) = sin(2*x)
+      p1 = plot(k(x), x, (-2*pi, 2*pi), color='blue')
+      p2 = plot(k(x), x, (0, pi), color='red')
+      (p1+p2).show(figsize=(4, 2.5))
 
 .. end of output

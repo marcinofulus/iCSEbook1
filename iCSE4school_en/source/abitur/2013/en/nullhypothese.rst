@@ -40,12 +40,12 @@ use Sage:
 
 .. sagecellserver::
 
-  sage: from scipy.stats import binom
-  sage: total = 200
-  sage: p = 0.5
-  sage: for approving in (111, 112, 113):
-  sage:     print "Level of significance for {} approvals: {:4.2f}%".format(
-  sage:         approving, (1-binom.cdf(approving-1, total, p))*100)
+   from scipy.stats import binom
+   total = 200
+   p = 0.5
+   for approving in (111, 112, 113):
+       print "Level of significance for {} approvals: {:4.2f}%".format(
+           approving, (1-binom.cdf(approving-1, total, p))*100)
 
 .. end of output
 
@@ -56,17 +56,17 @@ that a person votes for candidate A is 50%.
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: from numpy.random import random_sample
-  sage: repetitions = 10000
-  sage: p = 0.5
-  sage: people = 200
-  sage: threshold = 112
-  sage: for_A = random_sample((people, repetitions)) < p
-  sage: above_threshold = np.sum(for_A, axis=0) >= threshold
-  sage: cases = np.sum(above_threshold)
+   import numpy as np
+   from numpy.random import random_sample
+   repetitions = 10000
+   p = 0.5
+   people = 200
+   threshold = 112
+   for_A = random_sample((people, repetitions)) < p
+   above_threshold = np.sum(for_A, axis=0) >= threshold
+   cases = np.sum(above_threshold)
 
-  sage: print(("The probability that at a survey of {} people at least "
+   print(("The probability that at a survey of {} people at least "
                "{} people vote for candidate A\nif the probability to "
                "decide for candidate A is {:2.0%}, equals:  {:3.2%} ").format(
             people, threshold, float(p), float(cases)/repetitions))

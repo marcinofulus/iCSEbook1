@@ -60,28 +60,28 @@ The values of the left tree diagram can be set in the list ``probabilities``.
 
 .. sagecellserver::
 
-    sage: var('p_a p_ab p_b_if_a p_bb_if_a p_b_if_ab p_bb_if_ab')
-    sage: var('p_b p_bb p_a_if_b p_ab_if_b p_a_if_bb p_ab_if_bb')
-    sage: probabilities = [p_a == 0.4,
-    sage:                         p_ab == 0.6,
-    sage:                         p_b_if_a == 3/4,
-    sage:                         p_bb_if_a == 1/4,
-    sage:                         p_b_if_ab == 1/3,
-    sage:                         p_bb_if_ab == 2/3]
-    sage: equations = [p_b+p_bb == 1,
-    sage:                p_a_if_b+p_ab_if_b == 1,
-    sage:                p_a_if_bb+p_ab_if_bb == 1,
-    sage:                p_a_if_b*p_b == p_b_if_a*p_a,
-    sage:                p_ab_if_b*p_b == p_b_if_ab*p_ab,
-    sage:                p_a_if_bb*p_bb == p_bb_if_a*p_a,
-    sage:                p_ab_if_bb*p_bb == p_bb_if_ab*p_ab]
-    sage: solution = solve(probabilities+equations,
-    sage:                 p_a, p_ab, p_b_if_a, p_bb_if_a, p_b_if_ab, p_bb_if_ab,
-    sage:                 p_b, p_bb, p_a_if_b, p_ab_if_b, p_a_if_bb, p_ab_if_bb,
-    sage:                 solution_dict=True)[0]
-    sage: print 'P(B) =', solution[p_b]
-    sage: print '   P(A|B) =', solution[p_a_if_b],
-    sage: print '   P(̅A|B) =', solution[p_ab_if_b],
-    sage: print '\nP(̅B) =', solution[p_bb]
-    sage: print '   P(A|̅B) =', solution[p_a_if_bb],
-    sage: print '   P(̅A|̅B) =', solution[p_ab_if_bb]
+     var('p_a p_ab p_b_if_a p_bb_if_a p_b_if_ab p_bb_if_ab')
+     var('p_b p_bb p_a_if_b p_ab_if_b p_a_if_bb p_ab_if_bb')
+     probabilities = [p_a == 0.4,
+                             p_ab == 0.6,
+                             p_b_if_a == 3/4,
+                             p_bb_if_a == 1/4,
+                             p_b_if_ab == 1/3,
+                             p_bb_if_ab == 2/3]
+     equations = [p_b+p_bb == 1,
+                    p_a_if_b+p_ab_if_b == 1,
+                    p_a_if_bb+p_ab_if_bb == 1,
+                    p_a_if_b*p_b == p_b_if_a*p_a,
+                    p_ab_if_b*p_b == p_b_if_ab*p_ab,
+                    p_a_if_bb*p_bb == p_bb_if_a*p_a,
+                    p_ab_if_bb*p_bb == p_bb_if_ab*p_ab]
+     solution = solve(probabilities+equations,
+                     p_a, p_ab, p_b_if_a, p_bb_if_a, p_b_if_ab, p_bb_if_ab,
+                     p_b, p_bb, p_a_if_b, p_ab_if_b, p_a_if_bb, p_ab_if_bb,
+                     solution_dict=True)[0]
+     print 'P(B) =', solution[p_b]
+     print '   P(A|B) =', solution[p_a_if_b],
+     print '   P(̅A|B) =', solution[p_ab_if_b],
+     print '\nP(̅B) =', solution[p_bb]
+     print '   P(A|̅B) =', solution[p_a_if_bb],
+     print '   P(̅A|̅B) =', solution[p_ab_if_bb]

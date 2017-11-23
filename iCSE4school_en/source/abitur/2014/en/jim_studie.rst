@@ -60,25 +60,25 @@ random out of this list and compile the number of persons in each category.
 
 .. sagecellserver::
 
-  sage: import random
-  sage: girls = 98
-  sage: boys = 102
-  sage: girls_with_tv = 54
-  sage: boys_with_tv = 65
-  sage: adolescents = (["Girls with TV"]*girls_with_tv
-  ...                  + ["Girls without TV"]*(girls-girls_with_tv)
-  ...                  + ["Boys with TV"]*boys_with_tv
-  ...                  + ["Boys without TV"]*(boys-boys_with_tv)
-  ...                  )
-  sage: iterations = 60000
-  sage: frequencies = {"Girls with TV": 0,
-  ...                  "Girls without TV": 0,
-  ...                  "Boys with TV": 0,
-  ...                  "Boys without TV": 0}
-  sage: for _ in range(iterations):
-  ...       key = random.choice(adolescents)
-  ...       frequencies[key] = frequencies[key]+1
-  sage: table(list(frequencies.items()))
+   import random
+   girls = 98
+   boys = 102
+   girls_with_tv = 54
+   boys_with_tv = 65
+   adolescents = (["Girls with TV"]*girls_with_tv
+                  + ["Girls without TV"]*(girls-girls_with_tv)
+                  + ["Boys with TV"]*boys_with_tv
+                  + ["Boys without TV"]*(boys-boys_with_tv)
+                  )
+   iterations = 60000
+   frequencies = {"Girls with TV": 0,
+                  "Girls without TV": 0,
+                  "Boys with TV": 0,
+                  "Boys without TV": 0}
+   for _ in range(iterations):
+       key = random.choice(adolescents)
+       frequencies[key] = frequencies[key]+1
+   table(list(frequencies.items()))
 
 .. end of output
 
@@ -86,8 +86,8 @@ Now we can determine the probability of finding a girl without a TV set.
 
 .. sagecellserver::
 
-  sage: print "Probability for a girl without TV set: {:4.1%}".format(
-  ...         (float(frequencies["Girls without TV"])/iterations))
+   print "Probability for a girl without TV set: {:4.1%}".format(
+         (float(frequencies["Girls without TV"])/iterations))
 
 .. end of output
 
@@ -106,9 +106,9 @@ We make use of the simulation of part a) in order to empirically check this resu
 
 .. sagecellserver::
 
-  sage: with_tv = frequencies["Girls with TV"]+frequencies["Boys with TV"]
-  sage: print "Probability for a person with TV to be female: {:4.1%}".format(
-  ...         (float(frequencies["Girls with TV"])/with_tv))
+   with_tv = frequencies["Girls with TV"]+frequencies["Boys with TV"]
+   print "Probability for a person with TV to be female: {:4.1%}".format(
+         (float(frequencies["Girls with TV"])/with_tv))
 
 .. end of output
 
@@ -146,16 +146,16 @@ We determine the sum by means of Sage and obtain approximately 30.6%.
 
 .. sagecellserver::
 
-  sage: def bernoulli(N, p, n):
-  ...       return p^n*(1-p)^(N-n)*binomial(N, n)
+   def bernoulli(N, p, n):
+       return p^n*(1-p)^(N-n)*binomial(N, n)
 
-  sage: p = 0.55
-  sage: ntot = 25
-  sage: nmax = 12
-  sage: probsum = 0
-  sage: for i in range(nmax+1):
-  ...       probsum = probsum+bernoulli(ntot, p, i)
-  sage: print "The sum amounts to {:4.1%}".format(float(probsum))
+   p = 0.55
+   ntot = 25
+   nmax = 12
+   probsum = 0
+   for i in range(nmax+1):
+       probsum = probsum+bernoulli(ntot, p, i)
+   print "The sum amounts to {:4.1%}".format(float(probsum))
 
 .. end of output
 
@@ -163,8 +163,8 @@ Alternatively, the result can be obtained directly as:
 
 .. sagecellserver::
 
-  sage: from scipy.special import bdtr
-  sage: print "The sum amounts to {:4.1%}".format(bdtr(nmax, ntot, p))
+   from scipy.special import bdtr
+   print "The sum amounts to {:4.1%}".format(bdtr(nmax, ntot, p))
 
 The survey was carried out with adolescents between the ages of 12 and 19.
 However, it is not known whether it is representative for the 9th grade (about
@@ -178,17 +178,17 @@ probability that less then half of 25 girls possess a TV set.
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: threshold = 12
-  sage: p = 0.55
-  sage: frequency = 0
-  sage: iterations = 50000
-  sage: for _ in range(iterations):
-  ...       girls_with = sum(np.random.random(25) < p)
-  ...       if girls_with <= threshold:
-  ...           frequency = frequency+1
-  sage: print("Probability that less than half of the girls possess "
-  ...         "a TV: {:4.1%}".format(float(frequency)/iterations))
+   import numpy as np
+   threshold = 12
+   p = 0.55
+   frequency = 0
+   iterations = 50000
+   for _ in range(iterations):
+       girls_with = sum(np.random.random(25) < p)
+       if girls_with <= threshold:
+           frequency = frequency+1
+   print("Probability that less than half of the girls possess "
+         "a TV: {:4.1%}".format(float(frequency)/iterations))
 
 .. end of output
 
@@ -232,16 +232,16 @@ We determine the sum by means of Sage:
 
 .. sagecellserver::
 
-  sage: p = 0.9
-  sage: adolescents = 100
-  sage: C = 0
-  sage: probsum = bernoulli(adolescents, p, C)
-  sage: while probsum < 0.05:
-  ...       C = C+1
-  ...       probsum = probsum+bernoulli(adolescents, p, C)
-  ...   C = C-1
-  sage: print("The workspace should be approved if {} or fewer "
-  ...         "adolescents own a computer.").format(C)
+   p = 0.9
+   adolescents = 100
+   C = 0
+   probsum = bernoulli(adolescents, p, C)
+   while probsum < 0.05:
+       C = C+1
+       probsum = probsum+bernoulli(adolescents, p, C)
+   C = C-1
+   print("The workspace should be approved if {} or fewer "
+         "adolescents own a computer.").format(C)
 
 .. end of output
 
@@ -249,22 +249,22 @@ We can check the limiting value :math:`C=84` by means of a simulation.
 
 .. sagecellserver::
 
-  sage: frequency_C = 0
-  sage: frequency_Cp1 = 0
-  sage: iterations = 50000
-  sage: C = 84
-  sage: for _ in range(iterations):
-  ...       adolescents_with = sum(np.random.random(100) < p)
-  ...       if adolescents_with <= C:
-  ...           frequency_C = frequency_C+1
-  ...       if adolescents_with <= C + 1:
-  ...           frequency_Cp1 = frequency_Cp1+1
-  sage: print("Empirical probability, that at 90% probability to own a computer "
-  ...         "{} out of 100 adolescents or less own a computer: {:3.1%}".format(
-  ...         C, float(frequency_C)/iterations))
-  sage: print("Empirical probability, that at 90% probability to own a computer "
-  ...         "{} out of 100 adolescents or less own a computer: {:3.1%}".format(
-  ...         C+1, float(frequency_Cp1)/iterations))
+   frequency_C = 0
+   frequency_Cp1 = 0
+   iterations = 50000
+   C = 84
+   for _ in range(iterations):
+       adolescents_with = sum(np.random.random(100) < p)
+       if adolescents_with <= C:
+           frequency_C = frequency_C+1
+       if adolescents_with <= C + 1:
+           frequency_Cp1 = frequency_Cp1+1
+   print("Empirical probability, that at 90% probability to own a computer "
+         "{} out of 100 adolescents or less own a computer: {:3.1%}".format(
+         C, float(frequency_C)/iterations))
+   print("Empirical probability, that at 90% probability to own a computer "
+         "{} out of 100 adolescents or less own a computer: {:3.1%}".format(
+         C+1, float(frequency_Cp1)/iterations))
 
 .. end of output
 
@@ -287,8 +287,8 @@ With Sage we find :math:`P(X=85) \approx8.1\%`.
 
 .. sagecellserver::
 
-  sage: print "Probability to find exactly 85 adolescents owning a computer: {:3.1%}".format(
-  ...          float(bernoulli(100, 0.82, 85)))
+   print "Probability to find exactly 85 adolescents owning a computer: {:3.1%}".format(
+          float(bernoulli(100, 0.82, 85)))
 
 .. end of output
 
@@ -350,14 +350,14 @@ solving a linear system of equations:
 
 .. sagecellserver::
 
-  sage: var('p_aub p_aunb p_b p_nb p_a')
-  sage: probabilities = [p_a == 0.47, p_b == 0.495]
-  sage: equations = [p_b + p_nb == 1,
-  ...                p_aub + p_aunb == p_a,
-  ...                p_aub/p_b == p_aunb/p_nb]
-  sage: solution = solve(equations + probabilities, p_aub, p_aunb, p_b, p_nb, p_a,
-  ...                solution_dict=True)[0]
-  sage: print "Statistical independence requires P(A∩B) = {:4.1%}".format(
-  ...         float(solution[p_aub]))
+   var('p_aub p_aunb p_b p_nb p_a')
+   probabilities = [p_a == 0.47, p_b == 0.495]
+   equations = [p_b + p_nb == 1,
+                p_aub + p_aunb == p_a,
+                p_aub/p_b == p_aunb/p_nb]
+   solution = solve(equations + probabilities, p_aub, p_aunb, p_b, p_nb, p_a,
+                solution_dict=True)[0]
+   print "Statistical independence requires P(A∩B) = {:4.1%}".format(
+         float(solution[p_aub]))
 
 .. end of output

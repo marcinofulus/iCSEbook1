@@ -26,15 +26,15 @@ simulation. However, we should not expect perfect agreement.
 
 .. sagecellserver::
 
-    sage: p = 0.7
-    sage: rounds = 1000000
-    sage: goal = [True, True, False, False, False]
-    sage: successes = 0
-    sage: for round in range(rounds):
-    ...       result = [random() < p for _ in range(5)]
-    ...       if result == goal:
-    ...           successes = successes+1
-    sage: print N(successes/rounds), p^2*(1-p)^3
+     p = 0.7
+     rounds = 1000000
+     goal = [True, True, False, False, False]
+     successes = 0
+     for round in range(rounds):
+         result = [random() < p for _ in range(5)]
+         if result == goal:
+             successes = successes+1
+     print N(successes/rounds), p^2*(1-p)^3
 
 .. end of output
 
@@ -58,7 +58,7 @@ After briefly verifying the binomial coefficient of which we make use here
 
 .. sagecellserver::
 
-    sage: binomial(5, 4)
+     binomial(5, 4)
 
 .. end of output
 
@@ -66,14 +66,14 @@ we once more check our result for the probability by means of a simulation:
 
 .. sagecellserver::
 
-    sage: p = 0.7
-    sage: rounds = 1000000
-    sage: successes = 0
-    sage: for round in range(rounds):
-    ...       result = [random() < p for _ in range(5)]
-    ...       if sum(result) == 4:
-    ...           successes = successes+1
-    sage: print N(successes/rounds), 5*p^4*(1-p)
+     p = 0.7
+     rounds = 1000000
+     successes = 0
+     for round in range(rounds):
+         result = [random() < p for _ in range(5)]
+         if sum(result) == 4:
+             successes = successes+1
+     print N(successes/rounds), 5*p^4*(1-p)
 
 .. end of output
 

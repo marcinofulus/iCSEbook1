@@ -100,8 +100,8 @@ This result can easily be checked by means of Sage:
 
 .. sagecellserver::
 
-  sage: f(x) = 2*x*exp(-1/2*x**2)
-  sage: print("f(x) + f(-x) = " + str(f(x) + f(-x)))
+   f(x) = 2*x*exp(-1/2*x**2)
+   print("f(x) + f(-x) = " + str(f(x) + f(-x)))
 
 .. end of output
 
@@ -121,8 +121,8 @@ By means of Sage, the derivative may be obtained as follows:
 
 .. sagecellserver::
 
-  sage: df(x) = derivative(f(x),x)
-  sage: print("Derivative of f(x): " + str(df(x).full_simplify()))
+   df(x) = derivative(f(x),x)
+   print("Derivative of f(x): " + str(df(x).full_simplify()))
 
 .. end of output
 
@@ -140,8 +140,8 @@ The solutions can be confirmed with Sage.
 
 .. sagecellserver::
 
-  sage: nstn = solve(df(x)==0, x)
-  sage: print("Zeros of the derivative of f: " +repr(nstn))
+   nstn = solve(df(x)==0, x)
+   print("Zeros of the derivative of f: " +repr(nstn))
 
 .. end of output
 
@@ -174,10 +174,10 @@ points :math:`x_1` and :math:`x_2` as follows:
 
 .. sagecellserver::
 
-  sage: ddf(x) = derivative(df(x),x)
-  sage: print("Second derivative of f(x): " + str(ddf(x).full_simplify()))
-  sage: print("ddf(-1) = " + str(ddf(-1)))
-  sage: print("ddf(1) = " + str(ddf(1)))
+   ddf(x) = derivative(df(x),x)
+   print("Second derivative of f(x): " + str(ddf(x).full_simplify()))
+   print("ddf(-1) = " + str(ddf(-1)))
+   print("ddf(1) = " + str(ddf(1)))
 
 .. end of output
 
@@ -201,9 +201,9 @@ two intervall borders.
 
 .. sagecellserver::
 
-  sage: def ms(x1,x2):
-  sage:    return (f(x2)-f(x1))/(x2-x1)
-  sage: print("Mean rate of change between -0.5 and 0.5: %4.2f" % ms(-0.5, 0.5))
+   def ms(x1,x2):
+      return (f(x2)-f(x1))/(x2-x1)
+   print("Mean rate of change between -0.5 and 0.5: %4.2f" % ms(-0.5, 0.5))
 
 .. end of output
 
@@ -217,7 +217,7 @@ subproblem. Thus we find:
 
 .. sagecellserver::
 
-  sage: print("Local rate of change at x=0: " + str(df(0)))
+   print("Local rate of change at x=0: " + str(df(0)))
 
 .. end of output
 
@@ -229,7 +229,7 @@ The deviation in percent thus amounts to
 
 .. sagecellserver::
 
-  sage: print("Deviation in percent between mean and local rate of change: %4.1f%%" % (100*ms(-0.5,0.5)/df(0)))
+   print("Deviation in percent between mean and local rate of change: %4.1f%%" % (100*ms(-0.5,0.5)/df(0)))
 
 .. end of output
 
@@ -263,10 +263,10 @@ The integration can be carried out directly by means of Sage.
 
 .. sagecellserver::
 
-  sage: var('u')
-  sage: assume(u > 0)
-  sage: a(u) = f.integral(x, 0, u)
-  sage: print("A(u) = "+str(a(u)))
+   var('u')
+   assume(u > 0)
+   a(u) = f.integral(x, 0, u)
+   print("A(u) = "+str(a(u)))
 
 .. end of output
 
@@ -282,7 +282,7 @@ By means of Sage the limit is obtained as follows:
 
 .. sagecellserver::
 
-  sage: print("A(inf) = " + str(limit(a(u), u=Infinity)))
+   print("A(inf) = " + str(limit(a(u), u=Infinity)))
 
 .. end of output
 
@@ -307,8 +307,8 @@ With the help of Sage, the intersections can be obtained as follows:
 
 .. sagecellserver::
 
-  sage: h(x) = x * 2 / e^2
-  sage: solve(f(x) == h(x), x)
+   h(x) = x * 2 / e^2
+   solve(f(x) == h(x), x)
 
 .. end of output
 
@@ -317,12 +317,12 @@ are drawn in the same coordinate system.
 
 .. sagecellserver::
 
-  sage: pf = plot(f, (0, 2), color='blue', fill=h, fillcolor='yellow')
-  sage: ppf = plot(f, (-4, 0), color='blue')
-  sage: pppf = plot(f, (2, 4), color='blue')
-  sage: ph = plot(h, (-4, 4), color='red')
-  sage: b = text("B",(1, 0.7))
-  sage: show(pf + ph + ppf + pppf + b, aspect_ratio=1)
+   pf = plot(f, (0, 2), color='blue', fill=h, fillcolor='yellow')
+   ppf = plot(f, (-4, 0), color='blue')
+   pppf = plot(f, (2, 4), color='blue')
+   ph = plot(h, (-4, 4), color='red')
+   b = text("B",(1, 0.7))
+   show(pf + ph + ppf + pppf + b, aspect_ratio=1)
 
 .. end of output
 
@@ -341,8 +341,8 @@ The integral can easily be evaluated by means of Sage.
 
 .. sagecellserver::
 
-  sage: b = a(2)-integral(h(x), x, 0, 2)
-  sage: print(u"The area B is given by: " + str(b) + u" ≈ %4.2f" % b)
+   b = a(2)-integral(h(x), x, 0, 2)
+   print(u"The area B is given by: " + str(b) + u" ≈ %4.2f" % b)
 
 .. end of output
 
@@ -369,10 +369,10 @@ Here, we choose :math:`c=3`.
 
 .. sagecellserver::
 
-  sage: c = var('c')
-  sage: gc(c, x) = f(x) + c
-  sage: hy, hx = find_local_maximum(gc(3), -30, 30)
-  sage: print("The maximum for c=3 is found at: (%4.2f,%4.2f)" % (hx, hy))
+   c = var('c')
+   gc(c, x) = f(x) + c
+   hy, hx = find_local_maximum(gc(3), -30, 30)
+   print("The maximum for c=3 is found at: (%4.2f,%4.2f)" % (hx, hy))
 
 .. end of output
 
@@ -381,7 +381,7 @@ we find :math:`\lim\limits_{x\rightarrow+\infty}g_c(x) = c`.
 
 .. sagecellserver::
 
-  sage: print(u"g_c(c, inf) = " + str(limit(gc(c, x), x=Infinity)))
+   print(u"g_c(c, inf) = " + str(limit(gc(c, x), x=Infinity)))
 
 **Solution of part b**
 
@@ -400,11 +400,11 @@ of functions with a different number of zeros.
 
 .. sagecellserver::
 
-  sage: pg0 = plot(gc(0, x), (-4, 4), color='blue')
-  sage: pg1 = plot(gc(1, x), (-4, 4), color='red')
-  sage: pgtp = plot(gc(2/sqrt(e), x), (-4, 4), color='purple')
-  sage: pg2 = plot(gc(2, x), (-4, 4), color='green')
-  sage: show(pg0 + pg1 + pgtp + pg2, aspect_ratio=1)
+   pg0 = plot(gc(0, x), (-4, 4), color='blue')
+   pg1 = plot(gc(1, x), (-4, 4), color='red')
+   pgtp = plot(gc(2/sqrt(e), x), (-4, 4), color='purple')
+   pg2 = plot(gc(2, x), (-4, 4), color='green')
+   show(pg0 + pg1 + pgtp + pg2, aspect_ratio=1)
 
 .. end of output
 
@@ -420,9 +420,9 @@ on the subintervals chosen.
 
 .. sagecellserver::
 
-  sage: from numpy import linspace
+   from numpy import linspace
 
-  sage: def my_find_root(f, a, b, n):
+   def my_find_root(f, a, b, n):
   ....:       """find zeros of the function f in the interval [a, b] by
   ....:       subdivision into n subintervals of equal size
   ....:           
@@ -438,8 +438,8 @@ on the subintervals chosen.
   ....:       zeros = "{" + ", ".join(roots) + "}"
   ....:       print("Zeros of " + str(f) + ": " + zeros)
 
-  sage: @interact
-  sage: def _(c=slider(-2, 2, 0.1, 0),
+   @interact
+   def _(c=slider(-2, 2, 0.1, 0),
   ....:         n=slider(1, 80, 1)):
   ....:       my_find_root(gc(c), -5, 5, n)
 
@@ -462,16 +462,16 @@ to the integral over :math:`f(x)`.
 
 .. sagecellserver::
 
-  sage: c = 1
-  sage: pg = plot(gc(c, x), (0, 3), color='red', fill=c, fillcolor='yellow')
-  sage: pgl = plot(gc(c, x), (-1, 0), color='red')
-  sage: pgr = plot(gc(c, x), (3, 4), color='red')
-  sage: gtext = text(r"$g_1(x)$", (2, c + 0.8), fontsize=14)
-  sage: pc = plot(c,(0, 3), color='white', fill=True, fillcolor='lightgreen')
-  sage: ftext = text(r"$\int_0^3 f(x) \mathrm{d}x$",(1, c + 0.5), fontsize=14)
-  sage: ctext = text(r"$c=" + str(c) + r"$",(-0.5, c), fontsize=14)
-  sage: c3text = text(r"$3c$",(1, c/2), fontsize=14)
-  sage: show(pgl + pg + pgr + gtext+ pc + ftext + ctext + c3text, aspect_ratio=1, xmax=4)
+   c = 1
+   pg = plot(gc(c, x), (0, 3), color='red', fill=c, fillcolor='yellow')
+   pgl = plot(gc(c, x), (-1, 0), color='red')
+   pgr = plot(gc(c, x), (3, 4), color='red')
+   gtext = text(r"$g_1(x)$", (2, c + 0.8), fontsize=14)
+   pc = plot(c,(0, 3), color='white', fill=True, fillcolor='lightgreen')
+   ftext = text(r"$\int_0^3 f(x) \mathrm{d}x$",(1, c + 0.5), fontsize=14)
+   ctext = text(r"$c=" + str(c) + r"$",(-0.5, c), fontsize=14)
+   c3text = text(r"$3c$",(1, c/2), fontsize=14)
+   show(pgl + pg + pgr + gtext+ pc + ftext + ctext + c3text, aspect_ratio=1, xmax=4)
 
 .. end of output
 
@@ -495,13 +495,13 @@ the limit numerically by means of Sage.
 
 .. sagecellserver::
 
-  sage: startx = find_root(gc(1.4)-2.1, -1, 1)
-  sage: endx = find_root(gc(1.4)-2.1, 1, 3)
-  sage: print("In the interval [" + str(startx) + ", " + str(endx) + "] gc(1.4, x) is larger than 2.1")
-  sage: pg14l = plot(gc(1.4, x), (-4, startx), color='red')
-  sage: pg14 = plot(gc(1.4, x), (startx, endx), fill=2.1, fillcolor='yellow', color='red')
-  sage: pg14r = plot(gc(1.4, x), (endx, 4), color='red')
-  sage: show(pg0 + pg14l + pg14 + pg14r, aspect_ratio=1)
+   startx = find_root(gc(1.4)-2.1, -1, 1)
+   endx = find_root(gc(1.4)-2.1, 1, 3)
+   print("In the interval [" + str(startx) + ", " + str(endx) + "] gc(1.4, x) is larger than 2.1")
+   pg14l = plot(gc(1.4, x), (-4, startx), color='red')
+   pg14 = plot(gc(1.4, x), (startx, endx), fill=2.1, fillcolor='yellow', color='red')
+   pg14r = plot(gc(1.4, x), (endx, 4), color='red')
+   show(pg0 + pg14l + pg14 + pg14r, aspect_ratio=1)
 
 .. end of output
 
@@ -530,7 +530,7 @@ This result can also be reproduced by means of Sage:
 
 .. sagecellserver::
 
-  sage: solve(ddf(x) == 0, x)
+   solve(ddf(x) == 0, x)
 
 .. end of output
 

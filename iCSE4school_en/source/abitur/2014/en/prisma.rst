@@ -33,12 +33,12 @@ We can verify the result with the help of Sage by constructing the point
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: b = vector([8, 0, 0])
-    sage: c = vector([0, 8, 0])
-    sage: d = vector([0, 0, 4])
-    sage: f = c + d - a
-    sage: print 'distance B-F:', norm(b-f)
+     a = vector([0, 0, 0])
+     b = vector([8, 0, 0])
+     c = vector([0, 8, 0])
+     d = vector([0, 0, 4])
+     f = c + d - a
+     print 'distance B-F:', norm(b-f)
 
 .. end of output
 
@@ -56,9 +56,9 @@ and :math:`P(4|4|0)`.
 
 .. sagecellserver::
 
-    sage: m = a + 1/2 * (d - a)
-    sage: p = b + 1/2 * (c - b)
-    sage: print "m:", m, ", p:", p
+     m = a + 1/2 * (d - a)
+     p = b + 1/2 * (c - b)
+     print "m:", m, ", p:", p
 
 .. end of output
 
@@ -85,8 +85,8 @@ Sage offers a fast way to verify the solution:
 
 .. sagecellserver::
 
-  sage: y = var('y')
-  sage: k = vector([0, y, 4])
-  sage: solve((m-k).dot_product(m-p) == 0, y)
+   y = var('y')
+   k = vector([0, y, 4])
+   solve((m-k).dot_product(m-p) == 0, y)
 
 .. end of output

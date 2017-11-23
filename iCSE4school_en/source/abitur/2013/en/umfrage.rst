@@ -92,15 +92,15 @@ We can simulate this experiment with Sage.
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: from numpy.random import random_sample
-  sage: iterations = 1000000
-  sage: people = 48
-  sage: young_voters = 6
-  sage: p = 0.12
-  sage: six_young_voters = np.sum(random_sample((people, iterations)) < p, axis=0) == 6
-  sage: hits = np.sum(six_young_voters)
-  sage: print("The probability that amongst {} randomly selected people there are exactly {} young voters is: {:4.2%}".format(
-  sage:     people, young_voters, float(hits)/iterations))
+   import numpy as np
+   from numpy.random import random_sample
+   iterations = 1000000
+   people = 48
+   young_voters = 6
+   p = 0.12
+   six_young_voters = np.sum(random_sample((people, iterations)) < p, axis=0) == 6
+   hits = np.sum(six_young_voters)
+   print("The probability that amongst {} randomly selected people there are exactly {} young voters is: {:4.2%}".format(
+       people, young_voters, float(hits)/iterations))
 
 .. end of output

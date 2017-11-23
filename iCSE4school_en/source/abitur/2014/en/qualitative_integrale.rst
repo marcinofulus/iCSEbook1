@@ -47,8 +47,8 @@ accordingly. For the use with Sage, we employ the function
 
 .. sagecellserver::
 
-     sage: f(x) = 1/(x/3+1.5)^12-1/(x/3+1.5)^6-0.2
-     sage: plot(f(x), x, (-2, 2), ymax=1, figsize=(4, 2.8))
+      f(x) = 1/(x/3+1.5)^12-1/(x/3+1.5)^6-0.2
+      plot(f(x), x, (-2, 2), ymax=1, figsize=(4, 2.8))
 
 .. end of output
 
@@ -58,11 +58,11 @@ to :math:`x` where :math:`x` runs from :math:`a = -1.8` to :math:`b = -1.4`.
 
 .. sagecellserver::
 
-     sage: a = -1.8
-     sage: b = -1.4
-     sage: F(x) = integral(f(x), x)
-     sage: sf(x) = F(x) - F(a)
-     sage: plot(sf(x), (a, b), figsize=(4, 2.8))
+      a = -1.8
+      b = -1.4
+      F(x) = integral(f(x), x)
+      sf(x) = F(x) - F(a)
+      plot(sf(x), (a, b), figsize=(4, 2.8))
 
 .. end of output
 
@@ -90,10 +90,10 @@ the antiderivative and the range where it is represented.
 
 .. sagecellserver::
     
-     sage: c = -2
-     sage: d = 2
-     sage: sf(x) = F(x) - F(c)
-     sage: plot(sf(x), (c, d), figsize=(4, 2.8))
+      c = -2
+      d = 2
+      sf(x) = F(x) - F(c)
+      plot(sf(x), (c, d), figsize=(4, 2.8))
 
 .. end of output
 

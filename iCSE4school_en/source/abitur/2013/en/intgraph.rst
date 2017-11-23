@@ -44,12 +44,12 @@ its qualitative form resembles that given in figure 1.
 
 .. sagecellserver::
 
-  sage: var('t')
-  sage: f(x) = 49/5*x*(4*x-9)/(2*x-9)^2
-  sage: assume(1 < x, 2*x-9 < 0)
-  sage: F(x) = integrate(f(t), t, 1, x)
-  sage: ranges = {'xmin': -3, 'xmax': 4, 'ymin': -2, 'ymax': 7}
-  sage: show(plot(f, color='blue', **ranges)+plot(F, color='red', **ranges),
+   var('t')
+   f(x) = 49/5*x*(4*x-9)/(2*x-9)^2
+   assume(1 < x, 2*x-9 < 0)
+   F(x) = integrate(f(t), t, 1, x)
+   ranges = {'xmin': -3, 'xmax': 4, 'ymin': -2, 'ymax': 7}
+   show(plot(f, color='blue', **ranges)+plot(F, color='red', **ranges),
              figsize=(3.5, 4.5))
 
 .. end of output

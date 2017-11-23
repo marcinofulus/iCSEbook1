@@ -36,13 +36,13 @@ properties of the function :math:`f` just discussed.
 
 .. sagecellserver::
 
-  sage: df(x) = (x-1)*(x-4)
-  sage: ddf(x) = derivative(df, x)
-  sage: f(x) = integral(df, x)
-  sage: p1 = plot(f(x), (-3, 6), color='red', legend_label="$f(x)$")
-  sage: p2 = plot(df(x), (-3, 6), color='green', legend_label="$f'(x)$")
-  sage: p3 = plot(ddf(x), (-3, 6), color='blue', legend_label="$f''(x)$")
-  sage: show(p1+p2+p3, figsize=(4, 2.8), ymin=-10, ymax=10)
+   df(x) = (x-1)*(x-4)
+   ddf(x) = derivative(df, x)
+   f(x) = integral(df, x)
+   p1 = plot(f(x), (-3, 6), color='red', legend_label="$f(x)$")
+   p2 = plot(df(x), (-3, 6), color='green', legend_label="$f'(x)$")
+   p3 = plot(ddf(x), (-3, 6), color='blue', legend_label="$f''(x)$")
+   show(p1+p2+p3, figsize=(4, 2.8), ymin=-10, ymax=10)
      
 .. end of output
 
@@ -70,6 +70,6 @@ plot of part a). However, we can also calculate it with the help of Sage:
 
 .. sagecellserver::
 
-  sage: print "Point of inflection at:", solve(ddf(x) == 0, x)[0]
+   print "Point of inflection at:", solve(ddf(x) == 0, x)[0]
      
 .. end of output

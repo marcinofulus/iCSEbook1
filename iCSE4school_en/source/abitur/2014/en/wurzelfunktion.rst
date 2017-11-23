@@ -33,9 +33,9 @@ First, we make use of Sage to obtain an overview of the given function.
 
 .. sagecellserver::
 
-  sage: f(x) = 2 - sqrt(12 - 2*x)
-  sage: p1 = plot(f(x), x, (-7,6), figsize=(4, 2.8))
-  sage: show(p1, gridlines=True)
+   f(x) = 2 - sqrt(12 - 2*x)
+   p1 = plot(f(x), x, (-7,6), figsize=(4, 2.8))
+   show(p1, gridlines=True)
 
 .. end of output
 
@@ -50,7 +50,7 @@ This can be checked using Sage:
 
 .. sagecellserver::
 
-  sage: print "intersection with the y-axis ", f(0), u"\u2248", f(0).n(digits=4)
+   print "intersection with the y-axis ", f(0), u"\u2248", f(0).n(digits=4)
 
 .. end of output
 
@@ -71,7 +71,7 @@ which is confirmed by Sage:
 
 .. sagecellserver::
 
-   sage: solve(f(x) == 0, x)
+    solve(f(x) == 0, x)
 
 .. end of output
 
@@ -95,8 +95,8 @@ This can be verified with Sage:
 
 .. sagecellserver::
 
-  sage: limitval = limit(f(x), x=-infinity)
-  sage: html("$\lim_{x=-\infty} f(x) = %s$" % latex(limitval))
+   limitval = limit(f(x), x=-infinity)
+   html("$\lim_{x=-\infty} f(x) = %s$" % latex(limitval))
 
 .. end of output
 
@@ -127,10 +127,10 @@ The same result is obtained by means of Sage:
 
 .. sagecellserver::
 
-  sage: df = derivative(f,  x)
-  sage: print "The derivation of f is:", df
-  sage: p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
-  sage: show(p2)
+   df = derivative(f,  x)
+   print "The derivation of f is:", df
+   p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
+   show(p2)
 
 .. end of output
 
@@ -149,8 +149,8 @@ means of Sage:
 
 .. sagecellserver::
 
-  sage: limitval = limit(df(x), x=6)
-  sage: html("$\lim_{x=6} f'(x) = %s$" % latex(limitval))
+   limitval = limit(df(x), x=6)
+   html("$\lim_{x=6} f'(x) = %s$" % latex(limitval))
 
 .. end of output
 
@@ -185,7 +185,7 @@ We obtain
 
 .. sagecellserver::
 
-  sage: print f(-2)
+   print f(-2)
 
 .. end of output
 
@@ -225,9 +225,9 @@ which can be verified with Sage:
 
 .. sagecellserver::
 
-  sage: var('y')
-  sage: assume(y<2)
-  sage: solve(f(x) == y, x)
+   var('y')
+   assume(y<2)
+   solve(f(x) == y, x)
 
 .. end of output
 
@@ -270,10 +270,10 @@ Using Sage, we can solve the problem analytically
 
 .. sagecellserver::
 
-  sage: h(x)=-1/2*x^2+2*x+4
-  sage: w(x) = x
-  sage: for solution in solve(h(x) == w(x), x, solution_dict=True):
-  sage:     print "(", solution[x], "|", solution[x], ")"
+   h(x)=-1/2*x^2+2*x+4
+   w(x) = x
+   for solution in solve(h(x) == w(x), x, solution_dict=True):
+       print "(", solution[x], "|", solution[x], ")"
 
 .. end of output
 
@@ -281,9 +281,9 @@ as well as graphically:
 
 .. sagecellserver::
 
-  sage: p3 = plot(h(x), x, (-3, 6), fill=w, fillcolor = 'red')
-  sage: p4 = plot(w(x), x, (-3, 6), color='green')
-  sage: show(p3+p4, aspect_ratio=1, figsize=4) 
+   p3 = plot(h(x), x, (-3, 6), fill=w, fillcolor = 'red')
+   p4 = plot(w(x), x, (-3, 6), color='green')
+   show(p3+p4, aspect_ratio=1, figsize=4) 
 
 .. end of output
 
@@ -320,11 +320,11 @@ heart-shaped figure by reflection, we will proceed as follows:
 
 .. sagecellserver::
 
-  sage: f2(x) =  2 + sqrt(12-2*x)
-  sage: p5 = plot(h(x), x, (-2, 4))
-  sage: p6 = plot(f(x), x, (-2, 6))
-  sage: p7 = plot(f2(x), x, (4, 6))
-  sage: show(p5+p6+p7, aspect_ratio=1, figsize=4)
+   f2(x) =  2 + sqrt(12-2*x)
+   p5 = plot(h(x), x, (-2, 4))
+   p6 = plot(f(x), x, (-2, 6))
+   p7 = plot(f2(x), x, (4, 6))
+   show(p5+p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -380,7 +380,7 @@ This result can be verified with Sage:
 
 .. sagecellserver::
 
-  sage: print "The content of the red area is:", integrate(h(x)-w(x), x, -2, 4)
+   print "The content of the red area is:", integrate(h(x)-w(x), x, -2, 4)
 
 .. end of output
 
@@ -422,14 +422,14 @@ has to equal the slope of the function :math:`h(x)` at this point.
 
 .. sagecellserver::
 
-  sage: m, t = var('m t')
-  sage: y(x) = m*x+t
-  sage: dh = derivative(h, x)
-  sage: dy = derivative(y, x)
-  sage: solution = solve([y(-2)==h(-2),
-  ...                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
-  sage: y(x) = y.subs(solution)
-  sage: print 'Equation of the tangent: y = %sx+%s' % (solution[m], solution[t])
+   m, t = var('m t')
+   y(x) = m*x+t
+   dh = derivative(h, x)
+   dy = derivative(y, x)
+   solution = solve([y(-2)==h(-2),
+                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
+   y(x) = y.subs(solution)
+   print 'Equation of the tangent: y = %sx+%s' % (solution[m], solution[t])
 
 .. end of output
 
@@ -437,9 +437,9 @@ Further, we use Sage to draw the tangent into our figure.
 
 .. sagecellserver::
 
-  sage: p8 = plot(h(x), x, (-3, 0))
-  sage: p9 = plot(y(x), x, (-3, 0), color='green')
-  sage: show(p8+p9, figsize=(4, 2.8))
+   p8 = plot(h(x), x, (-3, 0))
+   p9 = plot(y(x), x, (-3, 0), color='green')
+   show(p8+p9, figsize=(4, 2.8))
 
 .. end of output
 
@@ -468,16 +468,16 @@ this out for us:
 
 .. sagecellserver::
 
-  sage: a, b, c, d = var('a b c d')
-  sage: k(x) = a*x^3+b*x^2+c*x+d
-  sage: dk = derivative(k, x)
-  sage: equations = [k(0)==h(0),
-  ...                  dk(0)==dh(0),
-  ...                  k(-2)==h(-2),
-  ...                  dk(-2)==1.5]
-  sage: solutions = solve(equations, a, b, c, d, solution_dict=True)[0]
-  sage: k = k.subs(solutions)
-  sage: print k
+   a, b, c, d = var('a b c d')
+   k(x) = a*x^3+b*x^2+c*x+d
+   dk = derivative(k, x)
+   equations = [k(0)==h(0),
+                  dk(0)==dh(0),
+                  k(-2)==h(-2),
+                  dk(-2)==1.5]
+   solutions = solve(equations, a, b, c, d, solution_dict=True)[0]
+   k = k.subs(solutions)
+   print k
 
 .. end of output
 
@@ -486,12 +486,12 @@ red curve is the new function :math:`k`.
 
 .. sagecellserver::
 
-  sage: p10 = plot(h(x), x, (0, 4))
-  sage: p11 = plot(k(x), x, (-2, 0), color='red')
-  sage: p12 = plot(f(x), x, (-2, 6))
-  sage: p13 = plot(f2(x), x, (4, 6))
-  sage: p14 = plot(h(x), x, (-2, 0), linestyle=':')
-  sage: show(p10+p11+p12+p13+p14, aspect_ratio=1, figsize=4)
+   p10 = plot(h(x), x, (0, 4))
+   p11 = plot(k(x), x, (-2, 0), color='red')
+   p12 = plot(f(x), x, (-2, 6))
+   p13 = plot(f2(x), x, (4, 6))
+   p14 = plot(h(x), x, (-2, 0), linestyle=':')
+   show(p10+p11+p12+p13+p14, aspect_ratio=1, figsize=4)
 
 .. end of output
 

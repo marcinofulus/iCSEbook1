@@ -99,16 +99,16 @@ In Sage, we first define all points and then check the result.
 
 .. sagecellserver::
 
-  sage: o = vector([0,0,0])
-  sage: p = vector([8,0,0])
-  sage: c = vector([8, 10, 5])
-  sage: width, length, height = c
-  sage: h = vector([4, 10, 8])
-  sage: t = vector([4, 8, 8])
-  sage: a = o+vector([0, 0, height])
-  sage: b = p+vector([0, 0, height])
-  sage: g = h-vector([0, length, 0])
-  sage: print "Area: %sm²" % float(norm(b-g)*norm(c-b))
+   o = vector([0,0,0])
+   p = vector([8,0,0])
+   c = vector([8, 10, 5])
+   width, length, height = c
+   h = vector([4, 10, 8])
+   t = vector([4, 8, 8])
+   a = o+vector([0, 0, height])
+   b = p+vector([0, 0, height])
+   g = h-vector([0, length, 0])
+   print "Area: %sm²" % float(norm(b-g)*norm(c-b))
 
 .. end of output
 
@@ -127,9 +127,9 @@ The house thus is in accordance with the charter.
 
 .. sagecellserver::
 
-  sage: ba = (a-b).normalized()
-  sage: bg = (g-b).normalized()
-  sage: print "Inclination of roof: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
+   ba = (a-b).normalized()
+   bg = (g-b).normalized()
+   print "Inclination of roof: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
 
 .. end of output
 
@@ -159,7 +159,7 @@ This result is confirmed by Sage:
 
 .. sagecellserver::
 
-  sage: norm(h-t)
+   norm(h-t)
 
 .. end of output
 
@@ -178,8 +178,8 @@ This result is confirmed by Sage.
 
 .. sagecellserver::
 
-  sage: lamb = solve(abs(x*(c-h)) == 1, x)
-  sage: print "The solutions for λ are:", lamb
+   lamb = solve(abs(x*(c-h)) == 1, x)
+   print "The solutions for λ are:", lamb
 
 .. end of output
 
@@ -189,8 +189,8 @@ the point :math:`M(4.8|8|7.4)`.
 
 .. sagecellserver::
 
-  sage: m = t + lamb[1].right() * (c-h)
-  sage: print "point M:", m
+   m = t + lamb[1].right() * (c-h)
+   print "point M:", m
 
 .. end of output
 
@@ -221,9 +221,9 @@ obtained by means of Sage as follows:
 
 .. sagecellserver::
 
-  sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
-  sage: n = m + mu*vector([6, 0, -1])
-  sage: l = n + vector([0, 0, -7/5])
-  sage: print "Coordinates of N: ", n, ", L:", l
+   mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
+   n = m + mu*vector([6, 0, -1])
+   l = n + vector([0, 0, -7/5])
+   print "Coordinates of N: ", n, ", L:", l
 
 .. end of output

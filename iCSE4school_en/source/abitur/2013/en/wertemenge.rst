@@ -33,11 +33,11 @@ can check the codomains.
 
 .. sagecellserver::
 
-    sage: f(x) = x**2+2
-    sage: g(x) = 2*sin(x)
-    sage: pf = plot(f, (-3, 3), color='blue')
-    sage: pg = plot(g, (-4, 4), color='red')
-    sage: show(pf+pg, figsize=(4, 2.8))
+     f(x) = x**2+2
+     g(x) = 2*sin(x)
+     pf = plot(f, (-3, 3), color='blue')
+     pg = plot(g, (-4, 4), color='red')
+     show(pf+pg, figsize=(4, 2.8))
 
 .. end of output
 

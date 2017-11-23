@@ -42,15 +42,15 @@ The solution can be determined with the help of Sage:
 
 .. sagecellserver::
 
-    sage: var("lamb, mu")
-    sage: g = vector([8, 1, 7]) + lamb * vector([3, 1, 2])
-    sage: h = vector([-1, 5, -9]) + mu * vector([1, -2, 4])
-    sage: result = solve([g[0] == h[0],
-    sage:                 g[1] == h[1],
-    sage:                 g[2] == h[2]], mu, lamb)
-    sage: print("Values at the intersection: {}".format(result[0]))
-    sage: t = h.subs(result[0][0])
-    sage: print("Intersection at: T = {}".format(t))
+     var("lamb, mu")
+     g = vector([8, 1, 7]) + lamb * vector([3, 1, 2])
+     h = vector([-1, 5, -9]) + mu * vector([1, -2, 4])
+     result = solve([g[0] == h[0],
+                     g[1] == h[1],
+                     g[2] == h[2]], mu, lamb)
+     print("Values at the intersection: {}".format(result[0]))
+     t = h.subs(result[0][0])
+     print("Intersection at: T = {}".format(t))
 
 .. end of output
 
@@ -59,15 +59,15 @@ coordinate system with Sage.
 
 .. sagecellserver::
 
-    sage: labeloffset = vector([0, 0, 2])
-    sage: pg = line([g(lamb = -4), g(lamb = 0)], color = 'blue')
-    sage: tg = text3d("g", g(lamb = 0) + labeloffset, color='blue', horizontal_alignment='left')
-    sage: ph = line([h(mu = 0), h(mu = 4)], color = 'purple')
-    sage: th = text3d("h", h(mu = 0) + labeloffset, color='purple', horizontal_alignment='left')
-    sage: pt = point(t, size=10, color='red')
-    sage: tt = text3d("T", t + labeloffset, color='red', horizontal_alignment='left')
-    sage: p1 = pg + tg + ph + th + pt + tt
-    sage: show(p1, aspect_ratio=1)
+     labeloffset = vector([0, 0, 2])
+     pg = line([g(lamb = -4), g(lamb = 0)], color = 'blue')
+     tg = text3d("g", g(lamb = 0) + labeloffset, color='blue', horizontal_alignment='left')
+     ph = line([h(mu = 0), h(mu = 4)], color = 'purple')
+     th = text3d("h", h(mu = 0) + labeloffset, color='purple', horizontal_alignment='left')
+     pt = point(t, size=10, color='red')
+     tt = text3d("T", t + labeloffset, color='red', horizontal_alignment='left')
+     p1 = pg + tg + ph + th + pt + tt
+     show(p1, aspect_ratio=1)
 
 .. end of output
 
@@ -86,16 +86,16 @@ coordinate system.
 
 .. sagecellserver::
 
-    sage: p = g(lamb = result[0][1].right() + 1)
-    sage: print("P {}".format(p))
-    sage: pp = point(p, size=10, color='green')
-    sage: tp = text3d("P", p + labeloffset, color='green', horizontal_alignment='left')
-    sage: q = g(lamb = result[0][1].right() - 1)
-    sage: print("Q {}".format(q))
-    sage: pq = point(q, size=10, color='green')
-    sage: tq = text3d("Q", q + labeloffset, color='green', horizontal_alignment='left')
-    sage: p2 = p1 + pp + tp + pq + tq
-    sage: show(p2, aspect_ratio=1)
+     p = g(lamb = result[0][1].right() + 1)
+     print("P {}".format(p))
+     pp = point(p, size=10, color='green')
+     tp = text3d("P", p + labeloffset, color='green', horizontal_alignment='left')
+     q = g(lamb = result[0][1].right() - 1)
+     print("Q {}".format(q))
+     pq = point(q, size=10, color='green')
+     tq = text3d("Q", q + labeloffset, color='green', horizontal_alignment='left')
+     p2 = p1 + pp + tp + pq + tq
+     show(p2, aspect_ratio=1)
 
 
 .. end of output
@@ -128,17 +128,17 @@ into the equation of line :math:`h`.
 
 .. sagecellserver::
 
-    sage: from sage.plot.polygon import Polygon
+     from sage.plot.polygon import Polygon
 
-    sage: disance = (t-q).norm()
-    sage: print("Distance between T and Q: {}".format(disance))
-    sage: result = solve(mu*vector([1, -2, 4]).norm() == disance, mu)
-    sage: print(result[0])
-    sage: mu_1 = result[0].right()
-    sage: mu_2 = -mu_1
+     disance = (t-q).norm()
+     print("Distance between T and Q: {}".format(disance))
+     result = solve(mu*vector([1, -2, 4]).norm() == disance, mu)
+     print(result[0])
+     mu_1 = result[0].right()
+     mu_2 = -mu_1
 
-    sage: rectangle = line3d([q, t+mu_1*vector([1, -2, 4]), p, t+mu_2*vector([1, -2, 4]), q], color='orange', thickness=5)
-    sage: show(p2 + rectangle, aspect_ratio=1)
+     rectangle = line3d([q, t+mu_1*vector([1, -2, 4]), p, t+mu_2*vector([1, -2, 4]), q], color='orange', thickness=5)
+     show(p2 + rectangle, aspect_ratio=1)
 
 
 .. end of output

@@ -21,8 +21,8 @@ The result can also be reproduced with the help of Sage:
 
 .. sagecellserver::
 
-     sage: f(x) = exp(x)*(2*x+x^2)
-     sage: solve(f(x)==0,x)
+      f(x) = exp(x)*(2*x+x^2)
+      solve(f(x)==0,x)
 
 .. end of output
 
@@ -41,8 +41,8 @@ This result can be verified by Sage as follows:
 
 .. sagecellserver::
 
-   sage: F(x) = x^2*exp(x)
-   sage: (F(x).derivative()-f(x)).simplify_rational()
+    F(x) = x^2*exp(x)
+    (F(x).derivative()-f(x)).simplify_rational()
 
 .. end of output
 
@@ -55,8 +55,8 @@ a constant. It therefore is of the form
 
 .. sagecellserver::
 
-     sage: G(x, c) = F(x)+c
-     sage: (G(x, c).derivative(x)-f(x)).simplify_rational()
+      G(x, c) = F(x)+c
+      (G(x, c).derivative(x)-f(x)).simplify_rational()
 
 .. end of output
    
@@ -65,6 +65,6 @@ We use the requirement :math:`G(1)=2e` to determine the constant :math:`c`, yiel
 
 .. sagecellserver::
 
-     sage: solve(G(1, c)==2*e, c)
+      solve(G(1, c)==2*e, c)
 
 .. end of output

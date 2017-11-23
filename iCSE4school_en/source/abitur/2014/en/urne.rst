@@ -86,27 +86,27 @@ exact result and will also prove our solution of part a.
 
 .. sagecellserver::
 
-    sage: frequency_e = 0
-    sage: total = 0
-    sage: A0 = ['w', 'w', 'w', 'r', 'r']
-    sage: B0 = ['w', 'w', 'r', 'r', 'r']
-    sage: for a_ball in A0:
-    ...       A1 = A0[::]
-    ...       B1 = B0[::]
-    ...       A1.remove(a_ball)
-    ...       B1.append(a_ball)
-    ...       for b_ball in B1:
-    ...           print 'A->B:', a_ball,
-    ...           A2 = A1[::]
-    ...           A2.append(b_ball)
-    ...           print '  B->A:', b_ball,
-    ...           total = total+1
-    ...           if A2.count('w') == 3:
-    ...               frequency_e = frequency_e+1
-    ...               print "   A: ", A2, "<==="
-    ...           else:
-    ...               print "   A: ", A2
-    sage: print "p(E) = %s/%s" % (frequency_e, total)
+     frequency_e = 0
+     total = 0
+     A0 = ['w', 'w', 'w', 'r', 'r']
+     B0 = ['w', 'w', 'r', 'r', 'r']
+     for a_ball in A0:
+         A1 = A0[::]
+         B1 = B0[::]
+         A1.remove(a_ball)
+         B1.append(a_ball)
+         for b_ball in B1:
+             print 'A->B:', a_ball,
+             A2 = A1[::]
+             A2.append(b_ball)
+             print '  B->A:', b_ball,
+             total = total+1
+             if A2.count('w') == 3:
+                 frequency_e = frequency_e+1
+                 print "   A: ", A2, "<==="
+             else:
+                 print "   A: ", A2
+     print "p(E) = %s/%s" % (frequency_e, total)
 
 A somewhat simpler solution consists in determining the probability for
 E by means of a simulation. To this end, we move a randomly chosen ball
@@ -118,22 +118,22 @@ the runtime of this code exceeds the runtime of the first solution.
 
 .. sagecellserver::
 
-    sage: import random
-    sage: def move_ball(urn1, urn2):
-    ...       ball = random.choice(urn1)
-    ...       urn1.remove(ball)
-    ...       urn2.append(ball)
-    ...       return urn1, urn2
-    sage: frequency_e = 0
-    sage: iterations = 100000
-    sage: for _ in range(iterations):
-    ...       A = ['w', 'w', 'w', 'r', 'r']
-    ...       B = ['w', 'w', 'r', 'r', 'r']
-    ...       move_ball(A, B)
-    ...       move_ball(B, A)
-    ...       if A.count('w') == 3 :
-    ...           frequency_e = frequency_e+1
-    sage: print "Approximation for the probability p(E) = ", float(frequency_e/iterations)
+     import random
+     def move_ball(urn1, urn2):
+         ball = random.choice(urn1)
+         urn1.remove(ball)
+         urn2.append(ball)
+         return urn1, urn2
+     frequency_e = 0
+     iterations = 100000
+     for _ in range(iterations):
+         A = ['w', 'w', 'w', 'r', 'r']
+         B = ['w', 'w', 'r', 'r', 'r']
+         move_ball(A, B)
+         move_ball(B, A)
+         if A.count('w') == 3 :
+             frequency_e = frequency_e+1
+     print "Approximation for the probability p(E) = ", float(frequency_e/iterations)
 
 
 

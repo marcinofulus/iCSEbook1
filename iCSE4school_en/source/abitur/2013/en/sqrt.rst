@@ -18,8 +18,8 @@ This result can easily be checked by means of Sage:
 
 .. sagecellserver::
 
-    sage: g(x) = sqrt(3*x+9)
-    sage: solve(g == 0, x)
+     g(x) = sqrt(3*x+9)
+     solve(g == 0, x)
 
 .. end of output
 
@@ -30,7 +30,7 @@ illustrated by the graph of the function :math:`g(x)`.
 
 .. sagecellserver::
 
-    sage: plot(g, (-3, 3), figsize=(4, 2.8))
+     plot(g, (-3, 3), figsize=(4, 2.8))
 
 .. end of output
 
@@ -48,9 +48,9 @@ As a consequence, :math:`g'(0)=\frac{1}{2}`.
 
 .. sagecellserver::
 
-    sage: dg = g.derivative()
-    sage: print "Derivative of g(x) : ", dg
-    sage: print "Derivative at x = 0: ", dg(0)
+     dg = g.derivative()
+     print "Derivative of g(x) : ", dg
+     print "Derivative at x = 0: ", dg(0)
 
 .. end of output
 
@@ -67,10 +67,10 @@ the tangent :math:`h(x)` is displayed in red.
 
 .. sagecellserver::
 
-    sage: pg = plot(g, (-3, 5), color='blue')
-    sage: h(x) = dg(0)*x+g(0)
-    sage: ph = plot(h, (-3,5), color='red')
-    sage: show(pg+ph, figsize=(4, 2.8))
+     pg = plot(g, (-3, 5), color='blue')
+     h(x) = dg(0)*x+g(0)
+     ph = plot(h, (-3,5), color='red')
+     show(pg+ph, figsize=(4, 2.8))
 
 .. end of output
 

@@ -64,13 +64,13 @@ A corresponding simulation can be carried out with Sage.
 
 .. sagecellserver::
 
-   sage: import random
-   sage: amounts = [1]*1+[2]*2+[3]*3+[4]*4+[15]*5
-   sage: games = 6000
-   sage: total_win = 0
-   sage: for _ in range(games):
-   ...       total_win = total_win+random.choice(amounts)
-   sage: print "expectation value = {:4.2f} euros".format(float(total_win)/games)
+    import random
+    amounts = [1]*1+[2]*2+[3]*3+[4]*4+[15]*5
+    games = 6000
+    total_win = 0
+    for _ in range(games):
+        total_win = total_win+random.choice(amounts)
+    print "expectation value = {:4.2f} euros".format(float(total_win)/games)
 
 .. end of output
 
@@ -98,14 +98,14 @@ We simulate the game with Sage as seen from the supermarket or the kindergarden.
 
 .. sagecellserver::
 
-  sage: amounts = [5]*1+[4]*2+[3]*3+[2]*4+[-4]*5
-  sage: games = 6000
-  sage: surplus = 0
-  sage: for _ in range(games):
-  ...       surplus = surplus+random.choice(amounts)
-  sage: print "Surplus for the kindergarden: {} euros".format(surplus)
-  sage: print "Average surplus per game for the kindergarden: {:4.2f} euros".format(
-  ...         float(surplus/games))
+   amounts = [5]*1+[4]*2+[3]*3+[2]*4+[-4]*5
+   games = 6000
+   surplus = 0
+   for _ in range(games):
+       surplus = surplus+random.choice(amounts)
+   print "Surplus for the kindergarden: {} euros".format(surplus)
+   print "Average surplus per game for the kindergarden: {:4.2f} euros".format(
+         float(surplus/games))
 
 
 .. end of output
@@ -116,17 +116,17 @@ frequency of surplusses is displayed in a histogram.
 
 .. sagecellserver::
 
-  sage: import matplotlib.pyplot as plt
-  sage: repetitions = 500
-  sage: games = 6000
-  sage: surplusses = []
-  sage: for repetition in range(repetitions):
-  ...       surplus = 0
-  ...       for _ in range(games):
-  ...           surplus = surplus+random.choice(amounts)
-  ...       surplusses.append(surplus)
-  sage: plt.hist(surplusses, bins=30)
-  sage: plt.show()
+   import matplotlib.pyplot as plt
+   repetitions = 500
+   games = 6000
+   surplusses = []
+   for repetition in range(repetitions):
+       surplus = 0
+       for _ in range(games):
+           surplus = surplus+random.choice(amounts)
+       surplusses.append(surplus)
+   plt.hist(surplusses, bins=30)
+   plt.show()
 
 
 .. end of output

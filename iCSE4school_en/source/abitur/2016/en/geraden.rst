@@ -37,10 +37,10 @@ This calculation can quickly be checked with Sage:
 
 .. sagecellserver::
 
-  sage: A = vector([-2, 1, 4])
-  sage: B = vector([-4, 0, 6])
-  sage: C = A - 2*(B-A)
-  sage: print C
+   A = vector([-2, 1, 4])
+   B = vector([-4, 0, 6])
+   C = A - 2*(B-A)
+   print C
 
 The coordinates of :math:`C` are thus :math:`(2|3|0)`.
 
@@ -56,10 +56,10 @@ Sage can also confirm this:
 
 .. sagecellserver::
 
-  sage: A = vector([-2, 1, 4])
-  sage: B = vector([-4, 0, 6])
-  sage: BA = B-A
-  sage: print norm(BA)
+   A = vector([-2, 1, 4])
+   B = vector([-4, 0, 6])
+   BA = B-A
+   print norm(BA)
 
 
 Therefore, we choose :math:`B` as the point on the line
@@ -89,9 +89,9 @@ to :math:`1` and :math:`0`, respectively.
 
 .. sagecellserver::
 
-  sage: var('G_3')
-  sage: G_1 = 1
-  sage: G_2 = 0
-  sage: G = vector([G_1, G_2, G_3])
-  sage: solution = solve(BA*G == 0, G_3, solution_dict=True)[0]
-  sage: print "Direction vector G:", G.substitute(solution)
+   var('G_3')
+   G_1 = 1
+   G_2 = 0
+   G = vector([G_1, G_2, G_3])
+   solution = solve(BA*G == 0, G_3, solution_dict=True)[0]
+   print "Direction vector G:", G.substitute(solution)

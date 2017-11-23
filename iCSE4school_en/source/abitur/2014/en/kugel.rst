@@ -32,9 +32,9 @@ which can be verified with Sage:
 
 .. sagecellserver::
 
-  sage: M = vector([-3, 2, 7])
-  sage: P = vector([3, 4, 4])
-  sage: print "Q:", M + M - P
+   M = vector([-3, 2, 7])
+   P = vector([3, 4, 4])
+   print "Q:", M + M - P
 
 .. end of output
 
@@ -62,14 +62,14 @@ be used to rotate the view.
 	
 .. sagecellserver::
 
-  sage: var('x')
-  sage: var('y')
-  sage: z = 0
-  sage: radius = norm(M-P)
-  sage: print 'sphere radius          :', radius
-  sage: print 'distance center - plane:', M[2]
-  sage: p1 = plot3d(z, (x, -15, 15), (y, -15, 15), opacity=0.7)
-  sage: p2 = sphere(center=(-3, 2, 7), size=radius, color='red', opacity=0.7)
-  sage: show(p1 + p2, aspect_ratio=1)
+   var('x')
+   var('y')
+   z = 0
+   radius = norm(M-P)
+   print 'sphere radius          :', radius
+   print 'distance center - plane:', M[2]
+   p1 = plot3d(z, (x, -15, 15), (y, -15, 15), opacity=0.7)
+   p2 = sphere(center=(-3, 2, 7), size=radius, color='red', opacity=0.7)
+   show(p1 + p2, aspect_ratio=1)
 
 .. end of output

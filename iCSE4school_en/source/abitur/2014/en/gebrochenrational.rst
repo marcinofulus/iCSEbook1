@@ -53,8 +53,8 @@ First we will complete the graph of :math:`f` with the help of Sage:
 
 .. sagecellserver::
 
-  sage: f(x)=20*x/(x^2-25)
-  sage: plot(f(x), x, (-10, 10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
+   f(x)=20*x/(x^2-25)
+   plot(f(x), x, (-10, 10), exclude=(-5, 5), ymax=12, ymin=-12, figsize=4, aspect_ratio=1)
 
 .. end of output
 
@@ -87,12 +87,12 @@ We draw the asymptotes into the graph of :math:`f`.
 
 .. sagecellserver::
 
-  sage: g(x) = 0
-  sage: p1 = plot(f(x), x, (-20, 20), exclude=(-5, 5), ymax=12, ymin=-12)
-  sage: p2 = line([[-5, -13], [-5, 13]], color = 'red')
-  sage: p3 = line([[5, -13], [5, 13]], color = 'red')
-  sage: p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
-  sage: show(p1+p2+p3+p4, aspect_ratio=1, figsize=4)
+   g(x) = 0
+   p1 = plot(f(x), x, (-20, 20), exclude=(-5, 5), ymax=12, ymin=-12)
+   p2 = line([[-5, -13], [-5, 13]], color = 'red')
+   p3 = line([[5, -13], [5, 13]], color = 'red')
+   p4 = plot(g(x), x, (-20, 20), aspect_ratio=1, color = 'red')
+   show(p1+p2+p3+p4, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -114,9 +114,9 @@ The graph of :math:`f'(x)` confirms this result.
 
 .. sagecellserver::
 
-  sage: df = derivative(f, x)
-  sage: p5 = plot(df(x), x, (-20, 20), ymax=12, ymin=-12)
-  sage: show(p5, aspect_ratio=1, figsize=4)
+   df = derivative(f, x)
+   p5 = plot(df(x), x, (-20, 20), ymax=12, ymin=-12)
+   show(p5, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -139,12 +139,12 @@ We check the result with Sage and draw the tangent of :math:`f` at the point
 
 .. sagecellserver::
 
-  sage: m = df(0)
-  sage: print u"\u03b1 =", RDF(180/pi*arctan(m))
-  sage: w(x) = m*x
-  sage: p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
-  sage: p7 = plot(w(x), x, (-4, 4), color='green')
-  sage: show(p6+p7, aspect_ratio=1, figsize=4)
+   m = df(0)
+   print u"\u03b1 =", RDF(180/pi*arctan(m))
+   w(x) = m*x
+   p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
+   p7 = plot(w(x), x, (-4, 4), color='green')
+   show(p6+p7, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -177,8 +177,8 @@ These solutions can also be obtained with Sage:
 
 .. sagecellserver::
 
-  sage: y = var('y')
-  sage: solve(f(x)==y, x)
+   y = var('y')
+   solve(f(x)==y, x)
 
 .. end of output
 
@@ -194,10 +194,10 @@ We will use Sage to draw :math:`f^*` and :math:`f^{*-1}`.
 
 .. sagecellserver::
 
-  sage: f_inv(x) = 5*(sqrt(x^2 + 4) + 2)/x
-  sage: p8 = plot(f(x), x, (5, 20))
-  sage: p9 = plot(f_inv(x), x, (0, 20))
-  sage: show(p8+p9, aspect_ratio=1, ymax=20, figsize=4)
+   f_inv(x) = 5*(sqrt(x^2 + 4) + 2)/x
+   p8 = plot(f(x), x, (5, 20))
+   p9 = plot(f_inv(x), x, (0, 20))
+   show(p8+p9, aspect_ratio=1, ymax=20, figsize=4)
 
 .. end of output
 
@@ -225,11 +225,11 @@ Sage confirms this solution:
 
 .. sagecellserver::
 
-  sage: from sage.symbolic.integration.integral import definite_integral
-  sage: s = var('s')
-  sage: assume(s > 10)
-  sage: A(s) = definite_integral(f(x), x, 10, s)
-  sage: print "The area is given by A(s) =", A(s)
+   from sage.symbolic.integration.integral import definite_integral
+   s = var('s')
+   assume(s > 10)
+   A(s) = definite_integral(f(x), x, 10, s)
+   print "The area is given by A(s) =", A(s)
 
 .. end of output
 
@@ -239,13 +239,13 @@ and presented under the figure.
 
 .. sagecellserver::
 
-  sage: @interact
-  sage: def _(s=slider(10.1, 19.9, 0.1)):
-  ...       p10 = plot(f(x), x, (5, 10))
-  ...       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
-  ...       p12 = plot(f(x), x, (s, 20))
-  ...       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
-  ...       print "Area of the yellow region:", float(A(s))
+   @interact
+   def _(s=slider(10.1, 19.9, 0.1)):
+       p10 = plot(f(x), x, (5, 10))
+       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
+       p12 = plot(f(x), x, (s, 20))
+       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
+       print "Area of the yellow region:", float(A(s))
 
 .. end of output
 
@@ -263,7 +263,7 @@ found as
 
 .. sagecellserver::
 
-  sage: print float(solve(A(s) == 100, s)[0].right())
+   print float(solve(A(s) == 100, s)[0].right())
 
 .. end of output
 
@@ -277,7 +277,7 @@ We verify this result with Sage:
 
 .. sagecellserver::
 
-  sage: html("$\lim_{s=\infty} A(s) = %s$" % latex(A(infinity)))
+   html("$\lim_{s=\infty} A(s) = %s$" % latex(A(infinity)))
 
 .. end of output
 
@@ -350,11 +350,11 @@ respect to the proper speed in the interval between
 
 .. sagecellserver::
 
-  sage: t(x) = 10/(x+5)+10/(x-5)
-  sage: print "Total time for 10 km/h:", 60*t(10), "minutes"
-  sage: print "Total time for 20 km/h:", 60*t(20), "minutes"
-  sage: p1 = plot(60*t(x), x, (10, 20))
-  sage: show(p1, figsize=(4, 2.8))
+   t(x) = 10/(x+5)+10/(x-5)
+   print "Total time for 10 km/h:", 60*t(10), "minutes"
+   print "Total time for 20 km/h:", 60*t(20), "minutes"
+   p1 = plot(60*t(x), x, (10, 20))
+   show(p1, figsize=(4, 2.8))
 
 .. end of output
 
@@ -385,8 +385,8 @@ terms of a total time.
 
 .. sagecellserver::
 
-  sage: p13 = plot(60*t(x), x, (0, 30), exclude=(5,), ymax=800, ymin=-800)
-  sage: show(p13, figsize=(4, 2.8))
+   p13 = plot(60*t(x), x, (0, 30), exclude=(5,), ymax=800, ymin=-800)
+   show(p13, figsize=(4, 2.8))
 
 .. end of output
 
@@ -407,8 +407,8 @@ program to work.
 
 .. sagecellserver::
 
-  sage: print t(x)-f(x)
-  sage: print (t(x)-f(x)).rational_simplify()
+   print t(x)-f(x)
+   print (t(x)-f(x)).rational_simplify()
 
 .. end of output
 
@@ -429,9 +429,9 @@ Sage confirms this result:
 
 .. sagecellserver::
 
-  sage: totaltime = 4
-  sage: print "Proper speed for a total time of {}h: {}km/h".format(
-  ...         totaltime, f_inv(totaltime).n(10))
+   totaltime = 4
+   print "Proper speed for a total time of {}h: {}km/h".format(
+         totaltime, f_inv(totaltime).n(10))
 
 .. end of output
 
@@ -439,10 +439,10 @@ The graphic construction can be visualized with Sage as follows:
 
 .. sagecellserver::
 
-  sage: p14 = plot(f(x), x, (5.1, 14))
-  sage: x4, y4 = f_inv(totaltime), totaltime
-  sage: l1 = line([(x4, y4), (0, y4)], color='red')
-  sage: l2 = line([(x4, y4), (x4, 0)], color='red')
-  sage: show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
+   p14 = plot(f(x), x, (5.1, 14))
+   x4, y4 = f_inv(totaltime), totaltime
+   l1 = line([(x4, y4), (0, y4)], color='red')
+   l2 = line([(x4, y4), (x4, 0)], color='red')
+   show(p14+l1+l2, aspect_ratio=1, xmin=0, ymin=0, ymax=14, figsize=4)
 
 .. end of output

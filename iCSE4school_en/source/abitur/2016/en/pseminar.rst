@@ -47,13 +47,13 @@ are assigned to the values :math:`1` and :math:`2`, respectively.
 
 .. sagecellserver::
 
-  sage: iterations = 30000
-  sage: frequency = 0
-  sage: for _ in range(iterations):
-  sage:     team = Subsets(14, 4).random_element()
-  sage:     if 1 in team and 2 in team:
-  sage:         frequency = frequency+1
-  sage: print 'Approximation for the probability P(A) = %4.1f%%' % float(100*frequency/iterations)
+   iterations = 30000
+   frequency = 0
+   for _ in range(iterations):
+       team = Subsets(14, 4).random_element()
+       if 1 in team and 2 in team:
+           frequency = frequency+1
+   print 'Approximation for the probability P(A) = %4.1f%%' % float(100*frequency/iterations)
 
 When realizing event :math:`B`, there are :math:`\binom{8}{2}=28` different possibilities
 to choose two girls and :math:`\binom{6}{2}=15` for the boys.
@@ -71,20 +71,20 @@ the numbers above :math:`8` correspond to boys.
 
 .. sagecellserver::
 
-  sage: iterations = 30000
-  sage: frequency = 0
-  sage: for _ in range(iterations):
-  sage:     team = Subsets(14, 4).random_element()
-  sage:     number_girls = 0
-  sage:     number_boys = 0
-  sage:     for member in team:
-  sage:         if member <= 8:
-  sage:             number_girls = number_girls+1
-  sage:         else:
-  sage:             number_boys = number_boys+1
-  sage:     if number_girls == number_boys:
-  sage:         frequency = frequency+1
-  sage: print 'Approximation for the probability P(B) = %4.1f%%' % float(100*frequency/iterations)
+   iterations = 30000
+   frequency = 0
+   for _ in range(iterations):
+       team = Subsets(14, 4).random_element()
+       number_girls = 0
+       number_boys = 0
+       for member in team:
+           if member <= 8:
+               number_girls = number_girls+1
+           else:
+               number_boys = number_boys+1
+       if number_girls == number_boys:
+           frequency = frequency+1
+   print 'Approximation for the probability P(B) = %4.1f%%' % float(100*frequency/iterations)
 
 **Solution of part b**
 
@@ -108,14 +108,14 @@ The second simulation from part a can be easily ajusted to check our interpretat
 
 .. sagecellserver::
 
-  sage: iterations = 30000
-  sage: frequency = 0
-  sage: for _ in range(iterations):
-  sage:     team = Subsets(14, 4).random_element()
-  sage:     for member in team:
-  sage:         if member <= 8:
-  sage:             frequency = frequency+1
-  sage:             break
-  sage: p = (binomial(14, 4)-binomial(6, 4))/binomial(14, 4)
-  sage: print 'given probability = %6.3f' % float(p)
-  sage: print 'simulated probability = %6.3f' % float(frequency/iterations)
+   iterations = 30000
+   frequency = 0
+   for _ in range(iterations):
+       team = Subsets(14, 4).random_element()
+       for member in team:
+           if member <= 8:
+               frequency = frequency+1
+               break
+   p = (binomial(14, 4)-binomial(6, 4))/binomial(14, 4)
+   print 'given probability = %6.3f' % float(p)
+   print 'simulated probability = %6.3f' % float(frequency/iterations)

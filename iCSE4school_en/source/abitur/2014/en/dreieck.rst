@@ -74,13 +74,13 @@ We check the result by means of Sage:
 
 .. sagecellserver::
 
-  sage: a = vector([4, 0, 0])
-  sage: b = vector([0, 4, 0])
-  sage: c = vector([0, 0, 4])
-  sage: ab = b - a
-  sage: ac = c - a
-  sage: A = 1/2 * abs(ab.cross_product(ac))
-  sage: print "Area of the triangle:", A
+   a = vector([4, 0, 0])
+   b = vector([0, 4, 0])
+   c = vector([0, 0, 4])
+   ab = b - a
+   ac = c - a
+   A = 1/2 * abs(ab.cross_product(ac))
+   print "Area of the triangle:", A
 
 .. end of output
 
@@ -88,13 +88,13 @@ Furthermore, we graphically represent the triangle by means of Sage:
 
 .. sagecellserver::
 
-  sage: from sage.plot.polygon import Polygon
-  sage: labeloffset = vector([0, 0, 0.3])
-  sage: p1 = polygon([a, b, c])
-  sage: for p, label in ((a, 'A'), (b, 'B'), (c, 'C')):
-  sage:     p1 = p1+point(p, size=10)
-  sage:     p1 = p1+text3d(label, p+labeloffset, color='black', horizontal_alignment='left')
-  sage: show(p1)
+   from sage.plot.polygon import Polygon
+   labeloffset = vector([0, 0, 0.3])
+   p1 = polygon([a, b, c])
+   for p, label in ((a, 'A'), (b, 'B'), (c, 'C')):
+       p1 = p1+point(p, size=10)
+       p1 = p1+text3d(label, p+labeloffset, color='black', horizontal_alignment='left')
+   show(p1)
 
 .. end of output
 
@@ -128,12 +128,12 @@ We check this point of intersection by means of Sage
 
 .. sagecellserver::
 
-  sage: p = vector(QQ, (2, 2, 3))
-  sage: v = vector(QQ, (-1, -1, -4))
-  sage: plane = Polyhedron(eqns=[(-4, 1, 1, 1)])
-  sage: straight_line = Polyhedron(vertices=[p], rays=[-v, v])
-  sage: r = straight_line.intersection(plane).vertices()[0].vector()
-  sage: print 'point of intersection R', r
+   p = vector(QQ, (2, 2, 3))
+   v = vector(QQ, (-1, -1, -4))
+   plane = Polyhedron(eqns=[(-4, 1, 1, 1)])
+   straight_line = Polyhedron(vertices=[p], rays=[-v, v])
+   r = straight_line.intersection(plane).vertices()[0].vector()
+   print 'point of intersection R', r
 
 .. end of output
 
@@ -143,11 +143,11 @@ that all coordinates of the point of intersection are positive.
 
 .. sagecellserver::
 
-  sage: p2 = line([p, r], color='red', thickness=2)
-  sage: for pt, label in ((p, 'P'), (r, 'R')):
-  sage:     p2 = p2+point(pt, size=10)
-  sage:     p2 = p2+text3d(label, pt+labeloffset, color='black', horizontal_alignment='left')
-  sage: show(p2 + p1)
+   p2 = line([p, r], color='red', thickness=2)
+   for pt, label in ((p, 'P'), (r, 'R')):
+       p2 = p2+point(pt, size=10)
+       p2 = p2+text3d(label, pt+labeloffset, color='black', horizontal_alignment='left')
+   show(p2 + p1)
 
 .. end of output
 
@@ -184,14 +184,14 @@ as well as the reflected light beam to our sketch:
 
 .. sagecellserver::
 
-  sage: q = vector([0, 0, 1])
-  sage: Q = point(q, size=10)
-  sage: Qt = text3d("Q", q + labeloffset, color='black', horizontal_alignment='left')
-  sage: pq = line([p, q], color='black', thickness=2)
-  sage: g_refl = line([r, r + r-q], color='red', thickness=2)
-  sage: g_refl_q = line([q, r], color='red', thickness=1, linestyle='--')
-  sage: p3 = Q + Qt + pq + g_refl + g_refl_q
-  sage: show(p1 + p2 + p3)
+   q = vector([0, 0, 1])
+   Q = point(q, size=10)
+   Qt = text3d("Q", q + labeloffset, color='black', horizontal_alignment='left')
+   pq = line([p, q], color='black', thickness=2)
+   g_refl = line([r, r + r-q], color='red', thickness=2)
+   g_refl_q = line([q, r], color='red', thickness=1, linestyle='--')
+   p3 = Q + Qt + pq + g_refl + g_refl_q
+   show(p1 + p2 + p3)
 
 .. end of output
 
@@ -245,11 +245,11 @@ drawing:
 
 .. sagecellserver::
 
-  sage: axis_of_incidence = vector([1,1,1])
-  sage: F = polygon((vector([0,0,0]), vector([4,4,0]), vector([4,4,4]), vector([0,0,4])), color='green')
-  sage: e = line([r, r + axis_of_incidence], color='black', thickness=2)
-  sage: p4 = e + F
-  sage: show(p1 + p2 + p3 + p4)
+   axis_of_incidence = vector([1,1,1])
+   F = polygon((vector([0,0,0]), vector([4,4,0]), vector([4,4,4]), vector([0,0,4])), color='green')
+   e = line([r, r + axis_of_incidence], color='black', thickness=2)
+   p4 = e + F
+   show(p1 + p2 + p3 + p4)
 
 .. end of output
 
@@ -282,9 +282,9 @@ help of Sage.
 
 .. sagecellserver::
 
-  sage: n = axis_of_incidence.normalized()
-  sage: cosa = -n.dot_product(v.normalized())
-  sage: cosb = n.dot_product((r-q).normalized())
-  sage: print simplify(cosa-cosb)
+   n = axis_of_incidence.normalized()
+   cosa = -n.dot_product(v.normalized())
+   cosb = n.dot_product((r-q).normalized())
+   print simplify(cosa-cosb)
 
 .. end of output

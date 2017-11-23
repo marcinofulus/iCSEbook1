@@ -31,11 +31,11 @@ This result can be verified by means of Sage:
 
 .. sagecellserver::
 
-  sage: f(x) = x*sin(x)
-  sage: df(x) = derivative(f, x)
-  sage: ddf(x) = derivative(df, x)
-  sage: print("ddf(x) = " + str(ddf(x)))
-  sage: print("ddf(0) = " + str(ddf(0)))
+   f(x) = x*sin(x)
+   df(x) = derivative(f, x)
+   ddf(x) = derivative(df, x)
+   print("ddf(x) = " + str(ddf(x)))
+   print("ddf(0) = " + str(ddf(0)))
 
 .. end of output
 
@@ -46,7 +46,7 @@ This behavior can also be seen by plotting the function graph.
 
 .. sagecellserver::
 
-  sage: pf = plot(f(x), (-6, 6))
-  sage: show(pf, aspect_ratio=1)
+   pf = plot(f(x), (-6, 6))
+   show(pf, aspect_ratio=1)
 
 .. end of output

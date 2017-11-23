@@ -36,12 +36,12 @@ of :math:`\vert x\vert` must be depicted.
 
 .. sagecellserver::
 
-  sage: ranges = {'xmin': -10, 'xmax': 10, 'ymin': -10, 'ymax': 10}
-  sage: f(x) = x/2- 1/2 + 8/(x+1)
-  sage: pf = plot(f, detect_poles="show", **ranges)
-  sage: asymptote = x/2 - 1/2
-  sage: pasymp = plot(asymptote, color='green', **ranges) 
-  sage: show(pf + pasymp, aspect_ratio=1, figsize=4)
+   ranges = {'xmin': -10, 'xmax': 10, 'ymin': -10, 'ymax': 10}
+   f(x) = x/2- 1/2 + 8/(x+1)
+   pf = plot(f, detect_poles="show", **ranges)
+   asymptote = x/2 - 1/2
+   pasymp = plot(asymptote, color='green', **ranges) 
+   show(pf + pasymp, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -57,7 +57,7 @@ Sage does not find an intersection.
 
 .. sagecellserver::
 
-  sage: solve(asymptote == f, x)
+   solve(asymptote == f, x)
 
 .. end of output
 
@@ -83,13 +83,13 @@ These results may be confirmed by Sage.
 
 .. sagecellserver::
 
-  sage: df = derivative(f)
-  sage: ddf = derivative(df)
-  sage: print "f'(x)  = ", df
-  sage: print "f''(x) = ", ddf
-  sage: for extremum in solve(df == 0, x):
-  sage:     x = extremum.right()
-  sage:     print "Second derivative for the extremum at x=%s: %s" % (x, ddf(x))
+   df = derivative(f)
+   ddf = derivative(df)
+   print "f'(x)  = ", df
+   print "f''(x) = ", ddf
+   for extremum in solve(df == 0, x):
+       x = extremum.right()
+       print "Second derivative for the extremum at x=%s: %s" % (x, ddf(x))
 
 .. end of output
 
@@ -125,8 +125,8 @@ with the partial result stated in the problem text:
 
 .. sagecellserver::
 
-  sage: g(x) = f(x-1) + 1
-  sage: print(g)
+   g(x) = f(x-1) + 1
+   print(g)
 
 .. end of output
 
@@ -136,12 +136,12 @@ means of Sage as follows:
 
 .. sagecellserver::
 
-  sage: print "g(x) = ", g(x)
-  sage: print "-g(-x) = ", -g(-x)
-  sage: if g(x) == -g(-x):
-  sage:     print "g(x) is point-symmetric."
-  sage: else:
-  sage:     print "g(x) is not point-symmetric."
+   print "g(x) = ", g(x)
+   print "-g(-x) = ", -g(-x)
+   if g(x) == -g(-x):
+       print "g(x) is point-symmetric."
+   else:
+       print "g(x) is not point-symmetric."
 
 .. end of output
 
@@ -163,9 +163,9 @@ By means of Sage, one obtains accordingly:
 
 .. sagecellserver::
 
-  sage: F = f.integrate(x)
-  sage: print "antiderivative F = ", F
-  sage: pretty_print(html("$\int_0^4 f(x)\mathrm{d}x = $" + str(F(4)-F(0))))
+   F = f.integrate(x)
+   print "antiderivative F = ", F
+   pretty_print(html("$\int_0^4 f(x)\mathrm{d}x = $" + str(F(4)-F(0))))
 
 .. end of output
 
@@ -193,7 +193,7 @@ The resulting value can be confirmed by Sage:
 
 .. sagecellserver::
 
-  sage: f.integrate(x, -6, -2)
+   f.integrate(x, -6, -2)
 
 .. end of output
 
@@ -204,11 +204,11 @@ integral following from the point symmetry with respect to
 
 .. sagecellserver::
 
-  sage: pf = plot(f, exclude=[-1], xmin=-10, xmax=10, ymin=-10, ymax=10)
-  sage: pf1 = plot(f, -6, -2, fill=-2)
-  sage: pf2 = plot(f, 0, 4, fill='axis')
-  sage: rect = polygon([[-6, 0], [-2, 0], [-2, -2], [-6, -2]], color='red')
-  sage: show(pf + pf1 + pf2 + rect, aspect_ratio=1, figsize=4)
+   pf = plot(f, exclude=[-1], xmin=-10, xmax=10, ymin=-10, ymax=10)
+   pf1 = plot(f, -6, -2, fill=-2)
+   pf2 = plot(f, 0, 4, fill='axis')
+   rect = polygon([[-6, 0], [-2, 0], [-2, -2], [-6, -2]], color='red')
+   show(pf + pf1 + pf2 + rect, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -275,9 +275,9 @@ By means of Sage, we can calculate the exact values:
 
 .. sagecellserver::
 
-  sage: result = solve(f(x) == 5, x)
-  sage: print "Solution of the equation " + str(f) + " = 5 :" + repr(result)
-  sage: print "This corresponds approximately to: x = %5.3f and x = %5.3f." % (result[0].right().n(), result[1].right().n())
+   result = solve(f(x) == 5, x)
+   print "Solution of the equation " + str(f) + " = 5 :" + repr(result)
+   print "This corresponds approximately to: x = %5.3f and x = %5.3f." % (result[0].right().n(), result[1].right().n())
 
 .. end of output
 

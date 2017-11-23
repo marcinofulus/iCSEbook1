@@ -34,23 +34,23 @@ experiment with Sage.
 
 .. sagecellserver::
 
-  sage: def toss():
-  sage:     return Set(["T", "H"]).random_element()
+   def toss():
+       return Set(["T", "H"]).random_element()
 
-  sage: def event():
-  sage:     event = toss()+toss()
-  sage:     if event[0] != event[1]:
-  sage:         event = event+toss()
-  sage:     return event
+   def event():
+       event = toss()+toss()
+       if event[0] != event[1]:
+           event = event+toss()
+       return event
 
-  sage: eventspace = {"HH": 0, "TT": 0,
-  sage:                  "HTH": 0, "HTT": 0, "THH": 0, "THT": 0}
-  sage: iterations = 10000
-  sage: for n in range(iterations):
-  sage:     e = event()
-  sage:     eventspace[e] = eventspace[e]+1
-  sage: for k, v in eventspace.items():
-  sage:     print "Frequency of the event %3s: %5i" % (k, v)
+   eventspace = {"HH": 0, "TT": 0,
+                    "HTH": 0, "HTT": 0, "THH": 0, "THT": 0}
+   iterations = 10000
+   for n in range(iterations):
+       e = event()
+       eventspace[e] = eventspace[e]+1
+   for k, v in eventspace.items():
+       print "Frequency of the event %3s: %5i" % (k, v)
 
 **Solution of part b**
 
@@ -64,8 +64,8 @@ A simulation with Sage yields:
 
 .. sagecellserver::
 
-  sage: iterations = 10000
-  sage: x = 0
-  sage: for n in range(iterations):
-  sage:     x = x+len(event())
-  sage: print "The expectation value of X is about: ", "%4.2f" % float(x/iterations)
+   iterations = 10000
+   x = 0
+   for n in range(iterations):
+       x = x+len(event())
+   print "The expectation value of X is about: ", "%4.2f" % float(x/iterations)

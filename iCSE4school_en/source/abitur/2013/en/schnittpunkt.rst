@@ -21,11 +21,11 @@ The graphs may easily be drawn by means of Sage:
 
 .. sagecellserver::
 
-    sage: g(x) = exp(-x)
-    sage: h(x) = x**3
-    sage: pg = plot(g, color='blue')
-    sage: ph = plot(h, color='red')
-    sage: show(pg + ph, ymax=1.5, aspect_ratio=1, figsize=4)
+     g(x) = exp(-x)
+     h(x) = x**3
+     pg = plot(g, color='blue')
+     ph = plot(h, color='red')
+     show(pg + ph, ymax=1.5, aspect_ratio=1, figsize=4)
 
 .. end of output
 
@@ -53,14 +53,14 @@ to 12 digits with the zero determined numerically by Sage.
 
 .. sagecellserver::
 
-    sage: f(x) = g(x) - h(x)
-    sage: df(x) = derivative(f, x)
-    sage: zero_approx = 1 
-    sage: newton(x) = x - f(x) / df(x)
-    sage: for i in range(5):
-    ...       zero_approx = newton(zero_approx)
-    ...       pretty_print(html("$x_%i = %s$" % (i+1, str(float(zero_approx)))))
-    sage: pretty_print(html("Zero obtained numerically by Sage: $x_\mathrm{S} = %s$"
-    ...                     % str(find_root(f(x), -1, 1))))
+     f(x) = g(x) - h(x)
+     df(x) = derivative(f, x)
+     zero_approx = 1 
+     newton(x) = x - f(x) / df(x)
+     for i in range(5):
+         zero_approx = newton(zero_approx)
+         pretty_print(html("$x_%i = %s$" % (i+1, str(float(zero_approx)))))
+     pretty_print(html("Zero obtained numerically by Sage: $x_\mathrm{S} = %s$"
+                       % str(find_root(f(x), -1, 1))))
 
 .. end of output

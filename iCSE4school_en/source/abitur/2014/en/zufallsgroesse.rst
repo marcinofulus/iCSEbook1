@@ -77,16 +77,16 @@ becomes clear by setting it to 0.
 
 .. sagecellserver::
 
-     sage: @interact
-     sage: def _(p1=slider(0., 1., 0.1),
-     ...         p2=slider(0., 1., 0.1),
-     ...         p3=slider(0., 1., 0.01), eps=3e-16):
-     sage:     p0 = 1-p1-p2-p3
-     sage:     if p0 >= -eps:
-     ...           print 'p0 =', p0
-     ...           print 'E =', p1+2*p2+3*p3
-     ...       else:
-     ...           print 'p0 =', p0, 'Negative values are forbidden.'
+      @interact
+      def _(p1=slider(0., 1., 0.1),
+            p2=slider(0., 1., 0.1),
+            p3=slider(0., 1., 0.01), eps=3e-16):
+          p0 = 1-p1-p2-p3
+          if p0 >= -eps:
+              print 'p0 =', p0
+              print 'E =', p1+2*p2+3*p3
+          else:
+              print 'p0 =', p0, 'Negative values are forbidden.'
 
 ..  end of output
 

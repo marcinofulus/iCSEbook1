@@ -73,18 +73,18 @@ This random experiment can be simulated with Sage:
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: from numpy.random import random_sample
-  sage: repetitions = 100000
-  sage: people = 25
-  sage: people_a = 10
-  sage: p_a = 0.43
-  sage: hits = 0
-  sage: for _ in range(repetitions):
-  sage:     if np.sum(random_sample(people) < p_a) == people_a:
-  sage:         hits = hits+1
-  sage: print("Empirical probability to have 10 people with blood type A out of 25 people: {:5.2%}".format(
-  sage:        float(hits)/repetitions))
+   import numpy as np
+   from numpy.random import random_sample
+   repetitions = 100000
+   people = 25
+   people_a = 10
+   p_a = 0.43
+   hits = 0
+   for _ in range(repetitions):
+       if np.sum(random_sample(people) < p_a) == people_a:
+           hits = hits+1
+   print("Empirical probability to have 10 people with blood type A out of 25 people: {:5.2%}".format(
+          float(hits)/repetitions))
 
 .. end of output
 
@@ -95,14 +95,14 @@ determined with Sage by summation:
 
 .. sagecellserver:: 
 
-  sage: def bernoulli(N, p, n):
-  sage:     return p^n*(1-p)^(N-n)*binomial(N, n)
+   def bernoulli(N, p, n):
+       return p^n*(1-p)^(N-n)*binomial(N, n)
 
-  sage: p_0_rhneg = 0.35
-  sage: sum = 0
-  sage: for hits in range((people+1)//2, people+1):
-  sage:     sum = sum+bernoulli(people, p_0_rhneg, hits)
-  sage: print("Probablity that more than half of the donors have blood type 0 Rh+: {:5.2%}".format(float(sum)))
+   p_0_rhneg = 0.35
+   sum = 0
+   for hits in range((people+1)//2, people+1):
+       sum = sum+bernoulli(people, p_0_rhneg, hits)
+   print("Probablity that more than half of the donors have blood type 0 Rh+: {:5.2%}".format(float(sum)))
 
 .. end of output
 
@@ -138,13 +138,13 @@ that amongst 36 donors there is at least one suitable donor.
 
 .. sagecellserver:: 
 
-  sage: repetitions = 100000
-  sage: n = 36
-  sage: p = 0.08
-  sage: hits = 0
-  sage: for _ in range(repetitions):
-  sage:     if np.sum(random_sample(n) < p):
-  sage:         hits = hist+1
-  sage: print("Probability that there is a suitable donor amongst {} people: {:5.2%}".format(n, float(hits)/repetitions))
+   repetitions = 100000
+   n = 36
+   p = 0.08
+   hits = 0
+   for _ in range(repetitions):
+       if np.sum(random_sample(n) < p):
+           hits = hist+1
+   print("Probability that there is a suitable donor amongst {} people: {:5.2%}".format(n, float(hits)/repetitions))
 
 .. end of output

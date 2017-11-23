@@ -38,32 +38,32 @@ are marked by red points.
 
 .. sagecellserver::
 
-     sage: def turning_points(f):
-     sage:     df = f.diff()
-     sage:     return [r[0] for r in f.roots() if r[0] in RR and df(r[0]) !=0]
+      def turning_points(f):
+          df = f.diff()
+          return [r[0] for r in f.roots() if r[0] in RR and df(r[0]) !=0]
 
-     sage: dd_i(x) = x^2 - 16
-     sage: p = plot(dd_i(x), x, (-6, 6), figsize=(4, 2.8))
-     sage: tps = point([(x, 0) for x in turning_points(dd_i)], size=30, color='red')
-     sage: show(p+tps)
-
-.. end of output
-
-.. sagecellserver::
-
-     sage: dd_ii(x) = (x+4) * (x+1.5) * (x-4) - 50
-     sage: p = plot(dd_ii(x), x, (-6, 6), figsize=(4, 2.8))
-     sage: tps = point([(x, 0) for x in turning_points(dd_ii)], size=30, color='red')
-     sage: show(p+tps)
+      dd_i(x) = x^2 - 16
+      p = plot(dd_i(x), x, (-6, 6), figsize=(4, 2.8))
+      tps = point([(x, 0) for x in turning_points(dd_i)], size=30, color='red')
+      show(p+tps)
 
 .. end of output
 
 .. sagecellserver::
 
-     sage: dd_iii(x) = -(x+3)^2 * (x-3)^2
-     sage: p = plot(dd_iii(x), x, (-6, 6), figsize=(4, 2.8))
-     sage: tps = point([(x, 0) for x in turning_points(dd_iii)], size=30, color='red')
-     sage: show(p+tps)
+      dd_ii(x) = (x+4) * (x+1.5) * (x-4) - 50
+      p = plot(dd_ii(x), x, (-6, 6), figsize=(4, 2.8))
+      tps = point([(x, 0) for x in turning_points(dd_ii)], size=30, color='red')
+      show(p+tps)
+
+.. end of output
+
+.. sagecellserver::
+
+      dd_iii(x) = -(x+3)^2 * (x-3)^2
+      p = plot(dd_iii(x), x, (-6, 6), figsize=(4, 2.8))
+      tps = point([(x, 0) for x in turning_points(dd_iii)], size=30, color='red')
+      show(p+tps)
 
 .. end of output
 
@@ -72,32 +72,32 @@ Red points in the graphs mark the turning points.
 
 .. sagecellserver::
 
-     sage: d_i(x) = integrate(dd_i(x), x)
-     sage: g_i(x) = integrate(d_i(x), x)
-     sage: p = plot(g_i(x), x, (-8, 8), figsize=(4, 2.8))
-     sage: tps = point([(x, g_i(x))  for x in turning_points(dd_i)], size=30, color='red')
-     sage: show(p+tps)
+      d_i(x) = integrate(dd_i(x), x)
+      g_i(x) = integrate(d_i(x), x)
+      p = plot(g_i(x), x, (-8, 8), figsize=(4, 2.8))
+      tps = point([(x, g_i(x))  for x in turning_points(dd_i)], size=30, color='red')
+      show(p+tps)
 
 .. end of output
 
 
 .. sagecellserver::
 
-     sage: d_ii(x) = integrate(dd_ii(x), x)
-     sage: g_ii(x) = integrate(d_ii(x), x)
-     sage: p = plot(g_ii(x), x, (-6, 8), figsize=(4, 2.8))
-     sage: tps = point([(x, g_ii(x))  for x in turning_points(dd_ii)], size=30, color='red')
-     sage: show(p+tps)
+      d_ii(x) = integrate(dd_ii(x), x)
+      g_ii(x) = integrate(d_ii(x), x)
+      p = plot(g_ii(x), x, (-6, 8), figsize=(4, 2.8))
+      tps = point([(x, g_ii(x))  for x in turning_points(dd_ii)], size=30, color='red')
+      show(p+tps)
 
 .. end of output
 
 .. sagecellserver::
 
-     sage: d_iii(x) = integrate(dd_iii(x), x)
-     sage: g_iii(x) = integrate(d_iii(x), x)
-     sage: p = plot(g_iii(x), x, (-6, 6), figsize=(4, 2.8))
-     sage: tps = point([(x, g_iii(x))  for x in turning_points(dd_iii)], size=30, color='red')
-     sage: show(p+tps)
+      d_iii(x) = integrate(dd_iii(x), x)
+      g_iii(x) = integrate(d_iii(x), x)
+      p = plot(g_iii(x), x, (-6, 6), figsize=(4, 2.8))
+      tps = point([(x, g_iii(x))  for x in turning_points(dd_iii)], size=30, color='red')
+      show(p+tps)
 
 .. end of output
 

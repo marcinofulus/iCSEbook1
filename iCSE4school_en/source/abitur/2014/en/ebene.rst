@@ -21,12 +21,12 @@ equation for :math:`x_3`.
 
 .. sagecellserver::
 
-  sage: var('x1')
-  sage: var('x2')
-  sage: var('x3')
-  sage: solution = solve(3*x2+4*x3 == 5, x3, solution_dict=1)[0]
-  sage: p1 = plot3d(solution[x3], (x1, -10, 10), (x2, -10, 10))
-  sage: p1
+   var('x1')
+   var('x2')
+   var('x3')
+   solution = solve(3*x2+4*x3 == 5, x3, solution_dict=1)[0]
+   p1 = plot3d(solution[x3], (x1, -10, 10), (x2, -10, 10))
+   p1
 
 .. end of output
 
@@ -36,8 +36,8 @@ First, we will use Sage to get an overview of the problem.
 
 .. sagecellserver::
 
-  sage: p2 = sphere(center=(1, 6, 3), size=7, color='red', opacity=1)
-  sage: show(p1 + p2, aspect_ratio=1)
+   p2 = sphere(center=(1, 6, 3), size=7, color='red', opacity=1)
+   show(p1 + p2, aspect_ratio=1)
 
 .. end of output
 
@@ -103,18 +103,18 @@ sphere intersects the plane. The calculation can be verified by Sage:
 
 .. sagecellserver::
 
-  sage: t = var('t')
-  sage: n = vector([0, 3, 4])
-  sage: n0 = n/norm(n)
-  sage: z = vector([1, 6, 3])
-  sage: radius = 7
-  sage: line = z+t*n0
-  sage: solution = solve(3*line[1]+4*line[2] == 5, t, solution_dict=True)[0]
-  sage: distance = abs(solution[t])
-  sage: print "Distance: center of the sphere - plane:", distance
-  sage: if distance < radius:
-  ...       print('plane intersects sphere')
-  sage: else:
-  ...       print('plane does not intersect sphere')
+   t = var('t')
+   n = vector([0, 3, 4])
+   n0 = n/norm(n)
+   z = vector([1, 6, 3])
+   radius = 7
+   line = z+t*n0
+   solution = solve(3*line[1]+4*line[2] == 5, t, solution_dict=True)[0]
+   distance = abs(solution[t])
+   print "Distance: center of the sphere - plane:", distance
+   if distance < radius:
+       print('plane intersects sphere')
+   else:
+       print('plane does not intersect sphere')
 
 .. end of output

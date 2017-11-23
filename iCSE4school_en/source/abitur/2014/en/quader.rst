@@ -39,13 +39,13 @@ is a cuboid for any value of :math:`t`. The inner products can also be calculate
 
 .. sagecellserver::
 
-  sage: t = var('t')
-  sage: a = vector([2, 1, 2])
-  sage: b = vector([-1, 2, 0])
-  sage: c = vector([4*t, 2*t, -5*t])
-  sage: print u"a\u00b7b =", a.dot_product(b)
-  sage: print u"a\u00b7c =", a.dot_product(c)
-  sage: print u"b\u00b7c =", b.dot_product(c)
+   t = var('t')
+   a = vector([2, 1, 2])
+   b = vector([-1, 2, 0])
+   c = vector([4*t, 2*t, -5*t])
+   print u"a\u00b7b =", a.dot_product(b)
+   print u"a\u00b7c =", a.dot_product(c)
+   print u"b\u00b7c =", b.dot_product(c)
 
 .. end of output
 
@@ -83,9 +83,9 @@ of the triple product is significantly simplified.
 
 .. sagecellserver::
 
-  sage: V = abs(a.dot_product(b.cross_product(c)))
-  sage: print "Volume =", V
-  sage: solve(V == 15, t) 
+   V = abs(a.dot_product(b.cross_product(c)))
+   print "Volume =", V
+   solve(V == 15, t) 
 
 .. end of output
 

@@ -18,14 +18,14 @@ the shortest vectors to the othe vertices is a right angle.
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: b = vector([4, 4, 2])
-    sage: c = vector([8, 0, 2])
-    sage: d = vector([4, -4, 0])
-    sage: print ' Distance A-B:', N(norm(b-a))
-    sage: print ' Distance A-C:', N(norm(c-a))
-    sage: print ' Distance A-D:', N(norm(d-a))
-    sage: (b-a).dot_product(d-a)
+     a = vector([0, 0, 0])
+     b = vector([4, 4, 2])
+     c = vector([8, 0, 2])
+     d = vector([4, -4, 0])
+     print ' Distance A-B:', N(norm(b-a))
+     print ' Distance A-C:', N(norm(c-a))
+     print ' Distance A-D:', N(norm(d-a))
+     (b-a).dot_product(d-a)
 
 .. end of output
 
@@ -37,11 +37,11 @@ inner angles.
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: b = vector([4, 4, 2])
-    sage: c = vector([8, 0, 2])
-    sage: d = vector([4, -4, 0])
-    sage: (c-b).dot_product(a-b), (d-c).dot_product(b-c), (a-d).dot_product(c-d)
+     a = vector([0, 0, 0])
+     b = vector([4, 4, 2])
+     c = vector([8, 0, 2])
+     d = vector([4, -4, 0])
+     (c-b).dot_product(a-b), (d-c).dot_product(b-c), (a-d).dot_product(c-d)
 
 .. end of output
 
@@ -53,10 +53,10 @@ We first briefly check the latter result.
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: b = vector([4, 4, 2])
-    sage: d = vector([4, -4, 0])
-    sage: norm(a-b)*norm(a-d)
+     a = vector([0, 0, 0])
+     b = vector([4, 4, 2])
+     d = vector([4, -4, 0])
+     norm(a-b)*norm(a-d)
 
 .. end of output
 
@@ -64,9 +64,9 @@ The height of the pyramid is obtained as
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: s = vector([1, 1, -4])
-    sage: norm(s-a)
+     a = vector([0, 0, 0])
+     s = vector([1, 1, -4])
+     norm(s-a)
 
 .. end of output
 
@@ -75,11 +75,11 @@ confirmed directly with the help of Sage.
 
 .. sagecellserver::
 
-    sage: a = vector([0, 0, 0])
-    sage: b = vector([4, 4, 2])
-    sage: c = vector([8, 0, 2])
-    sage: d = vector([4, -4, 0])
-    sage: s = vector([1, 1, -4])
-    sage: Polyhedron(vertices=[a, b, c, d, s]).volume()
+     a = vector([0, 0, 0])
+     b = vector([4, 4, 2])
+     c = vector([8, 0, 2])
+     d = vector([4, -4, 0])
+     s = vector([1, 1, -4])
+     Polyhedron(vertices=[a, b, c, d, s]).volume()
 
 .. end of output

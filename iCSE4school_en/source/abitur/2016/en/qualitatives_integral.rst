@@ -45,12 +45,12 @@ With the help of Sage, we can solve the corresponding linear system:
 
 .. sagecellserver::
 
-  sage: var('a, b, c, d, e')
-  sage: f(x) = a*x**4 + b*x**3 + c*x**2 + d*x + e
-  sage: equations = [f(0) == 3, f(1) == 1, f(2) == 0.5, f(4) == 1.2, f(6) == 2]
-  sage: solution = solve(equations, a, b, c, d, e, solution_dict=True)[0]
-  sage: f(x) = f(x).substitute(solution)
-  sage: print f(x)
+   var('a, b, c, d, e')
+   f(x) = a*x**4 + b*x**3 + c*x**2 + d*x + e
+   equations = [f(0) == 3, f(1) == 1, f(2) == 0.5, f(4) == 1.2, f(6) == 2]
+   solution = solve(equations, a, b, c, d, e, solution_dict=True)[0]
+   f(x) = f(x).substitute(solution)
+   print f(x)
      
 .. end of output
 
@@ -59,8 +59,8 @@ graph quite well:
 
 .. sagecellserver::
 
-  sage: p1 = plot(f(x), (0, 6), ymin=0, figsize=(4, 2.8))
-  sage: p1
+   p1 = plot(f(x), (0, 6), ymin=0, figsize=(4, 2.8))
+   p1
      
 .. end of output
 
@@ -68,7 +68,7 @@ The value of the integral can be approximately reproduced as well:
 
 .. sagecellserver::
 
-  sage: print "Value of the integral:", float(integrate(f(x), x, 3, 5))
+   print "Value of the integral:", float(integrate(f(x), x, 3, 5))
      
 .. end of output
 
@@ -98,10 +98,10 @@ We add :math:`F(x)` to the plot of :math:`f`:
 
 .. sagecellserver::
 
-  sage: F(x) = integral(f(x), x)
-  sage: F_3(x) = F(x) - F(3)
-  sage: p2 = plot(F_3(x), (0, 6), ymin=-2, color = 'red')
-  sage: p3 = plot(F_3(2)+0.5*(x-2), (0, 6), color='green')
-  sage: show(p1+p2+p3, figsize=(4, 2.8))
+   F(x) = integral(f(x), x)
+   F_3(x) = F(x) - F(3)
+   p2 = plot(F_3(x), (0, 6), ymin=-2, color = 'red')
+   p3 = plot(F_3(2)+0.5*(x-2), (0, 6), color='green')
+   show(p1+p2+p3, figsize=(4, 2.8))
      
 .. end of output

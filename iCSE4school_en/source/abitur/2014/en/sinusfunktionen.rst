@@ -31,8 +31,8 @@ function's codomain by a constant value.
 
 .. sagecellserver::
 
-   sage: g(x, a, c) = sin(a*x)+c
-   sage: plot(g(x, 1, 1), (-2*pi, 2*pi), figsize=(4, 2.5))
+    g(x, a, c) = sin(a*x)+c
+    plot(g(x, 1, 1), (-2*pi, 2*pi), figsize=(4, 2.5))
      
 .. end of output
 
@@ -46,7 +46,7 @@ function's codomain by a constant value.
 
 .. sagecellserver::
 
-     sage: plot(g(x, 2, 0), (0, pi), figsize=(4, 2.5))
+      plot(g(x, 2, 0), (0, pi), figsize=(4, 2.5))
      
 .. end of output
 
@@ -72,12 +72,12 @@ be read off.
 
 .. sagecellserver::
 
-    sage: dg(x, a, c) = g.derivative(x)
-    sage: print 'dg/dx =', dg(x, a, c)
-    sage: p1 = plot(dg(x, 0.5, 0), (-2*pi,2*pi), color='blue')
-    sage: p2 = plot(dg(x, 1, 0), (-2*pi,2*pi), color='red')
-    sage: p3 = plot(dg(x, 2, 0), (-2*pi,2*pi), color='green')
-    sage: (p1 + p2 + p3).show(figsize=(4, 2.5))
+     dg(x, a, c) = g.derivative(x)
+     print 'dg/dx =', dg(x, a, c)
+     p1 = plot(dg(x, 0.5, 0), (-2*pi,2*pi), color='blue')
+     p2 = plot(dg(x, 1, 0), (-2*pi,2*pi), color='red')
+     p3 = plot(dg(x, 2, 0), (-2*pi,2*pi), color='green')
+     (p1 + p2 + p3).show(figsize=(4, 2.5))
 
 .. end of output
 

@@ -34,12 +34,12 @@ list all seating arrangements:
 
 .. sagecellserver::
 
-    sage: for n, a in enumerate(Arrangements(["1", "2", "3", "N", "C", "c"], 6)):
-    ...       if not n % 8:
-    ...           print "%3i" % (n/8+1),
-    ...       print "%sH%s" % ("".join(a[:3]), "".join(a[3:])),
-    ...       if not (n+1) % 8:
-    ...           print
+     for n, a in enumerate(Arrangements(["1", "2", "3", "N", "C", "c"], 6)):
+         if not n % 8:
+             print "%3i" % (n/8+1),
+         print "%sH%s" % ("".join(a[:3]), "".join(a[3:])),
+         if not (n+1) % 8:
+             print
 
 .. end of output
 
@@ -57,20 +57,20 @@ yields :math:`4\cdot3\cdot2\cdot1=24` possiblities. In total, we obtain
 
 .. sagecellserver::
 
-    sage: persons = set(["1", "2", "3", "C", "c"])
-    sage: n = 0
-    ...   for jleft in (True, False):
-    ...       for pmiddle in ("1", "2", "3"): 
-    ...           for others in Arrangements(persons-set([pmiddle]), 4):
-    ...               if jleft:
-    ...                   a = "".join(others[:2])+"NH"+pmiddle+"".join(others[2:])
-    ...               else:
-    ...                   a = "".join(others[:2])+pmiddle+"HN"+"".join(others[2:])
-    ...               if not n % 8:
-    ...                   print "%3i" % (n/8+1),
-    ...               print a,
-    ...               if not (n+1) % 8:
-    ...                   print
-    ...               n = n+1
+     persons = set(["1", "2", "3", "C", "c"])
+     n = 0
+     for jleft in (True, False):
+         for pmiddle in ("1", "2", "3"): 
+             for others in Arrangements(persons-set([pmiddle]), 4):
+                 if jleft:
+                     a = "".join(others[:2])+"NH"+pmiddle+"".join(others[2:])
+                 else:
+                     a = "".join(others[:2])+pmiddle+"HN"+"".join(others[2:])
+                 if not n % 8:
+                     print "%3i" % (n/8+1),
+                 print a,
+                 if not (n+1) % 8:
+                     print
+                 n = n+1
 
 We obtain :math:`18\cdot8=144` seating arrangements as expected.

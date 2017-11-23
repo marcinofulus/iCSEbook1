@@ -33,11 +33,11 @@ A plot made by Sage can confirm the point of inflection:
 
 .. sagecellserver::
 
-  sage: g(x, c) = (x-2)^3/6+c*(x-2)
-  sage: p1 = plot(g(x, 0), (0, 4), color='red', legend_label="$f'(2)=0$")
-  sage: p2 = plot(g(x, 1), (0, 4), color='green', legend_label="$f'(2)=1$")
-  sage: p3 = plot(g(x, -1), (0, 4), color='blue', legend_label="$f'(2)=-1$")
-  sage: show(p1+p2+p3, figsize=(4, 2.8))
+   g(x, c) = (x-2)^3/6+c*(x-2)
+   p1 = plot(g(x, 0), (0, 4), color='red', legend_label="$f'(2)=0$")
+   p2 = plot(g(x, 1), (0, 4), color='green', legend_label="$f'(2)=1$")
+   p3 = plot(g(x, -1), (0, 4), color='blue', legend_label="$f'(2)=-1$")
+   show(p1+p2+p3, figsize=(4, 2.8))
      
 .. end of output
 
@@ -59,7 +59,7 @@ A drawing by Sage confirms this:
 
 .. sagecellserver::
 
-  sage: h(x) = -exp(x)
-  sage: plot(h(x), (-2, 2), figsize=(4, 2.8))
+   h(x) = -exp(x)
+   plot(h(x), (-2, 2), figsize=(4, 2.8))
      
 .. end of output

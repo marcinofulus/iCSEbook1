@@ -27,8 +27,8 @@ We plot the function with Sage.
 
 .. sagecellserver::
 
-  sage: f(x) = sqrt(1-ln(x))
-  sage: plot(f(x), (0, e), figsize=(4, 2.8))
+   f(x) = sqrt(1-ln(x))
+   plot(f(x), (0, e), figsize=(4, 2.8))
      
 .. end of output
 
@@ -46,6 +46,6 @@ The result is confirmed by Sage:
 
 .. sagecellserver::
 
-  sage: solve(f(x)==2, x)
+   solve(f(x)==2, x)
      
 .. end of output

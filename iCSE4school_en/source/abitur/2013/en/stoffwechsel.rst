@@ -76,24 +76,24 @@ With Sage, we can simulate the test and determine the number of all occuring eve
 
 .. sagecellserver::
 
-  sage: import numpy as np
-  sage: from numpy.random import random_sample
-  sage: children = 1000000
-  sage: ps = 0.00074
-  sage: pst = 0.995
-  sage: pnst = 0.0078
+   import numpy as np
+   from numpy.random import random_sample
+   children = 1000000
+   ps = 0.00074
+   pst = 0.995
+   pnst = 0.0078
 
-  sage: test_s = random_sample(children)
-  sage: ill_children = np.sum(random_sample(children) < ps)
-  sage: ill_children_pos = np.sum(random_sample(ill_children) < pst)
-  sage: ill_children_neg = ill_children-ill_children_pos
-  sage: healthy_children = children-ill_children
-  sage: healthy_children_pos = np.sum(random_sample(healthy_children) < pnst)
-  sage: healthy_children_neg = healthy_children-healthy_children_pos
+   test_s = random_sample(children)
+   ill_children = np.sum(random_sample(children) < ps)
+   ill_children_pos = np.sum(random_sample(ill_children) < pst)
+   ill_children_neg = ill_children-ill_children_pos
+   healthy_children = children-ill_children
+   healthy_children_pos = np.sum(random_sample(healthy_children) < pnst)
+   healthy_children_neg = healthy_children-healthy_children_pos
 
-  sage: print("""{} children were tested as follows:
-  sage: {} children were ill and were tested positively.
-  sage: {} children were ill and were tested negatively.
-  sage: {} children were healthy and were tested positively.
-  sage: {} children were healthy and were tested negatively.""").format(
-  sage:     children, ill_children_pos, ill_children_neg, healthy_children_pos, healthy_children_neg)
+   print("""{} children were tested as follows:
+   {} children were ill and were tested positively.
+   {} children were ill and were tested negatively.
+   {} children were healthy and were tested positively.
+   {} children were healthy and were tested negatively.""").format(
+       children, ill_children_pos, ill_children_neg, healthy_children_pos, healthy_children_neg)
