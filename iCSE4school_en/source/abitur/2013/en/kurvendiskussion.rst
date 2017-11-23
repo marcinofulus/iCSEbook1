@@ -423,25 +423,25 @@ on the subintervals chosen.
   sage: from numpy import linspace
 
   sage: def my_find_root(f, a, b, n):
-  ...       """find zeros of the function f in the interval [a, b] by
-  ...       subdivision into n subintervals of equal size
-  ...           
-  ...       """
-  ...       roots = set()
-  ...       limits = linspace(a, b, n+1)
-  ...       for x0, x1 in zip(limits[:-1], limits[1:]):
-  ...           try:
-  ...               r = find_root(f, x0, x1)
-  ...               roots.add(str(r))
-  ...           except RuntimeError: # No zero was found in this interval
-  ...               pass
-  ...       zeros = "{" + ", ".join(roots) + "}"
-  ...       print("Zeros of " + str(f) + ": " + zeros)
+  ....:       """find zeros of the function f in the interval [a, b] by
+  ....:       subdivision into n subintervals of equal size
+  ....:           
+  ....:       """
+  ....:       roots = set()
+  ....:       limits = linspace(a, b, n+1)
+  ....:       for x0, x1 in zip(limits[:-1], limits[1:]):
+  ....:           try:
+  ....:               r = find_root(f, x0, x1)
+  ....:               roots.add(str(r))
+  ....:           except RuntimeError: # No zero was found in this interval
+  ....:               pass
+  ....:       zeros = "{" + ", ".join(roots) + "}"
+  ....:       print("Zeros of " + str(f) + ": " + zeros)
 
   sage: @interact
   sage: def _(c=slider(-2, 2, 0.1, 0),
-  ...         n=slider(1, 80, 1)):
-  ...       my_find_root(gc(c), -5, 5, n)
+  ....:         n=slider(1, 80, 1)):
+  ....:       my_find_root(gc(c), -5, 5, n)
 
 .. end of output
 

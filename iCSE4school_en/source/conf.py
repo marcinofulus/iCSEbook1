@@ -208,11 +208,11 @@ latex_documents_o1 = [
 ]
 
 latex_documents_o2 = [
-  ('index_o2', 'iCSE_school_O2_en.tex', u'O2: Report  - Methodology of integrating computer science methodes with science subjects',
+  ('index_o2', 'iCSE_school_O2_en.tex', u'O2: Report  - Methodology of integrating computational methods with sciences',
    u'Collective work edited by dr hab. Marcin Kostur', 'manual'),
 ]
 
-latex_documents = latex_documents_o2
+latex_documents = latex_documents
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

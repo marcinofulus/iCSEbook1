@@ -174,6 +174,19 @@ latex_documents = [
    u'praca zbiorowa pod redakcją\\\\ dr hab. Marcina Kostura', 'manual'),
 ]
 
+
+latex_documents_o1 = [
+  ('index_o1', 'iCSE_school_O1.tex', u'O1: Materiały dydaktyczne do 20 lekcji matematyki i fizyki',
+   u'Praca zbiorowa pod redakcją \\\\dr hab. Marcina Kostura', 'manual'),
+]
+
+latex_documents_o2 = [
+  ('index_o2', 'iCSE_school_O2.tex', u'O2 Raport: Metodyka integracji metod komputerowych z nauczaniem przedmiotów ścisłych',
+   u'Praca zbiorowa pod redakcją \\\\ dr hab. Marcina Kostura', 'manual'),
+]
+
+latex_documents = latex_documents_o2
+
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
