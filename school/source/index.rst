@@ -15,9 +15,10 @@ Problems in Mathematics with SageMath
 Here we present a set of problems from Bavarian *Abitur* solved with computer algebra. 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   abitur/index.rst
+   by subject <abitur/index_by_subject.rst>
+   by year <abitur/index_by_year.rst>
 
 
 
