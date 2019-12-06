@@ -1,8 +1,8 @@
 # Makefile for Sphinx documentation
 #
 
-# You can set these variables from the command line.
-SPHINXOPTS    =
+# You can set these v LATEXMKOPTS="-shell-escape"ariables from the command line.
+SPHINXOPTS    = 
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build

@@ -27,8 +27,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'The Methodology of teaching sciences with SageMath'
-copyright = 'Marcin Kostur, iCSE-team'
-
+copyright = u'Creative Commons CC-BY 4.0, iCSE-team'
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
@@ -191,7 +190,7 @@ latex_elements = {
 	'pointsize': '12pt',
         'releasename': u' ',
 # Additional stuff for the LaTeX preamble.
-	'preamble': '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'+ '\usepackage{minted}\n'+'\usepackage{titlesec}\n\\newcommand{\sectionbreak}{\clearpage}\n'+unicodes + '\setcounter{tocdepth}{2}',
+	'preamble': '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'+ '\usepackage{minted}\n'+'\usepackage{titlesec}\n\\newcommand{\sectionbreak}{\clearpage}\n'+unicodes + '\setcounter{tocdepth}{2}'+ '\usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}\n',
         'babel': '\usepackage{amsmath,amssymb}\n\n' + '\usepackage{babel}\n',
 }
 
@@ -212,7 +211,7 @@ latex_documents_o2 = [
    u'Collective work edited by dr hab. Marcin Kostur', 'manual'),
 ]
 
-latex_documents = latex_documents
+latex_documents = latex_documents_o2
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

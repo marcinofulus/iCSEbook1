@@ -20,7 +20,13 @@ Introduction
 
 
 
+.. only:: latex
 
+        .. raw:: latex
+            
+            \vfill\doclicenseThis
+
+            
 .. toctree::
    :maxdepth: 1
 

@@ -124,15 +124,15 @@ Wszyskie te rówania zapiszemy od razu w Sage:
 
     Otrzymujemy:
 
-       - :math:` x_{0}^{2} + y_{0}^{2} = r^{2} `,
-       - :math:` x_{1}^{2} + y_{1}^{2} = r^{2} `,
-       - :math:` x_{2}^{2} + y_{2}^{2} = r^{2} `,
-       - :math:` x_{3}^{2} + y_{3}^{2} = r^{2} `,
-       - :math:` {\left(x_{0} - x_{1}\right)}^{2} + {\left(y_{0} - y_{1}\right)}^{2} = 4 `,
-       - :math:` {\left(x_{1} - x_{2}\right)}^{2} + {\left(y_{1} - y_{2}\right)}^{2} = 9 `,
-       - :math:` {\left(x_{2} - x_{3}\right)}^{2} + {\left(y_{2} - y_{3}\right)}^{2} = 16 `,
-       - :math:` {\left(x_{0} - x_{3}\right)}^{2} + {\left(y_{0} - y_{3}\right)}^{2} = 25 `,
-       - :math:` y_{0} = 0 `
+       - :math:`x_{0}^{2} + y_{0}^{2} = r^{2}`,
+       - :math:`x_{1}^{2} + y_{1}^{2} = r^{2}`,
+       - :math:`x_{2}^{2} + y_{2}^{2} = r^{2}`,
+       - :math:`x_{3}^{2} + y_{3}^{2} = r^{2}`,
+       - :math:`{\left(x_{0} - x_{1}\right)}^{2} + {\left(y_{0} - y_{1}\right)}^{2} = 4`,
+       - :math:`{\left(x_{1} - x_{2}\right)}^{2} + {\left(y_{1} - y_{2}\right)}^{2} = 9`,
+       - :math:`{\left(x_{2} - x_{3}\right)}^{2} + {\left(y_{2} - y_{3}\right)}^{2} = 16`,
+       - :math:`{\left(x_{0} - x_{3}\right)}^{2} + {\left(y_{0} - y_{3}\right)}^{2} = 25`,
+       - :math:`y_{0} = 0`
 
   
 Pozostaje rozwiązać układ dziewięciu równań wielomianowych i otrzymamy

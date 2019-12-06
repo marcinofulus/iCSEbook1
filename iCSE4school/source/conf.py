@@ -27,7 +27,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Metodologia nauczania przedmiotów ścisłych z perspektywą obliczeniową'
-copyright = 'Creative Commons CC-BY 4.0, iCSE-team'
+copyright = u'Creative Commons CC-BY 4.0, iCSE-team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -157,13 +157,14 @@ htmlhelp_basename = 'iCSE for school'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-	'papersize': 'a4paper',
+	'papersize': 'b5paper',
 
 # The font size ('10pt', '11pt' or '12pt').
-	'pointsize': '12pt',
+	'pointsize': '10pt',
         'releasename': u' ',
 # Additional stuff for the LaTeX preamble.
-	'preamble': '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'+ '\usepackage{minted}\n'+'\usepackage{titlesec}\n\\newcommand{\sectionbreak}{\clearpage}\n' + '\setcounter{tocdepth}{2}\n',
+	'preamble': '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'+ '\usepackage{minted}\n'+'\usepackage{titlesec}\n\\newcommand{\sectionbreak}{\clearpage}\n' + '\setcounter{tocdepth}{2}\n' + '\usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}\n',
+
         'babel': '\usepackage{amsmath,amssymb}\n\n' + '\usepackage{babel}\n',
 }
 
@@ -185,7 +186,7 @@ latex_documents_o2 = [
    u'Praca zbiorowa pod redakcją \\\\ dr hab. Marcina Kostura', 'manual'),
 ]
 
-latex_documents = latex_documents_o2
+latex_documents = latex_documents
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

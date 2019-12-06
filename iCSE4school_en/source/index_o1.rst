@@ -62,6 +62,11 @@ them have been "published" and can be viewed:
         -  `<https://sage01.icse.us.edu.pl/pub/>`_
         -  `<https://sage03.icse.us.edu.pl/pub/>`_
 
+.. only:: latex
+
+        .. raw:: latex
+            
+            \vfill\doclicenseThis
 
 
                

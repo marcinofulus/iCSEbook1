@@ -39,6 +39,12 @@ Wstęp
             <center><iframe width="420" height="280" src="https://www.youtube.com/embed/BAUCbMXWceI" frameborder="0" allowfullscreen></iframe> </center>
 
 
+.. only:: latex
+
+        .. raw:: latex
+            
+            \vfill\doclicenseThis
+
 .. toctree::
    :maxdepth: 1
 
