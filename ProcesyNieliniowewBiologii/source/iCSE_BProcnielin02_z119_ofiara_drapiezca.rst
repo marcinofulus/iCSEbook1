@@ -728,36 +728,36 @@ Ponieważ :math:`x_1` zależy od 2 parametrów :math:`\alpha` i :math:`d`, prawa
 
 .. sagecellserver::
 
-    sage: var('a,d,b,x,y,t')
-    sage: ode_lotka=[x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)];
-    sage: #Murray eq. 3.28
-    sage: f(a,d)=(a-sqrt(  (1-a-d)^2+4*d) )*(1+a+d-sqrt((1-a-d)^2+4*d))/(2*a)
-    sage: @interact
-    sage: def myf(a_in = slider(0,2,0.01,default=1.0),b_in = slider(0,2,0.01,default=0.1),d_in = slider(0,2,0.01,default=0.1) ):
-    ...       p={a:a_in,d:d_in,b:b_in}
-    ...       ode_lotka_num=[i.subs(p) for i in ode_lotka]
-    ...       pkt_osob=solve(ode_lotka_num,x,y, solution_dict=True)
-    ...       x_osobliwy,y_osobliwy=0,0
-    ...       plt_pkt=[]
-    ...       for n_pkt,pkt in enumerate(pkt_osob): 
-    ...          x_osobliwy,y_osobliwy=pkt[x].n(),pkt[y].n()
-    ...          plt_pkt.append(point([x_osobliwy,y_osobliwy],size=30,color='red') )
-    ...          JJ=jacobian(ode_lotka_num,[x,y])
-    ...          JJ0=JJ.subs({x:x_osobliwy+1e-8,y:y_osobliwy+1e-8})
-    ...          print n_pkt+1,":",x_osobliwy.n(digits=3),y_osobliwy.n(digits=3),vector(JJ0.eigenvalues()).n(digits=3)
-    ...          if pkt[x]>0 and pkt[y]>0 : 
-    ...              print "Czy pkt. jest stabilny?",bool(b_in>f(a_in,d_in))
-    ...       plt1 = plot_vector_field(vector(ode_lotka_num)/vector(ode_lotka_num).norm(),(x,-0.1,2),(y,-0.1,2))
-    ...       #plt2a = implicit_plot(ode_lotka_num[0],(x,-0.10,2),(y,-0.10,2),color='green')
-    ...       plt2a = plot(solve(ode_lotka_num[0],y)[0].rhs(),(x,-0.10,2),ymin=-0.10,ymax=2,color='green')
-    ...       show(ode_lotka_num)
-    ...       plt2b = implicit_plot(ode_lotka_num[1],(x,-0.10,2),(y,-.010,2),color='blue',xmin=-0.03)
-    ...       
-    ...       T = srange(0,123,0.1)
-    ...       sol1=desolve_odeint(vector(ode_lotka_num), [0.82,0.85], T, [x,y])
-    ...       plt_solution = list_plot(sol1.tolist(), plotjoined=1,color='brown')
-    ...       
-    ...       show(sum(plt_pkt)+plt1+plt2a+plt2b+plt_solution)
+    var('a,d,b,x,y,t')
+    ode_lotka=[x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)];
+    # Murray eq. 3.28
+    f(a,d)=(a-sqrt(  (1-a-d)^2+4*d) )*(1+a+d-sqrt((1-a-d)^2+4*d))/(2*a)
+    @interact
+    def myf(a_in = slider(0,2,0.01,default=1.0),b_in = slider(0,2,0.01,default=0.1),d_in = slider(0,2,0.01,default=0.1) ):
+        p={a:a_in,d:d_in,b:b_in}
+        ode_lotka_num=[i.subs(p) for i in ode_lotka]
+        pkt_osob=solve(ode_lotka_num,x,y, solution_dict=True)
+        x_osobliwy,y_osobliwy=0,0
+        plt_pkt=[]
+        for n_pkt,pkt in enumerate(pkt_osob): 
+           x_osobliwy,y_osobliwy=pkt[x].n(),pkt[y].n()
+           plt_pkt.append(point([x_osobliwy,y_osobliwy],size=30,color='red') )
+           JJ=jacobian(ode_lotka_num,[x,y])
+           JJ0=JJ.subs({x:x_osobliwy+1e-8,y:y_osobliwy+1e-8})
+           print( n_pkt+1,":",x_osobliwy.n(digits=3),y_osobliwy.n(digits=3),vector(JJ0.eigenvalues()).n(digits=3) )
+           if pkt[x]>0 and pkt[y]>0 : 
+               print( "Czy pkt. jest stabilny?",bool(b_in>f(a_in,d_in)) )
+        plt1 = plot_vector_field(vector(ode_lotka_num)/vector(ode_lotka_num).norm(),(x,-0.1,2),(y,-0.1,2))
+        # plt2a = implicit_plot(ode_lotka_num[0],(x,-0.10,2),(y,-0.10,2),color='green')
+        plt2a = plot(solve(ode_lotka_num[0],y)[0].rhs(),(x,-0.10,2),ymin=-0.10,ymax=2,color='green')
+        show(ode_lotka_num)
+        plt2b = implicit_plot(ode_lotka_num[1],(x,-0.10,2),(y,-.010,2),color='blue',xmin=-0.03)
+        
+        T = srange(0,123,0.1)
+        sol1=desolve_odeint(vector(ode_lotka_num), [0.82,0.85], T, [x,y])
+        plt_solution = list_plot(sol1.tolist(), plotjoined=True,color='brown')
+        
+        show(sum(plt_pkt)+plt1+plt2a+plt2b+plt_solution)
 
 
 .. end of output

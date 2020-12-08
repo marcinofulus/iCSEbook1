@@ -535,16 +535,14 @@ W przypadku  (A), krzywa ma kształt zdeformowanej litery S i dlatego nazywana j
 
 .. sagecellserver::
 
-    integrate(1/(x*(x-1)),x).show()
-    
-    var('t x0')
-    x = function('x',t)
-    sol = desolve(diff(x,t) == x*(1-x),x,ics=[0,x0],ivar=t)
-    show(sol)
-    print "postać jawna:"
-    show( sol.full_simplify().solve(x) ) 
+   integrate(1/(x*(x-1)),x).show()
 
-
+   var('t x0')
+   x = function('x')(t)
+   sol = desolve(diff(x,t) == x*(1-x),x,ics=[0,x0],ivar=t)
+   show(sol)
+   show( "postać jawna:")
+   show( sol.full_simplify().solve(x) )
 
 **Ewolucja czasowa populacji w modelu Verhulsta dla różnych warunków początkowych**
 
