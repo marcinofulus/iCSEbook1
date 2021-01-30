@@ -40,7 +40,7 @@ This calculation can quickly be checked with Sage:
    A = vector([-2, 1, 4])
    B = vector([-4, 0, 6])
    C = A - 2*(B-A)
-   print C
+   print(C)
 
 The coordinates of :math:`C` are thus :math:`(2|3|0)`.
 
@@ -59,7 +59,7 @@ Sage can also confirm this:
    A = vector([-2, 1, 4])
    B = vector([-4, 0, 6])
    BA = B-A
-   print norm(BA)
+   print(norm(BA))
 
 
 Therefore, we choose :math:`B` as the point on the line
@@ -94,4 +94,4 @@ to :math:`1` and :math:`0`, respectively.
    G_2 = 0
    G = vector([G_1, G_2, G_3])
    solution = solve(BA*G == 0, G_3, solution_dict=True)[0]
-   print "Direction vector G:", G.substitute(solution)
+   print("Direction vector G:", G.substitute(solution))

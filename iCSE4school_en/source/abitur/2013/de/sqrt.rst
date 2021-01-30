@@ -50,8 +50,8 @@ Damit erhält man :math:`g'(0)=\frac{1}{2}`.
 .. sagecellserver::
 
     sage: dg = g.derivative()
-    sage: print "Ableitung von g(x) : ", dg
-    sage: print "Ableitung bei x = 0: ", dg(0)
+    sage: print("Ableitung von g(x) : ", dg)
+    sage: print("Ableitung bei x = 0: ", dg(0))
 
 .. end of output
 

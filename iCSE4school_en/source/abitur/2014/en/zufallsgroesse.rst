@@ -83,10 +83,10 @@ becomes clear by setting it to 0.
             p3=slider(0., 1., 0.01), eps=3e-16):
           p0 = 1-p1-p2-p3
           if p0 >= -eps:
-              print 'p0 =', p0
-              print 'E =', p1+2*p2+3*p3
+              print('p0 =', p0)
+              print('E =', p1+2*p2+3*p3)
           else:
-              print 'p0 =', p0, 'Negative values are forbidden.'
+              print('p0 =', p0, 'Negative values are forbidden.')
 
 ..  end of output
 

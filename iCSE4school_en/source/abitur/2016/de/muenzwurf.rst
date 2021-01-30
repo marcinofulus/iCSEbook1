@@ -51,7 +51,7 @@ Zufallsexperiment mit Sage simuliert.
   sage:     e = ereignis()
   sage:     ereignismenge[e] = ereignismenge[e]+1
   sage: for k, v in ereignismenge.items():
-  sage:     print "Häufigkeit des Ereignisses %3s: %5i" % (k, v)
+  sage:     print("Häufigkeit des Ereignisses %3s: %5i" % (k, v))
 
 **Lösung zu Teil b**
 
@@ -70,4 +70,4 @@ Eine Simulation mit Sage liefert:
   sage: x = 0
   sage: for n in range(iterationen):
   sage:     x = x+len(ereignis())
-  sage: print "Der Erwartungswert von X beträgt etwa: ", "%4.2f" % float(x/iterationen)
+  sage: print("Der Erwartungswert von X beträgt etwa: ", "%4.2f" % float(x/iterationen))

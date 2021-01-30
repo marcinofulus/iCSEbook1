@@ -34,7 +34,7 @@ which can be verified with Sage:
 
    M = vector([-3, 2, 7])
    P = vector([3, 4, 4])
-   print "Q:", M + M - P
+   print("Q:", M + M - P)
 
 .. end of output
 
@@ -66,8 +66,8 @@ be used to rotate the view.
    var('y')
    z = 0
    radius = norm(M-P)
-   print 'sphere radius          :', radius
-   print 'distance center - plane:', M[2]
+   print('sphere radius          :', radius)
+   print('distance center - plane:', M[2])
    p1 = plot3d(z, (x, -15, 15), (y, -15, 15), opacity=0.7)
    p2 = sphere(center=(-3, 2, 7), size=radius, color='red', opacity=0.7)
    show(p1 + p2, aspect_ratio=1)

@@ -54,14 +54,14 @@ The first example counts factorial according to the definition.
    silnia=1
    for i in range(1,6):
        silnia=silnia*i
-       print i, '!=', silnia
+       print(i, '!=', silnia)
 
 
 The second example uses a built-in function in SageMath.
 
 .. sagecellserver::
     
-    print 5, '!=', factorial(5)
+    print(5, '!=', factorial(5))
 
 Derivative
 ^^^^^^^^^^
@@ -352,7 +352,7 @@ If you specify *n* points, it certainly passes through these points a polynomial
     y=int(random()*7-3)
     vector_y=[y]
     points=point((0,y),size=10)
-    print '(',0,',',y,')'
+    print('(',0,',',y,')')
     for i in range(k-1):
         vector_x=vector_x+[0]
     vector_x=vector_x+[1]
@@ -362,7 +362,7 @@ If you specify *n* points, it certainly passes through these points a polynomial
             vector_x=vector_x+[x^(k-i-1)]
         y=int(random()*7-3)
         vector_y=vector_y+[y]
-        print '(',x,',',y,')'
+        print('(',x,',',y,')')
         points = points + point((x,y),size=10)
     show(points,ymin=-2,ymax=6,figsize=4) 
  

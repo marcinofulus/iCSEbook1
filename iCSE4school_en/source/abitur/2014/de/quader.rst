@@ -43,9 +43,9 @@ Wir überprüfen die Skalarprodukte mit Sage:
   sage: a = vector([2, 1, 2])
   sage: b = vector([-1, 2, 0])
   sage: c = vector([4*t, 2*t, -5*t])
-  sage: print u"a\u00b7b =", a.dot_product(b)
-  sage: print u"a\u00b7c =", a.dot_product(c)
-  sage: print u"b\u00b7c =", b.dot_product(c)
+  sage: print(u"a\u00b7b =", a.dot_product(b))
+  sage: print(u"a\u00b7c =", a.dot_product(c))
+  sage: print(u"b\u00b7c =", b.dot_product(c))
 
 .. end of output
 
@@ -84,7 +84,7 @@ der Berechnung des Spatprodukts liefert Sage eine deutliche Erleichterung.
 .. sagecellserver::
 
   sage: V = abs(a.dot_product(b.cross_product(c)))
-  sage: print "Volumen =", V
+  sage: print("Volumen =", V)
   sage: solve(V == 15, t) 
 
 .. end of output

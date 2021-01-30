@@ -85,11 +85,11 @@ These results may be confirmed by Sage.
 
    df = derivative(f)
    ddf = derivative(df)
-   print "f'(x)  = ", df
-   print "f''(x) = ", ddf
+   print("f'(x)  = ", df)
+   print("f''(x) = ", ddf)
    for extremum in solve(df == 0, x):
        x = extremum.right()
-       print "Second derivative for the extremum at x=%s: %s" % (x, ddf(x))
+       print("Second derivative for the extremum at x=%s: %s" % (x, ddf(x)))
 
 .. end of output
 
@@ -136,12 +136,12 @@ means of Sage as follows:
 
 .. sagecellserver::
 
-   print "g(x) = ", g(x)
-   print "-g(-x) = ", -g(-x)
+   print("g(x) = ", g(x))
+   print("-g(-x) = ", -g(-x))
    if g(x) == -g(-x):
-       print "g(x) is point-symmetric."
+       print("g(x) is point-symmetric.")
    else:
-       print "g(x) is not point-symmetric."
+       print("g(x) is not point-symmetric.")
 
 .. end of output
 
@@ -164,7 +164,7 @@ By means of Sage, one obtains accordingly:
 .. sagecellserver::
 
    F = f.integrate(x)
-   print "antiderivative F = ", F
+   print("antiderivative F = ", F)
    pretty_print(html("$\int_0^4 f(x)\mathrm{d}x = $" + str(F(4)-F(0))))
 
 .. end of output
@@ -276,8 +276,8 @@ By means of Sage, we can calculate the exact values:
 .. sagecellserver::
 
    result = solve(f(x) == 5, x)
-   print "Solution of the equation " + str(f) + " = 5 :" + repr(result)
-   print "This corresponds approximately to: x = %5.3f and x = %5.3f." % (result[0].right().n(), result[1].right().n())
+   print("Solution of the equation " + str(f) + " = 5 :" + repr(result))
+   print("This corresponds approximately to: x = %5.3f and x = %5.3f." % (result[0].right().n(), result[1].right().n()))
 
 .. end of output
 

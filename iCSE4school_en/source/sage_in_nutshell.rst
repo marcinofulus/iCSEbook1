@@ -31,12 +31,12 @@ calculation.
 .. sagecellserver::
     :linked: false
 
-    print "(4/3+5/5)-(5/2-4/6) =", (4/3+5/5)-(5/2-4/6)
-    print "(3^15-3^13)/(3^13+3^14) =", (3^15-3^13)/(3^13+3^14)
-    print "1001 =", factor(1001)
-    print "(sqrt(8)-sqrt(2))^2 =", (sqrt(8)-sqrt(2))^2
-    print "5! =", factorial(5)
-    print  gcd(354, 222)
+    print("(4/3+5/5)-(5/2-4/6) =", (4/3+5/5)-(5/2-4/6))
+    print("(3^15-3^13)/(3^13+3^14) =", (3^15-3^13)/(3^13+3^14))
+    print("1001 =", factor(1001))
+    print("(sqrt(8)-sqrt(2))^2 =", (sqrt(8)-sqrt(2))^2)
+    print("5! =", factorial(5))
+    print( gcd(354, 222))
 
 
 .. only:: latex
@@ -364,7 +364,7 @@ numerical result but also for its graphical visualization.
     d = b*b - 4*a*c
     f(x) = a*x*x + b*x + c
     if d < 0:
-        print "No real solution!"
+        print("No real solution!")
         xmin,xmax =-5, 5
         x1,x2 = 0,0
         
@@ -372,7 +372,7 @@ numerical result but also for its graphical visualization.
         x1 = float((-b-sqrt(d))/(2*a))
         x2 = float((-b+sqrt(d))/(2*a))
         
-        print "x1=", x1, ", ", "x2=", x2
+        print("x1=", x1, ", ", "x2=", x2)
 
         if x1<x2:
             xmin,xmax = x1-2,x2+2
@@ -553,7 +553,7 @@ SageMath will generate us an interactive application:
         if pkt:
              p += point(pkt,size=40,color='red')
         else:
-             print "No roots"
+             print("No roots")
         show(p)
 
 

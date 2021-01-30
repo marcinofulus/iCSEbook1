@@ -44,7 +44,7 @@ of the given probability.
    p = 0.9
    q = 0.1
    p_E = p^20 + 20*q*p^19
-   print "Probability p(E) =", p_E
+   print("Probability p(E) =", p_E)
 
 .. end of output
 
@@ -65,12 +65,12 @@ result.
        frequency_e[hits] = frequency_e[hits]+1
    probabilities = frequency_e/iterations
    headline = ' Hit  probability'
-   print headline
-   print "-"*len(headline)
+   print(headline)
+   print("-"*len(headline))
    for hits, p_of_e in enumerate(probabilities):
-       print "%6i       %g" % (hits, p_of_e)
+       print("%6i       %g" % (hits, p_of_e))
    p_geq_19 = probabilities[19]+probabilities[20]
-   print "Approximation of the probability p(E) =", p_geq_19
+   print("Approximation of the probability p(E) =", p_geq_19)
 
 .. end of output
 

@@ -52,7 +52,7 @@ możemy też pokusić się o sprawdzenie każdej z opowiedzi:
 .. sagecellserver::
 
    for m in [5, 4, 1, -5]:
-       print  bool(m/(5-sqrt(5))==(5+sqrt(5))/5)
+       print( bool(m/(5-sqrt(5))==(5+sqrt(5))/5))
 
 
 .. admonition:: Jak to działa: :code:`bool`?
@@ -69,5 +69,5 @@ jest poprawna:
 .. sagecellserver::
 
    for m in [5, 4, 1, -5]:
-       print  (m/(5-sqrt(5))).n(),"=",((5+sqrt(5))/5).n()
+       print( (m/(5-sqrt(5))).n(),"=",((5+sqrt(5))/5).n())
 

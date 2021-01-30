@@ -96,17 +96,17 @@ exact result and will also prove our solution of part a.
          A1.remove(a_ball)
          B1.append(a_ball)
          for b_ball in B1:
-             print 'A->B:', a_ball,
+             print('A->B:', a_ball,)
              A2 = A1[::]
              A2.append(b_ball)
-             print '  B->A:', b_ball,
+             print('  B->A:', b_ball,)
              total = total+1
              if A2.count('w') == 3:
                  frequency_e = frequency_e+1
-                 print "   A: ", A2, "<==="
+                 print("   A: ", A2, "<===")
              else:
-                 print "   A: ", A2
-     print "p(E) = %s/%s" % (frequency_e, total)
+                 print("   A: ", A2)
+     print("p(E) = %s/%s" % (frequency_e, total))
 
 A somewhat simpler solution consists in determining the probability for
 E by means of a simulation. To this end, we move a randomly chosen ball
@@ -133,7 +133,7 @@ the runtime of this code exceeds the runtime of the first solution.
          move_ball(B, A)
          if A.count('w') == 3 :
              frequency_e = frequency_e+1
-     print "Approximation for the probability p(E) = ", float(frequency_e/iterations)
+     print("Approximation for the probability p(E) = ", float(frequency_e/iterations))
 
 
 

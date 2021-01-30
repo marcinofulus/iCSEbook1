@@ -42,7 +42,7 @@ diese Ergebnis auch mit Hilfe von Sage.
   sage: D = vector([0, 0, -2])
   sage: EH = E-H
   sage: DH = D-H
-  sage: print "Punkt A:", EH+DH
+  sage: print("Punkt A:", EH+DH)
 
 
 **Lösung zu Teil b**
@@ -99,4 +99,4 @@ Alternativ können wir den Schnittpunkt auch mit Sage bestimmen:
   sage:     loesung = loesungen[0]
   sage: else:
   sage:     loesung = loesungen[1]
-  sage: print "Punkt P:", Kante.substitute(loesung)
+  sage: print("Punkt P:", Kante.substitute(loesung))

@@ -82,7 +82,7 @@ Wir überprüfen das Ergebnis mit Sage:
   sage: ab = b - a
   sage: ac = c - a
   sage: A = 1/2 * abs(ab.cross_product(ac))
-  sage: print "Flächeninhalt des Dreiecks:", A
+  sage: print("Flächeninhalt des Dreiecks:", A)
 
 .. end of output
 
@@ -134,7 +134,7 @@ Wir überprüfen diesen Schnittpunkt mit Sage
   sage: ebene = Polyhedron(eqns=[(-4, 1, 1, 1)])
   sage: gerade = Polyhedron(vertices=[p], rays=[-v, v])
   sage: r = gerade.intersection(ebene).vertices()[0].vector()
-  sage: print 'Schnittpunkt R', r
+  sage: print('Schnittpunkt R', r)
 
 .. end of output
 
@@ -287,6 +287,6 @@ durch unsere Skizze oder durch explizite Auswertung mit Sage bestätigt wird.
   sage: n = lotvektor.normalized()
   sage: cosa = -n.dot_product(v.normalized())
   sage: cosb = n.dot_product((r-q).normalized())
-  sage: print simplify(cosa-cosb)
+  sage: print(simplify(cosa-cosb))
 
 .. end of output

@@ -8,16 +8,16 @@ Integration
     sage: def fun(x):
     ...     return 2*x * x + 4 * x - 3;
     sage: n = 100 #liczba podziałów
-    sage: print "Obliczanie  calki oznaczonej"
-    sage: print " metodą prostokatów"
-    sage: print „  „
-    sage: print "f(x) = 2*x * x + 4 * x -3"
+    sage: print("Obliczanie  calki oznaczonej")
+    sage: print(" metodą prostokatów")
+    sage: print(„  „)
+    sage: print("f(x) = 2*x * x + 4 * x -3")
     sage: print
-    sage: print "Podaj granice calkowania - poczatek"
+    sage: print("Podaj granice calkowania - poczatek")
     sage: print
     sage: xpocz = float(raw_input("xpocz = "))
     sage: print
-    sage: print "Podaj granice calkowania - koniec"
+    sage: print("Podaj granice calkowania - koniec")
     sage: print
     sage: xkoniec = float(raw_input("xkoniec = "))
     sage: print
@@ -26,7 +26,7 @@ Integration
     sage: for i in range(1, n + 1):
     ...     suma += fun(xpocz + i * dx)
     sage: suma *= dx
-    sage: print "Wartosc pola : %9.3f" % suma
+    sage: print("Wartosc pola : %9.3f" % suma)
     Obliczanie  calki oznaczonej
      metodą prostokatów
     
@@ -40,13 +40,13 @@ Integration
 
 ::
 
-    sage: print "Obliczanie  calki oznaczonej"
-    sage: print " metodą prostokatów"
-    sage: print   
+    sage: print("Obliczanie  calki oznaczonej")
+    sage: print(" metodą prostokatów")
+    sage: print(  )
     sage: def f(x):
     ...     return 2*x * x + 4 * x - 3;
     sage: n = 100 #liczba podziałów
-    sage: print "f(x) = 2 * x * x + 4 * x - 3"
+    sage: print("f(x) = 2 * x * x + 4 * x - 3")
     sage: xpocz = 1.
     sage: xkoniec = 2.
     sage: suma = 0.
@@ -54,7 +54,7 @@ Integration
     sage: for i in range(1, n + 1):
     ...     suma += f(xpocz + i * dx)
     ...     suma *= dx
-    sage: print "Wartosc pola : %7.3f" % suma
+    sage: print("Wartosc pola : %7.3f" % suma)
     Obliczanie  calki oznaczonej
      metodą prostokatów
     

@@ -104,17 +104,17 @@ für den Inhalt der Urne A (Teilaufgabe a) überprüfen.
     ...       A1.remove(a_kugel)
     ...       B1.append(a_kugel)
     ...       for b_kugel in B1:
-    ...           print 'A->B:', a_kugel,
+    ...           print('A->B:', a_kugel,)
     ...           A2 = A1[::]
     ...           A2.append(b_kugel)
-    ...           print '  B->A:', b_kugel,
+    ...           print('  B->A:', b_kugel,)
     ...           gesamtzahl = gesamtzahl+1
     ...           if A2.count('w') == 3:
     ...               haeufigkeit_e = haeufigkeit_e+1
-    ...               print "   A: ", A2, "<==="
+    ...               print("   A: ", A2, "<===")
     ...           else:
-    ...               print "   A: ", A2
-    sage: print "p(E) = %s/%s" % (haeufigkeit_e, gesamtzahl)
+    ...               print("   A: ", A2)
+    sage: print("p(E) = %s/%s" % (haeufigkeit_e, gesamtzahl))
 
 Eine etwas leichtere Lösung besteht darin, die Wahrscheinlichkeit für
 das Ereignis E durch eine Simulation zu bestimmen. Hierfür verschieben
@@ -143,7 +143,7 @@ als die erste Lösung.
     ...       verschiebe_kugel(B, A)
     ...       if A.count('w') == 3 :
     ...           haeufigkeit_e = haeufigkeit_e+1
-    sage: print "Näherung für die Wahrscheinlichkeit p(E) = ", float(haeufigkeit_e/iterationen)
+    sage: print("Näherung für die Wahrscheinlichkeit p(E) = ", float(haeufigkeit_e/iterationen))
 
 
 

@@ -43,9 +43,9 @@ is a cuboid for any value of :math:`t`. The inner products can also be calculate
    a = vector([2, 1, 2])
    b = vector([-1, 2, 0])
    c = vector([4*t, 2*t, -5*t])
-   print u"a\u00b7b =", a.dot_product(b)
-   print u"a\u00b7c =", a.dot_product(c)
-   print u"b\u00b7c =", b.dot_product(c)
+   print(u"a\u00b7b =", a.dot_product(b))
+   print(u"a\u00b7c =", a.dot_product(c))
+   print(u"b\u00b7c =", b.dot_product(c))
 
 .. end of output
 
@@ -84,7 +84,7 @@ of the triple product is significantly simplified.
 .. sagecellserver::
 
    V = abs(a.dot_product(b.cross_product(c)))
-   print "Volume =", V
+   print("Volume =", V)
    solve(V == 15, t) 
 
 .. end of output

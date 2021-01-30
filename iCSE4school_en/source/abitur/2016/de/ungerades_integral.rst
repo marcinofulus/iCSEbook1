@@ -28,9 +28,9 @@ Dies lässt sich auch mit Sage überprüfen
 
   sage: f(x) = x^2*sin(x)
   sage: if f(-x) == -f(x):
-  ...       print "Die Funktion ist ungerade."
+  ...       print("Die Funktion ist ungerade.")
   sage: else:
-  ...       print "Die Funktion ist nicht ungerade."
+  ...       print("Die Funktion ist nicht ungerade.")
    
 .. end of output
 
@@ -49,6 +49,6 @@ Sage kann das bestätigen:
 
 .. sagecellserver::
 
-  sage: print "Wert des Integrals:", integral(f, x, -pi, pi)
+  sage: print("Wert des Integrals:", integral(f, x, -pi, pi))
 
 .. end of output

@@ -54,8 +54,8 @@ and continue by evaluating the required definite integral:
 
      h(x) = x^4+x^2+1
      dh(x) = diff(h, x)
-     print 'Derivative of h(x):', dh
-     print 'Value of the definite integral:', integrate(dh(x), x, 0, 1)
+     print('Derivative of h(x):', dh)
+     print('Value of the definite integral:', integrate(dh(x), x, 0, 1))
 
 .. end of output
 

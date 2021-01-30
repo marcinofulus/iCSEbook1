@@ -101,13 +101,13 @@ can be modified in the list ``probabilities``.
                      p_d_if_c, p_db_if_c, p_d_if_cb, p_db_if_cb,
                      p_c_and_d, p_c_and_db, p_cb_and_d, p_cb_and_db,
                      solution_dict=True)[0]
-     print 'P(C) =', solution[p_c]
-     print '   P(D|C) =', solution[p_d_if_c],
-     print '   P(D∩C) =', solution[p_c_and_d]
-     print '   P(D̅|C) =', solution[p_db_if_c],
-     print '   P(D̅∩C) =', solution[p_c_and_db]
-     print 'P(C̅) =', solution[p_cb]
-     print '   P(D|C̅) =', solution[p_d_if_cb],
-     print '   P(D∩C̅) =', solution[p_cb_and_d]
-     print '   P(D̅|C̅) =', solution[p_db_if_cb],
-     print '   P(D̅∩C̅) =', solution[p_cb_and_db]
+     print('P(C) =', solution[p_c])
+     print('   P(D|C) =', solution[p_d_if_c],)
+     print('   P(D∩C) =', solution[p_c_and_d])
+     print('   P(D̅|C) =', solution[p_db_if_c],)
+     print('   P(D̅∩C) =', solution[p_c_and_db])
+     print('P(C̅) =', solution[p_cb])
+     print('   P(D|C̅) =', solution[p_d_if_cb],)
+     print('   P(D∩C̅) =', solution[p_cb_and_d])
+     print('   P(D̅|C̅) =', solution[p_db_if_cb],)
+     print('   P(D̅∩C̅) =', solution[p_cb_and_db])

@@ -199,7 +199,7 @@ symboliczne. Rozważmy na przykład poniższy kod w języku Python:
 
    a = 23.0
    b = 3.0
-   print ( (a/34+1/b)**2 )
+   print( (a/34+1/b)**2 )
 
 Program ten wypisze na ekranie przybliżoną wartość wyrażenia po
 podstawieniu zmiennych :math:`a=23,b=3` liczbę :math:`1.0197`.

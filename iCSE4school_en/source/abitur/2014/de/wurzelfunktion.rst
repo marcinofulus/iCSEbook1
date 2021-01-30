@@ -51,7 +51,7 @@ oder mit Hilfe von Sage
 
 .. sagecellserver::
 
-  sage: print "Der y-Achsenabschnitt ist ", f(0), u"\u2248", f(0).n(digits=4)
+  sage: print("Der y-Achsenabschnitt ist ", f(0), u"\u2248", f(0).n(digits=4))
 
 .. end of output
 
@@ -108,7 +108,7 @@ bzw.
 
 .. sagecellserver::
 
-  print "f(6) =", f(6)
+  print("f(6) =", f(6))
 
 .. end of output
 
@@ -127,7 +127,7 @@ Selbiges Ergebnis erhalten wir mit Sage:
 .. sagecellserver::
 
   sage: df = derivative(f,  x)
-  sage: print "Die Ableitung von f ist:", df
+  sage: print("Die Ableitung von f ist:", df)
   sage: p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
   sage: show(p2)
 
@@ -182,7 +182,7 @@ Wir erhalten
 
 .. sagecellserver::
 
-  sage: print f(-2)
+  sage: print(f(-2))
 
 .. end of output
 
@@ -272,7 +272,7 @@ Mit Sage können wir dieses Problem sowohl analytisch
   sage: h(x)=-1/2*x^2+2*x+4
   sage: w(x) = x
   sage: for loesung in solve(h(x) == w(x), x, solution_dict=True):
-  sage:     print "(", loesung[x], "|", loesung[x], ")"
+  sage:     print("(", loesung[x], "|", loesung[x], ")")
 
 .. end of output
 
@@ -380,7 +380,7 @@ Dieses Ergebnis erhalten wir auch mit Hilfe von Sage:
 
 .. sagecellserver::
 
-  sage: print "Der Inhalt der roten Fläche beträgt:", integrate(h(x)-w(x), x, -2, 4)
+  sage: print("Der Inhalt der roten Fläche beträgt:", integrate(h(x)-w(x), x, -2, 4))
 
 .. end of output
 
@@ -430,7 +430,7 @@ Steigung der Tangente in diesem Punkt gleich der Steigung der Funktion
   sage: loesung = solve([y(-2)==h(-2),
   ...                    dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
   sage: y(x) = y.subs(loesung)
-  sage: print 'Tangentengleichung: y = %sx+%s' % (loesung[m], loesung[t])
+  sage: print('Tangentengleichung: y = %sx+%s' % (loesung[m], loesung[t]))
 
 .. end of output
 
@@ -480,7 +480,7 @@ nicht verlang war, überlassen wir diese Aufgabe Sage.
   ...                  dk(-2)==1.5]
   sage: loesung = solve(gleichungen, a, b, c, d, solution_dict=True)[0]
   sage: k = k.subs(loesung)
-  sage: print k
+  sage: print(k)
 
 .. end of output
 

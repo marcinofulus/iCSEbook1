@@ -175,7 +175,7 @@ Tabelaryczne wypisanie danych (zamiast drukowania)
      var ('a, b')
      hyper(x) = a/x+b
      fit = find_fit(pkt, hyper,solution_dict=True)
-     print fit
+     print(fit)
      rys1=plot(hyper.subs(fit), x, 5, 90, color="green", legend_label='fitted hyperbola')
      rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='measuring points')
      rys1+rys2
@@ -205,14 +205,14 @@ Tabelaryczne wypisanie danych (zamiast drukowania)
 .. sagecellserver::
 
      pktinv=[(l[i],N(1/y[i], digits=4)) for i in range(len(l))]
-     print pktinv
+     print(pktinv)
      var ('a, b, c')
      straight(x) = a*x+b
      straight0(x) = c*x
      fit = find_fit(pktinv, straight,solution_dict=True)
-     print fit
+     print(fit)
      fit0 = find_fit(pktinv, straight0,solution_dict=True)
-     print fit0
+     print(fit0)
      rys1=plot(straight.subs(fit), (x, 0, 90), color="green", legend_label='fitted straight line')
      rys0=plot(straight0.subs(fit0), (x, 0, 90), color="yellow", legend_label='going through 0')
      rys2=point(pktinv, gridlines=True, size=25, color='red', legend_label='measuring points', axes_labels=['l [cm]','T [s]'])

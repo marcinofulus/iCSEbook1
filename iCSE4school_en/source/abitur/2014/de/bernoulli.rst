@@ -47,7 +47,7 @@ Wahrscheinlichkeitsterms.
   sage: p = 0.9
   sage: q = 0.1
   sage: p_E = p^20 + 20*q*p^19
-  sage: print "Wahrscheinlichkeit p(E) =", p_E
+  sage: print("Wahrscheinlichkeit p(E) =", p_E)
 
 .. end of output
 
@@ -66,12 +66,12 @@ mindestens 19 Treffer zu erzielen, mit dem exakten Ergebnis.
   ...       haeufigkeit_e[treffer] = haeufigkeit_e[treffer]+1
   sage: wahrscheinlichkeiten = haeufigkeit_e/wiederholungen
   sage: ueberschrift = ' Treffer  Wahrscheinlichkeit'
-  sage: print ueberschrift
-  sage: print "-"*len(ueberschrift)
+  sage: print(ueberschrift)
+  sage: print("-"*len(ueberschrift))
   sage: for treffer, p_von_e in enumerate(wahrscheinlichkeiten):
-  ...       print "%6i       %g" % (treffer, p_von_e)
+  ...       print("%6i       %g" % (treffer, p_von_e))
   sage: p_geq_19 = wahrscheinlichkeiten[19]+wahrscheinlichkeiten[20]
-  sage: print "Näherung für die Wahrscheinlichkeit p(E) =", p_geq_19
+  sage: print("Näherung für die Wahrscheinlichkeit p(E) =", p_geq_19)
 
 .. end of output
 

@@ -12,7 +12,7 @@ Sprawdźmy czy Sage potrafi rozwiązać równanie :math:`\tan(x)=2\sin(x)`?
 .. sagecellserver::
 
    var('x')
-   print solve(tan(x)==2*sin(x),x)
+   print(solve(tan(x)==2*sin(x),x))
 
 Otrzymujemy dwa rozwiązania. Które jest poprawne? Zauważmy, że mamy
 podany w zadaniu warunek dla kąta, co wyklucza jedno z nich.  W Sage

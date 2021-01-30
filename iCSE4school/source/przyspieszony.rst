@@ -134,8 +134,8 @@ banalnej instrukcji:
     anydata = (3.4, 3.6, 3.3, 3.3, 3.5, 3.7, 3.6, 3.6, 3.6, 3.5)
     mean_data = mean(anydata) # wartość średnia
     std_data = std(anydata) # odchylenie standardowe
-    print "Wartość średnia = ", N(mean_data, digits=3)
-    print "Odchylenie std = ", N(std_data, digits=3)
+    print("Wartość średnia = ", N(mean_data, digits=3))
+    print("Odchylenie std = ", N(std_data, digits=3))
  
 
 
@@ -179,7 +179,7 @@ przylegający do punktów pomiarowych.
      var ('a')
      parabola(x) = a/2*x^2 # Czas oznaczono jako x, aby uniknąć dalej kolizji oznaczeń
      fit = find_fit(pkt, parabola,solution_dict=True)
-     print fit
+     print(fit)
      rys1=plot(parabola.subs(fit), x, 0, 6, color="green", \
        legend_label='dopasowana parabola')
      rys2=point(pkt, gridlines=True, size=25, color='red', \

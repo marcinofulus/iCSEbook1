@@ -19,7 +19,7 @@ podstawić do wzoru na objętość stoźka i gotowe.
     r = l/2
     h = sqrt(l^2-r^2)
     V = 1/3*pi*r^2*h
-    print V.subs(l==6)
+    print(V.subs(l==6))
     assume(l>0)
     show(V.simplify())
    

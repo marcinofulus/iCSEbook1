@@ -39,7 +39,7 @@ Diese Rechnung können wir mit Sage schnell überprüfen:
   sage: A = vector([-2, 1, 4])
   sage: B = vector([-4, 0, 6])
   sage: C = A - 2*(B-A)
-  sage: print C
+  sage: print(C)
 
 Die Koordinaten von :math:`C` sind also :math:`(2|3|0)`.
 
@@ -58,7 +58,7 @@ Sage kann das auch bestätigen:
   sage: A = vector([-2, 1, 4])
   sage: B = vector([-4, 0, 6])
   sage: BA = B-A
-  sage: print norm(BA)
+  sage: print(norm(BA))
 
 Als Aufpunkt wählen wir deswegen :math:`B`.
 Es muss dann nur noch ein Richtungsvektor :math:`\vec G` der Geraden bestimmt werden.
@@ -91,4 +91,4 @@ des obigen Ergebnisses setzten wir diese jeweils gleich 1 beziehungsweise 0:
   sage: G_2 = 0
   sage: G = vector([G_1, G_2, G_3])
   sage: loesung = solve(BA*G == 0, G_3, solution_dict=True)[0]
-  sage: print "Richtungsvektor G:", G.substitute(loesung)
+  sage: print("Richtungsvektor G:", G.substitute(loesung))

@@ -81,7 +81,7 @@ Znajdź *x* takie, że: :math:`3x = 1 (mod \hspace{2mm} 4), \hspace{2mm} 5<x<10`
     
     for x in range(5,11):        #You can change this range
         if (3*x - 1) % 4 == 0:   #You can change this equation
-            print "x =",x
+            print("x =",x)
 
 
 .. only:: latex
@@ -97,7 +97,7 @@ Znajdź *x* takie, że: :math:`3x+2 = 1 (mod \hspace{2mm} 5)`.
 
     for x in range(40):
         if (3*x+2 - 1) % 5 == 0:
-            print x
+            print(x)
 
 .. only:: latex
 
@@ -118,7 +118,7 @@ Znajdź *x* takie, że: 3x = 1 (mod 6).
     for x in range(100):
         if (3*x-1) % 6 == 0:
             odp = x
-    print odp
+    print(odp)
 
 
 
@@ -152,7 +152,7 @@ x = 2 mod 7.
 
     for x in range(100):
         if (x-1) % 3 == 0 and (x-3) % 5 == 0 and (x-2) % 7 == 0:
-            print x
+            print(x)
 
 .. only:: latex
 
@@ -212,14 +212,14 @@ Otrzymujemy parę kluczy, klucz publiczny: :math:`(d, n)` i klucz prywatny: :mat
     e = a1*M+a
     d = b1*M+b
     n = (e*d-1)/M
-    print "public key:", (d, n)
-    print "private key:",(e, n)
+    print("public key:", (d, n))
+    print("private key:",(e, n))
      # encryption
     szyfr = (number*d) % n
-    print "encryption:", szyfr
+    print("encryption:", szyfr)
     # decryption
     deszyfr = (szyfr*e) % n
-    print "decryption:", deszyfr
+    print("decryption:", deszyfr)
 
 .. only:: latex
 
@@ -254,7 +254,7 @@ Otrzymujemy parę kluczy, klucz publiczny: :math:`(d, n)` i klucz prywatny: :mat
         szyfr = szyfr + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
         number = int(number/n)                # 4
-    print szyfr
+    print(szyfr)
 
 
 W podobny sposób deszyfrujemy wiadomość:
@@ -275,7 +275,7 @@ Spróbuj poniżej odszyfrować liczbę:
         szyfr = szyfr + ((pomoc*d) % n)*n^i     # 2, 3
         i=i+1
         number = int(number/n)                  # 4
-    print szyfr
+    print(szyfr)
 
 
 Zazwyczaj chcemy zaszyfrować tekst, a nie liczbę, czyli musimy zamienić litery (znaki) na liczbę. Do tego posłużymy się kodem ASCII.
@@ -292,12 +292,11 @@ Poniżej algorytm szyfrowania wiadomości tekstowej (ten kod został napisany i 
     tekst="This is the secret message or anything."
     for x in tekst:
         i=i+1
-        print x,"->", ord(x)," ",
+        print(x,"->", ord(x)," ",)
         if (i%10==0):
-            print 
+            print()
         number=number + ord(x)*128^i
-    print
-    print "number =", number
+    print("number =", number)
   
 
 Pełny algorytm szyfrujący
@@ -311,13 +310,13 @@ Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i d
     i = 0
     tekst = "This is the secret message or anything." #message
     tekst2 = ""
-    print "message:", tekst
+    print("message:", tekst)
     # change text to number
     for x in tekst:
         i = i + 1
         number = number + ord(x)*128^i
-    print "number:", number
-    print ""
+    print("number:", number)
+    print()
     # encription
     szyfr = 0
     i=0
@@ -326,7 +325,7 @@ Po złożeniu powyższych programów otrzymujemy pełny algorytm szyfrowania i d
         szyfr = szyfr + ((pomoc*d) % n)*n^i
         i = i + 1
         number = int(number/n)
-    print "encription:", szyfr
+    print("encription:", szyfr)
 
 
 .. only:: latex
@@ -346,21 +345,21 @@ Pełny algorytm deszyfrujący
     tekst2 = ""
     deszyfr = 0
     i = 0
-    print "encription:", szyfr
+    print("encription:", szyfr)
     # decription
     while szyfr>0:
         pomoc = szyfr%n
         deszyfr = deszyfr + ((pomoc*e) % n)*n^i
         i = i+1
         szyfr = int(szyfr/n)
-    print "decription: ", deszyfr
+    print("decription: ", deszyfr)
     ## change number to text
     i = 0
     while deszyfr>0:
         i = i+1
         deszyfr = int(deszyfr/128)
         tekst2 = tekst2 + chr(deszyfr%128)
-    print "message: ", tekst2
+    print("message: ", tekst2)
  
 
 .. only:: latex
@@ -394,10 +393,10 @@ Poniżej przykład
     def _(n=slider( srange(20,32,2))):
         a = int(random()*10^n)
         a = next_prime(a)
-        print a
+        print(a)
         b = int(random()*10^n)
         b = next_prime(b)
-        print b
+        print(b)
         n = a*b
         print(factor(n))
 
@@ -409,13 +408,13 @@ Poniżej przykład
     @interact 
     def _(n=slider( range(34,101,2))):
         t = 2^((n-34)/2)
-        print n,"-digits prime numbers, factoring time:", t, "minutes"
+        print(n,"-digits prime numbers, factoring time:", t, "minutes")
         if t>100 and t<60*24:
-            print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
+            print(n,"-digits prime numbers, factoring time:", int(t/60), "hours")
         elif t>60*24 and t<60*24*365:
-            print n,"-digits prime numbers, factoring time:", int(t/60/24), "days"
+            print(n,"-digits prime numbers, factoring time:", int(t/60/24), "days")
         elif t>60*24*365:
-            print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
+            print(n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year")
 
 
 Generowanie szyfru RSA
@@ -444,7 +443,7 @@ Klucz prywatny to para liczb:  :math:`(e, n)`.
     f = (p-1)*(q-1)
     los = int(f*random())
     e = next_prime(los)
-    print "p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f
+    print("p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f)
 
 
 Ostatecznie należy wyznaczyć liczbę :math:`e` taką, że: :math:`(d \cdot e) \hspace{1mm} mod f=1`.
@@ -475,9 +474,9 @@ Spróbuj poprawić ten kod!
         q  = int(n0/a0)
         r  = n0 % a0
     d = p1
-    print "verification : (d*e)%f =", (d*e)%f
-    print " public key:", d, n
-    print "private key:", e, n
+    print("verification : (d*e)%f =", (d*e)%f)
+    print(" public key:", d, n)
+    print("private key:", e, n)
 
  
 Pełny algorytm szyfrowania RSA
@@ -491,13 +490,13 @@ Wystarczy skopiować algorytm szyfrowania z punktu 2 i zamienić: pomoc*d na pom
     i = 0
     tekst = "This is secret message or anything." #message
     tekst2 = ""
-    print "message:", tekst
+    print("message:", tekst)
     # change text to number
     for x in tekst:
         i = i+1
         number = number + ord(x)*128^i
-    print "number:", number
-    print ""
+    print("number:", number)
+    print("")
     # encription
     szyfr = 0
     i = 0
@@ -506,7 +505,7 @@ Wystarczy skopiować algorytm szyfrowania z punktu 2 i zamienić: pomoc*d na pom
         szyfr = szyfr + ((pomoc^d) % n)*n^i
         i = i + 1
         number = int(number/n)
-    print "encription:", szyfr
+    print("encription:", szyfr)
 
 
 Pełen algorym deszyfrujący RSA
@@ -519,21 +518,21 @@ Wystarczy skopiować algorytm deszyfrowania z punktu 2 i zamienić: pomoc*d na p
     tekst2 = ""
     deszyfr = 0
     i = 0
-    print "encription:", szyfr
+    print("encription:", szyfr)
     # decription
     while szyfr>0:
         pomoc = szyfr%n
         deszyfr = deszyfr + ((pomoc^e) % n)*n^i
         i = i + 1
         szyfr = int(szyfr/n)
-    print "decription: ", deszyfr
+    print("decription: ", deszyfr)
     ## change number to text
     i = 0
     while deszyfr>0:
         i = i + 1
         deszyfr = int(deszyfr/128)
         tekst2 = tekst2 + chr(deszyfr%128)
-    print "message: ", tekst2
+    print("message: ", tekst2)
  
 
 Wnioski

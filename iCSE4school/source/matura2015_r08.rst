@@ -19,7 +19,7 @@ Nie potrafimy w pamięci rozwiązywać równań czwartego stopnia, więc stosuje
 
    f(x) = x^4 -x^2 -2*x +3
    for s in f(x).solve(x):
-       print s.rhs().n()
+       print(s.rhs().n())
 
 
 .. only:: latex

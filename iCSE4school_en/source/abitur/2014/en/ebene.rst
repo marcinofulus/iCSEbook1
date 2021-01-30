@@ -111,7 +111,7 @@ sphere intersects the plane. The calculation can be verified by Sage:
    line = z+t*n0
    solution = solve(3*line[1]+4*line[2] == 5, t, solution_dict=True)[0]
    distance = abs(solution[t])
-   print "Distance: center of the sphere - plane:", distance
+   print("Distance: center of the sphere - plane:", distance)
    if distance < radius:
        print('plane intersects sphere')
    else:

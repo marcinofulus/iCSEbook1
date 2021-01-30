@@ -44,8 +44,8 @@ use Sage:
    total = 200
    p = 0.5
    for approving in (111, 112, 113):
-       print "Level of significance for {} approvals: {:4.2f}%".format(
-           approving, (1-binom.cdf(approving-1, total, p))*100)
+       print("Level of significance for {} approvals: {:4.2f}%".format(
+           approving, (1-binom.cdf(approving-1, total, p))*100))
 
 .. end of output
 

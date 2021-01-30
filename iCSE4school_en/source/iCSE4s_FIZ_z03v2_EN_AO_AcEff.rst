@@ -301,7 +301,7 @@ Numerical wave reflection
     sage: dx = float(l)/(N-1)
     sage: c2 = np.ones(N)
     sage: dt = 0.005
-    sage: print np.sqrt(np.max(c2))*dt/dx
+    sage: print(np.sqrt(np.max(c2))*dt/dx)
     sage: x = np.linspace(0,l,N)
     sage: u = np.zeros(N)
     sage: u0 = np.zeros(N)

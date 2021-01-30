@@ -50,7 +50,7 @@ With the help of Sage, we can solve the corresponding linear system:
    equations = [f(0) == 3, f(1) == 1, f(2) == 0.5, f(4) == 1.2, f(6) == 2]
    solution = solve(equations, a, b, c, d, e, solution_dict=True)[0]
    f(x) = f(x).substitute(solution)
-   print f(x)
+   print(f(x))
      
 .. end of output
 
@@ -68,7 +68,7 @@ The value of the integral can be approximately reproduced as well:
 
 .. sagecellserver::
 
-   print "Value of the integral:", float(integrate(f(x), x, 3, 5))
+   print("Value of the integral:", float(integrate(f(x), x, 3, 5)))
      
 .. end of output
 

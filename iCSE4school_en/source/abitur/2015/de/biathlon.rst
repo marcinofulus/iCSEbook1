@@ -38,7 +38,7 @@ Simulation. Dabei dürfen wir allerdings keine perfekte Übereinstimmung erwarte
     ...       result = [random() < p for _ in range(5)]
     ...       if result == goal:
     ...           successes = successes+1
-    sage: print N(successes/rounds), p^2*(1-p)^3
+    sage: print(N(successes/rounds), p^2*(1-p)^3)
 
 .. end of output
 
@@ -79,7 +79,7 @@ Simulation:
     ...       result = [random() < p for _ in range(5)]
     ...       if sum(result) == 4:
     ...           successes = successes+1
-    sage: print N(successes/rounds), 5*p^4*(1-p)
+    sage: print(N(successes/rounds), 5*p^4*(1-p))
 
 .. end of output
 

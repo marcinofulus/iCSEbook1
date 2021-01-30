@@ -88,11 +88,11 @@ Diese Ergebnisse lassen sich mit Sage bestätigen.
 
   sage: df = derivative(f)
   sage: ddf = derivative(df)
-  sage: print "f'(x)  = ", df
-  sage: print "f''(x) = ", ddf
+  sage: print("f'(x)  = ", df)
+  sage: print("f''(x) = ", ddf)
   sage: for extremum in solve(df == 0, x):
   sage:     x = extremum.right()
-  sage:     print "Zweite Ableitung des Extremums bei x=%s: %s" % (x, ddf(x))
+  sage:     print("Zweite Ableitung des Extremums bei x=%s: %s" % (x, ddf(x)))
 
 .. end of output
 
@@ -139,12 +139,12 @@ wie folgt mit Sage zeigen:
 
 .. sagecellserver::
 
-  sage: print "g(x) = ", g(x)
-  sage: print "-g(-x) = ", -g(-x)
+  sage: print("g(x) = ", g(x))
+  sage: print("-g(-x) = ", -g(-x))
   sage: if g(x) == -g(-x):
-  sage:     print "g(x) ist punktsymmetrisch."
+  sage:     print("g(x) ist punktsymmetrisch.")
   sage: else:
-  sage:     print "g(x) ist nicht punktsymmetrisch."
+  sage:     print("g(x) ist nicht punktsymmetrisch.")
 
 .. end of output
 
@@ -168,7 +168,7 @@ Mit Hilfe von Sage erhält man entsprechend
 .. sagecellserver::
 
   sage: F = f.integrate(x)
-  sage: print "Stammfunktion F = ", F
+  sage: print("Stammfunktion F = ", F)
   sage: pretty_print(html("$\int_0^4 f(x)\mathrm{d}x = $" + str(F(4)-F(0))))
 
 .. end of output
@@ -281,8 +281,8 @@ Mit Sage lassen sich so die genauen Grenzen berechnen:
 .. sagecellserver::
 
   sage: result = solve(f(x) == 5, x)
-  sage: print "Lösung der Gleichung " + str(f) + " = 5 :" + repr(result)
-  sage: print "Dies entspricht etwa: x = %5.3f und x = %5.3f." % (result[0].right().n(), result[1].right().n())
+  sage: print("Lösung der Gleichung " + str(f) + " = 5 :" + repr(result))
+  sage: print("Dies entspricht etwa: x = %5.3f und x = %5.3f." % (result[0].right().n(), result[1].right().n()))
 
 .. end of output
 

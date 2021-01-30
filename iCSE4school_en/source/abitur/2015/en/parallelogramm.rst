@@ -30,13 +30,13 @@ point A on the other hand equals indeed 12.
 
      a = vector([0, 1, 2])
      b = vector([2, 5, 6])
-     print 'Length of vector from A to B:', norm(b-a)
+     print('Length of vector from A to B:', norm(b-a))
      c = a+2*(b-a)
      d = a-2*(b-a)
-     print 'Coordinates of C:', c
-     print 'Coordinates of D:', d
-     print 'Distance of points A and C:', norm(c-a)
-     print 'Distance of points A and D:', norm(d-a)
+     print('Coordinates of C:', c)
+     print('Coordinates of D:', d)
+     print('Distance of points A and C:', norm(c-a))
+     print('Distance of points A and D:', norm(d-a))
 
 .. end of output
 

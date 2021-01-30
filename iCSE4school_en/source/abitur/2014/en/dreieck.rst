@@ -80,7 +80,7 @@ We check the result by means of Sage:
    ab = b - a
    ac = c - a
    A = 1/2 * abs(ab.cross_product(ac))
-   print "Area of the triangle:", A
+   print("Area of the triangle:", A)
 
 .. end of output
 
@@ -133,7 +133,7 @@ We check this point of intersection by means of Sage
    plane = Polyhedron(eqns=[(-4, 1, 1, 1)])
    straight_line = Polyhedron(vertices=[p], rays=[-v, v])
    r = straight_line.intersection(plane).vertices()[0].vector()
-   print 'point of intersection R', r
+   print('point of intersection R', r)
 
 .. end of output
 
@@ -285,6 +285,6 @@ help of Sage.
    n = axis_of_incidence.normalized()
    cosa = -n.dot_product(v.normalized())
    cosb = n.dot_product((r-q).normalized())
-   print simplify(cosa-cosb)
+   print(simplify(cosa-cosb))
 
 .. end of output

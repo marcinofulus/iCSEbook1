@@ -53,7 +53,7 @@ are assigned to the values :math:`1` and :math:`2`, respectively.
        team = Subsets(14, 4).random_element()
        if 1 in team and 2 in team:
            frequency = frequency+1
-   print 'Approximation for the probability P(A) = %4.1f%%' % float(100*frequency/iterations)
+   print('Approximation for the probability P(A) = %4.1f%%' % float(100*frequency/iterations))
 
 When realizing event :math:`B`, there are :math:`\binom{8}{2}=28` different possibilities
 to choose two girls and :math:`\binom{6}{2}=15` for the boys.
@@ -84,7 +84,7 @@ the numbers above :math:`8` correspond to boys.
                number_boys = number_boys+1
        if number_girls == number_boys:
            frequency = frequency+1
-   print 'Approximation for the probability P(B) = %4.1f%%' % float(100*frequency/iterations)
+   print('Approximation for the probability P(B) = %4.1f%%' % float(100*frequency/iterations))
 
 **Solution of part b**
 
@@ -117,5 +117,5 @@ The second simulation from part a can be easily ajusted to check our interpretat
                frequency = frequency+1
                break
    p = (binomial(14, 4)-binomial(6, 4))/binomial(14, 4)
-   print 'given probability = %6.3f' % float(p)
-   print 'simulated probability = %6.3f' % float(frequency/iterations)
+   print('given probability = %6.3f' % float(p))
+   print('simulated probability = %6.3f' % float(frequency/iterations))

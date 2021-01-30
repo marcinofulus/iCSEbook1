@@ -50,7 +50,7 @@ This can be checked using Sage:
 
 .. sagecellserver::
 
-   print "intersection with the y-axis ", f(0), u"\u2248", f(0).n(digits=4)
+   print("intersection with the y-axis ", f(0), u"\u2248", f(0).n(digits=4))
 
 .. end of output
 
@@ -108,7 +108,7 @@ The value :math:`f(6)` can be determined as
 
 .. sagecellserver::
 
-  print "f(6) =", f(6),
+  print("f(6) =", f(6),)
 
 .. end of output
 
@@ -128,7 +128,7 @@ The same result is obtained by means of Sage:
 .. sagecellserver::
 
    df = derivative(f,  x)
-   print "The derivation of f is:", df
+   print("The derivation of f is:", df)
    p2 = plot(df(x), x, (-7,6), figsize=(4, 2.8))
    show(p2)
 
@@ -185,7 +185,7 @@ We obtain
 
 .. sagecellserver::
 
-   print f(-2)
+   print(f(-2))
 
 .. end of output
 
@@ -273,7 +273,7 @@ Using Sage, we can solve the problem analytically
    h(x)=-1/2*x^2+2*x+4
    w(x) = x
    for solution in solve(h(x) == w(x), x, solution_dict=True):
-       print "(", solution[x], "|", solution[x], ")"
+       print("(", solution[x], "|", solution[x], ")")
 
 .. end of output
 
@@ -380,7 +380,7 @@ This result can be verified with Sage:
 
 .. sagecellserver::
 
-   print "The content of the red area is:", integrate(h(x)-w(x), x, -2, 4)
+   print("The content of the red area is:", integrate(h(x)-w(x), x, -2, 4))
 
 .. end of output
 
@@ -429,7 +429,7 @@ has to equal the slope of the function :math:`h(x)` at this point.
    solution = solve([y(-2)==h(-2),
                     dy(-2)==dh(-2)], m, t, solution_dict=True)[0]
    y(x) = y.subs(solution)
-   print 'Equation of the tangent: y = %sx+%s' % (solution[m], solution[t])
+   print('Equation of the tangent: y = %sx+%s' % (solution[m], solution[t]))
 
 .. end of output
 
@@ -477,7 +477,7 @@ this out for us:
                   dk(-2)==1.5]
    solutions = solve(equations, a, b, c, d, solution_dict=True)[0]
    k = k.subs(solutions)
-   print k
+   print(k)
 
 .. end of output
 

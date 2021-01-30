@@ -47,7 +47,7 @@ Find *x* if you know: :math:`3x = 1 (mod \hspace{2mm} 4), \hspace{2mm} 5<x<10`.
 
     for x in range(5,11):        #You can change this range
         if (3*x - 1) % 4 == 0:   #You can change this equation
-            print "x=",x
+            print("x=",x)
 
 
 Exercise 2.
@@ -58,7 +58,7 @@ Find *x* if you know: :math:`3x+2 = 1 (mod \hspace{2mm} 5)`.
 
     for x in range(40):
         if (3*x+2 - 1) % 5 == 0:
-            print x
+            print(x)
 
 
 We can realise there are infinitely many solutions. What is more, the solutions determine an arithmetic progression.
@@ -71,8 +71,8 @@ Find *x* if you know: :math:`3x = 1 (mod \hspace{2mm} 6)`.
 
     for x in range(100):
         if (3*x-1) % 6 == 0:
-            print x
-    print "?"
+            print(x)
+    print("?")
 
 
 In the exercise above there is not a number which satisfies the given congruity.
@@ -99,7 +99,7 @@ x = 2 mod 7.
 
     for x in range(100):
         if (x-1) % 3 == 0 and (x-3) % 5 == 0 and (x-2) % 7 == 0:
-            print x
+            print(x)
     
 
 Fermet’s Little Theorem.
@@ -158,14 +158,14 @@ Below you can find an example of the  number cither:
     e=a1*M+a
     d=b1*M+b
     n=(e*d-1)/M
-    print " public key:", (d, n)
-    print "private key:",(e, n)
+    print(" public key:", (d, n))
+    print("private key:",(e, n))
     # encryption
     encrypted = (number*d) % n
-    print "encryption:", encrypted
+    print("encryption:", encrypted)
     # decryption
     decrypted = (encrypted*e) % n
-    print "decryption:", decrypted
+    print("decryption:", decrypted)
  
 
 What to do when the number is larger than n?
@@ -192,7 +192,7 @@ What to do when the number is larger than n?
         encrypted = encrypted + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
         number=int(number/n)                  # 4
-    print encrypted
+    print(encrypted)
 
 
 In the similar way the message is decripted.
@@ -213,7 +213,7 @@ Try to decription the number (message) below.
         encrypted = encrypted + ((pomoc*d) % n)*n^i   # 2, 3
         i=i+1
         number=int(number/n)                  # 4
-    print encrypted
+    print(encrypted)
 
 
 What we usually want to do is to cipher a text not a number, so we have to substitute letters into numbers. We shall use ASCII code. Each letter, symbol is given a number from 1 to 128.
@@ -227,12 +227,12 @@ Below, you can find the algorithm of the encryption (this code was written and p
     tekst="This is the secret message or anything."
     for x in tekst:
         i=i+1
-        print x,"->", ord(x)," ",
+        print(x,"->", ord(x)," ",)
         if (i%10==0):
-            print 
+            print()
         number=number + ord(x)*128^i
     print
-    print "number =", number
+    print("number =", number)
   
 
 The full algorithm of encryption.
@@ -245,13 +245,13 @@ Following the submission of these algorithms we get full algorithm to encrypt an
     i=0
     tekst="This is the secret message or anything." #message
     tekst2=""
-    print "message:", tekst
+    print("message:", tekst)
     # change text to number
     for x in tekst:
         i=i+1
         number=number + ord(x)*128^i
-    print "number:", number
-    print ""
+    print("number:", number)
+    print("")
     # encription
     encrypted = 0
     i=0
@@ -260,7 +260,7 @@ Following the submission of these algorithms we get full algorithm to encrypt an
         encrypted = encrypted + ((pomoc*d) % n)*n^i
         i=i+1
         number=int(number/n)
-    print "encription:", encrypted
+    print("encription:", encrypted)
 
 
 The full algorithm of decryption.
@@ -270,21 +270,21 @@ The full algorithm of decryption.
     tekst2=""
     decrypted = 0
     i=0
-    print "encription:", encrypted
+    print("encription:", encrypted)
     # decription
     while encrypted>0:
         pomoc=encrypted%n
         decrypted = decrypted + ((pomoc*e) % n)*n^i
         i=i+1
         encrypted=int(encrypted/n)
-    print "decription: ", decrypted
+    print("decription: ", decrypted)
     ## change number to text
     i=0
     while decrypted>0:
         i=i+1
         decrypted=int(decrypted/128)
         tekst2 = tekst2 + chr(decrypted%128)
-    print "message: ", tekst2
+    print("message: ", tekst2)
  
 
 RSA asymmetric cipher.
@@ -301,13 +301,13 @@ Example below.
     @interact 
     def _(n=slider( range(34,101,2))):
         t=2^((n-34)/2)
-        print n,"-digits prime numbers, factoring time:", t, "minutes"
+        print(n,"-digits prime numbers, factoring time:", t, "minutes")
         if t>100 and t<60*24:
-            print n,"-digits prime numbers, factoring time:", int(t/60), "hours"
+            print(n,"-digits prime numbers, factoring time:", int(t/60), "hours")
         elif t>60*24 and t<60*24*365:
-            print n,"-digits prime numbers, factoring time:", int(t/60/24), "days"
+            print(n,"-digits prime numbers, factoring time:", int(t/60/24), "days")
         elif t>60*24*365:
-            print n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year"
+            print(n,"-digits prime numbers, factoring time:", int(t/60/24/365), "year")
 
 Notice how time-consuming the calculation of the distribution of prime factors.
 
@@ -338,7 +338,7 @@ It is enough to copy the algorithm of cither from previous lessons and substitut
     f=(p-1)*(q-1)
     los=int(f*random())
     e=next_prime(los)
-    print "p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f
+    print("p =",p, ", q =",q, ", e =",e, ", n =", n, ", f =", f)
 
 Determine :math:`e` as: :math:`(d \cdot e) \hspace{1mm} mod f=1`.
 
@@ -367,9 +367,9 @@ My students changed the existing program on the Internet, but not always, does i
         q  = int(n0/a0)
         r  = n0 % a0
     d = p1
-    print "verification : (d*e)%f =", (d*e)%f
-    print " public key:", d, n
-    print "private key:", e, n
+    print("verification : (d*e)%f =", (d*e)%f)
+    print(" public key:", d, n)
+    print("private key:", e, n)
  
 
 The full algorithm of encryption RSA.
@@ -382,13 +382,13 @@ It is enough to copy the algorithm of coding from the previous lessons and subst
     i=0
     tekst="This is secret message or anything." #message
     tekst2=""
-    print "message:", tekst
+    print("message:", tekst)
     # change text to number
     for x in tekst:
         i=i+1
         number=number + ord(x)*128^i
-    print "number:", number
-    print ""
+    print("number:", number)
+    print("")
     # encription
     encrypted = 0
     i=0
@@ -397,7 +397,7 @@ It is enough to copy the algorithm of coding from the previous lessons and subst
         encrypted = encrypted + ((pomoc^d) % n)*n^i
         i=i+1
         number=int(number/n)
-    print "encription:", encrypted
+    print("encription:", encrypted)
 
 
 The full algorithm of decryption RSA.
@@ -411,19 +411,19 @@ and substitute pomoc*e them pomoc^e.
     tekst2=""
     decrypted = 0
     i=0
-    print "encription:", encrypted
+    print("encription:", encrypted)
     # decription
     while encrypted>0:
         pomoc=encrypted%n
         decrypted = decrypted + ((pomoc^e) % n)*n^i
         i=i+1
         encrypted=int(encrypted/n)
-    print "decription: ", decrypted
+    print("decription: ", decrypted)
     ## change number to text
     i=0
     while decrypted>0:
         i=i+1
         decrypted=int(decrypted/128)
         tekst2 = tekst2 + chr(decrypted%128)
-    print "message: ", tekst2
+    print("message: ", tekst2)
  

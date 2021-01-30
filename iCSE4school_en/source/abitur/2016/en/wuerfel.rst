@@ -43,7 +43,7 @@ can obtain this result also with the help of Sage.
    D = vector([0, 0, -2])
    EH = E-H
    DH = D-H
-   print "Point A:", EH+DH
+   print("Point A:", EH+DH)
 
 
 **Solution of part b**
@@ -101,4 +101,4 @@ Alternatively we can determine the intersection point with Sage:
        solution = solutions[0]
    else:
        solution = solutions[1]
-   print "Point P:", edge.substitute(solution)
+   print("Point P:", edge.substitute(solution))

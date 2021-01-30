@@ -73,7 +73,7 @@ be read off.
 .. sagecellserver::
 
      dg(x, a, c) = g.derivative(x)
-     print 'dg/dx =', dg(x, a, c)
+     print('dg/dx =', dg(x, a, c))
      p1 = plot(dg(x, 0.5, 0), (-2*pi,2*pi), color='blue')
      p2 = plot(dg(x, 1, 0), (-2*pi,2*pi), color='red')
      p3 = plot(dg(x, 2, 0), (-2*pi,2*pi), color='green')

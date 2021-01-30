@@ -50,7 +50,7 @@ experiment with Sage.
        e = event()
        eventspace[e] = eventspace[e]+1
    for k, v in eventspace.items():
-       print "Frequency of the event %3s: %5i" % (k, v)
+       print("Frequency of the event %3s: %5i" % (k, v))
 
 **Solution of part b**
 
@@ -68,4 +68,4 @@ A simulation with Sage yields:
    x = 0
    for n in range(iterations):
        x = x+len(event())
-   print "The expectation value of X is about: ", "%4.2f" % float(x/iterations)
+   print("The expectation value of X is about: ", "%4.2f" % float(x/iterations))

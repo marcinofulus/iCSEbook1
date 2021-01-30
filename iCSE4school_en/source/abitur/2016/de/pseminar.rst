@@ -53,7 +53,7 @@ Anhand einer Simulation mit Sage können wir diesen Wert überprüfen. Dabei wer
   sage:     team = Subsets(14, 4).random_element()
   sage:     if 1 in team and 2 in team:
   sage:         haeufigkeit = haeufigkeit+1
-  sage: print 'Näherung für die Wahrscheinlichkeit P(A) = %4.1f%%' % float(100*haeufigkeit/iterationen)
+  sage: print('Näherung für die Wahrscheinlichkeit P(A) = %4.1f%%' % float(100*haeufigkeit/iterationen))
 
 Um Ereignis B zu realisieren, gibt es :math:`\binom{8}{2}=28` Möglichkeiten Mädchen
 auszuwählen und :math:`\binom{6}{2}=15` Möglichkeiten bei den Jungen.
@@ -84,7 +84,7 @@ Zahlen über :math:`8` entsprechen Jungen.
   sage:             anzahl_jungen = anzahl_jungen+1
   sage:     if anzahl_maedchen == anzahl_jungen:
   sage:         haeufigkeit = haeufigkeit+1
-  sage: print 'Näherung für die Wahrscheinlichkeit P(B) = %4.1f%%' % float(100*haeufigkeit/iterationen)
+  sage: print('Näherung für die Wahrscheinlichkeit P(B) = %4.1f%%' % float(100*haeufigkeit/iterationen))
 
 **Lösung zu Teil b**
 
@@ -120,5 +120,5 @@ Interpretation zu überprüfen.
   sage:             haeufigkeit = haeufigkeit+1
   sage:             break
   sage: p = (binomial(14, 4)-binomial(6, 4))/binomial(14, 4)
-  sage: print 'vorgegebene Wahrscheinlichkeit = %6.3f' % float(p)
-  sage: print 'simulierte Wahrscheinlichkeit = %6.3f' % float(haeufigkeit/iterationen)
+  sage: print('vorgegebene Wahrscheinlichkeit = %6.3f' % float(p))
+  sage: print('simulierte Wahrscheinlichkeit = %6.3f' % float(haeufigkeit/iterationen))

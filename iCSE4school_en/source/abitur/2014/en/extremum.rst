@@ -31,7 +31,7 @@ which can easily be verified by means of Sage:
 
     f(x) = x/ln(x)
     df(x) = f.derivative(x).log_simplify()
-    print df(x)
+    print(df(x))
 
 .. end of output
 
@@ -41,7 +41,7 @@ Setting the derivative equal to zero yields the only extremum at
 .. sagecellserver::
 
     x0 = solve(df(x)==0, x)[0].lhs()
-    print 'extremum at (', x0, '|', f(x0), ')'
+    print('extremum at (', x0, '|', f(x0), ')')
 
 .. end of output
 
@@ -63,8 +63,8 @@ This result can again be verified by means of Sage:
 .. sagecellserver::
 
     ddf(x) = df.derivative(x).log_simplify()
-    print ddf(x)
-    print ddf(x0)
+    print(ddf(x))
+    print(ddf(x0))
 
 .. end of output
 

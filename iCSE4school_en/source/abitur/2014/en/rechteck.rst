@@ -53,9 +53,9 @@ by asking for a zero of the derivative of the area.
       a(x) = x*f(x)
       da(x) = a.derivative(x).log_simplify()
       x0 = solve(da(x)==0, x)[0].rhs()
-      print 'width :', x0
-      print 'height:', f(x0)
-      print 'area  :', a(x0)
+      print('width :', x0)
+      print('height:', f(x0))
+      print('area  :', a(x0))
 
 .. end of output
 

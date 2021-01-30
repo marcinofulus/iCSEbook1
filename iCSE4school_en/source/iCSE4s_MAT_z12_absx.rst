@@ -174,7 +174,7 @@ The next graph is a bit more complicated but it has more functions and options w
     ...       p1= plot(p,-10,10, color='orange', thickness=3) 
     ...      
     ...       show(p1)
-    ...       print (p)
+    ...       print(p)
     <html>...</html>
 
 

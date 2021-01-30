@@ -49,11 +49,11 @@ A można przecież policzyć (prawie) ręcznie:
 .. sagecellserver::
    
    for i,el in enumerate(CartesianProduct([0,1],[0,1],[0,1])):
-       print i+1,el,sum(el)
+       print(i+1,el,sum(el))
 
 
 .. sagecellserver::
 
 
-   print len([sum(el) for el in CartesianProduct([0,1],[0,1],[0,1]) if sum(el)==2])
-   print len(CartesianProduct([0,1],[0,1],[0,1]) )
+   print(len([sum(el) for el in CartesianProduct([0,1],[0,1],[0,1]) if sum(el)==2]))
+   print(len(CartesianProduct([0,1],[0,1],[0,1]) ))

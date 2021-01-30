@@ -25,9 +25,9 @@ This can also be checked with Sage
 
    f(x) = x^2*sin(x)
    if f(-x) == -f(x):
-       print "The function is odd."
+       print("The function is odd.")
    else:
-       print "The function is not odd."
+       print("The function is not odd.")
    
 .. end of output
 
@@ -46,6 +46,6 @@ Sage can confirm that:
 
 .. sagecellserver::
 
-   print "Value of the integral:", integral(f, x, -pi, pi)
+   print("Value of the integral:", integral(f, x, -pi, pi))
 
 .. end of output

@@ -73,7 +73,7 @@ Mit Sage lässt sich eine entsprechende Simulation durchführen.
    sage: gewinnsumme = 0
    sage: for _ in range(spiele):
    ...       gewinnsumme = gewinnsumme+random.choice(gewinne)
-   sage: print "Erwartungswert = {:4.2f} Euro".format(float(gewinnsumme)/spiele)
+   sage: print("Erwartungswert = {:4.2f} Euro".format(float(gewinnsumme)/spiele))
 
 .. end of output
 
@@ -109,8 +109,8 @@ Kindergartens.
   sage: ueberschuss = 0
   sage: for _ in range(spiele):
   ...       ueberschuss = ueberschuss+random.choice(gewinne)
-  sage: print "Überschuss für den Kindergarten: {} Euro".format(ueberschuss)
-  sage: print "Durchschnittlicher Gewinn pro Spiel für den Kindergarten: {:4.2f} Euro".format(
+  sage: print("Überschuss für den Kindergarten: {} Euro".format(ueberschuss))
+  sage: print("Durchschnittlicher Gewinn pro Spiel für den Kindergarten: {:4.2f} Euro".format()
   ...         float(ueberschuss/spiele))
 
 

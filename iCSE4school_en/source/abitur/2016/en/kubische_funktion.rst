@@ -70,6 +70,6 @@ plot of part a). However, we can also calculate it with the help of Sage:
 
 .. sagecellserver::
 
-   print "Point of inflection at:", solve(ddf(x) == 0, x)[0]
+   print("Point of inflection at:", solve(ddf(x) == 0, x)[0])
      
 .. end of output

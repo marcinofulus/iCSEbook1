@@ -32,7 +32,7 @@ Diese Rechnung lässt sich mit Sage überprüfen:
 
     sage: f(x, a) = x*exp(a*x)
     sage: df = f.derivative(x)
-    sage: print 'Ableitung von f:', df
+    sage: print('Ableitung von f:', df)
     sage: solve(df(2, a) == 0, a)
 
 .. end of output

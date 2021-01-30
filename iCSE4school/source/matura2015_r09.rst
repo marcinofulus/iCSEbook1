@@ -23,8 +23,8 @@ trójkącie i czworoboku.
           b/2 + c/2 + s == 180,\
           b/2 + a/2 + p ==180 ] 
    sol = solve(eqs,[p,s,r,q],solution_dict=True)
-   print (q+s).subs(sol).subs( a==(360-b-c-d) )
-   print (p+r).subs(sol).subs( a==(360-b-c-d) )
+   print((q+s).subs(sol).subs( a==(360-b-c-d) ))
+   print((p+r).subs(sol).subs( a==(360-b-c-d) ))
 
 
 .. admonition:: :code:`solution_dict=True`

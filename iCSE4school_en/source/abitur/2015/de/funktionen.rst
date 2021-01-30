@@ -55,8 +55,8 @@ In Sage differenzieren wir zur Überprüfung zunächst die Funktion
 
     sage: h(x) = x^4+x^2+1
     sage: dh(x) = diff(h, x)
-    sage: print 'Ableitung von h(x):', dh
-    sage: print 'Wert des bestimmten Integrals:', integrate(dh(x), x, 0, 1)
+    sage: print('Ableitung von h(x):', dh)
+    sage: print('Wert des bestimmten Integrals:', integrate(dh(x), x, 0, 1))
 
 .. end of output
 

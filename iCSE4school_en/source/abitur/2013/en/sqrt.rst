@@ -49,8 +49,8 @@ As a consequence, :math:`g'(0)=\frac{1}{2}`.
 .. sagecellserver::
 
      dg = g.derivative()
-     print "Derivative of g(x) : ", dg
-     print "Derivative at x = 0: ", dg(0)
+     print("Derivative of g(x) : ", dg)
+     print("Derivative at x = 0: ", dg(0))
 
 .. end of output
 

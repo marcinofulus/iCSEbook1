@@ -190,10 +190,10 @@ Następny wykres jest trochę bardziej skomplikowany, ale ma więcej funkcji i o
     def para_(n2=selector(values =(sin(x),cos(x),ln(x),sqrt(x),(x),), label="wybierz funkcję"),
     n3=selector(values =((x),abs(x)), label="zastosuj wartość bezwzględną"), n1=slider(-1,5,1,default = 1, label="wybierz wykładnik potęgi ")):
         var('x')
-        p=n3(n2)^n1
-        p1= plot(p,-10,10, color='orange', thickness=3)
+        p = n3(n2)^n1
+        p1 = plot(p,-10,10, color='orange', thickness=3)
         show(p1, figsize=4)
-        print (p)
+        print(p)
 
 
 .. end of output

@@ -300,7 +300,7 @@ dowolnej kolejności, np. takimi jak te generowane w grze w chaos.
     for bs in [15, 27, 46, 79, 135, 232, 398, 681, 1165, 1995]:
         H = np.histogramdd(xy,bins=[np.linspace(-1.,1.0,int(bs))]*2 )[0]
         scal.append( (2*bs,np.sum(H>0) ))
-        print np.sum(H>0),bs**2
+        print(np.sum(H>0),bs**2)
 
 
 .. only:: latex
@@ -327,7 +327,7 @@ dowolnej kolejności, np. takimi jak te generowane w grze w chaos.
     var('a,d,x')
     model(x)=a*x^d
     fit = find_fit(scal,model)
-    print fit
+    print(fit)
     plt = plot_loglog(model(x).subs(fit),(x,1,1e5),title="$y= c \epsilon^{%0.4f}$"%(d.subs(fit))) + point(scal,size=30)
 
     plt.show()

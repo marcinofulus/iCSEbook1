@@ -66,7 +66,7 @@ unterschiedlichen Amplituden und Perioden leicht ablesen.
 .. sagecellserver::
 
     sage: dg(x, a, c) = g.derivative(x)
-    sage: print 'dg/dx =', dg(x, a, c)
+    sage: print('dg/dx =', dg(x, a, c))
     sage: p1 = plot(dg(x, 0.5, 0), (-2*pi,2*pi), color='blue')
     sage: p2 = plot(dg(x, 1, 0), (-2*pi,2*pi), color='red')
     sage: p3 = plot(dg(x, 2, 0), (-2*pi,2*pi), color='green')

@@ -132,7 +132,7 @@ Wir überprüfen das Ergebnis mit Sage, und zeichnen die Tangente im Punkt :math
 .. sagecellserver::
 
   sage: m = df(0)
-  sage: print u"\u03b1 =", RDF(180/pi*arctan(m))
+  sage: print(u"\u03b1 =", RDF(180/pi*arctan(m)))
   sage: w(x) = m*x
   sage: p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
   sage: p7 = plot(w(x), x, (-4, 4), color='green')
@@ -221,7 +221,7 @@ Mit Sage können wir diese Lösung überprüfen:
   sage: s = var('s')
   sage: assume(s > 10)
   sage: A(s) = definite_integral(f(x), x, 10, s)
-  sage: print "Die Fläche ist A(s) =", A(s)
+  sage: print("Die Fläche ist A(s) =", A(s))
 
 .. end of output
 
@@ -236,7 +236,7 @@ halten und den Flächeninhalt in Abhängigkeit von :math:`s` ausgeben.
   ...       p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
   ...       p12 = plot(f(x), x, (s, 20))
   ...       show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
-  ...       print "Die gelbe Fläche hat den Inhalt:", float(A(s))
+  ...       print("Die gelbe Fläche hat den Inhalt:", float(A(s)))
 
 .. end of output
 
@@ -254,7 +254,7 @@ gesagt haben, dass :math:`s>10` sein soll. Der gesuchte Wert für
 
 .. sagecellserver::
 
-  sage: print float(solve(A(s) == 100, s)[0].right())
+  sage: print(float(solve(A(s) == 100, s)[0].right()))
 
 .. end of output
 
@@ -338,8 +338,8 @@ zwischen :math:`10\frac{\mathrm{km}}{\mathrm{h}}` und
 .. sagecellserver::
 
   sage: t(x) = 10/(x+5)+10/(x-5)
-  sage: print "Fahrtdauer bei 10 km/h:", 60*t(10), "Minuten"
-  sage: print "Fahrtdauer bei 20 km/h:", 60*t(20), "Minuten"
+  sage: print("Fahrtdauer bei 10 km/h:", 60*t(10), "Minuten")
+  sage: print("Fahrtdauer bei 20 km/h:", 60*t(20), "Minuten")
   sage: p1 = plot(60*t(x), x, (10, 20))
   sage: show(p1, figsize=(4, 2.8))
 
@@ -399,8 +399,8 @@ Umformungen nicht vornimmt.
 
 .. sagecellserver::
 
-  sage: print t(x)-f(x)
-  sage: print (t(x)-f(x)).rational_simplify()
+  sage: print(t(x)-f(x))
+  sage: print((t(x)-f(x)).rational_simplify())
 
 .. end of output
 
@@ -424,7 +424,7 @@ Mit Sage ergibt sich der Wert zu
 .. sagecellserver::
 
   sage: gesamtzeit = 4
-  sage: print "Eigengeschwindigkeit für Gesamtfahrtzeit von {}h: {}km/h".format(
+  sage: print("Eigengeschwindigkeit für Gesamtfahrtzeit von {}h: {}km/h".format()
   ...         gesamtzeit, f_inv(gesamtzeit).n(10))
 
 .. end of output

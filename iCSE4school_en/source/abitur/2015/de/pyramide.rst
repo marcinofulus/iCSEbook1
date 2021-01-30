@@ -24,9 +24,9 @@ den beiden kürzesten Verbindungsvektoren zu den anderen Eckpunkten gleich
     sage: b = vector([4, 4, 2])
     sage: c = vector([8, 0, 2])
     sage: d = vector([4, -4, 0])
-    sage: print ' Abstand A-B:', N(norm(b-a))
-    sage: print ' Abstand A-C:', N(norm(c-a))
-    sage: print ' Abstand A-D:', N(norm(d-a))
+    sage: print(' Abstand A-B:', N(norm(b-a)))
+    sage: print(' Abstand A-C:', N(norm(c-a)))
+    sage: print(' Abstand A-D:', N(norm(d-a)))
     sage: (b-a).dot_product(d-a)
 
 .. end of output

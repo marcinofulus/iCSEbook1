@@ -34,7 +34,7 @@ simulation. However, we should not expect perfect agreement.
          result = [random() < p for _ in range(5)]
          if result == goal:
              successes = successes+1
-     print N(successes/rounds), p^2*(1-p)^3
+     print(N(successes/rounds), p^2*(1-p)^3)
 
 .. end of output
 
@@ -73,7 +73,7 @@ we once more check our result for the probability by means of a simulation:
          result = [random() < p for _ in range(5)]
          if sum(result) == 4:
              successes = successes+1
-     print N(successes/rounds), 5*p^4*(1-p)
+     print(N(successes/rounds), 5*p^4*(1-p))
 
 .. end of output
 

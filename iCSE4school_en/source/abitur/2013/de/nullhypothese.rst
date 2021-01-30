@@ -42,7 +42,7 @@ Sage heranziehen:
   sage: gesamt = 200
   sage: p = 0.5
   sage: for zustimmend in (111, 112, 113):
-  sage:     print "Signifikanzniveau für {} Zustimmungen: {:4.2f}%".format(
+  sage:     print("Signifikanzniveau für {} Zustimmungen: {:4.2f}%".format()
   sage:         zustimmend, (1-binom.cdf(zustimmend-1, gesamt, p))*100)
 
 .. end of output

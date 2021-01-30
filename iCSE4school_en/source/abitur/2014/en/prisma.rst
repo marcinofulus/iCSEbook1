@@ -38,7 +38,7 @@ We can verify the result with the help of Sage by constructing the point
      c = vector([0, 8, 0])
      d = vector([0, 0, 4])
      f = c + d - a
-     print 'distance B-F:', norm(b-f)
+     print('distance B-F:', norm(b-f))
 
 .. end of output
 
@@ -58,7 +58,7 @@ and :math:`P(4|4|0)`.
 
      m = a + 1/2 * (d - a)
      p = b + 1/2 * (c - b)
-     print "m:", m, ", p:", p
+     print("m:", m, ", p:", p)
 
 .. end of output
 

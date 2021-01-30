@@ -52,8 +52,8 @@ Let's start with approximation of square\-root of two. We'll use square\-root al
     rot=2
     for n in range(1,6):    #change range
            rot=0.5*(rot+2/rot)
-           print rot
-           print "error =",abs(N(sqrt(2)-rot))
+           print(rot)
+           print("error =",abs(N(sqrt(2)-rot)))
 
 .. only:: latex
           
@@ -111,8 +111,8 @@ Tiring (you can check on the paper...) calculations will do the computer.
     w=1
     for i in range(1,6):
            w=w*((2*i)/(2*i-1))*((2*i)/(2*i+1))
-           print 2*w     #do you prefer fractions or decimals?
-           print "error =",abs(N(pi-2*w))
+           print(2*w     #do you prefer fractions or decimals?)
+           print("error =",abs(N(pi-2*w)))
  
 .. only:: latex
           
@@ -266,12 +266,12 @@ Of course  :math:`w_1=w_2=w_3=w_4=w_5`, but: are there any difference among  :ma
 .. sagecellserver::
 
     p=1.44     #change p
-    print 'apr=',p
-    print 'w_1=',N(99-70*p)
-    print 'w_2=',N((5*p-7)^2)
-    print 'w_3=',N((3-2*p)^3)
+    print('apr=',p)
+    print('w_1=',N(99-70*p))
+    print('w_2=',N((5*p-7)^2))
+    print('w_3=',N((3-2*p)^3))
     print'w_4=',N((p-1)^6)
-    print 'w_5=',N(((p-1)/(p+1))^3)
+    print('w_5=',N(((p-1)/(p+1))^3))
     
     
 .. only:: latex
@@ -363,17 +363,17 @@ Let's finish our calculations, considering we're looking for volume, whereby bec
 .. sagecellserver::
 
     p=1.41     #change p
-    print 'apr=',p
+    print('apr=',p)
     w_1=N(99-70*p)
     w_2=N((5*p-7)^2)
     w_3=N((3-2*p)^3)
     w_4=N((p-1)^6)
     w_5=N(((p-1)/(p+1))^3)
-    print 'volume 1=',N(pi)*36000*w_1     #why here 36000?
-    print 'volume 2=',N(pi)*36000*w_2
-    print 'volume 3=',N(pi)*36000*w_3
-    print 'volume 4=',N(pi)*36000*w_4
-    print 'volume 5=',N(pi)*36000*w_5
+    print('volume 1=',N(pi)*36000*w_1     #why here 36000?)
+    print('volume 2=',N(pi)*36000*w_2)
+    print('volume 3=',N(pi)*36000*w_3)
+    print('volume 4=',N(pi)*36000*w_4)
+    print('volume 5=',N(pi)*36000*w_5)
     
     
 .. only:: latex

@@ -83,9 +83,9 @@ gesetzt werden.
     sage:                 p_a, p_ab, p_b_if_a, p_bb_if_a, p_b_if_ab, p_bb_if_ab,
     sage:                 p_b, p_bb, p_a_if_b, p_ab_if_b, p_a_if_bb, p_ab_if_bb,
     sage:                 solution_dict=True)[0]
-    sage: print 'P(B) =', loesung[p_b]
-    sage: print '   P(A|B) =', loesung[p_a_if_b],
-    sage: print '   P(̅A|B) =', loesung[p_ab_if_b],
-    sage: print '\nP(̅B) =', loesung[p_bb]
-    sage: print '   P(A|̅B) =', loesung[p_a_if_bb],
-    sage: print '   P(̅A|̅B) =', loesung[p_ab_if_bb]
+    sage: print('P(B) =', loesung[p_b])
+    sage: print('   P(A|B) =', loesung[p_a_if_b],)
+    sage: print('   P(̅A|B) =', loesung[p_ab_if_b],)
+    sage: print('\nP(̅B) =', loesung[p_bb])
+    sage: print('   P(A|̅B) =', loesung[p_a_if_bb],)
+    sage: print('   P(̅A|̅B) =', loesung[p_ab_if_bb])

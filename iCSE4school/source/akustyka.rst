@@ -383,7 +383,7 @@ przykład takiego algorytmu opartego o bibliotekę :code:`numpy`.
      dx = float(l)/(N-1)
      c2 = np.ones(N)
      dt = 0.005
-     print np.sqrt(np.max(c2))*dt/dx
+     print(np.sqrt(np.max(c2))*dt/dx)
      x = np.linspace(0,l,N)
      u = np.zeros(N)
      u0 = np.zeros(N)

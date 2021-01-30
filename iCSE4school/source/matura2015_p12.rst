@@ -28,7 +28,7 @@ Uczyńmy to więc:
 .. sagecellserver::
 
    liczby = [x for x in range(-1000,1000) if 2/7<x/14<4/3]
-   print len(liczby),":",liczby
+   print(len(liczby),":",liczby)
 
 .. only:: latex
 
@@ -87,7 +87,7 @@ pętlą :code:`for`:
    for x in range(-1000,1000):
        if 2/7<x/14<4/3:
            i+=1
-   print i
+   print(i)
    
    
 .. only:: latex

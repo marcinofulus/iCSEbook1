@@ -108,7 +108,7 @@ In Sage, we first define all points and then check the result.
    a = o+vector([0, 0, height])
    b = p+vector([0, 0, height])
    g = h-vector([0, length, 0])
-   print "Area: %sm²" % float(norm(b-g)*norm(c-b))
+   print("Area: %sm²" % float(norm(b-g)*norm(c-b)))
 
 .. end of output
 
@@ -129,7 +129,7 @@ The house thus is in accordance with the charter.
 
    ba = (a-b).normalized()
    bg = (g-b).normalized()
-   print "Inclination of roof: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
+   print("Inclination of roof: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi))
 
 .. end of output
 
@@ -179,7 +179,7 @@ This result is confirmed by Sage.
 .. sagecellserver::
 
    lamb = solve(abs(x*(c-h)) == 1, x)
-   print "The solutions for λ are:", lamb
+   print("The solutions for λ are:", lamb)
 
 .. end of output
 
@@ -190,7 +190,7 @@ the point :math:`M(4.8|8|7.4)`.
 .. sagecellserver::
 
    m = t + lamb[1].right() * (c-h)
-   print "point M:", m
+   print("point M:", m)
 
 .. end of output
 
@@ -224,6 +224,6 @@ obtained by means of Sage as follows:
    mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
    n = m + mu*vector([6, 0, -1])
    l = n + vector([0, 0, -7/5])
-   print "Coordinates of N: ", n, ", L:", l
+   print("Coordinates of N: ", n, ", L:", l)
 
 .. end of output

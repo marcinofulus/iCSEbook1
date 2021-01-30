@@ -22,9 +22,9 @@ the shortest vectors to the othe vertices is a right angle.
      b = vector([4, 4, 2])
      c = vector([8, 0, 2])
      d = vector([4, -4, 0])
-     print ' Distance A-B:', N(norm(b-a))
-     print ' Distance A-C:', N(norm(c-a))
-     print ' Distance A-D:', N(norm(d-a))
+     print(' Distance A-B:', N(norm(b-a)))
+     print(' Distance A-C:', N(norm(c-a)))
+     print(' Distance A-D:', N(norm(d-a)))
      (b-a).dot_product(d-a)
 
 .. end of output

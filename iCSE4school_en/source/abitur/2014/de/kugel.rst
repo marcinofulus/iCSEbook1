@@ -33,7 +33,7 @@ Selbiges Ergebnis erhalten wir mit Sage:
 
   sage: M = vector([-3, 2, 7])
   sage: P = vector([3, 4, 4])
-  sage: print "Q:", M + M - P
+  sage: print("Q:", M + M - P)
 
 .. end of output
 
@@ -65,8 +65,8 @@ lässt sich dabei mit der Maus rotieren.
   sage: var('y')
   sage: z = 0
   sage: radius = norm(M-P)
-  sage: print 'Kugelradius                     :', radius
-  sage: print 'Abstand Kugelmittelpunkt - Ebene:', M[2]
+  sage: print('Kugelradius                     :', radius)
+  sage: print('Abstand Kugelmittelpunkt - Ebene:', M[2])
   sage: p1 = plot3d(z, (x, -15, 15), (y, -15, 15), opacity=0.7)
   sage: p2 = sphere(center=(-3, 2, 7), size=radius, color='red', opacity=0.7)
   sage: show(p1 + p2, aspect_ratio=1)

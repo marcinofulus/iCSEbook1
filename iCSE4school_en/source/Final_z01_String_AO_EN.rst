@@ -109,7 +109,7 @@ Tabular output of data (instead of print)
     sage: var ('a, b')
     sage: hyper(x) = a/x+b
     sage: fit = find_fit(pkt, hyper,solution_dict=True)
-    sage: print fit
+    sage: print(fit)
     sage: rys1=plot(hyper.subs(fit), x, 5, 90, color="green", legend_label='fitted hyperbola')
     sage: rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='measuring points')
     sage: rys1+rys2
@@ -120,14 +120,14 @@ Tabular output of data (instead of print)
 .. sagecellserver::
 
     sage: pktinv=[(l[i],N(1/y[i], digits=4)) for i in range(len(l))]
-    sage: print pktinv
+    sage: print(pktinv)
     sage: var ('a, b, c')
     sage: straight(x) = a*x+b
     sage: straight0(x) = c*x
     sage: fit = find_fit(pktinv, straight,solution_dict=True)
-    sage: print fit
+    sage: print(fit)
     sage: fit0 = find_fit(pktinv, straight0,solution_dict=True)
-    sage: print fit0
+    sage: print(fit0)
     sage: rys1=plot(straight.subs(fit), (x, 0, 90), color="green", legend_label='fitted straight line')
     sage: rys0=plot(straight0.subs(fit0), (x, 0, 90), color="yellow", legend_label='going through 0')
     sage: rys2=point(pktinv, gridlines=True, size=25, color='red', legend_label='measuring points', axes_labels=['l [cm]','T [s]'])

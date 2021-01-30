@@ -79,9 +79,9 @@ The values of the left tree diagram can be set in the list ``probabilities``.
                      p_a, p_ab, p_b_if_a, p_bb_if_a, p_b_if_ab, p_bb_if_ab,
                      p_b, p_bb, p_a_if_b, p_ab_if_b, p_a_if_bb, p_ab_if_bb,
                      solution_dict=True)[0]
-     print 'P(B) =', solution[p_b]
-     print '   P(A|B) =', solution[p_a_if_b],
-     print '   P(̅A|B) =', solution[p_ab_if_b],
-     print '\nP(̅B) =', solution[p_bb]
-     print '   P(A|̅B) =', solution[p_a_if_bb],
-     print '   P(̅A|̅B) =', solution[p_ab_if_bb]
+     print('P(B) =', solution[p_b])
+     print('   P(A|B) =', solution[p_a_if_b],)
+     print('   P(̅A|B) =', solution[p_ab_if_b],)
+     print('\nP(̅B) =', solution[p_bb])
+     print('   P(A|̅B) =', solution[p_a_if_bb],)
+     print('   P(̅A|̅B) =', solution[p_ab_if_bb])

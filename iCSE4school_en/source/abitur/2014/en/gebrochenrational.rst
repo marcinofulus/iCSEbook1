@@ -140,7 +140,7 @@ We check the result with Sage and draw the tangent of :math:`f` at the point
 .. sagecellserver::
 
    m = df(0)
-   print u"\u03b1 =", RDF(180/pi*arctan(m))
+   print(u"\u03b1 =", RDF(180/pi*arctan(m)))
    w(x) = m*x
    p6 = plot(f(x), x, (-4, 4), ymax=5, ymin=-5)
    p7 = plot(w(x), x, (-4, 4), color='green')
@@ -229,7 +229,7 @@ Sage confirms this solution:
    s = var('s')
    assume(s > 10)
    A(s) = definite_integral(f(x), x, 10, s)
-   print "The area is given by A(s) =", A(s)
+   print("The area is given by A(s) =", A(s))
 
 .. end of output
 
@@ -245,7 +245,7 @@ and presented under the figure.
        p11 = plot(f(x), x, (10, s), fill = 0, fillcolor='yellow')
        p12 = plot(f(x), x, (s, 20))
        show(p10+p11+p12, aspect_ratio=1, ymax=10, figsize=4)
-       print "Area of the yellow region:", float(A(s))
+       print("Area of the yellow region:", float(A(s)))
 
 .. end of output
 
@@ -263,7 +263,7 @@ found as
 
 .. sagecellserver::
 
-   print float(solve(A(s) == 100, s)[0].right())
+   print(float(solve(A(s) == 100, s)[0].right()))
 
 .. end of output
 
@@ -351,8 +351,8 @@ respect to the proper speed in the interval between
 .. sagecellserver::
 
    t(x) = 10/(x+5)+10/(x-5)
-   print "Total time for 10 km/h:", 60*t(10), "minutes"
-   print "Total time for 20 km/h:", 60*t(20), "minutes"
+   print("Total time for 10 km/h:", 60*t(10), "minutes")
+   print("Total time for 20 km/h:", 60*t(20), "minutes")
    p1 = plot(60*t(x), x, (10, 20))
    show(p1, figsize=(4, 2.8))
 
@@ -407,8 +407,8 @@ program to work.
 
 .. sagecellserver::
 
-   print t(x)-f(x)
-   print (t(x)-f(x)).rational_simplify()
+   print(t(x)-f(x))
+   print((t(x)-f(x)).rational_simplify())
 
 .. end of output
 
@@ -430,8 +430,8 @@ Sage confirms this result:
 .. sagecellserver::
 
    totaltime = 4
-   print "Proper speed for a total time of {}h: {}km/h".format(
-         totaltime, f_inv(totaltime).n(10))
+   print("Proper speed for a total time of {}h: {}km/h".format(
+         totaltime, f_inv(totaltime).n(10)))
 
 .. end of output
 

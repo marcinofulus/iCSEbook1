@@ -144,7 +144,7 @@ chwili otrzymamy wynik:
 .. sagecellserver::
 
    sols = solve(eqs,[x0,y0,x1,y1,x2,y2,x3,y3,r],solution_dict=True)
-   print ((x0-x2)^2+(y0-y2)^2).subs(sols[0]).canonicalize_radical() 
+   print(((x0-x2)^2+(y0-y2)^2).subs(sols[0]).canonicalize_radical() )
 
 
 .. only:: latex

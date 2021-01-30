@@ -74,9 +74,9 @@ Exemplary calculation of standard deviation. Traditional calculation is arduous,
     anydata = (3.4, 3.6, 3.3, 3.3, 3.5, 3.7, 3.6, 3.6, 3.6, 3.5) # przykładowe dane
     mean_data = mean(anydata) # mean value
     std_data = std(anydata) # standard deviation
-    print anydata
-    print "Mean value = ", N(mean_data, digits=3)
-    print "Std deviation = ", N(std_data, digits=3)
+    print(anydata)
+    print("Mean value = ", N(mean_data, digits=3))
+    print("Std deviation = ", N(std_data, digits=3))
  
 
 .. end of output
@@ -103,7 +103,7 @@ Fitting parabola to data. Without Sage environment it is absolutely infeasible f
     var ('a')
     parabola(x) = a/2*x^2 # Time is marked as x, to avoid collision in variables
     fit = find_fit(pkt, parabola,solution_dict=True)
-    print fit
+    print(fit)
     rys1=plot(parabola.subs(fit), x, 0, 6, color="green", legend_label='fitted parabola')
     rys2=point(pkt, gridlines=True, size=25, color='red', legend_label='measurement points')
     rys1+rys2

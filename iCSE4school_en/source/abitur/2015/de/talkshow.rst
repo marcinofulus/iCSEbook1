@@ -37,8 +37,8 @@ können wir alle Sitzordnungen auflisten:
 
     sage: for n, a in enumerate(Arrangements(["1", "2", "3", "J", "B", "b"], 6)):
     ...       if not n % 8:
-    ...           print "%3i" % (n/8+1),
-    ...       print "%sM%s" % ("".join(a[:3]), "".join(a[3:])),
+    ...           print("%3i" % (n/8+1),)
+    ...       print("%sM%s" % ("".join(a[:3]), "".join(a[3:])),)
     ...       if not (n+1) % 8:
     ...           print
 
@@ -69,8 +69,8 @@ Sitzordnungen. Diese können wir wiederum auflisten:
     ...               else:
     ...                   a = "".join(others[:2])+pmiddle+"MJ"+"".join(others[2:])
     ...               if not n % 8:
-    ...                   print "%3i" % (n/8+1),
-    ...               print a,
+    ...                   print("%3i" % (n/8+1),)
+    ...               print(a,)
     ...               if not (n+1) % 8:
     ...                   print
     ...               n = n+1

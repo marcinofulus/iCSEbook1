@@ -51,8 +51,8 @@ Wertet man diesen Ausdruck mit Sage aus, ergibt sich
 
 .. sagecellserver::
 
-  sage: print "Die Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten liegt bei {:4.1%}.".format(
-  ...         float(200*199*198*197*196/200**5))
+  sage: print("Die Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten liegt bei {:4.1%}.".format(
+  ...         float(200*199*198*197*196/200**5)))
 
 .. end of output
 
@@ -67,8 +67,8 @@ Dieser Wert kann empirisch durch eine Simulation mit Sage bestätigt werden:
   ...       a = set(randint(200, size=5))
   ...       if len(a) == 5:
   ...           verschiedene +=1
-  sage: print "Empirische Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten: {:4.1%}".format(
-  ...         float(verschiedene)/iterationen)
+  sage: print("Empirische Wahrscheinlichkeit 5 verschiedene Bilder zu erhalten: {:4.1%}".format(
+  ...         float(verschiedene)/iterationen))
 
 .. end of output
 
@@ -93,7 +93,7 @@ Mit Sage kann man diesen Ausdruck auswerten
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(float((37/40)**10))
+  sage: print("Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(float((37/40)**10)))
 
 .. end of output
 
@@ -108,8 +108,8 @@ und mit einer Simulation überprüfen
   ...       bilder = set(randint(200, size=10))
   ...       if bilder.issubset(besitz):
   ...           kein_neues = kein_neues+1
-  sage: print "Empirische Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(
-  ...         float(kein_neues/iterationen))
+  sage: print("Empirische Wahrscheinlichkeit kein neues Bild zu erhalten: {:4.1%}".format(
+  ...         float(kein_neues/iterationen)))
 
 .. end of output
 
@@ -156,7 +156,7 @@ Wir überprüfen dies wieder durch Simulation mit Sage.
   ...       meinebilder = set(randint(200, size=nr_paeckchen*bilder_je_paeckchen))
   ...       if not meinebilder.isdisjoint(dreiDBilder):
   ...           dreiD_gefunden = dreiD_gefunden+1
-  sage: print "Empirische Wahrscheinlichkeit mindestens ein 3D-Bild zu erhalten: {:4.1%}".format(
-  ...         float(dreiD_gefunden/iterationen))
+  sage: print("Empirische Wahrscheinlichkeit mindestens ein 3D-Bild zu erhalten: {:4.1%}".format(
+  ...         float(dreiD_gefunden/iterationen)))
 
 .. end of output

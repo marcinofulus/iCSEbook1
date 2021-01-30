@@ -49,9 +49,9 @@ Auch mit Hilfe von Sage können wir den maximalen Flächeninhalt durch Gleichset
      sage: a(x) = x*f(x)
      sage: da(x) = a.derivative(x).log_simplify()
      sage: x0 = solve(da(x)==0, x)[0].rhs()
-     sage: print 'Breite:', x0
-     sage: print 'Höhe  :', f(x0)
-     sage: print 'Fläche:', a(x0)
+     sage: print('Breite:', x0)
+     sage: print('Höhe  :', f(x0))
+     sage: print('Fläche:', a(x0))
 
 .. end of output
 

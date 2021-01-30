@@ -36,8 +36,8 @@ list all seating arrangements:
 
      for n, a in enumerate(Arrangements(["1", "2", "3", "N", "C", "c"], 6)):
          if not n % 8:
-             print "%3i" % (n/8+1),
-         print "%sH%s" % ("".join(a[:3]), "".join(a[3:])),
+             print("%3i" % (n/8+1),)
+         print("%sH%s" % ("".join(a[:3]), "".join(a[3:])),)
          if not (n+1) % 8:
              print
 
@@ -67,10 +67,10 @@ yields :math:`4\cdot3\cdot2\cdot1=24` possiblities. In total, we obtain
                  else:
                      a = "".join(others[:2])+pmiddle+"HN"+"".join(others[2:])
                  if not n % 8:
-                     print "%3i" % (n/8+1),
-                 print a,
+                     print("%3i" % (n/8+1),)
+                 print(a,)
                  if not (n+1) % 8:
-                     print
+                     print()
                  n = n+1
 
 We obtain :math:`18\cdot8=144` seating arrangements as expected.

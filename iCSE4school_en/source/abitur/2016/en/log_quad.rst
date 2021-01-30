@@ -73,7 +73,7 @@ which we add to the sketch of the function:
 
    df = derivative(f, x)
    x0 = solve(df(x) == 0, x)[0].right()
-   print "Horizontal tangent line at", x0, "=", float(x0)
+   print("Horizontal tangent line at", x0, "=", float(x0))
    p1 = plot(f(x), (0, 4), x, ymin=0,  exclude=[0])
    p2 = plot(f(x0), (0, 4), x, color='red')
    show(p1+p2, figsize=(4, 2.8))

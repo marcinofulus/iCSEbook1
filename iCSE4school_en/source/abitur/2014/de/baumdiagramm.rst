@@ -105,13 +105,13 @@ und :math:`P(\bar{C}\cap D)` gesetzt werden.
     ...                   p_d_if_c, p_db_if_c, p_d_if_cb, p_db_if_cb,
     ...                   p_c_and_d, p_c_and_db, p_cb_and_d, p_cb_and_db,
     ...                   solution_dict=True)[0]
-    sage: print 'P(C) =', loesung[p_c]
-    sage: print '   P(D|C) =', loesung[p_d_if_c],
-    sage: print '   P(D∩C) =', loesung[p_c_and_d]
-    sage: print '   P(D̅|C) =', loesung[p_db_if_c],
-    sage: print '   P(D̅∩C) =', loesung[p_c_and_db]
-    sage: print 'P(C̅) =', loesung[p_cb]
-    sage: print '   P(D|C̅) =', loesung[p_d_if_cb],
-    sage: print '   P(D∩C̅) =', loesung[p_cb_and_d]
-    sage: print '   P(D̅|C̅) =', loesung[p_db_if_cb],
-    sage: print '   P(D̅∩C̅) =', loesung[p_cb_and_db]
+    sage: print('P(C) =', loesung[p_c])
+    sage: print('   P(D|C) =', loesung[p_d_if_c],)
+    sage: print('   P(D∩C) =', loesung[p_c_and_d])
+    sage: print('   P(D̅|C) =', loesung[p_db_if_c],)
+    sage: print('   P(D̅∩C) =', loesung[p_c_and_db])
+    sage: print('P(C̅) =', loesung[p_cb])
+    sage: print('   P(D|C̅) =', loesung[p_d_if_cb],)
+    sage: print('   P(D∩C̅) =', loesung[p_cb_and_d])
+    sage: print('   P(D̅|C̅) =', loesung[p_db_if_cb],)
+    sage: print('   P(D̅∩C̅) =', loesung[p_cb_and_db])

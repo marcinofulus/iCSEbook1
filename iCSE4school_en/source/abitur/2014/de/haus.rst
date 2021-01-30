@@ -111,7 +111,7 @@ das Ergebnis.
   sage: a = o+vector([0, 0, hoehe])
   sage: b = p+vector([0, 0, hoehe])
   sage: g = h-vector([0, laenge, 0])
-  sage: print "Fläche: %sm²" % float(norm(b-g)*norm(c-b))
+  sage: print("Fläche: %sm²" % float(norm(b-g)*norm(c-b)))
 
 .. end of output
 
@@ -132,7 +132,7 @@ Das Haus erfüllt also die Satzung.
 
   sage: ba = (a-b).normalized()
   sage: bg = (g-b).normalized()
-  sage: print "Dachneigung: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi)
+  sage: print("Dachneigung: %4.1f°" % float(arccos(ba.dot_product(bg))*180/pi))
 
 .. end of output
 
@@ -180,7 +180,7 @@ Dies ergibt sich auch mit Hilfe von Sage.
 .. sagecellserver::
 
   sage: lamb = solve(abs(x*(c-h)) == 1, x)
-  sage: print "Die Lösungen für λ lauten:", lamb
+  sage: print("Die Lösungen für λ lauten:", lamb)
 
 .. end of output
 
@@ -191,7 +191,7 @@ da der andere Punkt oberhalb des Firstes liegt. Somit ergibt sich der Punkt
 .. sagecellserver::
 
   sage: m = t + lamb[1].right() * (c-h)
-  sage: print "Punkt M:", m
+  sage: print("Punkt M:", m)
 
 .. end of output
 
@@ -225,6 +225,6 @@ der Punkt :math:`L(7{,}2|8|5{,}6)`. Diese Ergebnisse erhält man mit Sage folgen
   sage: mu = solve(3*(4.8+6*x) + 4*(7.4-x) - 49.6 == 0, x)[0].right()
   sage: n = m + mu*vector([6, 0, -1])
   sage: l = n + vector([0, 0, -7/5])
-  sage: print "Koordinaten von N: ", n, ", L:", l
+  sage: print("Koordinaten von N: ", n, ", L:", l)
 
 .. end of output

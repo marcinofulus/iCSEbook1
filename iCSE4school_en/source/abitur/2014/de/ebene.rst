@@ -106,7 +106,7 @@ durchgeführte Rechnung kann man folgendermaßen in Sage nachvollziehen:
   sage: gerade = z+t*n0
   sage: solution = solve(3*gerade[1]+4*gerade[2] == 5, t, solution_dict=True)[0]
   sage: abstand = abs(solution[t])
-  sage: print "Abstand Kugelmittelpunkt - Ebene:", abstand
+  sage: print("Abstand Kugelmittelpunkt - Ebene:", abstand)
   sage: if abstand < radius:
   ...       print('Ebene schneidet Kugel')
   sage: else:

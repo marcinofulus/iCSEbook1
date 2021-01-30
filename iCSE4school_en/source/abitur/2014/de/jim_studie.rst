@@ -90,8 +90,8 @@ Damit lässt sich nun die Wahrscheinlichkeit bestimmen, ein Mädchen ohne Fernse
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit für ein Mädchen ohne Fernseher: {:4.1%}".format(
-  ...         (float(haeufigkeit["Mädchen ohne Fernseher"])/iterationen))
+  sage: print("Wahrscheinlichkeit für ein Mädchen ohne Fernseher: {:4.1%}".format(
+  ...         (float(haeufigkeit["Mädchen ohne Fernseher"])/iterationen)))
 
 .. end of output
 
@@ -111,8 +111,8 @@ Wir benutzen unsere Simulation aus Teilaufgabe a, um das Ergebnis empirisch zu �
 .. sagecellserver::
 
   sage: mit_fernseher = haeufigkeit["Mädchen mit Fernseher"]+haeufigkeit["Jungen mit Fernseher"]
-  sage: print "Wahrscheinlichkeit, dass eine Person mit Fernseher weiblich ist: {:4.1%}".format(
-  ...         (float(haeufigkeit["Mädchen mit Fernseher"])/mit_fernseher))
+  sage: print("Wahrscheinlichkeit, dass eine Person mit Fernseher weiblich ist: {:4.1%}".format(
+  ...         (float(haeufigkeit["Mädchen mit Fernseher"])/mit_fernseher)))
 
 .. end of output
 
@@ -159,7 +159,7 @@ Zur Berechnung der Summe verwenden wir Sage und erhalten in etwa den Wert 30,6%.
   sage: summe = 0
   sage: for i in range(nmax+1):
   ...       summe = summe+bernoulli(ntot, p, i)
-  sage: print "Der Wert der Summe ist {:4.1%}".format(float(summe))
+  sage: print("Der Wert der Summe ist {:4.1%}".format(float(summe)))
 
 .. end of output
 
@@ -168,7 +168,7 @@ Alternativ kann man das Ergebnis direkt folgendermaßen erhalten:
 .. sagecellserver::
 
   sage: from scipy.special import bdtr
-  sage: print "Der Wert der Summe ist {:4.1%}".format(bdtr(nmax, ntot, p))
+  sage: print("Der Wert der Summe ist {:4.1%}".format(bdtr(nmax, ntot, p)))
 
 Die Studie wurde bei Jugendlichen in der Altersklasse 12 bis 19 erhoben. Allerdings ist nicht
 bekannt, ob diese Ergebnisse auch für die Alterklasse der 9. Klasse (etwa 14-15 Jahre) repräsentativ
@@ -297,8 +297,8 @@ Mit Sage finden wir :math:`P(X=85) \approx8{,}1\%`.
 
 .. sagecellserver::
 
-  sage: print "Wahrscheinlichkeit für genau 85 Jugendliche mit Computer: {:3.1%}".format(
-  ...          float(bernoulli(100, 0.82, 85)))
+  sage: print("Wahrscheinlichkeit für genau 85 Jugendliche mit Computer: {:3.1%}".format(
+  ...          float(bernoulli(100, 0.82, 85))))
 
 .. end of output
 
@@ -370,7 +370,7 @@ indem man das lineare Gleichungssystem löst:
   ...                  p_aub/p_b == p_aunb/p_nb]
   sage: loesung = solve(gleichungen + wahrscheinlichkeiten, p_aub, p_aunb, p_b, p_nb, p_a,
   ...                   solution_dict=True)[0]
-  sage: print "Statistische Unabhängigkeit liegt vor für P(A∩B) = {:4.1%}".format(
-  ...         float(loesung[p_aub]))
+  sage: print("Statistische Unabhängigkeit liegt vor für P(A∩B) = {:4.1%}".format(
+  ...         float(loesung[p_aub])))
 
 .. end of output

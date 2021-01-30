@@ -86,8 +86,8 @@ Now we can determine the probability of finding a girl without a TV set.
 
 .. sagecellserver::
 
-   print "Probability for a girl without TV set: {:4.1%}".format(
-         (float(frequencies["Girls without TV"])/iterations))
+   print("Probability for a girl without TV set: {:4.1%}".format(
+         (float(frequencies["Girls without TV"])/iterations)))
 
 .. end of output
 
@@ -107,8 +107,8 @@ We make use of the simulation of part a) in order to empirically check this resu
 .. sagecellserver::
 
    with_tv = frequencies["Girls with TV"]+frequencies["Boys with TV"]
-   print "Probability for a person with TV to be female: {:4.1%}".format(
-         (float(frequencies["Girls with TV"])/with_tv))
+   print("Probability for a person with TV to be female: {:4.1%}".format(
+         (float(frequencies["Girls with TV"])/with_tv)))
 
 .. end of output
 
@@ -155,7 +155,7 @@ We determine the sum by means of Sage and obtain approximately 30.6%.
    probsum = 0
    for i in range(nmax+1):
        probsum = probsum+bernoulli(ntot, p, i)
-   print "The sum amounts to {:4.1%}".format(float(probsum))
+   print("The sum amounts to {:4.1%}".format(float(probsum)))
 
 .. end of output
 
@@ -164,7 +164,7 @@ Alternatively, the result can be obtained directly as:
 .. sagecellserver::
 
    from scipy.special import bdtr
-   print "The sum amounts to {:4.1%}".format(bdtr(nmax, ntot, p))
+   print("The sum amounts to {:4.1%}".format(bdtr(nmax, ntot, p)))
 
 The survey was carried out with adolescents between the ages of 12 and 19.
 However, it is not known whether it is representative for the 9th grade (about
@@ -287,8 +287,8 @@ With Sage we find :math:`P(X=85) \approx8.1\%`.
 
 .. sagecellserver::
 
-   print "Probability to find exactly 85 adolescents owning a computer: {:3.1%}".format(
-          float(bernoulli(100, 0.82, 85)))
+   print("Probability to find exactly 85 adolescents owning a computer: {:3.1%}".format(
+          float(bernoulli(100, 0.82, 85))))
 
 .. end of output
 
@@ -357,7 +357,7 @@ solving a linear system of equations:
                 p_aub/p_b == p_aunb/p_nb]
    solution = solve(equations + probabilities, p_aub, p_aunb, p_b, p_nb, p_a,
                 solution_dict=True)[0]
-   print "Statistical independence requires P(A∩B) = {:4.1%}".format(
-         float(solution[p_aub]))
+   print("Statistical independence requires P(A∩B) = {:4.1%}".format(
+         float(solution[p_aub])))
 
 .. end of output

@@ -23,8 +23,8 @@ Let's start with approximation of square\-root of two. We'll use square\-root al
     sage: rot=2
     sage: for n in range(1,6):    #change range
     ...       rot=0.5*(rot+2/rot)
-    ...       print rot
-    ...       print "error =",abs(N(sqrt(2)-rot))
+    ...       print(rot)
+    ...       print("error =",abs(N(sqrt(2)-rot)))
     1.50000000000000
     error = 0.0857864376269049
     1.41666666666667
@@ -88,8 +88,8 @@ How does it work?
     sage: w=1
     sage: for i in range(1,6):
     ...       w=w*((2*i)/(2*i-1))*((2*i)/(2*i+1))
-    ...       print 2*w     #do you prefer fractions or decimals?
-    ...       print "error =",abs(N(pi-2*w))
+    ...       print(2*w     #do you prefer fractions or decimals?)
+    ...       print("error =",abs(N(pi-2*w)))
     8/3
     error = 0.474925986923127
     128/45
@@ -138,13 +138,13 @@ Let's finish the first part of our discussion glance at the results of the follo
 
     sage: for i in range (2,16):
     ...       ap=N(pi, digits=i)
-    ...       print N(pi)
-    ...       print ap
-    ...       print "error 1=", N(pi-ap)
-    ...       print "error 2=", N(pi)-N(ap)
-    ...       print "error 3=", N(N(pi)-N(ap))
-    ...       print "error 4=", N(pi-N(ap))
-    ...       print "error 5=", N(N(pi)-ap)
+    ...       print(N(pi))
+    ...       print(ap)
+    ...       print("error 1=", N(pi-ap))
+    ...       print("error 2=", N(pi)-N(ap))
+    ...       print("error 3=", N(N(pi)-N(ap)))
+    ...       print("error 4=", N(pi-N(ap)))
+    ...       print("error 5=", N(N(pi)-ap))
     3.14159265358979
     3.1
     error 1= 0.000967653589793116
@@ -366,12 +366,12 @@ Of course  :math:`w_1=w_2=w_3=w_4=w_5`, but: are there any difference among  :ma
 ::
 
     sage: p=1.44     #change p
-    sage: print 'apr=',p
-    sage: print 'w_1=',N(99-70*p)
-    sage: print 'w_2=',N((5*p-7)^2)
-    sage: print 'w_3=',N((3-2*p)^3)
+    sage: print('apr=',p)
+    sage: print('w_1=',N(99-70*p))
+    sage: print('w_2=',N((5*p-7)^2))
+    sage: print('w_3=',N((3-2*p)^3))
     sage: print'w_4=',N((p-1)^6)
-    sage: print 'w_5=',N(((p-1)/(p+1))^3)
+    sage: print('w_5=',N(((p-1)/(p+1))^3))
     apr= 1.44000000000000
     w_1= -1.80000000000000
     w_2= 0.0399999999999997
@@ -463,17 +463,17 @@ Let's finish our calculations, considering we're looking for volume, whereby bec
 ::
 
     sage: p=1.41     #change p
-    sage: print 'apr=',p
+    sage: print('apr=',p)
     sage: w_1=N(99-70*p)
     sage: w_2=N((5*p-7)^2)
     sage: w_3=N((3-2*p)^3)
     sage: w_4=N((p-1)^6)
     sage: w_5=N(((p-1)/(p+1))^3)
-    sage: print 'volume 1=',N(pi)*36000*w_1     #why here 36000?
-    sage: print 'volume 2=',N(pi)*36000*w_2
-    sage: print 'volume 3=',N(pi)*36000*w_3
-    sage: print 'volume 4=',N(pi)*36000*w_4
-    sage: print 'volume 5=',N(pi)*36000*w_5
+    sage: print('volume 1=',N(pi)*36000*w_1)
+    sage: print('volume 2=',N(pi)*36000*w_2)
+    sage: print('volume 3=',N(pi)*36000*w_3)
+    sage: print('volume 4=',N(pi)*36000*w_4)
+    sage: print('volume 5=',N(pi)*36000*w_5)
     apr= 1.41000000000000
     volume 1= 33929.2006587711
     volume 2= 282.743338823079

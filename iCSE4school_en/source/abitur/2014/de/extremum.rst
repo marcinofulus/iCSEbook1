@@ -31,7 +31,7 @@ wie man mit Sage leicht überprüft:
 
    sage: f(x) = x/ln(x)
    sage: df(x) = f.derivative(x).log_simplify()
-   sage: print df(x)
+   sage: print(df(x))
 
 .. end of output
 
@@ -41,7 +41,7 @@ Nullsetzen der Ableitung liefert uns den einzigen Extrempunkt an der Stelle
 .. sagecellserver::
 
    sage: x0 = solve(df(x)==0, x)[0].lhs()
-   sage: print 'Extrempunkt an der Stelle (', x0, '|', f(x0), ')'
+   sage: print('Extrempunkt an der Stelle (', x0, '|', f(x0), ')')
 
 .. end of output
 
@@ -63,8 +63,8 @@ Dies lässt sich wiederum mit Sage überprüfen:
 .. sagecellserver::
 
    sage: ddf(x) = df.derivative(x).log_simplify()
-   sage: print ddf(x)
-   sage: print ddf(x0)
+   sage: print(ddf(x))
+   sage: print(ddf(x0))
 
 .. end of output
 

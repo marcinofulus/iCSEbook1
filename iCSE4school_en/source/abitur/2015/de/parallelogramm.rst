@@ -32,13 +32,13 @@ ist.
 
     sage: a = vector([0, 1, 2])
     sage: b = vector([2, 5, 6])
-    sage: print 'Länge des Verbindungsvektors von A nach B:', norm(b-a)
+    sage: print('Länge des Verbindungsvektors von A nach B:', norm(b-a))
     sage: c = a+2*(b-a)
     sage: d = a-2*(b-a)
-    sage: print 'Koordinaten von C:', c
-    sage: print 'Koordinaten von D:', d
-    sage: print 'Abstand der Punkte A und C:', norm(c-a)
-    sage: print 'Abstand der Punkte A und D:', norm(d-a)
+    sage: print('Koordinaten von C:', c)
+    sage: print('Koordinaten von D:', d)
+    sage: print('Abstand der Punkte A und C:', norm(c-a))
+    sage: print('Abstand der Punkte A und D:', norm(d-a))
 
 .. end of output
 

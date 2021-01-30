@@ -70,7 +70,7 @@ A corresponding simulation can be carried out with Sage.
     total_win = 0
     for _ in range(games):
         total_win = total_win+random.choice(amounts)
-    print "expectation value = {:4.2f} euros".format(float(total_win)/games)
+    print("expectation value = {:4.2f} euros".format(float(total_win)/games))
 
 .. end of output
 
@@ -103,8 +103,8 @@ We simulate the game with Sage as seen from the supermarket or the kindergarden.
    surplus = 0
    for _ in range(games):
        surplus = surplus+random.choice(amounts)
-   print "Surplus for the kindergarden: {} euros".format(surplus)
-   print "Average surplus per game for the kindergarden: {:4.2f} euros".format(
+   print("Surplus for the kindergarden: {} euros".format(surplus))
+   print("Average surplus per game for the kindergarden: {:4.2f} euros".format()
          float(surplus/games))
 
 

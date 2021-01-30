@@ -73,7 +73,7 @@ die wir in die Skizze der Funktion einzeichnen:
 
   sage: df = derivative(f, x)
   sage: x0 = solve(df(x) == 0, x)[0].right()
-  sage: print "Waagrechte Tangente an der Stelle", x0, "=", float(x0)
+  sage: print("Waagrechte Tangente an der Stelle", x0, "=", float(x0))
   sage: p1 = plot(f(x), (0, 4), x, ymin=0,  exclude=[0])
   sage: p2 = plot(f(x0), (0, 4), x, color='red')
   sage: show(p1+p2, figsize=(4, 2.8))

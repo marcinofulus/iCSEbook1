@@ -70,7 +70,7 @@ mit Hilfe von Sage erhalten:
 
 .. sagecellserver::
 
-  sage: print "Wendepunkt bei", solve(ddf(x) == 0, x)[0]
+  sage: print("Wendepunkt bei", solve(ddf(x) == 0, x)[0])
      
 .. end of output
 

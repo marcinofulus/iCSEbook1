@@ -55,7 +55,7 @@ Mit Hilfe von Sage lösen wir das entsprechende Gleichungssystem:
   sage: gleichungen = [f(0) == 3, f(1) == 1, f(2) == 0.5, f(4) == 1.2, f(6) == 2]
   sage: loesung = solve(gleichungen, a, b, c, d, e, solution_dict=True)[0]
   sage: f(x) = f(x).substitute(loesung)
-  sage: print f(x)
+  sage: print(f(x))
      
 .. end of output
 
@@ -73,7 +73,7 @@ Auch der Wert des Integrals lässt sich in etwa reproduzieren:
 
 .. sagecellserver::
 
-  sage: print "Wert des Integrals:", float(integrate(f(x), x, 3, 5))
+  sage: print("Wert des Integrals:", float(integrate(f(x), x, 3, 5)))
      
 .. end of output
 

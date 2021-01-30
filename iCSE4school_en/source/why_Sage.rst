@@ -1,4 +1,4 @@
-Why SageMath?
+xWhy SageMath?
 =============
 
 
@@ -126,7 +126,7 @@ Python:
 
    a = 23.0
    b = 3.0
-   print ( (a/34+1/b)**2 )
+   print(( (a/34+1/b)**2 ))
 
  
 

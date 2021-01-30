@@ -32,7 +32,7 @@ This calculation can be checked by means of Sage:
 
      f(x, a) = x*exp(a*x)
      df = f.derivative(x)
-     print 'Derivative of f:', df
+     print('Derivative of f:', df)
      solve(df(2, a) == 0, a)
 
 .. end of output
