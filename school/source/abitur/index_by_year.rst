@@ -1,6 +1,9 @@
 Bavarian final secondary-school examinations in mathematics
 ===========================================================
 
+Index by year
+.............
+
 .. toctree::
    :maxdepth: 2
 

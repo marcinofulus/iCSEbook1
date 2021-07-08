@@ -5,7 +5,7 @@ Bavarian final secondary-school examinations in mathematics 2013
 
   Figure 1 displays the graph :math:`G_f` of a function :math:`f`
   defined in :math:`\mathbb{R}`. Sketch in figure 1 the graph of
-  the integral function :math:`F:x\mapsto \int\limits_1^x f(t)\mathrm{d}t`
+  the antiderivative function :math:`F:x\mapsto \int\limits_1^x f(t)\mathrm{d}t`
   defined in :math:`\mathbb{R}`. Consider with appropriate precision
   in particular the zeros and extrema of :math:`F` as well as :math:`F(0)`.
     
